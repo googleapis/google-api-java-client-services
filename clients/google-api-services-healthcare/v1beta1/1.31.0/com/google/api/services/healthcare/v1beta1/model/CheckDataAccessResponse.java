@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Checks if a particular data_id of a User data mapping in the given Consent store is consented for
+ * Checks if a particular data_id of a User data mapping in the given consent store is consented for
  * a given use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -38,7 +38,7 @@ public final class CheckDataAccessResponse extends com.google.api.client.json.Ge
   private java.util.Map<String, ConsentEvaluation> consentDetails;
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the requested resource is consented for the given use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class CheckDataAccessResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the requested resource is consented for the given use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getConsented() {
@@ -70,7 +70,7 @@ public final class CheckDataAccessResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the requested resource is consented for the given use.
    * @param consented consented or {@code null} for none
    */
   public CheckDataAccessResponse setConsented(java.lang.Boolean consented) {

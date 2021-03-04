@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Represents a Consent store.
+ * Represents a consent store.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,43 +30,45 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ConsentStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Default time to live for consents in this store. Must be at least 24 hours. Updating this field
-   * will not affect the expiration time of existing consents.
+   * Optional. Default time to live for Consents created in this store. Must be at least 24 hours.
+   * Updating this field will not affect the expiration time of existing consents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String defaultConsentTtl;
 
   /**
-   * If true, UpdateConsent creates the consent if it does not already exist.
+   * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If
+   * unspecified, defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConsentCreateOnUpdate;
 
   /**
-   * User-supplied key-value pairs used to organize Consent stores. Label keys must be between 1 and
-   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
-   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63
-   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
-   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
-   * with a given store.
+   * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
+   * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
+   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
+   * /how-tos/labeling-resources
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`.
+   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
+   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Default time to live for consents in this store. Must be at least 24 hours. Updating this field
-   * will not affect the expiration time of existing consents.
+   * Optional. Default time to live for Consents created in this store. Must be at least 24 hours.
+   * Updating this field will not affect the expiration time of existing consents.
    * @return value or {@code null} for none
    */
   public String getDefaultConsentTtl() {
@@ -74,8 +76,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default time to live for consents in this store. Must be at least 24 hours. Updating this field
-   * will not affect the expiration time of existing consents.
+   * Optional. Default time to live for Consents created in this store. Must be at least 24 hours.
+   * Updating this field will not affect the expiration time of existing consents.
    * @param defaultConsentTtl defaultConsentTtl or {@code null} for none
    */
   public ConsentStore setDefaultConsentTtl(String defaultConsentTtl) {
@@ -84,7 +86,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, UpdateConsent creates the consent if it does not already exist.
+   * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If
+   * unspecified, defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConsentCreateOnUpdate() {
@@ -92,7 +95,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, UpdateConsent creates the consent if it does not already exist.
+   * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If
+   * unspecified, defaults to `false`.
    * @param enableConsentCreateOnUpdate enableConsentCreateOnUpdate or {@code null} for none
    */
   public ConsentStore setEnableConsentCreateOnUpdate(java.lang.Boolean enableConsentCreateOnUpdate) {
@@ -101,12 +105,13 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize Consent stores. Label keys must be between 1 and
-   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
-   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63
-   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
-   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
-   * with a given store.
+   * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
+   * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
+   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
+   * /how-tos/labeling-resources
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -114,12 +119,13 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize Consent stores. Label keys must be between 1 and
-   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
-   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63
-   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
-   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
-   * with a given store.
+   * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
+   * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
+   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
+   * /how-tos/labeling-resources
    * @param labels labels or {@code null} for none
    */
   public ConsentStore setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -128,8 +134,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`.
+   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
+   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -137,8 +143,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/
-   * datasets/{dataset_id}/consentStores/{consent_store_id}`.
+   * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/
+   * datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
    * @param name name or {@code null} for none
    */
   public ConsentStore setName(java.lang.String name) {

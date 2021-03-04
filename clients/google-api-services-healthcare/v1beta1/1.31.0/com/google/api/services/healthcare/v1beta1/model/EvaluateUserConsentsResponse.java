@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Evaluate an end user's Consents for all matching User data mappings.
+ * Model definition for EvaluateUserConsentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class EvaluateUserConsentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * This token is valid for 72 hours after it is created.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class EvaluateUserConsentsResponse extends com.google.api.client.js
   private java.util.List<Result> results;
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * This token is valid for 72 hours after it is created.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class EvaluateUserConsentsResponse extends com.google.api.client.js
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * This token is valid for 72 hours after it is created.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

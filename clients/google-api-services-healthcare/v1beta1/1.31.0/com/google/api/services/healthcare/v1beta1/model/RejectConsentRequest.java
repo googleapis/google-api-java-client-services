@@ -18,7 +18,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Rejects the latest revision of the specified Consent by committing a new revision with `state`
- * updated to `REJECTED`. If the latest revision of the given consent is in the `REJECTED` state, no
+ * updated to `REJECTED`. If the latest revision of the given Consent is in the `REJECTED` state, no
  * new revision is committed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,20 +32,20 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class RejectConsentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's rejection of
-   * the draft consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset
-   * _id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft
-   * consent had a consent artifact, this consent artifact overwrites it.
+   * Optional. The resource name of the Consent artifact that contains documentation of the user's
+   * rejection of the draft Consent, of the form `projects/{project_id}/locations/{location_id}/data
+   * sets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If
+   * the draft Consent had a Consent artifact, this Consent artifact overwrites it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consentArtifact;
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's rejection of
-   * the draft consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset
-   * _id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft
-   * consent had a consent artifact, this consent artifact overwrites it.
+   * Optional. The resource name of the Consent artifact that contains documentation of the user's
+   * rejection of the draft Consent, of the form `projects/{project_id}/locations/{location_id}/data
+   * sets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If
+   * the draft Consent had a Consent artifact, this Consent artifact overwrites it.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentArtifact() {
@@ -53,10 +53,10 @@ public final class RejectConsentRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's rejection of
-   * the draft consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset
-   * _id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft
-   * consent had a consent artifact, this consent artifact overwrites it.
+   * Optional. The resource name of the Consent artifact that contains documentation of the user's
+   * rejection of the draft Consent, of the form `projects/{project_id}/locations/{location_id}/data
+   * sets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If
+   * the draft Consent had a Consent artifact, this Consent artifact overwrites it.
    * @param consentArtifact consentArtifact or {@code null} for none
    */
   public RejectConsentRequest setConsentArtifact(java.lang.String consentArtifact) {

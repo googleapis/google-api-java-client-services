@@ -18,7 +18,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Revokes the latest revision of the specified Consent by committing a new revision with `state`
- * updated to `REVOKED`. If the latest revision of the given consent is in the `REVOKED` state, no
+ * updated to `REVOKED`. If the latest revision of the given Consent is in the `REVOKED` state, no
  * new revision is committed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,18 +32,18 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class RevokeConsentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's revocation of
-   * the consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/c
-   * onsentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+   * Optional. The resource name of the Consent artifact that contains proof of the user's
+   * revocation of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/
+   * {dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consentArtifact;
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's revocation of
-   * the consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/c
-   * onsentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+   * Optional. The resource name of the Consent artifact that contains proof of the user's
+   * revocation of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/
+   * {dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentArtifact() {
@@ -51,9 +51,9 @@ public final class RevokeConsentRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The resource name of the consent artifact that contains proof of the end user's revocation of
-   * the consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/c
-   * onsentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
+   * Optional. The resource name of the Consent artifact that contains proof of the user's
+   * revocation of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/
+   * {dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * @param consentArtifact consentArtifact or {@code null} for none
    */
   public RevokeConsentRequest setConsentArtifact(java.lang.String consentArtifact) {

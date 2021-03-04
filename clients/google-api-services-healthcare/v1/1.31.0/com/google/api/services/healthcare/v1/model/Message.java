@@ -86,6 +86,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.util.List<PatientId> patientIds;
 
   /**
+   * The parsed version of the raw message data schematized according to this store's schemas and
+   * type definitions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchematizedData schematizedData;
+
+  /**
    * The hospital that this message came from. MSH-4.
    * The value may be {@code null}.
    */
@@ -255,6 +263,25 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setPatientIds(java.util.List<PatientId> patientIds) {
     this.patientIds = patientIds;
+    return this;
+  }
+
+  /**
+   * The parsed version of the raw message data schematized according to this store's schemas and
+   * type definitions.
+   * @return value or {@code null} for none
+   */
+  public SchematizedData getSchematizedData() {
+    return schematizedData;
+  }
+
+  /**
+   * The parsed version of the raw message data schematized according to this store's schemas and
+   * type definitions.
+   * @param schematizedData schematizedData or {@code null} for none
+   */
+  public Message setSchematizedData(SchematizedData schematizedData) {
+    this.schematizedData = schematizedData;
     return this;
   }
 

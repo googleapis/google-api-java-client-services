@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * An attribute value for a consent or data mapping. Each Attribute must have a corresponding
+ * An attribute value for a Consent or User data mapping. Each Attribute must have a corresponding
  * AttributeDefinition in the consent store that defines the default and allowed values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,7 +31,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Attribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates the name of an attribute defined at the consent store.
+   * Indicates the name of an attribute defined in the consent store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class Attribute extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> values;
 
   /**
-   * Indicates the name of an attribute defined at the consent store.
+   * Indicates the name of an attribute defined in the consent store.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeDefinitionId() {
@@ -56,7 +56,7 @@ public final class Attribute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the name of an attribute defined at the consent store.
+   * Indicates the name of an attribute defined in the consent store.
    * @param attributeDefinitionId attributeDefinitionId or {@code null} for none
    */
   public Attribute setAttributeDefinitionId(java.lang.String attributeDefinitionId) {

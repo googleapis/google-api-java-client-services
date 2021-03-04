@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Lists the Consents in the given Consent store.
+ * Model definition for ListConsentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ListConsentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The returned consents. The maximum number of consents returned is determined by the value of
+   * The returned Consents. The maximum number of Consents returned is determined by the value of
    * page_size in the ListConsentsRequest.
    * The value may be {@code null}.
    */
@@ -44,14 +44,14 @@ public final class ListConsentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The returned consents. The maximum number of consents returned is determined by the value of
+   * The returned Consents. The maximum number of Consents returned is determined by the value of
    * page_size in the ListConsentsRequest.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class ListConsentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The returned consents. The maximum number of consents returned is determined by the value of
+   * The returned Consents. The maximum number of Consents returned is determined by the value of
    * page_size in the ListConsentsRequest.
    * @param consents consents or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class ListConsentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +78,7 @@ public final class ListConsentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListConsentsResponse setNextPageToken(java.lang.String nextPageToken) {

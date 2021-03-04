@@ -30,36 +30,36 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Signature extends com.google.api.client.json.GenericJson {
 
   /**
-   * An image of the user's signature.
+   * Optional. An image of the user's signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Image image;
 
   /**
-   * Metadata associated with the user's signature. For example, the user's name or the user's
-   * title.
+   * Optional. Metadata associated with the user's signature. For example, the user's name or the
+   * user's title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Timestamp of the signature.
+   * Optional. Timestamp of the signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String signatureTime;
 
   /**
-   * User's UUID provided by the client.
+   * Required. User's UUID provided by the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
 
   /**
-   * An image of the user's signature.
+   * Optional. An image of the user's signature.
    * @return value or {@code null} for none
    */
   public Image getImage() {
@@ -67,7 +67,7 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An image of the user's signature.
+   * Optional. An image of the user's signature.
    * @param image image or {@code null} for none
    */
   public Signature setImage(Image image) {
@@ -76,8 +76,8 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with the user's signature. For example, the user's name or the user's
-   * title.
+   * Optional. Metadata associated with the user's signature. For example, the user's name or the
+   * user's title.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -85,8 +85,8 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with the user's signature. For example, the user's name or the user's
-   * title.
+   * Optional. Metadata associated with the user's signature. For example, the user's name or the
+   * user's title.
    * @param metadata metadata or {@code null} for none
    */
   public Signature setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -95,7 +95,7 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the signature.
+   * Optional. Timestamp of the signature.
    * @return value or {@code null} for none
    */
   public String getSignatureTime() {
@@ -103,7 +103,7 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the signature.
+   * Optional. Timestamp of the signature.
    * @param signatureTime signatureTime or {@code null} for none
    */
   public Signature setSignatureTime(String signatureTime) {
@@ -112,7 +112,7 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User's UUID provided by the client.
+   * Required. User's UUID provided by the client.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -120,7 +120,7 @@ public final class Signature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User's UUID provided by the client.
+   * Required. User's UUID provided by the client.
    * @param userId userId or {@code null} for none
    */
   public Signature setUserId(java.lang.String userId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Queries all data_ids that are consented for a given use in the given Consent store and writes
+ * Queries all data_ids that are consented for a given use in the given consent store and writes
  * them to a specified destination. The returned Operation includes a progress counter for the
  * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
  * (/healthcare/docs/how-tos/logging) and [QueryAccessibleData] for a sample log entry).
@@ -48,8 +48,8 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
   private java.util.Map<String, java.lang.String> requestAttributes;
 
   /**
-   * The values of resources attributes associated with the type of data being requested. If no
-   * values are specified, then all data types are included in the output.
+   * Optional. The values of resource attributes associated with the type of resources being
+   * requested. If no values are specified, then all resource types are included in the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
   }
 
   /**
-   * The values of resources attributes associated with the type of data being requested. If no
-   * values are specified, then all data types are included in the output.
+   * Optional. The values of resource attributes associated with the type of resources being
+   * requested. If no values are specified, then all resource types are included in the output.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceAttributes() {
@@ -101,8 +101,8 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
   }
 
   /**
-   * The values of resources attributes associated with the type of data being requested. If no
-   * values are specified, then all data types are included in the output.
+   * Optional. The values of resource attributes associated with the type of resources being
+   * requested. If no values are specified, then all resource types are included in the output.
    * @param resourceAttributes resourceAttributes or {@code null} for none
    */
   public QueryAccessibleDataRequest setResourceAttributes(java.util.Map<String, java.lang.String> resourceAttributes) {

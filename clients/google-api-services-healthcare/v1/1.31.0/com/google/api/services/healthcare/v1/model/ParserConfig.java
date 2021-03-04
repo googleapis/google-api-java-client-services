@@ -37,6 +37,13 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowNullHeader;
 
   /**
+   * Schemas used to parse messages in this store, if schematized parsing is desired.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaPackage schema;
+
+  /**
    * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator,
    * matching the HL7 version 2 specification.
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
    */
   public ParserConfig setAllowNullHeader(java.lang.Boolean allowNullHeader) {
     this.allowNullHeader = allowNullHeader;
+    return this;
+  }
+
+  /**
+   * Schemas used to parse messages in this store, if schematized parsing is desired.
+   * @return value or {@code null} for none
+   */
+  public SchemaPackage getSchema() {
+    return schema;
+  }
+
+  /**
+   * Schemas used to parse messages in this store, if schematized parsing is desired.
+   * @param schema schema or {@code null} for none
+   */
+  public ParserConfig setSchema(SchemaPackage schema) {
+    this.schema = schema;
     return this;
   }
 

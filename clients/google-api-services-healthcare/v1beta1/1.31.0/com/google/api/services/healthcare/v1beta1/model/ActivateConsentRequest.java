@@ -18,8 +18,9 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Activates the latest revision of the specified Consent by committing a new revision with `state`
- * updated to `ACTIVE`. If the latest revision of the given consent is in the `ACTIVE` state, no new
- * revision is committed.
+ * updated to `ACTIVE`. If the latest revision of the given Consent is in the `ACTIVE` state, no new
+ * revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
+ * consent is in the `REJECTED` or `REVOKED` state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -32,34 +33,34 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ActivateConsentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains documentation of the user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
-   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft consent had a
-   * consent artifact, this consent artifact overwrites it.
+   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft Consent had a
+   * Consent artifact, this Consent artifact overwrites it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consentArtifact;
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * The time to live for this consent from when it is marked as active.
+   * The time to live for this Consent from when it is marked as active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String ttl;
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains documentation of the user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
-   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft consent had a
-   * consent artifact, this consent artifact overwrites it.
+   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft Consent had a
+   * Consent artifact, this Consent artifact overwrites it.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentArtifact() {
@@ -67,10 +68,10 @@ public final class ActivateConsentRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains documentation of the user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
-   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft consent had a
-   * consent artifact, this consent artifact overwrites it.
+   * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the draft Consent had a
+   * Consent artifact, this Consent artifact overwrites it.
    * @param consentArtifact consentArtifact or {@code null} for none
    */
   public ActivateConsentRequest setConsentArtifact(java.lang.String consentArtifact) {
@@ -79,7 +80,7 @@ public final class ActivateConsentRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -87,7 +88,7 @@ public final class ActivateConsentRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * @param expireTime expireTime or {@code null} for none
    */
   public ActivateConsentRequest setExpireTime(String expireTime) {
@@ -96,7 +97,7 @@ public final class ActivateConsentRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time to live for this consent from when it is marked as active.
+   * The time to live for this Consent from when it is marked as active.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -104,7 +105,7 @@ public final class ActivateConsentRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time to live for this consent from when it is marked as active.
+   * The time to live for this Consent from when it is marked as active.
    * @param ttl ttl or {@code null} for none
    */
   public ActivateConsentRequest setTtl(String ttl) {

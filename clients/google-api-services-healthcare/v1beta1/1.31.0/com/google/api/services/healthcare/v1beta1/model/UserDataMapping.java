@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Maps a user data entry to its end user and Attributes.
+ * Maps a resource to the associated user and Attributes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class UserDataMapping extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates the time when this data mapping was archived.
+   * Output only. Indicates the time when this mapping was archived.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String archiveTime;
 
   /**
-   * Output only. Indicates whether this data mapping is archived.
+   * Output only. Indicates whether this mapping is archived.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean archived;
 
   /**
-   * Required. A unique identifier for the mapped data.
+   * Required. A unique identifier for the mapped resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,10 +60,10 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Attributes of end user data. Each attribute can have exactly one value specified. Only
-   * explicitly set attributes are displayed here. Attribute definitions with defaults set
-   * implicitly apply to these User data mappings. Attributes listed here must be single valued,
-   * that is, exactly one value is specified for the field "values" in each Attribute.
+   * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute
+   * definitions with defaults set implicitly apply to these User data mappings. Attributes listed
+   * here must be single valued, that is, exactly one value is specified for the field "values" in
+   * each Attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   private java.lang.String userId;
 
   /**
-   * Output only. Indicates the time when this data mapping was archived.
+   * Output only. Indicates the time when this mapping was archived.
    * @return value or {@code null} for none
    */
   public String getArchiveTime() {
@@ -91,7 +91,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates the time when this data mapping was archived.
+   * Output only. Indicates the time when this mapping was archived.
    * @param archiveTime archiveTime or {@code null} for none
    */
   public UserDataMapping setArchiveTime(String archiveTime) {
@@ -100,7 +100,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates whether this data mapping is archived.
+   * Output only. Indicates whether this mapping is archived.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getArchived() {
@@ -108,7 +108,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Indicates whether this data mapping is archived.
+   * Output only. Indicates whether this mapping is archived.
    * @param archived archived or {@code null} for none
    */
   public UserDataMapping setArchived(java.lang.Boolean archived) {
@@ -117,7 +117,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. A unique identifier for the mapped data.
+   * Required. A unique identifier for the mapped resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataId() {
@@ -125,7 +125,7 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. A unique identifier for the mapped data.
+   * Required. A unique identifier for the mapped resource.
    * @param dataId dataId or {@code null} for none
    */
   public UserDataMapping setDataId(java.lang.String dataId) {
@@ -155,10 +155,10 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Attributes of end user data. Each attribute can have exactly one value specified. Only
-   * explicitly set attributes are displayed here. Attribute definitions with defaults set
-   * implicitly apply to these User data mappings. Attributes listed here must be single valued,
-   * that is, exactly one value is specified for the field "values" in each Attribute.
+   * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute
+   * definitions with defaults set implicitly apply to these User data mappings. Attributes listed
+   * here must be single valued, that is, exactly one value is specified for the field "values" in
+   * each Attribute.
    * @return value or {@code null} for none
    */
   public java.util.List<Attribute> getResourceAttributes() {
@@ -166,10 +166,10 @@ public final class UserDataMapping extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Attributes of end user data. Each attribute can have exactly one value specified. Only
-   * explicitly set attributes are displayed here. Attribute definitions with defaults set
-   * implicitly apply to these User data mappings. Attributes listed here must be single valued,
-   * that is, exactly one value is specified for the field "values" in each Attribute.
+   * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute
+   * definitions with defaults set implicitly apply to these User data mappings. Attributes listed
+   * here must be single valued, that is, exactly one value is specified for the field "values" in
+   * each Attribute.
    * @param resourceAttributes resourceAttributes or {@code null} for none
    */
   public UserDataMapping setResourceAttributes(java.util.List<Attribute> resourceAttributes) {

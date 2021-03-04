@@ -46,33 +46,33 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   private java.lang.String category;
 
   /**
-   * Default values of the attribute in consents. If no default values are specified, it defaults to
-   * an empty value.
+   * Optional. Default values of the attribute in Consents. If no default values are specified, it
+   * defaults to an empty value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> consentDefaultValues;
 
   /**
-   * Default value of the attribute in user data mappings. If no default value is specified, it
-   * defaults to an empty value. This field is only applicable to attributes of the category
-   * `RESOURCE`.
+   * Optional. Default value of the attribute in User data mappings. If no default value is
+   * specified, it defaults to an empty value. This field is only applicable to attributes of the
+   * category `RESOURCE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataMappingDefaultValue;
 
   /**
-   * A description of the attribute.
+   * Optional. A description of the attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Resource name of the attribute definition, of the form `projects/{project_id}/locations/{locati
+   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
    * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`.
+   * efinition_id}`. Cannot be changed after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Default values of the attribute in consents. If no default values are specified, it defaults to
-   * an empty value.
+   * Optional. Default values of the attribute in Consents. If no default values are specified, it
+   * defaults to an empty value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getConsentDefaultValues() {
@@ -126,8 +126,8 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Default values of the attribute in consents. If no default values are specified, it defaults to
-   * an empty value.
+   * Optional. Default values of the attribute in Consents. If no default values are specified, it
+   * defaults to an empty value.
    * @param consentDefaultValues consentDefaultValues or {@code null} for none
    */
   public AttributeDefinition setConsentDefaultValues(java.util.List<java.lang.String> consentDefaultValues) {
@@ -136,9 +136,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Default value of the attribute in user data mappings. If no default value is specified, it
-   * defaults to an empty value. This field is only applicable to attributes of the category
-   * `RESOURCE`.
+   * Optional. Default value of the attribute in User data mappings. If no default value is
+   * specified, it defaults to an empty value. This field is only applicable to attributes of the
+   * category `RESOURCE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataMappingDefaultValue() {
@@ -146,9 +146,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Default value of the attribute in user data mappings. If no default value is specified, it
-   * defaults to an empty value. This field is only applicable to attributes of the category
-   * `RESOURCE`.
+   * Optional. Default value of the attribute in User data mappings. If no default value is
+   * specified, it defaults to an empty value. This field is only applicable to attributes of the
+   * category `RESOURCE`.
    * @param dataMappingDefaultValue dataMappingDefaultValue or {@code null} for none
    */
   public AttributeDefinition setDataMappingDefaultValue(java.lang.String dataMappingDefaultValue) {
@@ -157,7 +157,7 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * A description of the attribute.
+   * Optional. A description of the attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -165,7 +165,7 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * A description of the attribute.
+   * Optional. A description of the attribute.
    * @param description description or {@code null} for none
    */
   public AttributeDefinition setDescription(java.lang.String description) {
@@ -174,9 +174,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Resource name of the attribute definition, of the form `projects/{project_id}/locations/{locati
+   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
    * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`.
+   * efinition_id}`. Cannot be changed after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -184,9 +184,9 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Resource name of the attribute definition, of the form `projects/{project_id}/locations/{locati
+   * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{locati
    * on_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-   * efinition_id}`.
+   * efinition_id}`. Cannot be changed after creation.
    * @param name name or {@code null} for none
    */
   public AttributeDefinition setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Represents an end user's consent in terms of the resources that can be accessed and under what
+ * Represents a user's consent in terms of the resources that can be accessed and under what
  * conditions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,17 +31,18 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1ConsentPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The request conditions to meet to grant access. In addition to any supported comparison
-   * operators, authorization rules may have `IN` operator as well as at most 10 logical operators
-   * that are limited to `AND` (`&&`), `OR` (`||`).
+   * Required. The request conditions to meet to grant access. In addition to any supported
+   * comparison operators, authorization rules may have `IN` operator as well as at most 10 logical
+   * operators that are limited to `AND` (`&&`), `OR` (`||`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Expr authorizationRule;
 
   /**
-   * The data resources that this policy applies to. A data resource is a match if it matches all
-   * the attributes listed here.
+   * The resources that this policy applies to. A resource is a match if it matches all the
+   * attributes listed here. If empty, this policy applies to all User data mappings for the given
+   * user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +55,9 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicy extends com.google.
   }
 
   /**
-   * The request conditions to meet to grant access. In addition to any supported comparison
-   * operators, authorization rules may have `IN` operator as well as at most 10 logical operators
-   * that are limited to `AND` (`&&`), `OR` (`||`).
+   * Required. The request conditions to meet to grant access. In addition to any supported
+   * comparison operators, authorization rules may have `IN` operator as well as at most 10 logical
+   * operators that are limited to `AND` (`&&`), `OR` (`||`).
    * @return value or {@code null} for none
    */
   public Expr getAuthorizationRule() {
@@ -64,9 +65,9 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicy extends com.google.
   }
 
   /**
-   * The request conditions to meet to grant access. In addition to any supported comparison
-   * operators, authorization rules may have `IN` operator as well as at most 10 logical operators
-   * that are limited to `AND` (`&&`), `OR` (`||`).
+   * Required. The request conditions to meet to grant access. In addition to any supported
+   * comparison operators, authorization rules may have `IN` operator as well as at most 10 logical
+   * operators that are limited to `AND` (`&&`), `OR` (`||`).
    * @param authorizationRule authorizationRule or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1ConsentPolicy setAuthorizationRule(Expr authorizationRule) {
@@ -75,8 +76,9 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicy extends com.google.
   }
 
   /**
-   * The data resources that this policy applies to. A data resource is a match if it matches all
-   * the attributes listed here.
+   * The resources that this policy applies to. A resource is a match if it matches all the
+   * attributes listed here. If empty, this policy applies to all User data mappings for the given
+   * user.
    * @return value or {@code null} for none
    */
   public java.util.List<Attribute> getResourceAttributes() {
@@ -84,8 +86,9 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicy extends com.google.
   }
 
   /**
-   * The data resources that this policy applies to. A data resource is a match if it matches all
-   * the attributes listed here.
+   * The resources that this policy applies to. A resource is a match if it matches all the
+   * attributes listed here. If empty, this policy applies to all User data mappings for the given
+   * user.
    * @param resourceAttributes resourceAttributes or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1ConsentPolicy setResourceAttributes(java.util.List<Attribute> resourceAttributes) {

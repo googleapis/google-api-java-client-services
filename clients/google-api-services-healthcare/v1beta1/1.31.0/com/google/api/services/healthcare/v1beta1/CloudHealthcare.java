@@ -4575,16 +4575,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class ConsentStores {
 
           /**
-           * Checks if a particular data_id of a User data mapping in the given Consent store is consented for
-           * a given use.
+           * Checks if a particular data_id of a User data mapping in the specified consent store is consented
+           * for the specified use.
            *
            * Create a request for the method "consentStores.checkDataAccess".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link CheckDataAccess#execute()} method to invoke the remote operation.
            *
-           * @param consentStore Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}/
-           *        locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+           * @param consentStore Required. Name of the consent store where the requested data_id is stored, of the form `projects/{pr
+           *        oject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest}
            * @return the request
            */
@@ -4602,8 +4602,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Checks if a particular data_id of a User data mapping in the given Consent store is consented
-             * for a given use.
+             * Checks if a particular data_id of a User data mapping in the specified consent store is
+             * consented for the specified use.
              *
              * Create a request for the method "consentStores.checkDataAccess".
              *
@@ -4613,8 +4613,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param consentStore Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}/
-           *        locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * @param consentStore Required. Name of the consent store where the requested data_id is stored, of the form `projects/{pr
+           *        oject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest}
              * @since 1.13
              */
@@ -4684,24 +4684,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Name of the Consent store where the requested data_id is stored, of the form `project
-             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_s
-             * tore_id}`.
+             * Required. Name of the consent store where the requested data_id is stored, of the
+             * form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+             * es/{consent_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String consentStore;
 
-            /** Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}
-           /locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+            /** Required. Name of the consent store where the requested data_id is stored, of the form `projects/{p
+           roject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
              */
             public java.lang.String getConsentStore() {
               return consentStore;
             }
 
             /**
-             * Name of the Consent store where the requested data_id is stored, of the form `project
-             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_s
-             * tore_id}`.
+             * Required. Name of the consent store where the requested data_id is stored, of the
+             * form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+             * es/{consent_store_id}`.
              */
             public CheckDataAccess setConsentStore(java.lang.String consentStore) {
               if (!getSuppressPatternChecks()) {
@@ -4719,7 +4719,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Creates a new Consent store in the parent dataset. Attempting to create a consent store with the
+           * Creates a new consent store in the parent dataset. Attempting to create a consent store with the
            * same ID as an existing store fails with an ALREADY_EXISTS error.
            *
            * Create a request for the method "consentStores.create".
@@ -4727,7 +4727,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the dataset this Consent store belongs to.
+           * @param parent Required. The name of the dataset this consent store belongs to.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
            * @return the request
            */
@@ -4745,7 +4745,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
 
             /**
-             * Creates a new Consent store in the parent dataset. Attempting to create a consent store with
+             * Creates a new consent store in the parent dataset. Attempting to create a consent store with
              * the same ID as an existing store fails with an ALREADY_EXISTS error.
              *
              * Create a request for the method "consentStores.create".
@@ -4756,7 +4756,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the dataset this Consent store belongs to.
+             * @param parent Required. The name of the dataset this consent store belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
              * @since 1.13
              */
@@ -4825,17 +4825,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the dataset this Consent store belongs to. */
+            /** Required. The name of the dataset this consent store belongs to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the dataset this Consent store belongs to.
+            /** Required. The name of the dataset this consent store belongs to.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The name of the dataset this Consent store belongs to. */
+            /** Required. The name of the dataset this consent store belongs to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4847,22 +4847,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The ID of the consent store to create. The string must match the following regex:
-             * `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the consent store to create. The string must match the following
+             * regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
              */
             @com.google.api.client.util.Key
             private java.lang.String consentStoreId;
 
-            /** The ID of the consent store to create. The string must match the following regex:
-           `[\p{L}\p{N}_\-\.]{1,256}`.
+            /** Required. The ID of the consent store to create. The string must match the following regex:
+           `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
              */
             public java.lang.String getConsentStoreId() {
               return consentStoreId;
             }
 
             /**
-             * The ID of the consent store to create. The string must match the following regex:
-             * `[\p{L}\p{N}_\-\.]{1,256}`.
+             * Required. The ID of the consent store to create. The string must match the following
+             * regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
              */
             public Create setConsentStoreId(java.lang.String consentStoreId) {
               this.consentStoreId = consentStoreId;
@@ -4875,14 +4875,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes the specified Consent store and removes all consent data in the specified consent store.
+           * Deletes the specified consent store and removes all the consent store's data.
            *
            * Create a request for the method "consentStores.delete".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Consent store to delete.
+           * @param name Required. The resource name of the consent store to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4899,8 +4899,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Deletes the specified Consent store and removes all consent data in the specified consent
-             * store.
+             * Deletes the specified consent store and removes all the consent store's data.
              *
              * Create a request for the method "consentStores.delete".
              *
@@ -4910,7 +4909,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Consent store to delete.
+             * @param name Required. The resource name of the consent store to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4978,17 +4977,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The resource name of the Consent store to delete. */
+            /** Required. The resource name of the consent store to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Consent store to delete.
+            /** Required. The resource name of the consent store to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The resource name of the Consent store to delete. */
+            /** Required. The resource name of the consent store to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5005,9 +5004,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Evaluates the end user's Consents for all matching User data mappings. Note: User data mappings
-           * are indexed asynchronously, so there might be a slight delay between the time a mapping is
-           * created or updated and when it is included in the results of EvaluateUserConsents.
+           * Evaluates the user's Consents for all matching User data mappings. Note: User data mappings are
+           * indexed asynchronously, which can cause a slight delay between the time mappings are created or
+           * updated and when they are included in EvaluateUserConsents results.
            *
            * Create a request for the method "consentStores.evaluateUserConsents".
            *
@@ -5015,7 +5014,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link EvaluateUserConsents#execute()} method to invoke the remote
            * operation.
            *
-           * @param consentStore Name of the Consent store to retrieve user data mappings from.
+           * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest}
            * @return the request
            */
@@ -5033,9 +5032,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Evaluates the end user's Consents for all matching User data mappings. Note: User data mappings
-             * are indexed asynchronously, so there might be a slight delay between the time a mapping is
-             * created or updated and when it is included in the results of EvaluateUserConsents.
+             * Evaluates the user's Consents for all matching User data mappings. Note: User data mappings are
+             * indexed asynchronously, which can cause a slight delay between the time mappings are created or
+             * updated and when they are included in EvaluateUserConsents results.
              *
              * Create a request for the method "consentStores.evaluateUserConsents".
              *
@@ -5045,7 +5044,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param consentStore Name of the Consent store to retrieve user data mappings from.
+             * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest}
              * @since 1.13
              */
@@ -5114,17 +5113,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (EvaluateUserConsents) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the Consent store to retrieve user data mappings from. */
+            /** Required. Name of the consent store to retrieve User data mappings from. */
             @com.google.api.client.util.Key
             private java.lang.String consentStore;
 
-            /** Name of the Consent store to retrieve user data mappings from.
+            /** Required. Name of the consent store to retrieve User data mappings from.
              */
             public java.lang.String getConsentStore() {
               return consentStore;
             }
 
-            /** Name of the Consent store to retrieve user data mappings from. */
+            /** Required. Name of the consent store to retrieve User data mappings from. */
             public EvaluateUserConsents setConsentStore(java.lang.String consentStore) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
@@ -5141,14 +5140,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets the specified Consent store.
+           * Gets the specified consent store.
            *
            * Create a request for the method "consentStores.get".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Consent store to get.
+           * @param name Required. The resource name of the consent store to get.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -5165,7 +5164,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Gets the specified Consent store.
+             * Gets the specified consent store.
              *
              * Create a request for the method "consentStores.get".
              *
@@ -5174,7 +5173,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Consent store to get.
+             * @param name Required. The resource name of the consent store to get.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -5252,17 +5251,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The resource name of the Consent store to get. */
+            /** Required. The resource name of the consent store to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Consent store to get.
+            /** Required. The resource name of the consent store to get.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The resource name of the Consent store to get. */
+            /** Required. The resource name of the consent store to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5463,7 +5462,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Lists the Consent stores in the given dataset.
+           * Lists the consent stores in the specified dataset.
            *
            * Create a request for the method "consentStores.list".
            *
@@ -5487,7 +5486,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
 
             /**
-             * Lists the Consent stores in the given dataset.
+             * Lists the consent stores in the specified dataset.
              *
              * Create a request for the method "consentStores.list".
              *
@@ -5596,39 +5595,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Restricts the stores returned to those matching a filter. The following syntax is
-             * available: * A string field value can be written as text inside quotation marks, for
-             * example `"query text"`. The only valid relational operation for text fields is
-             * equality (`=`), where text is searched within the field, rather than having the field
-             * be equal to the text. For example, `"Comment = great"` returns messages with `great`
-             * in the comment field. * A number field value can be written as an integer, a decimal,
-             * or an exponential. The valid relational operators for number fields are the equality
-             * operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`,
-             * `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
-             * operator to an expression to negate it. * A date field value must be written in
-             * `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading
-             * zeros are required for one-digit months and days. The valid relational operators for
-             * date fields are the equality operator (`=`) , along with the less than/greater than
+             * Optional. Restricts the stores returned to those matching a filter. The following
+             * syntax is available: * A string field value can be written as text inside quotation
+             * marks, for example `"query text"`. The only valid relational operation for text
+             * fields is equality (`=`), where text is searched within the field, rather than having
+             * the field be equal to the text. For example, `"Comment = great"` returns messages
+             * with `great` in the comment field. * A number field value can be written as an
+             * integer, a decimal, or an exponential. The valid relational operators for number
+             * fields are the equality operator (`=`), along with the less than/greater than
              * operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator.
-             * You can prepend the `NOT` operator to an expression to negate it. * Multiple field
-             * query expressions can be combined in one query by adding `AND` or `OR` operators
-             * between the expressions. If a boolean operator appears within a quoted string, it is
-             * not treated as special, it's just another part of the character string to be matched.
-             * You can prepend the `NOT` operator to an expression to negate it. Only filtering on
-             * labels is supported. For example, `labels.key=value`.
+             * You can prepend the `NOT` operator to an expression to negate it. * A date field
+             * value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339
+             * time format. Leading zeros are required for one-digit months and days. The valid
+             * relational operators for date fields are the equality operator (`=`) , along with the
+             * less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
+             * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
+             * negate it. * Multiple field query expressions can be combined in one query by adding
+             * `AND` or `OR` operators between the expressions. If a boolean operator appears within
+             * a quoted string, it is not treated as special, it's just another part of the
+             * character string to be matched. You can prepend the `NOT` operator to an expression
+             * to negate it. Only filtering on labels is supported. For example,
+             * `filter=labels.key=value`.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Restricts the stores returned to those matching a filter. The following syntax is available: * A
-           string field value can be written as text inside quotation marks, for example `"query text"`. The
-           only valid relational operation for text fields is equality (`=`), where text is searched within
-           the field, rather than having the field be equal to the text. For example, `"Comment = great"`
-           returns messages with `great` in the comment field. * A number field value can be written as an
-           integer, a decimal, or an exponential. The valid relational operators for number fields are the
-           equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
-           Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an
-           expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+            /** Optional. Restricts the stores returned to those matching a filter. The following syntax is
+           available: * A string field value can be written as text inside quotation marks, for example
+           `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+           is searched within the field, rather than having the field be equal to the text. For example,
+           `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+           be written as an integer, a decimal, or an exponential. The valid relational operators for number
+           fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+           `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+           an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
            date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
            days. The valid relational operators for date fields are the equality operator (`=`) , along with
            the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
@@ -5636,33 +5636,35 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            query expressions can be combined in one query by adding `AND` or `OR` operators between the
            expressions. If a boolean operator appears within a quoted string, it is not treated as special,
            it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-           an expression to negate it. Only filtering on labels is supported. For example, `labels.key=value`.
+           an expression to negate it. Only filtering on labels is supported. For example,
+           `filter=labels.key=value`.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Restricts the stores returned to those matching a filter. The following syntax is
-             * available: * A string field value can be written as text inside quotation marks, for
-             * example `"query text"`. The only valid relational operation for text fields is
-             * equality (`=`), where text is searched within the field, rather than having the field
-             * be equal to the text. For example, `"Comment = great"` returns messages with `great`
-             * in the comment field. * A number field value can be written as an integer, a decimal,
-             * or an exponential. The valid relational operators for number fields are the equality
-             * operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`,
-             * `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
-             * operator to an expression to negate it. * A date field value must be written in
-             * `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time format. Leading
-             * zeros are required for one-digit months and days. The valid relational operators for
-             * date fields are the equality operator (`=`) , along with the less than/greater than
+             * Optional. Restricts the stores returned to those matching a filter. The following
+             * syntax is available: * A string field value can be written as text inside quotation
+             * marks, for example `"query text"`. The only valid relational operation for text
+             * fields is equality (`=`), where text is searched within the field, rather than having
+             * the field be equal to the text. For example, `"Comment = great"` returns messages
+             * with `great` in the comment field. * A number field value can be written as an
+             * integer, a decimal, or an exponential. The valid relational operators for number
+             * fields are the equality operator (`=`), along with the less than/greater than
              * operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator.
-             * You can prepend the `NOT` operator to an expression to negate it. * Multiple field
-             * query expressions can be combined in one query by adding `AND` or `OR` operators
-             * between the expressions. If a boolean operator appears within a quoted string, it is
-             * not treated as special, it's just another part of the character string to be matched.
-             * You can prepend the `NOT` operator to an expression to negate it. Only filtering on
-             * labels is supported. For example, `labels.key=value`.
+             * You can prepend the `NOT` operator to an expression to negate it. * A date field
+             * value must be written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339
+             * time format. Leading zeros are required for one-digit months and days. The valid
+             * relational operators for date fields are the equality operator (`=`) , along with the
+             * less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
+             * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
+             * negate it. * Multiple field query expressions can be combined in one query by adding
+             * `AND` or `OR` operators between the expressions. If a boolean operator appears within
+             * a quoted string, it is not treated as special, it's just another part of the
+             * character string to be matched. You can prepend the `NOT` operator to an expression
+             * to negate it. Only filtering on labels is supported. For example,
+             * `filter=labels.key=value`.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -5670,39 +5672,43 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of Consent stores to return in a single response. If not
-             * specified, 100 is used. May not be larger than 1000.
+             * Optional. Limit on the number of consent stores to return in a single response. If
+             * not specified, 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of Consent stores to return in a single response. If not specified, 100 is
-           used. May not be larger than 1000.
+            /** Optional. Limit on the number of consent stores to return in a single response. If not specified,
+           100 is used. May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of Consent stores to return in a single response. If not
-             * specified, 100 is used. May not be larger than 1000.
+             * Optional. Limit on the number of consent stores to return in a single response. If
+             * not specified, 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Token to retrieve the next page of results or empty to get the first page. */
+            /**
+             * Optional. Token to retrieve the next page of results, or empty to get the first page.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Token to retrieve the next page of results or empty to get the first page.
+            /** Optional. Token to retrieve the next page of results, or empty to get the first page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Token to retrieve the next page of results or empty to get the first page. */
+            /**
+             * Optional. Token to retrieve the next page of results, or empty to get the first page.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -5714,15 +5720,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Updates the specified Consent store.
+           * Updates the specified consent store.
            *
            * Create a request for the method "consentStores.patch".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/datas
-           *        ets/{dataset_id}/consentStores/{consent_store_id}`.
+           * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
            * @return the request
            */
@@ -5740,7 +5746,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Updates the specified Consent store.
+             * Updates the specified consent store.
              *
              * Create a request for the method "consentStores.patch".
              *
@@ -5750,8 +5756,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/datas
-           *        ets/{dataset_id}/consentStores/{consent_store_id}`.
+             * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
              * @since 1.13
              */
@@ -5821,22 +5827,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Resource name of the Consent store, of the form `projects/{project_id}/locations/{loc
-             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * Resource name of the consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed
+             * after creation.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/data
-           sets/{dataset_id}/consentStores/{consent_store_id}`.
+            /** Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/data
+           sets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Resource name of the Consent store, of the form `projects/{project_id}/locations/{loc
-             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * Resource name of the consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed
+             * after creation.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5849,26 +5857,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The update mask that applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#fieldmask. The `labels` field is allowed to be
+             * Required. The update mask that applies to the resource. For the `FieldMask`
+             * definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. Only the `labels`,
+             * `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
              * updated.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The update mask that applies to the resource. For the `FieldMask` definition, see
-           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
-           `labels` field is allowed to be updated.
+            /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+           `labels`, `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
+           updated.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * The update mask that applies to the resource. For the `FieldMask` definition, see
-             * https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#fieldmask. The `labels` field is allowed to be
+             * Required. The update mask that applies to the resource. For the `FieldMask`
+             * definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. Only the `labels`,
+             * `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
              * updated.
              */
             public Patch setUpdateMask(String updateMask) {
@@ -5882,13 +5893,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Queries all data_ids that are consented for a given use in the given Consent store and writes
+           * Queries all data_ids that are consented for a specified use in the given consent store and writes
            * them to a specified destination. The returned Operation includes a progress counter for the
            * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
-           * (/healthcare/docs/how-tos/logging)). For example, the following sample log entry shows a `failed
-           * to evaluate consent policy` error that occurred during a QueryAccessibleData call to consent
-           * store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
-           * _store_id}`. ```json jsonPayload: { @type:
+           * (cloud.google.com/healthcare/docs/how-tos/logging)). For example, the following sample log entry
+           * shows a `failed to evaluate consent policy` error that occurred during a QueryAccessibleData call
+           * to consent store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+           * es/{consent_store_id}`. ```json jsonPayload: { @type:
            * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: { code:
            * 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locations/{
            * location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}" }
@@ -5905,7 +5916,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link QueryAccessibleData#execute()} method to invoke the remote operation.
            *
-           * @param consentStore Name of the Consent store to retrieve user data mappings from.
+           * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest}
            * @return the request
            */
@@ -5923,13 +5934,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
             /**
-             * Queries all data_ids that are consented for a given use in the given Consent store and writes
-             * them to a specified destination. The returned Operation includes a progress counter for the
-             * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
-             * (/healthcare/docs/how-tos/logging)). For example, the following sample log entry shows a
-             * `failed to evaluate consent policy` error that occurred during a QueryAccessibleData call to
-             * consent store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStore
-             * s/{consent_store_id}`. ```json jsonPayload: { @type:
+             * Queries all data_ids that are consented for a specified use in the given consent store and
+             * writes them to a specified destination. The returned Operation includes a progress counter for
+             * the number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing
+             * logs] (cloud.google.com/healthcare/docs/how-tos/logging)). For example, the following sample
+             * log entry shows a `failed to evaluate consent policy` error that occurred during a
+             * QueryAccessibleData call to consent store `projects/{project_id}/locations/{location_id}/datase
+             * ts/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type:
              * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
              * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
              * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
@@ -5949,7 +5960,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param consentStore Name of the Consent store to retrieve user data mappings from.
+             * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest}
              * @since 1.13
              */
@@ -6018,17 +6029,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return (QueryAccessibleData) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Name of the Consent store to retrieve user data mappings from. */
+            /** Required. Name of the consent store to retrieve User data mappings from. */
             @com.google.api.client.util.Key
             private java.lang.String consentStore;
 
-            /** Name of the Consent store to retrieve user data mappings from.
+            /** Required. Name of the consent store to retrieve User data mappings from.
              */
             public java.lang.String getConsentStore() {
               return consentStore;
             }
 
-            /** Name of the Consent store to retrieve user data mappings from. */
+            /** Required. Name of the consent store to retrieve User data mappings from. */
             public QueryAccessibleData setConsentStore(java.lang.String consentStore) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
@@ -6354,7 +6365,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class AttributeDefinitions {
 
             /**
-             * Creates a new Attribute definition in the parent Consent store.
+             * Creates a new Attribute definition in the parent consent store.
              *
              * Create a request for the method "attributeDefinitions.create".
              *
@@ -6379,7 +6390,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Creates a new Attribute definition in the parent Consent store.
+               * Creates a new Attribute definition in the parent consent store.
                *
                * Create a request for the method "attributeDefinitions.create".
                *
@@ -6517,15 +6528,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes the specified Attribute definition. Fails if it is referenced by any User data mapping,
-             * or the latest revision of any Consent.
+             * Deletes the specified Attribute definition. Fails if the Attribute definition is referenced by
+             * any User data mapping, or the latest revision of any Consent.
              *
              * Create a request for the method "attributeDefinitions.delete".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Attribute definition to delete.
+             * @param name Required. The resource name of the Attribute definition to delete. To preserve referential
+             *        integrity, Attribute definitions referenced by a User data mapping or the latest revision
+             *        of a Consent cannot be deleted.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6542,8 +6555,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
 
               /**
-               * Deletes the specified Attribute definition. Fails if it is referenced by any User data mapping,
-               * or the latest revision of any Consent.
+               * Deletes the specified Attribute definition. Fails if the Attribute definition is referenced by
+               * any User data mapping, or the latest revision of any Consent.
                *
                * Create a request for the method "attributeDefinitions.delete".
                *
@@ -6553,7 +6566,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Attribute definition to delete.
+               * @param name Required. The resource name of the Attribute definition to delete. To preserve referential
+             *        integrity, Attribute definitions referenced by a User data mapping or the latest revision
+             *        of a Consent cannot be deleted.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -6621,17 +6636,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the Attribute definition to delete. */
+              /**
+               * Required. The resource name of the Attribute definition to delete. To preserve
+               * referential integrity, Attribute definitions referenced by a User data mapping or
+               * the latest revision of a Consent cannot be deleted.
+               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Attribute definition to delete.
+              /** Required. The resource name of the Attribute definition to delete. To preserve referential
+             integrity, Attribute definitions referenced by a User data mapping or the latest revision of a
+             Consent cannot be deleted.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the Attribute definition to delete. */
+              /**
+               * Required. The resource name of the Attribute definition to delete. To preserve
+               * referential integrity, Attribute definitions referenced by a User data mapping or
+               * the latest revision of a Consent cannot be deleted.
+               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6786,14 +6811,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists the Attribute definitions in the given Consent store.
+             * Lists the Attribute definitions in the specified consent store.
              *
              * Create a request for the method "attributeDefinitions.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Name of the Consent store to retrieve attribute definitions from.
+             * @param parent Required. Name of the consent store to retrieve Attribute definitions from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -6810,7 +6835,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Lists the Attribute definitions in the given Consent store.
+               * Lists the Attribute definitions in the specified consent store.
                *
                * Create a request for the method "attributeDefinitions.list".
                *
@@ -6819,7 +6844,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Name of the Consent store to retrieve attribute definitions from.
+               * @param parent Required. Name of the consent store to retrieve Attribute definitions from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6897,17 +6922,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. Name of the Consent store to retrieve attribute definitions from. */
+              /** Required. Name of the consent store to retrieve Attribute definitions from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Name of the Consent store to retrieve attribute definitions from.
+              /** Required. Name of the consent store to retrieve Attribute definitions from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. Name of the Consent store to retrieve attribute definitions from. */
+              /** Required. Name of the consent store to retrieve Attribute definitions from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6919,39 +6944,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Restricts the attributes returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The only field available for filtering is `category`.
+               * Optional. Restricts the attributes returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The only field available for
+               * filtering is `category`. For example, `filter=category=\"REQUEST\"`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Restricts the attributes returned to those matching a filter. The following syntax is available: *
-             A string field value can be written as text inside quotation marks, for example `"query text"`. The
-             only valid relational operation for text fields is equality (`=`), where text is searched within
-             the field, rather than having the field be equal to the text. For example, `"Comment = great"`
-             returns messages with `great` in the comment field. * A number field value can be written as an
-             integer, a decimal, or an exponential. The valid relational operators for number fields are the
-             equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
-             Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an
-             expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+              /** Optional. Restricts the attributes returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
              date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
              days. The valid relational operators for date fields are the equality operator (`=`) , along with
              the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
@@ -6959,33 +6985,35 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              query expressions can be combined in one query by adding `AND` or `OR` operators between the
              expressions. If a boolean operator appears within a quoted string, it is not treated as special,
              it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-             an expression to negate it. The only field available for filtering is `category`.
+             an expression to negate it. The only field available for filtering is `category`. For example,
+             `filter=category=\"REQUEST\"`.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Restricts the attributes returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The only field available for filtering is `category`.
+               * Optional. Restricts the attributes returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The only field available for
+               * filtering is `category`. For example, `filter=category=\"REQUEST\"`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -6993,39 +7021,45 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of attribute definitions to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of Attribute definitions to return in a single
+               * response. If not specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of attribute definitions to return in a single response. If not specified, 100
-             is used. May not be larger than 1000.
+              /** Optional. Limit on the number of Attribute definitions to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of attribute definitions to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of Attribute definitions to return in a single
+               * response. If not specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** Token to retrieve the next page of results or empty to get the first page. */
+              /**
+               * Optional. Token to retrieve the next page of results or empty to get the first
+               * page.
+               */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Token to retrieve the next page of results or empty to get the first page.
+              /** Optional. Token to retrieve the next page of results or empty to get the first page.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Token to retrieve the next page of results or empty to get the first page. */
+              /**
+               * Optional. Token to retrieve the next page of results or empty to get the first
+               * page.
+               */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -7044,9 +7078,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_id
+             * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
              *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-             *        efinition_id}`.
+             *        efinition_id}`. Cannot be changed after creation.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
              * @return the request
              */
@@ -7074,9 +7108,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_id
+               * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
              *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
-             *        efinition_id}`.
+             *        efinition_id}`. Cannot be changed after creation.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
                * @since 1.13
                */
@@ -7146,25 +7180,25 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Resource name of the attribute definition, of the form `projects/{project_id}/locat
+               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
                * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
-               * Definitions/{attribute_definition_id}`.
+               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_i
+              /** Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_i
              d}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definitio
-             n_id}`.
+             n_id}`. Cannot be changed after creation.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Resource name of the attribute definition, of the form `projects/{project_id}/locat
+               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
                * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
-               * Definitions/{attribute_definition_id}`.
+               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -7177,20 +7211,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask that applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
-               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
-               * are allowed to be updated. The updated `allowed_values` must contain all values
-               * from the previous `allowed_values`.
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `description`,
+               * `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+               * can be updated. The updated `allowed_values` must contain all values from the
+               * previous `allowed_values`.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The update mask that applies to the resource. For the `FieldMask` definition, see
-             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
-             `description`, `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
-             are allowed to be updated. The updated `allowed_values` must contain all values from the previous
+              /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `description`, `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+             can be updated. The updated `allowed_values` must contain all values from the previous
              `allowed_values`.
                */
               public String getUpdateMask() {
@@ -7198,12 +7232,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask that applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
-               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
-               * are allowed to be updated. The updated `allowed_values` must contain all values
-               * from the previous `allowed_values`.
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `description`,
+               * `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+               * can be updated. The updated `allowed_values` must contain all values from the
+               * previous `allowed_values`.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
@@ -7238,14 +7272,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class ConsentArtifacts {
 
             /**
-             * Creates a new Consent artifact in the parent Consent store.
+             * Creates a new Consent artifact in the parent consent store.
              *
              * Create a request for the method "consentArtifacts.create".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The name of the Consent store this consent artifact belongs to.
+             * @param parent Required. The name of the consent store this Consent artifact belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentArtifact}
              * @return the request
              */
@@ -7263,7 +7297,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Creates a new Consent artifact in the parent Consent store.
+               * Creates a new Consent artifact in the parent consent store.
                *
                * Create a request for the method "consentArtifacts.create".
                *
@@ -7273,7 +7307,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The name of the Consent store this consent artifact belongs to.
+               * @param parent Required. The name of the consent store this Consent artifact belongs to.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentArtifact}
                * @since 1.13
                */
@@ -7342,17 +7376,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the Consent store this consent artifact belongs to. */
+              /** Required. The name of the consent store this Consent artifact belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The name of the Consent store this consent artifact belongs to.
+              /** Required. The name of the consent store this Consent artifact belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. The name of the Consent store this consent artifact belongs to. */
+              /** Required. The name of the consent store this Consent artifact belongs to. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7369,15 +7403,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes the specified Consent artifact. Fails if it is referenced by the latest revision of any
-             * Consent.
+             * Deletes the specified Consent artifact. Fails if the artifact is referenced by the latest
+             * revision of any Consent.
              *
              * Create a request for the method "consentArtifacts.delete".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent artifact to delete.
+             * @param name Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             *        Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7394,8 +7429,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
 
               /**
-               * Deletes the specified Consent artifact. Fails if it is referenced by the latest revision of any
-               * Consent.
+               * Deletes the specified Consent artifact. Fails if the artifact is referenced by the latest
+               * revision of any Consent.
                *
                * Create a request for the method "consentArtifacts.delete".
                *
@@ -7405,7 +7440,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent artifact to delete.
+               * @param name Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             *        Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -7473,17 +7509,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the consent artifact to delete. */
+              /**
+               * Required. The resource name of the Consent artifact to delete. To preserve
+               * referential integrity, Consent artifacts referenced by the latest revision of a
+               * Consent cannot be deleted.
+               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent artifact to delete.
+              /** Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the consent artifact to delete. */
+              /**
+               * Required. The resource name of the Consent artifact to delete. To preserve
+               * referential integrity, Consent artifacts referenced by the latest revision of a
+               * Consent cannot be deleted.
+               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7507,7 +7552,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent artifact to retrieve.
+             * @param name Required. The resource name of the Consent artifact to retrieve.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -7533,7 +7578,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent artifact to retrieve.
+               * @param name Required. The resource name of the Consent artifact to retrieve.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -7611,17 +7656,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the consent artifact to retrieve. */
+              /** Required. The resource name of the Consent artifact to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent artifact to retrieve.
+              /** Required. The resource name of the Consent artifact to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the consent artifact to retrieve. */
+              /** Required. The resource name of the Consent artifact to retrieve. */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7638,14 +7683,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists the Consent artifacts in the given Consent store.
+             * Lists the Consent artifacts in the specified consent store.
              *
              * Create a request for the method "consentArtifacts.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Name of the Consent store to retrieve consent artifacts from.
+             * @param parent Required. Name of the consent store to retrieve consent artifacts from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -7662,7 +7707,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Lists the Consent artifacts in the given Consent store.
+               * Lists the Consent artifacts in the specified consent store.
                *
                * Create a request for the method "consentArtifacts.list".
                *
@@ -7671,7 +7716,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Name of the Consent store to retrieve consent artifacts from.
+               * @param parent Required. Name of the consent store to retrieve consent artifacts from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -7749,17 +7794,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. Name of the Consent store to retrieve consent artifacts from. */
+              /** Required. Name of the consent store to retrieve consent artifacts from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Name of the Consent store to retrieve consent artifacts from.
+              /** Required. Name of the consent store to retrieve consent artifacts from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. Name of the Consent store to retrieve consent artifacts from. */
+              /** Required. Name of the consent store to retrieve consent artifacts from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7771,41 +7816,42 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Restricts the artifacts returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The fields available for filtering are: - user_id -
-               * consent_content_version - metadata. For example, `Metadata("key")="value"` or
-               * `HasMetadata("key")`.
+               * Optional. Restricts the artifacts returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter=user_id=\"user123\"`. -
+               * consent_content_version - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Restricts the artifacts returned to those matching a filter. The following syntax is available: * A
-             string field value can be written as text inside quotation marks, for example `"query text"`. The
-             only valid relational operation for text fields is equality (`=`), where text is searched within
-             the field, rather than having the field be equal to the text. For example, `"Comment = great"`
-             returns messages with `great` in the comment field. * A number field value can be written as an
-             integer, a decimal, or an exponential. The valid relational operators for number fields are the
-             equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
-             Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an
-             expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+              /** Optional. Restricts the artifacts returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
              date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
              days. The valid relational operators for date fields are the equality operator (`=`) , along with
              the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
@@ -7813,36 +7859,38 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              query expressions can be combined in one query by adding `AND` or `OR` operators between the
              expressions. If a boolean operator appears within a quoted string, it is not treated as special,
              it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-             an expression to negate it. The fields available for filtering are: - user_id -
-             consent_content_version - metadata. For example, `Metadata("key")="value"` or `HasMetadata("key")`.
+             an expression to negate it. The fields available for filtering are: - user_id. For example,
+             `filter=user_id=\"user123\"`. - consent_content_version - metadata. For example,
+             `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Restricts the artifacts returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The fields available for filtering are: - user_id -
-               * consent_content_version - metadata. For example, `Metadata("key")="value"` or
-               * `HasMetadata("key")`.
+               * Optional. Restricts the artifacts returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter=user_id=\"user123\"`. -
+               * consent_content_version - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -7850,39 +7898,45 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of consent artifacts to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of consent artifacts to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of consent artifacts to return in a single response. If not specified, 100 is
-             used. May not be larger than 1000.
+              /** Optional. Limit on the number of consent artifacts to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of consent artifacts to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of consent artifacts to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from the previous List request, if any. */
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from the previous List request, if any.
+              /** Optional. The next_page_token value returned from the previous List request, if any.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from the previous List request, if any. */
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -7917,16 +7971,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Activates the latest revision of the specified Consent by committing a new revision with `state`
-             * updated to `ACTIVE`. If the latest revision of the given consent is in the `ACTIVE` state, no new
-             * revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
-             * consent is in the `REJECTED` or `REVOKED` state.
+             * updated to `ACTIVE`. If the latest revision of the specified Consent is in the `ACTIVE` state, no
+             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+             * specified consent is in the `REJECTED` or `REVOKED` state.
              *
              * Create a request for the method "consents.activate".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to activate, of the form `projects/{project_id}/locations
+             * @param name Required. The resource name of the Consent to activate, of the form `projects/{project_id}/locations
              *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
              *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest}
@@ -7947,9 +8001,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Activates the latest revision of the specified Consent by committing a new revision with
-               * `state` updated to `ACTIVE`. If the latest revision of the given consent is in the `ACTIVE`
+               * `state` updated to `ACTIVE`. If the latest revision of the specified Consent is in the `ACTIVE`
                * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
-               * of the given consent is in the `REJECTED` or `REVOKED` state.
+               * of the specified consent is in the `REJECTED` or `REVOKED` state.
                *
                * Create a request for the method "consents.activate".
                *
@@ -7959,7 +8013,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to activate, of the form `projects/{project_id}/locations
+               * @param name Required. The resource name of the Consent to activate, of the form `projects/{project_id}/locations
              *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
              *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest}
@@ -8031,7 +8085,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to activate, of the form `projects/{proj
+               * Required. The resource name of the Consent to activate, of the form `projects/{proj
                * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
                * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -8039,7 +8093,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to activate, of the form `projects/{project_id}/location
+              /** Required. The resource name of the Consent to activate, of the form `projects/{project_id}/location
              s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
              INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                */
@@ -8048,7 +8102,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to activate, of the form `projects/{proj
+               * Required. The resource name of the Consent to activate, of the form `projects/{proj
                * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
                * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -8069,7 +8123,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Creates a new Consent in the parent Consent store.
+             * Creates a new Consent in the parent consent store.
              *
              * Create a request for the method "consents.create".
              *
@@ -8094,7 +8148,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Creates a new Consent in the parent Consent store.
+               * Creates a new Consent in the parent consent store.
                *
                * Create a request for the method "consents.create".
                *
@@ -8202,14 +8256,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive, see
              * [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This operation
-             * does not delete the related consent artifact.
+             * does not delete the related Consent artifact.
              *
              * Create a request for the method "consents.delete".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/{
+             * @param name Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
              * @return the request
@@ -8230,7 +8284,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive,
                * see [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This
-               * operation does not delete the related consent artifact.
+               * operation does not delete the related Consent artifact.
                *
                * Create a request for the method "consents.delete".
                *
@@ -8240,7 +8294,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/{
+               * @param name Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                * @since 1.13
@@ -8311,7 +8365,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to delete, of the form `projects/{projec
+               * Required. The resource name of the Consent to delete, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -8319,7 +8373,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/
+              /** Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/
              {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
              INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                */
@@ -8328,7 +8382,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to delete, of the form `projects/{projec
+               * Required. The resource name of the Consent to delete, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -8357,7 +8411,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/lo
+             * @param name Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/lo
              *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
              *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
              *        specified in the name.
@@ -8388,7 +8442,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param name Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/lo
+               * @param name Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/lo
              *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
              *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
              *        specified in the name.
@@ -8460,7 +8514,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent revision to delete, of the form `project
+               * Required. The resource name of the Consent revision to delete, of the form `project
                * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
                * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
                * if `revision_id` is not specified in the name.
@@ -8468,7 +8522,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/l
+              /** Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/l
              ocations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}
              @{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not specified in the name.
                */
@@ -8477,7 +8531,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent revision to delete, of the form `project
+               * Required. The resource name of the Consent revision to delete, of the form `project
                * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
                * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
                * if `revision_id` is not specified in the name.
@@ -8506,9 +8560,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/locations
+             * @param name Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/locations
              *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
-             *        }`. In order to retrieve a previous revision of the consent, also provide the revision ID:
+             *        }`. In order to retrieve a previous revision of the Consent, also provide the revision ID:
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
              *        t_store_id}/consents/{consent_id}@{revision_id}`
              * @return the request
@@ -8537,9 +8591,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/locations
+               * @param name Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/locations
              *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
-             *        }`. In order to retrieve a previous revision of the consent, also provide the revision ID:
+             *        }`. In order to retrieve a previous revision of the Consent, also provide the revision ID:
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
              *        t_store_id}/consents/{consent_id}@{revision_id}`
                * @since 1.13
@@ -8620,19 +8674,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to retrieve, of the form `projects/{proj
+               * Required. The resource name of the Consent to retrieve, of the form `projects/{proj
                * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
                * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
-               * consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * Consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
                * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
                * vision_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/location
+              /** Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/location
              s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. In
-             order to retrieve a previous revision of the consent, also provide the revision ID: `projects/{proj
+             order to retrieve a previous revision of the Consent, also provide the revision ID: `projects/{proj
              ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{co
              nsent_id}@{revision_id}`
                */
@@ -8641,10 +8695,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to retrieve, of the form `projects/{proj
+               * Required. The resource name of the Consent to retrieve, of the form `projects/{proj
                * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
                * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
-               * consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * Consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
                * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
                * vision_id}`
                */
@@ -8664,14 +8718,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists the Consent in the given Consent store, returning each consent's latest revision.
+             * Lists the Consent in the given consent store, returning each Consent's latest revision.
              *
              * Create a request for the method "consents.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Name of the Consent store to retrieve consents from.
+             * @param parent Required. Name of the consent store to retrieve Consents from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -8688,7 +8742,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Lists the Consent in the given Consent store, returning each consent's latest revision.
+               * Lists the Consent in the given consent store, returning each Consent's latest revision.
                *
                * Create a request for the method "consents.list".
                *
@@ -8697,7 +8751,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Name of the Consent store to retrieve consents from.
+               * @param parent Required. Name of the consent store to retrieve Consents from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -8775,17 +8829,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. Name of the Consent store to retrieve consents from. */
+              /** Required. Name of the consent store to retrieve Consents from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Name of the Consent store to retrieve consents from.
+              /** Required. Name of the consent store to retrieve Consents from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. Name of the Consent store to retrieve consents from. */
+              /** Required. Name of the consent store to retrieve Consents from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8797,41 +8851,42 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Restricts the consents returned to those matching a filter. The following syntax is
-               * available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The fields available for filtering are: - user_id -
-               * consent_artifact - state - revision_create_time - metadata. For example,
-               * `Metadata("key")="value"` or `HasMetadata("key")`.
+               * Optional. Restricts the consents returned to those matching a filter. The following
+               * syntax is available: * A string field value can be written as text inside quotation
+               * marks, for example `"query text"`. The only valid relational operation for text
+               * fields is equality (`=`), where text is searched within the field, rather than
+               * having the field be equal to the text. For example, `"Comment = great"` returns
+               * messages with `great` in the comment field. * A number field value can be written
+               * as an integer, a decimal, or an exponential. The valid relational operators for
+               * number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter='user_id="user123"'`. - consent_artifact -
+               * state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Restricts the consents returned to those matching a filter. The following syntax is available: * A
-             string field value can be written as text inside quotation marks, for example `"query text"`. The
-             only valid relational operation for text fields is equality (`=`), where text is searched within
-             the field, rather than having the field be equal to the text. For example, `"Comment = great"`
-             returns messages with `great` in the comment field. * A number field value can be written as an
-             integer, a decimal, or an exponential. The valid relational operators for number fields are the
-             equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
-             Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an
-             expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+              /** Optional. Restricts the consents returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
              date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
              days. The valid relational operators for date fields are the equality operator (`=`) , along with
              the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
@@ -8839,37 +8894,38 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              query expressions can be combined in one query by adding `AND` or `OR` operators between the
              expressions. If a boolean operator appears within a quoted string, it is not treated as special,
              it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-             an expression to negate it. The fields available for filtering are: - user_id - consent_artifact -
-             state - revision_create_time - metadata. For example, `Metadata("key")="value"` or
-             `HasMetadata("key")`.
+             an expression to negate it. The fields available for filtering are: - user_id. For example,
+             `filter='user_id="user123"'`. - consent_artifact - state - revision_create_time - metadata. For
+             example, `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Restricts the consents returned to those matching a filter. The following syntax is
-               * available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. The fields available for filtering are: - user_id -
-               * consent_artifact - state - revision_create_time - metadata. For example,
-               * `Metadata("key")="value"` or `HasMetadata("key")`.
+               * Optional. Restricts the consents returned to those matching a filter. The following
+               * syntax is available: * A string field value can be written as text inside quotation
+               * marks, for example `"query text"`. The only valid relational operation for text
+               * fields is equality (`=`), where text is searched within the field, rather than
+               * having the field be equal to the text. For example, `"Comment = great"` returns
+               * messages with `great` in the comment field. * A number field value can be written
+               * as an integer, a decimal, or an exponential. The valid relational operators for
+               * number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter='user_id="user123"'`. - consent_artifact -
+               * state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -8877,39 +8933,45 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of consents to return in a single response. If not specified,
-               * 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of Consents to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of consents to return in a single response. If not specified, 100 is used. May
-             not be larger than 1000.
+              /** Optional. Limit on the number of Consents to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of consents to return in a single response. If not specified,
-               * 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of Consents to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from the previous List request, if any. */
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from the previous List request, if any.
+              /** Optional. The next_page_token value returned from the previous List request, if any.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from the previous List request, if any. */
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -8921,14 +8983,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists the revisions of the given Consent in reverse chronological order.
+             * Lists the revisions of the specified Consent in reverse chronological order.
              *
              * Create a request for the method "consents.listRevisions".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to retrieve revisions for.
+             * @param name Required. The resource name of the Consent to retrieve revisions for.
              * @return the request
              */
             public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
@@ -8945,7 +9007,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
 
               /**
-               * Lists the revisions of the given Consent in reverse chronological order.
+               * Lists the revisions of the specified Consent in reverse chronological order.
                *
                * Create a request for the method "consents.listRevisions".
                *
@@ -8955,7 +9017,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to retrieve revisions for.
+               * @param name Required. The resource name of the Consent to retrieve revisions for.
                * @since 1.13
                */
               protected ListRevisions(java.lang.String name) {
@@ -9033,17 +9095,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (ListRevisions) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the consent to retrieve revisions for. */
+              /** Required. The resource name of the Consent to retrieve revisions for. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to retrieve revisions for.
+              /** Required. The resource name of the Consent to retrieve revisions for.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the consent to retrieve revisions for. */
+              /** Required. The resource name of the Consent to retrieve revisions for. */
               public ListRevisions setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9055,40 +9117,42 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Restricts the revisions returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. Fields/functions available for filtering are: - user_id
-               * - consent_artifact - state - revision_create_time
+               * Optional. Restricts the revisions returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. Fields/functions available for
+               * filtering are: - user_id. For example, `filter='user_id="user123"'`. -
+               * consent_artifact - state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Restricts the revisions returned to those matching a filter. The following syntax is available: * A
-             string field value can be written as text inside quotation marks, for example `"query text"`. The
-             only valid relational operation for text fields is equality (`=`), where text is searched within
-             the field, rather than having the field be equal to the text. For example, `"Comment = great"`
-             returns messages with `great` in the comment field. * A number field value can be written as an
-             integer, a decimal, or an exponential. The valid relational operators for number fields are the
-             equality operator (`=`), along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
-             Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to an
-             expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+              /** Optional. Restricts the revisions returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
              date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
              days. The valid relational operators for date fields are the equality operator (`=`) , along with
              the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
@@ -9096,35 +9160,38 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              query expressions can be combined in one query by adding `AND` or `OR` operators between the
              expressions. If a boolean operator appears within a quoted string, it is not treated as special,
              it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-             an expression to negate it. Fields/functions available for filtering are: - user_id -
-             consent_artifact - state - revision_create_time
+             an expression to negate it. Fields/functions available for filtering are: - user_id. For example,
+             `filter='user_id="user123"'`. - consent_artifact - state - revision_create_time - metadata. For
+             example, `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Restricts the revisions returned to those matching a filter. The following syntax
-               * is available: * A string field value can be written as text inside quotation marks,
-               * for example `"query text"`. The only valid relational operation for text fields is
-               * equality (`=`), where text is searched within the field, rather than having the
-               * field be equal to the text. For example, `"Comment = great"` returns messages with
-               * `great` in the comment field. * A number field value can be written as an integer,
-               * a decimal, or an exponential. The valid relational operators for number fields are
-               * the equality operator (`=`), along with the less than/greater than operators (`<`,
-               * `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend
-               * the `NOT` operator to an expression to negate it. * A date field value must be
-               * written in `yyyy-mm-dd` form. Fields with date and time use the RFC3339 time
-               * format. Leading zeros are required for one-digit months and days. The valid
-               * relational operators for date fields are the equality operator (`=`) , along with
-               * the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
-               * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to
-               * negate it. * Multiple field query expressions can be combined in one query by
-               * adding `AND` or `OR` operators between the expressions. If a boolean operator
-               * appears within a quoted string, it is not treated as special, it's just another
-               * part of the character string to be matched. You can prepend the `NOT` operator to
-               * an expression to negate it. Fields/functions available for filtering are: - user_id
-               * - consent_artifact - state - revision_create_time
+               * Optional. Restricts the revisions returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. Fields/functions available for
+               * filtering are: - user_id. For example, `filter='user_id="user123"'`. -
+               * consent_artifact - state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
                */
               public ListRevisions setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -9132,22 +9199,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of revisions to return in a single response. If not specified,
-               * 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of revisions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of revisions to return in a single response. If not specified, 100 is used. May
-             not be larger than 1000.
+              /** Optional. Limit on the number of revisions to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of revisions to return in a single response. If not specified,
-               * 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of revisions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public ListRevisions setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -9155,21 +9222,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Token to retrieve the next page of results or empty if there are no more results in
-               * the list.
+               * Optional. Token to retrieve the next page of results or empty if there are no more
+               * results in the list.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Token to retrieve the next page of results or empty if there are no more results in the list.
+              /** Optional. Token to retrieve the next page of results or empty if there are no more results in the
+             list.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Token to retrieve the next page of results or empty if there are no more results in
-               * the list.
+               * Optional. Token to retrieve the next page of results or empty if there are no more
+               * results in the list.
                */
               public ListRevisions setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -9183,8 +9251,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Updates the latest revision of the specified Consent by committing a new revision with the
-             * changes. A FAILED_PRECONDITION error occurs if the latest revision of the given consent is in the
-             * `REJECTED` or `REVOKED` state.
+             * changes. A FAILED_PRECONDITION error occurs if the latest revision of the specified Consent is in
+             * the `REJECTED` or `REVOKED` state.
              *
              * Create a request for the method "consents.patch".
              *
@@ -9192,7 +9260,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+             *        after creation.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
              * @return the request
              */
@@ -9211,8 +9280,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Updates the latest revision of the specified Consent by committing a new revision with the
-               * changes. A FAILED_PRECONDITION error occurs if the latest revision of the given consent is in
-               * the `REJECTED` or `REVOKED` state.
+               * changes. A FAILED_PRECONDITION error occurs if the latest revision of the specified Consent is
+               * in the `REJECTED` or `REVOKED` state.
                *
                * Create a request for the method "consents.patch".
                *
@@ -9223,7 +9292,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
-             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+             *        after creation.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
                * @since 1.13
                */
@@ -9295,13 +9365,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
                * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
-               * .
+               * . Cannot be changed after creation.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{
-             dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+             dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after
+             creation.
                */
               public java.lang.String getName() {
                 return name;
@@ -9310,7 +9381,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
                * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
-               * .
+               * . Cannot be changed after creation.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -9323,27 +9394,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask to apply to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask. The `user_id`, `policies`, and
-               * `consent_artifact` fields can be updated.
+               * Required. The update mask to apply to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`, `policies`,
+               * `consent_artifact`, and `metadata` fields can be updated.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The update mask to apply to the resource. For the `FieldMask` definition, see
-             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
-             `user_id`, `policies`, and `consent_artifact` fields can be updated.
+              /** Required. The update mask to apply to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `user_id`, `policies`, `consent_artifact`, and `metadata` fields can be updated.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
               /**
-               * The update mask to apply to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask. The `user_id`, `policies`, and
-               * `consent_artifact` fields can be updated.
+               * Required. The update mask to apply to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`, `policies`,
+               * `consent_artifact`, and `metadata` fields can be updated.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
@@ -9357,16 +9428,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Rejects the latest revision of the specified Consent by committing a new revision with `state`
-             * updated to `REJECTED`. If the latest revision of the given consent is in the `REJECTED` state, no
-             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
-             * consent is in the `ACTIVE` or `REVOKED` state.
+             * updated to `REJECTED`. If the latest revision of the specified Consent is in the `REJECTED`
+             * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of
+             * the specified Consent is in the `ACTIVE` or `REVOKED` state.
              *
              * Create a request for the method "consents.reject".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/{
+             * @param name Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest}
@@ -9387,9 +9458,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Rejects the latest revision of the specified Consent by committing a new revision with `state`
-               * updated to `REJECTED`. If the latest revision of the given consent is in the `REJECTED` state,
-               * no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
-               * given consent is in the `ACTIVE` or `REVOKED` state.
+               * updated to `REJECTED`. If the latest revision of the specified Consent is in the `REJECTED`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the specified Consent is in the `ACTIVE` or `REVOKED` state.
                *
                * Create a request for the method "consents.reject".
                *
@@ -9399,7 +9470,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/{
+               * @param name Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest}
@@ -9471,7 +9542,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to reject, of the form `projects/{projec
+               * Required. The resource name of the Consent to reject, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -9479,7 +9550,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/
+              /** Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/
              {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
              INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                */
@@ -9488,7 +9559,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to reject, of the form `projects/{projec
+               * Required. The resource name of the Consent to reject, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -9510,16 +9581,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Revokes the latest revision of the specified Consent by committing a new revision with `state`
-             * updated to `REVOKED`. If the latest revision of the given consent is in the `REVOKED` state, no
-             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
-             * consent is in `DRAFT` or `REJECTED` state.
+             * updated to `REVOKED`. If the latest revision of the specified Consent is in the `REVOKED` state,
+             * no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+             * given consent is in `DRAFT` or `REJECTED` state.
              *
              * Create a request for the method "consents.revoke".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/{
+             * @param name Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest}
@@ -9540,9 +9611,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Revokes the latest revision of the specified Consent by committing a new revision with `state`
-               * updated to `REVOKED`. If the latest revision of the given consent is in the `REVOKED` state, no
-               * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
-               * given consent is in `DRAFT` or `REJECTED` state.
+               * updated to `REVOKED`. If the latest revision of the specified Consent is in the `REVOKED`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the given consent is in `DRAFT` or `REJECTED` state.
                *
                * Create a request for the method "consents.revoke".
                *
@@ -9552,7 +9623,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/{
+               * @param name Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/{
              *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
              *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest}
@@ -9624,7 +9695,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to revoke, of the form `projects/{projec
+               * Required. The resource name of the Consent to revoke, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -9632,7 +9703,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/
+              /** Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/
              {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
              INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
                */
@@ -9641,7 +9712,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the consent to revoke, of the form `projects/{projec
+               * Required. The resource name of the Consent to revoke, of the form `projects/{projec
                * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
                * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
                * specified in the name.
@@ -9691,7 +9762,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the user data mapping to archive.
+             * @param name Required. The resource name of the User data mapping to archive.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest}
              * @return the request
              */
@@ -9719,7 +9790,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the user data mapping to archive.
+               * @param name Required. The resource name of the User data mapping to archive.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest}
                * @since 1.13
                */
@@ -9788,17 +9859,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Archive) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The resource name of the user data mapping to archive. */
+              /** Required. The resource name of the User data mapping to archive. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the user data mapping to archive.
+              /** Required. The resource name of the User data mapping to archive.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** The resource name of the user data mapping to archive. */
+              /** Required. The resource name of the User data mapping to archive. */
               public Archive setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9815,7 +9886,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Creates a new User data mapping in the parent Consent store.
+             * Creates a new User data mapping in the parent consent store.
              *
              * Create a request for the method "userDataMappings.create".
              *
@@ -9840,7 +9911,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Creates a new User data mapping in the parent Consent store.
+               * Creates a new User data mapping in the parent consent store.
                *
                * Create a request for the method "userDataMappings.create".
                *
@@ -9953,7 +10024,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the user data mapping to delete.
+             * @param name Required. The resource name of the User data mapping to delete.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9980,7 +10051,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the user data mapping to delete.
+               * @param name Required. The resource name of the User data mapping to delete.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -10048,17 +10119,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the user data mapping to delete. */
+              /** Required. The resource name of the User data mapping to delete. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the user data mapping to delete.
+              /** Required. The resource name of the User data mapping to delete.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the user data mapping to delete. */
+              /** Required. The resource name of the User data mapping to delete. */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10082,7 +10153,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the user data mapping to retrieve.
+             * @param name Required. The resource name of the User data mapping to retrieve.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -10108,7 +10179,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the user data mapping to retrieve.
+               * @param name Required. The resource name of the User data mapping to retrieve.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -10186,17 +10257,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the user data mapping to retrieve. */
+              /** Required. The resource name of the User data mapping to retrieve. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the user data mapping to retrieve.
+              /** Required. The resource name of the User data mapping to retrieve.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The resource name of the user data mapping to retrieve. */
+              /** Required. The resource name of the User data mapping to retrieve. */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10213,14 +10284,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists the User data mappings in the given Consent store.
+             * Lists the User data mappings in the specified consent store.
              *
              * Create a request for the method "userDataMappings.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Name of the Consent store to retrieve user data mappings from.
+             * @param parent Required. Name of the consent store to retrieve User data mappings from.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -10237,7 +10308,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
 
               /**
-               * Lists the User data mappings in the given Consent store.
+               * Lists the User data mappings in the specified consent store.
                *
                * Create a request for the method "userDataMappings.list".
                *
@@ -10246,7 +10317,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Name of the Consent store to retrieve user data mappings from.
+               * @param parent Required. Name of the consent store to retrieve User data mappings from.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -10324,17 +10395,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. Name of the Consent store to retrieve user data mappings from. */
+              /** Required. Name of the consent store to retrieve User data mappings from. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Name of the Consent store to retrieve user data mappings from.
+              /** Required. Name of the consent store to retrieve User data mappings from.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. Name of the Consent store to retrieve user data mappings from. */
+              /** Required. Name of the consent store to retrieve User data mappings from. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10346,14 +10417,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Restricts the user data mappings returned to those matching a filter. The following
-               * syntax is available: * A string field value can be written as text inside quotation
-               * marks, for example `"query text"`. The only valid relational operation for text
-               * fields is equality (`=`), where text is searched within the field, rather than
-               * having the field be equal to the text. For example, `"Comment = great"` returns
-               * messages with `great` in the comment field. * A number field value can be written
-               * as an integer, a decimal, or an exponential. The valid relational operators for
-               * number fields are the equality operator (`=`), along with the less than/greater
+               * Optional. Restricts the user data mappings returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
                * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
                * operator. You can prepend the `NOT` operator to an expression to negate it. * A
                * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
@@ -10366,43 +10437,44 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * a boolean operator appears within a quoted string, it is not treated as special,
                * it's just another part of the character string to be matched. You can prepend the
                * `NOT` operator to an expression to negate it. The fields available for filtering
-               * are: - data_id - user_id - archived - archive_time
+               * are: - data_id - user_id. For example, `filter=user_id=\"user123\"`. - archived -
+               * archive_time
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Restricts the user data mappings returned to those matching a filter. The following syntax is
-             available: * A string field value can be written as text inside quotation marks, for example
-             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
-             is searched within the field, rather than having the field be equal to the text. For example,
-             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
-             be written as an integer, a decimal, or an exponential. The valid relational operators for number
-             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
-             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
-             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
-             date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
-             days. The valid relational operators for date fields are the equality operator (`=`) , along with
-             the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
-             (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field
-             query expressions can be combined in one query by adding `AND` or `OR` operators between the
-             expressions. If a boolean operator appears within a quoted string, it is not treated as special,
-             it's just another part of the character string to be matched. You can prepend the `NOT` operator to
-             an expression to negate it. The fields available for filtering are: - data_id - user_id - archived
-             - archive_time
+              /** Optional. Restricts the user data mappings returned to those matching a filter. The following
+             syntax is available: * A string field value can be written as text inside quotation marks, for
+             example `"query text"`. The only valid relational operation for text fields is equality (`=`),
+             where text is searched within the field, rather than having the field be equal to the text. For
+             example, `"Comment = great"` returns messages with `great` in the comment field. * A number field
+             value can be written as an integer, a decimal, or an exponential. The valid relational operators
+             for number fields are the equality operator (`=`), along with the less than/greater than operators
+             (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+             operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form.
+             Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit
+             months and days. The valid relational operators for date fields are the equality operator (`=`) ,
+             along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
+             inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
+             Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators
+             between the expressions. If a boolean operator appears within a quoted string, it is not treated as
+             special, it's just another part of the character string to be matched. You can prepend the `NOT`
+             operator to an expression to negate it. The fields available for filtering are: - data_id -
+             user_id. For example, `filter=user_id=\"user123\"`. - archived - archive_time
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Restricts the user data mappings returned to those matching a filter. The following
-               * syntax is available: * A string field value can be written as text inside quotation
-               * marks, for example `"query text"`. The only valid relational operation for text
-               * fields is equality (`=`), where text is searched within the field, rather than
-               * having the field be equal to the text. For example, `"Comment = great"` returns
-               * messages with `great` in the comment field. * A number field value can be written
-               * as an integer, a decimal, or an exponential. The valid relational operators for
-               * number fields are the equality operator (`=`), along with the less than/greater
+               * Optional. Restricts the user data mappings returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
                * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
                * operator. You can prepend the `NOT` operator to an expression to negate it. * A
                * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
@@ -10415,7 +10487,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * a boolean operator appears within a quoted string, it is not treated as special,
                * it's just another part of the character string to be matched. You can prepend the
                * `NOT` operator to an expression to negate it. The fields available for filtering
-               * are: - data_id - user_id - archived - archive_time
+               * are: - data_id - user_id. For example, `filter=user_id=\"user123\"`. - archived -
+               * archive_time
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -10423,39 +10496,45 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of user data mappings to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of User data mappings to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of user data mappings to return in a single response. If not specified, 100 is
-             used. May not be larger than 1000.
+              /** Optional. Limit on the number of User data mappings to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of user data mappings to return in a single response. If not
-               * specified, 100 is used. May not be larger than 1000.
+               * Optional. Limit on the number of User data mappings to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** Token to retrieve the next page of results or empty to get the first page. */
+              /**
+               * Optional. Token to retrieve the next page of results, or empty to get the first
+               * page.
+               */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Token to retrieve the next page of results or empty to get the first page.
+              /** Optional. Token to retrieve the next page of results, or empty to get the first page.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Token to retrieve the next page of results or empty to get the first page. */
+              /**
+               * Optional. Token to retrieve the next page of results, or empty to get the first
+               * page.
+               */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -10606,24 +10685,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The update mask that applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask.
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `data_id`, `user_id` and
+               * `resource_attributes` fields can be updated.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The update mask that applies to the resource. For the `FieldMask` definition, see
-             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+              /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `data_id`, `user_id` and `resource_attributes` fields can be updated.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
               /**
-               * The update mask that applies to the resource. For the `FieldMask` definition, see
-               * https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#fieldmask.
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `data_id`, `user_id` and
+               * `resource_attributes` fields can be updated.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;

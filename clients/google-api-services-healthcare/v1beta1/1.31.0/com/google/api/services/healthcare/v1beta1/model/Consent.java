@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Represents an end user's consent.
+ * Represents a user's consent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains proof of the end user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
    * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * The value may be {@code null}.
@@ -39,16 +39,16 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   private java.lang.String consentArtifact;
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
-   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
-   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must:
+   * - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with
+   * a letter - consist of up to 63 characters including lowercase letters, numeric characters,
    * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
    * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
    * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
@@ -60,15 +60,16 @@ public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datase
-   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+   * after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Represents an end user's consent in terms of the resources that can be accessed and under what
-   * conditions.
+   * Optional. Represents a user's consent in terms of the resources that can be accessed and under
+   * what conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   private String revisionCreateTime;
 
   /**
-   * Output only. The revision ID of the consent. The format is an 8-character hexadecimal string.
+   * Output only. The revision ID of the Consent. The format is an 8-character hexadecimal string.
    * Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's
    * resource name.
    * The value may be {@code null}.
@@ -91,14 +92,14 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   private java.lang.String revisionId;
 
   /**
-   * Indicates the current state of this consent.
+   * Required. Indicates the current state of this Consent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Input only. The time to live for this consent from when it is created.
+   * Input only. The time to live for this Consent from when it is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   private java.lang.String userId;
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains proof of the end user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
    * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * @return value or {@code null} for none
@@ -122,7 +123,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the consent artifact that contains proof of the end user's
+   * Required. The resource name of the Consent artifact that contains proof of the end user's
    * consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/conse
    * ntStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
    * @param consentArtifact consentArtifact or {@code null} for none
@@ -133,7 +134,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -141,7 +142,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp in UTC of when this consent is considered expired.
+   * Timestamp in UTC of when this Consent is considered expired.
    * @param expireTime expireTime or {@code null} for none
    */
   public Consent setExpireTime(String expireTime) {
@@ -150,9 +151,9 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
-   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
-   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must:
+   * - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with
+   * a letter - consist of up to 63 characters including lowercase letters, numeric characters,
    * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
    * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
    * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
@@ -164,9 +165,9 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
-   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
-   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must:
+   * - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with
+   * a letter - consist of up to 63 characters including lowercase letters, numeric characters,
    * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
    * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
    * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
@@ -180,7 +181,8 @@ public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datase
-   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+   * after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -189,7 +191,8 @@ public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
    * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datase
-   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+   * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+   * after creation.
    * @param name name or {@code null} for none
    */
   public Consent setName(java.lang.String name) {
@@ -198,8 +201,8 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents an end user's consent in terms of the resources that can be accessed and under what
-   * conditions.
+   * Optional. Represents a user's consent in terms of the resources that can be accessed and under
+   * what conditions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudHealthcareV1beta1ConsentPolicy> getPolicies() {
@@ -207,8 +210,8 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents an end user's consent in terms of the resources that can be accessed and under what
-   * conditions.
+   * Optional. Represents a user's consent in terms of the resources that can be accessed and under
+   * what conditions.
    * @param policies policies or {@code null} for none
    */
   public Consent setPolicies(java.util.List<GoogleCloudHealthcareV1beta1ConsentPolicy> policies) {
@@ -234,7 +237,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The revision ID of the consent. The format is an 8-character hexadecimal string.
+   * Output only. The revision ID of the Consent. The format is an 8-character hexadecimal string.
    * Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's
    * resource name.
    * @return value or {@code null} for none
@@ -244,7 +247,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The revision ID of the consent. The format is an 8-character hexadecimal string.
+   * Output only. The revision ID of the Consent. The format is an 8-character hexadecimal string.
    * Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's
    * resource name.
    * @param revisionId revisionId or {@code null} for none
@@ -255,7 +258,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the current state of this consent.
+   * Required. Indicates the current state of this Consent.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -263,7 +266,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the current state of this consent.
+   * Required. Indicates the current state of this Consent.
    * @param state state or {@code null} for none
    */
   public Consent setState(java.lang.String state) {
@@ -272,7 +275,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The time to live for this consent from when it is created.
+   * Input only. The time to live for this Consent from when it is created.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -280,7 +283,7 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The time to live for this consent from when it is created.
+   * Input only. The time to live for this Consent from when it is created.
    * @param ttl ttl or {@code null} for none
    */
   public Consent setTtl(String ttl) {

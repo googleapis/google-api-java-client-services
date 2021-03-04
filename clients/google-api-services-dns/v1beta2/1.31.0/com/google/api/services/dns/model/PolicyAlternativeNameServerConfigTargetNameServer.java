@@ -31,9 +31,9 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
 
   /**
    * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes
-   * forwarding decision based on address ranges; that is, RFC1918 addresses go to the VPC, non-
-   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
-   * through VPC for this target.
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network,
+   * non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through the VPC network for this target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
 
   /**
    * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes
-   * forwarding decision based on address ranges; that is, RFC1918 addresses go to the VPC, non-
-   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
-   * through VPC for this target.
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network,
+   * non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through the VPC network for this target.
    * @return value or {@code null} for none
    */
   public java.lang.String getForwardingPath() {
@@ -72,9 +72,9 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
 
   /**
    * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes
-   * forwarding decision based on address ranges; that is, RFC1918 addresses go to the VPC, non-
-   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
-   * through VPC for this target.
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network,
+   * non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through the VPC network for this target.
    * @param forwardingPath forwardingPath or {@code null} for none
    */
   public PolicyAlternativeNameServerConfigTargetNameServer setForwardingPath(java.lang.String forwardingPath) {

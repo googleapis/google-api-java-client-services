@@ -77,7 +77,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent but the servers might not be updated yet.
+   * authoritative servers has been sent, but the servers might not be updated yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent but the servers might not be updated yet.
+   * authoritative servers has been sent, but the servers might not be updated yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -196,7 +196,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent but the servers might not be updated yet.
+   * authoritative servers has been sent, but the servers might not be updated yet.
    * @param status status or {@code null} for none
    */
   public Change setStatus(java.lang.String status) {

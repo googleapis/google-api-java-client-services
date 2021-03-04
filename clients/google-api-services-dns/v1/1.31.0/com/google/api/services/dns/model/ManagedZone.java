@@ -99,8 +99,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
-   * you need to use this field, please reach out to your account team.
+   * name servers that all host the same ManagedZones. Most users leave this field unset. If you
+   * need to use this field, contact your account team.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +139,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private ManagedZoneReverseLookupConfig reverseLookupConfig;
 
   /**
-   * This field links to the associated service directory namespace. This field should not be set
-   * for public zones or forwarding zones.
+   * This field links to the associated service directory namespace. Do not set this field for
+   * public zones or forwarding zones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,8 +317,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
-   * you need to use this field, please reach out to your account team.
+   * name servers that all host the same ManagedZones. Most users leave this field unset. If you
+   * need to use this field, contact your account team.
    * @return value or {@code null} for none
    */
   public java.lang.String getNameServerSet() {
@@ -327,8 +327,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
-   * you need to use this field, please reach out to your account team.
+   * name servers that all host the same ManagedZones. Most users leave this field unset. If you
+   * need to use this field, contact your account team.
    * @param nameServerSet nameServerSet or {@code null} for none
    */
   public ManagedZone setNameServerSet(java.lang.String nameServerSet) {
@@ -413,8 +413,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field links to the associated service directory namespace. This field should not be set
-   * for public zones or forwarding zones.
+   * This field links to the associated service directory namespace. Do not set this field for
+   * public zones or forwarding zones.
    * @return value or {@code null} for none
    */
   public ManagedZoneServiceDirectoryConfig getServiceDirectoryConfig() {
@@ -422,8 +422,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field links to the associated service directory namespace. This field should not be set
-   * for public zones or forwarding zones.
+   * This field links to the associated service directory namespace. Do not set this field for
+   * public zones or forwarding zones.
    * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
    */
   public ManagedZone setServiceDirectoryConfig(ManagedZoneServiceDirectoryConfig serviceDirectoryConfig) {

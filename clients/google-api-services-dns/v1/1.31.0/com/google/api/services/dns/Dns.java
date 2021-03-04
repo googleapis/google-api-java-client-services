@@ -2635,7 +2635,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Policies {
 
     /**
-     * Creates a new Policy
+     * Creates a new Policy.
      *
      * Create a request for the method "policies.create".
      *
@@ -2657,7 +2657,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies";
 
       /**
-       * Creates a new Policy
+       * Creates a new Policy.
        *
        * Create a request for the method "policies.create".
        *
@@ -2775,7 +2775,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Delete a previously created Policy. Fails if the policy is still being referenced by a network.
+     * Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
      *
      * Create a request for the method "policies.delete".
      *
@@ -2797,7 +2797,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Delete a previously created Policy. Fails if the policy is still being referenced by a network.
+       * Deletes a previously created Policy. Fails if the policy is still being referenced by a
+       * network.
        *
        * Create a request for the method "policies.delete".
        *
@@ -3782,7 +3783,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ResourceRecordSets {
 
     /**
-     * Enumerate ResourceRecordSets that you have created but not yet deleted.
+     * Enumerates ResourceRecordSets that you have created but not yet deleted.
      *
      * Create a request for the method "resourceRecordSets.list".
      *
@@ -3804,7 +3805,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets";
 
       /**
-       * Enumerate ResourceRecordSets that you have created but not yet deleted.
+       * Enumerates ResourceRecordSets that you have created but not yet deleted.
        *
        * Create a request for the method "resourceRecordSets.list".
        *

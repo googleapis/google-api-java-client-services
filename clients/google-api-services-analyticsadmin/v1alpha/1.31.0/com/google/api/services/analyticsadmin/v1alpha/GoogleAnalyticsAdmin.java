@@ -1219,6 +1219,138 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         return (ProvisionAccountTicket) super.set(parameterName, value);
       }
     }
+    /**
+     * Searches through all changes to an account or its children given the specified set of filters.
+     *
+     * Create a request for the method "accounts.searchChangeHistoryEvents".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link SearchChangeHistoryEvents#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param account Required. The account resource for which to return change history resources.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest}
+     * @return the request
+     */
+    public SearchChangeHistoryEvents searchChangeHistoryEvents(java.lang.String account, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest content) throws java.io.IOException {
+      SearchChangeHistoryEvents result = new SearchChangeHistoryEvents(account, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchChangeHistoryEvents extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+account}:searchChangeHistoryEvents";
+
+      private final java.util.regex.Pattern ACCOUNT_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+      /**
+       * Searches through all changes to an account or its children given the specified set of filters.
+       *
+       * Create a request for the method "accounts.searchChangeHistoryEvents".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link SearchChangeHistoryEvents#execute()} method to invoke the
+       * remote operation. <p> {@link SearchChangeHistoryEvents#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param account Required. The account resource for which to return change history resources.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest}
+       * @since 1.13
+       */
+      protected SearchChangeHistoryEvents(java.lang.String account, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse.class);
+        this.account = com.google.api.client.util.Preconditions.checkNotNull(account, "Required parameter account must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
+              "Parameter account must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public SearchChangeHistoryEvents set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchChangeHistoryEvents) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setAccessToken(java.lang.String accessToken) {
+        return (SearchChangeHistoryEvents) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setAlt(java.lang.String alt) {
+        return (SearchChangeHistoryEvents) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setCallback(java.lang.String callback) {
+        return (SearchChangeHistoryEvents) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setFields(java.lang.String fields) {
+        return (SearchChangeHistoryEvents) super.setFields(fields);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setKey(java.lang.String key) {
+        return (SearchChangeHistoryEvents) super.setKey(key);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setOauthToken(java.lang.String oauthToken) {
+        return (SearchChangeHistoryEvents) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchChangeHistoryEvents) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setQuotaUser(java.lang.String quotaUser) {
+        return (SearchChangeHistoryEvents) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setUploadType(java.lang.String uploadType) {
+        return (SearchChangeHistoryEvents) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchChangeHistoryEvents setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchChangeHistoryEvents) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The account resource for which to return change history resources. */
+      @com.google.api.client.util.Key
+      private java.lang.String account;
+
+      /** Required. The account resource for which to return change history resources.
+       */
+      public java.lang.String getAccount() {
+        return account;
+      }
+
+      /** Required. The account resource for which to return change history resources. */
+      public SearchChangeHistoryEvents setAccount(java.lang.String account) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
+              "Parameter account must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+        this.account = account;
+        return this;
+      }
+
+      @Override
+      public SearchChangeHistoryEvents set(String parameterName, Object value) {
+        return (SearchChangeHistoryEvents) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the UserLinks collection.

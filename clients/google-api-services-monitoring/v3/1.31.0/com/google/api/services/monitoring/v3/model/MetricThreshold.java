@@ -102,9 +102,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   private String duration;
 
   /**
-   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
-   * should be compared with the threshold.The filter is similar to the one that is specified in the
-   * ListTimeSeries request
+   * Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which
+   * time series should be compared with the threshold.The filter is similar to the one that is
+   * specified in the ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
    * useful to verify the time series that will be retrieved / processed). The filter must specify
    * the metric type and the resource type. Optionally, it can specify resource labels and metric
@@ -267,9 +267,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
-   * should be compared with the threshold.The filter is similar to the one that is specified in the
-   * ListTimeSeries request
+   * Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which
+   * time series should be compared with the threshold.The filter is similar to the one that is
+   * specified in the ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
    * useful to verify the time series that will be retrieved / processed). The filter must specify
    * the metric type and the resource type. Optionally, it can specify resource labels and metric
@@ -281,9 +281,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series
-   * should be compared with the threshold.The filter is similar to the one that is specified in the
-   * ListTimeSeries request
+   * Required. A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which
+   * time series should be compared with the threshold.The filter is similar to the one that is
+   * specified in the ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
    * useful to verify the time series that will be retrieved / processed). The filter must specify
    * the metric type and the resource type. Optionally, it can specify resource labels and metric

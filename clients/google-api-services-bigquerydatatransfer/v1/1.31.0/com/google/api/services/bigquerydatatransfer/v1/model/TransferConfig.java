@@ -112,7 +112,10 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private java.lang.String notificationPubsubTopic;
 
   /**
-   * Data transfer specific parameters.
+   * Parameters specific to each data source. For more information see the bq tab in the 'Setting up
+   * a data transfer' section for each data source. For example the parameters for Cloud Storage
+   * transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-
+   * transfer#bq
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -345,7 +348,10 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data transfer specific parameters.
+   * Parameters specific to each data source. For more information see the bq tab in the 'Setting up
+   * a data transfer' section for each data source. For example the parameters for Cloud Storage
+   * transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-
+   * transfer#bq
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -353,7 +359,10 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data transfer specific parameters.
+   * Parameters specific to each data source. For more information see the bq tab in the 'Setting up
+   * a data transfer' section for each data source. For example the parameters for Cloud Storage
+   * transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-
+   * transfer#bq
    * @param params params or {@code null} for none
    */
   public TransferConfig setParams(java.util.Map<String, java.lang.Object> params) {

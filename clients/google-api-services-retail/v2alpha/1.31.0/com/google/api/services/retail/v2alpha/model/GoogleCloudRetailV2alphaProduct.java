@@ -39,9 +39,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
-   * default; 100 for Type.VARIANT. * Max indexable entries count: 150 by default; 40 for
-   * Type.VARIANT. * Max searchable entries count: 30. * The key must be a UTF-8 encoded string with
-   * a length limit of 128 characters.
+   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +176,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 128
+   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
    * [Product.name](https://schema.org/name).
@@ -215,9 +214,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
-   * default; 100 for Type.VARIANT. * Max indexable entries count: 150 by default; 40 for
-   * Type.VARIANT. * Max searchable entries count: 30. * The key must be a UTF-8 encoded string with
-   * a length limit of 128 characters.
+   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -234,9 +232,8 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
-   * default; 100 for Type.VARIANT. * Max indexable entries count: 150 by default; 40 for
-   * Type.VARIANT. * Max searchable entries count: 30. * The key must be a UTF-8 encoded string with
-   * a length limit of 128 characters.
+   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
+   * 128 characters.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
@@ -512,7 +509,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 128
+   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
    * [Product.name](https://schema.org/name).
@@ -523,7 +520,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 128
+   * Required. Product title. This field must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [title](https://support.google.com/merchants/answer/6324415). Schema.org property
    * [Product.name](https://schema.org/name).

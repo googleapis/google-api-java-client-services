@@ -38,8 +38,8 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   private java.lang.Integer containerPort;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If specified,
-   * used to specify which protocol to use. Allowed values are "http1" and "h2c".
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If specified,
-   * used to specify which protocol to use. Allowed values are "http1" and "h2c".
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -82,8 +82,8 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported If specified,
-   * used to specify which protocol to use. Allowed values are "http1" and "h2c".
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * @param name name or {@code null} for none
    */
   public ContainerPort setName(java.lang.String name) {

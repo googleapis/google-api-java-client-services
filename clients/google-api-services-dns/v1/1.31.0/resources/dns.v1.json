@@ -1,428 +1,52 @@
 {
-  "icons": {
-    "x32": "http://www.google.com/images/icons/product/search-32.gif",
-    "x16": "http://www.google.com/images/icons/product/search-16.gif"
-  },
-  "basePath": "",
-  "ownerDomain": "google.com",
   "id": "dns:v1",
-  "discoveryVersion": "v1",
-  "mtlsRootUrl": "https://dns.mtls.googleapis.com/",
+  "name": "dns",
+  "ownerName": "Google",
+  "rootUrl": "https://dns.googleapis.com/",
   "schemas": {
-    "ManagedZonePeeringConfig": {
+    "ManagedZonePrivateVisibilityConfig": {
+      "id": "ManagedZonePrivateVisibilityConfig",
       "properties": {
-        "targetNetwork": {
-          "$ref": "ManagedZonePeeringConfigTargetNetwork",
-          "description": "The network with which to peer."
-        },
-        "kind": {
-          "type": "string",
-          "default": "dns#managedZonePeeringConfig"
-        }
-      },
-      "id": "ManagedZonePeeringConfig",
-      "type": "object"
-    },
-    "ManagedZoneDnsSecConfig": {
-      "type": "object",
-      "properties": {
-        "nonExistence": {
-          "type": "string",
-          "description": "Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.",
-          "enum": [
-            "nsec",
-            "nsec3"
-          ],
-          "enumDescriptions": [
-            "",
-            ""
-          ]
-        },
-        "state": {
-          "enum": [
-            "off",
-            "on",
-            "transfer"
-          ],
-          "type": "string",
-          "description": "Specifies whether DNSSEC is enabled, and what mode it is in.",
-          "enumDescriptions": [
-            "DNSSEC is disabled; the zone is not signed.",
-            "DNSSEC is enabled; the zone is signed and fully managed.",
-            "DNSSEC is enabled, but in a \"transfer\" mode."
-          ]
-        },
-        "defaultKeySpecs": {
-          "description": "Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.",
+        "networks": {
           "type": "array",
+          "description": "The list of VPC networks that can see this zone.",
           "items": {
-            "$ref": "DnsKeySpec"
+            "$ref": "ManagedZonePrivateVisibilityConfigNetwork"
           }
         },
         "kind": {
-          "default": "dns#managedZoneDnsSecConfig",
+          "default": "dns#managedZonePrivateVisibilityConfig",
           "type": "string"
-        }
-      },
-      "id": "ManagedZoneDnsSecConfig"
-    },
-    "OperationManagedZoneContext": {
-      "properties": {
-        "newValue": {
-          "$ref": "ManagedZone",
-          "description": "The post-operation ManagedZone resource."
-        },
-        "oldValue": {
-          "$ref": "ManagedZone",
-          "description": "The pre-operation ManagedZone resource."
-        }
-      },
-      "id": "OperationManagedZoneContext",
-      "type": "object"
-    },
-    "ManagedZone": {
-      "description": "A zone is a subtree of the DNS namespace under one administrative responsibility. A ManagedZone is a resource that represents a DNS zone hosted by the Cloud DNS service.",
-      "id": "ManagedZone",
-      "properties": {
-        "forwardingConfig": {
-          "description": "The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.",
-          "$ref": "ManagedZoneForwardingConfig"
-        },
-        "description": {
-          "type": "string",
-          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function."
-        },
-        "nameServerSet": {
-          "description": "Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.",
-          "type": "string"
-        },
-        "dnsName": {
-          "type": "string",
-          "description": "The DNS name of this managed zone, for instance \"example.com.\"."
-        },
-        "visibility": {
-          "enumDescriptions": [
-            "",
-            ""
-          ],
-          "description": "The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.",
-          "enum": [
-            "public",
-            "private"
-          ],
-          "type": "string"
-        },
-        "privateVisibilityConfig": {
-          "description": "For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.",
-          "$ref": "ManagedZonePrivateVisibilityConfig"
-        },
-        "labels": {
-          "description": "User labels.",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "type": "object"
-        },
-        "name": {
-          "description": "User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.",
-          "type": "string"
-        },
-        "kind": {
-          "type": "string",
-          "default": "dns#managedZone"
-        },
-        "creationTime": {
-          "type": "string",
-          "description": "The time that this resource was created on the server. This is in RFC3339 text format. Output only."
-        },
-        "nameServers": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "Delegate your managed_zone to these virtual name servers; defined by the server (output only)"
-        },
-        "dnssecConfig": {
-          "description": "DNSSEC configuration.",
-          "$ref": "ManagedZoneDnsSecConfig"
-        },
-        "serviceDirectoryConfig": {
-          "$ref": "ManagedZoneServiceDirectoryConfig",
-          "description": "This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones."
-        },
-        "peeringConfig": {
-          "description": "The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.",
-          "$ref": "ManagedZonePeeringConfig"
-        },
-        "id": {
-          "format": "uint64",
-          "description": "Unique identifier for the resource; defined by the server (output only)",
-          "type": "string"
-        },
-        "reverseLookupConfig": {
-          "description": "The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.",
-          "$ref": "ManagedZoneReverseLookupConfig"
         }
       },
       "type": "object"
     },
-    "PolicyNetwork": {
+    "ManagedZoneOperationsListResponse": {
+      "type": "object",
       "properties": {
-        "networkUrl": {
-          "type": "string",
-          "description": "The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}"
-        },
         "kind": {
-          "type": "string",
-          "default": "dns#policyNetwork"
-        }
-      },
-      "type": "object",
-      "id": "PolicyNetwork"
-    },
-    "ManagedZoneForwardingConfig": {
-      "properties": {
-        "targetNameServers": {
-          "items": {
-            "$ref": "ManagedZoneForwardingConfigNameServerTarget"
-          },
-          "description": "List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.",
-          "type": "array"
-        },
-        "kind": {
-          "default": "dns#managedZoneForwardingConfig",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "ManagedZoneForwardingConfig"
-    },
-    "ManagedZoneServiceDirectoryConfigNamespace": {
-      "type": "object",
-      "properties": {
-        "deletionTime": {
-          "type": "string",
-          "description": "The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only."
-        },
-        "namespaceUrl": {
-          "description": "The fully qualified URL of the namespace associated with the zone. This should be formatted like https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}",
+          "default": "dns#managedZoneOperationsListResponse",
           "type": "string"
         },
-        "kind": {
-          "type": "string",
-          "default": "dns#managedZoneServiceDirectoryConfigNamespace"
-        }
-      },
-      "id": "ManagedZoneServiceDirectoryConfigNamespace"
-    },
-    "ManagedZoneReverseLookupConfig": {
-      "type": "object",
-      "properties": {
-        "kind": {
-          "type": "string",
-          "default": "dns#managedZoneReverseLookupConfig"
-        }
-      },
-      "id": "ManagedZoneReverseLookupConfig"
-    },
-    "ManagedZoneForwardingConfigNameServerTarget": {
-      "id": "ManagedZoneForwardingConfigNameServerTarget",
-      "type": "object",
-      "properties": {
-        "kind": {
-          "type": "string",
-          "default": "dns#managedZoneForwardingConfigNameServerTarget"
-        },
-        "forwardingPath": {
-          "enum": [
-            "default",
-            "private"
-          ],
-          "description": "Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.",
-          "type": "string",
-          "enumDescriptions": [
-            "Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet",
-            "Cloud DNS always forwards to this target through the VPC."
-          ]
-        },
-        "ipv4Address": {
-          "type": "string",
-          "description": "IPv4 address of a target name server."
-        }
-      }
-    },
-    "DnsKey": {
-      "id": "DnsKey",
-      "properties": {
-        "digests": {
-          "items": {
-            "$ref": "DnsKeyDigest"
-          },
+        "operations": {
+          "description": "The operation resources.",
           "type": "array",
-          "description": "Cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Output only."
-        },
-        "type": {
-          "type": "string",
-          "enumDescriptions": [
-            "",
-            ""
-          ],
-          "description": "One of \"KEY_SIGNING\" or \"ZONE_SIGNING\". Keys of type KEY_SIGNING have the Secure Entry Point flag set and, when active, are used to sign only resource record sets of type DNSKEY. Otherwise, the Secure Entry Point flag is cleared, and this key is used to sign only resource record sets of other types. Immutable after creation time.",
-          "enum": [
-            "keySigning",
-            "zoneSigning"
-          ]
-        },
-        "description": {
-          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the resource's function.",
-          "type": "string"
-        },
-        "creationTime": {
-          "type": "string",
-          "description": "The time that this resource was created in the control plane. This is in RFC3339 text format. Output only."
-        },
-        "algorithm": {
-          "enumDescriptions": [
-            "",
-            "",
-            "",
-            "",
-            ""
-          ],
-          "type": "string",
-          "description": "String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time.",
-          "enum": [
-            "rsasha1",
-            "rsasha256",
-            "rsasha512",
-            "ecdsap256sha256",
-            "ecdsap384sha384"
-          ]
-        },
-        "kind": {
-          "type": "string",
-          "default": "dns#dnsKey"
-        },
-        "publicKey": {
-          "type": "string",
-          "description": "Base64 encoded public half of this key. Output only."
-        },
-        "isActive": {
-          "description": "Active keys are used to sign subsequent changes to the ManagedZone. Inactive keys are still present as DNSKEY Resource Records for the use of resolvers validating existing signatures.",
-          "type": "boolean"
-        },
-        "keyTag": {
-          "format": "int32",
-          "type": "integer",
-          "description": "The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B. Output only."
-        },
-        "keyLength": {
-          "description": "Length of the key in bits. Specified at creation time, and then immutable.",
-          "type": "integer",
-          "format": "uint32"
-        },
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the resource; defined by the server (output only)."
-        }
-      },
-      "type": "object",
-      "description": "A DNSSEC key pair."
-    },
-    "Quota": {
-      "type": "object",
-      "properties": {
-        "networksPerPolicy": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Maximum allowed number of networks per policy."
-        },
-        "targetNameServersPerManagedZone": {
-          "description": "Maximum allowed number of target name servers per managed forwarding zone.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "totalRrdataSizePerChange": {
-          "description": "Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "targetNameServersPerPolicy": {
-          "type": "integer",
-          "description": "Maximum allowed number of alternative target name servers per policy.",
-          "format": "int32"
-        },
-        "dnsKeysPerManagedZone": {
-          "description": "Maximum allowed number of DnsKeys per ManagedZone.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "networksPerManagedZone": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Maximum allowed number of networks to which a privately scoped zone can be attached."
-        },
-        "rrsetsPerManagedZone": {
-          "description": "Maximum allowed number of ResourceRecordSets per zone in the project.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "whitelistedKeySpecs": {
-          "description": "DNSSEC algorithm and key length types that can be used for DnsKeys.",
           "items": {
-            "$ref": "DnsKeySpec"
-          },
-          "type": "array"
+            "$ref": "Operation"
+          }
         },
-        "kind": {
-          "default": "dns#quota",
+        "header": {
+          "$ref": "ResponseHeader"
+        },
+        "nextPageToken": {
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size.",
           "type": "string"
-        },
-        "rrsetDeletionsPerChange": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest."
-        },
-        "policies": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Maximum allowed number of policies per project."
-        },
-        "rrsetAdditionsPerChange": {
-          "description": "Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "managedZones": {
-          "description": "Maximum allowed number of managed zones in the project.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "resourceRecordsPerRrset": {
-          "description": "Maximum allowed number of ResourceRecords per ResourceRecordSet.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "managedZonesPerNetwork": {
-          "description": "Maximum allowed number of managed zones which can be attached to a network.",
-          "type": "integer",
-          "format": "int32"
         }
       },
-      "description": "Limits associated with a Project.",
-      "id": "Quota"
+      "id": "ManagedZoneOperationsListResponse"
     },
     "ChangesListResponse": {
       "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a \"snapshot\" of collections larger than the maximum page size."
-        },
-        "kind": {
-          "description": "Type of resource.",
-          "type": "string",
-          "default": "dns#changesListResponse"
-        },
         "header": {
           "$ref": "ResponseHeader"
         },
@@ -432,11 +56,284 @@
             "$ref": "Change"
           },
           "type": "array"
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a \"snapshot\" of collections larger than the maximum page size."
+        },
+        "kind": {
+          "default": "dns#changesListResponse",
+          "type": "string",
+          "description": "Type of resource."
         }
       },
       "id": "ChangesListResponse",
-      "description": "The response to a request to enumerate Changes to a ResourceRecordSets collection.",
+      "type": "object",
+      "description": "The response to a request to enumerate Changes to a ResourceRecordSets collection."
+    },
+    "ResourceRecordSet": {
+      "type": "object",
+      "id": "ResourceRecordSet",
+      "properties": {
+        "signatureRrdatas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "As defined in RFC 4034 (section 3.2)."
+        },
+        "rrdatas": {
+          "description": "As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#resourceRecordSet"
+        },
+        "ttl": {
+          "type": "integer",
+          "description": "Number of seconds that this ResourceRecordSet can be cached by resolvers.",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "description": "For example, www.example.com."
+        },
+        "type": {
+          "description": "The identifier of a supported record type. See the list of Supported DNS record types.",
+          "type": "string"
+        }
+      },
+      "description": "A unit of data that is returned by the DNS servers."
+    },
+    "ManagedZoneForwardingConfigNameServerTarget": {
+      "id": "ManagedZoneForwardingConfigNameServerTarget",
+      "type": "object",
+      "properties": {
+        "ipv4Address": {
+          "description": "IPv4 address of a target name server.",
+          "type": "string"
+        },
+        "forwardingPath": {
+          "type": "string",
+          "enumDescriptions": [
+            "Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet",
+            "Cloud DNS always forwards to this target through the VPC."
+          ],
+          "enum": [
+            "default",
+            "private"
+          ],
+          "description": "Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target."
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#managedZoneForwardingConfigNameServerTarget"
+        }
+      }
+    },
+    "ManagedZoneServiceDirectoryConfig": {
+      "properties": {
+        "kind": {
+          "default": "dns#managedZoneServiceDirectoryConfig",
+          "type": "string"
+        },
+        "namespace": {
+          "description": "Contains information about the namespace associated with the zone.",
+          "$ref": "ManagedZoneServiceDirectoryConfigNamespace"
+        }
+      },
+      "description": "Contains information about Service Directory-backed zones.",
+      "type": "object",
+      "id": "ManagedZoneServiceDirectoryConfig"
+    },
+    "PolicyAlternativeNameServerConfigTargetNameServer": {
+      "properties": {
+        "ipv4Address": {
+          "description": "IPv4 address to forward to.",
+          "type": "string"
+        },
+        "kind": {
+          "default": "dns#policyAlternativeNameServerConfigTargetNameServer",
+          "type": "string"
+        },
+        "forwardingPath": {
+          "enumDescriptions": [
+            "Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet",
+            "Cloud DNS always forwards to this target through the VPC."
+          ],
+          "type": "string",
+          "description": "Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.",
+          "enum": [
+            "default",
+            "private"
+          ]
+        }
+      },
+      "id": "PolicyAlternativeNameServerConfigTargetNameServer",
       "type": "object"
+    },
+    "Change": {
+      "description": "A Change represents a set of ResourceRecordSet additions and deletions applied atomically to a ManagedZone. ResourceRecordSets within a ManagedZone are modified by creating a new Change element in the Changes collection. In turn the Changes collection also records the past modifications to the ResourceRecordSets in a ManagedZone. The current state of the ManagedZone is the sum effect of applying all Change elements in the Changes collection in sequence.",
+      "properties": {
+        "isServing": {
+          "type": "boolean",
+          "description": "If the DNS queries for the zone will be served."
+        },
+        "deletions": {
+          "items": {
+            "$ref": "ResourceRecordSet"
+          },
+          "type": "array",
+          "description": "Which ResourceRecordSets to remove? Must match existing data exactly."
+        },
+        "additions": {
+          "items": {
+            "$ref": "ResourceRecordSet"
+          },
+          "type": "array",
+          "description": "Which ResourceRecordSets to add?"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "done"
+          ],
+          "description": "Status of the operation (output only). A status of \"done\" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.",
+          "enumDescriptions": [
+            "",
+            ""
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the resource; defined by the server (output only)."
+        },
+        "startTime": {
+          "description": "The time that this operation was started by the server (output only). This is in RFC3339 text format.",
+          "type": "string"
+        },
+        "kind": {
+          "default": "dns#change",
+          "type": "string"
+        }
+      },
+      "id": "Change",
+      "type": "object"
+    },
+    "Project": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "User assigned unique identifier for the resource (output only)."
+        },
+        "kind": {
+          "default": "dns#project",
+          "type": "string"
+        },
+        "quota": {
+          "description": "Quotas assigned to this project (output only).",
+          "$ref": "Quota"
+        },
+        "number": {
+          "description": "Unique numeric identifier for the resource; defined by the server (output only).",
+          "type": "string",
+          "format": "uint64"
+        }
+      },
+      "id": "Project",
+      "type": "object",
+      "description": "A project resource. The project is a top level container for resources including Cloud DNS ManagedZones. Projects can be created only in the APIs console."
+    },
+    "ManagedZone": {
+      "description": "A zone is a subtree of the DNS namespace under one administrative responsibility. A ManagedZone is a resource that represents a DNS zone hosted by the Cloud DNS service.",
+      "properties": {
+        "nameServerSet": {
+          "type": "string",
+          "description": "Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team."
+        },
+        "serviceDirectoryConfig": {
+          "description": "This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.",
+          "$ref": "ManagedZoneServiceDirectoryConfig"
+        },
+        "creationTime": {
+          "type": "string",
+          "description": "The time that this resource was created on the server. This is in RFC3339 text format. Output only."
+        },
+        "dnsName": {
+          "type": "string",
+          "description": "The DNS name of this managed zone, for instance \"example.com.\"."
+        },
+        "forwardingConfig": {
+          "description": "The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.",
+          "$ref": "ManagedZoneForwardingConfig"
+        },
+        "peeringConfig": {
+          "$ref": "ManagedZonePeeringConfig",
+          "description": "The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with."
+        },
+        "privateVisibilityConfig": {
+          "$ref": "ManagedZonePrivateVisibilityConfig",
+          "description": "For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from."
+        },
+        "nameServers": {
+          "items": {
+            "type": "string"
+          },
+          "description": "Delegate your managed_zone to these virtual name servers; defined by the server (output only)",
+          "type": "array"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the resource; defined by the server (output only)",
+          "format": "uint64"
+        },
+        "reverseLookupConfig": {
+          "description": "The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.",
+          "$ref": "ManagedZoneReverseLookupConfig"
+        },
+        "dnssecConfig": {
+          "$ref": "ManagedZoneDnsSecConfig",
+          "description": "DNSSEC configuration."
+        },
+        "labels": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "User labels."
+        },
+        "name": {
+          "description": "User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.",
+          "type": "string"
+        },
+        "description": {
+          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.",
+          "type": "string"
+        },
+        "visibility": {
+          "description": "The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.",
+          "type": "string",
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "enum": [
+            "public",
+            "private"
+          ]
+        },
+        "kind": {
+          "default": "dns#managedZone",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "id": "ManagedZone"
     },
     "DnsKeySpec": {
       "id": "DnsKeySpec",
@@ -444,25 +341,149 @@
       "description": "Parameters for DnsKey key generation. Used for generating initial keys for a new ManagedZone and as default when adding a new DnsKey.",
       "properties": {
         "keyType": {
+          "enum": [
+            "keySigning",
+            "zoneSigning"
+          ],
           "enumDescriptions": [
             "",
             ""
           ],
           "type": "string",
-          "enum": [
-            "keySigning",
-            "zoneSigning"
-          ],
           "description": "Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets."
         },
-        "keyLength": {
-          "description": "Length of the keys in bits.",
-          "type": "integer",
-          "format": "uint32"
+        "algorithm": {
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "enum": [
+            "rsasha1",
+            "rsasha256",
+            "rsasha512",
+            "ecdsap256sha256",
+            "ecdsap384sha384"
+          ],
+          "type": "string",
+          "description": "String mnemonic specifying the DNSSEC algorithm of this key."
         },
         "kind": {
           "default": "dns#dnsKeySpec",
           "type": "string"
+        },
+        "keyLength": {
+          "format": "uint32",
+          "description": "Length of the keys in bits.",
+          "type": "integer"
+        }
+      }
+    },
+    "PoliciesPatchResponse": {
+      "properties": {
+        "policy": {
+          "$ref": "Policy"
+        },
+        "header": {
+          "$ref": "ResponseHeader"
+        }
+      },
+      "id": "PoliciesPatchResponse",
+      "type": "object"
+    },
+    "ManagedZoneServiceDirectoryConfigNamespace": {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "default": "dns#managedZoneServiceDirectoryConfigNamespace"
+        },
+        "deletionTime": {
+          "description": "The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.",
+          "type": "string"
+        },
+        "namespaceUrl": {
+          "description": "The fully qualified URL of the namespace associated with the zone. This should be formatted like https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}",
+          "type": "string"
+        }
+      },
+      "id": "ManagedZoneServiceDirectoryConfigNamespace",
+      "type": "object"
+    },
+    "PolicyNetwork": {
+      "id": "PolicyNetwork",
+      "type": "object",
+      "properties": {
+        "networkUrl": {
+          "type": "string",
+          "description": "The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}"
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#policyNetwork"
+        }
+      }
+    },
+    "ManagedZonesListResponse": {
+      "id": "ManagedZonesListResponse",
+      "properties": {
+        "header": {
+          "$ref": "ResponseHeader"
+        },
+        "managedZones": {
+          "type": "array",
+          "items": {
+            "$ref": "ManagedZone"
+          },
+          "description": "The managed zone resources."
+        },
+        "kind": {
+          "default": "dns#managedZonesListResponse",
+          "type": "string",
+          "description": "Type of resource."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size."
+        }
+      },
+      "type": "object"
+    },
+    "PoliciesListResponse": {
+      "id": "PoliciesListResponse",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size.",
+          "type": "string"
+        },
+        "policies": {
+          "items": {
+            "$ref": "Policy"
+          },
+          "type": "array",
+          "description": "The policy resources."
+        },
+        "header": {
+          "$ref": "ResponseHeader"
+        },
+        "kind": {
+          "default": "dns#policiesListResponse",
+          "description": "Type of resource.",
+          "type": "string"
+        }
+      }
+    },
+    "DnsKey": {
+      "properties": {
+        "kind": {
+          "type": "string",
+          "default": "dns#dnsKey"
+        },
+        "creationTime": {
+          "type": "string",
+          "description": "The time that this resource was created in the control plane. This is in RFC3339 text format. Output only."
         },
         "algorithm": {
           "enum": [
@@ -479,40 +500,193 @@
             "",
             ""
           ],
+          "description": "String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time.",
+          "type": "string"
+        },
+        "publicKey": {
           "type": "string",
-          "description": "String mnemonic specifying the DNSSEC algorithm of this key."
-        }
-      }
-    },
-    "DnsKeyDigest": {
-      "type": "object",
-      "id": "DnsKeyDigest",
-      "properties": {
+          "description": "Base64 encoded public half of this key. Output only."
+        },
+        "digests": {
+          "items": {
+            "$ref": "DnsKeyDigest"
+          },
+          "description": "Cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Output only.",
+          "type": "array"
+        },
+        "isActive": {
+          "type": "boolean",
+          "description": "Active keys are used to sign subsequent changes to the ManagedZone. Inactive keys are still present as DNSKEY Resource Records for the use of resolvers validating existing signatures."
+        },
+        "description": {
+          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the resource's function.",
+          "type": "string"
+        },
+        "id": {
+          "description": "Unique identifier for the resource; defined by the server (output only).",
+          "type": "string"
+        },
+        "keyLength": {
+          "description": "Length of the key in bits. Specified at creation time, and then immutable.",
+          "type": "integer",
+          "format": "uint32"
+        },
+        "keyTag": {
+          "description": "The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B. Output only.",
+          "type": "integer",
+          "format": "int32"
+        },
         "type": {
+          "description": "One of \"KEY_SIGNING\" or \"ZONE_SIGNING\". Keys of type KEY_SIGNING have the Secure Entry Point flag set and, when active, are used to sign only resource record sets of type DNSKEY. Otherwise, the Secure Entry Point flag is cleared, and this key is used to sign only resource record sets of other types. Immutable after creation time.",
           "type": "string",
-          "description": "Specifies the algorithm used to calculate this digest.",
           "enumDescriptions": [
-            "",
             "",
             ""
           ],
           "enum": [
-            "sha1",
-            "sha256",
-            "sha384"
+            "keySigning",
+            "zoneSigning"
+          ]
+        }
+      },
+      "id": "DnsKey",
+      "description": "A DNSSEC key pair.",
+      "type": "object"
+    },
+    "ManagedZoneDnsSecConfig": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enumDescriptions": [
+            "DNSSEC is disabled; the zone is not signed.",
+            "DNSSEC is enabled; the zone is signed and fully managed.",
+            "DNSSEC is enabled, but in a \"transfer\" mode."
+          ],
+          "type": "string",
+          "description": "Specifies whether DNSSEC is enabled, and what mode it is in.",
+          "enum": [
+            "off",
+            "on",
+            "transfer"
           ]
         },
-        "digest": {
-          "description": "The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.",
+        "defaultKeySpecs": {
+          "items": {
+            "$ref": "DnsKeySpec"
+          },
+          "description": "Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.",
+          "type": "array"
+        },
+        "nonExistence": {
+          "type": "string",
+          "enum": [
+            "nsec",
+            "nsec3"
+          ],
+          "description": "Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.",
+          "enumDescriptions": [
+            "",
+            ""
+          ]
+        },
+        "kind": {
+          "default": "dns#managedZoneDnsSecConfig",
           "type": "string"
         }
-      }
+      },
+      "id": "ManagedZoneDnsSecConfig"
+    },
+    "Policy": {
+      "type": "object",
+      "description": "A policy is a collection of DNS rules applied to one or more Virtual Private Cloud resources.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "User-assigned name for this policy."
+        },
+        "networks": {
+          "type": "array",
+          "items": {
+            "$ref": "PolicyNetwork"
+          },
+          "description": "List of network names specifying networks to which this policy is applied."
+        },
+        "enableInboundForwarding": {
+          "description": "Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.",
+          "type": "boolean"
+        },
+        "alternativeNameServerConfig": {
+          "description": "Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.",
+          "$ref": "PolicyAlternativeNameServerConfig"
+        },
+        "enableLogging": {
+          "description": "Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.",
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string",
+          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function."
+        },
+        "id": {
+          "description": "Unique identifier for the resource; defined by the server (output only).",
+          "type": "string",
+          "format": "uint64"
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#policy"
+        }
+      },
+      "id": "Policy"
+    },
+    "DnsKeysListResponse": {
+      "description": "The response to a request to enumerate DnsKeys in a ManagedZone.",
+      "type": "object",
+      "properties": {
+        "header": {
+          "$ref": "ResponseHeader"
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#dnsKeysListResponse",
+          "description": "Type of resource."
+        },
+        "dnsKeys": {
+          "items": {
+            "$ref": "DnsKey"
+          },
+          "description": "The requested resources.",
+          "type": "array"
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a \"snapshot\" of collections larger than the maximum page size."
+        }
+      },
+      "id": "DnsKeysListResponse"
     },
     "Operation": {
-      "description": "An operation represents a successful mutation performed on a Cloud DNS resource. Operations provide: - An audit log of server resource mutations. - A way to recover/retry API calls in the case where the response is never received by the caller. Use the caller specified client_operation_id.",
-      "type": "object",
-      "id": "Operation",
       "properties": {
+        "status": {
+          "type": "string",
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "description": "Status of the operation. Can be one of the following: \"PENDING\" or \"DONE\" (output only). A status of \"DONE\" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.",
+          "enum": [
+            "pending",
+            "done"
+          ]
+        },
+        "zoneContext": {
+          "$ref": "OperationManagedZoneContext",
+          "description": "Only populated if the operation targeted a ManagedZone (output only)."
+        },
+        "kind": {
+          "default": "dns#operation",
+          "type": "string"
+        },
         "dnsKeyContext": {
           "$ref": "OperationDnsKeyContext",
           "description": "Only populated if the operation targeted a DnsKey (output only)."
@@ -521,149 +695,47 @@
           "type": "string",
           "description": "User who requested the operation, for example: user@example.com. cloud-dns-system for operations automatically done by the system. (output only)"
         },
-        "kind": {
-          "type": "string",
-          "default": "dns#operation"
-        },
         "id": {
           "description": "Unique identifier for the resource. This is the client_operation_id if the client specified it when the mutation was initiated, otherwise, it is generated by the server. The name must be 1-63 characters long and match the regular expression [-a-z0-9]? (output only)",
           "type": "string"
         },
-        "status": {
-          "description": "Status of the operation. Can be one of the following: \"PENDING\" or \"DONE\" (output only). A status of \"DONE\" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.",
-          "type": "string",
-          "enum": [
-            "pending",
-            "done"
-          ],
-          "enumDescriptions": [
-            "",
-            ""
-          ]
-        },
-        "startTime": {
-          "type": "string",
-          "description": "The time that this operation was started by the server. This is in RFC3339 text format (output only)."
-        },
         "type": {
-          "description": "Type of the operation. Operations include insert, update, and delete (output only).",
-          "type": "string"
-        },
-        "zoneContext": {
-          "description": "Only populated if the operation targeted a ManagedZone (output only).",
-          "$ref": "OperationManagedZoneContext"
-        }
-      }
-    },
-    "PolicyAlternativeNameServerConfigTargetNameServer": {
-      "id": "PolicyAlternativeNameServerConfigTargetNameServer",
-      "type": "object",
-      "properties": {
-        "kind": {
           "type": "string",
-          "default": "dns#policyAlternativeNameServerConfigTargetNameServer"
-        },
-        "ipv4Address": {
-          "type": "string",
-          "description": "IPv4 address to forward to."
-        },
-        "forwardingPath": {
-          "enumDescriptions": [
-            "Cloud DNS makes forwarding decision based on IP address ranges; that is, RFC1918 addresses forward to the target through the VPC and non-RFC1918 addresses forward to the target through the internet",
-            "Cloud DNS always forwards to this target through the VPC."
-          ],
-          "enum": [
-            "default",
-            "private"
-          ],
-          "type": "string",
-          "description": "Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target."
-        }
-      }
-    },
-    "Change": {
-      "id": "Change",
-      "description": "A Change represents a set of ResourceRecordSet additions and deletions applied atomically to a ManagedZone. ResourceRecordSets within a ManagedZone are modified by creating a new Change element in the Changes collection. In turn the Changes collection also records the past modifications to the ResourceRecordSets in a ManagedZone. The current state of the ManagedZone is the sum effect of applying all Change elements in the Changes collection in sequence.",
-      "properties": {
-        "deletions": {
-          "type": "array",
-          "items": {
-            "$ref": "ResourceRecordSet"
-          },
-          "description": "Which ResourceRecordSets to remove? Must match existing data exactly."
-        },
-        "status": {
-          "enumDescriptions": [
-            "",
-            ""
-          ],
-          "type": "string",
-          "description": "Status of the operation (output only). A status of \"done\" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.",
-          "enum": [
-            "pending",
-            "done"
-          ]
-        },
-        "isServing": {
-          "type": "boolean",
-          "description": "If the DNS queries for the zone will be served."
-        },
-        "additions": {
-          "type": "array",
-          "description": "Which ResourceRecordSets to add?",
-          "items": {
-            "$ref": "ResourceRecordSet"
-          }
-        },
-        "kind": {
-          "default": "dns#change",
-          "type": "string"
-        },
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the resource; defined by the server (output only)."
+          "description": "Type of the operation. Operations include insert, update, and delete (output only)."
         },
         "startTime": {
-          "description": "The time that this operation was started by the server (output only). This is in RFC3339 text format.",
+          "description": "The time that this operation was started by the server. This is in RFC3339 text format (output only).",
           "type": "string"
         }
       },
-      "type": "object"
+      "type": "object",
+      "id": "Operation",
+      "description": "An operation represents a successful mutation performed on a Cloud DNS resource. Operations provide: - An audit log of server resource mutations. - A way to recover/retry API calls in the case where the response is never received by the caller. Use the caller specified client_operation_id."
     },
-    "PoliciesPatchResponse": {
+    "ManagedZoneReverseLookupConfig": {
       "properties": {
-        "header": {
-          "$ref": "ResponseHeader"
-        },
-        "policy": {
-          "$ref": "Policy"
+        "kind": {
+          "default": "dns#managedZoneReverseLookupConfig",
+          "type": "string"
         }
       },
-      "id": "PoliciesPatchResponse",
+      "id": "ManagedZoneReverseLookupConfig",
       "type": "object"
     },
-    "DnsKeysListResponse": {
-      "id": "DnsKeysListResponse",
-      "description": "The response to a request to enumerate DnsKeys in a ManagedZone.",
+    "ManagedZonePeeringConfigTargetNetwork": {
+      "id": "ManagedZonePeeringConfigTargetNetwork",
       "properties": {
-        "nextPageToken": {
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a \"snapshot\" of collections larger than the maximum page size.",
-          "type": "string"
+        "networkUrl": {
+          "type": "string",
+          "description": "The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}"
         },
-        "dnsKeys": {
-          "items": {
-            "$ref": "DnsKey"
-          },
-          "type": "array",
-          "description": "The requested resources."
-        },
-        "header": {
-          "$ref": "ResponseHeader"
+        "deactivateTime": {
+          "type": "string",
+          "description": "The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only."
         },
         "kind": {
-          "default": "dns#dnsKeysListResponse",
-          "type": "string",
-          "description": "Type of resource."
+          "default": "dns#managedZonePeeringConfigTargetNetwork",
+          "type": "string"
         }
       },
       "type": "object"
@@ -672,10 +744,10 @@
       "properties": {
         "targetNameServers": {
           "type": "array",
+          "description": "Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.",
           "items": {
             "$ref": "PolicyAlternativeNameServerConfigTargetNameServer"
-          },
-          "description": "Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified."
+          }
         },
         "kind": {
           "type": "string",
@@ -685,141 +757,131 @@
       "id": "PolicyAlternativeNameServerConfig",
       "type": "object"
     },
-    "ResourceRecordSetsListResponse": {
+    "ManagedZonePeeringConfig": {
       "type": "object",
       "properties": {
-        "header": {
-          "$ref": "ResponseHeader"
+        "targetNetwork": {
+          "description": "The network with which to peer.",
+          "$ref": "ManagedZonePeeringConfigTargetNetwork"
         },
         "kind": {
-          "description": "Type of resource.",
-          "type": "string",
-          "default": "dns#resourceRecordSetsListResponse"
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. This lets you retrieve complete contents of even larger collections, one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of elements returned are an inconsistent view of the collection. You cannot retrieve a consistent snapshot of a collection larger than the maximum page size."
-        },
-        "rrsets": {
-          "type": "array",
-          "items": {
-            "$ref": "ResourceRecordSet"
-          },
-          "description": "The resource record set resources."
+          "default": "dns#managedZonePeeringConfig",
+          "type": "string"
         }
       },
-      "id": "ResourceRecordSetsListResponse"
+      "id": "ManagedZonePeeringConfig"
     },
     "OperationDnsKeyContext": {
       "type": "object",
-      "id": "OperationDnsKeyContext",
       "properties": {
         "oldValue": {
-          "$ref": "DnsKey",
-          "description": "The pre-operation DnsKey resource."
+          "description": "The pre-operation DnsKey resource.",
+          "$ref": "DnsKey"
         },
         "newValue": {
           "description": "The post-operation DnsKey resource.",
           "$ref": "DnsKey"
         }
-      }
-    },
-    "PoliciesListResponse": {
-      "properties": {
-        "header": {
-          "$ref": "ResponseHeader"
-        },
-        "nextPageToken": {
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size.",
-          "type": "string"
-        },
-        "policies": {
-          "type": "array",
-          "items": {
-            "$ref": "Policy"
-          },
-          "description": "The policy resources."
-        },
-        "kind": {
-          "default": "dns#policiesListResponse",
-          "description": "Type of resource.",
-          "type": "string"
-        }
       },
-      "id": "PoliciesListResponse",
+      "id": "OperationDnsKeyContext"
+    },
+    "ResourceRecordSetsDeleteResponse": {
+      "id": "ResourceRecordSetsDeleteResponse",
+      "properties": {},
       "type": "object"
     },
-    "ResourceRecordSet": {
-      "description": "A unit of data that is returned by the DNS servers.",
+    "Quota": {
+      "id": "Quota",
+      "description": "Limits associated with a Project.",
       "properties": {
-        "ttl": {
-          "description": "Number of seconds that this ResourceRecordSet can be cached by resolvers.",
+        "totalRrdataSizePerChange": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes."
+        },
+        "whitelistedKeySpecs": {
+          "type": "array",
+          "items": {
+            "$ref": "DnsKeySpec"
+          },
+          "description": "DNSSEC algorithm and key length types that can be used for DnsKeys."
+        },
+        "dnsKeysPerManagedZone": {
+          "type": "integer",
+          "description": "Maximum allowed number of DnsKeys per ManagedZone.",
+          "format": "int32"
+        },
+        "policies": {
+          "type": "integer",
+          "description": "Maximum allowed number of policies per project.",
+          "format": "int32"
+        },
+        "networksPerManagedZone": {
+          "description": "Maximum allowed number of networks to which a privately scoped zone can be attached.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "rrsetAdditionsPerChange": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest."
+        },
+        "kind": {
+          "type": "string",
+          "default": "dns#quota"
+        },
+        "managedZonesPerNetwork": {
+          "description": "Maximum allowed number of managed zones which can be attached to a network.",
           "type": "integer",
           "format": "int32"
         },
-        "signatureRrdatas": {
-          "description": "As defined in RFC 4034 (section 3.2).",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "rrsetsPerManagedZone": {
+          "format": "int32",
+          "description": "Maximum allowed number of ResourceRecordSets per zone in the project.",
+          "type": "integer"
         },
-        "name": {
-          "description": "For example, www.example.com.",
-          "type": "string"
+        "managedZones": {
+          "description": "Maximum allowed number of managed zones in the project.",
+          "type": "integer",
+          "format": "int32"
         },
-        "type": {
-          "type": "string",
-          "description": "The identifier of a supported record type. See the list of Supported DNS record types."
+        "rrsetDeletionsPerChange": {
+          "type": "integer",
+          "description": "Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest.",
+          "format": "int32"
         },
-        "rrdatas": {
-          "items": {
-            "type": "string"
-          },
-          "description": "As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.",
-          "type": "array"
+        "resourceRecordsPerRrset": {
+          "description": "Maximum allowed number of ResourceRecords per ResourceRecordSet.",
+          "type": "integer",
+          "format": "int32"
         },
-        "kind": {
-          "default": "dns#resourceRecordSet",
+        "networksPerPolicy": {
+          "description": "Maximum allowed number of networks per policy.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "targetNameServersPerPolicy": {
+          "description": "Maximum allowed number of alternative target name servers per policy.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "targetNameServersPerManagedZone": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Maximum allowed number of target name servers per managed forwarding zone."
+        }
+      },
+      "type": "object"
+    },
+    "ResponseHeader": {
+      "properties": {
+        "operationId": {
+          "description": "For mutating operation requests that completed successfully. This is the client_operation_id if the client specified it, otherwise it is generated by the server (output only).",
           "type": "string"
         }
       },
-      "type": "object",
-      "id": "ResourceRecordSet"
-    },
-    "ManagedZonePrivateVisibilityConfig": {
-      "type": "object",
-      "id": "ManagedZonePrivateVisibilityConfig",
-      "properties": {
-        "networks": {
-          "description": "The list of VPC networks that can see this zone.",
-          "items": {
-            "$ref": "ManagedZonePrivateVisibilityConfigNetwork"
-          },
-          "type": "array"
-        },
-        "kind": {
-          "default": "dns#managedZonePrivateVisibilityConfig",
-          "type": "string"
-        }
-      }
-    },
-    "ManagedZonePeeringConfigTargetNetwork": {
-      "properties": {
-        "kind": {
-          "default": "dns#managedZonePeeringConfigTargetNetwork",
-          "type": "string"
-        },
-        "deactivateTime": {
-          "description": "The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.",
-          "type": "string"
-        },
-        "networkUrl": {
-          "description": "The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}",
-          "type": "string"
-        }
-      },
-      "id": "ManagedZonePeeringConfigTargetNetwork",
+      "description": "Elements common to every response.",
+      "id": "ResponseHeader",
       "type": "object"
     },
     "ManagedZonePrivateVisibilityConfigNetwork": {
@@ -836,161 +898,1241 @@
       },
       "id": "ManagedZonePrivateVisibilityConfigNetwork"
     },
-    "PoliciesUpdateResponse": {
-      "id": "PoliciesUpdateResponse",
-      "type": "object",
+    "ManagedZoneForwardingConfig": {
       "properties": {
-        "header": {
-          "$ref": "ResponseHeader"
-        },
-        "policy": {
-          "$ref": "Policy"
-        }
-      }
-    },
-    "ManagedZoneServiceDirectoryConfig": {
-      "id": "ManagedZoneServiceDirectoryConfig",
-      "description": "Contains information about Service Directory-backed zones.",
-      "type": "object",
-      "properties": {
-        "kind": {
-          "default": "dns#managedZoneServiceDirectoryConfig",
-          "type": "string"
-        },
-        "namespace": {
-          "$ref": "ManagedZoneServiceDirectoryConfigNamespace",
-          "description": "Contains information about the namespace associated with the zone."
-        }
-      }
-    },
-    "Project": {
-      "type": "object",
-      "id": "Project",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "User assigned unique identifier for the resource (output only)."
-        },
-        "quota": {
-          "$ref": "Quota",
-          "description": "Quotas assigned to this project (output only)."
-        },
-        "kind": {
-          "default": "dns#project",
-          "type": "string"
-        },
-        "number": {
-          "type": "string",
-          "description": "Unique numeric identifier for the resource; defined by the server (output only).",
-          "format": "uint64"
-        }
-      },
-      "description": "A project resource. The project is a top level container for resources including Cloud DNS ManagedZones. Projects can be created only in the APIs console."
-    },
-    "ResponseHeader": {
-      "id": "ResponseHeader",
-      "properties": {
-        "operationId": {
-          "description": "For mutating operation requests that completed successfully. This is the client_operation_id if the client specified it, otherwise it is generated by the server (output only).",
-          "type": "string"
-        }
-      },
-      "description": "Elements common to every response.",
-      "type": "object"
-    },
-    "ManagedZoneOperationsListResponse": {
-      "type": "object",
-      "id": "ManagedZoneOperationsListResponse",
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size."
-        },
-        "header": {
-          "$ref": "ResponseHeader"
-        },
-        "operations": {
+        "targetNameServers": {
           "items": {
-            "$ref": "Operation"
+            "$ref": "ManagedZoneForwardingConfigNameServerTarget"
           },
           "type": "array",
-          "description": "The operation resources."
+          "description": "List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given."
         },
         "kind": {
-          "type": "string",
-          "default": "dns#managedZoneOperationsListResponse"
+          "default": "dns#managedZoneForwardingConfig",
+          "type": "string"
         }
-      }
+      },
+      "type": "object",
+      "id": "ManagedZoneForwardingConfig"
     },
-    "ManagedZonesListResponse": {
+    "PoliciesUpdateResponse": {
       "properties": {
-        "kind": {
-          "type": "string",
-          "description": "Type of resource.",
-          "default": "dns#managedZonesListResponse"
+        "policy": {
+          "$ref": "Policy"
         },
         "header": {
           "$ref": "ResponseHeader"
-        },
-        "managedZones": {
-          "items": {
-            "$ref": "ManagedZone"
-          },
-          "description": "The managed zone resources.",
-          "type": "array"
-        },
-        "nextPageToken": {
-          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your page token. In this way you can retrieve the complete contents of even very large collections one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of all elements returned are an inconsistent view of the collection. There is no way to retrieve a consistent snapshot of a collection larger than the maximum page size.",
-          "type": "string"
         }
       },
-      "id": "ManagedZonesListResponse",
-      "type": "object"
+      "type": "object",
+      "id": "PoliciesUpdateResponse"
     },
-    "Policy": {
-      "id": "Policy",
+    "ResourceRecordSetsListResponse": {
+      "id": "ResourceRecordSetsListResponse",
       "type": "object",
       "properties": {
-        "alternativeNameServerConfig": {
-          "description": "Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.",
-          "$ref": "PolicyAlternativeNameServerConfig"
-        },
-        "name": {
-          "description": "User-assigned name for this policy.",
-          "type": "string"
-        },
-        "description": {
-          "description": "A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.",
-          "type": "string"
-        },
-        "enableInboundForwarding": {
-          "description": "Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.",
-          "type": "boolean"
+        "header": {
+          "$ref": "ResponseHeader"
         },
         "kind": {
           "type": "string",
-          "default": "dns#policy"
+          "default": "dns#resourceRecordSetsListResponse",
+          "description": "Type of resource."
         },
-        "id": {
-          "format": "uint64",
-          "description": "Unique identifier for the resource; defined by the server (output only).",
-          "type": "string"
-        },
-        "enableLogging": {
-          "type": "boolean",
-          "description": "Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set."
-        },
-        "networks": {
-          "description": "List of network names specifying networks to which this policy is applied.",
+        "rrsets": {
+          "description": "The resource record set resources.",
+          "type": "array",
           "items": {
-            "$ref": "PolicyNetwork"
-          },
-          "type": "array"
+            "$ref": "ResourceRecordSet"
+          }
+        },
+        "nextPageToken": {
+          "description": "The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another list request using this value as your pagination token. This lets you retrieve complete contents of even larger collections, one page at a time. However, if the contents of the collection change between the first and last paginated list request, the set of elements returned are an inconsistent view of the collection. You cannot retrieve a consistent snapshot of a collection larger than the maximum page size.",
+          "type": "string"
+        }
+      }
+    },
+    "DnsKeyDigest": {
+      "properties": {
+        "digest": {
+          "type": "string",
+          "description": "The base-16 encoded bytes of this digest. Suitable for use in a DS resource record."
+        },
+        "type": {
+          "description": "Specifies the algorithm used to calculate this digest.",
+          "type": "string",
+          "enum": [
+            "sha1",
+            "sha256",
+            "sha384"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ]
         }
       },
-      "description": "A policy is a collection of DNS rules applied to one or more Virtual Private Cloud resources."
+      "id": "DnsKeyDigest",
+      "type": "object"
+    },
+    "OperationManagedZoneContext": {
+      "type": "object",
+      "properties": {
+        "oldValue": {
+          "description": "The pre-operation ManagedZone resource.",
+          "$ref": "ManagedZone"
+        },
+        "newValue": {
+          "description": "The post-operation ManagedZone resource.",
+          "$ref": "ManagedZone"
+        }
+      },
+      "id": "OperationManagedZoneContext"
     }
   },
+  "fullyEncodeReservedExpansion": true,
+  "basePath": "",
+  "ownerDomain": "google.com",
+  "canonicalName": "Dns",
+  "servicePath": "",
+  "resources": {
+    "changes": {
+      "methods": {
+        "create": {
+          "parameters": {
+            "project": {
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "type": "string",
+              "location": "path"
+            },
+            "managedZone": {
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "location": "path",
+              "type": "string",
+              "required": true
+            },
+            "clientOperationId": {
+              "location": "query",
+              "type": "string",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            }
+          },
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
+          "request": {
+            "$ref": "Change"
+          },
+          "httpMethod": "POST",
+          "response": {
+            "$ref": "Change"
+          },
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.changes.create",
+          "description": "Atomically updates the ResourceRecordSet collection."
+        },
+        "get": {
+          "parameterOrder": [
+            "project",
+            "managedZone",
+            "changeId"
+          ],
+          "httpMethod": "GET",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}",
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}",
+          "response": {
+            "$ref": "Change"
+          },
+          "parameters": {
+            "changeId": {
+              "description": "The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.",
+              "required": true,
+              "location": "path",
+              "type": "string"
+            },
+            "project": {
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "type": "string",
+              "location": "path"
+            },
+            "clientOperationId": {
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "location": "query",
+              "type": "string"
+            },
+            "managedZone": {
+              "required": true,
+              "location": "path",
+              "type": "string",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
+            }
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.changes.get",
+          "description": "Fetches the representation of an existing Change."
+        },
+        "list": {
+          "parameters": {
+            "sortBy": {
+              "default": "changeSequence",
+              "location": "query",
+              "description": "Sorting criterion. The only supported value is change sequence.",
+              "type": "string",
+              "enumDescriptions": [
+                ""
+              ],
+              "enum": [
+                "changeSequence"
+              ]
+            },
+            "managedZone": {
+              "location": "path",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "required": true,
+              "type": "string"
+            },
+            "project": {
+              "required": true,
+              "description": "Identifies the project addressed by this request.",
+              "location": "path",
+              "type": "string"
+            },
+            "pageToken": {
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
+              "type": "string",
+              "location": "query"
+            },
+            "maxResults": {
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
+              "format": "int32",
+              "location": "query",
+              "type": "integer"
+            },
+            "sortOrder": {
+              "type": "string",
+              "description": "Sorting order direction: 'ascending' or 'descending'.",
+              "location": "query"
+            }
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "response": {
+            "$ref": "ChangesListResponse"
+          },
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
+          "httpMethod": "GET",
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
+          "description": "Enumerates Changes to a ResourceRecordSet collection.",
+          "id": "dns.changes.list"
+        }
+      }
+    },
+    "dnsKeys": {
+      "methods": {
+        "list": {
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameters": {
+            "pageToken": {
+              "type": "string",
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
+              "location": "query"
+            },
+            "managedZone": {
+              "required": true,
+              "location": "path",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "type": "string"
+            },
+            "project": {
+              "type": "string",
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "location": "path"
+            },
+            "digestType": {
+              "location": "query",
+              "type": "string",
+              "description": "An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed."
+            },
+            "maxResults": {
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
+              "format": "int32",
+              "location": "query",
+              "type": "integer"
+            }
+          },
+          "response": {
+            "$ref": "DnsKeysListResponse"
+          },
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys",
+          "httpMethod": "GET",
+          "id": "dns.dnsKeys.list",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "description": "Enumerate DnsKeys to a ResourceRecordSet collection."
+        },
+        "get": {
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}",
+          "parameters": {
+            "project": {
+              "type": "string",
+              "description": "Identifies the project addressed by this request.",
+              "location": "path",
+              "required": true
+            },
+            "managedZone": {
+              "required": true,
+              "type": "string",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "location": "path"
+            },
+            "dnsKeyId": {
+              "location": "path",
+              "type": "string",
+              "description": "The identifier of the requested DnsKey.",
+              "required": true
+            },
+            "clientOperationId": {
+              "type": "string",
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            },
+            "digestType": {
+              "type": "string",
+              "location": "query",
+              "description": "An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed."
+            }
+          },
+          "response": {
+            "$ref": "DnsKey"
+          },
+          "httpMethod": "GET",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameterOrder": [
+            "project",
+            "managedZone",
+            "dnsKeyId"
+          ],
+          "description": "Fetch the representation of an existing DnsKey.",
+          "id": "dns.dnsKeys.get"
+        }
+      }
+    },
+    "resourceRecordSets": {
+      "methods": {
+        "list": {
+          "parameters": {
+            "maxResults": {
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
+              "location": "query",
+              "format": "int32",
+              "type": "integer"
+            },
+            "name": {
+              "description": "Restricts the list to return only records with this fully qualified domain name.",
+              "type": "string",
+              "location": "query"
+            },
+            "type": {
+              "location": "query",
+              "description": "Restricts the list to return only records of this type. If present, the \"name\" parameter must also be present.",
+              "type": "string"
+            },
+            "pageToken": {
+              "location": "query",
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
+              "type": "string"
+            },
+            "project": {
+              "location": "path",
+              "type": "string",
+              "description": "Identifies the project addressed by this request.",
+              "required": true
+            },
+            "managedZone": {
+              "location": "path",
+              "type": "string",
+              "required": true,
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
+            }
+          },
+          "id": "dns.resourceRecordSets.list",
+          "httpMethod": "GET",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "response": {
+            "$ref": "ResourceRecordSetsListResponse"
+          },
+          "description": "Enumerates ResourceRecordSets that you have created but not yet deleted.",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets"
+        }
+      }
+    },
+    "managedZoneOperations": {
+      "methods": {
+        "list": {
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/operations",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/operations",
+          "description": "Enumerates Operations for the given ManagedZone.",
+          "parameters": {
+            "project": {
+              "description": "Identifies the project addressed by this request.",
+              "type": "string",
+              "required": true,
+              "location": "path"
+            },
+            "managedZone": {
+              "description": "Identifies the managed zone addressed by this request.",
+              "type": "string",
+              "required": true,
+              "location": "path"
+            },
+            "sortBy": {
+              "enum": [
+                "startTime",
+                "id"
+              ],
+              "default": "startTime",
+              "location": "query",
+              "type": "string",
+              "description": "Sorting criterion. The only supported values are START_TIME and ID.",
+              "enumDescriptions": [
+                "",
+                ""
+              ]
+            },
+            "pageToken": {
+              "location": "query",
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
+              "type": "string"
+            },
+            "maxResults": {
+              "format": "int32",
+              "location": "query",
+              "type": "integer",
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return."
+            }
+          },
+          "httpMethod": "GET",
+          "response": {
+            "$ref": "ManagedZoneOperationsListResponse"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.managedZoneOperations.list",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ]
+        },
+        "get": {
+          "parameters": {
+            "managedZone": {
+              "required": true,
+              "description": "Identifies the managed zone addressed by this request.",
+              "location": "path",
+              "type": "string"
+            },
+            "clientOperationId": {
+              "location": "query",
+              "type": "string",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            },
+            "project": {
+              "description": "Identifies the project addressed by this request.",
+              "type": "string",
+              "required": true,
+              "location": "path"
+            },
+            "operation": {
+              "required": true,
+              "location": "path",
+              "type": "string",
+              "description": "Identifies the operation addressed by this request (ID of the operation)."
+            }
+          },
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.managedZoneOperations.get",
+          "description": "Fetches the representation of an existing Operation.",
+          "parameterOrder": [
+            "project",
+            "managedZone",
+            "operation"
+          ],
+          "httpMethod": "GET",
+          "response": {
+            "$ref": "Operation"
+          }
+        }
+      }
+    },
+    "policies": {
+      "methods": {
+        "patch": {
+          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
+          "id": "dns.policies.patch",
+          "parameterOrder": [
+            "project",
+            "policy"
+          ],
+          "httpMethod": "PATCH",
+          "path": "dns/v1/projects/{project}/policies/{policy}",
+          "response": {
+            "$ref": "PoliciesPatchResponse"
+          },
+          "request": {
+            "$ref": "Policy"
+          },
+          "description": "Apply a partial update to an existing Policy.",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameters": {
+            "project": {
+              "type": "string",
+              "required": true,
+              "description": "Identifies the project addressed by this request.",
+              "location": "path"
+            },
+            "policy": {
+              "location": "path",
+              "description": "User given friendly name of the policy addressed by this request.",
+              "required": true,
+              "type": "string"
+            },
+            "clientOperationId": {
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "type": "string"
+            }
+          }
+        },
+        "get": {
+          "parameters": {
+            "project": {
+              "required": true,
+              "description": "Identifies the project addressed by this request.",
+              "type": "string",
+              "location": "path"
+            },
+            "clientOperationId": {
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "location": "query",
+              "type": "string"
+            },
+            "policy": {
+              "location": "path",
+              "description": "User given friendly name of the policy addressed by this request.",
+              "type": "string",
+              "required": true
+            }
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "httpMethod": "GET",
+          "description": "Fetches the representation of an existing Policy.",
+          "response": {
+            "$ref": "Policy"
+          },
+          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
+          "path": "dns/v1/projects/{project}/policies/{policy}",
+          "id": "dns.policies.get",
+          "parameterOrder": [
+            "project",
+            "policy"
+          ]
+        },
+        "create": {
+          "flatPath": "dns/v1/projects/{project}/policies",
+          "request": {
+            "$ref": "Policy"
+          },
+          "response": {
+            "$ref": "Policy"
+          },
+          "id": "dns.policies.create",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameterOrder": [
+            "project"
+          ],
+          "parameters": {
+            "clientOperationId": {
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "type": "string"
+            },
+            "project": {
+              "location": "path",
+              "description": "Identifies the project addressed by this request.",
+              "type": "string",
+              "required": true
+            }
+          },
+          "description": "Creates a new Policy.",
+          "path": "dns/v1/projects/{project}/policies",
+          "httpMethod": "POST"
+        },
+        "delete": {
+          "path": "dns/v1/projects/{project}/policies/{policy}",
+          "description": "Deletes a previously created Policy. Fails if the policy is still being referenced by a network.",
+          "parameterOrder": [
+            "project",
+            "policy"
+          ],
+          "httpMethod": "DELETE",
+          "parameters": {
+            "project": {
+              "type": "string",
+              "location": "path",
+              "required": true,
+              "description": "Identifies the project addressed by this request."
+            },
+            "clientOperationId": {
+              "type": "string",
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            },
+            "policy": {
+              "required": true,
+              "type": "string",
+              "location": "path",
+              "description": "User given friendly name of the policy addressed by this request."
+            }
+          },
+          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
+          "id": "dns.policies.delete",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ]
+        },
+        "list": {
+          "description": "Enumerates all Policies associated with a project.",
+          "parameters": {
+            "project": {
+              "required": true,
+              "description": "Identifies the project addressed by this request.",
+              "location": "path",
+              "type": "string"
+            },
+            "pageToken": {
+              "type": "string",
+              "location": "query",
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request."
+            },
+            "maxResults": {
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
+              "location": "query",
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "parameterOrder": [
+            "project"
+          ],
+          "id": "dns.policies.list",
+          "flatPath": "dns/v1/projects/{project}/policies",
+          "httpMethod": "GET",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "path": "dns/v1/projects/{project}/policies",
+          "response": {
+            "$ref": "PoliciesListResponse"
+          }
+        },
+        "update": {
+          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
+          "description": "Update an existing Policy.",
+          "parameterOrder": [
+            "project",
+            "policy"
+          ],
+          "id": "dns.policies.update",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "request": {
+            "$ref": "Policy"
+          },
+          "httpMethod": "PUT",
+          "parameters": {
+            "project": {
+              "location": "path",
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "type": "string"
+            },
+            "policy": {
+              "type": "string",
+              "location": "path",
+              "required": true,
+              "description": "User given friendly name of the policy addressed by this request."
+            },
+            "clientOperationId": {
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "type": "string",
+              "location": "query"
+            }
+          },
+          "path": "dns/v1/projects/{project}/policies/{policy}",
+          "response": {
+            "$ref": "PoliciesUpdateResponse"
+          }
+        }
+      }
+    },
+    "managedZones": {
+      "methods": {
+        "patch": {
+          "id": "dns.managedZones.patch",
+          "httpMethod": "PATCH",
+          "description": "Apply a partial update to an existing ManagedZone.",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "request": {
+            "$ref": "ManagedZone"
+          },
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "parameters": {
+            "managedZone": {
+              "location": "path",
+              "type": "string",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "required": true
+            },
+            "project": {
+              "type": "string",
+              "location": "path",
+              "description": "Identifies the project addressed by this request.",
+              "required": true
+            },
+            "clientOperationId": {
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "type": "string",
+              "location": "query"
+            }
+          },
+          "response": {
+            "$ref": "Operation"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ]
+        },
+        "delete": {
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "httpMethod": "DELETE",
+          "id": "dns.managedZones.delete",
+          "description": "Delete a previously created ManagedZone.",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameters": {
+            "clientOperationId": {
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "type": "string",
+              "location": "query"
+            },
+            "project": {
+              "location": "path",
+              "required": true,
+              "description": "Identifies the project addressed by this request.",
+              "type": "string"
+            },
+            "managedZone": {
+              "type": "string",
+              "required": true,
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "location": "path"
+            }
+          }
+        },
+        "list": {
+          "id": "dns.managedZones.list",
+          "httpMethod": "GET",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "parameters": {
+            "dnsName": {
+              "type": "string",
+              "description": "Restricts the list to return only zones with this domain name.",
+              "location": "query"
+            },
+            "project": {
+              "type": "string",
+              "description": "Identifies the project addressed by this request.",
+              "location": "path",
+              "required": true
+            },
+            "maxResults": {
+              "location": "query",
+              "format": "int32",
+              "type": "integer",
+              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return."
+            },
+            "pageToken": {
+              "location": "query",
+              "type": "string",
+              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request."
+            }
+          },
+          "description": "Enumerate ManagedZones that have been created but not yet deleted.",
+          "flatPath": "dns/v1/projects/{project}/managedZones",
+          "parameterOrder": [
+            "project"
+          ],
+          "path": "dns/v1/projects/{project}/managedZones",
+          "response": {
+            "$ref": "ManagedZonesListResponse"
+          }
+        },
+        "get": {
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "httpMethod": "GET",
+          "parameters": {
+            "managedZone": {
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "location": "path",
+              "type": "string",
+              "required": true
+            },
+            "project": {
+              "type": "string",
+              "location": "path",
+              "description": "Identifies the project addressed by this request.",
+              "required": true
+            },
+            "clientOperationId": {
+              "type": "string",
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            }
+          },
+          "response": {
+            "$ref": "ManagedZone"
+          },
+          "description": "Fetch the representation of an existing ManagedZone.",
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "id": "dns.managedZones.get"
+        },
+        "create": {
+          "request": {
+            "$ref": "ManagedZone"
+          },
+          "response": {
+            "$ref": "ManagedZone"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.managedZones.create",
+          "parameters": {
+            "project": {
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "location": "path",
+              "type": "string"
+            },
+            "clientOperationId": {
+              "location": "query",
+              "type": "string",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            }
+          },
+          "flatPath": "dns/v1/projects/{project}/managedZones",
+          "parameterOrder": [
+            "project"
+          ],
+          "httpMethod": "POST",
+          "path": "dns/v1/projects/{project}/managedZones",
+          "description": "Create a new ManagedZone."
+        },
+        "update": {
+          "description": "Update an existing ManagedZone.",
+          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
+          "request": {
+            "$ref": "ManagedZone"
+          },
+          "parameters": {
+            "managedZone": {
+              "type": "string",
+              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+              "location": "path",
+              "required": true
+            },
+            "project": {
+              "required": true,
+              "location": "path",
+              "description": "Identifies the project addressed by this request.",
+              "type": "string"
+            },
+            "clientOperationId": {
+              "type": "string",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+              "location": "query"
+            }
+          },
+          "parameterOrder": [
+            "project",
+            "managedZone"
+          ],
+          "response": {
+            "$ref": "Operation"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "id": "dns.managedZones.update",
+          "httpMethod": "PUT"
+        }
+      }
+    },
+    "projects": {
+      "methods": {
+        "get": {
+          "id": "dns.projects.get",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+          ],
+          "response": {
+            "$ref": "Project"
+          },
+          "parameters": {
+            "project": {
+              "type": "string",
+              "description": "Identifies the project addressed by this request.",
+              "required": true,
+              "location": "path"
+            },
+            "clientOperationId": {
+              "type": "string",
+              "location": "query",
+              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+            }
+          },
+          "httpMethod": "GET",
+          "parameterOrder": [
+            "project"
+          ],
+          "path": "dns/v1/projects/{project}",
+          "description": "Fetch the representation of an existing Project.",
+          "flatPath": "dns/v1/projects/{project}"
+        }
+      },
+      "resources": {
+        "managedZones": {
+          "resources": {
+            "rrsets": {
+              "methods": {
+                "patch": {
+                  "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "parameters": {
+                    "name": {
+                      "type": "string",
+                      "required": true,
+                      "description": "Fully qualified domain name.",
+                      "location": "path"
+                    },
+                    "managedZone": {
+                      "required": true,
+                      "location": "path",
+                      "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+                      "type": "string"
+                    },
+                    "project": {
+                      "location": "path",
+                      "required": true,
+                      "description": "Identifies the project addressed by this request.",
+                      "type": "string"
+                    },
+                    "clientOperationId": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "RRSet type.",
+                      "required": true,
+                      "location": "path"
+                    }
+                  },
+                  "response": {
+                    "$ref": "ResourceRecordSet"
+                  },
+                  "description": "Apply a partial update to an existing ResourceRecordSet.",
+                  "id": "dns.projects.managedZones.rrsets.patch",
+                  "request": {
+                    "$ref": "ResourceRecordSet"
+                  },
+                  "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "parameterOrder": [
+                    "project",
+                    "managedZone",
+                    "name",
+                    "type"
+                  ],
+                  "httpMethod": "PATCH",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+                  ]
+                },
+                "delete": {
+                  "parameterOrder": [
+                    "project",
+                    "managedZone",
+                    "name",
+                    "type"
+                  ],
+                  "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "id": "dns.projects.managedZones.rrsets.delete",
+                  "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "description": "Delete a previously created ResourceRecordSet.",
+                  "httpMethod": "DELETE",
+                  "parameters": {
+                    "clientOperationId": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
+                    },
+                    "type": {
+                      "type": "string",
+                      "location": "path",
+                      "required": true,
+                      "description": "RRSet type."
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Fully qualified domain name.",
+                      "location": "path",
+                      "required": true
+                    },
+                    "managedZone": {
+                      "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+                      "location": "path",
+                      "type": "string",
+                      "required": true
+                    },
+                    "project": {
+                      "location": "path",
+                      "type": "string",
+                      "description": "Identifies the project addressed by this request.",
+                      "required": true
+                    }
+                  },
+                  "response": {
+                    "$ref": "ResourceRecordSetsDeleteResponse"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+                  ]
+                },
+                "create": {
+                  "parameters": {
+                    "managedZone": {
+                      "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
+                      "type": "string",
+                      "required": true,
+                      "location": "path"
+                    },
+                    "clientOperationId": {
+                      "location": "query",
+                      "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+                      "type": "string"
+                    },
+                    "project": {
+                      "description": "Identifies the project addressed by this request.",
+                      "location": "path",
+                      "required": true,
+                      "type": "string"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+                  ],
+                  "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets",
+                  "id": "dns.projects.managedZones.rrsets.create",
+                  "request": {
+                    "$ref": "ResourceRecordSet"
+                  },
+                  "description": "Create a new ResourceRecordSet.",
+                  "parameterOrder": [
+                    "project",
+                    "managedZone"
+                  ],
+                  "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets",
+                  "httpMethod": "POST",
+                  "response": {
+                    "$ref": "ResourceRecordSet"
+                  }
+                },
+                "get": {
+                  "id": "dns.projects.managedZones.rrsets.get",
+                  "response": {
+                    "$ref": "ResourceRecordSet"
+                  },
+                  "parameterOrder": [
+                    "project",
+                    "managedZone",
+                    "name",
+                    "type"
+                  ],
+                  "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "description": "Fetch the representation of an existing ResourceRecordSet.",
+                  "httpMethod": "GET",
+                  "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/cloud-platform.read-only",
+                    "https://www.googleapis.com/auth/ndev.clouddns.readonly",
+                    "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
+                  ],
+                  "parameters": {
+                    "clientOperationId": {
+                      "type": "string",
+                      "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
+                      "location": "query"
+                    },
+                    "project": {
+                      "type": "string",
+                      "required": true,
+                      "description": "Identifies the project addressed by this request.",
+                      "location": "path"
+                    },
+                    "name": {
+                      "location": "path",
+                      "type": "string",
+                      "required": true,
+                      "description": "Fully qualified domain name."
+                    },
+                    "managedZone": {
+                      "required": true,
+                      "type": "string",
+                      "location": "path",
+                      "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
+                    },
+                    "type": {
+                      "required": true,
+                      "description": "RRSet type.",
+                      "location": "path",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "revision": "20210303",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -1010,974 +2152,71 @@
     }
   },
   "protocol": "rest",
-  "resources": {
-    "managedZoneOperations": {
-      "methods": {
-        "get": {
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}",
-          "parameters": {
-            "operation": {
-              "type": "string",
-              "description": "Identifies the operation addressed by this request (ID of the operation).",
-              "location": "path",
-              "required": true
-            },
-            "managedZone": {
-              "description": "Identifies the managed zone addressed by this request.",
-              "required": true,
-              "location": "path",
-              "type": "string"
-            },
-            "clientOperationId": {
-              "location": "query",
-              "type": "string",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
-            },
-            "project": {
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "required": true
-            }
-          },
-          "response": {
-            "$ref": "Operation"
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "description": "Fetches the representation of an existing Operation.",
-          "httpMethod": "GET",
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}",
-          "id": "dns.managedZoneOperations.get",
-          "parameterOrder": [
-            "project",
-            "managedZone",
-            "operation"
-          ]
-        },
-        "list": {
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/operations",
-          "parameters": {
-            "maxResults": {
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
-              "type": "integer",
-              "format": "int32",
-              "location": "query"
-            },
-            "project": {
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "location": "path"
-            },
-            "managedZone": {
-              "location": "path",
-              "description": "Identifies the managed zone addressed by this request.",
-              "type": "string",
-              "required": true
-            },
-            "sortBy": {
-              "type": "string",
-              "location": "query",
-              "enumDescriptions": [
-                "",
-                ""
-              ],
-              "default": "startTime",
-              "description": "Sorting criterion. The only supported values are START_TIME and ID.",
-              "enum": [
-                "startTime",
-                "id"
-              ]
-            },
-            "pageToken": {
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
-              "type": "string",
-              "location": "query"
-            }
-          },
-          "id": "dns.managedZoneOperations.list",
-          "httpMethod": "GET",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/operations",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "description": "Enumerates Operations for the given ManagedZone.",
-          "response": {
-            "$ref": "ManagedZoneOperationsListResponse"
-          }
-        }
-      }
-    },
-    "managedZones": {
-      "methods": {
-        "list": {
-          "httpMethod": "GET",
-          "response": {
-            "$ref": "ManagedZonesListResponse"
-          },
-          "flatPath": "dns/v1/projects/{project}/managedZones",
-          "path": "dns/v1/projects/{project}/managedZones",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "parameters": {
-            "maxResults": {
-              "format": "int32",
-              "type": "integer",
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
-              "location": "query"
-            },
-            "project": {
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "type": "string",
-              "required": true
-            },
-            "pageToken": {
-              "type": "string",
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
-              "location": "query"
-            },
-            "dnsName": {
-              "description": "Restricts the list to return only zones with this domain name.",
-              "type": "string",
-              "location": "query"
-            }
-          },
-          "parameterOrder": [
-            "project"
-          ],
-          "id": "dns.managedZones.list",
-          "description": "Enumerate ManagedZones that have been created but not yet deleted."
-        },
-        "get": {
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "id": "dns.managedZones.get",
-          "parameters": {
-            "managedZone": {
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "location": "path",
-              "required": true,
-              "type": "string"
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            },
-            "project": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the project addressed by this request."
-            }
-          },
-          "description": "Fetch the representation of an existing ManagedZone.",
-          "response": {
-            "$ref": "ManagedZone"
-          },
-          "httpMethod": "GET"
-        },
-        "create": {
-          "request": {
-            "$ref": "ManagedZone"
-          },
-          "description": "Create a new ManagedZone.",
-          "id": "dns.managedZones.create",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "flatPath": "dns/v1/projects/{project}/managedZones",
-          "path": "dns/v1/projects/{project}/managedZones",
-          "response": {
-            "$ref": "ManagedZone"
-          },
-          "parameters": {
-            "project": {
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "location": "path"
-            },
-            "clientOperationId": {
-              "type": "string",
-              "location": "query",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
-            }
-          },
-          "httpMethod": "POST",
-          "parameterOrder": [
-            "project"
-          ]
-        },
-        "update": {
-          "id": "dns.managedZones.update",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "httpMethod": "PUT",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "parameters": {
-            "managedZone": {
-              "type": "string",
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "required": true,
-              "location": "path"
-            },
-            "clientOperationId": {
-              "type": "string",
-              "location": "query",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
-            },
-            "project": {
-              "location": "path",
-              "required": true,
-              "description": "Identifies the project addressed by this request.",
-              "type": "string"
-            }
-          },
-          "response": {
-            "$ref": "Operation"
-          },
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "description": "Update an existing ManagedZone.",
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "request": {
-            "$ref": "ManagedZone"
-          }
-        },
-        "patch": {
-          "parameters": {
-            "project": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the project addressed by this request."
-            },
-            "clientOperationId": {
-              "type": "string",
-              "location": "query",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
-            },
-            "managedZone": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
-            }
-          },
-          "id": "dns.managedZones.patch",
-          "request": {
-            "$ref": "ManagedZone"
-          },
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "response": {
-            "$ref": "Operation"
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "description": "Apply a partial update to an existing ManagedZone.",
-          "httpMethod": "PATCH",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}"
-        },
-        "delete": {
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "httpMethod": "DELETE",
-          "parameters": {
-            "managedZone": {
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "required": true
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            },
-            "project": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the project addressed by this request."
-            }
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "id": "dns.managedZones.delete",
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}",
-          "description": "Delete a previously created ManagedZone."
-        }
-      }
-    },
-    "changes": {
-      "methods": {
-        "create": {
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
-          "id": "dns.changes.create",
-          "parameters": {
-            "managedZone": {
-              "location": "path",
-              "required": true,
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "type": "string"
-            },
-            "clientOperationId": {
-              "type": "string",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query"
-            },
-            "project": {
-              "required": true,
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "location": "path"
-            }
-          },
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
-          "request": {
-            "$ref": "Change"
-          },
-          "httpMethod": "POST",
-          "description": "Atomically updates the ResourceRecordSet collection.",
-          "response": {
-            "$ref": "Change"
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ]
-        },
-        "list": {
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
-          "httpMethod": "GET",
-          "id": "dns.changes.list",
-          "response": {
-            "$ref": "ChangesListResponse"
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "parameters": {
-            "sortBy": {
-              "location": "query",
-              "enum": [
-                "changeSequence"
-              ],
-              "description": "Sorting criterion. The only supported value is change sequence.",
-              "enumDescriptions": [
-                ""
-              ],
-              "default": "changeSequence",
-              "type": "string"
-            },
-            "pageToken": {
-              "type": "string",
-              "location": "query",
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request."
-            },
-            "maxResults": {
-              "type": "integer",
-              "location": "query",
-              "format": "int32",
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return."
-            },
-            "sortOrder": {
-              "type": "string",
-              "description": "Sorting order direction: 'ascending' or 'descending'.",
-              "location": "query"
-            },
-            "project": {
-              "description": "Identifies the project addressed by this request.",
-              "type": "string",
-              "location": "path",
-              "required": true
-            },
-            "managedZone": {
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "required": true,
-              "type": "string",
-              "location": "path"
-            }
-          },
-          "description": "Enumerates Changes to a ResourceRecordSet collection.",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes",
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ]
-        },
-        "get": {
-          "parameters": {
-            "changeId": {
-              "required": true,
-              "type": "string",
-              "description": "The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.",
-              "location": "path"
-            },
-            "managedZone": {
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "type": "string",
-              "location": "path",
-              "required": true
-            },
-            "project": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "Identifies the project addressed by this request."
-            },
-            "clientOperationId": {
-              "location": "query",
-              "type": "string",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection."
-            }
-          },
-          "description": "Fetches the representation of an existing Change.",
-          "id": "dns.changes.get",
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "parameterOrder": [
-            "project",
-            "managedZone",
-            "changeId"
-          ],
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}",
-          "httpMethod": "GET",
-          "response": {
-            "$ref": "Change"
-          }
-        }
-      }
-    },
-    "dnsKeys": {
-      "methods": {
-        "list": {
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "description": "Enumerate DnsKeys to a ResourceRecordSet collection.",
-          "parameters": {
-            "pageToken": {
-              "type": "string",
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
-              "location": "query"
-            },
-            "managedZone": {
-              "location": "path",
-              "required": true,
-              "type": "string",
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
-            },
-            "maxResults": {
-              "format": "int32",
-              "location": "query",
-              "type": "integer",
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return."
-            },
-            "project": {
-              "description": "Identifies the project addressed by this request.",
-              "location": "path",
-              "required": true,
-              "type": "string"
-            },
-            "digestType": {
-              "description": "An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "httpMethod": "GET",
-          "id": "dns.dnsKeys.list",
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys",
-          "response": {
-            "$ref": "DnsKeysListResponse"
-          },
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys",
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ]
-        },
-        "get": {
-          "httpMethod": "GET",
-          "parameterOrder": [
-            "project",
-            "managedZone",
-            "dnsKeyId"
-          ],
-          "response": {
-            "$ref": "DnsKey"
-          },
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}",
-          "description": "Fetch the representation of an existing DnsKey.",
-          "parameters": {
-            "managedZone": {
-              "location": "path",
-              "required": true,
-              "type": "string",
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID."
-            },
-            "dnsKeyId": {
-              "type": "string",
-              "description": "The identifier of the requested DnsKey.",
-              "location": "path",
-              "required": true
-            },
-            "project": {
-              "required": true,
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "type": "string"
-            },
-            "digestType": {
-              "description": "An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed.",
-              "type": "string",
-              "location": "query"
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "type": "string",
-              "location": "query"
-            }
-          },
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "id": "dns.dnsKeys.get"
-        }
-      }
-    },
-    "resourceRecordSets": {
-      "methods": {
-        "list": {
-          "id": "dns.resourceRecordSets.list",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "parameterOrder": [
-            "project",
-            "managedZone"
-          ],
-          "flatPath": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets",
-          "description": "Enumerates ResourceRecordSets that you have created but not yet deleted.",
-          "path": "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets",
-          "parameters": {
-            "maxResults": {
-              "location": "query",
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
-              "type": "integer",
-              "format": "int32"
-            },
-            "name": {
-              "description": "Restricts the list to return only records with this fully qualified domain name.",
-              "type": "string",
-              "location": "query"
-            },
-            "type": {
-              "location": "query",
-              "type": "string",
-              "description": "Restricts the list to return only records of this type. If present, the \"name\" parameter must also be present."
-            },
-            "project": {
-              "type": "string",
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "required": true
-            },
-            "pageToken": {
-              "type": "string",
-              "location": "query",
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request."
-            },
-            "managedZone": {
-              "description": "Identifies the managed zone addressed by this request. Can be the managed zone name or ID.",
-              "required": true,
-              "type": "string",
-              "location": "path"
-            }
-          },
-          "response": {
-            "$ref": "ResourceRecordSetsListResponse"
-          },
-          "httpMethod": "GET"
-        }
-      }
-    },
-    "policies": {
-      "methods": {
-        "list": {
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "parameterOrder": [
-            "project"
-          ],
-          "parameters": {
-            "maxResults": {
-              "description": "Optional. Maximum number of results to be returned. If unspecified, the server decides how many results to return.",
-              "type": "integer",
-              "format": "int32",
-              "location": "query"
-            },
-            "project": {
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "location": "path",
-              "type": "string"
-            },
-            "pageToken": {
-              "location": "query",
-              "description": "Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.",
-              "type": "string"
-            }
-          },
-          "id": "dns.policies.list",
-          "path": "dns/v1/projects/{project}/policies",
-          "httpMethod": "GET",
-          "description": "Enumerates all Policies associated with a project.",
-          "flatPath": "dns/v1/projects/{project}/policies",
-          "response": {
-            "$ref": "PoliciesListResponse"
-          }
-        },
-        "update": {
-          "parameters": {
-            "project": {
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "location": "path"
-            },
-            "clientOperationId": {
-              "type": "string",
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query"
-            },
-            "policy": {
-              "description": "User given friendly name of the policy addressed by this request.",
-              "location": "path",
-              "required": true,
-              "type": "string"
-            }
-          },
-          "response": {
-            "$ref": "PoliciesUpdateResponse"
-          },
-          "request": {
-            "$ref": "Policy"
-          },
-          "path": "dns/v1/projects/{project}/policies/{policy}",
-          "httpMethod": "PUT",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "id": "dns.policies.update",
-          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
-          "description": "Update an existing Policy.",
-          "parameterOrder": [
-            "project",
-            "policy"
-          ]
-        },
-        "patch": {
-          "description": "Apply a partial update to an existing Policy.",
-          "httpMethod": "PATCH",
-          "request": {
-            "$ref": "Policy"
-          },
-          "parameters": {
-            "project": {
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "type": "string",
-              "required": true
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            },
-            "policy": {
-              "type": "string",
-              "location": "path",
-              "required": true,
-              "description": "User given friendly name of the policy addressed by this request."
-            }
-          },
-          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
-          "parameterOrder": [
-            "project",
-            "policy"
-          ],
-          "response": {
-            "$ref": "PoliciesPatchResponse"
-          },
-          "id": "dns.policies.patch",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "path": "dns/v1/projects/{project}/policies/{policy}"
-        },
-        "get": {
-          "parameterOrder": [
-            "project",
-            "policy"
-          ],
-          "id": "dns.policies.get",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "description": "Fetches the representation of an existing Policy.",
-          "parameters": {
-            "project": {
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "type": "string"
-            },
-            "policy": {
-              "location": "path",
-              "required": true,
-              "type": "string",
-              "description": "User given friendly name of the policy addressed by this request."
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "response": {
-            "$ref": "Policy"
-          },
-          "flatPath": "dns/v1/projects/{project}/policies/{policy}",
-          "path": "dns/v1/projects/{project}/policies/{policy}",
-          "httpMethod": "GET"
-        },
-        "create": {
-          "response": {
-            "$ref": "Policy"
-          },
-          "parameters": {
-            "project": {
-              "location": "path",
-              "description": "Identifies the project addressed by this request.",
-              "required": true,
-              "type": "string"
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "httpMethod": "POST",
-          "path": "dns/v1/projects/{project}/policies",
-          "flatPath": "dns/v1/projects/{project}/policies",
-          "id": "dns.policies.create",
-          "request": {
-            "$ref": "Policy"
-          },
-          "parameterOrder": [
-            "project"
-          ],
-          "description": "Creates a new Policy.",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ]
-        },
-        "delete": {
-          "parameterOrder": [
-            "project",
-            "policy"
-          ],
-          "parameters": {
-            "project": {
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "location": "path",
-              "required": true
-            },
-            "policy": {
-              "required": true,
-              "location": "path",
-              "type": "string",
-              "description": "User given friendly name of the policy addressed by this request."
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "description": "Deletes a previously created Policy. Fails if the policy is still being referenced by a network.",
-          "httpMethod": "DELETE",
-          "id": "dns.policies.delete",
-          "path": "dns/v1/projects/{project}/policies/{policy}",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "flatPath": "dns/v1/projects/{project}/policies/{policy}"
-        }
-      }
-    },
-    "projects": {
-      "methods": {
-        "get": {
-          "httpMethod": "GET",
-          "description": "Fetch the representation of an existing Project.",
-          "id": "dns.projects.get",
-          "response": {
-            "$ref": "Project"
-          },
-          "flatPath": "dns/v1/projects/{project}",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/ndev.clouddns.readonly",
-            "https://www.googleapis.com/auth/ndev.clouddns.readwrite"
-          ],
-          "path": "dns/v1/projects/{project}",
-          "parameters": {
-            "project": {
-              "type": "string",
-              "description": "Identifies the project addressed by this request.",
-              "location": "path",
-              "required": true
-            },
-            "clientOperationId": {
-              "description": "For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.",
-              "type": "string",
-              "location": "query"
-            }
-          },
-          "parameterOrder": [
-            "project"
-          ]
-        }
-      }
-    }
-  },
-  "baseUrl": "https://dns.googleapis.com/",
-  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
   "version": "v1",
-  "description": "",
-  "revision": "20210227",
-  "documentationLink": "https://cloud.google.com/dns/docs",
-  "name": "dns",
-  "batchPath": "batch",
-  "rootUrl": "https://dns.googleapis.com/",
   "title": "Cloud DNS API",
-  "canonicalName": "Dns",
+  "baseUrl": "https://dns.googleapis.com/",
+  "mtlsRootUrl": "https://dns.mtls.googleapis.com/",
+  "documentationLink": "https://cloud.google.com/dns/docs",
+  "kind": "discovery#restDescription",
+  "description": "",
+  "batchPath": "batch",
   "parameters": {
-    "callback": {
-      "type": "string",
-      "description": "JSONP",
-      "location": "query"
-    },
     "access_token": {
-      "description": "OAuth access token.",
       "type": "string",
-      "location": "query"
+      "location": "query",
+      "description": "OAuth access token."
+    },
+    "uploadType": {
+      "type": "string",
+      "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    },
+    "fields": {
+      "type": "string",
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "oauth_token": {
+      "location": "query",
+      "type": "string",
+      "description": "OAuth 2.0 token for the current user."
     },
     "upload_protocol": {
-      "type": "string",
       "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "location": "query"
+      "location": "query",
+      "type": "string"
     },
     "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
       "location": "query",
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+      "type": "string"
     },
-    "$.xgafv": {
-      "location": "query",
-      "enum": [
-        "1",
-        "2"
-      ],
+    "alt": {
+      "description": "Data format for response.",
       "type": "string",
-      "description": "V1 error format.",
+      "default": "json",
+      "location": "query",
       "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "enum": [
+        "json",
+        "media",
+        "proto"
       ]
+    },
+    "callback": {
+      "location": "query",
+      "type": "string",
+      "description": "JSONP"
+    },
+    "key": {
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query"
     },
     "prettyPrint": {
       "default": "true",
@@ -1985,44 +2224,18 @@
       "description": "Returns response with indentations and line breaks.",
       "location": "query"
     },
-    "alt": {
-      "location": "query",
+    "$.xgafv": {
       "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
+        "v1 error format",
+        "v2 error format"
       ],
-      "description": "Data format for response.",
-      "default": "json",
       "enum": [
-        "json",
-        "media",
-        "proto"
+        "1",
+        "2"
       ],
-      "type": "string"
-    },
-    "oauth_token": {
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user.",
-      "location": "query"
-    },
-    "key": {
-      "type": "string",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "location": "query"
-    },
-    "uploadType": {
       "location": "query",
-      "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
-    },
-    "fields": {
-      "type": "string",
-      "description": "Selector specifying which fields to include in a partial response.",
-      "location": "query"
+      "description": "V1 error format.",
+      "type": "string"
     }
-  },
-  "servicePath": "",
-  "fullyEncodeReservedExpansion": true,
-  "ownerName": "Google"
+  }
 }

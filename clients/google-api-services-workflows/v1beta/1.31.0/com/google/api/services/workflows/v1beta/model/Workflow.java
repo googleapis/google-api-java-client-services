@@ -92,7 +92,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * Workflow code to be executed. The size limit is 32KB.
+   * Workflow code to be executed. The size limit is 128KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workflow code to be executed. The size limit is 32KB.
+   * Workflow code to be executed. The size limit is 128KB.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceContents() {
@@ -266,7 +266,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workflow code to be executed. The size limit is 32KB.
+   * Workflow code to be executed. The size limit is 128KB.
    * @param sourceContents sourceContents or {@code null} for none
    */
   public Workflow setSourceContents(java.lang.String sourceContents) {

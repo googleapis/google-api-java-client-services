@@ -33,8 +33,8 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields,
-   * protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
+   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   private GoogleCloudDocumentaiV1beta1DocumentShardInfo shardInfo;
 
   /**
-   * UTF-8 encoded text in reading order from the document.
+   * Optional. UTF-8 encoded text in reading order from the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,25 +115,17 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta1DocumentStyle> textStyles;
 
   /**
-   * A list of translations on Document.text. For document shards, translations in this list may
-   * cross shard boundaries.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDocumentaiV1beta1DocumentTranslation> translations;
-
-  /**
-   * Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object
-   * versioning is not supported. See [Google Cloud Storage Request
-   * URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * Optional. Currently supports Google Cloud Storage URI of the form
+   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
+   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields,
-   * protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
+   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -142,8 +134,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields,
-   * protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
+   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -154,8 +146,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields,
-   * protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
+   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -165,8 +157,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * Inline document content, represented as a stream of bytes. Note: As with all `bytes` fields,
-   * protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
+   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * @see #setContent()
    *
    * <p>
@@ -306,7 +298,7 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * UTF-8 encoded text in reading order from the document.
+   * Optional. UTF-8 encoded text in reading order from the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -314,7 +306,7 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * UTF-8 encoded text in reading order from the document.
+   * Optional. UTF-8 encoded text in reading order from the document.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1Document setText(java.lang.String text) {
@@ -359,28 +351,9 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * A list of translations on Document.text. For document shards, translations in this list may
-   * cross shard boundaries.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudDocumentaiV1beta1DocumentTranslation> getTranslations() {
-    return translations;
-  }
-
-  /**
-   * A list of translations on Document.text. For document shards, translations in this list may
-   * cross shard boundaries.
-   * @param translations translations or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta1Document setTranslations(java.util.List<GoogleCloudDocumentaiV1beta1DocumentTranslation> translations) {
-    this.translations = translations;
-    return this;
-  }
-
-  /**
-   * Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object
-   * versioning is not supported. See [Google Cloud Storage Request
-   * URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * Optional. Currently supports Google Cloud Storage URI of the form
+   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
+   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -388,9 +361,9 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
   }
 
   /**
-   * Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object
-   * versioning is not supported. See [Google Cloud Storage Request
-   * URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * Optional. Currently supports Google Cloud Storage URI of the form
+   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
+   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1Document setUri(java.lang.String uri) {

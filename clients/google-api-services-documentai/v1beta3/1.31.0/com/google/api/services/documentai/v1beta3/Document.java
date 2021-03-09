@@ -690,7 +690,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param name Required. The resource name of Processor or ProcessorVersion. Format:
          *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+         *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
          * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
          * @return the request
          */
@@ -721,7 +721,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param name Required. The resource name of Processor or ProcessorVersion. Format:
          *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+         *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
            * @since 1.13
            */
@@ -793,14 +793,14 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of Processor or ProcessorVersion. Format:
            * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
-           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * ocations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of Processor or ProcessorVersion. Format:
          projects/{project}/locations/{location}/processors/{processor}, or
-         projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+         projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           public java.lang.String getName() {
             return name;
@@ -809,7 +809,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of Processor or ProcessorVersion. Format:
            * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
-           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * ocations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           public BatchProcess setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -837,7 +837,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
          *        Processor is specified, the server will use its default version. Format:
          *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+         *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
          * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
          * @return the request
          */
@@ -868,7 +868,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
          *        Processor is specified, the server will use its default version. Format:
          *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+         *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
            * @since 1.13
            */
@@ -941,7 +941,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * Required. The resource name of the Processor or ProcessorVersion to use for processing.
            * If a Processor is specified, the server will use its default version. Format:
            * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
-           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * ocations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -949,7 +949,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           /** Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
          Processor is specified, the server will use its default version. Format:
          projects/{project}/locations/{location}/processors/{processor}, or
-         projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+         projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           public java.lang.String getName() {
             return name;
@@ -959,7 +959,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * Required. The resource name of the Processor or ProcessorVersion to use for processing.
            * If a Processor is specified, the server will use its default version. Format:
            * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
-           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * ocations/{location}/processors/{processor}/processorVersions/{processorVersion}
            */
           public Process setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1169,7 +1169,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param name Required. The resource name of Processor or ProcessorVersion. Format:
            *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
            * @return the request
            */
@@ -1200,7 +1200,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
              *
              * @param name Required. The resource name of Processor or ProcessorVersion. Format:
            *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
              * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
              * @since 1.13
              */
@@ -1272,14 +1272,14 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The resource name of Processor or ProcessorVersion. Format:
              * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}
-             * /locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             * /locations/{location}/processors/{processor}/processorVersions/{processorVersion}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of Processor or ProcessorVersion. Format:
            projects/{project}/locations/{location}/processors/{processor}, or
-           projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}
              */
             public java.lang.String getName() {
               return name;
@@ -1288,7 +1288,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The resource name of Processor or ProcessorVersion. Format:
              * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}
-             * /locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             * /locations/{location}/processors/{processor}/processorVersions/{processorVersion}
              */
             public BatchProcess setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1316,7 +1316,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
            *        Processor is specified, the server will use its default version. Format:
            *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
            * @return the request
            */
@@ -1347,7 +1347,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
              * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
            *        Processor is specified, the server will use its default version. Format:
            *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
-           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           *        tions/{location}/processors/{processor}/processorVersions/{processorVersion}
              * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
              * @since 1.13
              */
@@ -1420,8 +1420,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
              * Required. The resource name of the Processor or ProcessorVersion to use for
              * processing. If a Processor is specified, the server will use its default version.
              * Format: projects/{project}/locations/{location}/processors/{processor}, or projects/{
-             * project}/locations/{location}/processors/{processor}/processorVerions/{processorVersi
-             * on}
+             * project}/locations/{location}/processors/{processor}/processorVersions/{processorVers
+             * ion}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
@@ -1429,7 +1429,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             /** Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
            Processor is specified, the server will use its default version. Format:
            projects/{project}/locations/{location}/processors/{processor}, or
-           projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}
              */
             public java.lang.String getName() {
               return name;
@@ -1439,8 +1439,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
              * Required. The resource name of the Processor or ProcessorVersion to use for
              * processing. If a Processor is specified, the server will use its default version.
              * Format: projects/{project}/locations/{location}/processors/{processor}, or projects/{
-             * project}/locations/{location}/processors/{processor}/processorVerions/{processorVersi
-             * on}
+             * project}/locations/{location}/processors/{processor}/processorVersions/{processorVers
+             * ion}
              */
             public Process setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

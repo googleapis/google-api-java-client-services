@@ -53,6 +53,7 @@ packages on [Maven Central][maven-search].
 | Campaign Manager 360 API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4) |
 | Certificate Authority API | [v1beta1](clients/google-api-services-privateca/v1beta1) |
 | Chrome Management API | [v1](clients/google-api-services-chromemanagement/v1) |
+| Chrome Policy API | [v1](clients/google-api-services-chromepolicy/v1) |
 | Chrome UX Report API | [v1](clients/google-api-services-chromeuxreport/v1) |
 | Chrome Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1), [v1p5beta1](clients/google-api-services-cloudasset/v1p5beta1), [v1p7beta1](clients/google-api-services-cloudasset/v1p7beta1) |

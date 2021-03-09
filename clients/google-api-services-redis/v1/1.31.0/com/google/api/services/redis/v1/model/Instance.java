@@ -163,7 +163,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * Optional. The version of Redis software. If not provided, latest supported version will be
    * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
    * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility *
-   * `REDIS_6_0` for Redis 6.0 compatibility
+   * `REDIS_6_X` for Redis 6.x compatibility
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -522,7 +522,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * Optional. The version of Redis software. If not provided, latest supported version will be
    * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
    * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility *
-   * `REDIS_6_0` for Redis 6.0 compatibility
+   * `REDIS_6_X` for Redis 6.x compatibility
    * @return value or {@code null} for none
    */
   public java.lang.String getRedisVersion() {
@@ -533,7 +533,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * Optional. The version of Redis software. If not provided, latest supported version will be
    * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
    * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility *
-   * `REDIS_6_0` for Redis 6.0 compatibility
+   * `REDIS_6_X` for Redis 6.x compatibility
    * @param redisVersion redisVersion or {@code null} for none
    */
   public Instance setRedisVersion(java.lang.String redisVersion) {

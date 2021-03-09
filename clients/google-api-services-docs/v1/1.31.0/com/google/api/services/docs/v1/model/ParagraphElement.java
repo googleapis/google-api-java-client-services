@@ -86,6 +86,13 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private PageBreak pageBreak;
 
   /**
+   * A paragraph element that links to a person or email address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Person person;
+
+  /**
    * The zero-based start index of this paragraph element, in UTF-16 code units.
    * The value may be {@code null}.
    */
@@ -232,6 +239,23 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
    */
   public ParagraphElement setPageBreak(PageBreak pageBreak) {
     this.pageBreak = pageBreak;
+    return this;
+  }
+
+  /**
+   * A paragraph element that links to a person or email address.
+   * @return value or {@code null} for none
+   */
+  public Person getPerson() {
+    return person;
+  }
+
+  /**
+   * A paragraph element that links to a person or email address.
+   * @param person person or {@code null} for none
+   */
+  public ParagraphElement setPerson(Person person) {
+    this.person = person;
     return this;
   }
 

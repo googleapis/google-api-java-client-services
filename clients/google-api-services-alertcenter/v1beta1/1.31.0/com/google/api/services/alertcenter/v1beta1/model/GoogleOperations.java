@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * An incident reported by Google Operations for a G Suite application.
+ * An incident reported by Google Operations for a Google Workspace application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
@@ -38,8 +38,8 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> affectedUserEmails;
 
   /**
-   * Optional. Application-specific data for an incident, provided when the G Suite application
-   * which reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the Google Workspace
+   * application which reported the incident cannot be completely restored to a valid state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
-   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * A header to display above the incident message. Typically used to attach a localized notice on
    * the timeline for followup comms translations.
    * The value may be {@code null}.
    */
@@ -85,8 +85,8 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Application-specific data for an incident, provided when the G Suite application
-   * which reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the Google Workspace
+   * application which reported the incident cannot be completely restored to a valid state.
    * @return value or {@code null} for none
    */
   public Attachment getAttachmentData() {
@@ -94,8 +94,8 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Application-specific data for an incident, provided when the G Suite application
-   * which reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the Google Workspace
+   * application which reported the incident cannot be completely restored to a valid state.
    * @param attachmentData attachmentData or {@code null} for none
    */
   public GoogleOperations setAttachmentData(Attachment attachmentData) {
@@ -121,7 +121,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * A header to display above the incident message. Typically used to attach a localized notice on
    * the timeline for followup comms translations.
    * @return value or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * A header to display above the incident message. Typically used to attach a localized notice on
    * the timeline for followup comms translations.
    * @param header header or {@code null} for none
    */

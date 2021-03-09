@@ -17,7 +17,8 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Common alert information about violated rules that are configured by G Suite administrators.
+ * Common alert information about violated rules that are configured by Google Workspace
+ * administrators.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
@@ -87,6 +88,19 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String trigger;
+
+  /**
+   * Metadata related to the triggered actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ActionInfo> triggeredActionInfo;
+
+  static {
+    // hack to force ProGuard to consider ActionInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ActionInfo.class);
+  }
 
   /**
    * Actions applied as a consequence of the rule being triggered.
@@ -225,6 +239,23 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
    */
   public RuleViolationInfo setTrigger(java.lang.String trigger) {
     this.trigger = trigger;
+    return this;
+  }
+
+  /**
+   * Metadata related to the triggered actions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ActionInfo> getTriggeredActionInfo() {
+    return triggeredActionInfo;
+  }
+
+  /**
+   * Metadata related to the triggered actions.
+   * @param triggeredActionInfo triggeredActionInfo or {@code null} for none
+   */
+  public RuleViolationInfo setTriggeredActionInfo(java.util.List<ActionInfo> triggeredActionInfo) {
+    this.triggeredActionInfo = triggeredActionInfo;
     return this;
   }
 

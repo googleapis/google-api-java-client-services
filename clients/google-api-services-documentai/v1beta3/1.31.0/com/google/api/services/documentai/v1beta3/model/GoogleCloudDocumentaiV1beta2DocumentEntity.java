@@ -45,14 +45,14 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   private java.lang.String id;
 
   /**
-   * Deprecated. Use `id` field instead.
+   * Optional. Deprecated. Use `id` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mentionId;
 
   /**
-   * Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   private java.lang.Boolean redacted;
 
   /**
-   * Provenance of the entity. Text anchor indexing into the Document.text.
+   * Optional. Provenance of the entity. Text anchor indexing into the Document.text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Deprecated. Use `id` field instead.
+   * Optional. Deprecated. Use `id` field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionId() {
@@ -154,7 +154,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Deprecated. Use `id` field instead.
+   * Optional. Deprecated. Use `id` field instead.
    * @param mentionId mentionId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntity setMentionId(java.lang.String mentionId) {
@@ -163,7 +163,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionText() {
@@ -171,7 +171,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
    * @param mentionText mentionText or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntity setMentionText(java.lang.String mentionText) {
@@ -273,7 +273,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Provenance of the entity. Text anchor indexing into the Document.text.
+   * Optional. Provenance of the entity. Text anchor indexing into the Document.text.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentTextAnchor getTextAnchor() {
@@ -281,7 +281,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   }
 
   /**
-   * Provenance of the entity. Text anchor indexing into the Document.text.
+   * Optional. Provenance of the entity. Text anchor indexing into the Document.text.
    * @param textAnchor textAnchor or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntity setTextAnchor(GoogleCloudDocumentaiV1beta2DocumentTextAnchor textAnchor) {

@@ -2630,6 +2630,1353 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
 
+    /**
+     * An accessor for creating requests from the Chrome collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Directory admin = new Directory(...);}
+     *   {@code Directory.Chrome.List request = admin.chrome().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Chrome chrome() {
+      return new Chrome();
+    }
+
+    /**
+     * The "chrome" collection of methods.
+     */
+    public class Chrome {
+
+      /**
+       * An accessor for creating requests from the Printers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Directory admin = new Directory(...);}
+       *   {@code Directory.Printers.List request = admin.printers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Printers printers() {
+        return new Printers();
+      }
+
+      /**
+       * The "printers" collection of methods.
+       */
+      public class Printers {
+
+        /**
+         * Creates printers under given Organization Unit.
+         *
+         * Create a request for the method "printers.batchCreatePrinters".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link BatchCreatePrinters#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the customer. Format: customers/{customer_id}
+         * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintersRequest}
+         * @return the request
+         */
+        public BatchCreatePrinters batchCreatePrinters(java.lang.String parent, com.google.api.services.directory.model.BatchCreatePrintersRequest content) throws java.io.IOException {
+          BatchCreatePrinters result = new BatchCreatePrinters(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchCreatePrinters extends DirectoryRequest<com.google.api.services.directory.model.BatchCreatePrintersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printers:batchCreatePrinters";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Creates printers under given Organization Unit.
+           *
+           * Create a request for the method "printers.batchCreatePrinters".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link BatchCreatePrinters#execute()} method to invoke the remote
+           * operation. <p> {@link BatchCreatePrinters#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the customer. Format: customers/{customer_id}
+           * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintersRequest}
+           * @since 1.13
+           */
+          protected BatchCreatePrinters(java.lang.String parent, com.google.api.services.directory.model.BatchCreatePrintersRequest content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.BatchCreatePrintersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchCreatePrinters set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchCreatePrinters) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchCreatePrinters setAccessToken(java.lang.String accessToken) {
+            return (BatchCreatePrinters) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchCreatePrinters setAlt(java.lang.String alt) {
+            return (BatchCreatePrinters) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchCreatePrinters setCallback(java.lang.String callback) {
+            return (BatchCreatePrinters) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchCreatePrinters setFields(java.lang.String fields) {
+            return (BatchCreatePrinters) super.setFields(fields);
+          }
+
+          @Override
+          public BatchCreatePrinters setKey(java.lang.String key) {
+            return (BatchCreatePrinters) super.setKey(key);
+          }
+
+          @Override
+          public BatchCreatePrinters setOauthToken(java.lang.String oauthToken) {
+            return (BatchCreatePrinters) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchCreatePrinters setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchCreatePrinters) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchCreatePrinters setQuotaUser(java.lang.String quotaUser) {
+            return (BatchCreatePrinters) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchCreatePrinters setUploadType(java.lang.String uploadType) {
+            return (BatchCreatePrinters) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchCreatePrinters setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchCreatePrinters) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the customer. Format: customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          public BatchCreatePrinters setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchCreatePrinters set(String parameterName, Object value) {
+            return (BatchCreatePrinters) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes printers in batch.
+         *
+         * Create a request for the method "printers.batchDeletePrinters".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link BatchDeletePrinters#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the customer. Format: customers/{customer_id}
+         * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintersRequest}
+         * @return the request
+         */
+        public BatchDeletePrinters batchDeletePrinters(java.lang.String parent, com.google.api.services.directory.model.BatchDeletePrintersRequest content) throws java.io.IOException {
+          BatchDeletePrinters result = new BatchDeletePrinters(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDeletePrinters extends DirectoryRequest<com.google.api.services.directory.model.BatchDeletePrintersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printers:batchDeletePrinters";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Deletes printers in batch.
+           *
+           * Create a request for the method "printers.batchDeletePrinters".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link BatchDeletePrinters#execute()} method to invoke the remote
+           * operation. <p> {@link BatchDeletePrinters#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the customer. Format: customers/{customer_id}
+           * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintersRequest}
+           * @since 1.13
+           */
+          protected BatchDeletePrinters(java.lang.String parent, com.google.api.services.directory.model.BatchDeletePrintersRequest content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.BatchDeletePrintersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchDeletePrinters set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDeletePrinters) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDeletePrinters setAccessToken(java.lang.String accessToken) {
+            return (BatchDeletePrinters) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDeletePrinters setAlt(java.lang.String alt) {
+            return (BatchDeletePrinters) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDeletePrinters setCallback(java.lang.String callback) {
+            return (BatchDeletePrinters) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDeletePrinters setFields(java.lang.String fields) {
+            return (BatchDeletePrinters) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDeletePrinters setKey(java.lang.String key) {
+            return (BatchDeletePrinters) super.setKey(key);
+          }
+
+          @Override
+          public BatchDeletePrinters setOauthToken(java.lang.String oauthToken) {
+            return (BatchDeletePrinters) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDeletePrinters setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDeletePrinters) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDeletePrinters setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDeletePrinters) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDeletePrinters setUploadType(java.lang.String uploadType) {
+            return (BatchDeletePrinters) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDeletePrinters setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDeletePrinters) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the customer. Format: customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          public BatchDeletePrinters setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchDeletePrinters set(String parameterName, Object value) {
+            return (BatchDeletePrinters) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a printer under given Organization Unit.
+         *
+         * Create a request for the method "printers.create".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the customer. Format: customers/{customer_id}
+         * @param content the {@link com.google.api.services.directory.model.Printer}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.directory.model.Printer content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DirectoryRequest<com.google.api.services.directory.model.Printer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Creates a printer under given Organization Unit.
+           *
+           * Create a request for the method "printers.create".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the customer. Format: customers/{customer_id}
+           * @param content the {@link com.google.api.services.directory.model.Printer}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.directory.model.Printer content) {
+            super(Directory.this, "POST", REST_PATH, content, com.google.api.services.directory.model.Printer.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the customer. Format: customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The name of the customer. Format: customers/{customer_id} */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a `Printer`.
+         *
+         * Create a request for the method "printers.delete".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the printer to be updated. Format:
+         *        customers/{customer_id}/chrome/printers/{printer_id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DirectoryRequest<com.google.api.services.directory.model.Empty> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printers/[^/]+$");
+
+          /**
+           * Deletes a `Printer`.
+           *
+           * Create a request for the method "printers.delete".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the printer to be updated. Format:
+         *        customers/{customer_id}/chrome/printers/{printer_id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Directory.this, "DELETE", REST_PATH, null, com.google.api.services.directory.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the printer to be updated. Format:
+           * customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the printer to be updated. Format:
+         customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the printer to be updated. Format:
+           * customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a `Printer` resource (printer's config).
+         *
+         * Create a request for the method "printers.get".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the printer to retrieve. Format:
+         *        customers/{customer_id}/chrome/printers/{printer_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DirectoryRequest<com.google.api.services.directory.model.Printer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printers/[^/]+$");
+
+          /**
+           * Returns a `Printer` resource (printer's config).
+           *
+           * Create a request for the method "printers.get".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the printer to retrieve. Format:
+         *        customers/{customer_id}/chrome/printers/{printer_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.Printer.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the printer to retrieve. Format:
+           * customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the printer to retrieve. Format:
+         customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the printer to retrieve. Format:
+           * customers/{customer_id}/chrome/printers/{printer_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List printers configs.
+         *
+         * Create a request for the method "printers.list".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the customer who owns this collection of printers. Format:
+         *        customers/{customer_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DirectoryRequest<com.google.api.services.directory.model.ListPrintersResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * List printers configs.
+           *
+           * Create a request for the method "printers.list".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the customer who owns this collection of printers. Format:
+         *        customers/{customer_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.ListPrintersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the customer who owns this collection of printers. Format:
+           * customers/{customer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the customer who owns this collection of printers. Format:
+         customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the customer who owns this collection of printers. Format:
+           * customers/{customer_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Search query. Search syntax is shared between this api and Admin Console printers
+           * pages.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Search query. Search syntax is shared between this api and Admin Console printers pages.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Search query. Search syntax is shared between this api and Admin Console printers
+           * pages.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Organization Unit that we want to list the printers for. When org_unit is not present
+           * in the request then all printers of the customer are returned (or filtered). When
+           * org_unit is present in the request then only printers available to this OU will be
+           * returned (owned or inherited). You may see if printer is owned or inherited for this OU
+           * by looking at Printer.org_unit_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orgUnitId;
+
+          /** Organization Unit that we want to list the printers for. When org_unit is not present in the
+         request then all printers of the customer are returned (or filtered). When org_unit is present in
+         the request then only printers available to this OU will be returned (owned or inherited). You may
+         see if printer is owned or inherited for this OU by looking at Printer.org_unit_id.
+           */
+          public java.lang.String getOrgUnitId() {
+            return orgUnitId;
+          }
+
+          /**
+           * Organization Unit that we want to list the printers for. When org_unit is not present
+           * in the request then all printers of the customer are returned (or filtered). When
+           * org_unit is present in the request then only printers available to this OU will be
+           * returned (owned or inherited). You may see if printer is owned or inherited for this OU
+           * by looking at Printer.org_unit_id.
+           */
+          public List setOrgUnitId(java.lang.String orgUnitId) {
+            this.orgUnitId = orgUnitId;
+            return this;
+          }
+
+          /**
+           * The maximum number of objects to return. The service may return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of objects to return. The service may return fewer than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of objects to return. The service may return fewer than this value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A page token, received from a previous call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A page token, received from a previous call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the supported printer models.
+         *
+         * Create a request for the method "printers.listPrinterModels".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link ListPrinterModels#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the customer who owns this collection of printers. Format:
+         *        customers/{customer_id}
+         * @return the request
+         */
+        public ListPrinterModels listPrinterModels(java.lang.String parent) throws java.io.IOException {
+          ListPrinterModels result = new ListPrinterModels(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListPrinterModels extends DirectoryRequest<com.google.api.services.directory.model.ListPrinterModelsResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+parent}/chrome/printers:listPrinterModels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Lists the supported printer models.
+           *
+           * Create a request for the method "printers.listPrinterModels".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link ListPrinterModels#execute()} method to invoke the remote operation.
+           * <p> {@link ListPrinterModels#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+           * eClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param parent Required. The name of the customer who owns this collection of printers. Format:
+         *        customers/{customer_id}
+           * @since 1.13
+           */
+          protected ListPrinterModels(java.lang.String parent) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.ListPrinterModelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListPrinterModels set$Xgafv(java.lang.String $Xgafv) {
+            return (ListPrinterModels) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListPrinterModels setAccessToken(java.lang.String accessToken) {
+            return (ListPrinterModels) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListPrinterModels setAlt(java.lang.String alt) {
+            return (ListPrinterModels) super.setAlt(alt);
+          }
+
+          @Override
+          public ListPrinterModels setCallback(java.lang.String callback) {
+            return (ListPrinterModels) super.setCallback(callback);
+          }
+
+          @Override
+          public ListPrinterModels setFields(java.lang.String fields) {
+            return (ListPrinterModels) super.setFields(fields);
+          }
+
+          @Override
+          public ListPrinterModels setKey(java.lang.String key) {
+            return (ListPrinterModels) super.setKey(key);
+          }
+
+          @Override
+          public ListPrinterModels setOauthToken(java.lang.String oauthToken) {
+            return (ListPrinterModels) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListPrinterModels setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListPrinterModels) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListPrinterModels setQuotaUser(java.lang.String quotaUser) {
+            return (ListPrinterModels) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListPrinterModels setUploadType(java.lang.String uploadType) {
+            return (ListPrinterModels) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListPrinterModels setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListPrinterModels) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the customer who owns this collection of printers. Format:
+           * customers/{customer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the customer who owns this collection of printers. Format:
+         customers/{customer_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the customer who owns this collection of printers. Format:
+           * customers/{customer_id}
+           */
+          public ListPrinterModels setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Filer to list only models by a given manufacturer in format: "manufacturer:Brother".
+           * Search syntax is shared between this api and Admin Console printers pages.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filer to list only models by a given manufacturer in format: "manufacturer:Brother". Search syntax
+         is shared between this api and Admin Console printers pages.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Filer to list only models by a given manufacturer in format: "manufacturer:Brother".
+           * Search syntax is shared between this api and Admin Console printers pages.
+           */
+          public ListPrinterModels setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of objects to return. The service may return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of objects to return. The service may return fewer than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of objects to return. The service may return fewer than this value.
+           */
+          public ListPrinterModels setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A page token, received from a previous call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A page token, received from a previous call. */
+          public ListPrinterModels setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListPrinterModels set(String parameterName, Object value) {
+            return (ListPrinterModels) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a `Printer` resource.
+         *
+         * Create a request for the method "printers.patch".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-id}
+         *        (During printer creation leave empty)
+         * @param content the {@link com.google.api.services.directory.model.Printer}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.directory.model.Printer content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DirectoryRequest<com.google.api.services.directory.model.Printer> {
+
+          private static final String REST_PATH = "admin/directory/v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/chrome/printers/[^/]+$");
+
+          /**
+           * Updates a `Printer` resource.
+           *
+           * Create a request for the method "printers.patch".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-id}
+         *        (During printer creation leave empty)
+           * @param content the {@link com.google.api.services.directory.model.Printer}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.directory.model.Printer content) {
+            super(Directory.this, "PATCH", REST_PATH, content, com.google.api.services.directory.model.Printer.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the Printer object, in the format customers/{customer-id}/printers
+           * /{printer-id} (During printer creation leave empty)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-
+         id} (During printer creation leave empty)
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the Printer object, in the format customers/{customer-id}/printers
+           * /{printer-id} (During printer creation leave empty)
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/chrome/printers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The list of fields to be cleared. Note, some of the fields are read only and cannot be
+           * updated. Values for not specified fields will be patched.
+           */
+          @com.google.api.client.util.Key
+          private String clearMask;
+
+          /** The list of fields to be cleared. Note, some of the fields are read only and cannot be updated.
+         Values for not specified fields will be patched.
+           */
+          public String getClearMask() {
+            return clearMask;
+          }
+
+          /**
+           * The list of fields to be cleared. Note, some of the fields are read only and cannot be
+           * updated. Values for not specified fields will be patched.
+           */
+          public Patch setClearMask(String clearMask) {
+            this.clearMask = clearMask;
+            return this;
+          }
+
+          /**
+           * The list of fields to be updated. Note, some of the fields are read only and cannot be
+           * updated. Values for not specified fields will be patched.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. Note, some of the fields are read only and cannot be updated.
+         Values for not specified fields will be patched.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The list of fields to be updated. Note, some of the fields are read only and cannot be
+           * updated. Values for not specified fields will be patched.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**

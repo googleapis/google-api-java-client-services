@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudidentity.v1.model;
+package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Request message for approving the device to access user data.
+ * A request to send email for inviting target user corresponding to the UserInvitation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.cloudidentity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest extends com.google.api.client.json.GenericJson {
+public final class SendUserInvitationRequest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest set(String fieldName, Object value) {
-    return (GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest) super.set(fieldName, value);
+  public SendUserInvitationRequest set(String fieldName, Object value) {
+    return (SendUserInvitationRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest clone() {
-    return (GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest) super.clone();
+  public SendUserInvitationRequest clone() {
+    return (SendUserInvitationRequest) super.clone();
   }
 
 }

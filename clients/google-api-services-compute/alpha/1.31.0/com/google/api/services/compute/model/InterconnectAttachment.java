@@ -119,8 +119,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * default value, which means that the attachment carries unencrypted traffic. VMs can send
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
-   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec over
-   * Interconnect, create the attachment using this option.
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,8 +519,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * default value, which means that the attachment carries unencrypted traffic. VMs can send
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
-   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec over
-   * Interconnect, create the attachment using this option.
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryption() {
@@ -532,8 +532,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * default value, which means that the attachment carries unencrypted traffic. VMs can send
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
-   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec over
-   * Interconnect, create the attachment using this option.
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
    * @param encryption encryption or {@code null} for none
    */
   public InterconnectAttachment setEncryption(java.lang.String encryption) {

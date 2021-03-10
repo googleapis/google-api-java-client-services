@@ -61,8 +61,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
-   * in order to update the NetworkInterface, otherwise the request will fail with error 412
-   * conditionNotMet.
+   * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
+   * the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +175,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
-   * in order to update the NetworkInterface, otherwise the request will fail with error 412
-   * conditionNotMet.
+   * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
+   * the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -187,8 +187,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
-   * in order to update the NetworkInterface, otherwise the request will fail with error 412
-   * conditionNotMet.
+   * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
+   * the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -201,8 +201,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
-   * in order to update the NetworkInterface, otherwise the request will fail with error 412
-   * conditionNotMet.
+   * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
+   * the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -214,8 +214,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
-   * in order to update the NetworkInterface, otherwise the request will fail with error 412
-   * conditionNotMet.
+   * in order to update the NetworkInterface. The request will fail with error 400 Bad Request if
+   * the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
    * @see #setFingerprint()
    *
    * <p>

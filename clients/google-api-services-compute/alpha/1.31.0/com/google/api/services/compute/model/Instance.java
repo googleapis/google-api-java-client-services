@@ -414,7 +414,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceMachineImage;
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1419,7 +1419,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
@@ -1427,7 +1427,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
    */
   public Instance setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {

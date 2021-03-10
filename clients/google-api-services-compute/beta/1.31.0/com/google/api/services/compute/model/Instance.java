@@ -262,6 +262,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
+   * PostKeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String postKeyRevocationActionType;
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
    * as default.
    * The value may be {@code null}.
@@ -349,7 +356,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceMachineImage;
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -986,6 +993,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * PostKeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPostKeyRevocationActionType() {
+    return postKeyRevocationActionType;
+  }
+
+  /**
+   * PostKeyRevocationActionType of the instance.
+   * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
+   */
+  public Instance setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
+    this.postKeyRevocationActionType = postKeyRevocationActionType;
+    return this;
+  }
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
    * as default.
    * @return value or {@code null} for none
@@ -1196,7 +1220,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
@@ -1204,7 +1228,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source GMI encryption key when creating an instance from GMI.
+   * Source machine image encryption key when creating an instance from a machine image.
    * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
    */
   public Instance setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {

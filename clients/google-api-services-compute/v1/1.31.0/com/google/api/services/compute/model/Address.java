@@ -131,7 +131,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String networkTier;
 
   /**
-   * The prefix length if the resource reprensents an IP range.
+   * The prefix length if the resource represents an IP range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +143,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
    * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
-   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec
-   * encrypted Interconnect configuration. These addresses are regional resources.
+   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec-
+   * encrypted Cloud Interconnect configuration. These addresses are regional resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,7 +389,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix length if the resource reprensents an IP range.
+   * The prefix length if the resource represents an IP range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPrefixLength() {
@@ -397,7 +397,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix length if the resource reprensents an IP range.
+   * The prefix length if the resource represents an IP range.
    * @param prefixLength prefixLength or {@code null} for none
    */
   public Address setPrefixLength(java.lang.Integer prefixLength) {
@@ -411,8 +411,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
    * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
-   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec
-   * encrypted Interconnect configuration. These addresses are regional resources.
+   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec-
+   * encrypted Cloud Interconnect configuration. These addresses are regional resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -425,8 +425,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
    * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
-   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec
-   * encrypted Interconnect configuration. These addresses are regional resources.
+   * addresses created from a private IP range that are reserved for a VLAN attachment in an IPsec-
+   * encrypted Cloud Interconnect configuration. These addresses are regional resources.
    * @param purpose purpose or {@code null} for none
    */
   public Address setPurpose(java.lang.String purpose) {

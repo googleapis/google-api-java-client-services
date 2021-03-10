@@ -293,6 +293,19 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.util.List<RecentUsers> recentUsers;
 
   /**
+   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ScreenshotFiles> screenshotFiles;
+
+  static {
+    // hack to force ProGuard to consider ScreenshotFiles used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ScreenshotFiles.class);
+  }
+
+  /**
    * The Chrome device serial number entered when the device was enabled. This value is the same as
    * the Admin console's *Serial Number* in the *Chrome OS Devices* tab.
    * The value may be {@code null}.
@@ -895,6 +908,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setRecentUsers(java.util.List<RecentUsers> recentUsers) {
     this.recentUsers = recentUsers;
+    return this;
+  }
+
+  /**
+   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ScreenshotFiles> getScreenshotFiles() {
+    return screenshotFiles;
+  }
+
+  /**
+   * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
+   * @param screenshotFiles screenshotFiles or {@code null} for none
+   */
+  public ChromeOsDevice setScreenshotFiles(java.util.List<ScreenshotFiles> screenshotFiles) {
+    this.screenshotFiles = screenshotFiles;
     return this;
   }
 
@@ -1561,6 +1591,119 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
     @Override
     public LastKnownNetwork clone() {
       return (LastKnownNetwork) super.clone();
+    }
+
+  }
+
+  /**
+   * Model definition for ChromeOsDeviceScreenshotFiles.
+   */
+  public static final class ScreenshotFiles extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Date and time the file was created
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private com.google.api.client.util.DateTime createTime;
+
+    /**
+     * File download URL
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String downloadUrl;
+
+    /**
+     * File name
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String name;
+
+    /**
+     * File type
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
+
+    /**
+     * Date and time the file was created
+     * @return value or {@code null} for none
+     */
+    public com.google.api.client.util.DateTime getCreateTime() {
+      return createTime;
+    }
+
+    /**
+     * Date and time the file was created
+     * @param createTime createTime or {@code null} for none
+     */
+    public ScreenshotFiles setCreateTime(com.google.api.client.util.DateTime createTime) {
+      this.createTime = createTime;
+      return this;
+    }
+
+    /**
+     * File download URL
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getDownloadUrl() {
+      return downloadUrl;
+    }
+
+    /**
+     * File download URL
+     * @param downloadUrl downloadUrl or {@code null} for none
+     */
+    public ScreenshotFiles setDownloadUrl(java.lang.String downloadUrl) {
+      this.downloadUrl = downloadUrl;
+      return this;
+    }
+
+    /**
+     * File name
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getName() {
+      return name;
+    }
+
+    /**
+     * File name
+     * @param name name or {@code null} for none
+     */
+    public ScreenshotFiles setName(java.lang.String name) {
+      this.name = name;
+      return this;
+    }
+
+    /**
+     * File type
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+      return type;
+    }
+
+    /**
+     * File type
+     * @param type type or {@code null} for none
+     */
+    public ScreenshotFiles setType(java.lang.String type) {
+      this.type = type;
+      return this;
+    }
+
+    @Override
+    public ScreenshotFiles set(String fieldName, Object value) {
+      return (ScreenshotFiles) super.set(fieldName, value);
+    }
+
+    @Override
+    public ScreenshotFiles clone() {
+      return (ScreenshotFiles) super.clone();
     }
 
   }

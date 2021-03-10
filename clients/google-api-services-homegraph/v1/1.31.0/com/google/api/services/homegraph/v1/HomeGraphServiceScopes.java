@@ -23,7 +23,7 @@ package com.google.api.services.homegraph.v1;
  */
 public class HomeGraphServiceScopes {
 
-  /** New Service: https://www.googleapis.com/auth/homegraph. */
+  /** Private Service: https://www.googleapis.com/auth/homegraph. */
   public static final String HOMEGRAPH = "https://www.googleapis.com/auth/homegraph";
 
   /**

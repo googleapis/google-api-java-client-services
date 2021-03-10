@@ -17,7 +17,7 @@
 package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * Specifies how metastore metadata should be integrated with external services.
+ * Specifies how metastore metadata should be integrated with the Data Catalog service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -28,40 +28,43 @@ package com.google.api.services.metastore.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MetadataIntegration extends com.google.api.client.json.GenericJson {
+public final class DataCatalogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The integration config for the Data Catalog service.
+   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
+   * to disable syncing metastore metadata to Data Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataCatalogConfig dataCatalogConfig;
+  private java.lang.Boolean enabled;
 
   /**
-   * The integration config for the Data Catalog service.
+   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
+   * to disable syncing metastore metadata to Data Catalog.
    * @return value or {@code null} for none
    */
-  public DataCatalogConfig getDataCatalogConfig() {
-    return dataCatalogConfig;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * The integration config for the Data Catalog service.
-   * @param dataCatalogConfig dataCatalogConfig or {@code null} for none
+   * Defines whether the metastore metadata should be synced to Data Catalog. The default value is
+   * to disable syncing metastore metadata to Data Catalog.
+   * @param enabled enabled or {@code null} for none
    */
-  public MetadataIntegration setDataCatalogConfig(DataCatalogConfig dataCatalogConfig) {
-    this.dataCatalogConfig = dataCatalogConfig;
+  public DataCatalogConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   @Override
-  public MetadataIntegration set(String fieldName, Object value) {
-    return (MetadataIntegration) super.set(fieldName, value);
+  public DataCatalogConfig set(String fieldName, Object value) {
+    return (DataCatalogConfig) super.set(fieldName, value);
   }
 
   @Override
-  public MetadataIntegration clone() {
-    return (MetadataIntegration) super.clone();
+  public DataCatalogConfig clone() {
+    return (DataCatalogConfig) super.clone();
   }
 
 }

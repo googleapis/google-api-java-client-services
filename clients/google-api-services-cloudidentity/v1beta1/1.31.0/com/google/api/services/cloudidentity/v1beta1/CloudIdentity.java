@@ -133,6 +133,898 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the Customers collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.Customers.List request = cloudidentity.customers().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Customers customers() {
+    return new Customers();
+  }
+
+  /**
+   * The "customers" collection of methods.
+   */
+  public class Customers {
+
+    /**
+     * An accessor for creating requests from the Userinvitations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+     *   {@code CloudIdentity.Userinvitations.List request = cloudidentity.userinvitations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Userinvitations userinvitations() {
+      return new Userinvitations();
+    }
+
+    /**
+     * The "userinvitations" collection of methods.
+     */
+    public class Userinvitations {
+
+      /**
+       * Cancels a UserInvitation that was already sent.
+       *
+       * Create a request for the method "userinvitations.cancel".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+       * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.CancelUserInvitationRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.CancelUserInvitationRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/userinvitations/[^/]+$");
+
+        /**
+         * Cancels a UserInvitation that was already sent.
+         *
+         * Create a request for the method "userinvitations.cancel".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+         * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.CancelUserInvitationRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.CancelUserInvitationRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. `UserInvitation` name in the format
+       `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a UserInvitation resource. **Note:** New consumer accounts with the customer’s verified
+       * domain created within the previous 48 hours will not appear in the result.
+       *
+       * Create a request for the method "userinvitations.get".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.UserInvitation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/userinvitations/[^/]+$");
+
+        /**
+         * Retrieves a UserInvitation resource. **Note:** New consumer accounts with the customer’s
+         * verified domain created within the previous 48 hours will not appear in the result.
+         *
+         * Create a request for the method "userinvitations.get".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.UserInvitation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. `UserInvitation` name in the format
+       `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Verifies whether a user account is eligible to receive a UserInvitation (is an unmanaged
+       * account). Eligibility is based on the following criteria: * the email address is a consumer
+       * account and it’s the primary email address of the account, and * the domain of the email address
+       * matches an existing verified Google Workspace or Cloud Identity domain If both conditions are
+       * met, the user is eligible. **Note:** This method is not supported for Workspace Essentials
+       * customers.
+       *
+       * Create a request for the method "userinvitations.isInvitableUser".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link IsInvitableUser#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+       * @return the request
+       */
+      public IsInvitableUser isInvitableUser(java.lang.String name) throws java.io.IOException {
+        IsInvitableUser result = new IsInvitableUser(name);
+        initialize(result);
+        return result;
+      }
+
+      public class IsInvitableUser extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.IsInvitableUserResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:isInvitableUser";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/userinvitations/[^/]+$");
+
+        /**
+         * Verifies whether a user account is eligible to receive a UserInvitation (is an unmanaged
+         * account). Eligibility is based on the following criteria: * the email address is a consumer
+         * account and it’s the primary email address of the account, and * the domain of the email
+         * address matches an existing verified Google Workspace or Cloud Identity domain If both
+         * conditions are met, the user is eligible. **Note:** This method is not supported for Workspace
+         * Essentials customers.
+         *
+         * Create a request for the method "userinvitations.isInvitableUser".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link IsInvitableUser#execute()} method to invoke the remote
+         * operation. <p> {@link IsInvitableUser#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+         * @since 1.13
+         */
+        protected IsInvitableUser(java.lang.String name) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.IsInvitableUserResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public IsInvitableUser set$Xgafv(java.lang.String $Xgafv) {
+          return (IsInvitableUser) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public IsInvitableUser setAccessToken(java.lang.String accessToken) {
+          return (IsInvitableUser) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public IsInvitableUser setAlt(java.lang.String alt) {
+          return (IsInvitableUser) super.setAlt(alt);
+        }
+
+        @Override
+        public IsInvitableUser setCallback(java.lang.String callback) {
+          return (IsInvitableUser) super.setCallback(callback);
+        }
+
+        @Override
+        public IsInvitableUser setFields(java.lang.String fields) {
+          return (IsInvitableUser) super.setFields(fields);
+        }
+
+        @Override
+        public IsInvitableUser setKey(java.lang.String key) {
+          return (IsInvitableUser) super.setKey(key);
+        }
+
+        @Override
+        public IsInvitableUser setOauthToken(java.lang.String oauthToken) {
+          return (IsInvitableUser) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public IsInvitableUser setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (IsInvitableUser) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public IsInvitableUser setQuotaUser(java.lang.String quotaUser) {
+          return (IsInvitableUser) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public IsInvitableUser setUploadType(java.lang.String uploadType) {
+          return (IsInvitableUser) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public IsInvitableUser setUploadProtocol(java.lang.String uploadProtocol) {
+          return (IsInvitableUser) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. `UserInvitation` name in the format
+       `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public IsInvitableUser setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public IsInvitableUser set(String parameterName, Object value) {
+          return (IsInvitableUser) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a list of UserInvitation resources. **Note:** New consumer accounts with the customer’s
+       * verified domain created within the previous 48 hours will not appear in the results.
+       *
+       * Create a request for the method "userinvitations.list".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The customer ID of the Google Workspace or Cloud Identity account the UserInvitation
+       *        resources are associated with.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.ListUserInvitationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/userinvitations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Retrieves a list of UserInvitation resources. **Note:** New consumer accounts with the
+         * customer’s verified domain created within the previous 48 hours will not appear in the results.
+         *
+         * Create a request for the method "userinvitations.list".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The customer ID of the Google Workspace or Cloud Identity account the UserInvitation
+       *        resources are associated with.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.ListUserInvitationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The customer ID of the Google Workspace or Cloud Identity account the
+         * UserInvitation resources are associated with.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The customer ID of the Google Workspace or Cloud Identity account the UserInvitation
+       resources are associated with.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The customer ID of the Google Workspace or Cloud Identity account the
+         * UserInvitation resources are associated with.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. A query string for filtering `UserInvitation` results by their current state,
+         * in the format: `"state=='invited'"`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A query string for filtering `UserInvitation` results by their current state, in the
+       format: `"state=='invited'"`.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A query string for filtering `UserInvitation` results by their current state,
+         * in the format: `"state=='invited'"`.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The sort order of the list results. You can sort the results in descending
+         * order based on either email or last update timestamp but not both, using `order_by="email
+         * desc"`. Currently, sorting is supported for `update_time asc`, `update_time desc`, `email
+         * asc`, and `email desc`. If not specified, results will be returned based on `email asc`
+         * order.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The sort order of the list results. You can sort the results in descending order based on
+       either email or last update timestamp but not both, using `order_by="email desc"`. Currently,
+       sorting is supported for `update_time asc`, `update_time desc`, `email asc`, and `email desc`. If
+       not specified, results will be returned based on `email asc` order.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The sort order of the list results. You can sort the results in descending
+         * order based on either email or last update timestamp but not both, using `order_by="email
+         * desc"`. Currently, sorting is supported for `update_time asc`, `update_time desc`, `email
+         * asc`, and `email desc`. If not specified, results will be returned based on `email asc`
+         * order.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of UserInvitation resources to return. If unspecified, at
+         * most 100 resources will be returned. The maximum value is 200; values above 200 will be
+         * set to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of UserInvitation resources to return. If unspecified, at most 100
+       resources will be returned. The maximum value is 200; values above 200 will be set to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of UserInvitation resources to return. If unspecified, at
+         * most 100 resources will be returned. The maximum value is 200; values above 200 will be
+         * set to 200.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListUserInvitations` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBooks` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListUserInvitations` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to `ListBooks` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListUserInvitations` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBooks` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Sends a UserInvitation to email. If the `UserInvitation` does not exist for this request and it
+       * is a valid request, the request creates a `UserInvitation`. **Note:** The `get` and `list`
+       * methods have a 48-hour delay where newly-created consumer accounts will not appear in the
+       * results. You can still send a `UserInvitation` to those accounts if you know the unmanaged email
+       * address.
+       *
+       * Create a request for the method "userinvitations.send".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Send#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+       * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.SendUserInvitationRequest}
+       * @return the request
+       */
+      public Send send(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.SendUserInvitationRequest content) throws java.io.IOException {
+        Send result = new Send(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Send extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:send";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/userinvitations/[^/]+$");
+
+        /**
+         * Sends a UserInvitation to email. If the `UserInvitation` does not exist for this request and it
+         * is a valid request, the request creates a `UserInvitation`. **Note:** The `get` and `list`
+         * methods have a 48-hour delay where newly-created consumer accounts will not appear in the
+         * results. You can still send a `UserInvitation` to those accounts if you know the unmanaged
+         * email address.
+         *
+         * Create a request for the method "userinvitations.send".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Send#execute()} method to invoke the remote operation. <p>
+         * {@link Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. `UserInvitation` name in the format
+       *        `customers/{customer}/userinvitations/{user_email_address}`
+         * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.SendUserInvitationRequest}
+         * @since 1.13
+         */
+        protected Send(java.lang.String name, com.google.api.services.cloudidentity.v1beta1.model.SendUserInvitationRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1beta1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Send set$Xgafv(java.lang.String $Xgafv) {
+          return (Send) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Send setAccessToken(java.lang.String accessToken) {
+          return (Send) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Send setAlt(java.lang.String alt) {
+          return (Send) super.setAlt(alt);
+        }
+
+        @Override
+        public Send setCallback(java.lang.String callback) {
+          return (Send) super.setCallback(callback);
+        }
+
+        @Override
+        public Send setFields(java.lang.String fields) {
+          return (Send) super.setFields(fields);
+        }
+
+        @Override
+        public Send setKey(java.lang.String key) {
+          return (Send) super.setKey(key);
+        }
+
+        @Override
+        public Send setOauthToken(java.lang.String oauthToken) {
+          return (Send) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Send setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Send) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Send setQuotaUser(java.lang.String quotaUser) {
+          return (Send) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Send setUploadType(java.lang.String uploadType) {
+          return (Send) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Send setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Send) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. `UserInvitation` name in the format
+       `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. `UserInvitation` name in the format
+         * `customers/{customer}/userinvitations/{user_email_address}`
+         */
+        public Send setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/userinvitations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Send set(String parameterName, Object value) {
+          return (Send) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Devices collection.
    *
    * <p>The typical use is:</p>
@@ -534,35 +1426,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String customer;
-
-      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
-     you're using this API for your own organization, use `customers/my_customer` If you're using this
-     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-     customer to whom the device belongs.
-       */
-      public java.lang.String getCustomer() {
-        return customer;
-      }
-
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
-       */
-      public Delete setCustomer(java.lang.String customer) {
-        this.customer = customer;
-        return this;
-      }
-
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -712,31 +1575,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Customer in format: `customers/{customer_id}`, where customer_id is the customer to whom
-       * the device belongs.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String customer;
-
-      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in
-     format: `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
-       */
-      public java.lang.String getCustomer() {
-        return customer;
-      }
-
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Customer in format: `customers/{customer_id}`, where customer_id is the customer to whom
-       * the device belongs.
-       */
-      public Get setCustomer(java.lang.String customer) {
-        this.customer = customer;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -841,28 +1679,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String customer;
-
-      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
-       */
-      public java.lang.String getCustomer() {
-        return customer;
-      }
-
-      /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer.
-       */
-      public List setCustomer(java.lang.String customer) {
-        this.customer = customer;
-        return this;
       }
 
       /**
@@ -1742,35 +2558,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String customer;
-
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
-       you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
-         */
-        public java.lang.String getCustomer() {
-          return customer;
-        }
-
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        public Delete setCustomer(java.lang.String customer) {
-          this.customer = customer;
-          return this;
-        }
-
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -1925,35 +2712,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String customer;
-
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
-       you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
-         */
-        public java.lang.String getCustomer() {
-          return customer;
-        }
-
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        public Get setCustomer(java.lang.String customer) {
-          this.customer = customer;
-          return this;
-        }
-
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -2098,35 +2856,6 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
                 "^devices/[^/]+$");
           }
           this.parent = parent;
-          return this;
-        }
-
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String customer;
-
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
-       you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
-         */
-        public java.lang.String getCustomer() {
-          return customer;
-        }
-
-        /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
-         */
-        public List setCustomer(java.lang.String customer) {
-          this.customer = customer;
           return this;
         }
 
@@ -2695,13 +3424,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
          *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
-         *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-         *        assigned to the User and partner_id identifies the partner storing the data. To get the
-         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        where `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique
+         *        ID assigned to the User and `partner_id` identifies the partner storing the data. To get
+         *        the client state for devices belonging to your own organization, the `partnerId` is in the
          *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
          *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
          *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
-         *        managed by your own organization.
+         *        managed by your own organization. You may specify `-` in place of the `{device_id}`, so
+         *        the ClientState resource name can be:
+         *        `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2729,13 +3460,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
          *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
-         *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-         *        assigned to the User and partner_id identifies the partner storing the data. To get the
-         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        where `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique
+         *        ID assigned to the User and `partner_id` identifies the partner storing the data. To get
+         *        the client state for devices belonging to your own organization, the `partnerId` is in the
          *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
          *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
          *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
-         *        managed by your own organization.
+         *        managed by your own organization. You may specify `-` in place of the `{device_id}`, so
+         *        the ClientState resource name can be:
+         *        `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2817,25 +3550,29 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * ClientState in format:
            * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-           * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-           * assigned to the User and partner_id identifies the partner storing the data. To get the
-           * client state for devices belonging to your own organization, the `partnerId` is in the
-           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID
+           * assigned to the User and `partner_id` identifies the partner storing the data. To get
+           * the client state for devices belonging to your own organization, the `partnerId` is in
+           * the format: `customerId-*anystring*`. Where the `customerId` is your organization's
            * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
            * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
-           * customer ID for devices managed by your own organization.
+           * customer ID for devices managed by your own organization. You may specify `-` in place
+           * of the `{device_id}`, so the ClientState resource name can be:
+           * `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
          in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-         device_id is the unique ID assigned to the Device, device_user_id is the unique ID assigned to the
-         User and partner_id identifies the partner storing the data. To get the client state for devices
-         belonging to your own organization, the `partnerId` is in the format: `customerId-*anystring*`.
-         Where the `customerId` is your organization's customer ID and `anystring` is any suffix. This
-         suffix is used in setting up Custom Access Levels in Context-Aware Access. You may use
-         `my_customer` instead of the customer ID for devices managed by your own organization.
+         `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID assigned to
+         the User and `partner_id` identifies the partner storing the data. To get the client state for
+         devices belonging to your own organization, the `partnerId` is in the format:
+         `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and `anystring`
+         is any suffix. This suffix is used in setting up Custom Access Levels in Context-Aware Access. You
+         may use `my_customer` instead of the customer ID for devices managed by your own organization. You
+         may specify `-` in place of the `{device_id}`, so the ClientState resource name can be:
+         `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2845,13 +3582,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * ClientState in format:
            * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-           * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-           * assigned to the User and partner_id identifies the partner storing the data. To get the
-           * client state for devices belonging to your own organization, the `partnerId` is in the
-           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID
+           * assigned to the User and `partner_id` identifies the partner storing the data. To get
+           * the client state for devices belonging to your own organization, the `partnerId` is in
+           * the format: `customerId-*anystring*`. Where the `customerId` is your organization's
            * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
            * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
-           * customer ID for devices managed by your own organization.
+           * customer ID for devices managed by your own organization. You may specify `-` in place
+           * of the `{device_id}`, so the ClientState resource name can be:
+           * `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2864,7 +3603,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
            * `customers/{customer_id}`, where customer_id is the customer to whom the device
@@ -2873,7 +3612,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           @com.google.api.client.util.Key
           private java.lang.String customer;
 
-          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+          /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
          you're using this API for your own organization, use `customers/my_customer` If you're using this
          API to manage another organization, use `customers/{customer_id}`, where customer_id is the
          customer to whom the device belongs.
@@ -2883,7 +3622,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
            * `customers/{customer_id}`, where customer_id is the customer to whom the device
@@ -3046,7 +3785,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
            * `customers/{customer_id}`, where customer_id is the customer to whom the device
@@ -3055,7 +3794,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           @com.google.api.client.util.Key
           private java.lang.String customer;
 
-          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+          /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
          you're using this API for your own organization, use `customers/my_customer` If you're using this
          API to manage another organization, use `customers/{customer_id}`, where customer_id is the
          customer to whom the device belongs.
@@ -3065,7 +3804,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
            * `customers/{customer_id}`, where customer_id is the customer to whom the device

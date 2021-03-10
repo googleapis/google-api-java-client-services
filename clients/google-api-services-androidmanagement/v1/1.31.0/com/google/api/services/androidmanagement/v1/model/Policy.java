@@ -278,8 +278,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean installAppsDisabled;
 
   /**
-   * Whether the user is allowed to enable the "Unknown Sources" setting, which allows installation
-   * of apps from unknown sources.
+   * This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1238,8 +1237,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user is allowed to enable the "Unknown Sources" setting, which allows installation
-   * of apps from unknown sources.
+   * This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInstallUnknownSourcesAllowed() {
@@ -1247,8 +1245,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user is allowed to enable the "Unknown Sources" setting, which allows installation
-   * of apps from unknown sources.
+   * This field has no effect.
    * @param installUnknownSourcesAllowed installUnknownSourcesAllowed or {@code null} for none
    */
   public Policy setInstallUnknownSourcesAllowed(java.lang.Boolean installUnknownSourcesAllowed) {

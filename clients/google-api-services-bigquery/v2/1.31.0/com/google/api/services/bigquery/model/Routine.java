@@ -107,6 +107,15 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
+   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
+   * launch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StandardSqlTableType returnTableType;
+
+  /**
    * Optional if language = "SQL"; required otherwise. If absent, the return type is inferred from
    * definition_body at query time in each query that references this routine. If present, then the
    * evaluated result will be cast to the specified returned type at query time. For example, for
@@ -303,6 +312,27 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setLastModifiedTime(java.lang.Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
+   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
+   * launch.
+   * @return value or {@code null} for none
+   */
+  public StandardSqlTableType getReturnTableType() {
+    return returnTableType;
+  }
+
+  /**
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
+   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
+   * launch.
+   * @param returnTableType returnTableType or {@code null} for none
+   */
+  public Routine setReturnTableType(StandardSqlTableType returnTableType) {
+    this.returnTableType = returnTableType;
     return this;
   }
 

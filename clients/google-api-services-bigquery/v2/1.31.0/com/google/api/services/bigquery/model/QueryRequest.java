@@ -43,6 +43,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean createSession;
+
+  /**
    * [Optional] Specifies the default datasetId and projectId to assume for any unqualified table
    * names in the query. If not set, all table names in the query string must be qualified in the
    * format 'datasetId.tableId'.
@@ -206,6 +215,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setConnectionProperties(java.util.List<ConnectionProperty> connectionProperties) {
     this.connectionProperties = connectionProperties;
+    return this;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreateSession() {
+    return createSession;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * @param createSession createSession or {@code null} for none
+   */
+  public QueryRequest setCreateSession(java.lang.Boolean createSession) {
+    this.createSession = createSession;
     return this;
   }
 

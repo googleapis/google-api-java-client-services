@@ -72,6 +72,15 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.String createDisposition;
 
   /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean createSession;
+
+  /**
    * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note
    * that this does not alter behavior of unqualified dataset names.
    * The value may be {@code null}.
@@ -356,6 +365,27 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    */
   public JobConfigurationQuery setCreateDisposition(java.lang.String createDisposition) {
     this.createDisposition = createDisposition;
+    return this;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreateSession() {
+    return createSession;
+  }
+
+  /**
+   * If true, creates a new session, where session id will be a server generated random id. If
+   * false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs
+   * query in non-session mode.
+   * @param createSession createSession or {@code null} for none
+   */
+  public JobConfigurationQuery setCreateSession(java.lang.Boolean createSession) {
+    this.createSession = createSession;
     return this;
   }
 

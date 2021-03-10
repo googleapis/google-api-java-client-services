@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
+   * The best trial_id across all training runs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long bestTrialId;
+
+  /**
    * Output only. The time when this model was created, in millisecs since the epoch.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<TrainingRun> trainingRuns;
+
+  /**
+   * The best trial_id across all training runs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBestTrialId() {
+    return bestTrialId;
+  }
+
+  /**
+   * The best trial_id across all training runs.
+   * @param bestTrialId bestTrialId or {@code null} for none
+   */
+  public Model setBestTrialId(java.lang.Long bestTrialId) {
+    this.bestTrialId = bestTrialId;
+    return this;
+  }
 
   /**
    * Output only. The time when this model was created, in millisecs since the epoch.

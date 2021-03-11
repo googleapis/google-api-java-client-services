@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * A Cloud SQL instance resource. Next field: 36
+ * A Cloud SQL instance resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -204,7 +204,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
-   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * The status indicating if instance satisfiesPzs. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -691,7 +691,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * The status indicating if instance satisfiesPzs. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -699,7 +699,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * The status indicating if instance satisfiesPzs. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public DatabaseInstance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

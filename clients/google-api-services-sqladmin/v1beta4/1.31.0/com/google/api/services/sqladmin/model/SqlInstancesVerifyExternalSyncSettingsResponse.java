@@ -50,6 +50,19 @@ public final class SqlInstancesVerifyExternalSyncSettingsResponse extends com.go
   private java.lang.String kind;
 
   /**
+   * List of migration warnings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SqlExternalSyncSettingError> warnings;
+
+  static {
+    // hack to force ProGuard to consider SqlExternalSyncSettingError used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SqlExternalSyncSettingError.class);
+  }
+
+  /**
    * List of migration violations.
    * @return value or {@code null} for none
    */
@@ -80,6 +93,23 @@ public final class SqlInstancesVerifyExternalSyncSettingsResponse extends com.go
    */
   public SqlInstancesVerifyExternalSyncSettingsResponse setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * List of migration warnings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SqlExternalSyncSettingError> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * List of migration warnings.
+   * @param warnings warnings or {@code null} for none
+   */
+  public SqlInstancesVerifyExternalSyncSettingsResponse setWarnings(java.util.List<SqlExternalSyncSettingError> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

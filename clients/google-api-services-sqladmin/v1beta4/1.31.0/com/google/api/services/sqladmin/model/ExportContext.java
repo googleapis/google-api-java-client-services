@@ -42,7 +42,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * *CSV*, you can specify one database, either by using this property or by using the
    * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
    * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property.
+   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
+   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * *CSV*, you can specify one database, either by using this property or by using the
    * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
    * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property.
+   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
+   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDatabases() {
@@ -123,7 +125,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * *CSV*, you can specify one database, either by using this property or by using the
    * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
    * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property.
+   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
+   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
    * @param databases databases or {@code null} for none
    */
   public ExportContext setDatabases(java.util.List<java.lang.String> databases) {

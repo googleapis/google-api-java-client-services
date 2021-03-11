@@ -18,7 +18,7 @@ package com.google.api.services.sqladmin.model;
 
 /**
  * An Operation resource. For successful operations that return an Operation resource, only the
- * fields relevant to the operation are populated in the resource. Next field: 18
+ * fields relevant to the operation are populated in the resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.workflowexecutions.v1beta.model;
+package com.google.api.services.workflowexecutions.v1.model;
 
 /**
  * A single stack element (frame) where an error occurred.

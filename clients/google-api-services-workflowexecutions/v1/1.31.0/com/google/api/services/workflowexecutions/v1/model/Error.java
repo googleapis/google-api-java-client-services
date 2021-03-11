@@ -31,21 +31,28 @@ package com.google.api.services.workflowexecutions.v1.model;
 public final class Error extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable error context, helpful for debugging purposes.
+   * Human readable stack trace string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String context;
 
   /**
-   * Error payload returned by the execution, represented as a JSON string.
+   * Error message and data returned represented as a JSON string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String payload;
 
   /**
-   * Human readable error context, helpful for debugging purposes.
+   * Stack trace with detailed information of where error was generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StackTrace stackTrace;
+
+  /**
+   * Human readable stack trace string.
    * @return value or {@code null} for none
    */
   public java.lang.String getContext() {
@@ -53,7 +60,7 @@ public final class Error extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable error context, helpful for debugging purposes.
+   * Human readable stack trace string.
    * @param context context or {@code null} for none
    */
   public Error setContext(java.lang.String context) {
@@ -62,7 +69,7 @@ public final class Error extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error payload returned by the execution, represented as a JSON string.
+   * Error message and data returned represented as a JSON string.
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -70,11 +77,28 @@ public final class Error extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error payload returned by the execution, represented as a JSON string.
+   * Error message and data returned represented as a JSON string.
    * @param payload payload or {@code null} for none
    */
   public Error setPayload(java.lang.String payload) {
     this.payload = payload;
+    return this;
+  }
+
+  /**
+   * Stack trace with detailed information of where error was generated.
+   * @return value or {@code null} for none
+   */
+  public StackTrace getStackTrace() {
+    return stackTrace;
+  }
+
+  /**
+   * Stack trace with detailed information of where error was generated.
+   * @param stackTrace stackTrace or {@code null} for none
+   */
+  public Error setStackTrace(StackTrace stackTrace) {
+    this.stackTrace = stackTrace;
     return this;
   }
 

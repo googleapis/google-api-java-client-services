@@ -47,6 +47,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String dataset;
 
   /**
+   * Any debugging options to be supplied to the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DebugOptions debugOptions;
+
+  /**
    * The list of experiments to enable. This field should be used for SDK related experiments and
    * not for service related experiments. The proper field for service related experiments is
    * service_options. For more details see the rationale at go/user-specified-service-options.
@@ -202,6 +209,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Any debugging options to be supplied to the job.
+   * @return value or {@code null} for none
+   */
+  public DebugOptions getDebugOptions() {
+    return debugOptions;
+  }
+
+  /**
+   * Any debugging options to be supplied to the job.
+   * @param debugOptions debugOptions or {@code null} for none
+   */
+  public Environment setDebugOptions(DebugOptions debugOptions) {
+    this.debugOptions = debugOptions;
     return this;
   }
 

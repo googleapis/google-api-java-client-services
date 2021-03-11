@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * External primary instance migration setting error.
+ * External primary instance migration setting error/warning.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   private java.lang.String detail;
 
   /**
-   * This is always *sql#migrationSettingError*.
+   * Can be *sql#externalSyncSettingError* or *sql#externalSyncSettingWarning*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * This is always *sql#migrationSettingError*.
+   * Can be *sql#externalSyncSettingError* or *sql#externalSyncSettingWarning*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -76,7 +76,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * This is always *sql#migrationSettingError*.
+   * Can be *sql#externalSyncSettingError* or *sql#externalSyncSettingWarning*.
    * @param kind kind or {@code null} for none
    */
   public SqlExternalSyncSettingError setKind(java.lang.String kind) {

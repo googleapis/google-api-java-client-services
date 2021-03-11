@@ -23,7 +23,7 @@ package com.google.api.services.sqladmin;
  */
 public class SQLAdminScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** Manage your Google SQL Service instances. */

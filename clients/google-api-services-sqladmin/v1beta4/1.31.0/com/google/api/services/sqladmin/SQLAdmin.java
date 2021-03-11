@@ -4577,7 +4577,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Truncate MySQL general and slow query log tables
+     * Truncate MySQL general and slow query log tables MySQL only.
      *
      * Create a request for the method "instances.truncateLog".
      *
@@ -4600,7 +4600,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/truncateLog";
 
       /**
-       * Truncate MySQL general and slow query log tables
+       * Truncate MySQL general and slow query log tables MySQL only.
        *
        * Create a request for the method "instances.truncateLog".
        *

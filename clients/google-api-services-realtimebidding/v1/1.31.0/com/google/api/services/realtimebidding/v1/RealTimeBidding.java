@@ -153,6 +153,297 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
   public class Bidders {
 
     /**
+     * Gets a bidder account by its name.
+     *
+     * Create a request for the method "bidders.get".
+     *
+     * This request holds the parameters needed by the realtimebidding server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the bidder to get. Format: `bidders/{bidderAccountId}`
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Bidder> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+      /**
+       * Gets a bidder account by its name.
+       *
+       * Create a request for the method "bidders.get".
+       *
+       * This request holds the parameters needed by the the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Name of the bidder to get. Format: `bidders/{bidderAccountId}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.Bidder.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^bidders/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Name of the bidder to get. Format: `bidders/{bidderAccountId}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the bidder to get. Format: `bidders/{bidderAccountId}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Name of the bidder to get. Format: `bidders/{bidderAccountId}` */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^bidders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all the bidder accounts that belong to the caller.
+     *
+     * Create a request for the method "bidders.list".
+     *
+     * This request holds the parameters needed by the realtimebidding server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.ListBiddersResponse> {
+
+      private static final String REST_PATH = "v1/bidders";
+
+      /**
+       * Lists all the bidder accounts that belong to the caller.
+       *
+       * Create a request for the method "bidders.list".
+       *
+       * This request holds the parameters needed by the the realtimebidding server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.ListBiddersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The maximum number of bidders to return. If unspecified, at most 100 bidders will be
+       * returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of bidders to return. If unspecified, at most 100 bidders will be returned. The
+     maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of bidders to return. If unspecified, at most 100 bidders will be
+       * returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListBidders` call in ListBiddersResponse.nextPageToken.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. This value is received from a
+     previous `ListBidders` call in ListBiddersResponse.nextPageToken.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListBidders` call in ListBiddersResponse.nextPageToken.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Creatives collection.
      *
      * <p>The typical use is:</p>
@@ -607,6 +898,365 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         @Override
         public Watch set(String parameterName, Object value) {
           return (Watch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Endpoints collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code RealTimeBidding realtimebidding = new RealTimeBidding(...);}
+     *   {@code RealTimeBidding.Endpoints.List request = realtimebidding.endpoints().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Endpoints endpoints() {
+      return new Endpoints();
+    }
+
+    /**
+     * The "endpoints" collection of methods.
+     */
+    public class Endpoints {
+
+      /**
+       * Gets a bidder endpoint by its name.
+       *
+       * Create a request for the method "endpoints.get".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the bidder endpoint to get. Format:
+       *        `bidders/{bidderAccountId}/endpoints/{endpointId}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Endpoint> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/endpoints/[^/]+$");
+
+        /**
+         * Gets a bidder endpoint by its name.
+         *
+         * Create a request for the method "endpoints.get".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the bidder endpoint to get. Format:
+       *        `bidders/{bidderAccountId}/endpoints/{endpointId}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.Endpoint.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/endpoints/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the bidder endpoint to get. Format:
+         * `bidders/{bidderAccountId}/endpoints/{endpointId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the bidder endpoint to get. Format:
+       `bidders/{bidderAccountId}/endpoints/{endpointId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the bidder endpoint to get. Format:
+         * `bidders/{bidderAccountId}/endpoints/{endpointId}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/endpoints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all the bidder's endpoints.
+       *
+       * Create a request for the method "endpoints.list".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the bidder whose endpoints will be listed. Format: `bidders/{bidderAccountId}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.ListEndpointsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/endpoints";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Lists all the bidder's endpoints.
+         *
+         * Create a request for the method "endpoints.list".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the bidder whose endpoints will be listed. Format: `bidders/{bidderAccountId}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.ListEndpointsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the bidder whose endpoints will be listed. Format:
+         * `bidders/{bidderAccountId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the bidder whose endpoints will be listed. Format: `bidders/{bidderAccountId}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the bidder whose endpoints will be listed. Format:
+         * `bidders/{bidderAccountId}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of endpoints to return. If unspecified, at most 100 endpoints will be
+         * returned. The maximum value is 500; values above 500 will be coerced to 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of endpoints to return. If unspecified, at most 100 endpoints will be returned.
+       The maximum value is 500; values above 500 will be coerced to 500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of endpoints to return. If unspecified, at most 100 endpoints will be
+         * returned. The maximum value is 500; values above 500 will be coerced to 500.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. This value is received
+         * from a previous `ListEndpoints` call in ListEndpointsResponse.nextPageToken.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. This value is received from a
+       previous `ListEndpoints` call in ListEndpointsResponse.nextPageToken.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. This value is received
+         * from a previous `ListEndpoints` call in ListEndpointsResponse.nextPageToken.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 
@@ -2567,6 +3217,144 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
   public class Buyers {
 
     /**
+     * Gets a buyer account by its name.
+     *
+     * Create a request for the method "buyers.get".
+     *
+     * This request holds the parameters needed by the realtimebidding server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the buyer to get. Format: `buyers/{buyerId}`
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Buyer> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^buyers/[^/]+$");
+
+      /**
+       * Gets a buyer account by its name.
+       *
+       * Create a request for the method "buyers.get".
+       *
+       * This request holds the parameters needed by the the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Name of the buyer to get. Format: `buyers/{buyerId}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.Buyer.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^buyers/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Name of the buyer to get. Format: `buyers/{buyerId}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the buyer to get. Format: `buyers/{buyerId}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Name of the buyer to get. Format: `buyers/{buyerId}` */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^buyers/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets remarketing tag for a buyer. A remarketing tag is a piece of JavaScript code that can be
      * placed on a web page. When a user visits a page containing a remarketing tag, Google adds the
      * user to a user list.
@@ -2734,6 +3522,160 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
       @Override
       public GetRemarketingTag set(String parameterName, Object value) {
         return (GetRemarketingTag) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all buyer account information the calling buyer user or service account is permissioned to
+     * manage.
+     *
+     * Create a request for the method "buyers.list".
+     *
+     * This request holds the parameters needed by the realtimebidding server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.ListBuyersResponse> {
+
+      private static final String REST_PATH = "v1/buyers";
+
+      /**
+       * Lists all buyer account information the calling buyer user or service account is permissioned
+       * to manage.
+       *
+       * Create a request for the method "buyers.list".
+       *
+       * This request holds the parameters needed by the the realtimebidding server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.ListBuyersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The maximum number of buyers to return. If unspecified, at most 100 buyers will be
+       * returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of buyers to return. If unspecified, at most 100 buyers will be returned. The
+     maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of buyers to return. If unspecified, at most 100 buyers will be
+       * returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListBuyers` call in ListBuyersResponse.nextPageToken.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results the server should return. This value is received from a
+     previous `ListBuyers` call in ListBuyersResponse.nextPageToken.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results the server should return. This value is received from
+       * a previous `ListBuyers` call in ListBuyersResponse.nextPageToken.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
 

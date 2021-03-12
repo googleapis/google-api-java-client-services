@@ -314,7 +314,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
       /**
        * Retrieves a UserInvitation resource. **Note:** New consumer accounts with the customer’s verified
-       * domain created within the previous 48 hours will not appear in the result.
+       * domain created within the previous 48 hours will not appear in the result. This delay also
+       * applies to newly-verified domains.
        *
        * Create a request for the method "userinvitations.get".
        *
@@ -340,7 +341,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Retrieves a UserInvitation resource. **Note:** New consumer accounts with the customer’s
-         * verified domain created within the previous 48 hours will not appear in the result.
+         * verified domain created within the previous 48 hours will not appear in the result. This delay
+         * also applies to newly-verified domains.
          *
          * Create a request for the method "userinvitations.get".
          *
@@ -621,7 +623,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
       /**
        * Retrieves a list of UserInvitation resources. **Note:** New consumer accounts with the customer’s
-       * verified domain created within the previous 48 hours will not appear in the results.
+       * verified domain created within the previous 48 hours will not appear in the result. This delay
+       * also applies to newly-verified domains.
        *
        * Create a request for the method "userinvitations.list".
        *
@@ -647,7 +650,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Retrieves a list of UserInvitation resources. **Note:** New consumer accounts with the
-         * customer’s verified domain created within the previous 48 hours will not appear in the results.
+         * customer’s verified domain created within the previous 48 hours will not appear in the result.
+         * This delay also applies to newly-verified domains.
          *
          * Create a request for the method "userinvitations.list".
          *
@@ -878,7 +882,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * is a valid request, the request creates a `UserInvitation`. **Note:** The `get` and `list`
        * methods have a 48-hour delay where newly-created consumer accounts will not appear in the
        * results. You can still send a `UserInvitation` to those accounts if you know the unmanaged email
-       * address.
+       * address and IsInvitableUser==True.
        *
        * Create a request for the method "userinvitations.send".
        *
@@ -908,7 +912,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * is a valid request, the request creates a `UserInvitation`. **Note:** The `get` and `list`
          * methods have a 48-hour delay where newly-created consumer accounts will not appear in the
          * results. You can still send a `UserInvitation` to those accounts if you know the unmanaged
-         * email address.
+         * email address and IsInvitableUser==True.
          *
          * Create a request for the method "userinvitations.send".
          *

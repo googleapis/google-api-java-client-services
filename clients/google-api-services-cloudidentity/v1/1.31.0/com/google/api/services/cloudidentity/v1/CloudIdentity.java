@@ -400,6 +400,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+     you're using this API for your own organization, use `customers/my_customer` If you're using this
+     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+     customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      public Create setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -537,6 +566,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
               "^devices/[^/]+$");
         }
         this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+     you're using this API for your own organization, use `customers/my_customer` If you're using this
+     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+     customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      public Delete setCustomer(java.lang.String customer) {
+        this.customer = customer;
         return this;
       }
 
@@ -689,6 +747,38 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in
+     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
+     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
+     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+     the customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      public Get setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -793,6 +883,38 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer in
+     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
+     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
+     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+     the customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      public List setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
       }
 
       /**
@@ -1672,6 +1794,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Delete setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -1826,6 +1977,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Get setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -1970,6 +2150,35 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
                 "^devices/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public List setCustomer(java.lang.String customer) {
+          this.customer = customer;
           return this;
         }
 

@@ -17,10 +17,11 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * The `UserInvitation` resource represents an email sent to an unmanaged user account (an email
- * address that shares the domain of the Google Workspace customer but is not managed by it yet),
- * inviting them to join the customer’s domain. If the user accepts the `UserInvitation`, the
- * account will become a managed account.
+ * The `UserInvitation` resource represents an email that can be sent to an unmanaged user account
+ * inviting them to join the customer’s Google Workspace or Cloud Identity account. An unmanaged
+ * account shares an email address domain with the Google Workspace or Cloud Identity account but is
+ * not managed by it yet. If the user accepts the `UserInvitation`, the user account will become
+ * managed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

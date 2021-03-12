@@ -100,8 +100,6 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String fallbackText;
 
   /**
-   * Resource name, in the form "spaces/messages". Example:
-   * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,8 +274,6 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the form "spaces/messages". Example:
-   * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -285,8 +281,6 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name, in the form "spaces/messages". Example:
-   * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
    * @param name name or {@code null} for none
    */
   public Message setName(java.lang.String name) {

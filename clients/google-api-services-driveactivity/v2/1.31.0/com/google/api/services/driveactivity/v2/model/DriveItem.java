@@ -65,7 +65,7 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   private java.lang.String mimeType;
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +171,7 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -179,7 +179,7 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * @param name name or {@code null} for none
    */
   public DriveItem setName(java.lang.String name) {

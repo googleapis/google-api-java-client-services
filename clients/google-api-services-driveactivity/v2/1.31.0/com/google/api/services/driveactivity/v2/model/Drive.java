@@ -30,7 +30,7 @@ package com.google.api.services.driveactivity.v2.model;
 public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * The resource name of the shared drive. The format is `COLLECTION_ID/DRIVE_ID`. Clients should
    * not assume a specific collection ID for this resource name.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * The resource name of the shared drive. The format is `COLLECTION_ID/DRIVE_ID`. Clients should
    * not assume a specific collection ID for this resource name.
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * The resource name of the shared drive. The format is `COLLECTION_ID/DRIVE_ID`. Clients should
    * not assume a specific collection ID for this resource name.
    * @param name name or {@code null} for none
    */

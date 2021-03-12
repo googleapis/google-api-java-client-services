@@ -58,7 +58,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   private Folder folder;
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -148,7 +148,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The target Drive item. The format is "items/ITEM_ID".
+   * The target Drive item. The format is `items/ITEM_ID`.
    * @param name name or {@code null} for none
    */
   public DriveItemReference setName(java.lang.String name) {

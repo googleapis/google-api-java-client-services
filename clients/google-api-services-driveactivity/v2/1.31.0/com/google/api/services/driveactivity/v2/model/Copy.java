@@ -30,14 +30,14 @@ package com.google.api.services.driveactivity.v2.model;
 public final class Copy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The the original object.
+   * The original object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TargetReference originalObject;
 
   /**
-   * The the original object.
+   * The original object.
    * @return value or {@code null} for none
    */
   public TargetReference getOriginalObject() {
@@ -45,7 +45,7 @@ public final class Copy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The the original object.
+   * The original object.
    * @param originalObject originalObject or {@code null} for none
    */
   public Copy setOriginalObject(TargetReference originalObject) {

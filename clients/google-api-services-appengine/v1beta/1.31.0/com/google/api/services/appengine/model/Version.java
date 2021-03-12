@@ -40,7 +40,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private ApiConfigHandler apiConfig;
 
   /**
-   * app_engine_apis allows Second Generation runtimes to access the App Engine APIs.
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,6 +312,15 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String runtimeMainExecutablePath;
 
   /**
+   * The identity that the deployed version will run as. Admin API will use the App Engine Appspot
+   * service account as default if this field is neither provided in app.yaml file nor through CLI
+   * flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Current serving status of this version. Only the versions with a SERVING status create
    * instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to
    * SERVING.
@@ -379,7 +388,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * app_engine_apis allows Second Generation runtimes to access the App Engine APIs.
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAppEngineApis() {
@@ -387,7 +396,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * app_engine_apis allows Second Generation runtimes to access the App Engine APIs.
+   * app_engine_apis allows second generation runtimes to access the App Engine APIs.
    * @param appEngineApis appEngineApis or {@code null} for none
    */
   public Version setAppEngineApis(java.lang.Boolean appEngineApis) {
@@ -979,6 +988,27 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setRuntimeMainExecutablePath(java.lang.String runtimeMainExecutablePath) {
     this.runtimeMainExecutablePath = runtimeMainExecutablePath;
+    return this;
+  }
+
+  /**
+   * The identity that the deployed version will run as. Admin API will use the App Engine Appspot
+   * service account as default if this field is neither provided in app.yaml file nor through CLI
+   * flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * The identity that the deployed version will run as. Admin API will use the App Engine Appspot
+   * service account as default if this field is neither provided in app.yaml file nor through CLI
+   * flag.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public Version setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

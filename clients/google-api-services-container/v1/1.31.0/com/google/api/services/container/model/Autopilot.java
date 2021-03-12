@@ -17,8 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Autopilot is the configuration for Autopilot settings on the cluster. It is the official product
- * name of what is previously known as AutoGKE
+ * Autopilot is the configuration for Autopilot settings on the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

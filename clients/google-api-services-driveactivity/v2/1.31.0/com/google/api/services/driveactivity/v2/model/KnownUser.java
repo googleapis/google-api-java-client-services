@@ -38,7 +38,7 @@ public final class KnownUser extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier for this user that can be used with the People API to get more information. The
-   * format is "people/ACCOUNT_ID". See https://developers.google.com/people/.
+   * format is `people/ACCOUNT_ID`. See https://developers.google.com/people/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class KnownUser extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier for this user that can be used with the People API to get more information. The
-   * format is "people/ACCOUNT_ID". See https://developers.google.com/people/.
+   * format is `people/ACCOUNT_ID`. See https://developers.google.com/people/.
    * @return value or {@code null} for none
    */
   public java.lang.String getPersonName() {
@@ -72,7 +72,7 @@ public final class KnownUser extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier for this user that can be used with the People API to get more information. The
-   * format is "people/ACCOUNT_ID". See https://developers.google.com/people/.
+   * format is `people/ACCOUNT_ID`. See https://developers.google.com/people/.
    * @param personName personName or {@code null} for none
    */
   public KnownUser setPersonName(java.lang.String personName) {

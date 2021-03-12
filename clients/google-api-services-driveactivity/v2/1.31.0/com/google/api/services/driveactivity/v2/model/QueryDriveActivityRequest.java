@@ -31,7 +31,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Return activities for this Drive folder and all children and descendants. The format is
-   * "items/ITEM_ID".
+   * `items/ITEM_ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,19 +48,19 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   /**
    * The filtering for items returned from this query request. The format of the filter string is a
    * sequence of expressions, joined by an optional "AND", where each expression is of the form
-   * "field operator value". Supported fields: - time: Uses numerical operators on date values
-   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - time >
-   * 1452409200000 AND time <= 1492812924310 - time >= "2016-01-10T01:02:03-05:00" -
-   * detail.action_detail_case: Uses the "has" operator (:) and either a singular value or a list of
-   * allowed action types enclosed in parentheses. Examples: - detail.action_detail_case: RENAME -
-   * detail.action_detail_case:(CREATE EDIT) - -detail.action_detail_case:MOVE
+   * "field operator value". Supported fields: - `time`: Uses numerical operators on date values
+   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
+   * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
+   * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
+   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
+   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Return activities for this Drive item. The format is "items/ITEM_ID".
+   * Return activities for this Drive item. The format is `items/ITEM_ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Return activities for this Drive folder and all children and descendants. The format is
-   * "items/ITEM_ID".
+   * `items/ITEM_ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAncestorName() {
@@ -95,7 +95,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
 
   /**
    * Return activities for this Drive folder and all children and descendants. The format is
-   * "items/ITEM_ID".
+   * `items/ITEM_ID`.
    * @param ancestorName ancestorName or {@code null} for none
    */
   public QueryDriveActivityRequest setAncestorName(java.lang.String ancestorName) {
@@ -125,12 +125,12 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   /**
    * The filtering for items returned from this query request. The format of the filter string is a
    * sequence of expressions, joined by an optional "AND", where each expression is of the form
-   * "field operator value". Supported fields: - time: Uses numerical operators on date values
-   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - time >
-   * 1452409200000 AND time <= 1492812924310 - time >= "2016-01-10T01:02:03-05:00" -
-   * detail.action_detail_case: Uses the "has" operator (:) and either a singular value or a list of
-   * allowed action types enclosed in parentheses. Examples: - detail.action_detail_case: RENAME -
-   * detail.action_detail_case:(CREATE EDIT) - -detail.action_detail_case:MOVE
+   * "field operator value". Supported fields: - `time`: Uses numerical operators on date values
+   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
+   * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
+   * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
+   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
+   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -140,12 +140,12 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   /**
    * The filtering for items returned from this query request. The format of the filter string is a
    * sequence of expressions, joined by an optional "AND", where each expression is of the form
-   * "field operator value". Supported fields: - time: Uses numerical operators on date values
-   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - time >
-   * 1452409200000 AND time <= 1492812924310 - time >= "2016-01-10T01:02:03-05:00" -
-   * detail.action_detail_case: Uses the "has" operator (:) and either a singular value or a list of
-   * allowed action types enclosed in parentheses. Examples: - detail.action_detail_case: RENAME -
-   * detail.action_detail_case:(CREATE EDIT) - -detail.action_detail_case:MOVE
+   * "field operator value". Supported fields: - `time`: Uses numerical operators on date values
+   * either in terms of milliseconds since Jan 1, 1970 or in RFC 3339 format. Examples: - `time >
+   * 1452409200000 AND time <= 1492812924310` - `time >= "2016-01-10T01:02:03-05:00"` -
+   * `detail.action_detail_case`: Uses the "has" operator (:) and either a singular value or a list
+   * of allowed action types enclosed in parentheses. Examples: - `detail.action_detail_case:
+   * RENAME` - `detail.action_detail_case:(CREATE EDIT)` - `-detail.action_detail_case:MOVE`
    * @param filter filter or {@code null} for none
    */
   public QueryDriveActivityRequest setFilter(java.lang.String filter) {
@@ -154,7 +154,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * Return activities for this Drive item. The format is "items/ITEM_ID".
+   * Return activities for this Drive item. The format is `items/ITEM_ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemName() {
@@ -162,7 +162,7 @@ public final class QueryDriveActivityRequest extends com.google.api.client.json.
   }
 
   /**
-   * Return activities for this Drive item. The format is "items/ITEM_ID".
+   * Return activities for this Drive item. The format is `items/ITEM_ID`.
    * @param itemName itemName or {@code null} for none
    */
   public QueryDriveActivityRequest setItemName(java.lang.String itemName) {

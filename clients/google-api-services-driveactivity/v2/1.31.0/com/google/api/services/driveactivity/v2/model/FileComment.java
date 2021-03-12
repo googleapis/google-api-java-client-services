@@ -48,7 +48,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The link to the discussion thread containing this comment, for example,
-   * "https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID".
+   * `https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The link to the discussion thread containing this comment, for example,
-   * "https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID".
+   * `https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkToDiscussion() {
@@ -112,7 +112,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The link to the discussion thread containing this comment, for example,
-   * "https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID".
+   * `https://docs.google.com/DOCUMENT_ID/edit?disco=THREAD_ID`.
    * @param linkToDiscussion linkToDiscussion or {@code null} for none
    */
   public FileComment setLinkToDiscussion(java.lang.String linkToDiscussion) {

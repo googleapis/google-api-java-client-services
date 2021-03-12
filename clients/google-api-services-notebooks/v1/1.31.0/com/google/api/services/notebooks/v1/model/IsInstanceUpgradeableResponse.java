@@ -30,6 +30,14 @@ package com.google.api.services.notebooks.v1.model;
 public final class IsInstanceUpgradeableResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The new image self link this instance will be upgraded to if calling the upgrade endpoint. This
+   * field will only be populated if field upgradeable is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String upgradeImage;
+
+  /**
    * Additional information about upgrade.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class IsInstanceUpgradeableResponse extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean upgradeable;
+
+  /**
+   * The new image self link this instance will be upgraded to if calling the upgrade endpoint. This
+   * field will only be populated if field upgradeable is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpgradeImage() {
+    return upgradeImage;
+  }
+
+  /**
+   * The new image self link this instance will be upgraded to if calling the upgrade endpoint. This
+   * field will only be populated if field upgradeable is true.
+   * @param upgradeImage upgradeImage or {@code null} for none
+   */
+  public IsInstanceUpgradeableResponse setUpgradeImage(java.lang.String upgradeImage) {
+    this.upgradeImage = upgradeImage;
+    return this;
+  }
 
   /**
    * Additional information about upgrade.

@@ -31,6 +31,13 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class CreativeServingDecision extends com.google.api.client.json.GenericJson {
 
   /**
+   * The detected ad technology providers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdTechnologyProviders adTechnologyProviders;
+
+  /**
    * The policy compliance of this creative in China. When approved or disapproved, this applies to
    * both deals and open auction in China. When pending review, this creative is allowed to serve
    * for deals but not for open auction.
@@ -161,6 +168,23 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private PolicyCompliance russiaPolicyCompliance;
+
+  /**
+   * The detected ad technology providers.
+   * @return value or {@code null} for none
+   */
+  public AdTechnologyProviders getAdTechnologyProviders() {
+    return adTechnologyProviders;
+  }
+
+  /**
+   * The detected ad technology providers.
+   * @param adTechnologyProviders adTechnologyProviders or {@code null} for none
+   */
+  public CreativeServingDecision setAdTechnologyProviders(AdTechnologyProviders adTechnologyProviders) {
+    this.adTechnologyProviders = adTechnologyProviders;
+    return this;
+  }
 
   /**
    * The policy compliance of this creative in China. When approved or disapproved, this applies to

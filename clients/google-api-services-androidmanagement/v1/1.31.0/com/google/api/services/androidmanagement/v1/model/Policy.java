@@ -393,6 +393,19 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean networkResetDisabled;
 
   /**
+   * This feature is not generally available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OncCertificateProvider> oncCertificateProviders;
+
+  static {
+    // hack to force ProGuard to consider OncCertificateProvider used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OncCertificateProvider.class);
+  }
+
+  /**
    * Network configuration for the device. See configure networks for more information.
    * The value may be {@code null}.
    */
@@ -1508,6 +1521,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setNetworkResetDisabled(java.lang.Boolean networkResetDisabled) {
     this.networkResetDisabled = networkResetDisabled;
+    return this;
+  }
+
+  /**
+   * This feature is not generally available.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OncCertificateProvider> getOncCertificateProviders() {
+    return oncCertificateProviders;
+  }
+
+  /**
+   * This feature is not generally available.
+   * @param oncCertificateProviders oncCertificateProviders or {@code null} for none
+   */
+  public Policy setOncCertificateProviders(java.util.List<OncCertificateProvider> oncCertificateProviders) {
+    this.oncCertificateProviders = oncCertificateProviders;
     return this;
   }
 

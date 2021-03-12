@@ -118,8 +118,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.String minCpuPlatform;
 
   /**
-   * Optional. The number of VM instances in the instance group. For master instance groups, must be
-   * set to 1.
+   * Optional. The number of VM instances in the instance group. For HA cluster master_config
+   * groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,8 +324,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The number of VM instances in the instance group. For master instance groups, must be
-   * set to 1.
+   * Optional. The number of VM instances in the instance group. For HA cluster master_config
+   * groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumInstances() {
@@ -333,8 +333,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The number of VM instances in the instance group. For master instance groups, must be
-   * set to 1.
+   * Optional. The number of VM instances in the instance group. For HA cluster master_config
+   * groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
    * @param numInstances numInstances or {@code null} for none
    */
   public InstanceGroupConfig setNumInstances(java.lang.Integer numInstances) {

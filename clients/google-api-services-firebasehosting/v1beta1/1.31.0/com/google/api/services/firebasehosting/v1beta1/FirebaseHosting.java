@@ -335,6 +335,452 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
     public class Sites {
 
       /**
+       * Creates a new Site. Sites take several minutes to propagate through Firebase systems.
+       *
+       * Create a request for the method "sites.create".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent Project of a Site, e.g.: `projects/{project-number}`.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Site content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Site> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/sites";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a new Site. Sites take several minutes to propagate through Firebase systems.
+         *
+         * Create a request for the method "sites.create".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent Project of a Site, e.g.: `projects/{project-number}`.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Site content) {
+          super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Site.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent Project of a Site, e.g.: `projects/{project-number}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent Project of a Site, e.g.: `projects/{project-number}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent Project of a Site, e.g.: `projects/{project-number}`. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. Immutable. A globally unique ID to identify the Site. The ID must also be a
+         * valid domain name label.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String siteId;
+
+        /** Required. Immutable. A globally unique ID to identify the Site. The ID must also be a valid domain
+       name label.
+         */
+        public java.lang.String getSiteId() {
+          return siteId;
+        }
+
+        /**
+         * Required. Immutable. A globally unique ID to identify the Site. The ID must also be a
+         * valid domain name label.
+         */
+        public Create setSiteId(java.lang.String siteId) {
+          this.siteId = siteId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a Site from the specified parent Project.
+       *
+       * Create a request for the method "sites.delete".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       *        /{site-id}`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+        /**
+         * Deletes a Site from the specified parent Project.
+         *
+         * Create a request for the method "sites.delete".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       *        /{site-id}`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified resource name of the Site, e.g.: `projects/{project-
+         * number}/sites/{site-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       /{site-id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully qualified resource name of the Site, e.g.: `projects/{project-
+         * number}/sites/{site-id}`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the Site identified by the specified resource name.
+       *
+       * Create a request for the method "sites.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       *        /{site-id}`. As a `site-id` is a globally unique identifier, you can also use the unique
+       *        sub-collection resource access pattern as well: `projects/-/sites/{site-id}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Site> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+        /**
+         * Gets the Site identified by the specified resource name.
+         *
+         * Create a request for the method "sites.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       *        /{site-id}`. As a `site-id` is a globally unique identifier, you can also use the unique
+       *        sub-collection resource access pattern as well: `projects/-/sites/{site-id}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Site.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified resource name of the Site, e.g.: `projects/{project-
+         * number}/sites/{site-id}`. As a `site-id` is a globally unique identifier, you can also
+         * use the unique sub-collection resource access pattern as well: `projects/-/sites/{site-
+         * id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully qualified resource name of the Site, e.g.: `projects/{project-number}/sites
+       /{site-id}`. As a `site-id` is a globally unique identifier, you can also use the unique sub-
+       collection resource access pattern as well: `projects/-/sites/{site-id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully qualified resource name of the Site, e.g.: `projects/{project-
+         * number}/sites/{site-id}`. As a `site-id` is a globally unique identifier, you can also
+         * use the unique sub-collection resource access pattern as well: `projects/-/sites/{site-
+         * id}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the Hosting metadata for a specific site.
        *
        * Create a request for the method "sites.getConfig".
@@ -477,6 +923,357 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         @Override
         public GetConfig set(String parameterName, Object value) {
           return (GetConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists each Site associated with the specified parent Project. Sites are returned in a consistent,
+       * but undefined, order to facilitate pagination. Site data might be out of sync by a few seconds.
+       * If you require up-to-date data, use GetSite.
+       *
+       * Create a request for the method "sites.list".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The Project that owns the sites to list, e.g.: `projects/{project-number}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListSitesResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/sites";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists each Site associated with the specified parent Project. Sites are returned in a
+         * consistent, but undefined, order to facilitate pagination. Site data might be out of sync by a
+         * few seconds. If you require up-to-date data, use GetSite.
+         *
+         * Create a request for the method "sites.list".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The Project that owns the sites to list, e.g.: `projects/{project-number}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListSitesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Project that owns the sites to list, e.g.: `projects/{project-number}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The Project that owns the sites to list, e.g.: `projects/{project-number}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The Project that owns the sites to list, e.g.: `projects/{project-number}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of sites to return in the response. The server may return
+         * fewer Sites at its discretion. If you don't specify a value or specify one that's too
+         * large, the server can select its own value.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of sites to return in the response. The server may return fewer Sites
+       at its discretion. If you don't specify a value or specify one that's too large, the server can
+       select its own value.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of sites to return in the response. The server may return
+         * fewer Sites at its discretion. If you don't specify a value or specify one that's too
+         * large, the server can select its own value.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token from a previous call to `ListSites` that tells the server where to
+         * resume listing.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token from a previous call to `ListSites` that tells the server where to resume
+       listing.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token from a previous call to `ListSites` that tells the server where to
+         * resume listing.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates attributes of the Site identified by the specified resource name.
+       *
+       * Create a request for the method "sites.patch".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
+       *        number}/sites/{site-id}`.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Site content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Site> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+        /**
+         * Updates attributes of the Site identified by the specified resource name.
+         *
+         * Create a request for the method "sites.patch".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
+       *        number}/sites/{site-id}`.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Site content) {
+          super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Site.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects
+         * /{project-number}/sites/{site-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
+       number}/sites/{site-id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects
+         * /{project-number}/sites/{site-id}`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** A mask that specifies which Site fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A mask that specifies which Site fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** A mask that specifies which Site fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
       /**

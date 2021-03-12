@@ -2702,8 +2702,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name, in the form "spaces/messages". Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+       * @param name
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2730,8 +2729,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name, in the form "spaces/messages". Example:
-       *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * @param name
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -2800,24 +2798,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Resource name, in the form "spaces/messages". Example:
-         * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name, in the form "spaces/messages". Example:
-       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Resource name, in the form "spaces/messages". Example:
-         * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
-         */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

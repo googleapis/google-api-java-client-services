@@ -52,7 +52,9 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's
    * time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the
    * timestamp when the message was sent, using the RFC3339 time format for comparisons, from the
-   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
+   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the
+   * timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for
+   * comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
    * care center that the message came from, from the MSH-4 segment. For example, `send_facility =
    * "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID
    * of the given value and type in the PID-2, PID-3, or PID-4 segments. For example,
@@ -105,7 +107,9 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's
    * time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the
    * timestamp when the message was sent, using the RFC3339 time format for comparisons, from the
-   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
+   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the
+   * timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for
+   * comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
    * care center that the message came from, from the MSH-4 segment. For example, `send_facility =
    * "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID
    * of the given value and type in the PID-2, PID-3, or PID-4 segments. For example,
@@ -141,7 +145,9 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's
    * time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the
    * timestamp when the message was sent, using the RFC3339 time format for comparisons, from the
-   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
+   * MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `create_time`, the
+   * timestamp when the message was created in the HL7v2 store. Use the RFC3339 time format for
+   * comparisons. For example, `create_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`, the
    * care center that the message came from, from the MSH-4 segment. For example, `send_facility =
    * "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient having an ID
    * of the given value and type in the PID-2, PID-3, or PID-4 segments. For example,

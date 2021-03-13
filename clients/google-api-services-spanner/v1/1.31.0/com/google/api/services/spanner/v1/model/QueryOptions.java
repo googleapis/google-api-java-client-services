@@ -30,34 +30,83 @@ package com.google.api.services.spanner.v1.model;
 public final class QueryOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Query optimizer statistics package to use. This parameter allows individual queries to use a
+   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
+   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
+   * package set at the database level options, or latest if the database option is not set. The
+   * statistics package requested by the query has to be exempt from garbage collection. This can be
+   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
+   * ``` The list of available statistics packages can be queried from
+   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
+   * optimizer statistics package or with statistics package that allows garbage collection fails
+   * with an `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optimizerStatisticsPackage;
+
+  /**
    * An option to control the selection of optimizer version. This parameter allows individual
-   * queries to pick different query optimizer versions. Specifying "latest" as a value instructs
+   * queries to pick different query optimizer versions. Specifying `latest` as a value instructs
    * Cloud Spanner to use the latest supported query optimizer version. If not specified, Cloud
-   * Spanner uses optimizer version set at the database level options. Any other positive integer
-   * (from the list of supported optimizer versions) overrides the default optimizer version for
-   * query execution. The list of supported optimizer versions can be queried from
+   * Spanner uses the optimizer version set at the database level options. Any other positive
+   * integer (from the list of supported optimizer versions) overrides the default optimizer version
+   * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version will fail with a syntax error (`INVALID_ARGUMENT`) status. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String optimizerVersion;
 
   /**
+   * Query optimizer statistics package to use. This parameter allows individual queries to use a
+   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
+   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
+   * package set at the database level options, or latest if the database option is not set. The
+   * statistics package requested by the query has to be exempt from garbage collection. This can be
+   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
+   * ``` The list of available statistics packages can be queried from
+   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
+   * optimizer statistics package or with statistics package that allows garbage collection fails
+   * with an `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptimizerStatisticsPackage() {
+    return optimizerStatisticsPackage;
+  }
+
+  /**
+   * Query optimizer statistics package to use. This parameter allows individual queries to use a
+   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
+   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
+   * package set at the database level options, or latest if the database option is not set. The
+   * statistics package requested by the query has to be exempt from garbage collection. This can be
+   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
+   * ``` The list of available statistics packages can be queried from
+   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
+   * optimizer statistics package or with statistics package that allows garbage collection fails
+   * with an `INVALID_ARGUMENT` error.
+   * @param optimizerStatisticsPackage optimizerStatisticsPackage or {@code null} for none
+   */
+  public QueryOptions setOptimizerStatisticsPackage(java.lang.String optimizerStatisticsPackage) {
+    this.optimizerStatisticsPackage = optimizerStatisticsPackage;
+    return this;
+  }
+
+  /**
    * An option to control the selection of optimizer version. This parameter allows individual
-   * queries to pick different query optimizer versions. Specifying "latest" as a value instructs
+   * queries to pick different query optimizer versions. Specifying `latest` as a value instructs
    * Cloud Spanner to use the latest supported query optimizer version. If not specified, Cloud
-   * Spanner uses optimizer version set at the database level options. Any other positive integer
-   * (from the list of supported optimizer versions) overrides the default optimizer version for
-   * query execution. The list of supported optimizer versions can be queried from
+   * Spanner uses the optimizer version set at the database level options. Any other positive
+   * integer (from the list of supported optimizer versions) overrides the default optimizer version
+   * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version will fail with a syntax error (`INVALID_ARGUMENT`) status. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizerVersion() {
@@ -66,16 +115,15 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * An option to control the selection of optimizer version. This parameter allows individual
-   * queries to pick different query optimizer versions. Specifying "latest" as a value instructs
+   * queries to pick different query optimizer versions. Specifying `latest` as a value instructs
    * Cloud Spanner to use the latest supported query optimizer version. If not specified, Cloud
-   * Spanner uses optimizer version set at the database level options. Any other positive integer
-   * (from the list of supported optimizer versions) overrides the default optimizer version for
-   * query execution. The list of supported optimizer versions can be queried from
+   * Spanner uses the optimizer version set at the database level options. Any other positive
+   * integer (from the list of supported optimizer versions) overrides the default optimizer version
+   * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version will fail with a syntax error (`INVALID_ARGUMENT`) status. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * @param optimizerVersion optimizerVersion or {@code null} for none
    */
   public QueryOptions setOptimizerVersion(java.lang.String optimizerVersion) {

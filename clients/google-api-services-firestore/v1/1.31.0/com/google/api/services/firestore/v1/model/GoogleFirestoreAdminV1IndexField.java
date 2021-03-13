@@ -46,8 +46,8 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   private java.lang.String fieldPath;
 
   /**
-   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=,
-   * >, >=.
+   * Indicates that this field supports ordering by the specified order or comparing using =, !=, <,
+   * <=, >, >=.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   }
 
   /**
-   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=,
-   * >, >=.
+   * Indicates that this field supports ordering by the specified order or comparing using =, !=, <,
+   * <=, >, >=.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrder() {
@@ -99,8 +99,8 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   }
 
   /**
-   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=,
-   * >, >=.
+   * Indicates that this field supports ordering by the specified order or comparing using =, !=, <,
+   * <=, >, >=.
    * @param order order or {@code null} for none
    */
   public GoogleFirestoreAdminV1IndexField setOrder(java.lang.String order) {

@@ -1262,22 +1262,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of TagBindings to return in the response. This is currently
-       * not used by the server and will return the full page even if a size is specified.
+       * Optional. The maximum number of TagBindings to return in the response. The server allows a
+       * maximum of 300 TagBindings to return. If unspecified, the server will use 100 as the
+       * default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of TagBindings to return in the response. This is currently not used
-     by the server and will return the full page even if a size is specified.
+      /** Optional. The maximum number of TagBindings to return in the response. The server allows a maximum
+     of 300 TagBindings to return. If unspecified, the server will use 100 as the default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of TagBindings to return in the response. This is currently
-       * not used by the server and will return the full page even if a size is specified.
+       * Optional. The maximum number of TagBindings to return in the response. The server allows a
+       * maximum of 300 TagBindings to return. If unspecified, the server will use 100 as the
+       * default.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2059,22 +2061,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of TagKeys to return in the response. This is currently not
-       * used by the server and will return the full page even if a size is specified currently.
+       * Optional. The maximum number of TagKeys to return in the response. The server allows a
+       * maximum of 300 TagKeys to return. If unspecified, the server will use 100 as the default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of TagKeys to return in the response. This is currently not used by
-     the server and will return the full page even if a size is specified currently.
+      /** Optional. The maximum number of TagKeys to return in the response. The server allows a maximum of
+     300 TagKeys to return. If unspecified, the server will use 100 as the default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of TagKeys to return in the response. This is currently not
-       * used by the server and will return the full page even if a size is specified currently.
+       * Optional. The maximum number of TagKeys to return in the response. The server allows a
+       * maximum of 300 TagKeys to return. If unspecified, the server will use 100 as the default.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2083,13 +2085,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagKey` that indicates
-       * where this listing should continue from. This is currently not used by the server.
+       * where this listing should continue from.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** Optional. A pagination token returned from a previous call to `ListTagKey` that indicates where
-     this listing should continue from. This is currently not used by the server.
+     this listing should continue from.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -2097,7 +2099,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagKey` that indicates
-       * where this listing should continue from. This is currently not used by the server.
+       * where this listing should continue from.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -3325,22 +3327,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of TagValues to return in the response. This is currently not
-       * used by the server and will return the full page even if a size is specified currently.
+       * Optional. The maximum number of TagValues to return in the response. The server allows a
+       * maximum of 300 TagValues to return. If unspecified, the server will use 100 as the default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of TagValues to return in the response. This is currently not used by
-     the server and will return the full page even if a size is specified currently.
+      /** Optional. The maximum number of TagValues to return in the response. The server allows a maximum of
+     300 TagValues to return. If unspecified, the server will use 100 as the default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of TagValues to return in the response. This is currently not
-       * used by the server and will return the full page even if a size is specified currently.
+       * Optional. The maximum number of TagValues to return in the response. The server allows a
+       * maximum of 300 TagValues to return. If unspecified, the server will use 100 as the default.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -3349,14 +3351,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagValues` that
-       * indicates where this listing should continue from. This is currently not used by the
-       * server.
+       * indicates where this listing should continue from.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** Optional. A pagination token returned from a previous call to `ListTagValues` that indicates where
-     this listing should continue from. This is currently not used by the server.
+     this listing should continue from.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -3364,8 +3365,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Optional. A pagination token returned from a previous call to `ListTagValues` that
-       * indicates where this listing should continue from. This is currently not used by the
-       * server.
+       * indicates where this listing should continue from.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

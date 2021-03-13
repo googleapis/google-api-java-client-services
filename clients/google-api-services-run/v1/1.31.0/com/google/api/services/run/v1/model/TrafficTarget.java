@@ -78,8 +78,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing tagged traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
-   * Run.
+   * may not contain anything else (e.g. basic auth, url path, etc.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,8 +194,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing tagged traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
-   * Run.
+   * may not contain anything else (e.g. basic auth, url path, etc.)
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -206,8 +204,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * Output only. URL displays the URL for accessing tagged traffic targets. URL is displayed in
    * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
-   * may not contain anything else (e.g. basic auth, url path, etc. Not currently supported in Cloud
-   * Run.
+   * may not contain anything else (e.g. basic auth, url path, etc.)
    * @param url url or {@code null} for none
    */
   public TrafficTarget setUrl(java.lang.String url) {

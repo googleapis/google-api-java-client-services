@@ -32,8 +32,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
 
   /**
    * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue. This is currently not used, but the server may at any point start
-   * supplying a valid token.
+   * listing should continue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +47,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
 
   /**
    * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue. This is currently not used, but the server may at any point start
-   * supplying a valid token.
+   * listing should continue.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -58,8 +56,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
 
   /**
    * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue. This is currently not used, but the server may at any point start
-   * supplying a valid token.
+   * listing should continue.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTagBindingsResponse setNextPageToken(java.lang.String nextPageToken) {

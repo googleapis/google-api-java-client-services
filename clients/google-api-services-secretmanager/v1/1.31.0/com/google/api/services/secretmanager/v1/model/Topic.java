@@ -17,7 +17,8 @@
 package com.google.api.services.secretmanager.v1.model;
 
 /**
- * A Pub/Sub topic which SM will publish to when control plane events occur on this secret.
+ * A Pub/Sub topic which Secret Manager will publish to when control plane events occur on this
+ * secret.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:

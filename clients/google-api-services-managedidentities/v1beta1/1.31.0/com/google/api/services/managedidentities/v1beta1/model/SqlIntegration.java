@@ -47,8 +47,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The full resource name of an integrated sql instance Reference to:
-   * http://google3/google/cloud/sql/v1/cloud_sql_resources.proto?l=351=354416019
+   * The full resource name of an integrated sql instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +107,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The full resource name of an integrated sql instance Reference to:
-   * http://google3/google/cloud/sql/v1/cloud_sql_resources.proto?l=351=354416019
+   * The full resource name of an integrated sql instance
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlInstance() {
@@ -117,8 +115,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The full resource name of an integrated sql instance Reference to:
-   * http://google3/google/cloud/sql/v1/cloud_sql_resources.proto?l=351=354416019
+   * The full resource name of an integrated sql instance
    * @param sqlInstance sqlInstance or {@code null} for none
    */
   public SqlIntegration setSqlInstance(java.lang.String sqlInstance) {

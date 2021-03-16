@@ -49,8 +49,9 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
-   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`pspFee`"
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" -
+   * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
 
   /**
    * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
-   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`" -
+   * "`lumpSumCorrectionAmount`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +101,9 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
-   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`pspFee`"
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" -
+   * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -120,8 +123,9 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
-   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`pspFee`"
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" -
+   * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
    * @param description description or {@code null} for none
    */
   public SettlementTransactionAmount setDescription(java.lang.String description) {
@@ -148,7 +152,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
 
   /**
    * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
-   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`" -
+   * "`lumpSumCorrectionAmount`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -157,7 +162,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
 
   /**
    * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
-   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`" -
+   * "`lumpSumCorrectionAmount`"
    * @param type type or {@code null} for none
    */
   public SettlementTransactionAmount setType(java.lang.String type) {

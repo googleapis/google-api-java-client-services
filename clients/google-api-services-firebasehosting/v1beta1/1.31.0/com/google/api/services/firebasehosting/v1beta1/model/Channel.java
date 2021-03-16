@@ -54,8 +54,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The fully-qualified identifier for the channel, in the format: sites/
-   * SITE_NAME/channels/CHANNEL_ID
+   * The fully-qualified resource name for the channel, in the format: sites/
+   * SITE_ID/channels/CHANNEL_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +158,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier for the channel, in the format: sites/
-   * SITE_NAME/channels/CHANNEL_ID
+   * The fully-qualified resource name for the channel, in the format: sites/
+   * SITE_ID/channels/CHANNEL_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -167,8 +167,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier for the channel, in the format: sites/
-   * SITE_NAME/channels/CHANNEL_ID
+   * The fully-qualified resource name for the channel, in the format: sites/
+   * SITE_ID/channels/CHANNEL_ID
    * @param name name or {@code null} for none
    */
   public Channel setName(java.lang.String name) {

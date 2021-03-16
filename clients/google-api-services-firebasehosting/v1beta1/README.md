@@ -1,6 +1,6 @@
 # Firebase Hosting API Client Library for Java
 
-The Firebase Hosting REST API enables programmatic and customizable deployments to your Firebase-hosted sites. Use this REST API to deploy new or updated hosting configurations and content files.
+The Firebase Hosting REST API enables programmatic and customizable management and deployments to your Firebase-hosted sites. Use this REST API to create and manage channels and sites as well as to deploy new or updated hosting configurations and content files.
 
 This page contains information about getting started with the Firebase Hosting API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-firebasehosting</artifactId>
-      <version>v1beta1-rev20210311-1.31.0</version>
+      <version>v1beta1-rev20210315-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-firebasehosting:v1beta1-rev20210311-1.31.0'
+  compile 'com.google.apis:google-api-services-firebasehosting:v1beta1-rev20210315-1.31.0'
 }
 ```
 

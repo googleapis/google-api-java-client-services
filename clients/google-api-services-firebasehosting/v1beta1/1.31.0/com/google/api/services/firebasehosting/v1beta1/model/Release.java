@@ -39,10 +39,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The unique identifier for the release, in either of the following formats: -
-   * sites/SITE_NAME/releases/RELEASE_ID - sites/SITE_NAME/channels/CHANNEL_ID/releases/RELEASE_ID
-   * This name is provided in the response body when you call
-   * [`releases.create`](sites.releases/create) or
-   * [`channels.releases.create`](sites.channels.releases/create).
+   * sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This
+   * name is provided in the response body when you call [`releases.create`](sites.releases/create)
+   * or [`channels.releases.create`](sites.channels.releases/create).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +95,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The unique identifier for the release, in either of the following formats: -
-   * sites/SITE_NAME/releases/RELEASE_ID - sites/SITE_NAME/channels/CHANNEL_ID/releases/RELEASE_ID
-   * This name is provided in the response body when you call
-   * [`releases.create`](sites.releases/create) or
-   * [`channels.releases.create`](sites.channels.releases/create).
+   * sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This
+   * name is provided in the response body when you call [`releases.create`](sites.releases/create)
+   * or [`channels.releases.create`](sites.channels.releases/create).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,10 +106,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The unique identifier for the release, in either of the following formats: -
-   * sites/SITE_NAME/releases/RELEASE_ID - sites/SITE_NAME/channels/CHANNEL_ID/releases/RELEASE_ID
-   * This name is provided in the response body when you call
-   * [`releases.create`](sites.releases/create) or
-   * [`channels.releases.create`](sites.channels.releases/create).
+   * sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This
+   * name is provided in the response body when you call [`releases.create`](sites.releases/create)
+   * or [`channels.releases.create`](sites.channels.releases/create).
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {

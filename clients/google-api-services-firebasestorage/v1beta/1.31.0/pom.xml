@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-firebasehosting</artifactId>
-  <version>v1beta1-rev20210315-1.31.0</version>
-  <name>Firebase Hosting API v1beta1-rev20210315-1.31.0</name>
+  <artifactId>google-api-services-firebasestorage</artifactId>
+  <version>v1beta-rev20210309-1.31.0</version>
+  <name>Cloud Storage for Firebase API v1beta-rev20210309-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -67,7 +67,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.api.services.firebasehosting</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.api.services.firebasestorage</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Firebase Hosting API ${project.version}</doctitle>
-          <windowtitle>Firebase Hosting API ${project.version}</windowtitle>
+          <doctitle>Cloud Storage for Firebase API ${project.version}</doctitle>
+          <windowtitle>Cloud Storage for Firebase API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

@@ -56,7 +56,7 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. The unique identifier for the version to be cloned, in the format:
-   * sites/SITE_NAME/versions/VERSION_ID
+   * sites/SITE_ID/versions/VERSION_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. The unique identifier for the version to be cloned, in the format:
-   * sites/SITE_NAME/versions/VERSION_ID
+   * sites/SITE_ID/versions/VERSION_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceVersion() {
@@ -132,7 +132,7 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. The unique identifier for the version to be cloned, in the format:
-   * sites/SITE_NAME/versions/VERSION_ID
+   * sites/SITE_ID/versions/VERSION_ID
    * @param sourceVersion sourceVersion or {@code null} for none
    */
   public CloneVersionRequest setSourceVersion(java.lang.String sourceVersion) {

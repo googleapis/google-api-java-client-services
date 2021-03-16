@@ -1856,6 +1856,305 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class People {
 
     /**
+     * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
+     *
+     * Create a request for the method "people.batchCreateContacts".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link BatchCreateContacts#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.people.v1.model.BatchCreateContactsRequest}
+     * @return the request
+     */
+    public BatchCreateContacts batchCreateContacts(com.google.api.services.people.v1.model.BatchCreateContactsRequest content) throws java.io.IOException {
+      BatchCreateContacts result = new BatchCreateContacts(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchCreateContacts extends PeopleServiceRequest<com.google.api.services.people.v1.model.BatchCreateContactsResponse> {
+
+      private static final String REST_PATH = "v1/people:batchCreateContacts";
+
+      /**
+       * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
+       *
+       * Create a request for the method "people.batchCreateContacts".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link BatchCreateContacts#execute()} method to invoke the remote
+       * operation. <p> {@link BatchCreateContacts#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.people.v1.model.BatchCreateContactsRequest}
+       * @since 1.13
+       */
+      protected BatchCreateContacts(com.google.api.services.people.v1.model.BatchCreateContactsRequest content) {
+        super(PeopleService.this, "POST", REST_PATH, content, com.google.api.services.people.v1.model.BatchCreateContactsResponse.class);
+      }
+
+      @Override
+      public BatchCreateContacts set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchCreateContacts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchCreateContacts setAccessToken(java.lang.String accessToken) {
+        return (BatchCreateContacts) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchCreateContacts setAlt(java.lang.String alt) {
+        return (BatchCreateContacts) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchCreateContacts setCallback(java.lang.String callback) {
+        return (BatchCreateContacts) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchCreateContacts setFields(java.lang.String fields) {
+        return (BatchCreateContacts) super.setFields(fields);
+      }
+
+      @Override
+      public BatchCreateContacts setKey(java.lang.String key) {
+        return (BatchCreateContacts) super.setKey(key);
+      }
+
+      @Override
+      public BatchCreateContacts setOauthToken(java.lang.String oauthToken) {
+        return (BatchCreateContacts) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchCreateContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchCreateContacts) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchCreateContacts setQuotaUser(java.lang.String quotaUser) {
+        return (BatchCreateContacts) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchCreateContacts setUploadType(java.lang.String uploadType) {
+        return (BatchCreateContacts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchCreateContacts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchCreateContacts) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchCreateContacts set(String parameterName, Object value) {
+        return (BatchCreateContacts) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Delete a batch of contacts. Any non-contact data will not be deleted.
+     *
+     * Create a request for the method "people.batchDeleteContacts".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link BatchDeleteContacts#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.people.v1.model.BatchDeleteContactsRequest}
+     * @return the request
+     */
+    public BatchDeleteContacts batchDeleteContacts(com.google.api.services.people.v1.model.BatchDeleteContactsRequest content) throws java.io.IOException {
+      BatchDeleteContacts result = new BatchDeleteContacts(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchDeleteContacts extends PeopleServiceRequest<com.google.api.services.people.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/people:batchDeleteContacts";
+
+      /**
+       * Delete a batch of contacts. Any non-contact data will not be deleted.
+       *
+       * Create a request for the method "people.batchDeleteContacts".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link BatchDeleteContacts#execute()} method to invoke the remote
+       * operation. <p> {@link BatchDeleteContacts#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.people.v1.model.BatchDeleteContactsRequest}
+       * @since 1.13
+       */
+      protected BatchDeleteContacts(com.google.api.services.people.v1.model.BatchDeleteContactsRequest content) {
+        super(PeopleService.this, "POST", REST_PATH, content, com.google.api.services.people.v1.model.Empty.class);
+      }
+
+      @Override
+      public BatchDeleteContacts set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchDeleteContacts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchDeleteContacts setAccessToken(java.lang.String accessToken) {
+        return (BatchDeleteContacts) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchDeleteContacts setAlt(java.lang.String alt) {
+        return (BatchDeleteContacts) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchDeleteContacts setCallback(java.lang.String callback) {
+        return (BatchDeleteContacts) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchDeleteContacts setFields(java.lang.String fields) {
+        return (BatchDeleteContacts) super.setFields(fields);
+      }
+
+      @Override
+      public BatchDeleteContacts setKey(java.lang.String key) {
+        return (BatchDeleteContacts) super.setKey(key);
+      }
+
+      @Override
+      public BatchDeleteContacts setOauthToken(java.lang.String oauthToken) {
+        return (BatchDeleteContacts) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchDeleteContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchDeleteContacts) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchDeleteContacts setQuotaUser(java.lang.String quotaUser) {
+        return (BatchDeleteContacts) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchDeleteContacts setUploadType(java.lang.String uploadType) {
+        return (BatchDeleteContacts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchDeleteContacts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchDeleteContacts) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchDeleteContacts set(String parameterName, Object value) {
+        return (BatchDeleteContacts) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update a batch of contacts and return a map of resource names to PersonResponses for the updated
+     * contacts.
+     *
+     * Create a request for the method "people.batchUpdateContacts".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link BatchUpdateContacts#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.people.v1.model.BatchUpdateContactsRequest}
+     * @return the request
+     */
+    public BatchUpdateContacts batchUpdateContacts(com.google.api.services.people.v1.model.BatchUpdateContactsRequest content) throws java.io.IOException {
+      BatchUpdateContacts result = new BatchUpdateContacts(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchUpdateContacts extends PeopleServiceRequest<com.google.api.services.people.v1.model.BatchUpdateContactsResponse> {
+
+      private static final String REST_PATH = "v1/people:batchUpdateContacts";
+
+      /**
+       * Update a batch of contacts and return a map of resource names to PersonResponses for the
+       * updated contacts.
+       *
+       * Create a request for the method "people.batchUpdateContacts".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link BatchUpdateContacts#execute()} method to invoke the remote
+       * operation. <p> {@link BatchUpdateContacts#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.people.v1.model.BatchUpdateContactsRequest}
+       * @since 1.13
+       */
+      protected BatchUpdateContacts(com.google.api.services.people.v1.model.BatchUpdateContactsRequest content) {
+        super(PeopleService.this, "POST", REST_PATH, content, com.google.api.services.people.v1.model.BatchUpdateContactsResponse.class);
+      }
+
+      @Override
+      public BatchUpdateContacts set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchUpdateContacts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchUpdateContacts setAccessToken(java.lang.String accessToken) {
+        return (BatchUpdateContacts) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchUpdateContacts setAlt(java.lang.String alt) {
+        return (BatchUpdateContacts) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchUpdateContacts setCallback(java.lang.String callback) {
+        return (BatchUpdateContacts) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchUpdateContacts setFields(java.lang.String fields) {
+        return (BatchUpdateContacts) super.setFields(fields);
+      }
+
+      @Override
+      public BatchUpdateContacts setKey(java.lang.String key) {
+        return (BatchUpdateContacts) super.setKey(key);
+      }
+
+      @Override
+      public BatchUpdateContacts setOauthToken(java.lang.String oauthToken) {
+        return (BatchUpdateContacts) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchUpdateContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchUpdateContacts) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchUpdateContacts setQuotaUser(java.lang.String quotaUser) {
+        return (BatchUpdateContacts) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchUpdateContacts setUploadType(java.lang.String uploadType) {
+        return (BatchUpdateContacts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchUpdateContacts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchUpdateContacts) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchUpdateContacts set(String parameterName, Object value) {
+        return (BatchUpdateContacts) super.set(parameterName, value);
+      }
+    }
+    /**
      * Create a new contact and return the person resource for that contact. The request returns a 400
      * error if more than one field is specified on a field that is a singleton for contact sources: *
      * biographies * birthdays * genders * names

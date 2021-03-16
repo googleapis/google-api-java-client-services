@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * The response from ListSites.
+ * Model definition for ListSitesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -30,27 +30,23 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class ListSitesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token returned when the list of results is too large to fit in a single response. If the
-   * string is empty, the response is the last or only page of results. Use the token in a follow-up
-   * call to `ListSites` to find the next group of Sites. Page tokens are short-lived and should not
-   * be stored.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListSites`. Page tokens are short-lived and should not be stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of Site objects from the parent Firebase Project.
+   * A list of Site objects associated with the specified Firebase project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Site> sites;
 
   /**
-   * A token returned when the list of results is too large to fit in a single response. If the
-   * string is empty, the response is the last or only page of results. Use the token in a follow-up
-   * call to `ListSites` to find the next group of Sites. Page tokens are short-lived and should not
-   * be stored.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListSites`. Page tokens are short-lived and should not be stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -58,10 +54,8 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A token returned when the list of results is too large to fit in a single response. If the
-   * string is empty, the response is the last or only page of results. Use the token in a follow-up
-   * call to `ListSites` to find the next group of Sites. Page tokens are short-lived and should not
-   * be stored.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListSites`. Page tokens are short-lived and should not be stored.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSitesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -70,7 +64,7 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of Site objects from the parent Firebase Project.
+   * A list of Site objects associated with the specified Firebase project.
    * @return value or {@code null} for none
    */
   public java.util.List<Site> getSites() {
@@ -78,7 +72,7 @@ public final class ListSitesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of Site objects from the parent Firebase Project.
+   * A list of Site objects associated with the specified Firebase project.
    * @param sites sites or {@code null} for none
    */
   public ListSitesResponse setSites(java.util.List<Site> sites) {

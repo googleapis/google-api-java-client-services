@@ -96,8 +96,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The fully-qualified identifier for the version, in the format: sites/
-   * SITE_NAME/versions/VERSION_ID This name is provided in the response body when you call
+   * The fully-qualified resource name for the version, in the format: sites/
+   * SITE_ID/versions/VERSION_ID This name is provided in the response body when you call
    * [`CreateVersion`](sites.versions/create).
    * The value may be {@code null}.
    */
@@ -290,8 +290,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier for the version, in the format: sites/
-   * SITE_NAME/versions/VERSION_ID This name is provided in the response body when you call
+   * The fully-qualified resource name for the version, in the format: sites/
+   * SITE_ID/versions/VERSION_ID This name is provided in the response body when you call
    * [`CreateVersion`](sites.versions/create).
    * @return value or {@code null} for none
    */
@@ -300,8 +300,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier for the version, in the format: sites/
-   * SITE_NAME/versions/VERSION_ID This name is provided in the response body when you call
+   * The fully-qualified resource name for the version, in the format: sites/
+   * SITE_ID/versions/VERSION_ID This name is provided in the response body when you call
    * [`CreateVersion`](sites.versions/create).
    * @param name name or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A `Site` represents a Firebase Hosting Site.
+ * A `Site` represents a Firebase Hosting site.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -30,44 +30,51 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class Site extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The ID of a Web App associated with the Site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
+   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appId;
 
   /**
-   * Output only. The default URL for this Hosting Site.
+   * Output only. The default URL for the Hosting site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultUrl;
 
   /**
-   * Optional. User-specified labels for the Hosting Site.
+   * Optional. User-specified labels for the Hosting site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
-   * number}/sites/{site-id}`.
+   * Output only. The fully-qualified resource name of the Hosting site, in the format:
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
+   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
+   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
+   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
+   * more about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The Hosting site type. There will always be a single DEFAULT_SITE, which is
-   * created when Hosting is provisioned. All additional sites are USER_SITE.
+   * Output only. The type of Hosting site. Every Firebase project has a `DEFAULT_SITE`, which is
+   * created when Hosting is provisioned for the project. All additional sites are `USER_SITE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. The ID of a Web App associated with the Site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
+   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -75,7 +82,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ID of a Web App associated with the Site.
+   * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1
+   * beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
    * @param appId appId or {@code null} for none
    */
   public Site setAppId(java.lang.String appId) {
@@ -84,7 +92,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The default URL for this Hosting Site.
+   * Output only. The default URL for the Hosting site.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultUrl() {
@@ -92,7 +100,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The default URL for this Hosting Site.
+   * Output only. The default URL for the Hosting site.
    * @param defaultUrl defaultUrl or {@code null} for none
    */
   public Site setDefaultUrl(java.lang.String defaultUrl) {
@@ -101,7 +109,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-specified labels for the Hosting Site.
+   * Optional. User-specified labels for the Hosting site.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -109,7 +117,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-specified labels for the Hosting Site.
+   * Optional. User-specified labels for the Hosting site.
    * @param labels labels or {@code null} for none
    */
   public Site setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -118,8 +126,13 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
-   * number}/sites/{site-id}`.
+   * Output only. The fully-qualified resource name of the Hosting site, in the format:
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
+   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
+   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
+   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
+   * more about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,8 +140,13 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully qualified resource name of the Hosting Site, e.g.: `projects/{project-
-   * number}/sites/{site-id}`.
+   * Output only. The fully-qualified resource name of the Hosting site, in the format:
+   * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's [`ProjectN
+   * umber`](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseP
+   * roject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](https://firebase.google.
+   * com/docs/projects/api/reference/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn
+   * more about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510).
    * @param name name or {@code null} for none
    */
   public Site setName(java.lang.String name) {
@@ -137,8 +155,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Hosting site type. There will always be a single DEFAULT_SITE, which is
-   * created when Hosting is provisioned. All additional sites are USER_SITE.
+   * Output only. The type of Hosting site. Every Firebase project has a `DEFAULT_SITE`, which is
+   * created when Hosting is provisioned for the project. All additional sites are `USER_SITE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -146,8 +164,8 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Hosting site type. There will always be a single DEFAULT_SITE, which is
-   * created when Hosting is provisioned. All additional sites are USER_SITE.
+   * Output only. The type of Hosting site. Every Firebase project has a `DEFAULT_SITE`, which is
+   * created when Hosting is provisioned for the project. All additional sites are `USER_SITE`.
    * @param type type or {@code null} for none
    */
   public Site setType(java.lang.String type) {

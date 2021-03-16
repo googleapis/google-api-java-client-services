@@ -38,7 +38,7 @@ public final class PopulateVersionFilesResponse extends com.google.api.client.js
 
   /**
    * The URL to which the files should be uploaded, in the format: "https://upload-
-   * firebasehosting.googleapis.com/upload/sites/SITE_NAME /versions/VERSION_ID/files" Perform a
+   * firebasehosting.googleapis.com/upload/sites/SITE_ID /versions/VERSION_ID/files" Perform a
    * multipart `POST` of the Gzipped file contents to the URL using a forward slash and the hash of
    * the file appended to the end.
    * The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class PopulateVersionFilesResponse extends com.google.api.client.js
 
   /**
    * The URL to which the files should be uploaded, in the format: "https://upload-
-   * firebasehosting.googleapis.com/upload/sites/SITE_NAME /versions/VERSION_ID/files" Perform a
+   * firebasehosting.googleapis.com/upload/sites/SITE_ID /versions/VERSION_ID/files" Perform a
    * multipart `POST` of the Gzipped file contents to the URL using a forward slash and the hash of
    * the file appended to the end.
    * @return value or {@code null} for none
@@ -76,7 +76,7 @@ public final class PopulateVersionFilesResponse extends com.google.api.client.js
 
   /**
    * The URL to which the files should be uploaded, in the format: "https://upload-
-   * firebasehosting.googleapis.com/upload/sites/SITE_NAME /versions/VERSION_ID/files" Perform a
+   * firebasehosting.googleapis.com/upload/sites/SITE_ID /versions/VERSION_ID/files" Perform a
    * multipart `POST` of the Gzipped file contents to the URL using a forward slash and the hash of
    * the file appended to the end.
    * @param uploadUrl uploadUrl or {@code null} for none

@@ -1372,38 +1372,6 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /** The client's current time in milliseconds since epoch. */
-          @com.google.api.client.util.Key
-          private java.lang.Long currentTimeMillis;
-
-          /** The client's current time in milliseconds since epoch.
-           */
-          public java.lang.Long getCurrentTimeMillis() {
-            return currentTimeMillis;
-          }
-
-          /** The client's current time in milliseconds since epoch. */
-          public Delete setCurrentTimeMillis(java.lang.Long currentTimeMillis) {
-            this.currentTimeMillis = currentTimeMillis;
-            return this;
-          }
-
-          /** When the operation was performed on the client. */
-          @com.google.api.client.util.Key
-          private java.lang.Long modifiedTimeMillis;
-
-          /** When the operation was performed on the client.
-           */
-          public java.lang.Long getModifiedTimeMillis() {
-            return modifiedTimeMillis;
-          }
-
-          /** When the operation was performed on the client. */
-          public Delete setModifiedTimeMillis(java.lang.Long modifiedTimeMillis) {
-            this.modifiedTimeMillis = modifiedTimeMillis;
-            return this;
-          }
-
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -1830,29 +1798,6 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /**
-           * The client's current time in milliseconds since epoch. Note that the minStartTimeNs and
-           * maxEndTimeNs properties in the request body are in nanoseconds instead of milliseconds.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Long currentTimeMillis;
-
-          /** The client's current time in milliseconds since epoch. Note that the minStartTimeNs and
-         maxEndTimeNs properties in the request body are in nanoseconds instead of milliseconds.
-           */
-          public java.lang.Long getCurrentTimeMillis() {
-            return currentTimeMillis;
-          }
-
-          /**
-           * The client's current time in milliseconds since epoch. Note that the minStartTimeNs and
-           * maxEndTimeNs properties in the request body are in nanoseconds instead of milliseconds.
-           */
-          public Patch setCurrentTimeMillis(java.lang.Long currentTimeMillis) {
-            this.currentTimeMillis = currentTimeMillis;
-            return this;
-          }
-
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
@@ -2169,22 +2114,6 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         /** The ID of the session to be deleted. */
         public Delete setSessionId(java.lang.String sessionId) {
           this.sessionId = sessionId;
-          return this;
-        }
-
-        /** The client's current time in milliseconds since epoch. */
-        @com.google.api.client.util.Key
-        private java.lang.Long currentTimeMillis;
-
-        /** The client's current time in milliseconds since epoch.
-         */
-        public java.lang.Long getCurrentTimeMillis() {
-          return currentTimeMillis;
-        }
-
-        /** The client's current time in milliseconds since epoch. */
-        public Delete setCurrentTimeMillis(java.lang.Long currentTimeMillis) {
-          this.currentTimeMillis = currentTimeMillis;
           return this;
         }
 
@@ -2595,22 +2524,6 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         /** The ID of the session to be created. */
         public Update setSessionId(java.lang.String sessionId) {
           this.sessionId = sessionId;
-          return this;
-        }
-
-        /** The client's current time in milliseconds since epoch. */
-        @com.google.api.client.util.Key
-        private java.lang.Long currentTimeMillis;
-
-        /** The client's current time in milliseconds since epoch.
-         */
-        public java.lang.Long getCurrentTimeMillis() {
-          return currentTimeMillis;
-        }
-
-        /** The client's current time in milliseconds since epoch. */
-        public Update setCurrentTimeMillis(java.lang.Long currentTimeMillis) {
-          this.currentTimeMillis = currentTimeMillis;
           return this;
         }
 

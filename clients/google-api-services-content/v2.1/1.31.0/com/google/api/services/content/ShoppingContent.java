@@ -73,7 +73,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "";
+  public static final String DEFAULT_SERVICE_PATH = "content/v2.1/";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -170,7 +170,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Authinfo extends ShoppingContentRequest<com.google.api.services.content.model.AccountsAuthInfoResponse> {
 
-      private static final String REST_PATH = "content/v2.1/accounts/authinfo";
+      private static final String REST_PATH = "accounts/authinfo";
 
       /**
        * Returns information about the authenticated user.
@@ -281,7 +281,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Claimwebsite extends ShoppingContentRequest<com.google.api.services.content.model.AccountsClaimWebsiteResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/claimwebsite";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/claimwebsite";
 
       /**
        * Claims the website of a Merchant Center sub-account.
@@ -452,7 +452,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccountsCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/accounts/batch";
+      private static final String REST_PATH = "accounts/batch";
 
       /**
        * Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single
@@ -554,7 +554,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
 
       /**
        * Deletes a Merchant Center sub-account.
@@ -741,7 +741,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
 
       /**
        * Retrieves a Merchant Center account.
@@ -919,7 +919,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts";
+      private static final String REST_PATH = "{merchantId}/accounts";
 
       /**
        * Creates a Merchant Center sub-account.
@@ -1040,7 +1040,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Link extends ShoppingContentRequest<com.google.api.services.content.model.AccountsLinkResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/link";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/link";
 
       /**
        * Performs an action on a link between two Merchant Center accounts, namely accountId and
@@ -1186,7 +1186,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccountsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts";
+      private static final String REST_PATH = "{merchantId}/accounts";
 
       /**
        * Lists the sub-accounts in your Merchant Center account.
@@ -1385,7 +1385,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listlinks extends ShoppingContentRequest<com.google.api.services.content.model.AccountsListLinksResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/listlinks";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/listlinks";
 
       /**
        * Returns the list of accounts linked to your Merchant Center account.
@@ -1577,7 +1577,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
 
       /**
        * Updates a Merchant Center account. Any fields that are not provided are deleted from the
@@ -1725,7 +1725,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatelabels extends ShoppingContentRequest<com.google.api.services.content.model.AccountsUpdateLabelsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/updatelabels";
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/updatelabels";
 
       /**
        * Updates labels that are assigned to the Merchant Center account by CSS user.
@@ -1883,7 +1883,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountCredentials> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/credentials";
+        private static final String REST_PATH = "accounts/{accountId}/credentials";
 
         /**
          * Uploads credentials for the Merchant Center account. If credentials already exist for this
@@ -2023,7 +2023,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountLabel> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels";
+        private static final String REST_PATH = "accounts/{accountId}/labels";
 
         /**
          * Creates a new label, not assigned to any account.
@@ -2140,7 +2140,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Delete extends ShoppingContentRequest<Void> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels/{labelId}";
+        private static final String REST_PATH = "accounts/{accountId}/labels/{labelId}";
 
         /**
          * Deletes a label and removes it from all accounts to which it was assigned.
@@ -2273,7 +2273,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListAccountLabelsResponse> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels";
+        private static final String REST_PATH = "accounts/{accountId}/labels";
 
         /**
          * Lists the labels assigned to an account.
@@ -2452,7 +2452,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.AccountLabel> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels/{labelId}";
+        private static final String REST_PATH = "accounts/{accountId}/labels/{labelId}";
 
         /**
          * Updates a label.
@@ -2609,7 +2609,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountReturnCarrier> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier";
+        private static final String REST_PATH = "accounts/{accountId}/returncarrier";
 
         /**
          * Links return carrier to a merchant account.
@@ -2730,7 +2730,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Delete extends ShoppingContentRequest<Void> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}";
+        private static final String REST_PATH = "accounts/{accountId}/returncarrier/{carrierAccountId}";
 
         /**
          * Delete a return carrier in the merchant account.
@@ -2867,7 +2867,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListAccountReturnCarrierResponse> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier";
+        private static final String REST_PATH = "accounts/{accountId}/returncarrier";
 
         /**
          * Lists available return carriers in the merchant account.
@@ -2998,7 +2998,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.AccountReturnCarrier> {
 
-        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}";
+        private static final String REST_PATH = "accounts/{accountId}/returncarrier/{carrierAccountId}";
 
         /**
          * Updates a return carrier in the merchant account.
@@ -3160,7 +3160,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccountstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/accountstatuses/batch";
+      private static final String REST_PATH = "accountstatuses/batch";
 
       /**
        * Retrieves multiple Merchant Center account statuses in a single request.
@@ -3263,7 +3263,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.AccountStatus> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accountstatuses/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accountstatuses/{accountId}";
 
       /**
        * Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-
@@ -3441,7 +3441,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccountstatusesListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accountstatuses";
+      private static final String REST_PATH = "{merchantId}/accountstatuses";
 
       /**
        * Lists the statuses of the sub-accounts in your Merchant Center account.
@@ -3644,7 +3644,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccounttaxCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/accounttax/batch";
+      private static final String REST_PATH = "accounttax/batch";
 
       /**
        * Retrieves and updates tax settings of multiple accounts in a single request.
@@ -3746,7 +3746,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.AccountTax> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accounttax/{accountId}";
 
       /**
        * Retrieves the tax settings of the account.
@@ -3900,7 +3900,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccounttaxListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax";
+      private static final String REST_PATH = "{merchantId}/accounttax";
 
       /**
        * Lists the tax settings of the sub-accounts in your Merchant Center account.
@@ -4062,7 +4062,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.AccountTax> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax/{accountId}";
+      private static final String REST_PATH = "{merchantId}/accounttax/{accountId}";
 
       /**
        * Updates the tax settings of the account. Any fields that are not provided are deleted from the
@@ -4233,7 +4233,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.BuyOnGoogleProgramStatus> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}";
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}";
 
       /**
        * Retrieves a status of BoG program for your Merchant Center account.
@@ -4391,7 +4391,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Onboard extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}/onboard";
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/onboard";
 
       /**
        * Onboards BoG in your Merchant Center account. By using this method, you agree to the [Terms of
@@ -4565,7 +4565,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Collection> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collections";
+      private static final String REST_PATH = "{merchantId}/collections";
 
       /**
        * Uploads a collection to your Merchant Center account. If a collection with the same
@@ -4694,7 +4694,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collections/{collectionId}";
+      private static final String REST_PATH = "{merchantId}/collections/{collectionId}";
 
       /**
        * Deletes a collection from your Merchant Center account.
@@ -4845,7 +4845,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Collection> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collections/{collectionId}";
+      private static final String REST_PATH = "{merchantId}/collections/{collectionId}";
 
       /**
        * Retrieves a collection from your Merchant Center account.
@@ -4999,7 +4999,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCollectionsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collections";
+      private static final String REST_PATH = "{merchantId}/collections";
 
       /**
        * Lists the collections in your Merchant Center account. The response might contain fewer items
@@ -5206,7 +5206,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.CollectionStatus> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collectionstatuses/{collectionId}";
+      private static final String REST_PATH = "{merchantId}/collectionstatuses/{collectionId}";
 
       /**
        * Gets the status of a collection from your Merchant Center account.
@@ -5366,7 +5366,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCollectionStatusesResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/collectionstatuses";
+      private static final String REST_PATH = "{merchantId}/collectionstatuses";
 
       /**
        * Lists the statuses of the collections in your Merchant Center account.
@@ -5571,7 +5571,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Css> {
 
-      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses/{cssDomainId}";
+      private static final String REST_PATH = "{cssGroupId}/csses/{cssDomainId}";
 
       /**
        * Retrieves a single CSS domain by ID.
@@ -5726,7 +5726,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCssesResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses";
+      private static final String REST_PATH = "{cssGroupId}/csses";
 
       /**
        * Lists CSS domains affiliated with a CSS group.
@@ -5905,7 +5905,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatelabels extends ShoppingContentRequest<com.google.api.services.content.model.Css> {
 
-      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses/{cssDomainId}/updatelabels";
+      private static final String REST_PATH = "{cssGroupId}/csses/{cssDomainId}/updatelabels";
 
       /**
        * Updates labels that are assigned to a CSS domain by its CSS group.
@@ -6063,7 +6063,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/datafeeds/batch";
+      private static final String REST_PATH = "datafeeds/batch";
 
       /**
        * Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
@@ -6163,7 +6163,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Deletes a datafeed configuration from your Merchant Center account.
@@ -6304,7 +6304,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Fetchnow extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsFetchNowResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}/fetchNow";
+      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}/fetchNow";
 
       /**
        * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this
@@ -6447,7 +6447,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Retrieves a datafeed configuration from your Merchant Center account.
@@ -6597,7 +6597,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds";
+      private static final String REST_PATH = "{merchantId}/datafeeds";
 
       /**
        * Registers a datafeed configuration with your Merchant Center account.
@@ -6719,7 +6719,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds";
+      private static final String REST_PATH = "{merchantId}/datafeeds";
 
       /**
        * Lists the configurations for datafeeds in your Merchant Center account.
@@ -6885,7 +6885,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Updates a datafeed configuration of your Merchant Center account. Any fields that are not
@@ -7049,7 +7049,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/datafeedstatuses/batch";
+      private static final String REST_PATH = "datafeedstatuses/batch";
 
       /**
        * Gets multiple Merchant Center datafeed statuses in a single request.
@@ -7149,7 +7149,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedStatus> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeedstatuses/{datafeedId}";
+      private static final String REST_PATH = "{merchantId}/datafeedstatuses/{datafeedId}";
 
       /**
        * Retrieves the status of a datafeed from your Merchant Center account.
@@ -7350,7 +7350,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedstatusesListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeedstatuses";
+      private static final String REST_PATH = "{merchantId}/datafeedstatuses";
 
       /**
        * Lists the statuses of the datafeeds in your Merchant Center account.
@@ -7536,7 +7536,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/liasettings/batch";
+      private static final String REST_PATH = "liasettings/batch";
 
       /**
        * Retrieves and/or updates the LIA settings of multiple accounts in a single request.
@@ -7638,7 +7638,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.LiaSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}";
 
       /**
        * Retrieves the LIA settings of the account.
@@ -7796,7 +7796,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getaccessiblegmbaccounts extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsGetAccessibleGmbAccountsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/accessiblegmbaccounts";
 
       /**
        * Retrieves the list of accessible Google My Business accounts.
@@ -7951,7 +7951,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings";
+      private static final String REST_PATH = "{merchantId}/liasettings";
 
       /**
        * Lists the LIA settings of the sub-accounts in your Merchant Center account.
@@ -8109,7 +8109,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listposdataproviders extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsListPosDataProvidersResponse> {
 
-      private static final String REST_PATH = "content/v2.1/liasettings/posdataproviders";
+      private static final String REST_PATH = "liasettings/posdataproviders";
 
       /**
        * Retrieves the list of POS data providers that have active settings for the all eiligible
@@ -8222,7 +8222,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Requestgmbaccess extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsRequestGmbAccessResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/requestgmbaccess";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/requestgmbaccess";
 
       /**
        * Requests access to a specified Google My Business account.
@@ -8390,7 +8390,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Requestinventoryverification extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsRequestInventoryVerificationResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}";
 
       /**
        * Requests inventory validation for the specified country.
@@ -8561,7 +8561,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Setinventoryverificationcontact extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsSetInventoryVerificationContactResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setinventoryverificationcontact";
 
       /**
        * Sets the inventory verification contract for the specified country.
@@ -8782,7 +8782,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Setposdataprovider extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsSetPosDataProviderResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/setposdataprovider";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setposdataprovider";
 
       /**
        * Sets the POS data provider for the specified country.
@@ -8982,7 +8982,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.LiaSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}";
+      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}";
 
       /**
        * Updates the LIA settings of the account. Any fields that are not provided are deleted from the
@@ -9151,7 +9151,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.LocalinventoryCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/localinventory/batch";
+      private static final String REST_PATH = "localinventory/batch";
 
       /**
        * Updates local inventory for multiple products or stores in a single request.
@@ -9252,7 +9252,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.LocalInventory> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}/localinventory";
+      private static final String REST_PATH = "{merchantId}/products/{productId}/localinventory";
 
       /**
        * Updates the local inventory of a product in your Merchant Center account.
@@ -9418,7 +9418,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createchargeinvoice extends ShoppingContentRequest<com.google.api.services.content.model.OrderinvoicesCreateChargeInvoiceResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderinvoices/{orderId}/createChargeInvoice";
+      private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createChargeInvoice";
 
       /**
        * Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice
@@ -9559,7 +9559,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createrefundinvoice extends ShoppingContentRequest<com.google.api.services.content.model.OrderinvoicesCreateRefundInvoiceResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderinvoices/{orderId}/createRefundInvoice";
+      private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createRefundInvoice";
 
       /**
        * Creates a refund invoice for one or more shipment groups, and triggers a refund for
@@ -9720,7 +9720,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listdisbursements extends ShoppingContentRequest<com.google.api.services.content.model.OrderreportsListDisbursementsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreports/disbursements";
+      private static final String REST_PATH = "{merchantId}/orderreports/disbursements";
 
       /**
        * Retrieves a report for disbursements from your Merchant Center account.
@@ -9911,7 +9911,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listtransactions extends ShoppingContentRequest<com.google.api.services.content.model.OrderreportsListTransactionsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreports/disbursements/{disbursementId}/transactions";
+      private static final String REST_PATH = "{merchantId}/orderreports/disbursements/{disbursementId}/transactions";
 
       /**
        * Retrieves a list of transactions for a disbursement from your Merchant Center account.
@@ -10148,7 +10148,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Acknowledge extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsAcknowledgeResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}/acknowledge";
+      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/acknowledge";
 
       /**
        * Acks an order return in your Merchant Center account.
@@ -10284,7 +10284,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createorderreturn extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsCreateOrderReturnResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/createOrderReturn";
+      private static final String REST_PATH = "{merchantId}/orderreturns/createOrderReturn";
 
       /**
        * Create return in your Merchant Center account.
@@ -10402,7 +10402,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.MerchantOrderReturn> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}";
+      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}";
 
       /**
        * Retrieves an order return from your Merchant Center account.
@@ -10545,7 +10545,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns";
+      private static final String REST_PATH = "{merchantId}/orderreturns";
 
       /**
        * Lists order returns in your Merchant Center account.
@@ -10926,7 +10926,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Process extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsProcessResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}/process";
+      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/process";
 
       /**
        * Processes return in your Merchant Center account.
@@ -11086,7 +11086,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Acknowledge extends ShoppingContentRequest<com.google.api.services.content.model.OrdersAcknowledgeResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/acknowledge";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/acknowledge";
 
       /**
        * Marks an order as acknowledged.
@@ -11222,7 +11222,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Advancetestorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersAdvanceTestOrderResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders/{orderId}/advance";
+      private static final String REST_PATH = "{merchantId}/testorders/{orderId}/advance";
 
       /**
        * Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
@@ -11358,7 +11358,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Cancel extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/cancel";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/cancel";
 
       /**
        * Cancels all line items in an order, making a full refund.
@@ -11494,7 +11494,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Cancellineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelLineItemResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/cancelLineItem";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/cancelLineItem";
 
       /**
        * Cancels a line item, making a full refund.
@@ -11632,7 +11632,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Canceltestorderbycustomer extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelTestOrderByCustomerResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders/{orderId}/cancelByCustomer";
+      private static final String REST_PATH = "{merchantId}/testorders/{orderId}/cancelByCustomer";
 
       /**
        * Sandbox only. Cancels a test order for customer-initiated cancellation.
@@ -11768,7 +11768,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createtestorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCreateTestOrderResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders";
+      private static final String REST_PATH = "{merchantId}/testorders";
 
       /**
        * Sandbox only. Creates a test order.
@@ -11891,7 +11891,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createtestreturn extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCreateTestReturnResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/testreturn";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/testreturn";
 
       /**
        * Sandbox only. Creates a test return.
@@ -12027,7 +12027,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Order> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}";
 
       /**
        * Retrieves an order from your Merchant Center account.
@@ -12172,7 +12172,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getbymerchantorderid extends ShoppingContentRequest<com.google.api.services.content.model.OrdersGetByMerchantOrderIdResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/ordersbymerchantid/{merchantOrderId}";
+      private static final String REST_PATH = "{merchantId}/ordersbymerchantid/{merchantOrderId}";
 
       /**
        * Retrieves an order using merchant order ID.
@@ -12319,7 +12319,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Gettestordertemplate extends ShoppingContentRequest<com.google.api.services.content.model.OrdersGetTestOrderTemplateResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/testordertemplates/{templateName}";
+      private static final String REST_PATH = "{merchantId}/testordertemplates/{templateName}";
 
       /**
        * Sandbox only. Retrieves an order template that can be used to quickly create a new order in
@@ -12493,7 +12493,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Instorerefundlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersInStoreRefundLineItemResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/inStoreRefundLineItem";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/inStoreRefundLineItem";
 
       /**
        * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
@@ -12634,7 +12634,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.OrdersListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders";
+      private static final String REST_PATH = "{merchantId}/orders";
 
       /**
        * Lists the orders in your Merchant Center account.
@@ -12912,7 +12912,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Refunditem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundItemResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/refunditem";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refunditem";
 
       /**
        * Issues a partial or total refund for items and shipment.
@@ -13049,7 +13049,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Refundorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundOrderResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/refundorder";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refundorder";
 
       /**
        * Issues a partial or total refund for an order.
@@ -13187,7 +13187,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Rejectreturnlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRejectReturnLineItemResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/rejectReturnLineItem";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/rejectReturnLineItem";
 
       /**
        * Rejects return on an line item.
@@ -13329,7 +13329,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Returnrefundlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersReturnRefundLineItemResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/returnRefundLineItem";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/returnRefundLineItem";
 
       /**
        * Returns and refunds a line item. Note that this method can only be called on fully shipped
@@ -13473,7 +13473,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Setlineitemmetadata extends ShoppingContentRequest<com.google.api.services.content.model.OrdersSetLineItemMetadataResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/setLineItemMetadata";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/setLineItemMetadata";
 
       /**
        * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
@@ -13613,7 +13613,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Shiplineitems extends ShoppingContentRequest<com.google.api.services.content.model.OrdersShipLineItemsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/shipLineItems";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/shipLineItems";
 
       /**
        * Marks line item(s) as shipped.
@@ -13751,7 +13751,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatelineitemshippingdetails extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateLineItemShippingDetailsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateLineItemShippingDetails";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateLineItemShippingDetails";
 
       /**
        * Updates ship by and delivery by dates for a line item.
@@ -13889,7 +13889,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatemerchantorderid extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateMerchantOrderIdResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateMerchantOrderId";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateMerchantOrderId";
 
       /**
        * Updates the merchant order ID for a given order.
@@ -14026,7 +14026,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updateshipment extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateShipmentResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateShipment";
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateShipment";
 
       /**
        * Updates a shipment's status, carrier, and/or tracking ID.
@@ -14185,7 +14185,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Create extends ShoppingContentRequest<com.google.api.services.content.model.OrderTrackingSignal> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/ordertrackingsignals";
+      private static final String REST_PATH = "{merchantId}/ordertrackingsignals";
 
       /**
        * Creates new order tracking signal.
@@ -14324,7 +14324,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.PosCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/pos/batch";
+      private static final String REST_PATH = "pos/batch";
 
       /**
        * Batches multiple POS-related calls in a single request.
@@ -14425,7 +14425,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
 
       /**
        * Deletes a store for the given merchant.
@@ -14578,7 +14578,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.PosStore> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
 
       /**
        * Retrieves information about the given store.
@@ -14741,7 +14741,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.PosStore> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store";
 
       /**
        * Creates a store for the given merchant.
@@ -14877,7 +14877,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Inventory extends ShoppingContentRequest<com.google.api.services.content.model.PosInventoryResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/inventory";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/inventory";
 
       /**
        * Submit inventory for the given merchant.
@@ -15013,7 +15013,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.PosListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store";
 
       /**
        * Lists the stores of the target merchant.
@@ -15158,7 +15158,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Sale extends ShoppingContentRequest<com.google.api.services.content.model.PosSaleResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/sale";
+      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/sale";
 
       /**
        * Submit a sale event for the given merchant.
@@ -15315,7 +15315,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ProductsCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/products/batch";
+      private static final String REST_PATH = "products/batch";
 
       /**
        * Retrieves, inserts, and deletes multiple products in a single request.
@@ -15415,7 +15415,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}";
+      private static final String REST_PATH = "{merchantId}/products/{productId}";
 
       /**
        * Deletes a product from your Merchant Center account.
@@ -15571,7 +15571,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Product> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}";
+      private static final String REST_PATH = "{merchantId}/products/{productId}";
 
       /**
        * Retrieves a product from your Merchant Center account.
@@ -15722,7 +15722,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Product> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products";
+      private static final String REST_PATH = "{merchantId}/products";
 
       /**
        * Uploads a product to your Merchant Center account. If an item with the same channel,
@@ -15863,7 +15863,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ProductsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products";
+      private static final String REST_PATH = "{merchantId}/products";
 
       /**
        * Lists the products in your Merchant Center account. The response might contain fewer items than
@@ -16051,7 +16051,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ProductstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/productstatuses/batch";
+      private static final String REST_PATH = "productstatuses/batch";
 
       /**
        * Gets the statuses of multiple products in a single request.
@@ -16151,7 +16151,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ProductStatus> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses/{productId}";
+      private static final String REST_PATH = "{merchantId}/productstatuses/{productId}";
 
       /**
        * Gets the status of a product from your Merchant Center account.
@@ -16323,7 +16323,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ProductstatusesListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses";
+      private static final String REST_PATH = "{merchantId}/productstatuses";
 
       /**
        * Lists the statuses of the products in your Merchant Center account.
@@ -16532,7 +16532,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingProductReportsResponse> {
 
-        private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses/{productId}/repricingreports";
+        private static final String REST_PATH = "{merchantId}/productstatuses/{productId}/repricingreports";
 
         /**
          * Lists the metrics report for a given Repricing product.
@@ -16828,7 +16828,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pubsubnotificationsettings";
+      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
 
       /**
        * Retrieves a Merchant Center account's pubsub notification settings.
@@ -16955,7 +16955,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/pubsubnotificationsettings";
+      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
 
       /**
        * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
@@ -17095,7 +17095,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.RegionalinventoryCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/regionalinventory/batch";
+      private static final String REST_PATH = "regionalinventory/batch";
 
       /**
        * Updates regional inventory for multiple products or regions in a single request.
@@ -17197,7 +17197,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.RegionalInventory> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}/regionalinventory";
+      private static final String REST_PATH = "{merchantId}/products/{productId}/regionalinventory";
 
       /**
        * Update the regional inventory of a product in your Merchant Center account. If a regional
@@ -17362,7 +17362,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/regions";
+      private static final String REST_PATH = "{merchantId}/regions";
 
       /**
        * Creates a region definition in your Merchant Center account.
@@ -17495,7 +17495,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+      private static final String REST_PATH = "{merchantId}/regions/{regionId}";
 
       /**
        * Deletes a region definition from your Merchant Center account.
@@ -17629,7 +17629,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+      private static final String REST_PATH = "{merchantId}/regions/{regionId}";
 
       /**
        * Retrieves a region defined in your Merchant Center account.
@@ -17772,7 +17772,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRegionsResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/regions";
+      private static final String REST_PATH = "{merchantId}/regions";
 
       /**
        * Lists the regions in your Merchant Center account.
@@ -17951,7 +17951,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+      private static final String REST_PATH = "{merchantId}/regions/{regionId}";
 
       /**
        * Updates a region definition in your Merchant Center account.
@@ -18126,7 +18126,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Search extends ShoppingContentRequest<com.google.api.services.content.model.SearchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/reports/search";
+      private static final String REST_PATH = "{merchantId}/reports/search";
 
       /**
        * Retrieves merchant performance mertrics matching the search query and optionally segmented by
@@ -18273,7 +18273,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Create extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules";
+      private static final String REST_PATH = "{merchantId}/repricingrules";
 
       /**
        * Creates a repricing rule for your Merchant Center account.
@@ -18406,7 +18406,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+      private static final String REST_PATH = "{merchantId}/repricingrules/{ruleId}";
 
       /**
        * Deletes a repricing rule in your Merchant Center account.
@@ -18540,7 +18540,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+      private static final String REST_PATH = "{merchantId}/repricingrules/{ruleId}";
 
       /**
        * Retrieves a repricing rule from your Merchant Center account.
@@ -18683,7 +18683,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingRulesResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules";
+      private static final String REST_PATH = "{merchantId}/repricingrules";
 
       /**
        * Lists the repricing rules in your Merchant Center account.
@@ -18912,7 +18912,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+      private static final String REST_PATH = "{merchantId}/repricingrules/{ruleId}";
 
       /**
        * Updates a repricing rule in your Merchant Center account. All mutable fields will be
@@ -19071,7 +19071,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingRuleReportsResponse> {
 
-        private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}/repricingreports";
+        private static final String REST_PATH = "{merchantId}/repricingrules/{ruleId}/repricingreports";
 
         /**
          * Lists the metrics report for a given Repricing rule.
@@ -19336,7 +19336,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ReturnaddressCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/returnaddress/batch";
+      private static final String REST_PATH = "returnaddress/batch";
 
       /**
        * Batches multiple return address related calls in a single request.
@@ -19436,7 +19436,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress/{returnAddressId}";
+      private static final String REST_PATH = "{merchantId}/returnaddress/{returnAddressId}";
 
       /**
        * Deletes a return address for the given Merchant Center account.
@@ -19570,7 +19570,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ReturnAddress> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress/{returnAddressId}";
+      private static final String REST_PATH = "{merchantId}/returnaddress/{returnAddressId}";
 
       /**
        * Gets a return address of the Merchant Center account.
@@ -19714,7 +19714,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.ReturnAddress> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress";
+      private static final String REST_PATH = "{merchantId}/returnaddress";
 
       /**
        * Inserts a return address for the Merchant Center account.
@@ -19830,7 +19830,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ReturnaddressListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress";
+      private static final String REST_PATH = "{merchantId}/returnaddress";
 
       /**
        * Lists the return addresses of the Merchant Center account.
@@ -20033,7 +20033,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ReturnpolicyCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/returnpolicy/batch";
+      private static final String REST_PATH = "returnpolicy/batch";
 
       /**
        * Batches multiple return policy related calls in a single request.
@@ -20133,7 +20133,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy/{returnPolicyId}";
+      private static final String REST_PATH = "{merchantId}/returnpolicy/{returnPolicyId}";
 
       /**
        * Deletes a return policy for the given Merchant Center account.
@@ -20267,7 +20267,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicy> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy/{returnPolicyId}";
+      private static final String REST_PATH = "{merchantId}/returnpolicy/{returnPolicyId}";
 
       /**
        * Gets a return policy of the Merchant Center account.
@@ -20411,7 +20411,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicy> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy";
+      private static final String REST_PATH = "{merchantId}/returnpolicy";
 
       /**
        * Inserts a return policy for the Merchant Center account.
@@ -20527,7 +20527,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ReturnpolicyListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy";
+      private static final String REST_PATH = "{merchantId}/returnpolicy";
 
       /**
        * Lists the return policies of the Merchant Center account.
@@ -20676,7 +20676,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Create extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicyOnline> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicyonline";
+      private static final String REST_PATH = "{merchantId}/returnpolicyonline";
 
       /**
        * Creates a new return policy.
@@ -20797,7 +20797,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicyonline/{returnPolicyId}";
+      private static final String REST_PATH = "{merchantId}/returnpolicyonline/{returnPolicyId}";
 
       /**
        * Deletes an existing return policy.
@@ -20935,7 +20935,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicyOnline> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicyonline/{returnPolicyId}";
+      private static final String REST_PATH = "{merchantId}/returnpolicyonline/{returnPolicyId}";
 
       /**
        * Gets an existing return policy.
@@ -21082,7 +21082,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListReturnPolicyOnlineResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicyonline";
+      private static final String REST_PATH = "{merchantId}/returnpolicyonline";
 
       /**
        * Lists all existing return policies.
@@ -21213,7 +21213,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicyOnline> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicyonline/{returnPolicyId}";
+      private static final String REST_PATH = "{merchantId}/returnpolicyonline/{returnPolicyId}";
 
       /**
        * Updates an existing return policy.
@@ -21375,7 +21375,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.SettlementReport> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports/{settlementId}";
+      private static final String REST_PATH = "{merchantId}/settlementreports/{settlementId}";
 
       /**
        * Retrieves a settlement report from your Merchant Center account.
@@ -21518,7 +21518,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.SettlementreportsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports";
+      private static final String REST_PATH = "{merchantId}/settlementreports";
 
       /**
        * Retrieves a list of settlement reports from your Merchant Center account.
@@ -21750,7 +21750,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.SettlementtransactionsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports/{settlementId}/transactions";
+      private static final String REST_PATH = "{merchantId}/settlementreports/{settlementId}/transactions";
 
       /**
        * Retrieves a list of transactions for the settlement.
@@ -21973,7 +21973,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsCustomBatchResponse> {
 
-      private static final String REST_PATH = "content/v2.1/shippingsettings/batch";
+      private static final String REST_PATH = "shippingsettings/batch";
 
       /**
        * Retrieves and updates the shipping settings of multiple accounts in a single request.
@@ -22075,7 +22075,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ShippingSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings/{accountId}";
+      private static final String REST_PATH = "{merchantId}/shippingsettings/{accountId}";
 
       /**
        * Retrieves the shipping settings of the account.
@@ -22230,7 +22230,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedcarriers extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedCarriersResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedCarriers";
+      private static final String REST_PATH = "{merchantId}/supportedCarriers";
 
       /**
        * Retrieves supported carriers and carrier services for an account.
@@ -22357,7 +22357,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedholidays extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedHolidaysResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedHolidays";
+      private static final String REST_PATH = "{merchantId}/supportedHolidays";
 
       /**
        * Retrieves supported holidays for an account.
@@ -22484,7 +22484,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedpickupservices extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedPickupServicesResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedPickupServices";
+      private static final String REST_PATH = "{merchantId}/supportedPickupServices";
 
       /**
        * Retrieves supported pickup services for an account.
@@ -22610,7 +22610,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsListResponse> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings";
+      private static final String REST_PATH = "{merchantId}/shippingsettings";
 
       /**
        * Lists the shipping settings of the sub-accounts in your Merchant Center account.
@@ -22772,7 +22772,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.ShippingSettings> {
 
-      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings/{accountId}";
+      private static final String REST_PATH = "{merchantId}/shippingsettings/{accountId}";
 
       /**
        * Updates the shipping settings of the account. Any fields that are not provided are deleted from

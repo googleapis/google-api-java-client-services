@@ -31,11 +31,38 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class BatchRunReportsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#batchRunReports". Useful to distinguish between response types in JSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * Individual responses. Each response has a separate report request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RunReportResponse> reports;
+
+  /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#batchRunReports". Useful to distinguish between response types in JSON.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#batchRunReports". Useful to distinguish between response types in JSON.
+   * @param kind kind or {@code null} for none
+   */
+  public BatchRunReportsResponse setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
 
   /**
    * Individual responses. Each response has a separate report request.

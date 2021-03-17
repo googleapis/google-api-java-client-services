@@ -759,7 +759,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class DnsKeys {
 
     /**
-     * Fetch the representation of an existing DnsKey.
+     * Fetches the representation of an existing DnsKey.
      *
      * Create a request for the method "dnsKeys.get".
      *
@@ -782,7 +782,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}";
 
       /**
-       * Fetch the representation of an existing DnsKey.
+       * Fetches the representation of an existing DnsKey.
        *
        * Create a request for the method "dnsKeys.get".
        *
@@ -972,7 +972,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerate DnsKeys to a ResourceRecordSet collection.
+     * Enumerates DnsKeys to a ResourceRecordSet collection.
      *
      * Create a request for the method "dnsKeys.list".
      *
@@ -994,7 +994,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys";
 
       /**
-       * Enumerate DnsKeys to a ResourceRecordSet collection.
+       * Enumerates DnsKeys to a ResourceRecordSet collection.
        *
        * Create a request for the method "dnsKeys.list".
        *
@@ -1627,7 +1627,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ManagedZones {
 
     /**
-     * Create a new ManagedZone.
+     * Creates a new ManagedZone.
      *
      * Create a request for the method "managedZones.create".
      *
@@ -1649,7 +1649,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones";
 
       /**
-       * Create a new ManagedZone.
+       * Creates a new ManagedZone.
        *
        * Create a request for the method "managedZones.create".
        *
@@ -1767,7 +1767,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Delete a previously created ManagedZone.
+     * Deletes a previously created ManagedZone.
      *
      * Create a request for the method "managedZones.delete".
      *
@@ -1789,7 +1789,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}";
 
       /**
-       * Delete a previously created ManagedZone.
+       * Deletes a previously created ManagedZone.
        *
        * Create a request for the method "managedZones.delete".
        *
@@ -1928,7 +1928,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Fetch the representation of an existing ManagedZone.
+     * Fetches the representation of an existing ManagedZone.
      *
      * Create a request for the method "managedZones.get".
      *
@@ -1950,7 +1950,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}";
 
       /**
-       * Fetch the representation of an existing ManagedZone.
+       * Fetches the representation of an existing ManagedZone.
        *
        * Create a request for the method "managedZones.get".
        *
@@ -2099,7 +2099,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerate ManagedZones that have been created but not yet deleted.
+     * Enumerates ManagedZones that have been created but not yet deleted.
      *
      * Create a request for the method "managedZones.list".
      *
@@ -2120,7 +2120,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones";
 
       /**
-       * Enumerate ManagedZones that have been created but not yet deleted.
+       * Enumerates ManagedZones that have been created but not yet deleted.
        *
        * Create a request for the method "managedZones.list".
        *
@@ -2286,7 +2286,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Apply a partial update to an existing ManagedZone.
+     * Applies a partial update to an existing ManagedZone.
      *
      * Create a request for the method "managedZones.patch".
      *
@@ -2309,7 +2309,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}";
 
       /**
-       * Apply a partial update to an existing ManagedZone.
+       * Applies a partial update to an existing ManagedZone.
        *
        * Create a request for the method "managedZones.patch".
        *
@@ -2449,7 +2449,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Update an existing ManagedZone.
+     * Updates an existing ManagedZone.
      *
      * Create a request for the method "managedZones.update".
      *
@@ -2472,7 +2472,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}";
 
       /**
-       * Update an existing ManagedZone.
+       * Updates an existing ManagedZone.
        *
        * Create a request for the method "managedZones.update".
        *
@@ -3271,7 +3271,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Apply a partial update to an existing Policy.
+     * Applies a partial update to an existing Policy.
      *
      * Create a request for the method "policies.patch".
      *
@@ -3294,7 +3294,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Apply a partial update to an existing Policy.
+       * Applies a partial update to an existing Policy.
        *
        * Create a request for the method "policies.patch".
        *
@@ -3430,7 +3430,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Update an existing Policy.
+     * Updates an existing Policy.
      *
      * Create a request for the method "policies.update".
      *
@@ -3453,7 +3453,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Update an existing Policy.
+       * Updates an existing Policy.
        *
        * Create a request for the method "policies.update".
        *
@@ -3801,7 +3801,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       public class Rrsets {
 
         /**
-         * Create a new ResourceRecordSet.
+         * Creates a new ResourceRecordSet.
          *
          * Create a request for the method "rrsets.create".
          *
@@ -3824,7 +3824,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets";
 
           /**
-           * Create a new ResourceRecordSet.
+           * Creates a new ResourceRecordSet.
            *
            * Create a request for the method "rrsets.create".
            *
@@ -3966,7 +3966,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Delete a previously created ResourceRecordSet.
+         * Deletes a previously created ResourceRecordSet.
          *
          * Create a request for the method "rrsets.delete".
          *
@@ -3990,7 +3990,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
 
           /**
-           * Delete a previously created ResourceRecordSet.
+           * Deletes a previously created ResourceRecordSet.
            *
            * Create a request for the method "rrsets.delete".
            *
@@ -4167,7 +4167,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Fetch the representation of an existing ResourceRecordSet.
+         * Fetches the representation of an existing ResourceRecordSet.
          *
          * Create a request for the method "rrsets.get".
          *
@@ -4191,7 +4191,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
 
           /**
-           * Fetch the representation of an existing ResourceRecordSet.
+           * Fetches the representation of an existing ResourceRecordSet.
            *
            * Create a request for the method "rrsets.get".
            *
@@ -4378,7 +4378,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Apply a partial update to an existing ResourceRecordSet.
+         * Applies a partial update to an existing ResourceRecordSet.
          *
          * Create a request for the method "rrsets.patch".
          *
@@ -4403,7 +4403,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
           private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
 
           /**
-           * Apply a partial update to an existing ResourceRecordSet.
+           * Applies a partial update to an existing ResourceRecordSet.
            *
            * Create a request for the method "rrsets.patch".
            *

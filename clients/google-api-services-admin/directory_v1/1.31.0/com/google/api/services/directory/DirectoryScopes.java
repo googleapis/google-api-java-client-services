@@ -23,6 +23,12 @@ package com.google.api.services.directory;
  */
 public class DirectoryScopes {
 
+  /** See, add, edit, and permanently delete the printers that your organization can use with Chrome. */
+  public static final String ADMIN_CHROME_PRINTERS = "https://www.googleapis.com/auth/admin.chrome.printers";
+
+  /** See the printers that your organization can use with Chrome. */
+  public static final String ADMIN_CHROME_PRINTERS_READONLY = "https://www.googleapis.com/auth/admin.chrome.printers.readonly";
+
   /** View and manage customer related information. */
   public static final String ADMIN_DIRECTORY_CUSTOMER = "https://www.googleapis.com/auth/admin.directory.customer";
 
@@ -111,6 +117,8 @@ public class DirectoryScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(ADMIN_CHROME_PRINTERS);
+    set.add(ADMIN_CHROME_PRINTERS_READONLY);
     set.add(ADMIN_DIRECTORY_CUSTOMER);
     set.add(ADMIN_DIRECTORY_CUSTOMER_READONLY);
     set.add(ADMIN_DIRECTORY_DEVICE_CHROMEOS);

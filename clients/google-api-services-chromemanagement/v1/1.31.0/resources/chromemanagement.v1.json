@@ -1,277 +1,7 @@
 {
-  "baseUrl": "https://chromemanagement.googleapis.com/",
-  "version_module": true,
-  "ownerName": "Google",
-  "canonicalName": "Chrome Management",
-  "basePath": "",
-  "fullyEncodeReservedExpansion": true,
-  "resources": {
-    "customers": {
-      "resources": {
-        "reports": {
-          "methods": {
-            "countInstalledApps": {
-              "parameters": {
-                "filter": {
-                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * app_name * app_type * install_type * number_of_permissions * total_install_count * latest_profile_active_date * permission_name",
-                  "type": "string",
-                  "location": "query"
-                },
-                "orgUnitId": {
-                  "type": "string",
-                  "description": "The ID of the organizational unit.",
-                  "location": "query"
-                },
-                "orderBy": {
-                  "type": "string",
-                  "description": "Field used to order results. Supported order by fields: * app_name * app_type * install_type * number_of_permissions * total_install_count",
-                  "location": "query"
-                },
-                "pageSize": {
-                  "description": "Maximum number of results to return. Maximum and default are 100.",
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query"
-                },
-                "pageToken": {
-                  "location": "query",
-                  "description": "Token to specify next page in the list.",
-                  "type": "string"
-                },
-                "customer": {
-                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request.",
-                  "required": true,
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^customers/[^/]+$"
-                }
-              },
-              "description": "Generate report of app installations.",
-              "path": "v1/{+customer}/reports:countInstalledApps",
-              "flatPath": "v1/customers/{customersId}/reports:countInstalledApps",
-              "parameterOrder": [
-                "customer"
-              ],
-              "scopes": [
-                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
-              ],
-              "response": {
-                "$ref": "GoogleChromeManagementV1CountInstalledAppsResponse"
-              },
-              "id": "chromemanagement.customers.reports.countInstalledApps",
-              "httpMethod": "GET"
-            },
-            "findInstalledAppDevices": {
-              "path": "v1/{+customer}/reports:findInstalledAppDevices",
-              "description": "Generate report of devices that have a specified app installed.",
-              "flatPath": "v1/customers/{customersId}/reports:findInstalledAppDevices",
-              "httpMethod": "GET",
-              "response": {
-                "$ref": "GoogleChromeManagementV1FindInstalledAppDevicesResponse"
-              },
-              "parameters": {
-                "customer": {
-                  "required": true,
-                  "pattern": "^customers/[^/]+$",
-                  "location": "path",
-                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request.",
-                  "type": "string"
-                },
-                "filter": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * last_active_date"
-                },
-                "orderBy": {
-                  "description": "Field used to order results. Supported order by fields: * machine_name * device_id",
-                  "location": "query",
-                  "type": "string"
-                },
-                "appType": {
-                  "enumDescriptions": [
-                    "App type not specified.",
-                    "Chrome extension.",
-                    "Chrome app.",
-                    "Chrome theme.",
-                    "Chrome hosted app.",
-                    "ARC++ app."
-                  ],
-                  "location": "query",
-                  "enum": [
-                    "APP_TYPE_UNSPECIFIED",
-                    "EXTENSION",
-                    "APP",
-                    "THEME",
-                    "HOSTED_APP",
-                    "ANDROID_APP"
-                  ],
-                  "type": "string",
-                  "description": "Type of the app."
-                },
-                "pageSize": {
-                  "location": "query",
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Maximum number of results to return. Maximum and default are 100."
-                },
-                "appId": {
-                  "type": "string",
-                  "description": "Unique identifier of the app. For Chrome apps and extensions, the 32-character id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g. com.evernote).",
-                  "location": "query"
-                },
-                "pageToken": {
-                  "type": "string",
-                  "description": "Token to specify the next page in the list.",
-                  "location": "query"
-                },
-                "orgUnitId": {
-                  "description": "The ID of the organizational unit.",
-                  "location": "query",
-                  "type": "string"
-                }
-              },
-              "parameterOrder": [
-                "customer"
-              ],
-              "id": "chromemanagement.customers.reports.findInstalledAppDevices",
-              "scopes": [
-                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
-              ]
-            },
-            "countChromeVersions": {
-              "parameters": {
-                "customer": {
-                  "location": "path",
-                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request.",
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^customers/[^/]+$"
-                },
-                "pageToken": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "Token to specify the next page in the list."
-                },
-                "filter": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * last_active_date"
-                },
-                "pageSize": {
-                  "description": "Maximum number of results to return. Maximum and default are 100.",
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query"
-                },
-                "orgUnitId": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "The ID of the organizational unit."
-                }
-              },
-              "httpMethod": "GET",
-              "description": "Generate report of installed Chrome versions.",
-              "parameterOrder": [
-                "customer"
-              ],
-              "flatPath": "v1/customers/{customersId}/reports:countChromeVersions",
-              "path": "v1/{+customer}/reports:countChromeVersions",
-              "scopes": [
-                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
-              ],
-              "id": "chromemanagement.customers.reports.countChromeVersions",
-              "response": {
-                "$ref": "GoogleChromeManagementV1CountChromeVersionsResponse"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
   "id": "chromemanagement:v1",
-  "documentationLink": "http://developers.google.com/chrome/management/",
+  "rootUrl": "https://chromemanagement.googleapis.com/",
   "servicePath": "",
-  "version": "v1",
-  "parameters": {
-    "prettyPrint": {
-      "type": "boolean",
-      "description": "Returns response with indentations and line breaks.",
-      "default": "true",
-      "location": "query"
-    },
-    "oauth_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "alt": {
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "location": "query",
-      "type": "string",
-      "description": "Data format for response.",
-      "default": "json"
-    },
-    "uploadType": {
-      "location": "query",
-      "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
-    },
-    "callback": {
-      "location": "query",
-      "type": "string",
-      "description": "JSONP"
-    },
-    "$.xgafv": {
-      "type": "string",
-      "location": "query",
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ]
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
-    },
-    "access_token": {
-      "type": "string",
-      "description": "OAuth access token.",
-      "location": "query"
-    },
-    "fields": {
-      "type": "string",
-      "location": "query",
-      "description": "Selector specifying which fields to include in a partial response."
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query",
-      "type": "string"
-    },
-    "key": {
-      "type": "string",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "location": "query"
-    }
-  },
-  "description": "The Chrome Management API is a suite of services that allows Chrome administrators to view, manage and gain insights on their Chrome OS The Chrome Management API is a suite of services that allows GSuite domain administrators to view, manage and gain insights on their Chrome OS and Chrome Browser devices and users.",
-  "discoveryVersion": "v1",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -281,136 +11,361 @@
       }
     }
   },
-  "ownerDomain": "google.com",
-  "kind": "discovery#restDescription",
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  "resources": {
+    "customers": {
+      "resources": {
+        "reports": {
+          "methods": {
+            "countInstalledApps": {
+              "path": "v1/{+customer}/reports:countInstalledApps",
+              "flatPath": "v1/customers/{customersId}/reports:countInstalledApps",
+              "scopes": [
+                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
+              ],
+              "parameterOrder": [
+                "customer"
+              ],
+              "httpMethod": "GET",
+              "description": "Generate report of app installations.",
+              "id": "chromemanagement.customers.reports.countInstalledApps",
+              "response": {
+                "$ref": "GoogleChromeManagementV1CountInstalledAppsResponse"
+              },
+              "parameters": {
+                "pageSize": {
+                  "location": "query",
+                  "description": "Maximum number of results to return. Maximum and default are 100.",
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "pageToken": {
+                  "description": "Token to specify next page in the list.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "orderBy": {
+                  "location": "query",
+                  "description": "Field used to order results. Supported order by fields: * app_name * app_type * install_type * number_of_permissions * total_install_count",
+                  "type": "string"
+                },
+                "orgUnitId": {
+                  "description": "The ID of the organizational unit.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "customer": {
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^customers/[^/]+$",
+                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request."
+                },
+                "filter": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * app_name * app_type * install_type * number_of_permissions * total_install_count * latest_profile_active_date * permission_name"
+                }
+              }
+            },
+            "countChromeVersions": {
+              "description": "Generate report of installed Chrome versions.",
+              "flatPath": "v1/customers/{customersId}/reports:countChromeVersions",
+              "path": "v1/{+customer}/reports:countChromeVersions",
+              "httpMethod": "GET",
+              "parameters": {
+                "pageSize": {
+                  "description": "Maximum number of results to return. Maximum and default are 100.",
+                  "location": "query",
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "customer": {
+                  "pattern": "^customers/[^/]+$",
+                  "location": "path",
+                  "type": "string",
+                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request.",
+                  "required": true
+                },
+                "pageToken": {
+                  "type": "string",
+                  "description": "Token to specify the next page in the list.",
+                  "location": "query"
+                },
+                "orgUnitId": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "The ID of the organizational unit."
+                },
+                "filter": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * last_active_date"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
+              ],
+              "parameterOrder": [
+                "customer"
+              ],
+              "id": "chromemanagement.customers.reports.countChromeVersions",
+              "response": {
+                "$ref": "GoogleChromeManagementV1CountChromeVersionsResponse"
+              }
+            },
+            "findInstalledAppDevices": {
+              "path": "v1/{+customer}/reports:findInstalledAppDevices",
+              "flatPath": "v1/customers/{customersId}/reports:findInstalledAppDevices",
+              "id": "chromemanagement.customers.reports.findInstalledAppDevices",
+              "parameterOrder": [
+                "customer"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "pageToken": {
+                  "description": "Token to specify the next page in the list.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "pageSize": {
+                  "location": "query",
+                  "description": "Maximum number of results to return. Maximum and default are 100.",
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "orderBy": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Field used to order results. Supported order by fields: * machine_name * device_id"
+                },
+                "filter": {
+                  "location": "query",
+                  "description": "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Supported filter fields: * last_active_date",
+                  "type": "string"
+                },
+                "customer": {
+                  "description": "Required. Customer id or \"my_customer\" to use the customer associated to the account making the request.",
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^customers/[^/]+$",
+                  "type": "string"
+                },
+                "orgUnitId": {
+                  "type": "string",
+                  "description": "The ID of the organizational unit.",
+                  "location": "query"
+                },
+                "appId": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "Unique identifier of the app. For Chrome apps and extensions, the 32-character id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g. com.evernote)."
+                },
+                "appType": {
+                  "type": "string",
+                  "enumDescriptions": [
+                    "App type not specified.",
+                    "Chrome extension.",
+                    "Chrome app.",
+                    "Chrome theme.",
+                    "Chrome hosted app.",
+                    "ARC++ app."
+                  ],
+                  "enum": [
+                    "APP_TYPE_UNSPECIFIED",
+                    "EXTENSION",
+                    "APP",
+                    "THEME",
+                    "HOSTED_APP",
+                    "ANDROID_APP"
+                  ],
+                  "location": "query",
+                  "description": "Type of the app."
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/chrome.management.reports.readonly"
+              ],
+              "description": "Generate report of devices that have a specified app installed.",
+              "response": {
+                "$ref": "GoogleChromeManagementV1FindInstalledAppDevicesResponse"
+              }
+            }
+          }
+        }
+      }
+    }
   },
-  "rootUrl": "https://chromemanagement.googleapis.com/",
+  "batchPath": "batch",
+  "discoveryVersion": "v1",
+  "fullyEncodeReservedExpansion": true,
+  "basePath": "",
+  "baseUrl": "https://chromemanagement.googleapis.com/",
+  "revision": "20210315",
   "schemas": {
-    "GoogleChromeManagementV1CountChromeVersionsResponse": {
-      "description": "Response containing requested browser versions details and counts.",
-      "id": "GoogleChromeManagementV1CountChromeVersionsResponse",
+    "GoogleChromeManagementV1BrowserVersion": {
+      "type": "object",
+      "description": "Describes a browser version and its install count.",
+      "id": "GoogleChromeManagementV1BrowserVersion",
       "properties": {
-        "nextPageToken": {
-          "description": "Token to specify the next page in the list.",
+        "deviceOsVersion": {
+          "readOnly": true,
+          "description": "Output only. Version of the system-specified operating system.",
           "type": "string"
         },
-        "browserVersions": {
-          "type": "array",
-          "items": {
-            "$ref": "GoogleChromeManagementV1BrowserVersion"
-          },
-          "description": "List of all browser versions and their install counts."
+        "count": {
+          "type": "string",
+          "format": "int64",
+          "description": "Output only. Count grouped by device_system and major version",
+          "readOnly": true
         },
+        "version": {
+          "readOnly": true,
+          "description": "Output only. The full version of the installed browser.",
+          "type": "string"
+        },
+        "channel": {
+          "enumDescriptions": [
+            "No release channel specified.",
+            "Canary release channel.",
+            "Dev release channel.",
+            "Beta release channel.",
+            "Stable release channel."
+          ],
+          "readOnly": true,
+          "enum": [
+            "RELEASE_CHANNEL_UNSPECIFIED",
+            "CANARY",
+            "DEV",
+            "BETA",
+            "STABLE"
+          ],
+          "type": "string",
+          "description": "Output only. The release channel of the installed browser."
+        },
+        "system": {
+          "readOnly": true,
+          "type": "string",
+          "enum": [
+            "DEVICE_SYSTEM_UNSPECIFIED",
+            "SYSTEM_OTHER",
+            "SYSTEM_ANDROID",
+            "SYSTEM_IOS",
+            "SYSTEM_CROS",
+            "SYSTEM_WINDOWS",
+            "SYSTEM_MAC",
+            "SYSTEM_LINUX"
+          ],
+          "enumDescriptions": [
+            "No operating system specified.",
+            "Other operating system.",
+            "Android operating system.",
+            "Apple iOS operating system.",
+            "Chrome OS operating system.",
+            "Microsoft Windows operating system.",
+            "Apple macOS operating system.",
+            "Linux operating system."
+          ],
+          "description": "Output only. The device operating system."
+        }
+      }
+    },
+    "GoogleChromeManagementV1CountInstalledAppsResponse": {
+      "properties": {
         "totalSize": {
+          "type": "integer",
           "format": "int32",
-          "description": "Total number browser versions matching request.",
-          "type": "integer"
+          "description": "Total number of installed apps matching request."
+        },
+        "nextPageToken": {
+          "description": "Token to specify next page in the list.",
+          "type": "string"
+        },
+        "installedApps": {
+          "items": {
+            "$ref": "GoogleChromeManagementV1InstalledApp"
+          },
+          "description": "List of installed apps matching request.",
+          "type": "array"
         }
       },
-      "type": "object"
+      "type": "object",
+      "id": "GoogleChromeManagementV1CountInstalledAppsResponse",
+      "description": "Response containing details of queried installed apps."
     },
     "GoogleChromeManagementV1FindInstalledAppDevicesResponse": {
+      "description": "Response containing a list of devices with queried app installed.",
       "id": "GoogleChromeManagementV1FindInstalledAppDevicesResponse",
       "type": "object",
-      "description": "Response containing a list of devices with queried app installed.",
       "properties": {
-        "devices": {
-          "description": "A list of devices which have the app installed. Sorted in ascending alphabetical order on the Device.machine field.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleChromeManagementV1Device"
-          }
+        "totalSize": {
+          "format": "int32",
+          "description": "Total number of devices matching request.",
+          "type": "integer"
         },
         "nextPageToken": {
           "type": "string",
           "description": "Token to specify the next page in the list."
         },
+        "devices": {
+          "items": {
+            "$ref": "GoogleChromeManagementV1Device"
+          },
+          "type": "array",
+          "description": "A list of devices which have the app installed. Sorted in ascending alphabetical order on the Device.machine field."
+        }
+      }
+    },
+    "GoogleChromeManagementV1CountChromeVersionsResponse": {
+      "id": "GoogleChromeManagementV1CountChromeVersionsResponse",
+      "description": "Response containing requested browser versions details and counts.",
+      "type": "object",
+      "properties": {
+        "browserVersions": {
+          "description": "List of all browser versions and their install counts.",
+          "items": {
+            "$ref": "GoogleChromeManagementV1BrowserVersion"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "description": "Token to specify the next page in the list.",
+          "type": "string"
+        },
         "totalSize": {
-          "description": "Total number of devices matching request.",
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "description": "Total number browser versions matching request."
         }
       }
     },
     "GoogleChromeManagementV1InstalledApp": {
       "properties": {
-        "displayName": {
-          "description": "Output only. Name of the installed app.",
+        "browserDeviceCount": {
           "readOnly": true,
-          "type": "string"
+          "format": "int64",
+          "type": "string",
+          "description": "Output only. Count of browser devices with this app installed."
+        },
+        "description": {
+          "description": "Output only. Description of the installed app.",
+          "type": "string",
+          "readOnly": true
         },
         "permissions": {
           "readOnly": true,
+          "description": "Output only. Permissions of the installed app.",
+          "type": "array",
           "items": {
             "type": "string"
-          },
-          "type": "array",
-          "description": "Output only. Permissions of the installed app."
+          }
         },
-        "osUserCount": {
+        "homepageUri": {
           "type": "string",
           "readOnly": true,
-          "format": "int64",
-          "description": "Output only. Count of ChromeOS users with this app installed."
-        },
-        "browserDeviceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Output only. Count of browser devices with this app installed.",
-          "readOnly": true
-        },
-        "appInstallType": {
-          "enumDescriptions": [
-            "Application install type not specified.",
-            "Multiple app install types.",
-            "Normal app install type.",
-            "Administrator app install type.",
-            "Development app install type.",
-            "Sideloaded app install type.",
-            "Other app install type."
-          ],
-          "enum": [
-            "APP_INSTALL_TYPE_UNSPECIFIED",
-            "MULTIPLE",
-            "NORMAL",
-            "ADMIN",
-            "DEVELOPMENT",
-            "SIDELOAD",
-            "OTHER"
-          ],
-          "type": "string",
-          "description": "Output only. How the app was installed.",
-          "readOnly": true
-        },
-        "disabled": {
-          "description": "Output only. Whether the app is disabled.",
-          "type": "boolean",
-          "readOnly": true
-        },
-        "description": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Output only. Description of the installed app."
-        },
-        "appSource": {
-          "enum": [
-            "APP_SOURCE_UNSPECIFIED",
-            "CHROME_WEBSTORE",
-            "PLAY_STORE"
-          ],
-          "enumDescriptions": [
-            "Application source not specified.",
-            "Generally for extensions and Chrome apps.",
-            "Play Store app."
-          ],
-          "readOnly": true,
-          "type": "string",
-          "description": "Output only. Source of the installed app."
+          "description": "Output only. Homepage uri of the installed app."
         },
         "appType": {
+          "readOnly": true,
           "enumDescriptions": [
             "App type not specified.",
             "Chrome extension.",
@@ -428,136 +383,181 @@
             "ANDROID_APP"
           ],
           "description": "Output only. Type of the app.",
+          "type": "string"
+        },
+        "appSource": {
+          "type": "string",
+          "enumDescriptions": [
+            "Application source not specified.",
+            "Generally for extensions and Chrome apps.",
+            "Play Store app."
+          ],
           "readOnly": true,
+          "description": "Output only. Source of the installed app.",
+          "enum": [
+            "APP_SOURCE_UNSPECIFIED",
+            "CHROME_WEBSTORE",
+            "PLAY_STORE"
+          ]
+        },
+        "osUserCount": {
+          "description": "Output only. Count of ChromeOS users with this app installed.",
+          "readOnly": true,
+          "format": "int64",
           "type": "string"
         },
         "appId": {
-          "description": "Output only. Unique identifier of the app. For Chrome apps and extensions, the 32-character id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g. com.evernote).",
-          "readOnly": true,
-          "type": "string"
-        },
-        "homepageUri": {
-          "description": "Output only. Homepage uri of the installed app.",
           "type": "string",
-          "readOnly": true
-        }
-      },
-      "type": "object",
-      "description": "Describes an installed app.",
-      "id": "GoogleChromeManagementV1InstalledApp"
-    },
-    "GoogleChromeManagementV1Device": {
-      "description": "Describes a device reporting Chrome browser information.",
-      "id": "GoogleChromeManagementV1Device",
-      "properties": {
-        "deviceId": {
           "readOnly": true,
-          "description": "Output only. The ID of the device that reported this Chrome browser information.",
+          "description": "Output only. Unique identifier of the app. For Chrome apps and extensions, the 32-character id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g. com.evernote)."
+        },
+        "displayName": {
+          "readOnly": true,
+          "description": "Output only. Name of the installed app.",
           "type": "string"
         },
-        "machine": {
-          "description": "Output only. The name of the machine within its local network.",
+        "disabled": {
+          "type": "boolean",
           "readOnly": true,
-          "type": "string"
+          "description": "Output only. Whether the app is disabled."
+        },
+        "appInstallType": {
+          "enumDescriptions": [
+            "Application install type not specified.",
+            "Multiple app install types.",
+            "Normal app install type.",
+            "Administrator app install type.",
+            "Development app install type.",
+            "Sideloaded app install type.",
+            "Other app install type."
+          ],
+          "readOnly": true,
+          "type": "string",
+          "enum": [
+            "APP_INSTALL_TYPE_UNSPECIFIED",
+            "MULTIPLE",
+            "NORMAL",
+            "ADMIN",
+            "DEVELOPMENT",
+            "SIDELOAD",
+            "OTHER"
+          ],
+          "description": "Output only. How the app was installed."
         }
       },
+      "description": "Describes an installed app.",
+      "id": "GoogleChromeManagementV1InstalledApp",
       "type": "object"
     },
-    "GoogleChromeManagementV1CountInstalledAppsResponse": {
-      "id": "GoogleChromeManagementV1CountInstalledAppsResponse",
-      "properties": {
-        "totalSize": {
-          "description": "Total number of installed apps matching request.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "installedApps": {
-          "items": {
-            "$ref": "GoogleChromeManagementV1InstalledApp"
-          },
-          "type": "array",
-          "description": "List of installed apps matching request."
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "Token to specify next page in the list."
-        }
-      },
-      "type": "object",
-      "description": "Response containing details of queried installed apps."
-    },
-    "GoogleChromeManagementV1BrowserVersion": {
+    "GoogleChromeManagementV1Device": {
+      "id": "GoogleChromeManagementV1Device",
+      "description": "Describes a device reporting Chrome browser information.",
       "type": "object",
       "properties": {
-        "deviceOsVersion": {
-          "readOnly": true,
-          "description": "Output only. Version of the system-specified operating system.",
-          "type": "string"
-        },
-        "count": {
-          "description": "Output only. Count grouped by device_system and major version",
+        "machine": {
+          "description": "Output only. The name of the machine within its local network.",
           "type": "string",
-          "format": "int64",
           "readOnly": true
         },
-        "version": {
+        "deviceId": {
           "readOnly": true,
           "type": "string",
-          "description": "Output only. The full version of the installed browser."
-        },
-        "system": {
-          "readOnly": true,
-          "type": "string",
-          "enumDescriptions": [
-            "No operating system specified.",
-            "Other operating system.",
-            "Android operating system.",
-            "Apple iOS operating system.",
-            "Chrome OS operating system.",
-            "Microsoft Windows operating system.",
-            "Apple macOS operating system.",
-            "Linux operating system."
-          ],
-          "enum": [
-            "DEVICE_SYSTEM_UNSPECIFIED",
-            "SYSTEM_OTHER",
-            "SYSTEM_ANDROID",
-            "SYSTEM_IOS",
-            "SYSTEM_CROS",
-            "SYSTEM_WINDOWS",
-            "SYSTEM_MAC",
-            "SYSTEM_LINUX"
-          ],
-          "description": "Output only. The device operating system."
-        },
-        "channel": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Output only. The release channel of the installed browser.",
-          "enum": [
-            "RELEASE_CHANNEL_UNSPECIFIED",
-            "CANARY",
-            "DEV",
-            "BETA",
-            "STABLE"
-          ],
-          "enumDescriptions": [
-            "No release channel specified.",
-            "Canary release channel.",
-            "Dev release channel.",
-            "Beta release channel.",
-            "Stable release channel."
-          ]
+          "description": "Output only. The ID of the device that reported this Chrome browser information."
         }
-      },
-      "description": "Describes a browser version and its install count.",
-      "id": "GoogleChromeManagementV1BrowserVersion"
+      }
     }
   },
-  "protocol": "rest",
-  "mtlsRootUrl": "https://chromemanagement.mtls.googleapis.com/",
-  "revision": "20210227",
+  "kind": "discovery#restDescription",
   "title": "Chrome Management API",
+  "version_module": true,
+  "canonicalName": "Chrome Management",
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "description": "The Chrome Management API is a suite of services that allows Chrome administrators to view, manage and gain insights on their Chrome OS and Chrome Browser devices.",
+  "parameters": {
+    "prettyPrint": {
+      "location": "query",
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true"
+    },
+    "access_token": {
+      "description": "OAuth access token.",
+      "type": "string",
+      "location": "query"
+    },
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "fields": {
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "location": "query"
+    },
+    "alt": {
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "location": "query",
+      "description": "Data format for response.",
+      "default": "json",
+      "type": "string"
+    },
+    "quotaUser": {
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string"
+    },
+    "callback": {
+      "type": "string",
+      "location": "query",
+      "description": "JSONP"
+    },
+    "$.xgafv": {
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "V1 error format.",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "location": "query",
+      "type": "string"
+    },
+    "oauth_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user."
+    },
+    "key": {
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "type": "string"
+    },
+    "upload_protocol": {
+      "type": "string",
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+    }
+  },
   "name": "chromemanagement",
-  "batchPath": "batch"
+  "version": "v1",
+  "documentationLink": "http://developers.google.com/chrome/management/",
+  "ownerName": "Google",
+  "ownerDomain": "google.com",
+  "protocol": "rest",
+  "mtlsRootUrl": "https://chromemanagement.mtls.googleapis.com/"
 }

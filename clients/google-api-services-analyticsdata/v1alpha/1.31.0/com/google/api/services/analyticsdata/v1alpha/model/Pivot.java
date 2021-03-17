@@ -40,8 +40,8 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> fieldNames;
 
   /**
-   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
-   * 10,000 rows are returned. The product of the `limit` for each `pivot` in a
+   * The number of rows to return in this pivot. The `limit` parameter is required. A `limit` of
+   * 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a
    * `RunPivotReportRequest` must not exceed 100,000. For example, a two pivot request with `limit:
    * 1000` in each pivot will fail because the product is `1,000,000`.
    * The value may be {@code null}.
@@ -101,8 +101,8 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
-   * 10,000 rows are returned. The product of the `limit` for each `pivot` in a
+   * The number of rows to return in this pivot. The `limit` parameter is required. A `limit` of
+   * 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a
    * `RunPivotReportRequest` must not exceed 100,000. For example, a two pivot request with `limit:
    * 1000` in each pivot will fail because the product is `1,000,000`.
    * @return value or {@code null} for none
@@ -112,8 +112,8 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
-   * 10,000 rows are returned. The product of the `limit` for each `pivot` in a
+   * The number of rows to return in this pivot. The `limit` parameter is required. A `limit` of
+   * 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a
    * `RunPivotReportRequest` must not exceed 100,000. For example, a two pivot request with `limit:
    * 1000` in each pivot will fail because the product is `1,000,000`.
    * @param limit limit or {@code null} for none

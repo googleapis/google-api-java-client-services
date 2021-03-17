@@ -45,6 +45,14 @@ public final class RunRealtimeReportResponse extends com.google.api.client.json.
   }
 
   /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#runRealtimeReport". Useful to distinguish between response types in JSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * If requested, the maximum values of metrics.
    * The value may be {@code null}.
    */
@@ -142,6 +150,25 @@ public final class RunRealtimeReportResponse extends com.google.api.client.json.
    */
   public RunRealtimeReportResponse setDimensionHeaders(java.util.List<DimensionHeader> dimensionHeaders) {
     this.dimensionHeaders = dimensionHeaders;
+    return this;
+  }
+
+  /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#runRealtimeReport". Useful to distinguish between response types in JSON.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Identifies what kind of resource this message is. This `kind` is always the fixed string
+   * "analyticsData#runRealtimeReport". Useful to distinguish between response types in JSON.
+   * @param kind kind or {@code null} for none
+   */
+  public RunRealtimeReportResponse setKind(java.lang.String kind) {
+    this.kind = kind;
     return this;
   }
 

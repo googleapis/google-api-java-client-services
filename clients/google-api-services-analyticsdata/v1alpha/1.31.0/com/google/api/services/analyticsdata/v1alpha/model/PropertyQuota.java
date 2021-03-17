@@ -40,6 +40,15 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   private QuotaStatus concurrentRequests;
 
   /**
+   * Analytics Properties can send up to 120 requests with potentially thresholded dimensions per
+   * hour. In a batch request, each report request is individually counted for this quota if the
+   * request contains potentially thresholded dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuotaStatus potentiallyThresholdedRequestsPerHour;
+
+  /**
    * Standard Analytics Properties and cloud project pairs can have up to 10 server errors per hour;
    * Analytics 360 Properties and cloud project pairs can have up to 50 server errors per hour.
    * The value may be {@code null}.
@@ -80,6 +89,27 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
    */
   public PropertyQuota setConcurrentRequests(QuotaStatus concurrentRequests) {
     this.concurrentRequests = concurrentRequests;
+    return this;
+  }
+
+  /**
+   * Analytics Properties can send up to 120 requests with potentially thresholded dimensions per
+   * hour. In a batch request, each report request is individually counted for this quota if the
+   * request contains potentially thresholded dimensions.
+   * @return value or {@code null} for none
+   */
+  public QuotaStatus getPotentiallyThresholdedRequestsPerHour() {
+    return potentiallyThresholdedRequestsPerHour;
+  }
+
+  /**
+   * Analytics Properties can send up to 120 requests with potentially thresholded dimensions per
+   * hour. In a batch request, each report request is individually counted for this quota if the
+   * request contains potentially thresholded dimensions.
+   * @param potentiallyThresholdedRequestsPerHour potentiallyThresholdedRequestsPerHour or {@code null} for none
+   */
+  public PropertyQuota setPotentiallyThresholdedRequestsPerHour(QuotaStatus potentiallyThresholdedRequestsPerHour) {
+    this.potentiallyThresholdedRequestsPerHour = potentiallyThresholdedRequestsPerHour;
     return this;
   }
 

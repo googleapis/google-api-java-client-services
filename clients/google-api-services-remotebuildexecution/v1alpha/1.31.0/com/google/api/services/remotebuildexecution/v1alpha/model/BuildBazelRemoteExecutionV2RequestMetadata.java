@@ -46,12 +46,39 @@ public final class BuildBazelRemoteExecutionV2RequestMetadata extends com.google
   private java.lang.String actionId;
 
   /**
+   * A brief description of the kind of action, for example, CppCompile or GoLink. There is no
+   * standard agreed set of values for this, and they are expected to vary between different client
+   * tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actionMnemonic;
+
+  /**
+   * An identifier for the configuration in which the target was built, e.g. for differentiating
+   * building host tools or different target platforms. There is no expectation that this value will
+   * have any particular structure, or equality across invocations, though some client tools may
+   * offer these guarantees.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String configurationId;
+
+  /**
    * An identifier to tie multiple tool invocations together. For example, runs of foo_test,
    * bar_test and baz_test on a post-submit of a given patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String correlatedInvocationsId;
+
+  /**
+   * An identifier for the target which produced this action. No guarantees are made around how many
+   * actions may relate to a single target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetId;
 
   /**
    * The details for the tool invoking the requests.
@@ -88,6 +115,50 @@ public final class BuildBazelRemoteExecutionV2RequestMetadata extends com.google
   }
 
   /**
+   * A brief description of the kind of action, for example, CppCompile or GoLink. There is no
+   * standard agreed set of values for this, and they are expected to vary between different client
+   * tools.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActionMnemonic() {
+    return actionMnemonic;
+  }
+
+  /**
+   * A brief description of the kind of action, for example, CppCompile or GoLink. There is no
+   * standard agreed set of values for this, and they are expected to vary between different client
+   * tools.
+   * @param actionMnemonic actionMnemonic or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2RequestMetadata setActionMnemonic(java.lang.String actionMnemonic) {
+    this.actionMnemonic = actionMnemonic;
+    return this;
+  }
+
+  /**
+   * An identifier for the configuration in which the target was built, e.g. for differentiating
+   * building host tools or different target platforms. There is no expectation that this value will
+   * have any particular structure, or equality across invocations, though some client tools may
+   * offer these guarantees.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfigurationId() {
+    return configurationId;
+  }
+
+  /**
+   * An identifier for the configuration in which the target was built, e.g. for differentiating
+   * building host tools or different target platforms. There is no expectation that this value will
+   * have any particular structure, or equality across invocations, though some client tools may
+   * offer these guarantees.
+   * @param configurationId configurationId or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2RequestMetadata setConfigurationId(java.lang.String configurationId) {
+    this.configurationId = configurationId;
+    return this;
+  }
+
+  /**
    * An identifier to tie multiple tool invocations together. For example, runs of foo_test,
    * bar_test and baz_test on a post-submit of a given patch.
    * @return value or {@code null} for none
@@ -103,6 +174,25 @@ public final class BuildBazelRemoteExecutionV2RequestMetadata extends com.google
    */
   public BuildBazelRemoteExecutionV2RequestMetadata setCorrelatedInvocationsId(java.lang.String correlatedInvocationsId) {
     this.correlatedInvocationsId = correlatedInvocationsId;
+    return this;
+  }
+
+  /**
+   * An identifier for the target which produced this action. No guarantees are made around how many
+   * actions may relate to a single target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetId() {
+    return targetId;
+  }
+
+  /**
+   * An identifier for the target which produced this action. No guarantees are made around how many
+   * actions may relate to a single target.
+   * @param targetId targetId or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2RequestMetadata setTargetId(java.lang.String targetId) {
+    this.targetId = targetId;
     return this;
   }
 

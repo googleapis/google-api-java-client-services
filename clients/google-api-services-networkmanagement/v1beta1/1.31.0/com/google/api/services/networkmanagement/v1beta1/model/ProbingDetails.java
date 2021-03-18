@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
- * The details of probing from the latest run.
+ * Results of active probing from the last run of the test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -31,37 +31,36 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class ProbingDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Causes that the probing was aborted.
+   * The reason probing was aborted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String abortCause;
 
   /**
-   * Derived from the test input. The actual source and destination endpoint where the probing was
-   * run.
+   * The source and destination endpoints derived from the test input and used for active probing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndpointInfo endpointInfo;
 
   /**
-   * The details of an internal failure or a cancellation of reachability analysis.
+   * Details about an internal failure or the cancellation of active probing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status error;
 
   /**
-   * One way probing latency distribution. The latency is measured as duration of packet traversal
-   * of Google Cloud network, from source to destination endpoint.
+   * Latency as measured by active probing in one direction: from the source to the destination
+   * endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LatencyDistribution probingLatency;
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of active probing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,21 +74,21 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private java.lang.Integer sentProbeCount;
 
   /**
-   * Number of probes that reached destination.
+   * Number of probes that reached the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer successfulProbeCount;
 
   /**
-   * The time the reachability state was verified.
+   * The time that reachability was assessed through active probing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String verifyTime;
 
   /**
-   * Causes that the probing was aborted.
+   * The reason probing was aborted.
    * @return value or {@code null} for none
    */
   public java.lang.String getAbortCause() {
@@ -97,7 +96,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Causes that the probing was aborted.
+   * The reason probing was aborted.
    * @param abortCause abortCause or {@code null} for none
    */
   public ProbingDetails setAbortCause(java.lang.String abortCause) {
@@ -106,8 +105,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Derived from the test input. The actual source and destination endpoint where the probing was
-   * run.
+   * The source and destination endpoints derived from the test input and used for active probing.
    * @return value or {@code null} for none
    */
   public EndpointInfo getEndpointInfo() {
@@ -115,8 +113,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Derived from the test input. The actual source and destination endpoint where the probing was
-   * run.
+   * The source and destination endpoints derived from the test input and used for active probing.
    * @param endpointInfo endpointInfo or {@code null} for none
    */
   public ProbingDetails setEndpointInfo(EndpointInfo endpointInfo) {
@@ -125,7 +122,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The details of an internal failure or a cancellation of reachability analysis.
+   * Details about an internal failure or the cancellation of active probing.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -133,7 +130,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The details of an internal failure or a cancellation of reachability analysis.
+   * Details about an internal failure or the cancellation of active probing.
    * @param error error or {@code null} for none
    */
   public ProbingDetails setError(Status error) {
@@ -142,8 +139,8 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * One way probing latency distribution. The latency is measured as duration of packet traversal
-   * of Google Cloud network, from source to destination endpoint.
+   * Latency as measured by active probing in one direction: from the source to the destination
+   * endpoint.
    * @return value or {@code null} for none
    */
   public LatencyDistribution getProbingLatency() {
@@ -151,8 +148,8 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * One way probing latency distribution. The latency is measured as duration of packet traversal
-   * of Google Cloud network, from source to destination endpoint.
+   * Latency as measured by active probing in one direction: from the source to the destination
+   * endpoint.
    * @param probingLatency probingLatency or {@code null} for none
    */
   public ProbingDetails setProbingLatency(LatencyDistribution probingLatency) {
@@ -161,7 +158,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of active probing.
    * @return value or {@code null} for none
    */
   public java.lang.String getResult() {
@@ -169,7 +166,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of active probing.
    * @param result result or {@code null} for none
    */
   public ProbingDetails setResult(java.lang.String result) {
@@ -195,7 +192,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Number of probes that reached destination.
+   * Number of probes that reached the destination.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessfulProbeCount() {
@@ -203,7 +200,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Number of probes that reached destination.
+   * Number of probes that reached the destination.
    * @param successfulProbeCount successfulProbeCount or {@code null} for none
    */
   public ProbingDetails setSuccessfulProbeCount(java.lang.Integer successfulProbeCount) {
@@ -212,7 +209,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The time the reachability state was verified.
+   * The time that reachability was assessed through active probing.
    * @return value or {@code null} for none
    */
   public String getVerifyTime() {
@@ -220,7 +217,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The time the reachability state was verified.
+   * The time that reachability was assessed through active probing.
    * @param verifyTime verifyTime or {@code null} for none
    */
   public ProbingDetails setVerifyTime(String verifyTime) {

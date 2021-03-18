@@ -1857,17 +1857,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation of the values to retrieve. */
+        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> ranges;
 
-        /** The A1 notation of the values to retrieve.
+        /** The A1 notation or R1C1 notation of the range to retrieve values from.
          */
         public java.util.List<java.lang.String> getRanges() {
           return ranges;
         }
 
-        /** The A1 notation of the values to retrieve. */
+        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
         public BatchGet setRanges(java.util.List<java.lang.String> ranges) {
           this.ranges = ranges;
           return this;
@@ -2276,7 +2276,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Clear#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The A1 notation of the values to clear.
+       * @param range The A1 notation or R1C1 notation of the values to clear.
        * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
        * @return the request
        */
@@ -2303,7 +2303,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The A1 notation of the values to clear.
+         * @param range The A1 notation or R1C1 notation of the values to clear.
          * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
          * @since 1.13
          */
@@ -2384,17 +2384,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation of the values to clear. */
+        /** The A1 notation or R1C1 notation of the values to clear. */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation of the values to clear.
+        /** The A1 notation or R1C1 notation of the values to clear.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The A1 notation of the values to clear. */
+        /** The A1 notation or R1C1 notation of the values to clear. */
         public Clear setRange(java.lang.String range) {
           this.range = range;
           return this;
@@ -2415,7 +2415,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-       * @param range The A1 notation of the values to retrieve.
+       * @param range The A1 notation or R1C1 notation of the range to retrieve values from.
        * @return the request
        */
       public Get get(java.lang.String spreadsheetId, java.lang.String range) throws java.io.IOException {
@@ -2440,7 +2440,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-         * @param range The A1 notation of the values to retrieve.
+         * @param range The A1 notation or R1C1 notation of the range to retrieve values from.
          * @since 1.13
          */
         protected Get(java.lang.String spreadsheetId, java.lang.String range) {
@@ -2530,17 +2530,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The A1 notation of the values to retrieve. */
+        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The A1 notation of the values to retrieve.
+        /** The A1 notation or R1C1 notation of the range to retrieve values from.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The A1 notation of the values to retrieve. */
+        /** The A1 notation or R1C1 notation of the range to retrieve values from. */
         public Get setRange(java.lang.String range) {
           this.range = range;
           return this;

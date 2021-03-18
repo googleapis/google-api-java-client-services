@@ -74,7 +74,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   private java.lang.Float bubbleOpacity;
 
   /**
-   * The data contianing the bubble sizes. Bubble sizes are used to draw the bubbles at different
+   * The data containing the bubble sizes. Bubble sizes are used to draw the bubbles at different
    * sizes relative to each other. If specified, group_ids must also be specified. This field is
    * optional.
    * The value may be {@code null}.
@@ -114,7 +114,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   private java.lang.String legendPosition;
 
   /**
-   * The data contianing the bubble y-values. These values locate the bubbles in the chart
+   * The data containing the bubble y-values. These values locate the bubbles in the chart
    * vertically.
    * The value may be {@code null}.
    */
@@ -228,7 +228,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The data contianing the bubble sizes. Bubble sizes are used to draw the bubbles at different
+   * The data containing the bubble sizes. Bubble sizes are used to draw the bubbles at different
    * sizes relative to each other. If specified, group_ids must also be specified. This field is
    * optional.
    * @return value or {@code null} for none
@@ -238,7 +238,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The data contianing the bubble sizes. Bubble sizes are used to draw the bubbles at different
+   * The data containing the bubble sizes. Bubble sizes are used to draw the bubbles at different
    * sizes relative to each other. If specified, group_ids must also be specified. This field is
    * optional.
    * @param bubbleSizes bubbleSizes or {@code null} for none
@@ -323,7 +323,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The data contianing the bubble y-values. These values locate the bubbles in the chart
+   * The data containing the bubble y-values. These values locate the bubbles in the chart
    * vertically.
    * @return value or {@code null} for none
    */
@@ -332,7 +332,7 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The data contianing the bubble y-values. These values locate the bubbles in the chart
+   * The data containing the bubble y-values. These values locate the bubbles in the chart
    * vertically.
    * @param series series or {@code null} for none
    */

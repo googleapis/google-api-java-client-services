@@ -51,6 +51,17 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.util.List<TableFieldSchema> fields;
 
   /**
+   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
+   * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
+   * then max_length represents the maximum number of bytes in this field. It is invalid to set this
+   * field if type ≠ "STRING" and ≠ "BYTES".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxLength;
+
+  /**
    * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
    * value is NULLABLE.
    * The value may be {@code null}.
@@ -72,6 +83,32 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private PolicyTags policyTags;
+
+  /**
+   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
+   * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
+   * precision and scale are not specified, no value range constraint is imposed on this field
+   * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
+   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not precision, then it is invalid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long precision;
+
+  /**
+   * [Optional] See documentation for precision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long scale;
 
   /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
@@ -135,6 +172,31 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
+   * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
+   * then max_length represents the maximum number of bytes in this field. It is invalid to set this
+   * field if type ≠ "STRING" and ≠ "BYTES".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxLength() {
+    return maxLength;
+  }
+
+  /**
+   * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not
+   * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
+   * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
+   * then max_length represents the maximum number of bytes in this field. It is invalid to set this
+   * field if type ≠ "STRING" and ≠ "BYTES".
+   * @param maxLength maxLength or {@code null} for none
+   */
+  public TableFieldSchema setMaxLength(java.lang.Long maxLength) {
+    this.maxLength = maxLength;
+    return this;
+  }
+
+  /**
    * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default
    * value is NULLABLE.
    * @return value or {@code null} for none
@@ -186,6 +248,64 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setPolicyTags(PolicyTags policyTags) {
     this.policyTags = policyTags;
+    return this;
+  }
+
+  /**
+   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
+   * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
+   * precision and scale are not specified, no value range constraint is imposed on this field
+   * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
+   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not precision, then it is invalid.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPrecision() {
+    return precision;
+  }
+
+  /**
+   * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of
+   * digits in the fractional part in base 10) constraints for values of this field for NUMERIC or
+   * BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If
+   * precision and scale are not specified, no value range constraint is imposed on this field
+   * insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be
+   * in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S]
+   * - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero):
+   * [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type
+   * = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤
+   * precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is
+   * specified but not scale (and thus scale is interpreted to be equal to zero): - If type =
+   * "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is
+   * specified but not precision, then it is invalid.
+   * @param precision precision or {@code null} for none
+   */
+  public TableFieldSchema setPrecision(java.lang.Long precision) {
+    this.precision = precision;
+    return this;
+  }
+
+  /**
+   * [Optional] See documentation for precision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getScale() {
+    return scale;
+  }
+
+  /**
+   * [Optional] See documentation for precision.
+   * @param scale scale or {@code null} for none
+   */
+  public TableFieldSchema setScale(java.lang.Long scale) {
+    this.scale = scale;
     return this;
   }
 

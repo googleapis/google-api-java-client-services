@@ -32,7 +32,7 @@ public class BigqueryScopes {
   /** View your data in Google BigQuery. */
   public static final String BIGQUERY_READONLY = "https://www.googleapis.com/auth/bigquery.readonly";
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** View your data across Google Cloud Platform services. */

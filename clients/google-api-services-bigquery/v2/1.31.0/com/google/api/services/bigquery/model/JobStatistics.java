@@ -132,6 +132,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private ScriptStatistics scriptStatistics;
 
   /**
+   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SessionInfo sessionInfoTemplate;
+
+  /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * The value may be {@code null}.
@@ -389,6 +396,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setScriptStatistics(ScriptStatistics scriptStatistics) {
     this.scriptStatistics = scriptStatistics;
+    return this;
+  }
+
+  /**
+   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * @return value or {@code null} for none
+   */
+  public SessionInfo getSessionInfoTemplate() {
+    return sessionInfoTemplate;
+  }
+
+  /**
+   * [Output-only] [Preview] Information of the session if this job is part of one.
+   * @param sessionInfoTemplate sessionInfoTemplate or {@code null} for none
+   */
+  public JobStatistics setSessionInfoTemplate(SessionInfo sessionInfoTemplate) {
+    this.sessionInfoTemplate = sessionInfoTemplate;
     return this;
   }
 

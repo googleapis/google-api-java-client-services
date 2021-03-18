@@ -62,6 +62,15 @@ public final class BuildBazelRemoteExecutionV2CacheCapabilities extends com.goog
   private java.lang.Long maxBatchTotalSizeBytes;
 
   /**
+   * Compressors supported by the "compressed-blobs" bytestream resources. Servers MUST support
+   * identity/no-compression, even if it is not listed here. Note that this does not imply which if
+   * any compressors are supported by the server at the gRPC level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedCompressor;
+
+  /**
    * Whether absolute symlink targets are supported.
    * The value may be {@code null}.
    */
@@ -139,6 +148,27 @@ public final class BuildBazelRemoteExecutionV2CacheCapabilities extends com.goog
    */
   public BuildBazelRemoteExecutionV2CacheCapabilities setMaxBatchTotalSizeBytes(java.lang.Long maxBatchTotalSizeBytes) {
     this.maxBatchTotalSizeBytes = maxBatchTotalSizeBytes;
+    return this;
+  }
+
+  /**
+   * Compressors supported by the "compressed-blobs" bytestream resources. Servers MUST support
+   * identity/no-compression, even if it is not listed here. Note that this does not imply which if
+   * any compressors are supported by the server at the gRPC level.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedCompressor() {
+    return supportedCompressor;
+  }
+
+  /**
+   * Compressors supported by the "compressed-blobs" bytestream resources. Servers MUST support
+   * identity/no-compression, even if it is not listed here. Note that this does not imply which if
+   * any compressors are supported by the server at the gRPC level.
+   * @param supportedCompressor supportedCompressor or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2CacheCapabilities setSupportedCompressor(java.util.List<java.lang.String> supportedCompressor) {
+    this.supportedCompressor = supportedCompressor;
     return this;
   }
 

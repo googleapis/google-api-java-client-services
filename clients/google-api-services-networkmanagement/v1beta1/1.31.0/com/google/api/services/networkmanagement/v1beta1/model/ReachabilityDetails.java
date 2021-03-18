@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
- * The details of reachability state from the latest run.
+ * Results of the configuration analysis from the last run of the test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   private Status error;
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of the test's configuration analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   private java.util.List<Trace> traces;
 
   /**
-   * The time the reachability state was verified.
+   * The time of the configuration analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of the test's configuration analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getResult() {
@@ -85,7 +85,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The overall reachability result of the test.
+   * The overall result of the test's configuration analysis.
    * @param result result or {@code null} for none
    */
   public ReachabilityDetails setResult(java.lang.String result) {
@@ -113,7 +113,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time the reachability state was verified.
+   * The time of the configuration analysis.
    * @return value or {@code null} for none
    */
   public String getVerifyTime() {
@@ -121,7 +121,7 @@ public final class ReachabilityDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The time the reachability state was verified.
+   * The time of the configuration analysis.
    * @param verifyTime verifyTime or {@code null} for none
    */
   public ReachabilityDetails setVerifyTime(String verifyTime) {

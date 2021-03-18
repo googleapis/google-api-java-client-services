@@ -67,7 +67,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private DropInfo drop;
 
   /**
-   * Display info of the source and destination under analysis. The endpiont info in an intermediate
+   * Display info of the source and destination under analysis. The endpoint info in an intermediate
    * state may differ with the initial input, as it might be modified by state like NAT, or
    * Connection Proxy.
    * The value may be {@code null}.
@@ -238,7 +238,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the source and destination under analysis. The endpiont info in an intermediate
+   * Display info of the source and destination under analysis. The endpoint info in an intermediate
    * state may differ with the initial input, as it might be modified by state like NAT, or
    * Connection Proxy.
    * @return value or {@code null} for none
@@ -248,7 +248,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the source and destination under analysis. The endpiont info in an intermediate
+   * Display info of the source and destination under analysis. The endpoint info in an intermediate
    * state may differ with the initial input, as it might be modified by state like NAT, or
    * Connection Proxy.
    * @param endpoint endpoint or {@code null} for none

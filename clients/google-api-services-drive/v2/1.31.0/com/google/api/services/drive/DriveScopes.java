@@ -32,7 +32,7 @@ public class DriveScopes {
   /** View your Google Drive apps. */
   public static final String DRIVE_APPS_READONLY = "https://www.googleapis.com/auth/drive.apps.readonly";
 
-  /** View and manage Google Drive files and folders that you have opened or created with this app. */
+  /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
   public static final String DRIVE_FILE = "https://www.googleapis.com/auth/drive.file";
 
   /** View and manage metadata of files in your Google Drive. */

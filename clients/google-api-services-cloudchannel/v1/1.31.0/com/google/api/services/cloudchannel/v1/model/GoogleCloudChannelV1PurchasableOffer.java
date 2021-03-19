@@ -17,7 +17,8 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Offer that can be puchased for a customer. This is used in ListPurchasableOffer API response.
+ * Offer that you can purchase for a customer. This is used in the ListPurchasableOffer API
+ * response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:

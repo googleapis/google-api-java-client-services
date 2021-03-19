@@ -133,6 +133,1780 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.Folders.List request = cloudresourcemanager.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * Creates a Folder in the resource hierarchy. Returns an Operation which can be used to track the
+     * progress of the folder creation workflow. Upon success the Operation.response field will be
+     * populated with the created Folder. In order to succeed, the addition of this new Folder must not
+     * violate the Folder naming, height or fanout constraints. + The Folder's display_name must be
+     * distinct from all other Folders that share its parent. + The addition of the Folder must not
+     * cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+     * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
+     * moving folders that contain deleted folders. + The addition of the Folder must not cause the
+     * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
+     * constraint violation, some errors may be returned by the CreateFolder request, with status code
+     * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
+     * communicated in the Operation, with the specific PreconditionFailure returned via the details
+     * list in the Operation.error field. The caller must have `resourcemanager.folders.create`
+     * permission on the identified parent.
+     *
+     * Create a request for the method "folders.create".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudresourcemanager.v3.model.Folder content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/folders";
+
+      /**
+       * Creates a Folder in the resource hierarchy. Returns an Operation which can be used to track the
+       * progress of the folder creation workflow. Upon success the Operation.response field will be
+       * populated with the created Folder. In order to succeed, the addition of this new Folder must
+       * not violate the Folder naming, height or fanout constraints. + The Folder's display_name must
+       * be distinct from all other Folders that share its parent. + The addition of the Folder must not
+       * cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+       * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
+       * moving folders that contain deleted folders. + The addition of the Folder must not cause the
+       * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
+       * constraint violation, some errors may be returned by the CreateFolder request, with status code
+       * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
+       * communicated in the Operation, with the specific PreconditionFailure returned via the details
+       * list in the Operation.error field. The caller must have `resourcemanager.folders.create`
+       * permission on the identified parent.
+       *
+       * Create a request for the method "folders.create".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudresourcemanager.v3.model.Folder content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Requests deletion of a Folder. The Folder is moved into the DELETE_REQUESTED state immediately,
+     * and is deleted approximately 30 days later. This method may only be called on an empty Folder,
+     * where a Folder is empty if it doesn't contain any Folders or Projects in the ACTIVE state. If
+     * called on a folder in DELETE_REQUESTED state the result will be a no-op success. The caller must
+     * have `resourcemanager.folders.delete` permission on the identified folder.
+     *
+     * Create a request for the method "folders.delete".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Requests deletion of a Folder. The Folder is moved into the DELETE_REQUESTED state immediately,
+       * and is deleted approximately 30 days later. This method may only be called on an empty Folder,
+       * where a Folder is empty if it doesn't contain any Folders or Projects in the ACTIVE state. If
+       * called on a folder in DELETE_REQUESTED state the result will be a no-op success. The caller
+       * must have `resourcemanager.folders.delete` permission on the identified folder.
+       *
+       * Create a request for the method "folders.delete".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudResourceManager.this, "DELETE", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Folder to be deleted. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Folder to be deleted. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have the
+     * format `folders/{folder_id}` (for example, `folders/1234`). The caller must have
+     * `resourcemanager.folders.get` permission on the identified folder.
+     *
+     * Create a request for the method "folders.get".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Folder> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Retrieves a Folder identified by the supplied resource name. Valid Folder resource names have
+       * the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have
+       * `resourcemanager.folders.get` permission on the identified folder.
+       *
+       * Create a request for the method "folders.get".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Folder.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Folder to retrieve. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Folder to retrieve. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the access control policy for a Folder. The returned policy may be empty if no such policy
+     * or resource exists. The `resource` field should be the Folder's resource name, e.g.
+     * "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the
+     * identified folder.
+     *
+     * Create a request for the method "folders.getIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Gets the access control policy for a Folder. The returned policy may be empty if no such policy
+       * or resource exists. The `resource` field should be the Folder's resource name, e.g.
+       * "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the
+       * identified folder.
+       *
+       * Create a request for the method "folders.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the Folders that are direct descendants of supplied parent resource. List provides a
+     * strongly consistent view of the Folders underneath the specified parent resource. List returns
+     * Folders sorted based upon the (ascending) lexical ordering of their display_name. The caller must
+     * have `resourcemanager.folders.list` permission on the identified parent.
+     *
+     * Create a request for the method "folders.list".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListFoldersResponse> {
+
+      private static final String REST_PATH = "v3/folders";
+
+      /**
+       * Lists the Folders that are direct descendants of supplied parent resource. List provides a
+       * strongly consistent view of the Folders underneath the specified parent resource. List returns
+       * Folders sorted based upon the (ascending) lexical ordering of their display_name. The caller
+       * must have `resourcemanager.folders.list` permission on the identified parent.
+       *
+       * Create a request for the method "folders.list".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListFoldersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of Folders to return in the response. If unspecified, server
+       * picks an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of Folders to return in the response. If unspecified, server picks an
+     appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of Folders to return in the response. If unspecified, server
+       * picks an appropriate default.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `ListFolders` that indicates
+       * where this listing should continue from.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to `ListFolders` that indicates where
+     this listing should continue from.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `ListFolders` that indicates
+       * where this listing should continue from.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. The resource name of the Organization or Folder whose Folders are being listed.
+       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
+       * method is controlled by checking the `resourcemanager.folders.list` permission on the
+       * `parent`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The resource name of the Organization or Folder whose Folders are being listed. Must be
+     of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is controlled
+     by checking the `resourcemanager.folders.list` permission on the `parent`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The resource name of the Organization or Folder whose Folders are being listed.
+       * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`. Access to this
+       * method is controlled by checking the `resourcemanager.folders.list` permission on the
+       * `parent`.
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned.
+       * Defaults to false.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned. Defaults to
+     false.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /**
+       * Optional. Controls whether Folders in the DELETE_REQUESTED state should be returned.
+       * Defaults to false.
+       */
+      public List setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Moves a Folder under a new resource parent. Returns an Operation which can be used to track the
+     * progress of the folder move workflow. Upon success the Operation.response field will be populated
+     * with the moved Folder. Upon failure, a FolderOperationError categorizing the failure cause will
+     * be returned - if the failure occurs synchronously then the FolderOperationError will be returned
+     * via the Status.details field and if it occurs asynchronously then the FolderOperation will be
+     * returned via the Operation.error field. In addition, the Operation.metadata field will be
+     * populated with a FolderOperation message as an aid to stateless clients. Folder moves will be
+     * rejected if they violate either the naming, height or fanout constraints described in the
+     * CreateFolder documentation. The caller must have `resourcemanager.folders.move` permission on the
+     * folder's current and proposed new parent.
+     *
+     * Create a request for the method "folders.move".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.MoveFolderRequest}
+     * @return the request
+     */
+    public Move move(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.MoveFolderRequest content) throws java.io.IOException {
+      Move result = new Move(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Move extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}:move";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Moves a Folder under a new resource parent. Returns an Operation which can be used to track the
+       * progress of the folder move workflow. Upon success the Operation.response field will be
+       * populated with the moved Folder. Upon failure, a FolderOperationError categorizing the failure
+       * cause will be returned - if the failure occurs synchronously then the FolderOperationError will
+       * be returned via the Status.details field and if it occurs asynchronously then the
+       * FolderOperation will be returned via the Operation.error field. In addition, the
+       * Operation.metadata field will be populated with a FolderOperation message as an aid to
+       * stateless clients. Folder moves will be rejected if they violate either the naming, height or
+       * fanout constraints described in the CreateFolder documentation. The caller must have
+       * `resourcemanager.folders.move` permission on the folder's current and proposed new parent.
+       *
+       * Create a request for the method "folders.move".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.MoveFolderRequest}
+       * @since 1.13
+       */
+      protected Move(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.MoveFolderRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public Move set$Xgafv(java.lang.String $Xgafv) {
+        return (Move) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Move setAccessToken(java.lang.String accessToken) {
+        return (Move) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Move setAlt(java.lang.String alt) {
+        return (Move) super.setAlt(alt);
+      }
+
+      @Override
+      public Move setCallback(java.lang.String callback) {
+        return (Move) super.setCallback(callback);
+      }
+
+      @Override
+      public Move setFields(java.lang.String fields) {
+        return (Move) super.setFields(fields);
+      }
+
+      @Override
+      public Move setKey(java.lang.String key) {
+        return (Move) super.setKey(key);
+      }
+
+      @Override
+      public Move setOauthToken(java.lang.String oauthToken) {
+        return (Move) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Move) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Move setQuotaUser(java.lang.String quotaUser) {
+        return (Move) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Move setUploadType(java.lang.String uploadType) {
+        return (Move) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Move setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Move) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
+       */
+      public Move setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Move set(String parameterName, Object value) {
+        return (Move) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a Folder, changing its display_name. Changes to the folder display_name will be rejected
+     * if they violate either the display_name formatting rules or naming constraints described in the
+     * CreateFolder documentation. The Folder's display_name must start and end with a letter or digit,
+     * may contain letters, digits, spaces, hyphens and underscores and can be between 3 and 30
+     * characters. This is captured by the regular expression: `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The
+     * caller must have `resourcemanager.folders.update` permission on the identified folder. If the
+     * update fails due to the unique name constraint then a PreconditionFailure explaining this
+     * violation will be returned in the Status.details field.
+     *
+     * Create a request for the method "folders.patch".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+     *        "folders/1234".
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Folder content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Updates a Folder, changing its display_name. Changes to the folder display_name will be
+       * rejected if they violate either the display_name formatting rules or naming constraints
+       * described in the CreateFolder documentation. The Folder's display_name must start and end with
+       * a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be
+       * between 3 and 30 characters. This is captured by the regular expression:
+       * `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The caller must have `resourcemanager.folders.update`
+       * permission on the identified folder. If the update fails due to the unique name constraint then
+       * a PreconditionFailure explaining this violation will be returned in the Status.details field.
+       *
+       * Create a request for the method "folders.patch".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+     *        "folders/1234".
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Folder content) {
+        super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for
+       * example: "folders/1234".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+     "folders/1234".
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for
+       * example: "folders/1234".
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. Fields to be updated. Only the `display_name` can be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. Fields to be updated. Only the `display_name` can be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. Fields to be updated. Only the `display_name` can be updated. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Search for folders that match specific filter criteria. Search provides an eventually consistent
+     * view of the folders a user has access to which meet the specified filter criteria. This will only
+     * return folders on which the caller has the permission `resourcemanager.folders.get`.
+     *
+     * Create a request for the method "folders.search".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.SearchFoldersResponse> {
+
+      private static final String REST_PATH = "v3/folders:search";
+
+      /**
+       * Search for folders that match specific filter criteria. Search provides an eventually
+       * consistent view of the folders a user has access to which meet the specified filter criteria.
+       * This will only return folders on which the caller has the permission
+       * `resourcemanager.folders.get`.
+       *
+       * Create a request for the method "folders.search".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.SearchFoldersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of folders to return in the response. If unspecified, server
+       * picks an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of folders to return in the response. If unspecified, server picks an
+     appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of folders to return in the response. If unspecified, server
+       * picks an appropriate default.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `SearchFolders` that
+       * indicates from where search should continue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to `SearchFolders` that indicates from
+     where search should continue.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `SearchFolders` that
+       * indicates from where search should continue.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. Search criteria used to select the Folders to return. If no search criteria is
+       * specified then all accessible folders will be returned. Query expressions can be used to
+       * restrict results based upon displayName, state and parent, where the operators `=` (`:`)
+       * `NOT`, `AND` and `OR` can be used along with the suffix wildcard symbol `*`. The
+       * displayName field in a query expression should use escaped quotes for values that include
+       * whitespace to prevent unexpected behavior. | Field | Description |
+       * |-------------------------|----------------------------------------| | displayName |
+       * Filters by displayName. | | parent | Filters by parent (e.g. folders/123). | | state,
+       * lifecycleState | Filters by state. | Some example queries are: * Query `displayName=Test*`
+       * returns Folder resources whose display name starts with "Test". * Query `state=ACTIVE`
+       * returns Folder resources with `state` set to `ACTIVE`. * Query `parent=folders/123` returns
+       * Folder resources that have `folders/123` as a parent resource. * Query `parent=folders/123
+       * AND state=ACTIVE` returns active Folder resources that have `folders/123` as a parent
+       * resource. * Query `displayName=\\"Test String\\"` returns Folder resources with display
+       * names that include both "Test" and "String".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. Search criteria used to select the Folders to return. If no search criteria is specified
+     then all accessible folders will be returned. Query expressions can be used to restrict results
+     based upon displayName, state and parent, where the operators `=` (`:`) `NOT`, `AND` and `OR` can
+     be used along with the suffix wildcard symbol `*`. The displayName field in a query expression
+     should use escaped quotes for values that include whitespace to prevent unexpected behavior. |
+     Field | Description | |-------------------------|----------------------------------------| |
+     displayName | Filters by displayName. | | parent | Filters by parent (e.g. folders/123). | | state,
+     lifecycleState | Filters by state. | Some example queries are: * Query `displayName=Test*` returns
+     Folder resources whose display name starts with "Test". * Query `state=ACTIVE` returns Folder
+     resources with `state` set to `ACTIVE`. * Query `parent=folders/123` returns Folder resources that
+     have `folders/123` as a parent resource. * Query `parent=folders/123 AND state=ACTIVE` returns
+     active Folder resources that have `folders/123` as a parent resource. * Query `displayName=\\"Test
+     String\\"` returns Folder resources with display names that include both "Test" and "String".
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. Search criteria used to select the Folders to return. If no search criteria is
+       * specified then all accessible folders will be returned. Query expressions can be used to
+       * restrict results based upon displayName, state and parent, where the operators `=` (`:`)
+       * `NOT`, `AND` and `OR` can be used along with the suffix wildcard symbol `*`. The
+       * displayName field in a query expression should use escaped quotes for values that include
+       * whitespace to prevent unexpected behavior. | Field | Description |
+       * |-------------------------|----------------------------------------| | displayName |
+       * Filters by displayName. | | parent | Filters by parent (e.g. folders/123). | | state,
+       * lifecycleState | Filters by state. | Some example queries are: * Query `displayName=Test*`
+       * returns Folder resources whose display name starts with "Test". * Query `state=ACTIVE`
+       * returns Folder resources with `state` set to `ACTIVE`. * Query `parent=folders/123` returns
+       * Folder resources that have `folders/123` as a parent resource. * Query `parent=folders/123
+       * AND state=ACTIVE` returns active Folder resources that have `folders/123` as a parent
+       * resource. * Query `displayName=\\"Test String\\"` returns Folder resources with display
+       * names that include both "Test" and "String".
+       */
+      public Search setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on a Folder, replacing any existing policy. The `resource` field
+     * should be the Folder's resource name, e.g. "folders/1234". The caller must have
+     * `resourcemanager.folders.setIamPolicy` permission on the identified folder.
+     *
+     * Create a request for the method "folders.setIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Sets the access control policy on a Folder, replacing any existing policy. The `resource` field
+       * should be the Folder's resource name, e.g. "folders/1234". The caller must have
+       * `resourcemanager.folders.setIamPolicy` permission on the identified folder.
+       *
+       * Create a request for the method "folders.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified Folder. The `resource` field should be the
+     * Folder's resource name, e.g. "folders/1234". There are no permissions required for making this
+     * API call.
+     *
+     * Create a request for the method "folders.testIamPermissions".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "v3/{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Returns permissions that a caller has on the specified Folder. The `resource` field should be
+       * the Folder's resource name, e.g. "folders/1234". There are no permissions required for making
+       * this API call.
+       *
+       * Create a request for the method "folders.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+       * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+       * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Cancels the deletion request for a Folder. This method may be called on a Folder in any state. If
+     * Folder is in ACTIVE state the result will be a no-op success. In order to succeed, the Folder's
+     * parent must be in the ACTIVE state. In addition, reintroducing the folder into the tree must not
+     * violate folder naming, height and fanout constraints described in the CreateFolder documentation.
+     * The caller must have `resourcemanager.folders.undelete` permission on the identified folder.
+     *
+     * Create a request for the method "folders.undelete".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.UndeleteFolderRequest}
+     * @return the request
+     */
+    public Undelete undelete(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.UndeleteFolderRequest content) throws java.io.IOException {
+      Undelete result = new Undelete(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Undelete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}:undelete";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Cancels the deletion request for a Folder. This method may be called on a Folder in any state.
+       * If Folder is in ACTIVE state the result will be a no-op success. In order to succeed, the
+       * Folder's parent must be in the ACTIVE state. In addition, reintroducing the folder into the
+       * tree must not violate folder naming, height and fanout constraints described in the
+       * CreateFolder documentation. The caller must have `resourcemanager.folders.undelete` permission
+       * on the identified folder.
+       *
+       * Create a request for the method "folders.undelete".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Undelete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.UndeleteFolderRequest}
+       * @since 1.13
+       */
+      protected Undelete(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.UndeleteFolderRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public Undelete set$Xgafv(java.lang.String $Xgafv) {
+        return (Undelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Undelete setAlt(java.lang.String alt) {
+        return (Undelete) super.setAlt(alt);
+      }
+
+      @Override
+      public Undelete setCallback(java.lang.String callback) {
+        return (Undelete) super.setCallback(callback);
+      }
+
+      @Override
+      public Undelete setFields(java.lang.String fields) {
+        return (Undelete) super.setFields(fields);
+      }
+
+      @Override
+      public Undelete setKey(java.lang.String key) {
+        return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Undelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Undelete setQuotaUser(java.lang.String quotaUser) {
+        return (Undelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Undelete setUploadType(java.lang.String uploadType) {
+        return (Undelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Undelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Folder to undelete. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Folder to undelete. Must be of the form
+       * `folders/{folder_id}`.
+       */
+      public Undelete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Undelete set(String parameterName, Object value) {
+        return (Undelete) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Liens collection.
    *
    * <p>The typical use is:</p>
@@ -866,6 +2640,2582 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.Organizations.List request = cloudresourcemanager.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * Fetches an Organization resource identified by the specified resource name.
+     *
+     * Create a request for the method "organizations.get".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the Organization to fetch. This is the organization's relative path
+     *        in the API, formatted as "organizations/[organizationId]". For example,
+     *        "organizations/1234".
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Organization> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Fetches an Organization resource identified by the specified resource name.
+       *
+       * Create a request for the method "organizations.get".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Organization to fetch. This is the organization's relative path
+     *        in the API, formatted as "organizations/[organizationId]". For example,
+     *        "organizations/1234".
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Organization.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Organization to fetch. This is the organization's
+       * relative path in the API, formatted as "organizations/[organizationId]". For example,
+       * "organizations/1234".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Organization to fetch. This is the organization's relative path
+     in the API, formatted as "organizations/[organizationId]". For example, "organizations/1234".
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Organization to fetch. This is the organization's
+       * relative path in the API, formatted as "organizations/[organizationId]". For example,
+       * "organizations/1234".
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the access control policy for an Organization resource. May be empty if no such policy or
+     * resource exists. The `resource` field should be the organization's resource name, e.g.
+     * "organizations/123". Authorization requires the Google IAM permission
+     * `resourcemanager.organizations.getIamPolicy` on the specified organization
+     *
+     * Create a request for the method "organizations.getIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Gets the access control policy for an Organization resource. May be empty if no such policy or
+       * resource exists. The `resource` field should be the organization's resource name, e.g.
+       * "organizations/123". Authorization requires the Google IAM permission
+       * `resourcemanager.organizations.getIamPolicy` on the specified organization
+       *
+       * Create a request for the method "organizations.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Searches Organization resources that are visible to the user and satisfy the specified filter.
+     * This method returns Organizations in an unspecified order. New Organizations do not necessarily
+     * appear at the end of the results, and may take a small amount of time to appear. Search will only
+     * return organizations on which the user has the permission `resourcemanager.organizations.get`
+     *
+     * Create a request for the method "organizations.search".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.SearchOrganizationsResponse> {
+
+      private static final String REST_PATH = "v3/organizations:search";
+
+      /**
+       * Searches Organization resources that are visible to the user and satisfy the specified filter.
+       * This method returns Organizations in an unspecified order. New Organizations do not necessarily
+       * appear at the end of the results, and may take a small amount of time to appear. Search will
+       * only return organizations on which the user has the permission
+       * `resourcemanager.organizations.get`
+       *
+       * Create a request for the method "organizations.search".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.SearchOrganizationsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of Organizations to return in the response. If unspecified,
+       * server picks an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of Organizations to return in the response. If unspecified, server
+     picks an appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of Organizations to return in the response. If unspecified,
+       * server picks an appropriate default.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `SearchOrganizations` that
+       * indicates from where listing should continue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to `SearchOrganizations` that indicates
+     from where listing should continue.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to `SearchOrganizations` that
+       * indicates from where listing should continue.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. An optional query string used to filter the Organizations to return in the
+       * response. Query rules are case-insensitive. | Field | Description |
+       * |------------------|--------------------------------------------| | directoryCustomerId,
+       * owner.directoryCustomerId | Filters by directory customer id. | | domain | Filters by
+       * domain. | Organizations may be queried by `directoryCustomerId` or by `domain`, where the
+       * domain is a G Suite domain, for example: * Query `directorycustomerid:123456789` returns
+       * Organization resources with `owner.directory_customer_id` equal to `123456789`. * Query
+       * `domain:google.com` returns Organization resources corresponding to the domain
+       * `google.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. An optional query string used to filter the Organizations to return in the response.
+     Query rules are case-insensitive. | Field | Description |
+     |------------------|--------------------------------------------| | directoryCustomerId,
+     owner.directoryCustomerId | Filters by directory customer id. | | domain | Filters by domain. |
+     Organizations may be queried by `directoryCustomerId` or by `domain`, where the domain is a G Suite
+     domain, for example: * Query `directorycustomerid:123456789` returns Organization resources with
+     `owner.directory_customer_id` equal to `123456789`. * Query `domain:google.com` returns
+     Organization resources corresponding to the domain `google.com`.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. An optional query string used to filter the Organizations to return in the
+       * response. Query rules are case-insensitive. | Field | Description |
+       * |------------------|--------------------------------------------| | directoryCustomerId,
+       * owner.directoryCustomerId | Filters by directory customer id. | | domain | Filters by
+       * domain. | Organizations may be queried by `directoryCustomerId` or by `domain`, where the
+       * domain is a G Suite domain, for example: * Query `directorycustomerid:123456789` returns
+       * Organization resources with `owner.directory_customer_id` equal to `123456789`. * Query
+       * `domain:google.com` returns Organization resources corresponding to the domain
+       * `google.com`.
+       */
+      public Search setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on an Organization resource. Replaces any existing policy. The
+     * `resource` field should be the organization's resource name, e.g. "organizations/123".
+     * Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy` on
+     * the specified organization
+     *
+     * Create a request for the method "organizations.setIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Sets the access control policy on an Organization resource. Replaces any existing policy. The
+       * `resource` field should be the organization's resource name, e.g. "organizations/123".
+       * Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy`
+       * on the specified organization
+       *
+       * Create a request for the method "organizations.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified Organization. The `resource` field should
+     * be the organization's resource name, e.g. "organizations/123". There are no permissions required
+     * for making this API call.
+     *
+     * Create a request for the method "organizations.testIamPermissions".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "v3/{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+      /**
+       * Returns permissions that a caller has on the specified Organization. The `resource` field
+       * should be the organization's resource name, e.g. "organizations/123". There are no permissions
+       * required for making this API call.
+       *
+       * Create a request for the method "organizations.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+       * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+       * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^organizations/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.Projects.List request = cloudresourcemanager.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * Request that a new Project be created. The result is an Operation which can be used to track the
+     * creation process. This process usually takes a few seconds, but can sometimes take much longer.
+     * The tracking Operation is automatically deleted after a few hours, so there is no need to call
+     * DeleteOperation.
+     *
+     * Create a request for the method "projects.create".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Project}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudresourcemanager.v3.model.Project content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/projects";
+
+      /**
+       * Request that a new Project be created. The result is an Operation which can be used to track
+       * the creation process. This process usually takes a few seconds, but can sometimes take much
+       * longer. The tracking Operation is automatically deleted after a few hours, so there is no need
+       * to call DeleteOperation.
+       *
+       * Create a request for the method "projects.create".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Project}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudresourcemanager.v3.model.Project content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Marks the Project identified by the specified `name` (for example, `projects/415104041262`) for
+     * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This
+     * method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts
+     * at an unspecified time, at which point the Project is no longer accessible. Until the deletion
+     * completes, you can check the lifecycle state checked by retrieving the Project with GetProject,
+     * and the Project remains visible to ListProjects. However, you cannot update the project. After
+     * the deletion completes, the Project is not retrievable by the GetProject, ListProjects, and
+     * SearchProjects methods. This method behaves idempotently (eg., deleting a `DELETE_REQUESTED`
+     * project will not be an error, but also won't do anything). The caller must have delete
+     * permissions for this Project.
+     *
+     * Create a request for the method "projects.delete".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the Project (for example, `projects/415104041262`).
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Marks the Project identified by the specified `name` (for example, `projects/415104041262`) for
+       * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This
+       * method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion
+       * starts at an unspecified time, at which point the Project is no longer accessible. Until the
+       * deletion completes, you can check the lifecycle state checked by retrieving the Project with
+       * GetProject, and the Project remains visible to ListProjects. However, you cannot update the
+       * project. After the deletion completes, the Project is not retrievable by the GetProject,
+       * ListProjects, and SearchProjects methods. This method behaves idempotently (eg., deleting a
+       * `DELETE_REQUESTED` project will not be an error, but also won't do anything). The caller must
+       * have delete permissions for this Project.
+       *
+       * Create a request for the method "projects.delete".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the Project (for example, `projects/415104041262`).
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudResourceManager.this, "DELETE", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the Project (for example, `projects/415104041262`). */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the Project (for example, `projects/415104041262`).
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the Project (for example, `projects/415104041262`). */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the Project identified by the specified `name` (for example, `projects/415104041262`).
+     * The caller must have read permissions for this Project.
+     *
+     * Create a request for the method "projects.get".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the project (for example, `projects/415104041262`).
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Project> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Retrieves the Project identified by the specified `name` (for example,
+       * `projects/415104041262`). The caller must have read permissions for this Project.
+       *
+       * Create a request for the method "projects.get".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the project (for example, `projects/415104041262`).
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Project.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the project (for example, `projects/415104041262`). */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the project (for example, `projects/415104041262`).
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the project (for example, `projects/415104041262`). */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the IAM access control policy for the specified Project. Permission is denied if the
+     * policy or the resource does not exist.
+     *
+     * Create a request for the method "projects.getIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Returns the IAM access control policy for the specified Project. Permission is denied if the
+       * policy or the resource does not exist.
+       *
+       * Create a request for the method "projects.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.GetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists Projects that are direct children of the specified folder or organization resource. List
+     * provides a strongly consistent view of the Projects underneath the specified parent resource.
+     * List returns Projects sorted based upon the (ascending) lexical ordering of their `display_name`.
+     * The caller must have `resourcemanager.projects.list` permission on the identified parent.
+     *
+     * Create a request for the method "projects.list".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListProjectsResponse> {
+
+      private static final String REST_PATH = "v3/projects";
+
+      /**
+       * Lists Projects that are direct children of the specified folder or organization resource. List
+       * provides a strongly consistent view of the Projects underneath the specified parent resource.
+       * List returns Projects sorted based upon the (ascending) lexical ordering of their
+       * `display_name`. The caller must have `resourcemanager.projects.list` permission on the
+       * identified parent.
+       *
+       * Create a request for the method "projects.list".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListProjectsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of Projects to return in the response. The server can return
+       * fewer Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of Projects to return in the response. The server can return fewer
+     Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of Projects to return in the response. The server can return
+       * fewer Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to ListProjects that indicates
+       * from where listing should continue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to ListProjects that indicates from
+     where listing should continue.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to ListProjects that indicates
+       * from where listing should continue.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. The name of the parent resource to list projects under. For example, setting this
+       * field to 'folders/1234' would list all projects directly under that folder.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The name of the parent resource to list projects under. For example, setting this field
+     to 'folders/1234' would list all projects directly under that folder.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The name of the parent resource to list projects under. For example, setting this
+       * field to 'folders/1234' would list all projects directly under that folder.
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. Indicate that Projects in the `DELETE_REQUESTED` state should also be returned.
+       * Normally only `ACTIVE` projects are returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** Optional. Indicate that Projects in the `DELETE_REQUESTED` state should also be returned. Normally
+     only `ACTIVE` projects are returned.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /**
+       * Optional. Indicate that Projects in the `DELETE_REQUESTED` state should also be returned.
+       * Normally only `ACTIVE` projects are returned.
+       */
+      public List setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Move a Project under a new resource parent. Returns an operation which can be used to track the
+     * process of the Project move workflow. Upon success, the Operation.response field will be
+     * populated with the moved Project. The caller must have `resourcemanager.projects.update`
+     * permission on the Project and have `resourcemanager.projects.move` permission on the Project's
+     * current and proposed new parent.
+     *
+     * Create a request for the method "projects.move".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the project to move.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.MoveProjectRequest}
+     * @return the request
+     */
+    public Move move(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.MoveProjectRequest content) throws java.io.IOException {
+      Move result = new Move(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Move extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}:move";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Move a Project under a new resource parent. Returns an operation which can be used to track the
+       * process of the Project move workflow. Upon success, the Operation.response field will be
+       * populated with the moved Project. The caller must have `resourcemanager.projects.update`
+       * permission on the Project and have `resourcemanager.projects.move` permission on the Project's
+       * current and proposed new parent.
+       *
+       * Create a request for the method "projects.move".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the project to move.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.MoveProjectRequest}
+       * @since 1.13
+       */
+      protected Move(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.MoveProjectRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Move set$Xgafv(java.lang.String $Xgafv) {
+        return (Move) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Move setAccessToken(java.lang.String accessToken) {
+        return (Move) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Move setAlt(java.lang.String alt) {
+        return (Move) super.setAlt(alt);
+      }
+
+      @Override
+      public Move setCallback(java.lang.String callback) {
+        return (Move) super.setCallback(callback);
+      }
+
+      @Override
+      public Move setFields(java.lang.String fields) {
+        return (Move) super.setFields(fields);
+      }
+
+      @Override
+      public Move setKey(java.lang.String key) {
+        return (Move) super.setKey(key);
+      }
+
+      @Override
+      public Move setOauthToken(java.lang.String oauthToken) {
+        return (Move) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Move) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Move setQuotaUser(java.lang.String quotaUser) {
+        return (Move) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Move setUploadType(java.lang.String uploadType) {
+        return (Move) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Move setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Move) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the project to move. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the project to move.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the project to move. */
+      public Move setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Move set(String parameterName, Object value) {
+        return (Move) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the attributes of the Project identified by the specified `name` (for example,
+     * `projects/415104041262`). At present this is only useful for updating the display_name and
+     * labels. Deleting all labels requires an update mask for labels field. The caller must have modify
+     * permissions for this Project.
+     *
+     * Create a request for the method "projects.patch".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Output only. The unique resource name of the Project. It is an int64 generated number prefixed by
+     *        "projects/". Example: `projects/415104041262`
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Project}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Project content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Updates the attributes of the Project identified by the specified `name` (for example,
+       * `projects/415104041262`). At present this is only useful for updating the display_name and
+       * labels. Deleting all labels requires an update mask for labels field. The caller must have
+       * modify permissions for this Project.
+       *
+       * Create a request for the method "projects.patch".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. The unique resource name of the Project. It is an int64 generated number prefixed by
+     *        "projects/". Example: `projects/415104041262`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Project}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Project content) {
+        super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. The unique resource name of the Project. It is an int64 generated number
+       * prefixed by "projects/". Example: `projects/415104041262`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. The unique resource name of the Project. It is an int64 generated number prefixed by
+     "projects/". Example: `projects/415104041262`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. The unique resource name of the Project. It is an int64 generated number
+       * prefixed by "projects/". Example: `projects/415104041262`
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. An update mask to selectively update fields. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. An update mask to selectively update fields.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. An update mask to selectively update fields. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Search for Projects that the caller has the `resourcemanager.projects.get` permission on and
+     * satisfy the specified query. This method returns Projects in an unspecified order. This method is
+     * eventually consistent with project mutations; this means that a newly created project may not
+     * appear in the results or recent updates to an existing project may not be reflected in the
+     * results. To retrieve the latest state of a project, use the GetProject method.
+     *
+     * Create a request for the method "projects.search".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.SearchProjectsResponse> {
+
+      private static final String REST_PATH = "v3/projects:search";
+
+      /**
+       * Search for Projects that the caller has the `resourcemanager.projects.get` permission on and
+       * satisfy the specified query. This method returns Projects in an unspecified order. This method
+       * is eventually consistent with project mutations; this means that a newly created project may
+       * not appear in the results or recent updates to an existing project may not be reflected in the
+       * results. To retrieve the latest state of a project, use the GetProject method.
+       *
+       * Create a request for the method "projects.search".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.SearchProjectsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of Projects to return in the response. The server can return
+       * fewer Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of Projects to return in the response. The server can return fewer
+     Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of Projects to return in the response. The server can return
+       * fewer Projects than requested. If unspecified, server picks an appropriate default.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to ListProjects that indicates
+       * from where listing should continue.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A pagination token returned from a previous call to ListProjects that indicates from
+     where listing should continue.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A pagination token returned from a previous call to ListProjects that indicates
+       * from where listing should continue.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. A query string for searching for projects that the caller has
+       * `resourcemanager.projects.get` permission to. If multiple fields are included in the query,
+       * the it will return results that match any of the fields. Some eligible fields are: | Field
+       * | Description | |-------------------------|----------------------------------------------|
+       * | displayName, name | Filters by displayName. | | parent.type | Parent's type: `folder` or
+       * `organization`. | | parent.id | Parent's id number (e.g. 123) | | parent | Project's
+       * parent. (e.g. folders/123, organizations) Prefer parent field over parent.id and
+       * parent.type. | | id, projectId | Filters by projectId. | | state, lifecycleState | Filters
+       * by state. | | labels | Filters by label name or value. | | labels. (where *key* is the name
+       * of a label) | Filters by label name. | Search expressions are case insensitive. Some
+       * examples queries: | Query | Description |
+       * |------------------|-----------------------------------------------------| | name:how* |
+       * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+       * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
+       * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
+       * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
+       * label `color` has the value `red` and its label `size` has the value `big`. | If no query
+       * is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. A query string for searching for projects that the caller has
+     `resourcemanager.projects.get` permission to. If multiple fields are included in the query, the it
+     will return results that match any of the fields. Some eligible fields are: | Field | Description |
+     |-------------------------|----------------------------------------------| | displayName, name |
+     Filters by displayName. | | parent.type | Parent's type: `folder` or `organization`. | | parent.id
+     | Parent's id number (e.g. 123) | | parent | Project's parent. (e.g. folders/123, organizations)
+     Prefer parent field over parent.id and parent.type. | | id, projectId | Filters by projectId. | |
+     state, lifecycleState | Filters by state. | | labels | Filters by label name or value. | | labels.
+     (where *key* is the name of a label) | Filters by label name. | Search expressions are case
+     insensitive. Some examples queries: | Query | Description |
+     |------------------|-----------------------------------------------------| | name:how* | The
+     project's name starts with "how". | | name:Howl | The project's name is `Howl` or `howl`. | |
+     name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | | labels.color:* | The
+     project has the label `color`. | | labels.color:red | The project's label `color` has the value
+     `red`. | | labels.color:red labels.size:big | The project's label `color` has the value `red` and
+     its label `size` has the value `big`. | If no query is specified, the call will return projects for
+     which the user has the `resourcemanager.projects.get` permission.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. A query string for searching for projects that the caller has
+       * `resourcemanager.projects.get` permission to. If multiple fields are included in the query,
+       * the it will return results that match any of the fields. Some eligible fields are: | Field
+       * | Description | |-------------------------|----------------------------------------------|
+       * | displayName, name | Filters by displayName. | | parent.type | Parent's type: `folder` or
+       * `organization`. | | parent.id | Parent's id number (e.g. 123) | | parent | Project's
+       * parent. (e.g. folders/123, organizations) Prefer parent field over parent.id and
+       * parent.type. | | id, projectId | Filters by projectId. | | state, lifecycleState | Filters
+       * by state. | | labels | Filters by label name or value. | | labels. (where *key* is the name
+       * of a label) | Filters by label name. | Search expressions are case insensitive. Some
+       * examples queries: | Query | Description |
+       * |------------------|-----------------------------------------------------| | name:how* |
+       * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+       * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
+       * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
+       * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
+       * label `color` has the value `red` and its label `size` has the value `big`. | If no query
+       * is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission.
+       */
+      public Search setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the IAM access control policy for the specified Project. CAUTION: This method will replace
+     * the existing policy, and cannot be used to append additional IAM settings. NOTE: Removing service
+     * accounts from policies or changing their roles can render services completely inoperable. It is
+     * important to understand how the service account is being used before removing or updating its
+     * roles. The following constraints apply when using `setIamPolicy()`: + Project does not support
+     * `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a `Policy`. + The owner
+     * role can be granted to a `user`, `serviceAccount`, or a group that is part of an organization.
+     * For example, group@myownpersonaldomain.com could be added as an owner to a project in the
+     * myownpersonaldomain.com organization, but not the examplepetstore.com organization. + Service
+     * accounts can be made owners of a project directly without any restrictions. However, to be added
+     * as an owner, a user must be invited via Cloud Platform console and must accept the invitation. +
+     * A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the
+     * owner role using the Cloud Platform Console and must explicitly accept the invitation. +
+     * Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent only
+     * using the Cloud Platform Console. + Membership changes that leave the project without any owners
+     * that have accepted the Terms of Service (ToS) will be rejected. + If the project is not part of
+     * an organization, there must be at least one owner who has accepted the Terms of Service (ToS)
+     * agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner from the
+     * policy will fail. This restriction also applies to legacy projects that no longer have owners who
+     * have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting
+     * owner is rectified. + Calling this method requires enabling the App Engine Admin API.
+     *
+     * Create a request for the method "projects.setIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Policy> {
+
+      private static final String REST_PATH = "v3/{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Sets the IAM access control policy for the specified Project. CAUTION: This method will replace
+       * the existing policy, and cannot be used to append additional IAM settings. NOTE: Removing
+       * service accounts from policies or changing their roles can render services completely
+       * inoperable. It is important to understand how the service account is being used before removing
+       * or updating its roles. The following constraints apply when using `setIamPolicy()`: + Project
+       * does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a
+       * `Policy`. + The owner role can be granted to a `user`, `serviceAccount`, or a group that is
+       * part of an organization. For example, group@myownpersonaldomain.com could be added as an owner
+       * to a project in the myownpersonaldomain.com organization, but not the examplepetstore.com
+       * organization. + Service accounts can be made owners of a project directly without any
+       * restrictions. However, to be added as an owner, a user must be invited via Cloud Platform
+       * console and must accept the invitation. + A user cannot be granted the owner role using
+       * `setIamPolicy()`. The user must be granted the owner role using the Cloud Platform Console and
+       * must explicitly accept the invitation. + Invitations to grant the owner role cannot be sent
+       * using `setIamPolicy()`; they must be sent only using the Cloud Platform Console. + Membership
+       * changes that leave the project without any owners that have accepted the Terms of Service (ToS)
+       * will be rejected. + If the project is not part of an organization, there must be at least one
+       * owner who has accepted the Terms of Service (ToS) agreement in the policy. Calling
+       * `setIamPolicy()` to remove the last ToS-accepted owner from the policy will fail. This
+       * restriction also applies to legacy projects that no longer have owners who have accepted the
+       * ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is
+       * rectified. + Calling this method requires enabling the App Engine Admin API.
+       *
+       * Create a request for the method "projects.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.SetIamPolicyRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified Project.
+     *
+     * Create a request for the method "projects.testIamPermissions".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "v3/{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Returns permissions that a caller has on the specified Project.
+       *
+       * Create a request for the method "projects.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the
+       * remote operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.ser
+       * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Restores the Project identified by the specified `name` (for example, `projects/415104041262`).
+     * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After
+     * deletion starts, the Project cannot be restored. The caller must have undelete permissions for
+     * this Project.
+     *
+     * Create a request for the method "projects.undelete".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the Project (for example, `projects/415104041262`). Required.
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.UndeleteProjectRequest}
+     * @return the request
+     */
+    public Undelete undelete(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.UndeleteProjectRequest content) throws java.io.IOException {
+      Undelete result = new Undelete(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Undelete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}:undelete";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Restores the Project identified by the specified `name` (for example, `projects/415104041262`).
+       * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED.
+       * After deletion starts, the Project cannot be restored. The caller must have undelete
+       * permissions for this Project.
+       *
+       * Create a request for the method "projects.undelete".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link Undelete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the Project (for example, `projects/415104041262`). Required.
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.UndeleteProjectRequest}
+       * @since 1.13
+       */
+      protected Undelete(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.UndeleteProjectRequest content) {
+        super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Undelete set$Xgafv(java.lang.String $Xgafv) {
+        return (Undelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Undelete setAlt(java.lang.String alt) {
+        return (Undelete) super.setAlt(alt);
+      }
+
+      @Override
+      public Undelete setCallback(java.lang.String callback) {
+        return (Undelete) super.setCallback(callback);
+      }
+
+      @Override
+      public Undelete setFields(java.lang.String fields) {
+        return (Undelete) super.setFields(fields);
+      }
+
+      @Override
+      public Undelete setKey(java.lang.String key) {
+        return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Undelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Undelete setQuotaUser(java.lang.String quotaUser) {
+        return (Undelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Undelete setUploadType(java.lang.String uploadType) {
+        return (Undelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Undelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the Project (for example, `projects/415104041262`). Required. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the Project (for example, `projects/415104041262`). Required.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the Project (for example, `projects/415104041262`). Required. */
+      public Undelete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Undelete set(String parameterName, Object value) {
+        return (Undelete) super.set(parameterName, value);
       }
     }
 

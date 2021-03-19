@@ -37,31 +37,30 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   private java.lang.String cloudIdentityId;
 
   /**
-   * A reseller should create a customer and use the resource name of the created customer here.
+   * A reseller should create a customer and use the resource name of that customer here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerName;
 
   /**
-   * The BCP-47 language code, such as "en-US". If specified, the response will be localized to the
-   * corresponding language code. Default is "en-US".
+   * The BCP-47 language code. For example, "en-US". The response will localize in the corresponding
+   * language code, if specified. The default value is "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Requested page size. Server might return fewer results than requested. If unspecified, at most
-   * 100 Offers will be returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
+   * Requested page size. Server might return fewer results than requested. If unspecified, returns
+   * at most 100 offers. The maximum value is 1000; the server will coerce values above 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * A token identifying a page of results, if other than the first one. Typically obtained via
+   * A token for a page of results other than the first page. Obtained using
    * ListTransferableOffersResponse.next_page_token of the previous
    * CloudChannelService.ListTransferableOffers call.
    * The value may be {@code null}.
@@ -70,7 +69,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   private java.lang.String pageToken;
 
   /**
-   * Required. SKU for which the Offers are being looked up.
+   * Required. The SKU to look up Offers for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +93,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * A reseller should create a customer and use the resource name of the created customer here.
+   * A reseller should create a customer and use the resource name of that customer here.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerName() {
@@ -102,7 +101,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * A reseller should create a customer and use the resource name of the created customer here.
+   * A reseller should create a customer and use the resource name of that customer here.
    * @param customerName customerName or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableOffersRequest setCustomerName(java.lang.String customerName) {
@@ -111,8 +110,8 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * The BCP-47 language code, such as "en-US". If specified, the response will be localized to the
-   * corresponding language code. Default is "en-US".
+   * The BCP-47 language code. For example, "en-US". The response will localize in the corresponding
+   * language code, if specified. The default value is "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -120,8 +119,8 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * The BCP-47 language code, such as "en-US". If specified, the response will be localized to the
-   * corresponding language code. Default is "en-US".
+   * The BCP-47 language code. For example, "en-US". The response will localize in the corresponding
+   * language code, if specified. The default value is "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableOffersRequest setLanguageCode(java.lang.String languageCode) {
@@ -130,9 +129,8 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * Requested page size. Server might return fewer results than requested. If unspecified, at most
-   * 100 Offers will be returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
+   * Requested page size. Server might return fewer results than requested. If unspecified, returns
+   * at most 100 offers. The maximum value is 1000; the server will coerce values above 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -140,9 +138,8 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * Requested page size. Server might return fewer results than requested. If unspecified, at most
-   * 100 Offers will be returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
+   * Requested page size. Server might return fewer results than requested. If unspecified, returns
+   * at most 100 offers. The maximum value is 1000; the server will coerce values above 1000.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableOffersRequest setPageSize(java.lang.Integer pageSize) {
@@ -151,7 +148,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * A token identifying a page of results, if other than the first one. Typically obtained via
+   * A token for a page of results other than the first page. Obtained using
    * ListTransferableOffersResponse.next_page_token of the previous
    * CloudChannelService.ListTransferableOffers call.
    * @return value or {@code null} for none
@@ -161,7 +158,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * A token identifying a page of results, if other than the first one. Typically obtained via
+   * A token for a page of results other than the first page. Obtained using
    * ListTransferableOffersResponse.next_page_token of the previous
    * CloudChannelService.ListTransferableOffers call.
    * @param pageToken pageToken or {@code null} for none
@@ -172,7 +169,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * Required. SKU for which the Offers are being looked up.
+   * Required. The SKU to look up Offers for.
    * @return value or {@code null} for none
    */
   public java.lang.String getSku() {
@@ -180,7 +177,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
   }
 
   /**
-   * Required. SKU for which the Offers are being looked up.
+   * Required. The SKU to look up Offers for.
    * @param sku sku or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableOffersRequest setSku(java.lang.String sku) {

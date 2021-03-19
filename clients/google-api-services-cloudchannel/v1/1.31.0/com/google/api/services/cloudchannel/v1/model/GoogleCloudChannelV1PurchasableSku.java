@@ -17,7 +17,7 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * SKU that can be used for a puchase. This is used in ListPurchasableSku API response.
+ * SKU that you can purchase. This is used in ListPurchasableSku API response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:

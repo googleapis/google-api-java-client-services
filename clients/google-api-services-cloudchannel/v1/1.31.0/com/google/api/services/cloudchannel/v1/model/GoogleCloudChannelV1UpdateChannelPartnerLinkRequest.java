@@ -30,15 +30,15 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The channel partner link to update. Only field channel_partner_link.link_state is
-   * allowed to be updated.
+   * Required. The channel partner link to update. Only channel_partner_link.link_state is allowed
+   * for updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1ChannelPartnerLink channelPartnerLink;
 
   /**
-   * Required. The update mask that applies to the resource. The only allowable value for update
+   * Required. The update mask that applies to the resource. The only allowable value for an update
    * mask is channel_partner_link.link_state.
    * The value may be {@code null}.
    */
@@ -46,8 +46,8 @@ public final class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends c
   private String updateMask;
 
   /**
-   * Required. The channel partner link to update. Only field channel_partner_link.link_state is
-   * allowed to be updated.
+   * Required. The channel partner link to update. Only channel_partner_link.link_state is allowed
+   * for updates.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1ChannelPartnerLink getChannelPartnerLink() {
@@ -55,8 +55,8 @@ public final class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends c
   }
 
   /**
-   * Required. The channel partner link to update. Only field channel_partner_link.link_state is
-   * allowed to be updated.
+   * Required. The channel partner link to update. Only channel_partner_link.link_state is allowed
+   * for updates.
    * @param channelPartnerLink channelPartnerLink or {@code null} for none
    */
   public GoogleCloudChannelV1UpdateChannelPartnerLinkRequest setChannelPartnerLink(GoogleCloudChannelV1ChannelPartnerLink channelPartnerLink) {
@@ -65,7 +65,7 @@ public final class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends c
   }
 
   /**
-   * Required. The update mask that applies to the resource. The only allowable value for update
+   * Required. The update mask that applies to the resource. The only allowable value for an update
    * mask is channel_partner_link.link_state.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends c
   }
 
   /**
-   * Required. The update mask that applies to the resource. The only allowable value for update
+   * Required. The update mask that applies to the resource. The only allowable value for an update
    * mask is channel_partner_link.link_state.
    * @param updateMask updateMask or {@code null} for none
    */

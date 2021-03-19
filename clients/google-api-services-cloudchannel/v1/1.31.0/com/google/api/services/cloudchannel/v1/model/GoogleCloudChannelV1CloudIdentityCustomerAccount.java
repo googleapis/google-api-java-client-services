@@ -17,8 +17,8 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Entity representing a Cloud Identity account which may or may not be associated with a Channel
- * Services API partner.
+ * Entity representing a Cloud Identity account that may be associated with a Channel Services API
+ * partner.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:
@@ -31,37 +31,37 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Identity ID of the customer. This field is populated ONLY if existing = true.
+   * If existing = true, the Cloud Identity ID of the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerCloudIdentityId;
 
   /**
-   * Name of the customer that owns the Cloud Identity account. This field is populated ONLY if
-   * owned = true. The customer_name takes the format: accounts/{account_id}/customers/{customer_id}
+   * If owned = true, the name of the customer that owns the Cloud Identity account. Customer_name
+   * uses the format: accounts/{account_id}/customers/{customer_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerName;
 
   /**
-   * True if a Cloud Identity account exists for a specific domain.
+   * Returns true if a Cloud Identity account exists for a specific domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean existing;
 
   /**
-   * True if the Cloud Identity account is associated with a customer belonging to the Channel
-   * Services partner making the API call.
+   * Returns true if the Cloud Identity account is associated with a customer of the Channel
+   * Services partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean owned;
 
   /**
-   * Cloud Identity ID of the customer. This field is populated ONLY if existing = true.
+   * If existing = true, the Cloud Identity ID of the customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerCloudIdentityId() {
@@ -69,7 +69,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * Cloud Identity ID of the customer. This field is populated ONLY if existing = true.
+   * If existing = true, the Cloud Identity ID of the customer.
    * @param customerCloudIdentityId customerCloudIdentityId or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setCustomerCloudIdentityId(java.lang.String customerCloudIdentityId) {
@@ -78,8 +78,8 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * Name of the customer that owns the Cloud Identity account. This field is populated ONLY if
-   * owned = true. The customer_name takes the format: accounts/{account_id}/customers/{customer_id}
+   * If owned = true, the name of the customer that owns the Cloud Identity account. Customer_name
+   * uses the format: accounts/{account_id}/customers/{customer_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerName() {
@@ -87,8 +87,8 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * Name of the customer that owns the Cloud Identity account. This field is populated ONLY if
-   * owned = true. The customer_name takes the format: accounts/{account_id}/customers/{customer_id}
+   * If owned = true, the name of the customer that owns the Cloud Identity account. Customer_name
+   * uses the format: accounts/{account_id}/customers/{customer_id}
    * @param customerName customerName or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setCustomerName(java.lang.String customerName) {
@@ -97,7 +97,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * True if a Cloud Identity account exists for a specific domain.
+   * Returns true if a Cloud Identity account exists for a specific domain.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExisting() {
@@ -105,7 +105,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * True if a Cloud Identity account exists for a specific domain.
+   * Returns true if a Cloud Identity account exists for a specific domain.
    * @param existing existing or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setExisting(java.lang.Boolean existing) {
@@ -114,8 +114,8 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * True if the Cloud Identity account is associated with a customer belonging to the Channel
-   * Services partner making the API call.
+   * Returns true if the Cloud Identity account is associated with a customer of the Channel
+   * Services partner.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOwned() {
@@ -123,8 +123,8 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   }
 
   /**
-   * True if the Cloud Identity account is associated with a customer belonging to the Channel
-   * Services partner making the API call.
+   * Returns true if the Cloud Identity account is associated with a customer of the Channel
+   * Services partner.
    * @param owned owned or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setOwned(java.lang.Boolean owned) {

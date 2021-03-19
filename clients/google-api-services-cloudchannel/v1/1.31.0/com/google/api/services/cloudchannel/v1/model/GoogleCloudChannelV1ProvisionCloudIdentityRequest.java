@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1ProvisionCloudIdentityRequest extends com
   private GoogleCloudChannelV1AdminUser user;
 
   /**
-   * If set, validate the request and preview the review, but do not actually post it.
+   * Validate the request and preview the review, but do not post it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudChannelV1ProvisionCloudIdentityRequest extends com
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually post it.
+   * Validate the request and preview the review, but do not post it.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -93,7 +93,7 @@ public final class GoogleCloudChannelV1ProvisionCloudIdentityRequest extends com
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually post it.
+   * Validate the request and preview the review, but do not post it.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public GoogleCloudChannelV1ProvisionCloudIdentityRequest setValidateOnly(java.lang.Boolean validateOnly) {

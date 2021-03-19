@@ -30,14 +30,14 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1RegisterSubscriberRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Service account which will provide subscriber access to the registered topic.
+   * Required. Service account that provides subscriber access to the registered topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Required. Service account which will provide subscriber access to the registered topic.
+   * Required. Service account that provides subscriber access to the registered topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1RegisterSubscriberRequest extends com.goo
   }
 
   /**
-   * Required. Service account which will provide subscriber access to the registered topic.
+   * Required. Service account that provides subscriber access to the registered topic.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudChannelV1RegisterSubscriberRequest setServiceAccount(java.lang.String serviceAccount) {

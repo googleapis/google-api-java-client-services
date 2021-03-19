@@ -38,7 +38,7 @@ public final class GoogleCloudChannelV1ListTransferableSkusResponse extends com.
   private java.lang.String nextPageToken;
 
   /**
-   * Information about existing SKUs for a customer that would need to be transferred.
+   * Information about existing SKUs for a customer that needs a transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudChannelV1ListTransferableSkusResponse extends com.
   }
 
   /**
-   * Information about existing SKUs for a customer that would need to be transferred.
+   * Information about existing SKUs for a customer that needs a transfer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1TransferableSku> getTransferableSkus() {
@@ -72,7 +72,7 @@ public final class GoogleCloudChannelV1ListTransferableSkusResponse extends com.
   }
 
   /**
-   * Information about existing SKUs for a customer that would need to be transferred.
+   * Information about existing SKUs for a customer that needs a transfer.
    * @param transferableSkus transferableSkus or {@code null} for none
    */
   public GoogleCloudChannelV1ListTransferableSkusResponse setTransferableSkus(java.util.List<GoogleCloudChannelV1TransferableSku> transferableSkus) {

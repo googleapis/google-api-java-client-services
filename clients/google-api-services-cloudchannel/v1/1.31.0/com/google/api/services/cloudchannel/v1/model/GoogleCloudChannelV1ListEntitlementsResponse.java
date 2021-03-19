@@ -30,7 +30,7 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ListEntitlementsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The entitlements belonging to the reseller's customer.
+   * The reseller customer's entitlements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class GoogleCloudChannelV1ListEntitlementsResponse extends com.goog
   }
 
   /**
-   * A token to List next page of results. Pass to ListEntitlementsRequest.page_token to obtain that
-   * page.
+   * A token to list the next page of results. Pass to ListEntitlementsRequest.page_token to obtain
+   * that page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The entitlements belonging to the reseller's customer.
+   * The reseller customer's entitlements.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Entitlement> getEntitlements() {
@@ -59,7 +59,7 @@ public final class GoogleCloudChannelV1ListEntitlementsResponse extends com.goog
   }
 
   /**
-   * The entitlements belonging to the reseller's customer.
+   * The reseller customer's entitlements.
    * @param entitlements entitlements or {@code null} for none
    */
   public GoogleCloudChannelV1ListEntitlementsResponse setEntitlements(java.util.List<GoogleCloudChannelV1Entitlement> entitlements) {
@@ -68,8 +68,8 @@ public final class GoogleCloudChannelV1ListEntitlementsResponse extends com.goog
   }
 
   /**
-   * A token to List next page of results. Pass to ListEntitlementsRequest.page_token to obtain that
-   * page.
+   * A token to list the next page of results. Pass to ListEntitlementsRequest.page_token to obtain
+   * that page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,8 +77,8 @@ public final class GoogleCloudChannelV1ListEntitlementsResponse extends com.goog
   }
 
   /**
-   * A token to List next page of results. Pass to ListEntitlementsRequest.page_token to obtain that
-   * page.
+   * A token to list the next page of results. Pass to ListEntitlementsRequest.page_token to obtain
+   * that page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudChannelV1ListEntitlementsResponse setNextPageToken(java.lang.String nextPageToken) {

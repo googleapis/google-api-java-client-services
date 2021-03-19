@@ -40,7 +40,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   /**
    * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query
    * length more than this field value will be truncated to this value. When unset, query length
-   * will be the default value.
+   * will be the default value. Changing query length will restart the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   /**
    * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query
    * length more than this field value will be truncated to this value. When unset, query length
-   * will be the default value.
+   * will be the default value. Changing query length will restart the database.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQueryStringLength() {
@@ -90,7 +90,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   /**
    * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query
    * length more than this field value will be truncated to this value. When unset, query length
-   * will be the default value.
+   * will be the default value. Changing query length will restart the database.
    * @param queryStringLength queryStringLength or {@code null} for none
    */
   public InsightsConfig setQueryStringLength(java.lang.Integer queryStringLength) {

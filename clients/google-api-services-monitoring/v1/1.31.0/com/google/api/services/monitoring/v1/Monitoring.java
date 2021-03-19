@@ -324,8 +324,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete
-       * permission on the specified dashboard. For more information, see Google Cloud IAM
-       * (https://cloud.google.com/iam).
+       * permission on the specified dashboard. For more information, see Cloud Identity and Access
+       * Management (https://cloud.google.com/iam).
        *
        * Create a request for the method "dashboards.delete".
        *
@@ -351,8 +351,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete
-         * permission on the specified dashboard. For more information, see Google Cloud IAM
-         * (https://cloud.google.com/iam).
+         * permission on the specified dashboard. For more information, see Cloud Identity and Access
+         * Management (https://cloud.google.com/iam).
          *
          * Create a request for the method "dashboards.delete".
          *
@@ -466,7 +466,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the
-       * specified dashboard. For more information, see Google Cloud IAM (https://cloud.google.com/iam).
+       * specified dashboard. For more information, see Cloud Identity and Access Management
+       * (https://cloud.google.com/iam).
        *
        * Create a request for the method "dashboards.get".
        *
@@ -493,7 +494,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on
-         * the specified dashboard. For more information, see Google Cloud IAM
+         * the specified dashboard. For more information, see Cloud Identity and Access Management
          * (https://cloud.google.com/iam).
          *
          * Create a request for the method "dashboards.get".
@@ -621,7 +622,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on
-       * the specified project. For more information, see Google Cloud IAM (https://cloud.google.com/iam).
+       * the specified project. For more information, see Cloud Identity and Access Management
+       * (https://cloud.google.com/iam).
        *
        * Create a request for the method "dashboards.list".
        *
@@ -646,7 +648,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on
-         * the specified project. For more information, see Google Cloud IAM
+         * the specified project. For more information, see Cloud Identity and Access Management
          * (https://cloud.google.com/iam).
          *
          * Create a request for the method "dashboards.list".
@@ -818,7 +820,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       /**
        * Replaces an existing custom dashboard with a new definition.This method requires the
        * monitoring.dashboards.update permission on the specified dashboard. For more information, see
-       * Google Cloud IAM (https://cloud.google.com/iam).
+       * Cloud Identity and Access Management (https://cloud.google.com/iam).
        *
        * Create a request for the method "dashboards.patch".
        *
@@ -845,7 +847,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Replaces an existing custom dashboard with a new definition.This method requires the
          * monitoring.dashboards.update permission on the specified dashboard. For more information, see
-         * Google Cloud IAM (https://cloud.google.com/iam).
+         * Cloud Identity and Access Management (https://cloud.google.com/iam).
          *
          * Create a request for the method "dashboards.patch".
          *

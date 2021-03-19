@@ -119,6 +119,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String instanceGroup;
 
   /**
+   * Instance lifecycle policy for this Instance Group Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy;
+
+  /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
    * existing instances in the group do not change unless you run recreateInstances, run
@@ -213,6 +220,24 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetSize;
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetStoppedSize;
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetSuspendedSize;
 
   /**
    * The update policy for this managed instance group.
@@ -471,6 +496,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
+   * Instance lifecycle policy for this Instance Group Manager.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceLifecyclePolicy getInstanceLifecyclePolicy() {
+    return instanceLifecyclePolicy;
+  }
+
+  /**
+   * Instance lifecycle policy for this Instance Group Manager.
+   * @param instanceLifecyclePolicy instanceLifecyclePolicy or {@code null} for none
+   */
+  public InstanceGroupManager setInstanceLifecyclePolicy(InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy) {
+    this.instanceLifecyclePolicy = instanceLifecyclePolicy;
+    return this;
+  }
+
+  /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
    * existing instances in the group do not change unless you run recreateInstances, run
@@ -695,6 +737,48 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {
     this.targetSize = targetSize;
+    return this;
+  }
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetStoppedSize() {
+    return targetStoppedSize;
+  }
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * @param targetStoppedSize targetStoppedSize or {@code null} for none
+   */
+  public InstanceGroupManager setTargetStoppedSize(java.lang.Integer targetStoppedSize) {
+    this.targetStoppedSize = targetStoppedSize;
+    return this;
+  }
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetSuspendedSize() {
+    return targetSuspendedSize;
+  }
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * @param targetSuspendedSize targetSuspendedSize or {@code null} for none
+   */
+  public InstanceGroupManager setTargetSuspendedSize(java.lang.Integer targetSuspendedSize) {
+    this.targetSuspendedSize = targetSuspendedSize;
     return this;
   }
 

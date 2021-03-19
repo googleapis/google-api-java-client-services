@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class BackendBucketCdnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders;
+
+  /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
    *
    * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
@@ -88,6 +97,48 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   private java.lang.Integer maxTtl;
 
   /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean negativeCaching;
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicy;
+
+  /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer serveWhileStale;
+
+  /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
@@ -105,6 +156,27 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signedUrlKeyNames;
+
+  /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> getBypassCacheOnRequestHeaders() {
+    return bypassCacheOnRequestHeaders;
+  }
+
+  /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * @param bypassCacheOnRequestHeaders bypassCacheOnRequestHeaders or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setBypassCacheOnRequestHeaders(java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders) {
+    this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
+    return this;
+  }
 
   /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
@@ -231,6 +303,99 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   public BackendBucketCdnPolicy setMaxTtl(java.lang.Integer maxTtl) {
     this.maxTtl = maxTtl;
+    return this;
+  }
+
+  /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNegativeCaching() {
+    return negativeCaching;
+  }
+
+  /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
+   * @param negativeCaching negativeCaching or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setNegativeCaching(java.lang.Boolean negativeCaching) {
+    this.negativeCaching = negativeCaching;
+    return this;
+  }
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicy() {
+    return negativeCachingPolicy;
+  }
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * @param negativeCachingPolicy negativeCachingPolicy or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setNegativeCachingPolicy(java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicy) {
+    this.negativeCachingPolicy = negativeCachingPolicy;
+    return this;
+  }
+
+  /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getServeWhileStale() {
+    return serveWhileStale;
+  }
+
+  /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * @param serveWhileStale serveWhileStale or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setServeWhileStale(java.lang.Integer serveWhileStale) {
+    this.serveWhileStale = serveWhileStale;
     return this;
   }
 

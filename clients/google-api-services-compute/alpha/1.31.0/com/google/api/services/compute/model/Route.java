@@ -34,6 +34,15 @@ package com.google.api.services.compute.model;
 public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether this route can conflict with existing subnetworks. Setting this to true allows this
+   * route to conflict with subnetworks that have already been configured on the corresponding
+   * network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowConflictingSubnetworks;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -197,6 +206,27 @@ public final class Route extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Warnings used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Warnings.class);
+  }
+
+  /**
+   * Whether this route can conflict with existing subnetworks. Setting this to true allows this
+   * route to conflict with subnetworks that have already been configured on the corresponding
+   * network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowConflictingSubnetworks() {
+    return allowConflictingSubnetworks;
+  }
+
+  /**
+   * Whether this route can conflict with existing subnetworks. Setting this to true allows this
+   * route to conflict with subnetworks that have already been configured on the corresponding
+   * network.
+   * @param allowConflictingSubnetworks allowConflictingSubnetworks or {@code null} for none
+   */
+  public Route setAllowConflictingSubnetworks(java.lang.Boolean allowConflictingSubnetworks) {
+    this.allowConflictingSubnetworks = allowConflictingSubnetworks;
+    return this;
   }
 
   /**

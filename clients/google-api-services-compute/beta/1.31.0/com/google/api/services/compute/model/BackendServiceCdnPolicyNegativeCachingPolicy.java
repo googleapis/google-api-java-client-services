@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
-   * than once.
+   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
+   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * code more than once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +48,9 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
   private java.lang.Integer ttl;
 
   /**
-   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
-   * than once.
+   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
+   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * code more than once.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -58,9 +58,9 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
   }
 
   /**
-   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
-   * than once.
+   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308,
+   * 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status
+   * code more than once.
    * @param code code or {@code null} for none
    */
   public BackendServiceCdnPolicyNegativeCachingPolicy setCode(java.lang.Integer code) {

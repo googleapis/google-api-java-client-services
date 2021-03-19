@@ -51,6 +51,19 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private HttpFaultInjection faultInjectionPolicy;
 
   /**
+   * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
+   * field where the timeout duration starts from the time the request has been fully processed
+   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
+   * until the response has been completely processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
+   * among all backend services associated with the route. This field is only allowed if the Url map
+   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration maxStreamDuration;
+
+  /**
    * Specifies the policy on how requests intended for the route's backends are shadowed to a
    * separate mirrored backend service. Loadbalancer does not wait for responses from the shadow
    * service. Prior to sending traffic to the shadow service, the host / authority header is
@@ -147,6 +160,35 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   public HttpRouteAction setFaultInjectionPolicy(HttpFaultInjection faultInjectionPolicy) {
     this.faultInjectionPolicy = faultInjectionPolicy;
+    return this;
+  }
+
+  /**
+   * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
+   * field where the timeout duration starts from the time the request has been fully processed
+   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
+   * until the response has been completely processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
+   * among all backend services associated with the route. This field is only allowed if the Url map
+   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public Duration getMaxStreamDuration() {
+    return maxStreamDuration;
+  }
+
+  /**
+   * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
+   * field where the timeout duration starts from the time the request has been fully processed
+   * (i.e. end-of-stream), the duration in this field is computed from the beginning of the stream
+   * until the response has been completely processed, including all retries. A stream that does not
+   * complete in this duration is closed. If not specified, will use the largest maxStreamDuration
+   * among all backend services associated with the route. This field is only allowed if the Url map
+   * is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * @param maxStreamDuration maxStreamDuration or {@code null} for none
+   */
+  public HttpRouteAction setMaxStreamDuration(Duration maxStreamDuration) {
+    this.maxStreamDuration = maxStreamDuration;
     return this;
   }
 

@@ -37,6 +37,15 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   private java.lang.Long id;
 
   /**
+   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interconnectAttachment;
+
+  /**
    * [Output Only] The external IP address for this VPN gateway interface.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
    */
   public VpnGatewayVpnGatewayInterface setId(java.lang.Long id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterconnectAttachment() {
+    return interconnectAttachment;
+  }
+
+  /**
+   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * @param interconnectAttachment interconnectAttachment or {@code null} for none
+   */
+  public VpnGatewayVpnGatewayInterface setInterconnectAttachment(java.lang.String interconnectAttachment) {
+    this.interconnectAttachment = interconnectAttachment;
     return this;
   }
 

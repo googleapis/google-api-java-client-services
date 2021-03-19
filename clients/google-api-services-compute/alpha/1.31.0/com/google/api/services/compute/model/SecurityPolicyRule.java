@@ -65,6 +65,13 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Boolean enableLogging;
 
   /**
+   * Optional, additional actions that are performed on headers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleHttpHeaderAction headerAction;
+
+  /**
    * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
    * The value may be {@code null}.
    */
@@ -220,6 +227,23 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    */
   public SecurityPolicyRule setEnableLogging(java.lang.Boolean enableLogging) {
     this.enableLogging = enableLogging;
+    return this;
+  }
+
+  /**
+   * Optional, additional actions that are performed on headers.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleHttpHeaderAction getHeaderAction() {
+    return headerAction;
+  }
+
+  /**
+   * Optional, additional actions that are performed on headers.
+   * @param headerAction headerAction or {@code null} for none
+   */
+  public SecurityPolicyRule setHeaderAction(SecurityPolicyRuleHttpHeaderAction headerAction) {
+    this.headerAction = headerAction;
     return this;
   }
 

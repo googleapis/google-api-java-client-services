@@ -259,6 +259,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceLogConfig logConfig;
 
   /**
+   * Specifies the default maximum duration (timeout) for streams to this service. Duration is
+   * computed from the beginning of the stream until the response has been completely processed,
+   * including all retries. A stream that does not complete in this duration is closed. If not
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
+   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration maxStreamDuration;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -905,6 +916,31 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setLogConfig(BackendServiceLogConfig logConfig) {
     this.logConfig = logConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the default maximum duration (timeout) for streams to this service. Duration is
+   * computed from the beginning of the stream until the response has been completely processed,
+   * including all retries. A stream that does not complete in this duration is closed. If not
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
+   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public Duration getMaxStreamDuration() {
+    return maxStreamDuration;
+  }
+
+  /**
+   * Specifies the default maximum duration (timeout) for streams to this service. Duration is
+   * computed from the beginning of the stream until the response has been completely processed,
+   * including all retries. A stream that does not complete in this duration is closed. If not
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
+   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * @param maxStreamDuration maxStreamDuration or {@code null} for none
+   */
+  public BackendService setMaxStreamDuration(Duration maxStreamDuration) {
+    this.maxStreamDuration = maxStreamDuration;
     return this;
   }
 

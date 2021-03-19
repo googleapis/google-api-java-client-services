@@ -90,6 +90,13 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.String response;
 
   /**
+   * Weight report mode. used for weighted Load Balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String weightReportMode;
+
+  /**
    * The value of the host header in the HTTP health check request. If left empty (default value),
    * the IP on behalf of which this health check is performed will be used.
    * @return value or {@code null} for none
@@ -227,6 +234,23 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
    */
   public HTTPHealthCheck setResponse(java.lang.String response) {
     this.response = response;
+    return this;
+  }
+
+  /**
+   * Weight report mode. used for weighted Load Balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWeightReportMode() {
+    return weightReportMode;
+  }
+
+  /**
+   * Weight report mode. used for weighted Load Balancing.
+   * @param weightReportMode weightReportMode or {@code null} for none
+   */
+  public HTTPHealthCheck setWeightReportMode(java.lang.String weightReportMode) {
+    this.weightReportMode = weightReportMode;
     return this;
   }
 

@@ -112,6 +112,13 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * [Output Only] Status information of existing scaling schedules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ScalingScheduleStatus> scalingScheduleStatus;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -314,6 +321,23 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
    */
   public Autoscaler setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * [Output Only] Status information of existing scaling schedules.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ScalingScheduleStatus> getScalingScheduleStatus() {
+    return scalingScheduleStatus;
+  }
+
+  /**
+   * [Output Only] Status information of existing scaling schedules.
+   * @param scalingScheduleStatus scalingScheduleStatus or {@code null} for none
+   */
+  public Autoscaler setScalingScheduleStatus(java.util.Map<String, ScalingScheduleStatus> scalingScheduleStatus) {
+    this.scalingScheduleStatus = scalingScheduleStatus;
     return this;
   }
 

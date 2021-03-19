@@ -51,12 +51,12 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * User-provided name of the Organization firewall plicy. The name should be unique in the
-   * organization in which the firewall policy is created. The name must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash.
+   * Depreacted, please use short name instead. User-provided name of the Organization firewall
+   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,6 +136,18 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
+   * User-provided name of the Organization firewall plicy. The name should be unique in the
+   * organization in which the firewall policy is created. The name must be 1-63 characters long,
+   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
+   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortName;
+
+  /**
    * A list of associations that belong to this firewall policy.
    * @return value or {@code null} for none
    */
@@ -187,12 +199,12 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided name of the Organization firewall plicy. The name should be unique in the
-   * organization in which the firewall policy is created. The name must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash.
+   * Depreacted, please use short name instead. User-provided name of the Organization firewall
+   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -200,12 +212,12 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided name of the Organization firewall plicy. The name should be unique in the
-   * organization in which the firewall policy is created. The name must be 1-63 characters long,
-   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
-   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
-   * except the last character, which cannot be a dash.
+   * Depreacted, please use short name instead. User-provided name of the Organization firewall
+   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
+   * 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means
+   * the first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param displayName displayName or {@code null} for none
    */
   public FirewallPolicy setDisplayName(java.lang.String displayName) {
@@ -423,6 +435,33 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * User-provided name of the Organization firewall plicy. The name should be unique in the
+   * organization in which the firewall policy is created. The name must be 1-63 characters long,
+   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
+   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortName() {
+    return shortName;
+  }
+
+  /**
+   * User-provided name of the Organization firewall plicy. The name should be unique in the
+   * organization in which the firewall policy is created. The name must be 1-63 characters long,
+   * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
+   * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+   * lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * @param shortName shortName or {@code null} for none
+   */
+  public FirewallPolicy setShortName(java.lang.String shortName) {
+    this.shortName = shortName;
     return this;
   }
 

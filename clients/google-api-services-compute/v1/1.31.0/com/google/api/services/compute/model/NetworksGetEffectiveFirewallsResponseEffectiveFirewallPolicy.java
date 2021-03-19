@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
+   * policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +58,13 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   }
 
   /**
+   * [Output Only] The short name of the firewall policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortName;
+
+  /**
    * [Output Only] The type of the firewall policy.
    * The value may be {@code null}.
    */
@@ -64,7 +72,8 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   private java.lang.String type;
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
+   * policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -72,7 +81,8 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   }
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
+   * policy.
    * @param displayName displayName or {@code null} for none
    */
   public NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy setDisplayName(java.lang.String displayName) {
@@ -111,6 +121,23 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
    */
   public NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy setRules(java.util.List<FirewallPolicyRule> rules) {
     this.rules = rules;
+    return this;
+  }
+
+  /**
+   * [Output Only] The short name of the firewall policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortName() {
+    return shortName;
+  }
+
+  /**
+   * [Output Only] The short name of the firewall policy.
+   * @param shortName shortName or {@code null} for none
+   */
+  public NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy setShortName(java.lang.String shortName) {
+    this.shortName = shortName;
     return this;
   }
 

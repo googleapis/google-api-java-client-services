@@ -115,6 +115,18 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String edgeAvailabilityDomain;
 
   /**
+   * Indicates the user-supplied encryption option of this interconnect attachment: - NONE is the
+   * default value, which means that the attachment carries unencrypted traffic. VMs can send
+   * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
+   * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryption;
+
+  /**
    * [Output Only] Google reference ID, to be used when raising support tickets with Google or
    * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * The value may be {@code null}.
@@ -135,6 +147,22 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnect;
+
+  /**
+   * URL of addresses that have been reserved for the interconnect attachment, Used only for
+   * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
+   * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
+   * gateway interface 0 will be allocated from the IP address specified for this interconnect
+   * attachment. If this field is not specified for interconnect attachment that has encryption
+   * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
+   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ipsecInternalAddresses;
 
   /**
    * [Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect
@@ -459,6 +487,33 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * Indicates the user-supplied encryption option of this interconnect attachment: - NONE is the
+   * default value, which means that the attachment carries unencrypted traffic. VMs can send
+   * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
+   * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryption() {
+    return encryption;
+  }
+
+  /**
+   * Indicates the user-supplied encryption option of this interconnect attachment: - NONE is the
+   * default value, which means that the attachment carries unencrypted traffic. VMs can send
+   * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
+   * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
+   * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
+   * encrypted Cloud Interconnect, create the attachment using this option.
+   * @param encryption encryption or {@code null} for none
+   */
+  public InterconnectAttachment setEncryption(java.lang.String encryption) {
+    this.encryption = encryption;
+    return this;
+  }
+
+  /**
    * [Output Only] Google reference ID, to be used when raising support tickets with Google or
    * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * @return value or {@code null} for none
@@ -508,6 +563,41 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setInterconnect(java.lang.String interconnect) {
     this.interconnect = interconnect;
+    return this;
+  }
+
+  /**
+   * URL of addresses that have been reserved for the interconnect attachment, Used only for
+   * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
+   * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
+   * gateway interface 0 will be allocated from the IP address specified for this interconnect
+   * attachment. If this field is not specified for interconnect attachment that has encryption
+   * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
+   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIpsecInternalAddresses() {
+    return ipsecInternalAddresses;
+  }
+
+  /**
+   * URL of addresses that have been reserved for the interconnect attachment, Used only for
+   * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
+   * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
+   * gateway interface 0 will be allocated from the IP address specified for this interconnect
+   * attachment. If this field is not specified for interconnect attachment that has encryption
+   * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
+   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * @param ipsecInternalAddresses ipsecInternalAddresses or {@code null} for none
+   */
+  public InterconnectAttachment setIpsecInternalAddresses(java.util.List<java.lang.String> ipsecInternalAddresses) {
+    this.ipsecInternalAddresses = ipsecInternalAddresses;
     return this;
   }
 

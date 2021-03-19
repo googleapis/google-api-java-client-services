@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"uWj2hSb4GVjzdDlAnRd2gbM1ZQ8/oj984kGKQfh4yFKo9X1341Cqgys\"",
+ "etag": "\"uWj2hSb4GVjzdDlAnRd2gbM1ZQ8/q86KO_TM075jWLyNAiNZlSqSxJ8\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20210301",
+ "revision": "20210310",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -70,7 +70,7 @@
   "oauth2": {
    "scopes": {
     "https://www.googleapis.com/auth/cloud-platform": {
-     "description": "View and manage your data across Google Cloud Platform services"
+     "description": "See, edit, configure, and delete your Google Cloud Platform data"
     },
     "https://www.googleapis.com/auth/compute": {
      "description": "View and manage your Google Compute Engine resources"
@@ -1090,6 +1090,11 @@
      "type": "integer",
      "description": "The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.",
      "format": "int32"
+    },
+    "visibleCoreCount": {
+     "type": "integer",
+     "description": "The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.",
+     "format": "int32"
     }
    }
   },
@@ -1958,11 +1963,15 @@
       "NOT_ENOUGH_QUOTA_AVAILABLE",
       "REGION_RESOURCE_STOCKOUT",
       "SCALING_TARGET_DOES_NOT_EXIST",
+      "SCHEDULED_INSTANCES_GREATER_THAN_AUTOSCALER_MAX",
+      "SCHEDULED_INSTANCES_LESS_THAN_AUTOSCALER_MIN",
       "UNKNOWN",
       "UNSUPPORTED_MAX_RATE_LOAD_BALANCING_CONFIGURATION",
       "ZONE_RESOURCE_STOCKOUT"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",
@@ -2521,7 +2530,7 @@
    "properties": {
     "code": {
      "type": "integer",
-     "description": "The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.",
+     "description": "The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.",
      "format": "int32"
     },
     "ttl": {
@@ -3115,7 +3124,7 @@
    "properties": {
     "code": {
      "type": "integer",
-     "description": "The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.",
+     "description": "The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.",
      "format": "int32"
     },
     "ttl": {
@@ -6676,7 +6685,7 @@
     },
     "displayName": {
      "type": "string",
-     "description": "User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
+     "description": "Depreacted, please use short name instead. User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
      "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
     },
     "fingerprint": {
@@ -6702,6 +6711,10 @@
      "type": "string",
      "description": "[Output Only] The parent of the firewall policy."
     },
+    "region": {
+     "type": "string",
+     "description": "[Output Only] URL of the region where the regional firewall policy resides. This field is not applicable to global firewall policies. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body."
+    },
     "ruleTupleCount": {
      "type": "integer",
      "description": "[Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.",
@@ -6721,6 +6734,11 @@
     "selfLinkWithId": {
      "type": "string",
      "description": "[Output Only] Server-defined URL for this resource with the resource id."
+    },
+    "shortName": {
+     "type": "string",
+     "description": "User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
+     "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
     }
    }
   },
@@ -6734,7 +6752,7 @@
     },
     "displayName": {
      "type": "string",
-     "description": "[Output Only] The display name of the firewall policy of the association."
+     "description": "[Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association."
     },
     "firewallPolicyId": {
      "type": "string",
@@ -6743,6 +6761,10 @@
     "name": {
      "type": "string",
      "description": "The name for an association."
+    },
+    "shortName": {
+     "type": "string",
+     "description": "[Output Only] The short name of the firewall policy of the association."
     }
    }
   },
@@ -7908,6 +7930,20 @@
     "response": {
      "type": "string",
      "description": "The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII."
+    },
+    "weightReportMode": {
+     "type": "string",
+     "description": "Weight report mode. used for weighted Load Balancing.",
+     "enum": [
+      "DISABLE",
+      "DRY_RUN",
+      "ENABLE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },
@@ -7961,6 +7997,20 @@
     "response": {
      "type": "string",
      "description": "The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII."
+    },
+    "weightReportMode": {
+     "type": "string",
+     "description": "Weight report mode. used for weighted Load Balancing.",
+     "enum": [
+      "DISABLE",
+      "DRY_RUN",
+      "ENABLE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },
@@ -8014,6 +8064,20 @@
     "response": {
      "type": "string",
      "description": "The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII."
+    },
+    "weightReportMode": {
+     "type": "string",
+     "description": "Weight report mode. used for weighted Load Balancing.",
+     "enum": [
+      "DISABLE",
+      "DRY_RUN",
+      "ENABLE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },
@@ -8935,6 +8999,14 @@
      "additionalProperties": {
       "type": "string"
      }
+    },
+    "forwardingRule": {
+     "type": "string",
+     "description": "URL of the forwarding rule associated with the health status of the instance."
+    },
+    "forwardingRuleIp": {
+     "type": "string",
+     "description": "A forwarding rule IP address assigned to this instance."
     },
     "healthState": {
      "type": "string",
@@ -11177,6 +11249,10 @@
      "type": "string",
      "description": "[Output Only] The URL of the Instance Group resource."
     },
+    "instanceLifecyclePolicy": {
+     "$ref": "InstanceGroupManagerInstanceLifecyclePolicy",
+     "description": "Instance lifecycle policy for this Instance Group Manager."
+    },
     "instanceTemplate": {
      "type": "string",
      "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE."
@@ -11246,6 +11322,16 @@
       ]
      }
     },
+    "targetStoppedSize": {
+     "type": "integer",
+     "description": "The target number of stopped instances for this managed instance group. This number changes when you:  \n- Stop instance using the stopInstances method or start instances using the startInstances method. \n- Manually change the targetStoppedSize using the update method.",
+     "format": "int32"
+    },
+    "targetSuspendedSize": {
+     "type": "integer",
+     "description": "The target number of suspended instances for this managed instance group. This number changes when you:  \n- Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. \n- Manually change the targetSuspendedSize using the update method.",
+     "format": "int32"
+    },
     "updatePolicy": {
      "$ref": "InstanceGroupManagerUpdatePolicy",
      "description": "The update policy for this managed instance group."
@@ -11305,6 +11391,26 @@
     "restarting": {
      "type": "integer",
      "description": "[Output Only] The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.",
+     "format": "int32"
+    },
+    "resuming": {
+     "type": "integer",
+     "description": "[Output Only] The number of instances in the managed instance group that are scheduled to be resumed or are currently being resumed.",
+     "format": "int32"
+    },
+    "starting": {
+     "type": "integer",
+     "description": "[Output Only] The number of instances in the managed instance group that are scheduled to be started or are currently being started.",
+     "format": "int32"
+    },
+    "stopping": {
+     "type": "integer",
+     "description": "[Output Only] The number of instances in the managed instance group that are scheduled to be stopped or are currently being stopped.",
+     "format": "int32"
+    },
+    "suspending": {
+     "type": "integer",
+     "description": "[Output Only] The number of instances in the managed instance group that are scheduled to be suspended or are currently being suspended.",
      "format": "int32"
     },
     "verifying": {
@@ -11454,6 +11560,27 @@
     "maxUnavailable": {
      "$ref": "FixedOrPercent",
      "description": "Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded UP. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM.\n\nBy default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy."
+    }
+   }
+  },
+  "InstanceGroupManagerInstanceLifecyclePolicy": {
+   "id": "InstanceGroupManagerInstanceLifecyclePolicy",
+   "type": "object",
+   "properties": {
+    "metadataBasedReadinessSignal": {
+     "$ref": "InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal",
+     "description": "The configuration for metadata based readiness signal sent by the instance during initialization when stopping / suspending an instance. The Instance Group Manager will wait for a signal that indicates successful initialization before stopping / suspending an instance.\n\nIf a successful readiness signal is not sent before timeout, the corresponding instance will not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of the managed instance in the listmanagedinstances method.\n\nIf metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly proceed to suspend / stop instances, skipping initialization on them."
+    }
+   }
+  },
+  "InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal": {
+   "id": "InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal",
+   "type": "object",
+   "properties": {
+    "timeoutSec": {
+     "type": "integer",
+     "description": "The number of seconds to wait for a readiness signal during initialization before timing out.",
+     "format": "int32"
     }
    }
   },
@@ -12040,6 +12167,19 @@
     }
    }
   },
+  "InstanceGroupManagersResumeInstancesRequest": {
+   "id": "InstanceGroupManagersResumeInstancesRequest",
+   "type": "object",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to resume. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
   "InstanceGroupManagersScopedList": {
    "id": "InstanceGroupManagersScopedList",
    "type": "object",
@@ -12172,6 +12312,53 @@
     "targetPools": {
      "type": "array",
      "description": "The list of target pool URLs that instances in this managed instance group belong to. The managed instance group applies these target pools to all of the instances in the group. Existing instances and new instances in the group all receive these target pool settings.",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "InstanceGroupManagersStartInstancesRequest": {
+   "id": "InstanceGroupManagersStartInstancesRequest",
+   "type": "object",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to start. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "InstanceGroupManagersStopInstancesRequest": {
+   "id": "InstanceGroupManagersStopInstancesRequest",
+   "type": "object",
+   "properties": {
+    "forceStop": {
+     "type": "boolean",
+     "description": "If this flag is set to true, the Instance Group Manager will proceed to stop the instances, skipping initialization on them."
+    },
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to stop. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "InstanceGroupManagersSuspendInstancesRequest": {
+   "id": "InstanceGroupManagersSuspendInstancesRequest",
+   "type": "object",
+   "properties": {
+    "forceSuspend": {
+     "type": "boolean",
+     "description": "If this flag is set to true, the Instance Group Manager will proceed to suspend the instances, skipping initialization on them."
+    },
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to suspend. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
      "items": {
       "type": "string"
      }
@@ -12733,9 +12920,17 @@
       "RECREATING",
       "REFRESHING",
       "RESTARTING",
+      "RESUMING",
+      "STARTING",
+      "STOPPING",
+      "SUSPENDING",
       "VERIFYING"
      ],
      "enumDescriptions": [
+      "",
+      "",
+      "",
+      "",
       "",
       "",
       "",
@@ -13193,7 +13388,7 @@
    "properties": {
     "displayName": {
      "type": "string",
-     "description": "[Output Only] The display name of the firewall policy."
+     "description": "[Output Only] Deprecated, please use short name instead. The display name of the firewall policy."
     },
     "name": {
      "type": "string",
@@ -13205,6 +13400,10 @@
      "items": {
       "$ref": "FirewallPolicyRule"
      }
+    },
+    "shortName": {
+     "type": "string",
+     "description": "[Output Only] The short name of the firewall policy."
     },
     "type": {
      "type": "string",
@@ -16544,9 +16743,17 @@
       "RECREATING",
       "REFRESHING",
       "RESTARTING",
+      "RESUMING",
+      "STARTING",
+      "STOPPING",
+      "SUSPENDING",
       "VERIFYING"
      ],
      "enumDescriptions": [
+      "",
+      "",
+      "",
+      "",
       "",
       "",
       "",
@@ -17041,6 +17248,7 @@
       "INTERNET_FQDN_PORT",
       "INTERNET_IP_PORT",
       "NON_GCP_PRIVATE_IP_PORT",
+      "PRIVATE_SERVICE_CONNECT",
       "SERVERLESS"
      ],
      "enumDescriptions": [
@@ -17050,8 +17258,13 @@
       "",
       "",
       "",
+      "",
       ""
      ]
+    },
+    "pscTargetService": {
+     "type": "string",
+     "description": "The target service url used to set up private service connection to a Google API. An example value is: \"asia-northeast3-cloudkms.googleapis.com\""
     },
     "region": {
      "type": "string",
@@ -18149,7 +18362,7 @@
    "properties": {
     "displayName": {
      "type": "string",
-     "description": "[Output Only] The display name of the firewall policy."
+     "description": "[Output Only] Deprecated, please use short name instead. The display name of the firewall policy."
     },
     "name": {
      "type": "string",
@@ -18161,6 +18374,10 @@
      "items": {
       "$ref": "FirewallPolicyRule"
      }
+    },
+    "shortName": {
+     "type": "string",
+     "description": "[Output Only] The short name of the firewall policy."
     },
     "type": {
      "type": "string",
@@ -22785,9 +23002,11 @@
       "AUTOSCALERS",
       "BACKEND_BUCKETS",
       "BACKEND_SERVICES",
+      "C2D_CPUS",
       "C2_CPUS",
       "COMMITMENTS",
       "COMMITTED_A2_CPUS",
+      "COMMITTED_C2D_CPUS",
       "COMMITTED_C2_CPUS",
       "COMMITTED_CPUS",
       "COMMITTED_E2_CPUS",
@@ -22902,6 +23121,8 @@
       "XPN_SERVICE_PROJECTS"
      ],
      "enumDescriptions": [
+      "",
+      "",
       "",
       "",
       "",
@@ -23985,6 +24206,19 @@
     }
    }
   },
+  "RegionInstanceGroupManagersResumeInstancesRequest": {
+   "id": "RegionInstanceGroupManagersResumeInstancesRequest",
+   "type": "object",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to resume. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
   "RegionInstanceGroupManagersSetAutoHealingRequest": {
    "id": "RegionInstanceGroupManagersSetAutoHealingRequest",
    "type": "object",
@@ -24022,6 +24256,53 @@
     "instanceTemplate": {
      "type": "string",
      "description": "URL of the InstanceTemplate resource from which all new instances will be created."
+    }
+   }
+  },
+  "RegionInstanceGroupManagersStartInstancesRequest": {
+   "id": "RegionInstanceGroupManagersStartInstancesRequest",
+   "type": "object",
+   "properties": {
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to start. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "RegionInstanceGroupManagersStopInstancesRequest": {
+   "id": "RegionInstanceGroupManagersStopInstancesRequest",
+   "type": "object",
+   "properties": {
+    "forceStop": {
+     "type": "boolean",
+     "description": "If this flag is set to true, the Instance Group Manager will proceed to stop the instances, skipping initialization on them."
+    },
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to stop. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "RegionInstanceGroupManagersSuspendInstancesRequest": {
+   "id": "RegionInstanceGroupManagersSuspendInstancesRequest",
+   "type": "object",
+   "properties": {
+    "forceSuspend": {
+     "type": "boolean",
+     "description": "If this flag is set to true, the Instance Group Manager will proceed to suspend the instances, skipping initialization on them."
+    },
+    "instances": {
+     "type": "array",
+     "description": "The URLs of one or more instances to suspend. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].",
+     "items": {
+      "type": "string"
+     }
     }
    }
   },
@@ -25728,6 +26009,10 @@
    "type": "object",
    "description": "Represents a Route resource.\n\nA route defines a path from VM instances in the VPC network to a specific destination. This destination can be inside or outside the VPC network. For more information, read the Routes overview. (== resource_for {$api_version}.routes ==)",
    "properties": {
+    "allowConflictingSubnetworks": {
+     "type": "boolean",
+     "description": "Whether this route can conflict with existing subnetworks. Setting this to true allows this route to conflict with subnetworks that have already been configured on the corresponding network."
+    },
     "creationTimestamp": {
      "type": "string",
      "description": "[Output Only] Creation timestamp in RFC3339 text format."
@@ -26314,7 +26599,7 @@
     },
     "keepaliveInterval": {
      "type": "integer",
-     "description": "The interval in seconds between BGP keepalive messages that are sent to the peer.\nNot currently available publicly.\nHold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.\nBGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers.\nIf set, this value must be between 1 and 120. The default is 20.",
+     "description": "The interval in seconds between BGP keepalive messages that are sent to the peer.\nNot currently available publicly.\nHold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.\nBGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers.\nIf set, this value must be between 20 and 60. The default is 20.",
      "format": "uint32"
     }
    }
@@ -26337,7 +26622,7 @@
     },
     "advertisedGroups": {
      "type": "array",
-     "description": "User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: \n- ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. \n- ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. \n- ALL_PEER_VPC_SUBNETS: Advertises peer subnets of the router's VPC network. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.",
+     "description": "User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: \n- ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. \n- ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.",
      "items": {
       "type": "string",
       "enum": [
@@ -26942,6 +27227,10 @@
      "type": "string",
      "description": "IP address of the remote BGP interface."
     },
+    "routerApplianceInstance": {
+     "type": "string",
+     "description": "[Output only] URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance is the peer side of the BGP session."
+    },
     "state": {
      "type": "string",
      "description": "BGP state as specified in RFC1771."
@@ -27454,7 +27743,7 @@
   "Scheduling": {
    "id": "Scheduling",
    "type": "object",
-   "description": "Sets the scheduling options for an Instance. NextID: 17",
+   "description": "Sets the scheduling options for an Instance. NextID: 20",
    "properties": {
     "automaticRestart": {
      "type": "boolean",
@@ -27914,6 +28203,10 @@
      "type": "boolean",
      "description": "Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on \"goto_next\" rules.\n\nThis field may only be specified when the versioned_expr is set to FIREWALL."
     },
+    "headerAction": {
+     "$ref": "SecurityPolicyRuleHttpHeaderAction",
+     "description": "Optional, additional actions that are performed on headers."
+    },
     "kind": {
      "type": "string",
      "description": "[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules",
@@ -27963,6 +28256,33 @@
      "items": {
       "type": "string"
      }
+    }
+   }
+  },
+  "SecurityPolicyRuleHttpHeaderAction": {
+   "id": "SecurityPolicyRuleHttpHeaderAction",
+   "type": "object",
+   "properties": {
+    "requestHeadersToAdds": {
+     "type": "array",
+     "description": "The list of request headers to add or overwrite if they?re already present.",
+     "items": {
+      "$ref": "SecurityPolicyRuleHttpHeaderActionHttpHeaderOption"
+     }
+    }
+   }
+  },
+  "SecurityPolicyRuleHttpHeaderActionHttpHeaderOption": {
+   "id": "SecurityPolicyRuleHttpHeaderActionHttpHeaderOption",
+   "type": "object",
+   "properties": {
+    "headerName": {
+     "type": "string",
+     "description": "The name of the header to set."
+    },
+    "headerValue": {
+     "type": "string",
+     "description": "The value to set the named header to."
     }
    }
   },
@@ -28067,17 +28387,12 @@
    "properties": {
     "banDurationSec": {
      "type": "integer",
-     "description": "Can only be specified if the action for the rule is \"rate_based_ban\". If specified, the key will be banned for the configured 'ban_duration' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.",
+     "description": "Can only be specified if the action for the rule is \"rate_based_ban\". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.",
      "format": "int32"
     },
     "banThreshold": {
      "$ref": "SecurityPolicyRuleRateLimitOptionsThreshold",
-     "description": "Can only be specified if the action for the rule is \"rate_based_ban\". If specified, the key will be banned for the configured 'ban_duration' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'."
-    },
-    "blockDuration": {
-     "type": "integer",
-     "description": "Can only be specified if the action for the rule is \"rate_based_ban\" If specified, determines the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate falls below the threshold. The default value is 0 seconds. [Deprecated] This field is deprecated.",
-     "format": "int32"
+     "description": "Can only be specified if the action for the rule is \"rate_based_ban\". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'."
     },
     "conformAction": {
      "type": "string",
@@ -28102,11 +28417,6 @@
     "rateLimitThreshold": {
      "$ref": "SecurityPolicyRuleRateLimitOptionsThreshold",
      "description": "Threshold at which to begin ratelimiting."
-    },
-    "thresholdRps": {
-     "type": "integer",
-     "description": "Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is deprecated.",
-     "format": "int32"
     }
    }
   },
@@ -28262,7 +28572,7 @@
   "ServiceAttachment": {
    "id": "ServiceAttachment",
    "type": "object",
-   "description": "Represents a ServiceAttachment resource.\n\nA service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service. next tag = 16",
+   "description": "Represents a ServiceAttachment resource.\n\nA service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service. next tag = 17",
    "properties": {
     "connectionPreference": {
      "type": "string",
@@ -44387,6 +44697,53 @@
       "https://www.googleapis.com/auth/compute"
      ]
     },
+    "resumeInstances": {
+     "id": "compute.instanceGroupManagers.resumeInstances",
+     "path": "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resumeInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method.\n\nIn this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method.\n\nIf a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersResumeInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "setAutoHealingPolicies": {
      "id": "compute.instanceGroupManagers.setAutoHealingPolicies",
      "path": "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setAutoHealingPolicies",
@@ -44519,6 +44876,147 @@
      ],
      "request": {
       "$ref": "InstanceGroupManagersSetTargetPoolsRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "startInstances": {
+     "id": "compute.instanceGroupManagers.startInstances",
+     "path": "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/startInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method.\n\nIn this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method.\n\nIf a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersStartInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "stopInstances": {
+     "id": "compute.instanceGroupManagers.stopInstances",
+     "path": "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/stopInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method.\n\nIf the instanceLifecyclePolicy.metadataBasedReadinessSignal field is set on the Instance Group Manager, each instance will be initialized before it is stopped, to give user programs time to perform necessary tasks. To initialize an instance, the Instance Group Manager sets the metadata key google-compute-initialization-intent to value INITIALIZE_AND_STOP on the instance, and waits for the user program to signal it is ready. This is done by setting the guest attribute path google-compute/initialization-state to value INITIALIZED. If the instance does not signal successful initialization (does not set the guest attribute to INITIALIZED) before timeout, the initialization is considered failed and the instance is not stopped.\n\nIf the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended.\n\nStopped instances can be started using the startInstances method.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersStopInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "suspendInstances": {
+     "id": "compute.instanceGroupManagers.suspendInstances",
+     "path": "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/suspendInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method.\n\nIf the instanceLifecyclePolicy.metadataBasedReadinessSignal field is set on the Instance Group Manager, each instance will be initialized before it is suspended, to give user programs time to perform necessary tasks. To initialize an instance, the Instance Group Manager sets the metadata key google-compute-initialization-intent to value INITIALIZE_AND_SUSPEND on the instance, and waits for the user program to signal it is ready. This is done by setting the guest attribute path google-compute/initialization-state to value INITIALIZED. If the instance does not signal successful initialization (does not set the guest attribute to INITIALIZED) before timeout, the initialization is considered failed and the instance is not suspended.\n\nIf the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended.\n\nSuspended instances can be resumed using the resumeInstances method.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone where the managed instance group is located.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "InstanceGroupManagersSuspendInstancesRequest"
      },
      "response": {
       "$ref": "Operation"
@@ -46566,6 +47064,44 @@
      "response": {
       "$ref": "Operation"
      },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "sendDiagnosticInterrupt": {
+     "id": "compute.instances.sendDiagnosticInterrupt",
+     "path": "projects/{project}/zones/{zone}/instances/{instance}/sendDiagnosticInterrupt",
+     "httpMethod": "POST",
+     "description": "TODO(b/180520210): Add IAM permission for this API. Sends diagnostic interrupt to the instance.",
+     "parameters": {
+      "instance": {
+       "type": "string",
+       "description": "Name of the instance scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "zone": {
+       "type": "string",
+       "description": "The name of the zone for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "zone",
+      "instance"
+     ],
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",
       "https://www.googleapis.com/auth/compute"
@@ -58283,6 +58819,53 @@
       "https://www.googleapis.com/auth/compute"
      ]
     },
+    "resumeInstances": {
+     "id": "compute.regionInstanceGroupManagers.resumeInstances",
+     "path": "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resumeInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method.\n\nIn this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method.\n\nIf a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "Name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersResumeInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
     "setAutoHealingPolicies": {
      "id": "compute.regionInstanceGroupManagers.setAutoHealingPolicies",
      "path": "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/setAutoHealingPolicies",
@@ -58415,6 +58998,147 @@
      ],
      "request": {
       "$ref": "RegionInstanceGroupManagersSetTargetPoolsRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "startInstances": {
+     "id": "compute.regionInstanceGroupManagers.startInstances",
+     "path": "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/startInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method.\n\nIn this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method.\n\nIf a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "Name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersStartInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "stopInstances": {
+     "id": "compute.regionInstanceGroupManagers.stopInstances",
+     "path": "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/stopInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method.\n\nIf the instanceLifecyclePolicy.metadataBasedReadinessSignal field is set on the Instance Group Manager, each instance will be initialized before it is stopped, to give user programs time to perform necessary tasks. To initialize an instance, the Instance Group Manager sets the metadata key google-compute-initialization-intent to value INITIALIZE_AND_STOP on the instance, and waits for the user program to signal it is ready. This is done by setting the guest attribute path google-compute/initialization-state to value INITIALIZED. If the instance does not signal successful initialization (does not set the guest attribute to INITIALIZED) before timeout, the initialization is considered failed and the instance is not stopped.\n\nIf the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended.\n\nStopped instances can be started using the startInstances method.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "The name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersStopInstancesRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "suspendInstances": {
+     "id": "compute.regionInstanceGroupManagers.suspendInstances",
+     "path": "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/suspendInstances",
+     "httpMethod": "POST",
+     "description": "Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method.\n\nIf the instanceLifecyclePolicy.metadataBasedReadinessSignal field is set on the Instance Group Manager, each instance will be initialized before it is suspended, to give user programs time to perform necessary tasks. To initialize an instance, the Instance Group Manager sets the metadata key google-compute-initialization-intent to value INITIALIZE_AND_SUSPEND on the instance, and waits for the user program to signal it is ready. This is done by setting the guest attribute path google-compute/initialization-state to value INITIALIZED. If the instance does not signal successful initialization (does not set the guest attribute to INITIALIZED) before timeout, the initialization is considered failed and the instance is not suspended.\n\nIf the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended.\n\nSuspended instances can be resumed using the resumeInstances method.\n\nYou can specify a maximum of 1000 instances with this method per request.",
+     "parameters": {
+      "instanceGroupManager": {
+       "type": "string",
+       "description": "Name of the managed instance group.",
+       "required": true,
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "instanceGroupManager"
+     ],
+     "request": {
+      "$ref": "RegionInstanceGroupManagersSuspendInstancesRequest"
      },
      "response": {
       "$ref": "Operation"
@@ -59488,6 +60212,794 @@
      ],
      "response": {
       "$ref": "NetworkEndpointGroupList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    }
+   }
+  },
+  "regionNetworkFirewallPolicies": {
+   "methods": {
+    "addAssociation": {
+     "id": "compute.regionNetworkFirewallPolicies.addAssociation",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addAssociation",
+     "httpMethod": "POST",
+     "description": "Inserts an association for the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "replaceExistingAssociation": {
+       "type": "boolean",
+       "description": "Indicates whether or not to replace it if an association already exists. This is false by default, in which case an error will be returned if an association already exists.",
+       "location": "query"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "request": {
+      "$ref": "FirewallPolicyAssociation"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "addRule": {
+     "id": "compute.regionNetworkFirewallPolicies.addRule",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addRule",
+     "httpMethod": "POST",
+     "description": "Inserts a rule into a network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "request": {
+      "$ref": "FirewallPolicyRule"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "cloneRules": {
+     "id": "compute.regionNetworkFirewallPolicies.cloneRules",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/cloneRules",
+     "httpMethod": "POST",
+     "description": "Copies rules to the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      },
+      "sourceFirewallPolicy": {
+       "type": "string",
+       "description": "The firewall policy from which to copy rules.",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "delete": {
+     "id": "compute.regionNetworkFirewallPolicies.delete",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}",
+     "httpMethod": "DELETE",
+     "description": "Deletes the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to delete.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "get": {
+     "id": "compute.regionNetworkFirewallPolicies.get",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}",
+     "httpMethod": "GET",
+     "description": "Returns the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to get.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "FirewallPolicy"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "getAssociation": {
+     "id": "compute.regionNetworkFirewallPolicies.getAssociation",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getAssociation",
+     "httpMethod": "GET",
+     "description": "Gets an association with the specified name.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to which the queried association belongs.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "name": {
+       "type": "string",
+       "description": "The name of the association to get from the firewall policy.",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "FirewallPolicyAssociation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "getIamPolicy": {
+     "id": "compute.regionNetworkFirewallPolicies.getIamPolicy",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{resource}/getIamPolicy",
+     "httpMethod": "GET",
+     "description": "Gets the access control policy for a resource. May be empty if no such policy or resource exists.",
+     "parameters": {
+      "optionsRequestedPolicyVersion": {
+       "type": "integer",
+       "description": "Requested IAM Policy version.",
+       "format": "int32",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "resource": {
+       "type": "string",
+       "description": "Name or id of the resource for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "resource"
+     ],
+     "response": {
+      "$ref": "Policy"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "getRule": {
+     "id": "compute.regionNetworkFirewallPolicies.getRule",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getRule",
+     "httpMethod": "GET",
+     "description": "Gets a rule of the specified priority.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to which the queried rule belongs.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "priority": {
+       "type": "integer",
+       "description": "The priority of the rule to get from the firewall policy.",
+       "format": "int32",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "FirewallPolicyRule"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "insert": {
+     "id": "compute.regionNetworkFirewallPolicies.insert",
+     "path": "projects/{project}/regions/{region}/firewallPolicies",
+     "httpMethod": "POST",
+     "description": "Creates a new network firewall policy in the specified project and region.",
+     "parameters": {
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region"
+     ],
+     "request": {
+      "$ref": "FirewallPolicy"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "list": {
+     "id": "compute.regionNetworkFirewallPolicies.list",
+     "path": "projects/{project}/regions/{region}/firewallPolicies",
+     "httpMethod": "GET",
+     "description": "Lists all the network firewall policies that have been configured for the specified project in the given region.",
+     "parameters": {
+      "filter": {
+       "type": "string",
+       "description": "A filter expression that filters resources listed in the response. The expression must specify the field name, a comparison operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `\u003e`, or `\u003c`.\n\nFor example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`.\n\nYou can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels.\n\nTo filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true) ```",
+       "location": "query"
+      },
+      "maxResults": {
+       "type": "integer",
+       "description": "The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)",
+       "default": "500",
+       "format": "uint32",
+       "minimum": "0",
+       "location": "query"
+      },
+      "orderBy": {
+       "type": "string",
+       "description": "Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name.\n\nYou can also sort results in descending order based on the creation timestamp using `orderBy=\"creationTimestamp desc\"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first.\n\nCurrently, only sorting by `name` or `creationTimestamp desc` is supported.",
+       "location": "query"
+      },
+      "pageToken": {
+       "type": "string",
+       "description": "Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "returnPartialSuccess": {
+       "type": "boolean",
+       "description": "Opt-in for partial success behavior which provides partial results in case of failure. The default value is false.",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region"
+     ],
+     "response": {
+      "$ref": "FirewallPolicyList"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
+     ]
+    },
+    "patch": {
+     "id": "compute.regionNetworkFirewallPolicies.patch",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}",
+     "httpMethod": "PATCH",
+     "description": "Patches the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "request": {
+      "$ref": "FirewallPolicy"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "patchRule": {
+     "id": "compute.regionNetworkFirewallPolicies.patchRule",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/patchRule",
+     "httpMethod": "POST",
+     "description": "Patches a rule of the specified priority.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "priority": {
+       "type": "integer",
+       "description": "The priority of the rule to patch.",
+       "format": "int32",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "request": {
+      "$ref": "FirewallPolicyRule"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "removeAssociation": {
+     "id": "compute.regionNetworkFirewallPolicies.removeAssociation",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeAssociation",
+     "httpMethod": "POST",
+     "description": "Removes an association for the specified network firewall policy.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "name": {
+       "type": "string",
+       "description": "Name for the association that will be removed.",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "removeRule": {
+     "id": "compute.regionNetworkFirewallPolicies.removeRule",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeRule",
+     "httpMethod": "POST",
+     "description": "Deletes a rule of the specified priority.",
+     "parameters": {
+      "firewallPolicy": {
+       "type": "string",
+       "description": "Name of the firewall policy to update.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      },
+      "priority": {
+       "type": "integer",
+       "description": "The priority of the rule to remove from the firewall policy.",
+       "format": "int32",
+       "location": "query"
+      },
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "Name of the region scoping this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "requestId": {
+       "type": "string",
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed.\n\nFor example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments.\n\nThe request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+       "location": "query"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "firewallPolicy"
+     ],
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "setIamPolicy": {
+     "id": "compute.regionNetworkFirewallPolicies.setIamPolicy",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{resource}/setIamPolicy",
+     "httpMethod": "POST",
+     "description": "Sets the access control policy on the specified resource. Replaces any existing policy.",
+     "parameters": {
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "resource": {
+       "type": "string",
+       "description": "Name or id of the resource for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "resource"
+     ],
+     "request": {
+      "$ref": "RegionSetPolicyRequest"
+     },
+     "response": {
+      "$ref": "Policy"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "testIamPermissions": {
+     "id": "compute.regionNetworkFirewallPolicies.testIamPermissions",
+     "path": "projects/{project}/regions/{region}/firewallPolicies/{resource}/testIamPermissions",
+     "httpMethod": "POST",
+     "description": "Returns permissions that a caller has on the specified resource.",
+     "parameters": {
+      "project": {
+       "type": "string",
+       "description": "Project ID for this request.",
+       "required": true,
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "location": "path"
+      },
+      "region": {
+       "type": "string",
+       "description": "The name of the region for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "location": "path"
+      },
+      "resource": {
+       "type": "string",
+       "description": "Name or id of the resource for this request.",
+       "required": true,
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "project",
+      "region",
+      "resource"
+     ],
+     "request": {
+      "$ref": "TestPermissionsRequest"
+     },
+     "response": {
+      "$ref": "TestPermissionsResponse"
      },
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",

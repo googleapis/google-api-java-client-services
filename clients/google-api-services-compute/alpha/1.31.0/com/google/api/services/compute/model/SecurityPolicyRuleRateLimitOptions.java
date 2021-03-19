@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines
+   * the time (in seconds) the traffic will continue to be banned by the rate limit after the rate
+   * falls below the threshold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,22 +40,12 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * will be banned for the configured 'ban_duration_sec' when the number of requests that exceed
+   * the 'rate_limit_threshold' also exceed this 'ban_threshold'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityPolicyRuleRateLimitOptionsThreshold banThreshold;
-
-  /**
-   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
-   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
-   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
-   * deprecated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer blockDuration;
 
   /**
    * Action to take when requests are under the given threshold. When requests are throttled, this
@@ -91,17 +81,9 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   private SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold;
 
   /**
-   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
-   * deprecated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer thresholdRps;
-
-  /**
-   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines
+   * the time (in seconds) the traffic will continue to be banned by the rate limit after the rate
+   * falls below the threshold.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBanDurationSec() {
@@ -109,9 +91,9 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   }
 
   /**
-   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines
+   * the time (in seconds) the traffic will continue to be banned by the rate limit after the rate
+   * falls below the threshold.
    * @param banDurationSec banDurationSec or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setBanDurationSec(java.lang.Integer banDurationSec) {
@@ -121,8 +103,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * will be banned for the configured 'ban_duration_sec' when the number of requests that exceed
+   * the 'rate_limit_threshold' also exceed this 'ban_threshold'.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptionsThreshold getBanThreshold() {
@@ -131,35 +113,12 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
-   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
-   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * will be banned for the configured 'ban_duration_sec' when the number of requests that exceed
+   * the 'rate_limit_threshold' also exceed this 'ban_threshold'.
    * @param banThreshold banThreshold or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setBanThreshold(SecurityPolicyRuleRateLimitOptionsThreshold banThreshold) {
     this.banThreshold = banThreshold;
-    return this;
-  }
-
-  /**
-   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
-   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
-   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
-   * deprecated.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getBlockDuration() {
-    return blockDuration;
-  }
-
-  /**
-   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
-   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
-   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
-   * deprecated.
-   * @param blockDuration blockDuration or {@code null} for none
-   */
-  public SecurityPolicyRuleRateLimitOptions setBlockDuration(java.lang.Integer blockDuration) {
-    this.blockDuration = blockDuration;
     return this;
   }
 
@@ -238,25 +197,6 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    */
   public SecurityPolicyRuleRateLimitOptions setRateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold) {
     this.rateLimitThreshold = rateLimitThreshold;
-    return this;
-  }
-
-  /**
-   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
-   * deprecated.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getThresholdRps() {
-    return thresholdRps;
-  }
-
-  /**
-   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
-   * deprecated.
-   * @param thresholdRps thresholdRps or {@code null} for none
-   */
-  public SecurityPolicyRuleRateLimitOptions setThresholdRps(java.lang.Integer thresholdRps) {
-    this.thresholdRps = thresholdRps;
     return this;
   }
 

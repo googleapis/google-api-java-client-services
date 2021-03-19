@@ -114,7 +114,7 @@ packages on [Maven Central][maven-search].
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | Data Labeling API | [v1beta1](clients/google-api-services-datalabeling/v1beta1) |
-| Database Migration API | [v1beta1](clients/google-api-services-datamigration/v1beta1) |
+| Database Migration API | [v1](clients/google-api-services-datamigration/v1), [v1beta1](clients/google-api-services-datamigration/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dataproc Metastore API | [v1alpha](clients/google-api-services-metastore/v1alpha), [v1beta](clients/google-api-services-metastore/v1beta) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3](clients/google-api-services-dialogflow/v3), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |

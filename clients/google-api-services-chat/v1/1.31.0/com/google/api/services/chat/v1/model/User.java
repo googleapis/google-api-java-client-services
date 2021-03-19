@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A user in Hangouts Chat.
+ * A user in Google Chat.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String domainId;
 
   /**
-   * True when the user is deleted or the user's proifle is not visible.
+   * True when the user is deleted or the user's profile is not visible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True when the user is deleted or the user's proifle is not visible.
+   * True when the user is deleted or the user's profile is not visible.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAnonymous() {
@@ -107,7 +107,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True when the user is deleted or the user's proifle is not visible.
+   * True when the user is deleted or the user's profile is not visible.
    * @param isAnonymous isAnonymous or {@code null} for none
    */
   public User setIsAnonymous(java.lang.Boolean isAnonymous) {

@@ -17,8 +17,8 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Response message for CloudChannelService.TransferEntitlements. This will be put into the response
- * field of google.longrunning.Operation.
+ * Response message for CloudChannelService.TransferEntitlements. This is put in the response field
+ * of google.longrunning.Operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1TransferEntitlementsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The entitlements that have been transferred.
+   * The transferred entitlements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1TransferEntitlementsResponse extends com.
   }
 
   /**
-   * The entitlements that have been transferred.
+   * The transferred entitlements.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Entitlement> getEntitlements() {
@@ -52,7 +52,7 @@ public final class GoogleCloudChannelV1TransferEntitlementsResponse extends com.
   }
 
   /**
-   * The entitlements that have been transferred.
+   * The transferred entitlements.
    * @param entitlements entitlements or {@code null} for none
    */
   public GoogleCloudChannelV1TransferEntitlementsResponse setEntitlements(java.util.List<GoogleCloudChannelV1Entitlement> entitlements) {

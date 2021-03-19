@@ -30,7 +30,7 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ListCustomersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The customers belonging to the reseller or distributor.
+   * The customers belonging to a reseller or distributor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleCloudChannelV1ListCustomersResponse extends com.google.
   private java.lang.String nextPageToken;
 
   /**
-   * The customers belonging to the reseller or distributor.
+   * The customers belonging to a reseller or distributor.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Customer> getCustomers() {
@@ -59,7 +59,7 @@ public final class GoogleCloudChannelV1ListCustomersResponse extends com.google.
   }
 
   /**
-   * The customers belonging to the reseller or distributor.
+   * The customers belonging to a reseller or distributor.
    * @param customers customers or {@code null} for none
    */
   public GoogleCloudChannelV1ListCustomersResponse setCustomers(java.util.List<GoogleCloudChannelV1Customer> customers) {

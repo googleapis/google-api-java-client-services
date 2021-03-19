@@ -30,14 +30,14 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1UnregisterSubscriberResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the topic from which the service account subscriber access has been removed.
+   * Name of the topic the service account subscriber access was removed from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topic;
 
   /**
-   * Name of the topic from which the service account subscriber access has been removed.
+   * Name of the topic the service account subscriber access was removed from.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1UnregisterSubscriberResponse extends com.
   }
 
   /**
-   * Name of the topic from which the service account subscriber access has been removed.
+   * Name of the topic the service account subscriber access was removed from.
    * @param topic topic or {@code null} for none
    */
   public GoogleCloudChannelV1UnregisterSubscriberResponse setTopic(java.lang.String topic) {

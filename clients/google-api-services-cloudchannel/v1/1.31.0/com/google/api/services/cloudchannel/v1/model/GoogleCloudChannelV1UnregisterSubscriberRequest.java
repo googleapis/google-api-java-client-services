@@ -30,16 +30,14 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1UnregisterSubscriberRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Service account which will be unregistered from getting subscriber access to the
-   * topic.
+   * Required. Service account to unregister from subscriber access to the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Required. Service account which will be unregistered from getting subscriber access to the
-   * topic.
+   * Required. Service account to unregister from subscriber access to the topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -47,8 +45,7 @@ public final class GoogleCloudChannelV1UnregisterSubscriberRequest extends com.g
   }
 
   /**
-   * Required. Service account which will be unregistered from getting subscriber access to the
-   * topic.
+   * Required. Service account to unregister from subscriber access to the topic.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudChannelV1UnregisterSubscriberRequest setServiceAccount(java.lang.String serviceAccount) {

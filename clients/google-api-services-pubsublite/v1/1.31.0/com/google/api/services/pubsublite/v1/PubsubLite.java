@@ -348,6 +348,32 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
+             * If true, the newly created subscription will only receive messages published after
+             * the subscription was created. Otherwise, the entire message backlog will be received
+             * on the subscription. Defaults to false.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean skipBacklog;
+
+            /** If true, the newly created subscription will only receive messages published after the subscription
+           was created. Otherwise, the entire message backlog will be received on the subscription. Defaults
+           to false.
+             */
+            public java.lang.Boolean getSkipBacklog() {
+              return skipBacklog;
+            }
+
+            /**
+             * If true, the newly created subscription will only receive messages published after
+             * the subscription was created. Otherwise, the entire message backlog will be received
+             * on the subscription. Defaults to false.
+             */
+            public Create setSkipBacklog(java.lang.Boolean skipBacklog) {
+              this.skipBacklog = skipBacklog;
+              return this;
+            }
+
+            /**
              * Required. The ID to use for the subscription, which will become the final component
              * of the subscription's name. This value is structured like: `my-sub-name`.
              */

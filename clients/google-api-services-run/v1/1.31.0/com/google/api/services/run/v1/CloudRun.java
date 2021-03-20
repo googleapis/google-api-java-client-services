@@ -953,6 +953,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public Create setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -1103,6 +1126,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud Run currently ignores this parameter. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 
@@ -1753,6 +1799,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud Run currently ignores this parameter. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 
@@ -2847,6 +2916,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public Create setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -2999,6 +3091,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud Run currently ignores this parameter. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 
@@ -3622,6 +3737,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** DryRun is a query string parameter which indicates that the server should run validation without
+       persisting the request.
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * DryRun is a query string parameter which indicates that the server should run validation
+         * without persisting the request.
+         */
+        public ReplaceService setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public ReplaceService set(String parameterName, Object value) {
           return (ReplaceService) super.set(parameterName, value);
@@ -3996,49 +4134,69 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /** The maximum number of results to return. If not set, the service will select a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -4851,6 +5009,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public Create setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -5001,6 +5182,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /** Cloud Run currently ignores this parameter. */
           public Delete setApiVersion(java.lang.String apiVersion) {
             this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public Delete setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
             return this;
           }
 
@@ -5653,6 +5857,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /** Cloud Run currently ignores this parameter. */
           public Delete setApiVersion(java.lang.String apiVersion) {
             this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public Delete setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
             return this;
           }
 
@@ -6749,6 +6976,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public Create setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -6901,6 +7151,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /** Cloud Run currently ignores this parameter. */
           public Delete setApiVersion(java.lang.String apiVersion) {
             this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public Delete setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
             return this;
           }
 
@@ -7707,6 +7980,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dryRun;
+
+          /** DryRun is a query string parameter which indicates that the server should run validation without
+         persisting the request.
+           */
+          public java.lang.String getDryRun() {
+            return dryRun;
+          }
+
+          /**
+           * DryRun is a query string parameter which indicates that the server should run
+           * validation without persisting the request.
+           */
+          public ReplaceService setDryRun(java.lang.String dryRun) {
+            this.dryRun = dryRun;
             return this;
           }
 

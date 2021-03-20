@@ -32,7 +32,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative resource name of a Secret Manager secret version, in the following
-   * form:"projects/{project_number}/secrets/{secret_id}/versions/{version_id}".
+   * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative resource name of a Secret Manager secret version, in the following
-   * form:"projects/{project_number}/secrets/{secret_id}/versions/{version_id}".
+   * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudSecret() {
@@ -49,7 +49,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
    * The relative resource name of a Secret Manager secret version, in the following
-   * form:"projects/{project_number}/secrets/{secret_id}/versions/{version_id}".
+   * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * @param cloudSecret cloudSecret or {@code null} for none
    */
   public Secret setCloudSecret(java.lang.String cloudSecret) {

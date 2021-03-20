@@ -33,7 +33,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The relative resource name of the metastore service backup to restore from, in the
    * following
-   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The relative resource name of the metastore service backup to restore from, in the
    * following
-   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackup() {
@@ -88,7 +88,7 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The relative resource name of the metastore service backup to restore from, in the
    * following
-   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
    * @param backup backup or {@code null} for none
    */
   public Restore setBackup(java.lang.String backup) {

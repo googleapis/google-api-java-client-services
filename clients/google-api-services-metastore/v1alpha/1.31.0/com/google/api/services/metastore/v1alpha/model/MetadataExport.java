@@ -39,7 +39,7 @@ public final class MetadataExport extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the form of
-   * gs:/, where ` is automatically generated.
+   * gs:/, where is automatically generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class MetadataExport extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the form of
-   * gs:/, where ` is automatically generated.
+   * gs:/, where is automatically generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationGcsUri() {
@@ -94,7 +94,7 @@ public final class MetadataExport extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the form of
-   * gs:/, where ` is automatically generated.
+   * gs:/, where is automatically generated.
    * @param destinationGcsUri destinationGcsUri or {@code null} for none
    */
   public MetadataExport setDestinationGcsUri(java.lang.String destinationGcsUri) {

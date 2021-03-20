@@ -1995,22 +1995,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Predict#execute()} method to invoke the remote operation.
            *
            * @param placement Required. Full resource name of the format:
-           *        {name=projects/locations/global/catalogs/default_catalog/placements} The id of the
-           *        recommendation engine placement. This id is used to identify the set of models that will
-           *        be used to make the prediction. We currently support three placements with the following
-           *        IDs by default: * `shopping_cart`: Predicts products frequently bought together with one
-           *        or more products in the same shopping session. Commonly displayed after `add-to-cart`
-           *        events, on product detail pages, or on the shopping cart page. * `home_page`: Predicts the
-           *        next product that a user will most likely engage with or purchase based on the shopping or
-           *        viewing history of the specified `userId` or `visitorId`. For example - Recommendations
-           *        for you. * `product_detail`: Predicts the next product that a user will most likely engage
-           *        with or purchase. The prediction is based on the shopping or viewing history of the
-           *        specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`.
-           *        Typically used on product detail pages. For example - More products like this. *
-           *        `recently_viewed_default`: Returns up to 75 products recently viewed by the specified
-           *        `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them has
-           *        viewed any products yet. For example - Recently viewed. The full list of available
-           *        placements can be seen at
+           *        {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+           *        Recommendations AI placement. Before you can request predictions from your model, you must
+           *        create at least one placement for it. For more information, see [Managing
+           *        placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
+           *        The full list of available placements can be seen at
            *        https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
            * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2PredictRequest}
            * @return the request
@@ -2040,22 +2029,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param placement Required. Full resource name of the format:
-           *        {name=projects/locations/global/catalogs/default_catalog/placements} The id of the
-           *        recommendation engine placement. This id is used to identify the set of models that will
-           *        be used to make the prediction. We currently support three placements with the following
-           *        IDs by default: * `shopping_cart`: Predicts products frequently bought together with one
-           *        or more products in the same shopping session. Commonly displayed after `add-to-cart`
-           *        events, on product detail pages, or on the shopping cart page. * `home_page`: Predicts the
-           *        next product that a user will most likely engage with or purchase based on the shopping or
-           *        viewing history of the specified `userId` or `visitorId`. For example - Recommendations
-           *        for you. * `product_detail`: Predicts the next product that a user will most likely engage
-           *        with or purchase. The prediction is based on the shopping or viewing history of the
-           *        specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`.
-           *        Typically used on product detail pages. For example - More products like this. *
-           *        `recently_viewed_default`: Returns up to 75 products recently viewed by the specified
-           *        `userId` or `visitorId`, most recent ones first. Returns nothing if neither of them has
-           *        viewed any products yet. For example - Recently viewed. The full list of available
-           *        placements can be seen at
+           *        {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+           *        Recommendations AI placement. Before you can request predictions from your model, you must
+           *        create at least one placement for it. For more information, see [Managing
+           *        placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
+           *        The full list of available placements can be seen at
            *        https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
              * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2PredictRequest}
              * @since 1.13
@@ -2127,42 +2105,21 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. Full resource name of the format:
-             * {name=projects/locations/global/catalogs/default_catalog/placements} The id of the
-             * recommendation engine placement. This id is used to identify the set of models that
-             * will be used to make the prediction. We currently support three placements with the
-             * following IDs by default: * `shopping_cart`: Predicts products frequently bought
-             * together with one or more products in the same shopping session. Commonly displayed
-             * after `add-to-cart` events, on product detail pages, or on the shopping cart page. *
-             * `home_page`: Predicts the next product that a user will most likely engage with or
-             * purchase based on the shopping or viewing history of the specified `userId` or
-             * `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the
-             * next product that a user will most likely engage with or purchase. The prediction is
-             * based on the shopping or viewing history of the specified `userId` or `visitorId` and
-             * its relevance to a specified `CatalogItem`. Typically used on product detail pages.
-             * For example - More products like this. * `recently_viewed_default`: Returns up to 75
-             * products recently viewed by the specified `userId` or `visitorId`, most recent ones
-             * first. Returns nothing if neither of them has viewed any products yet. For example -
-             * Recently viewed. The full list of available placements can be seen at
+             * {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+             * Recommendations AI placement. Before you can request predictions from your model, you
+             * must create at least one placement for it. For more information, see [Managing
+             * placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-
+             * placements). The full list of available placements can be seen at
              * https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
 
             /** Required. Full resource name of the format:
-           {name=projects/locations/global/catalogs/default_catalog/placements} The id of the recommendation
-           engine placement. This id is used to identify the set of models that will be used to make the
-           prediction. We currently support three placements with the following IDs by default: *
-           `shopping_cart`: Predicts products frequently bought together with one or more products in the same
-           shopping session. Commonly displayed after `add-to-cart` events, on product detail pages, or on the
-           shopping cart page. * `home_page`: Predicts the next product that a user will most likely engage
-           with or purchase based on the shopping or viewing history of the specified `userId` or `visitorId`.
-           For example - Recommendations for you. * `product_detail`: Predicts the next product that a user
-           will most likely engage with or purchase. The prediction is based on the shopping or viewing
-           history of the specified `userId` or `visitorId` and its relevance to a specified `CatalogItem`.
-           Typically used on product detail pages. For example - More products like this. *
-           `recently_viewed_default`: Returns up to 75 products recently viewed by the specified `userId` or
-           `visitorId`, most recent ones first. Returns nothing if neither of them has viewed any products
-           yet. For example - Recently viewed. The full list of available placements can be seen at
+           {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the Recommendations
+           AI placement. Before you can request predictions from your model, you must create at least one
+           placement for it. For more information, see [Managing placements](https://cloud.google.com/retail
+           /recommendations-ai/docs/manage-placements). The full list of available placements can be seen at
            https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
              */
             public java.lang.String getPlacement() {
@@ -2171,22 +2128,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. Full resource name of the format:
-             * {name=projects/locations/global/catalogs/default_catalog/placements} The id of the
-             * recommendation engine placement. This id is used to identify the set of models that
-             * will be used to make the prediction. We currently support three placements with the
-             * following IDs by default: * `shopping_cart`: Predicts products frequently bought
-             * together with one or more products in the same shopping session. Commonly displayed
-             * after `add-to-cart` events, on product detail pages, or on the shopping cart page. *
-             * `home_page`: Predicts the next product that a user will most likely engage with or
-             * purchase based on the shopping or viewing history of the specified `userId` or
-             * `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the
-             * next product that a user will most likely engage with or purchase. The prediction is
-             * based on the shopping or viewing history of the specified `userId` or `visitorId` and
-             * its relevance to a specified `CatalogItem`. Typically used on product detail pages.
-             * For example - More products like this. * `recently_viewed_default`: Returns up to 75
-             * products recently viewed by the specified `userId` or `visitorId`, most recent ones
-             * first. Returns nothing if neither of them has viewed any products yet. For example -
-             * Recently viewed. The full list of available placements can be seen at
+             * {name=projects/locations/global/catalogs/default_catalog/placements} The ID of the
+             * Recommendations AI placement. Before you can request predictions from your model, you
+             * must create at least one placement for it. For more information, see [Managing
+             * placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-
+             * placements). The full list of available placements can be seen at
              * https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
              */
             public Predict setPlacement(java.lang.String placement) {

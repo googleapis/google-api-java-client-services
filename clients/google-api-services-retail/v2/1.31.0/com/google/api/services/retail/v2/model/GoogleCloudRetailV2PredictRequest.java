@@ -35,9 +35,10 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * to products that match all of the specified tags. Boolean operators `OR` and `NOT` are
    * supported if the expression is enclosed in parentheses, and must be separated from the tag
    * values by a space. `-"tagA"` is also supported and is equivalent to `NOT "tagA"`. Tag values
-   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. *
-   * filterOutOfStockItems. Restricts predictions to products that do not have a stockState value of
-   * OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
+   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. Note:
+   * "Recently viewed" models don't support tag filtering at the moment. * filterOutOfStockItems.
+   * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
+   * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
    * prediction results, nothing will be returned. If you want generic (unfiltered) popular products
    * to be returned instead, set `strictFiltering` to false in `PredictRequest.params`.
@@ -111,9 +112,10 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * to products that match all of the specified tags. Boolean operators `OR` and `NOT` are
    * supported if the expression is enclosed in parentheses, and must be separated from the tag
    * values by a space. `-"tagA"` is also supported and is equivalent to `NOT "tagA"`. Tag values
-   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. *
-   * filterOutOfStockItems. Restricts predictions to products that do not have a stockState value of
-   * OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
+   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. Note:
+   * "Recently viewed" models don't support tag filtering at the moment. * filterOutOfStockItems.
+   * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
+   * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
    * prediction results, nothing will be returned. If you want generic (unfiltered) popular products
    * to be returned instead, set `strictFiltering` to false in `PredictRequest.params`.
@@ -129,9 +131,10 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * to products that match all of the specified tags. Boolean operators `OR` and `NOT` are
    * supported if the expression is enclosed in parentheses, and must be separated from the tag
    * values by a space. `-"tagA"` is also supported and is equivalent to `NOT "tagA"`. Tag values
-   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. *
-   * filterOutOfStockItems. Restricts predictions to products that do not have a stockState value of
-   * OUT_OF_STOCK. Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
+   * must be double quoted UTF-8 encoded strings with a size limit of 1,000 characters. Note:
+   * "Recently viewed" models don't support tag filtering at the moment. * filterOutOfStockItems.
+   * Restricts predictions to products that do not have a stockState value of OUT_OF_STOCK.
+   * Examples: * tag=("Red" OR "Blue") tag="New-Arrival" tag=(NOT "promotional") *
    * filterOutOfStockItems tag=(-"promotional") * filterOutOfStockItems If your filter blocks all
    * prediction results, nothing will be returned. If you want generic (unfiltered) popular products
    * to be returned instead, set `strictFiltering` to false in `PredictRequest.params`.

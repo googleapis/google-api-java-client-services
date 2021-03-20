@@ -443,49 +443,69 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in AIP-160
+         * (https://google.aip.dev/160).
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       "displayName=tokyo", and is documented in more detail in AIP-160 (https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in AIP-160
+         * (https://google.aip.dev/160).
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /** The maximum number of results to return. If not set, the service will select a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the next_page_token field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /** A page token received from the next_page_token field in the response. Send that page token to
+       receive the subsequent page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the next_page_token field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1019,7 +1039,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The relative resource name of the location in which to create a metastore service, in the
-         *        following form:"projects/{project_number}/locations/{location_id}".
+         *        following form:projects/{project_number}/locations/{location_id}.
          * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
          * @return the request
          */
@@ -1048,7 +1068,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The relative resource name of the location in which to create a metastore service, in the
-         *        following form:"projects/{project_number}/locations/{location_id}".
+         *        following form:projects/{project_number}/locations/{location_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
            * @since 1.13
            */
@@ -1119,13 +1139,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the location in which to create a metastore
-           * service, in the following form:"projects/{project_number}/locations/{location_id}".
+           * service, in the following form:projects/{project_number}/locations/{location_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The relative resource name of the location in which to create a metastore service, in the
-         following form:"projects/{project_number}/locations/{location_id}".
+         following form:projects/{project_number}/locations/{location_id}.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1133,7 +1153,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the location in which to create a metastore
-           * service, in the following form:"projects/{project_number}/locations/{location_id}".
+           * service, in the following form:projects/{project_number}/locations/{location_id}.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1227,7 +1247,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The relative resource name of the metastore service to delete, in the following
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1255,7 +1275,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The relative resource name of the metastore service to delete, in the following
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1325,14 +1345,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to delete, in the
-           * following
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the metastore service to delete, in the following
-         form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -1340,8 +1359,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to delete, in the
-           * following
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1407,7 +1425,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link ExportMetadata#execute()} method to invoke the remote operation.
          *
          * @param service Required. The relative resource name of the metastore service to run export, in the following
-         *        form:"projects/{project_id}/locations/{location_id}/services/{service_id}
+         *        form:projects/{project_id}/locations/{location_id}/services/{service_id}.
          * @param content the {@link com.google.api.services.metastore.v1alpha.model.ExportMetadataRequest}
          * @return the request
          */
@@ -1436,7 +1454,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * the constructor. </p>
            *
            * @param service Required. The relative resource name of the metastore service to run export, in the following
-         *        form:"projects/{project_id}/locations/{location_id}/services/{service_id}
+         *        form:projects/{project_id}/locations/{location_id}/services/{service_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.ExportMetadataRequest}
            * @since 1.13
            */
@@ -1507,13 +1525,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to run export, in the
-           * following form:"projects/{project_id}/locations/{location_id}/services/{service_id}
+           * following form:projects/{project_id}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String service;
 
           /** Required. The relative resource name of the metastore service to run export, in the following
-         form:"projects/{project_id}/locations/{location_id}/services/{service_id}
+         form:projects/{project_id}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getService() {
             return service;
@@ -1521,7 +1539,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to run export, in the
-           * following form:"projects/{project_id}/locations/{location_id}/services/{service_id}
+           * following form:projects/{project_id}/locations/{location_id}/services/{service_id}.
            */
           public ExportMetadata setService(java.lang.String service) {
             if (!getSuppressPatternChecks()) {
@@ -1547,7 +1565,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The relative resource name of the metastore service to retrieve, in the following
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1574,7 +1592,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The relative resource name of the metastore service to retrieve, in the following
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1654,14 +1672,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to retrieve, in the
-           * following
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the metastore service to retrieve, in the following
-         form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -1669,8 +1686,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the metastore service to retrieve, in the
-           * following
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1880,7 +1896,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The relative resource name of the location of metastore services to list, in the following
-         *        form:"projects/{project_number}/locations/{location_id}".
+         *        form:projects/{project_number}/locations/{location_id}.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1907,7 +1923,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The relative resource name of the location of metastore services to list, in the following
-         *        form:"projects/{project_number}/locations/{location_id}".
+         *        form:projects/{project_number}/locations/{location_id}.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1987,13 +2003,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the location of metastore services to list, in
-           * the following form:"projects/{project_number}/locations/{location_id}".
+           * the following form:projects/{project_number}/locations/{location_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The relative resource name of the location of metastore services to list, in the
-         following form:"projects/{project_number}/locations/{location_id}".
+         following form:projects/{project_number}/locations/{location_id}.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2001,7 +2017,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Required. The relative resource name of the location of metastore services to list, in
-           * the following form:"projects/{project_number}/locations/{location_id}".
+           * the following form:projects/{project_number}/locations/{location_id}.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2030,22 +2046,25 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Optional. Specify the ordering of results as described in Sorting Order. If not
-           * specified, the results will be sorted in the default order.
+           * Optional. Specify the ordering of results as described in Sorting Order
+           * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified,
+           * the results will be sorted in the default order.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Specify the ordering of results as described in Sorting Order. If not specified, the
-         results will be sorted in the default order.
+          /** Optional. Specify the ordering of results as described in Sorting Order
+         (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results
+         will be sorted in the default order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Optional. Specify the ordering of results as described in Sorting Order. If not
-           * specified, the results will be sorted in the default order.
+           * Optional. Specify the ordering of results as described in Sorting Order
+           * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified,
+           * the results will be sorted in the default order.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -2121,7 +2140,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Immutable. The relative resource name of the metastore service, of the
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
          * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
          * @return the request
          */
@@ -2150,7 +2169,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Immutable. The relative resource name of the metastore service, of the
-         *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.Service}
            * @since 1.13
            */
@@ -2221,13 +2240,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Immutable. The relative resource name of the metastore service, of the
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Immutable. The relative resource name of the metastore service, of the
-         form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+         form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -2235,7 +2254,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
           /**
            * Immutable. The relative resource name of the metastore service, of the
-           * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+           * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2636,7 +2655,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The relative resource name of the service in which to create a metastore import, in the
-           *        following form:"projects/{project_number}/locations/{location_id}/services/{service_id}"
+           *        following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.MetadataImport}
            * @return the request
            */
@@ -2665,7 +2684,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The relative resource name of the service in which to create a metastore import, in the
-           *        following form:"projects/{project_number}/locations/{location_id}/services/{service_id}"
+           *        following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
              * @param content the {@link com.google.api.services.metastore.v1alpha.model.MetadataImport}
              * @since 1.13
              */
@@ -2737,13 +2756,13 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             /**
              * Required. The relative resource name of the service in which to create a metastore
              * import, in the following
-             * form:"projects/{project_number}/locations/{location_id}/services/{service_id}"
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The relative resource name of the service in which to create a metastore import, in the
-           following form:"projects/{project_number}/locations/{location_id}/services/{service_id}"
+           following form:projects/{project_number}/locations/{location_id}/services/{service_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -2752,7 +2771,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             /**
              * Required. The relative resource name of the service in which to create a metastore
              * import, in the following
-             * form:"projects/{project_number}/locations/{location_id}/services/{service_id}"
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2845,9 +2864,9 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the metastore server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The relative resource name of the metadata import to retrieve, in the following form:"proj
-           *        ects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{impor
-           *        t_id}".
+           * @param name Required. The relative resource name of the metadata import to retrieve, in the following form:proje
+           *        cts/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import
+           *        _id}.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2873,9 +2892,9 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The relative resource name of the metadata import to retrieve, in the following form:"proj
-           *        ects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{impor
-           *        t_id}".
+             * @param name Required. The relative resource name of the metadata import to retrieve, in the following form:proje
+           *        cts/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import
+           *        _id}.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2955,14 +2974,14 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
             /**
              * Required. The relative resource name of the metadata import to retrieve, in the
-             * following form:"projects/{project_number}/locations/{location_id}/services/{service_i
-             * d}/metadataImports/{import_id}".
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/metadataImports/{import_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The relative resource name of the metadata import to retrieve, in the following form:"pro
-           jects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+            /** Required. The relative resource name of the metadata import to retrieve, in the following form:proj
+           ects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}.
              */
             public java.lang.String getName() {
               return name;
@@ -2970,8 +2989,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
             /**
              * Required. The relative resource name of the metadata import to retrieve, in the
-             * following form:"projects/{project_number}/locations/{location_id}/services/{service_i
-             * d}/metadataImports/{import_id}".
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/metadataImports/{import_id}.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2997,8 +3016,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The relative resource name of the service whose metadata imports to list, in the following
-           *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpo
-           *        rts".
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpor
+           *        ts.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3025,8 +3044,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The relative resource name of the service whose metadata imports to list, in the following
-           *        form:"projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpo
-           *        rts".
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpor
+           *        ts.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3106,15 +3125,15 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
             /**
              * Required. The relative resource name of the service whose metadata imports to list,
-             * in the following form:"projects/{project_number}/locations/{location_id}/services/{se
-             * rvice_id}/metadataImports".
+             * in the following form:projects/{project_number}/locations/{location_id}/services/{ser
+             * vice_id}/metadataImports.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The relative resource name of the service whose metadata imports to list, in the
            following
-           form:"projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports".
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3122,8 +3141,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
 
             /**
              * Required. The relative resource name of the service whose metadata imports to list,
-             * in the following form:"projects/{project_number}/locations/{location_id}/services/{se
-             * rvice_id}/metadataImports".
+             * in the following form:projects/{project_number}/locations/{location_id}/services/{ser
+             * vice_id}/metadataImports.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3152,21 +3171,24 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Optional. Specify the ordering of results as described in Sorting Order. If not
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
              * specified, the results will be sorted in the default order.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Specify the ordering of results as described in Sorting Order. If not specified, the
-           results will be sorted in the default order.
+            /** Optional. Specify the ordering of results as described in Sorting Order
+           (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results
+           will be sorted in the default order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * Optional. Specify the ordering of results as described in Sorting Order. If not
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
              * specified, the results will be sorted in the default order.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -3242,8 +3264,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the metastore server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The relative resource name of the metadata import, of the form:"projects/{project_number}
-           *        /locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}".
+           * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/
+           *        locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
            * @param content the {@link com.google.api.services.metastore.v1alpha.model.MetadataImport}
            * @return the request
            */
@@ -3272,8 +3294,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The relative resource name of the metadata import, of the form:"projects/{project_number}
-           *        /locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}".
+             * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/
+           *        locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
              * @param content the {@link com.google.api.services.metastore.v1alpha.model.MetadataImport}
              * @since 1.13
              */
@@ -3343,24 +3365,24 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Immutable. The relative resource name of the metadata import, of the form:"projects/{
-             * project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metada
-             * ta_import_id}".
+             * Immutable. The relative resource name of the metadata import, of the form:projects/{p
+             * roject_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadat
+             * a_import_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The relative resource name of the metadata import, of the form:"projects/{project_number
-           }/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}".
+            /** Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}
+           /locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Immutable. The relative resource name of the metadata import, of the form:"projects/{
-             * project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metada
-             * ta_import_id}".
+             * Immutable. The relative resource name of the metadata import, of the form:projects/{p
+             * roject_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadat
+             * a_import_id}.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

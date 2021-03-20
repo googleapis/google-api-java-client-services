@@ -91,7 +91,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the metastore service, of the
-   * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,6 +111,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseChannel;
 
   /**
    * Output only. The current state of the metastore service.
@@ -292,7 +299,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the metastore service, of the
-   * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -301,7 +308,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the metastore service, of the
-   * form:"projects/{project_number}/locations/{location_id}/services/{service_id}".
+   * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {
@@ -311,7 +318,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -320,7 +327,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
    * @param network network or {@code null} for none
    */
   public Service setNetwork(java.lang.String network) {
@@ -342,6 +349,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseChannel() {
+    return releaseChannel;
+  }
+
+  /**
+   * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+   * @param releaseChannel releaseChannel or {@code null} for none
+   */
+  public Service setReleaseChannel(java.lang.String releaseChannel) {
+    this.releaseChannel = releaseChannel;
     return this;
   }
 

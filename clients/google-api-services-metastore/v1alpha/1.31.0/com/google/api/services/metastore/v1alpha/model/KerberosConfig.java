@@ -49,7 +49,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form "primary/instance@REALM", but there is no exact format.
+   * principal is of the form primary/instance@REALM, but there is no exact format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form "primary/instance@REALM", but there is no exact format.
+   * principal is of the form primary/instance@REALM, but there is no exact format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -106,7 +106,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form "primary/instance@REALM", but there is no exact format.
+   * principal is of the form primary/instance@REALM, but there is no exact format.
    * @param principal principal or {@code null} for none
    */
   public KerberosConfig setPrincipal(java.lang.String principal) {

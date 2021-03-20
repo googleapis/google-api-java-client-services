@@ -38,8 +38,8 @@ public final class ExportMetadataRequest extends com.google.api.client.json.Gene
   private java.lang.String databaseDumpType;
 
   /**
-   * Required. A Cloud Storage URI of a folder that metadata are exported to, in the format gs:. A
-   * sub-folder containing exported files will be created below it.
+   * A Cloud Storage URI of a folder, in the format gs:. A sub-folder containing exported files will
+   * be created below it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class ExportMetadataRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. A Cloud Storage URI of a folder that metadata are exported to, in the format gs:. A
-   * sub-folder containing exported files will be created below it.
+   * A Cloud Storage URI of a folder, in the format gs:. A sub-folder containing exported files will
+   * be created below it.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationGcsFolder() {
@@ -85,8 +85,8 @@ public final class ExportMetadataRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. A Cloud Storage URI of a folder that metadata are exported to, in the format gs:. A
-   * sub-folder containing exported files will be created below it.
+   * A Cloud Storage URI of a folder, in the format gs:. A sub-folder containing exported files will
+   * be created below it.
    * @param destinationGcsFolder destinationGcsFolder or {@code null} for none
    */
   public ExportMetadataRequest setDestinationGcsFolder(java.lang.String destinationGcsFolder) {

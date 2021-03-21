@@ -53,7 +53,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
-   * Required. Description of this membership, limited to 63 characters. Must match the regex:
+   * Optional. Description of this membership, limited to 63 characters. Must match the regex:
    * `a-zA-Z0-9*`
    * The value may be {@code null}.
    */
@@ -193,7 +193,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Description of this membership, limited to 63 characters. Must match the regex:
+   * Optional. Description of this membership, limited to 63 characters. Must match the regex:
    * `a-zA-Z0-9*`
    * @return value or {@code null} for none
    */
@@ -202,7 +202,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Description of this membership, limited to 63 characters. Must match the regex:
+   * Optional. Description of this membership, limited to 63 characters. Must match the regex:
    * `a-zA-Z0-9*`
    * @param description description or {@code null} for none
    */

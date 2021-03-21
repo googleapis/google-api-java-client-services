@@ -47,7 +47,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * * The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
    * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
    * segments: an optional prefix and name, separated by a slash (/). The name segment is required
    * and must be 63 characters or less, beginning and ending with an alphanumeric character
@@ -93,7 +93,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * * The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
    * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
    * segments: an optional prefix and name, separated by a slash (/). The name segment is required
    * and must be 63 characters or less, beginning and ending with an alphanumeric character
@@ -113,7 +113,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * * The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
    * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
    * segments: an optional prefix and name, separated by a slash (/). The name segment is required
    * and must be 63 characters or less, beginning and ending with an alphanumeric character

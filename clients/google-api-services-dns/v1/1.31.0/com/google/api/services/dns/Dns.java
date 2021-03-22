@@ -3612,7 +3612,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Projects {
 
     /**
-     * Fetch the representation of an existing Project.
+     * Fetches the representation of an existing Project.
      *
      * Create a request for the method "projects.get".
      *
@@ -3633,7 +3633,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}";
 
       /**
-       * Fetch the representation of an existing Project.
+       * Fetches the representation of an existing Project.
        *
        * Create a request for the method "projects.get".
        *

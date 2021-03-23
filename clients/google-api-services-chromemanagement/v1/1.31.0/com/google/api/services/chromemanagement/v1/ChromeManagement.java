@@ -848,17 +848,17 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Field used to order results. Supported order by fields: * machine_name * device_id */
+        /** Field used to order results. Supported order by fields: * machine * device_id */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field used to order results. Supported order by fields: * machine_name * device_id
+        /** Field used to order results. Supported order by fields: * machine * device_id
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /** Field used to order results. Supported order by fields: * machine_name * device_id */
+        /** Field used to order results. Supported order by fields: * machine * device_id */
         public FindInstalledAppDevices setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;

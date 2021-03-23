@@ -23,7 +23,7 @@ package com.google.api.services.serviceusage.v1;
  */
 public class ServiceUsageScopes {
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** View your data across Google Cloud Platform services. */

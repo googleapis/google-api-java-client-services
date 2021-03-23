@@ -44,6 +44,14 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private StorageSource storageSource;
 
   /**
+   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
+   * Preview.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageSourceManifest storageSourceManifest;
+
+  /**
    * If provided, get the source from this location in a Cloud Source Repository.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setStorageSource(StorageSource storageSource) {
     this.storageSource = storageSource;
+    return this;
+  }
+
+  /**
+   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
+   * Preview.
+   * @return value or {@code null} for none
+   */
+  public StorageSourceManifest getStorageSourceManifest() {
+    return storageSourceManifest;
+  }
+
+  /**
+   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
+   * Preview.
+   * @param storageSourceManifest storageSourceManifest or {@code null} for none
+   */
+  public Source setStorageSourceManifest(StorageSourceManifest storageSourceManifest) {
+    this.storageSourceManifest = storageSourceManifest;
     return this;
   }
 

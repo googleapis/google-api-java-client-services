@@ -63,6 +63,14 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
   private StorageSource resolvedStorageSource;
 
   /**
+   * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved.
+   * This feature is in Preview.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageSourceManifest resolvedStorageSourceManifest;
+
+  /**
    * Output only. Hash(es) of the build source, which can be used to verify that the original source
    * integrity was maintained in the build. Note that `FileHashes` will only be populated if
    * `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used
@@ -120,6 +128,25 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
    */
   public SourceProvenance setResolvedStorageSource(StorageSource resolvedStorageSource) {
     this.resolvedStorageSource = resolvedStorageSource;
+    return this;
+  }
+
+  /**
+   * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved.
+   * This feature is in Preview.
+   * @return value or {@code null} for none
+   */
+  public StorageSourceManifest getResolvedStorageSourceManifest() {
+    return resolvedStorageSourceManifest;
+  }
+
+  /**
+   * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved.
+   * This feature is in Preview.
+   * @param resolvedStorageSourceManifest resolvedStorageSourceManifest or {@code null} for none
+   */
+  public SourceProvenance setResolvedStorageSourceManifest(StorageSourceManifest resolvedStorageSourceManifest) {
+    this.resolvedStorageSourceManifest = resolvedStorageSourceManifest;
     return this;
   }
 

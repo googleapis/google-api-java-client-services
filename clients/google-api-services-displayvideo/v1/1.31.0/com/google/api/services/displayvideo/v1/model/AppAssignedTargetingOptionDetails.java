@@ -40,6 +40,15 @@ public final class AppAssignedTargetingOptionDetails extends com.google.api.clie
   private java.lang.String appId;
 
   /**
+   * Indicates the platform of the targeted app. If this field is not specified, the app platform
+   * will be assumed to be mobile (i.e., Android or iOS), and we will derive the appropriate mobile
+   * platform from the app ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appPlatform;
+
+  /**
    * Output only. The display name of the app.
    * The value may be {@code null}.
    */
@@ -69,6 +78,27 @@ public final class AppAssignedTargetingOptionDetails extends com.google.api.clie
    */
   public AppAssignedTargetingOptionDetails setAppId(java.lang.String appId) {
     this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Indicates the platform of the targeted app. If this field is not specified, the app platform
+   * will be assumed to be mobile (i.e., Android or iOS), and we will derive the appropriate mobile
+   * platform from the app ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppPlatform() {
+    return appPlatform;
+  }
+
+  /**
+   * Indicates the platform of the targeted app. If this field is not specified, the app platform
+   * will be assumed to be mobile (i.e., Android or iOS), and we will derive the appropriate mobile
+   * platform from the app ID.
+   * @param appPlatform appPlatform or {@code null} for none
+   */
+  public AppAssignedTargetingOptionDetails setAppPlatform(java.lang.String appPlatform) {
+    this.appPlatform = appPlatform;
     return this;
   }
 

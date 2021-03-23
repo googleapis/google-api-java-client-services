@@ -23,7 +23,7 @@ package com.google.api.services.runtimeconfig.v1beta1;
  */
 public class CloudRuntimeConfigScopes {
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** Manage your Google Cloud Platform services' runtime configuration. */

@@ -1,129 +1,567 @@
 {
+  "baseUrl": "https://area120tables.googleapis.com/",
+  "documentationLink": "https://support.google.com/area120-tables/answer/10011390",
+  "id": "area120tables:v1alpha1",
+  "title": "Area120 Tables API",
+  "version": "v1alpha1",
+  "servicePath": "",
+  "kind": "discovery#restDescription",
   "fullyEncodeReservedExpansion": true,
-  "ownerDomain": "google.com",
+  "version_module": true,
+  "discoveryVersion": "v1",
+  "name": "area120tables",
+  "protocol": "rest",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
   "mtlsRootUrl": "https://area120tables.mtls.googleapis.com/",
+  "basePath": "",
+  "rootUrl": "https://area120tables.googleapis.com/",
+  "canonicalName": "Area120 Tables",
+  "ownerName": "Google",
+  "resources": {
+    "workspaces": {
+      "methods": {
+        "list": {
+          "parameters": {
+            "pageSize": {
+              "type": "integer",
+              "description": "The maximum number of workspaces to return. The service may return fewer than this value. If unspecified, at most 10 workspaces are returned. The maximum value is 25; values above 25 are coerced to 25.",
+              "location": "query",
+              "format": "int32"
+            },
+            "pageToken": {
+              "location": "query",
+              "type": "string",
+              "description": "A page token, received from a previous `ListWorkspaces` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListWorkspaces` must match the call that provided the page token."
+            }
+          },
+          "httpMethod": "GET",
+          "parameterOrder": [],
+          "description": "Lists workspaces for the user.",
+          "response": {
+            "$ref": "ListWorkspacesResponse"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/drive",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/tables"
+          ],
+          "flatPath": "v1alpha1/workspaces",
+          "id": "area120tables.workspaces.list",
+          "path": "v1alpha1/workspaces"
+        },
+        "get": {
+          "response": {
+            "$ref": "Workspace"
+          },
+          "flatPath": "v1alpha1/workspaces/{workspacesId}",
+          "scopes": [
+            "https://www.googleapis.com/auth/drive",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/tables"
+          ],
+          "description": "Gets a workspace. Returns NOT_FOUND if the workspace does not exist.",
+          "httpMethod": "GET",
+          "path": "v1alpha1/{+name}",
+          "id": "area120tables.workspaces.get",
+          "parameterOrder": [
+            "name"
+          ],
+          "parameters": {
+            "name": {
+              "type": "string",
+              "pattern": "^workspaces/[^/]+$",
+              "required": true,
+              "location": "path",
+              "description": "Required. The name of the workspace to retrieve. Format: workspaces/{workspace}"
+            }
+          }
+        }
+      }
+    },
+    "tables": {
+      "methods": {
+        "list": {
+          "scopes": [
+            "https://www.googleapis.com/auth/drive",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/tables"
+          ],
+          "parameterOrder": [],
+          "parameters": {
+            "pageToken": {
+              "description": "A page token, received from a previous `ListTables` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListTables` must match the call that provided the page token.",
+              "type": "string",
+              "location": "query"
+            },
+            "pageSize": {
+              "description": "The maximum number of tables to return. The service may return fewer than this value. If unspecified, at most 20 tables are returned. The maximum value is 100; values above 100 are coerced to 100.",
+              "format": "int32",
+              "location": "query",
+              "type": "integer"
+            }
+          },
+          "response": {
+            "$ref": "ListTablesResponse"
+          },
+          "path": "v1alpha1/tables",
+          "id": "area120tables.tables.list",
+          "flatPath": "v1alpha1/tables",
+          "httpMethod": "GET",
+          "description": "Lists tables for the user."
+        },
+        "get": {
+          "scopes": [
+            "https://www.googleapis.com/auth/drive",
+            "https://www.googleapis.com/auth/drive.file",
+            "https://www.googleapis.com/auth/drive.readonly",
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/tables"
+          ],
+          "parameters": {
+            "name": {
+              "required": true,
+              "location": "path",
+              "pattern": "^tables/[^/]+$",
+              "description": "Required. The name of the table to retrieve. Format: tables/{table}",
+              "type": "string"
+            }
+          },
+          "description": "Gets a table. Returns NOT_FOUND if the table does not exist.",
+          "httpMethod": "GET",
+          "parameterOrder": [
+            "name"
+          ],
+          "response": {
+            "$ref": "Table"
+          },
+          "path": "v1alpha1/{+name}",
+          "flatPath": "v1alpha1/tables/{tablesId}",
+          "id": "area120tables.tables.get"
+        }
+      },
+      "resources": {
+        "rows": {
+          "methods": {
+            "batchUpdate": {
+              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchUpdate",
+              "path": "v1alpha1/{+parent}/rows:batchUpdate",
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "id": "area120tables.tables.rows.batchUpdate",
+              "description": "Updates multiple rows.",
+              "httpMethod": "POST",
+              "parameters": {
+                "parent": {
+                  "pattern": "^tables/[^/]+$",
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "description": "Required. The parent table shared by all rows being updated. Format: tables/{table}"
+                }
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "request": {
+                "$ref": "BatchUpdateRowsRequest"
+              },
+              "response": {
+                "$ref": "BatchUpdateRowsResponse"
+              }
+            },
+            "get": {
+              "httpMethod": "GET",
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/drive.readonly",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/spreadsheets.readonly",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}",
+              "parameters": {
+                "name": {
+                  "pattern": "^tables/[^/]+/rows/[^/]+$",
+                  "required": true,
+                  "description": "Required. The name of the row to retrieve. Format: tables/{table}/rows/{row}",
+                  "type": "string",
+                  "location": "path"
+                },
+                "view": {
+                  "enumDescriptions": [
+                    "Defaults to user entered text.",
+                    "Uses internally generated column id to identify values."
+                  ],
+                  "enum": [
+                    "VIEW_UNSPECIFIED",
+                    "COLUMN_ID_VIEW"
+                  ],
+                  "type": "string",
+                  "location": "query",
+                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name."
+                }
+              },
+              "response": {
+                "$ref": "Row"
+              },
+              "path": "v1alpha1/{+name}",
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "area120tables.tables.rows.get",
+              "description": "Gets a row. Returns NOT_FOUND if the row does not exist in the table."
+            },
+            "delete": {
+              "id": "area120tables.tables.rows.delete",
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Deletes a row.",
+              "response": {
+                "$ref": "Empty"
+              },
+              "path": "v1alpha1/{+name}",
+              "httpMethod": "DELETE",
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "description": "Required. The name of the row to delete. Format: tables/{table}/rows/{row}",
+                  "required": true,
+                  "pattern": "^tables/[^/]+/rows/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}",
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ]
+            },
+            "batchCreate": {
+              "description": "Creates multiple rows.",
+              "parameters": {
+                "parent": {
+                  "pattern": "^tables/[^/]+$",
+                  "description": "Required. The parent table where the rows will be created. Format: tables/{table}",
+                  "type": "string",
+                  "required": true,
+                  "location": "path"
+                }
+              },
+              "request": {
+                "$ref": "BatchCreateRowsRequest"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "path": "v1alpha1/{+parent}/rows:batchCreate",
+              "parameterOrder": [
+                "parent"
+              ],
+              "id": "area120tables.tables.rows.batchCreate",
+              "httpMethod": "POST",
+              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchCreate",
+              "response": {
+                "$ref": "BatchCreateRowsResponse"
+              }
+            },
+            "list": {
+              "path": "v1alpha1/{+parent}/rows",
+              "id": "area120tables.tables.rows.list",
+              "parameters": {
+                "filter": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "Optional. Filter to only include resources matching the requirements. For more information, see [Filtering list results](https://support.google.com/area120-tables/answer/10503371)."
+                },
+                "view": {
+                  "location": "query",
+                  "enumDescriptions": [
+                    "Defaults to user entered text.",
+                    "Uses internally generated column id to identify values."
+                  ],
+                  "enum": [
+                    "VIEW_UNSPECIFIED",
+                    "COLUMN_ID_VIEW"
+                  ],
+                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "A page token, received from a previous `ListRows` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListRows` must match the call that provided the page token."
+                },
+                "pageSize": {
+                  "type": "integer",
+                  "location": "query",
+                  "description": "The maximum number of rows to return. The service may return fewer than this value. If unspecified, at most 50 rows are returned. The maximum value is 1,000; values above 1,000 are coerced to 1,000.",
+                  "format": "int32"
+                },
+                "parent": {
+                  "type": "string",
+                  "location": "path",
+                  "description": "Required. The parent table. Format: tables/{table}",
+                  "required": true,
+                  "pattern": "^tables/[^/]+$"
+                }
+              },
+              "description": "Lists rows in a table. Returns NOT_FOUND if the table does not exist.",
+              "response": {
+                "$ref": "ListRowsResponse"
+              },
+              "flatPath": "v1alpha1/tables/{tablesId}/rows",
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/drive.readonly",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/spreadsheets.readonly",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "httpMethod": "GET"
+            },
+            "create": {
+              "request": {
+                "$ref": "Row"
+              },
+              "path": "v1alpha1/{+parent}/rows",
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "description": "Required. The parent table where this row will be created. Format: tables/{table}",
+                  "pattern": "^tables/[^/]+$",
+                  "type": "string",
+                  "location": "path"
+                },
+                "view": {
+                  "enumDescriptions": [
+                    "Defaults to user entered text.",
+                    "Uses internally generated column id to identify values."
+                  ],
+                  "location": "query",
+                  "enum": [
+                    "VIEW_UNSPECIFIED",
+                    "COLUMN_ID_VIEW"
+                  ],
+                  "type": "string",
+                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name."
+                }
+              },
+              "description": "Creates a row.",
+              "flatPath": "v1alpha1/tables/{tablesId}/rows",
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "id": "area120tables.tables.rows.create",
+              "response": {
+                "$ref": "Row"
+              },
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "parent"
+              ]
+            },
+            "batchDelete": {
+              "httpMethod": "POST",
+              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchDelete",
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "description": "Required. The parent table shared by all rows being deleted. Format: tables/{table}",
+                  "type": "string",
+                  "required": true,
+                  "pattern": "^tables/[^/]+$"
+                }
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "request": {
+                "$ref": "BatchDeleteRowsRequest"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "id": "area120tables.tables.rows.batchDelete",
+              "response": {
+                "$ref": "Empty"
+              },
+              "description": "Deletes multiple rows.",
+              "path": "v1alpha1/{+parent}/rows:batchDelete"
+            },
+            "patch": {
+              "path": "v1alpha1/{+name}",
+              "request": {
+                "$ref": "Row"
+              },
+              "description": "Updates a row.",
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "PATCH",
+              "parameters": {
+                "updateMask": {
+                  "description": "The list of fields to update.",
+                  "format": "google-fieldmask",
+                  "type": "string",
+                  "location": "query"
+                },
+                "name": {
+                  "description": "The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.",
+                  "pattern": "^tables/[^/]+/rows/[^/]+$",
+                  "required": true,
+                  "type": "string",
+                  "location": "path"
+                },
+                "view": {
+                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
+                  "location": "query",
+                  "type": "string",
+                  "enumDescriptions": [
+                    "Defaults to user entered text.",
+                    "Uses internally generated column id to identify values."
+                  ],
+                  "enum": [
+                    "VIEW_UNSPECIFIED",
+                    "COLUMN_ID_VIEW"
+                  ]
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/drive",
+                "https://www.googleapis.com/auth/drive.file",
+                "https://www.googleapis.com/auth/spreadsheets",
+                "https://www.googleapis.com/auth/tables"
+              ],
+              "response": {
+                "$ref": "Row"
+              },
+              "id": "area120tables.tables.rows.patch",
+              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "description": "",
+  "ownerDomain": "google.com",
   "schemas": {
+    "BatchUpdateRowsResponse": {
+      "description": "Response message for TablesService.BatchUpdateRows.",
+      "properties": {
+        "rows": {
+          "description": "The updated rows.",
+          "type": "array",
+          "items": {
+            "$ref": "Row"
+          }
+        }
+      },
+      "id": "BatchUpdateRowsResponse",
+      "type": "object"
+    },
+    "Empty": {
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "id": "Empty",
+      "properties": {},
+      "type": "object"
+    },
+    "CreateRowRequest": {
+      "properties": {
+        "view": {
+          "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
+          "enumDescriptions": [
+            "Defaults to user entered text.",
+            "Uses internally generated column id to identify values."
+          ],
+          "enum": [
+            "VIEW_UNSPECIFIED",
+            "COLUMN_ID_VIEW"
+          ],
+          "type": "string"
+        },
+        "row": {
+          "description": "Required. The row to create.",
+          "$ref": "Row"
+        },
+        "parent": {
+          "type": "string",
+          "description": "Required. The parent table where this row will be created. Format: tables/{table}"
+        }
+      },
+      "type": "object",
+      "id": "CreateRowRequest",
+      "description": "Request message for TablesService.CreateRow."
+    },
     "BatchCreateRowsRequest": {
       "description": "Request message for TablesService.BatchCreateRows.",
-      "type": "object",
       "properties": {
         "requests": {
+          "description": "Required. The request message specifying the rows to create. A maximum of 500 rows can be created in a single batch.",
+          "type": "array",
           "items": {
             "$ref": "CreateRowRequest"
-          },
-          "type": "array",
-          "description": "Required. The request message specifying the rows to create. A maximum of 500 rows can be created in a single batch."
-        }
-      },
-      "id": "BatchCreateRowsRequest"
-    },
-    "BatchUpdateRowsRequest": {
-      "description": "Request message for TablesService.BatchUpdateRows.",
-      "properties": {
-        "requests": {
-          "items": {
-            "$ref": "UpdateRowRequest"
-          },
-          "description": "Required. The request messages specifying the rows to update. A maximum of 500 rows can be modified in a single batch.",
-          "type": "array"
-        }
-      },
-      "type": "object",
-      "id": "BatchUpdateRowsRequest"
-    },
-    "ColumnDescription": {
-      "type": "object",
-      "description": "Details on a column in the table.",
-      "properties": {
-        "lookupDetails": {
-          "$ref": "LookupDetails",
-          "description": "Optional. Indicates that this is a lookup column whose value is derived from the relationship column specified in the details. Lookup columns can not be updated directly. To change the value you must update the associated relationship column."
-        },
-        "dataType": {
-          "type": "string",
-          "description": "Data type of the column Supported types are auto_id, boolean, boolean_list, creator, create_timestamp, date, dropdown, location, integer, integer_list, number, number_list, person, person_list, tags, check_list, text, text_list, update_timestamp, updater, relationship, file_attachment_list. These types directly map to the column types supported on Tables website."
-        },
-        "name": {
-          "description": "column name",
-          "type": "string"
-        },
-        "labels": {
-          "type": "array",
-          "description": "Optional. Range of labeled values for the column. Some columns like tags and drop-downs limit the values to a set of possible values. We return the range of values in such cases to help clients implement better user data validation.",
-          "items": {
-            "$ref": "LabeledItem"
-          }
-        },
-        "relationshipDetails": {
-          "$ref": "RelationshipDetails",
-          "description": "Optional. Additional details about a relationship column. Specified when data_type is relationship."
-        },
-        "id": {
-          "description": "Internal id for a column.",
-          "type": "string"
-        }
-      },
-      "id": "ColumnDescription"
-    },
-    "BatchDeleteRowsRequest": {
-      "properties": {
-        "names": {
-          "description": "Required. The names of the rows to delete. All rows must belong to the parent table or else the entire batch will fail. A maximum of 500 rows can be deleted in a batch. Format: tables/{table}/rows/{row}",
-          "type": "array",
-          "items": {
-            "type": "string"
           }
         }
       },
-      "type": "object",
-      "id": "BatchDeleteRowsRequest",
-      "description": "Request message for TablesService.BatchDeleteRows"
-    },
-    "Row": {
-      "type": "object",
-      "description": "A single row in a table.",
-      "properties": {
-        "values": {
-          "type": "object",
-          "description": "The values of the row. This is a map of column key to value. Key is user entered name(default) or the internal column id based on the view in the request.",
-          "additionalProperties": {
-            "type": "any"
-          }
-        },
-        "updateTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Time when the row was last updated."
-        },
-        "name": {
-          "description": "The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.",
-          "type": "string"
-        },
-        "createTime": {
-          "description": "Time when the row was created.",
-          "type": "string",
-          "format": "google-datetime"
-        }
-      },
-      "id": "Row"
-    },
-    "LabeledItem": {
-      "description": "A single item in a labeled column.",
-      "properties": {
-        "id": {
-          "description": "Internal id associated with the item.",
-          "type": "string"
-        },
-        "name": {
-          "type": "string",
-          "description": "Display string as entered by user."
-        }
-      },
-      "id": "LabeledItem",
+      "id": "BatchCreateRowsRequest",
       "type": "object"
+    },
+    "ListRowsResponse": {
+      "id": "ListRowsResponse",
+      "description": "Response message for TablesService.ListRows.",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "A token, which can be sent as `page_token` to retrieve the next page. If this field is empty, there are no subsequent pages.",
+          "type": "string"
+        },
+        "rows": {
+          "items": {
+            "$ref": "Row"
+          },
+          "type": "array",
+          "description": "The rows from the specified table."
+        }
+      }
     },
     "BatchCreateRowsResponse": {
       "id": "BatchCreateRowsResponse",
+      "type": "object",
       "properties": {
         "rows": {
           "type": "array",
@@ -133,165 +571,23 @@
           }
         }
       },
-      "type": "object",
       "description": "Response message for TablesService.BatchCreateRows."
     },
-    "Table": {
-      "description": "A single table.",
-      "id": "Table",
-      "properties": {
-        "displayName": {
-          "description": "The human readable title of the table.",
-          "type": "string"
-        },
-        "createTime": {
-          "description": "Time when the table was created.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "name": {
-          "type": "string",
-          "description": "The resource name of the table. Table names have the form `tables/{table}`."
-        },
-        "updateTime": {
-          "description": "Time when the table was last updated excluding updates to individual rows",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "columns": {
-          "type": "array",
-          "items": {
-            "$ref": "ColumnDescription"
-          },
-          "description": "List of columns in this table. Order of columns matches the display order."
-        }
-      },
-      "type": "object"
-    },
-    "Empty": {
-      "id": "Empty",
-      "type": "object",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
-      "properties": {}
-    },
-    "RelationshipDetails": {
-      "properties": {
-        "linkedTable": {
-          "type": "string",
-          "description": "The name of the table this relationship is linked to."
-        }
-      },
-      "id": "RelationshipDetails",
-      "description": "Details about a relationship column.",
-      "type": "object"
-    },
-    "UpdateRowRequest": {
-      "description": "Request message for TablesService.UpdateRow.",
-      "type": "object",
-      "id": "UpdateRowRequest",
-      "properties": {
-        "row": {
-          "description": "Required. The row to update.",
-          "$ref": "Row"
-        },
-        "view": {
-          "enumDescriptions": [
-            "Defaults to user entered text.",
-            "Uses internally generated column id to identify values."
-          ],
-          "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
-          "type": "string",
-          "enum": [
-            "VIEW_UNSPECIFIED",
-            "COLUMN_ID_VIEW"
-          ]
-        },
-        "updateMask": {
-          "format": "google-fieldmask",
-          "type": "string",
-          "description": "The list of fields to update."
-        }
-      }
-    },
-    "Workspace": {
-      "description": "A single workspace.",
-      "id": "Workspace",
-      "properties": {
-        "updateTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Time when the workspace was last updated."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The human readable title of the workspace."
-        },
-        "createTime": {
-          "description": "Time when the workspace was created.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "name": {
-          "type": "string",
-          "description": "The resource name of the workspace. Workspace names have the form `workspaces/{workspace}`."
-        },
-        "tables": {
-          "description": "The list of tables in the workspace.",
-          "items": {
-            "$ref": "Table"
-          },
-          "type": "array"
-        }
-      },
-      "type": "object"
-    },
-    "ListRowsResponse": {
-      "description": "Response message for TablesService.ListRows.",
-      "id": "ListRowsResponse",
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "A token, which can be sent as `page_token` to retrieve the next page. If this field is empty, there are no subsequent pages."
-        },
-        "rows": {
-          "type": "array",
-          "items": {
-            "$ref": "Row"
-          },
-          "description": "The rows from the specified table."
-        }
-      },
-      "type": "object"
-    },
-    "BatchUpdateRowsResponse": {
-      "properties": {
-        "rows": {
-          "items": {
-            "$ref": "Row"
-          },
-          "description": "The updated rows.",
-          "type": "array"
-        }
-      },
-      "id": "BatchUpdateRowsResponse",
-      "description": "Response message for TablesService.BatchUpdateRows.",
-      "type": "object"
-    },
     "ListWorkspacesResponse": {
-      "type": "object",
       "description": "Response message for TablesService.ListWorkspaces.",
       "id": "ListWorkspacesResponse",
+      "type": "object",
       "properties": {
+        "nextPageToken": {
+          "description": "A token, which can be sent as `page_token` to retrieve the next page. If this field is empty, there are no subsequent pages.",
+          "type": "string"
+        },
         "workspaces": {
           "items": {
             "$ref": "Workspace"
           },
-          "type": "array",
-          "description": "The list of workspaces."
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "A token, which can be sent as `page_token` to retrieve the next page. If this field is empty, there are no subsequent pages."
+          "description": "The list of workspaces.",
+          "type": "array"
         }
       }
     },
@@ -309,596 +605,230 @@
           "description": "The list of tables."
         }
       },
-      "description": "Response message for TablesService.ListTables.",
+      "type": "object",
       "id": "ListTablesResponse",
+      "description": "Response message for TablesService.ListTables."
+    },
+    "BatchUpdateRowsRequest": {
+      "id": "BatchUpdateRowsRequest",
+      "type": "object",
+      "properties": {
+        "requests": {
+          "items": {
+            "$ref": "UpdateRowRequest"
+          },
+          "description": "Required. The request messages specifying the rows to update. A maximum of 500 rows can be modified in a single batch.",
+          "type": "array"
+        }
+      },
+      "description": "Request message for TablesService.BatchUpdateRows."
+    },
+    "ColumnDescription": {
+      "type": "object",
+      "id": "ColumnDescription",
+      "properties": {
+        "relationshipDetails": {
+          "$ref": "RelationshipDetails",
+          "description": "Optional. Additional details about a relationship column. Specified when data_type is relationship."
+        },
+        "labels": {
+          "items": {
+            "$ref": "LabeledItem"
+          },
+          "type": "array",
+          "description": "Optional. Range of labeled values for the column. Some columns like tags and drop-downs limit the values to a set of possible values. We return the range of values in such cases to help clients implement better user data validation."
+        },
+        "id": {
+          "description": "Internal id for a column.",
+          "type": "string"
+        },
+        "dataType": {
+          "description": "Data type of the column Supported types are auto_id, boolean, boolean_list, creator, create_timestamp, date, dropdown, location, integer, integer_list, number, number_list, person, person_list, tags, check_list, text, text_list, update_timestamp, updater, relationship, file_attachment_list. These types directly map to the column types supported on Tables website.",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "column name"
+        },
+        "lookupDetails": {
+          "$ref": "LookupDetails",
+          "description": "Optional. Indicates that this is a lookup column whose value is derived from the relationship column specified in the details. Lookup columns can not be updated directly. To change the value you must update the associated relationship column."
+        }
+      },
+      "description": "Details on a column in the table."
+    },
+    "LabeledItem": {
+      "description": "A single item in a labeled column.",
+      "properties": {
+        "name": {
+          "description": "Display string as entered by user.",
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "description": "Internal id associated with the item."
+        }
+      },
+      "id": "LabeledItem",
       "type": "object"
     },
-    "CreateRowRequest": {
-      "description": "Request message for TablesService.CreateRow.",
-      "id": "CreateRowRequest",
+    "BatchDeleteRowsRequest": {
+      "description": "Request message for TablesService.BatchDeleteRows",
+      "id": "BatchDeleteRowsRequest",
       "properties": {
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required. The names of the rows to delete. All rows must belong to the parent table or else the entire batch will fail. A maximum of 500 rows can be deleted in a batch. Format: tables/{table}/rows/{row}"
+        }
+      },
+      "type": "object"
+    },
+    "Workspace": {
+      "description": "A single workspace.",
+      "properties": {
+        "displayName": {
+          "description": "The human readable title of the workspace.",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "The resource name of the workspace. Workspace names have the form `workspaces/{workspace}`."
+        },
+        "tables": {
+          "description": "The list of tables in the workspace.",
+          "type": "array",
+          "items": {
+            "$ref": "Table"
+          }
+        },
+        "updateTime": {
+          "type": "string",
+          "description": "Time when the workspace was last updated.",
+          "format": "google-datetime"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Time when the workspace was created."
+        }
+      },
+      "type": "object",
+      "id": "Workspace"
+    },
+    "Table": {
+      "properties": {
+        "columns": {
+          "description": "List of columns in this table. Order of columns matches the display order.",
+          "type": "array",
+          "items": {
+            "$ref": "ColumnDescription"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "The resource name of the table. Table names have the form `tables/{table}`."
+        },
+        "createTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Time when the table was created."
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Time when the table was last updated excluding updates to individual rows"
+        },
+        "displayName": {
+          "description": "The human readable title of the table.",
+          "type": "string"
+        }
+      },
+      "id": "Table",
+      "type": "object",
+      "description": "A single table."
+    },
+    "LookupDetails": {
+      "id": "LookupDetails",
+      "description": "Details about a lookup column whose value comes from the associated relationship.",
+      "type": "object",
+      "properties": {
+        "relationshipColumnId": {
+          "type": "string",
+          "description": "The id of the relationship column."
+        },
+        "relationshipColumn": {
+          "description": "The name of the relationship column associated with the lookup.",
+          "type": "string"
+        }
+      }
+    },
+    "RelationshipDetails": {
+      "properties": {
+        "linkedTable": {
+          "description": "The name of the table this relationship is linked to.",
+          "type": "string"
+        }
+      },
+      "id": "RelationshipDetails",
+      "type": "object",
+      "description": "Details about a relationship column."
+    },
+    "UpdateRowRequest": {
+      "properties": {
+        "updateMask": {
+          "description": "The list of fields to update.",
+          "type": "string",
+          "format": "google-fieldmask"
+        },
+        "row": {
+          "description": "Required. The row to update.",
+          "$ref": "Row"
+        },
         "view": {
           "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
-          "type": "string",
+          "enumDescriptions": [
+            "Defaults to user entered text.",
+            "Uses internally generated column id to identify values."
+          ],
           "enum": [
             "VIEW_UNSPECIFIED",
             "COLUMN_ID_VIEW"
           ],
-          "enumDescriptions": [
-            "Defaults to user entered text.",
-            "Uses internally generated column id to identify values."
-          ]
-        },
-        "parent": {
-          "type": "string",
-          "description": "Required. The parent table where this row will be created. Format: tables/{table}"
-        },
-        "row": {
-          "$ref": "Row",
-          "description": "Required. The row to create."
+          "type": "string"
         }
       },
-      "type": "object"
+      "id": "UpdateRowRequest",
+      "type": "object",
+      "description": "Request message for TablesService.UpdateRow."
     },
-    "LookupDetails": {
-      "description": "Details about a lookup column whose value comes from the associated relationship.",
+    "Row": {
+      "id": "Row",
+      "type": "object",
+      "description": "A single row in a table.",
       "properties": {
-        "relationshipColumn": {
-          "description": "The name of the relationship column associated with the lookup.",
+        "createTime": {
+          "description": "Time when the row was created.",
+          "format": "google-datetime",
           "type": "string"
         },
-        "relationshipColumnId": {
+        "name": {
+          "description": "The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.",
+          "type": "string"
+        },
+        "updateTime": {
+          "description": "Time when the row was last updated.",
           "type": "string",
-          "description": "The id of the relationship column."
-        }
-      },
-      "id": "LookupDetails",
-      "type": "object"
-    }
-  },
-  "canonicalName": "Area120 Tables",
-  "id": "area120tables:v1alpha1",
-  "protocol": "rest",
-  "discoveryVersion": "v1",
-  "parameters": {
-    "prettyPrint": {
-      "location": "query",
-      "type": "boolean",
-      "default": "true",
-      "description": "Returns response with indentations and line breaks."
-    },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "fields": {
-      "location": "query",
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string"
-    },
-    "alt": {
-      "location": "query",
-      "description": "Data format for response.",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "default": "json",
-      "type": "string",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ]
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "location": "query",
-      "type": "string"
-    },
-    "oauth_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "location": "query",
-      "type": "string"
-    },
-    "$.xgafv": {
-      "type": "string",
-      "description": "V1 error format.",
-      "location": "query",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ]
-    },
-    "callback": {
-      "type": "string",
-      "location": "query",
-      "description": "JSONP"
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query",
-      "type": "string"
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
-    }
-  },
-  "basePath": "",
-  "kind": "discovery#restDescription",
-  "servicePath": "",
-  "title": "Area120 Tables API",
-  "ownerName": "Google",
-  "revision": "20210310",
-  "rootUrl": "https://area120tables.googleapis.com/",
-  "documentationLink": "https://support.google.com/area120-tables/answer/10011390",
-  "version": "v1alpha1",
-  "resources": {
-    "tables": {
-      "resources": {
-        "rows": {
-          "methods": {
-            "get": {
-              "description": "Gets a row. Returns NOT_FOUND if the row does not exist in the table.",
-              "id": "area120tables.tables.rows.get",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/drive.readonly",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/spreadsheets.readonly",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "path": "v1alpha1/{+name}",
-              "httpMethod": "GET",
-              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}",
-              "parameters": {
-                "view": {
-                  "enum": [
-                    "VIEW_UNSPECIFIED",
-                    "COLUMN_ID_VIEW"
-                  ],
-                  "enumDescriptions": [
-                    "Defaults to user entered text.",
-                    "Uses internally generated column id to identify values."
-                  ],
-                  "type": "string",
-                  "location": "query",
-                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name."
-                },
-                "name": {
-                  "location": "path",
-                  "required": true,
-                  "type": "string",
-                  "description": "Required. The name of the row to retrieve. Format: tables/{table}/rows/{row}",
-                  "pattern": "^tables/[^/]+/rows/[^/]+$"
-                }
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "Row"
-              }
-            },
-            "batchUpdate": {
-              "request": {
-                "$ref": "BatchUpdateRowsRequest"
-              },
-              "id": "area120tables.tables.rows.batchUpdate",
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchUpdate",
-              "path": "v1alpha1/{+parent}/rows:batchUpdate",
-              "description": "Updates multiple rows.",
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "BatchUpdateRowsResponse"
-              },
-              "parameters": {
-                "parent": {
-                  "description": "Required. The parent table shared by all rows being updated. Format: tables/{table}",
-                  "required": true,
-                  "pattern": "^tables/[^/]+$",
-                  "type": "string",
-                  "location": "path"
-                }
-              }
-            },
-            "create": {
-              "flatPath": "v1alpha1/tables/{tablesId}/rows",
-              "id": "area120tables.tables.rows.create",
-              "request": {
-                "$ref": "Row"
-              },
-              "path": "v1alpha1/{+parent}/rows",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "response": {
-                "$ref": "Row"
-              },
-              "description": "Creates a row.",
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "description": "Required. The parent table where this row will be created. Format: tables/{table}",
-                  "required": true,
-                  "location": "path",
-                  "pattern": "^tables/[^/]+$"
-                },
-                "view": {
-                  "enumDescriptions": [
-                    "Defaults to user entered text.",
-                    "Uses internally generated column id to identify values."
-                  ],
-                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
-                  "enum": [
-                    "VIEW_UNSPECIFIED",
-                    "COLUMN_ID_VIEW"
-                  ],
-                  "location": "query",
-                  "type": "string"
-                }
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "POST"
-            },
-            "list": {
-              "description": "Lists rows in a table. Returns NOT_FOUND if the table does not exist.",
-              "id": "area120tables.tables.rows.list",
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/drive.readonly",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/spreadsheets.readonly",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "response": {
-                "$ref": "ListRowsResponse"
-              },
-              "flatPath": "v1alpha1/tables/{tablesId}/rows",
-              "parameters": {
-                "pageSize": {
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query",
-                  "description": "The maximum number of rows to return. The service may return fewer than this value. If unspecified, at most 50 rows are returned. The maximum value is 1,000; values above 1,000 are coerced to 1,000."
-                },
-                "view": {
-                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
-                  "type": "string",
-                  "location": "query",
-                  "enum": [
-                    "VIEW_UNSPECIFIED",
-                    "COLUMN_ID_VIEW"
-                  ],
-                  "enumDescriptions": [
-                    "Defaults to user entered text.",
-                    "Uses internally generated column id to identify values."
-                  ]
-                },
-                "filter": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "Optional. Filter to only include resources matching the requirements. For more information, see [Filtering list results](https://support.google.com/area120-tables/answer/10503371)."
-                },
-                "pageToken": {
-                  "description": "A page token, received from a previous `ListRows` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListRows` must match the call that provided the page token.",
-                  "type": "string",
-                  "location": "query"
-                },
-                "parent": {
-                  "type": "string",
-                  "location": "path",
-                  "required": true,
-                  "description": "Required. The parent table. Format: tables/{table}",
-                  "pattern": "^tables/[^/]+$"
-                }
-              },
-              "path": "v1alpha1/{+parent}/rows",
-              "parameterOrder": [
-                "parent"
-              ]
-            },
-            "batchDelete": {
-              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchDelete",
-              "response": {
-                "$ref": "Empty"
-              },
-              "description": "Deletes multiple rows.",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "pattern": "^tables/[^/]+$",
-                  "location": "path",
-                  "type": "string",
-                  "description": "Required. The parent table shared by all rows being deleted. Format: tables/{table}"
-                }
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "id": "area120tables.tables.rows.batchDelete",
-              "request": {
-                "$ref": "BatchDeleteRowsRequest"
-              },
-              "httpMethod": "POST",
-              "path": "v1alpha1/{+parent}/rows:batchDelete"
-            },
-            "delete": {
-              "response": {
-                "$ref": "Empty"
-              },
-              "path": "v1alpha1/{+name}",
-              "id": "area120tables.tables.rows.delete",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "httpMethod": "DELETE",
-              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}",
-              "parameterOrder": [
-                "name"
-              ],
-              "description": "Deletes a row.",
-              "parameters": {
-                "name": {
-                  "pattern": "^tables/[^/]+/rows/[^/]+$",
-                  "description": "Required. The name of the row to delete. Format: tables/{table}/rows/{row}",
-                  "required": true,
-                  "type": "string",
-                  "location": "path"
-                }
-              }
-            },
-            "batchCreate": {
-              "path": "v1alpha1/{+parent}/rows:batchCreate",
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "BatchCreateRowsResponse"
-              },
-              "flatPath": "v1alpha1/tables/{tablesId}/rows:batchCreate",
-              "id": "area120tables.tables.rows.batchCreate",
-              "request": {
-                "$ref": "BatchCreateRowsRequest"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "httpMethod": "POST",
-              "description": "Creates multiple rows.",
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "location": "path",
-                  "description": "Required. The parent table where the rows will be created. Format: tables/{table}",
-                  "type": "string",
-                  "pattern": "^tables/[^/]+$"
-                }
-              }
-            },
-            "patch": {
-              "request": {
-                "$ref": "Row"
-              },
-              "id": "area120tables.tables.rows.patch",
-              "flatPath": "v1alpha1/tables/{tablesId}/rows/{rowsId}",
-              "path": "v1alpha1/{+name}",
-              "httpMethod": "PATCH",
-              "response": {
-                "$ref": "Row"
-              },
-              "description": "Updates a row.",
-              "scopes": [
-                "https://www.googleapis.com/auth/drive",
-                "https://www.googleapis.com/auth/drive.file",
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/tables"
-              ],
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "updateMask": {
-                  "description": "The list of fields to update.",
-                  "location": "query",
-                  "format": "google-fieldmask",
-                  "type": "string"
-                },
-                "view": {
-                  "description": "Optional. Column key to use for values in the row. Defaults to user entered name.",
-                  "enum": [
-                    "VIEW_UNSPECIFIED",
-                    "COLUMN_ID_VIEW"
-                  ],
-                  "type": "string",
-                  "location": "query",
-                  "enumDescriptions": [
-                    "Defaults to user entered text.",
-                    "Uses internally generated column id to identify values."
-                  ]
-                },
-                "name": {
-                  "type": "string",
-                  "description": "The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is ignored when creating a row.",
-                  "required": true,
-                  "location": "path",
-                  "pattern": "^tables/[^/]+/rows/[^/]+$"
-                }
-              }
-            }
+          "format": "google-datetime"
+        },
+        "values": {
+          "description": "The values of the row. This is a map of column key to value. Key is user entered name(default) or the internal column id based on the view in the request.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "any"
           }
-        }
-      },
-      "methods": {
-        "get": {
-          "httpMethod": "GET",
-          "parameterOrder": [
-            "name"
-          ],
-          "response": {
-            "$ref": "Table"
-          },
-          "flatPath": "v1alpha1/tables/{tablesId}",
-          "path": "v1alpha1/{+name}",
-          "scopes": [
-            "https://www.googleapis.com/auth/drive",
-            "https://www.googleapis.com/auth/drive.file",
-            "https://www.googleapis.com/auth/drive.readonly",
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/spreadsheets.readonly",
-            "https://www.googleapis.com/auth/tables"
-          ],
-          "id": "area120tables.tables.get",
-          "parameters": {
-            "name": {
-              "required": true,
-              "description": "Required. The name of the table to retrieve. Format: tables/{table}",
-              "location": "path",
-              "pattern": "^tables/[^/]+$",
-              "type": "string"
-            }
-          },
-          "description": "Gets a table. Returns NOT_FOUND if the table does not exist."
-        },
-        "list": {
-          "description": "Lists tables for the user.",
-          "httpMethod": "GET",
-          "response": {
-            "$ref": "ListTablesResponse"
-          },
-          "flatPath": "v1alpha1/tables",
-          "scopes": [
-            "https://www.googleapis.com/auth/drive",
-            "https://www.googleapis.com/auth/drive.file",
-            "https://www.googleapis.com/auth/drive.readonly",
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/spreadsheets.readonly",
-            "https://www.googleapis.com/auth/tables"
-          ],
-          "parameters": {
-            "pageToken": {
-              "description": "A page token, received from a previous `ListTables` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListTables` must match the call that provided the page token.",
-              "type": "string",
-              "location": "query"
-            },
-            "pageSize": {
-              "type": "integer",
-              "format": "int32",
-              "location": "query",
-              "description": "The maximum number of tables to return. The service may return fewer than this value. If unspecified, at most 20 tables are returned. The maximum value is 100; values above 100 are coerced to 100."
-            }
-          },
-          "path": "v1alpha1/tables",
-          "id": "area120tables.tables.list",
-          "parameterOrder": []
-        }
-      }
-    },
-    "workspaces": {
-      "methods": {
-        "list": {
-          "flatPath": "v1alpha1/workspaces",
-          "scopes": [
-            "https://www.googleapis.com/auth/drive",
-            "https://www.googleapis.com/auth/drive.file",
-            "https://www.googleapis.com/auth/drive.readonly",
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/spreadsheets.readonly",
-            "https://www.googleapis.com/auth/tables"
-          ],
-          "id": "area120tables.workspaces.list",
-          "parameterOrder": [],
-          "httpMethod": "GET",
-          "parameters": {
-            "pageSize": {
-              "format": "int32",
-              "location": "query",
-              "type": "integer",
-              "description": "The maximum number of workspaces to return. The service may return fewer than this value. If unspecified, at most 10 workspaces are returned. The maximum value is 25; values above 25 are coerced to 25."
-            },
-            "pageToken": {
-              "description": "A page token, received from a previous `ListWorkspaces` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListWorkspaces` must match the call that provided the page token.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "response": {
-            "$ref": "ListWorkspacesResponse"
-          },
-          "description": "Lists workspaces for the user.",
-          "path": "v1alpha1/workspaces"
-        },
-        "get": {
-          "id": "area120tables.workspaces.get",
-          "scopes": [
-            "https://www.googleapis.com/auth/drive",
-            "https://www.googleapis.com/auth/drive.file",
-            "https://www.googleapis.com/auth/drive.readonly",
-            "https://www.googleapis.com/auth/spreadsheets",
-            "https://www.googleapis.com/auth/spreadsheets.readonly",
-            "https://www.googleapis.com/auth/tables"
-          ],
-          "parameters": {
-            "name": {
-              "required": true,
-              "pattern": "^workspaces/[^/]+$",
-              "type": "string",
-              "description": "Required. The name of the workspace to retrieve. Format: workspaces/{workspace}",
-              "location": "path"
-            }
-          },
-          "description": "Gets a workspace. Returns NOT_FOUND if the workspace does not exist.",
-          "flatPath": "v1alpha1/workspaces/{workspacesId}",
-          "path": "v1alpha1/{+name}",
-          "response": {
-            "$ref": "Workspace"
-          },
-          "parameterOrder": [
-            "name"
-          ],
-          "httpMethod": "GET"
         }
       }
     }
@@ -906,34 +836,104 @@
   "auth": {
     "oauth2": {
       "scopes": {
-        "https://www.googleapis.com/auth/spreadsheets.readonly": {
-          "description": "View your Google Spreadsheets"
-        },
         "https://www.googleapis.com/auth/drive.file": {
-          "description": "View and manage Google Drive files and folders that you have opened or created with this app"
+          "description": "See, edit, create, and delete only the specific Google Drive files you use with this app"
         },
         "https://www.googleapis.com/auth/drive.readonly": {
           "description": "See and download all your Google Drive files"
         },
-        "https://www.googleapis.com/auth/tables": {
-          "description": "See, edit, create, and delete your tables in Tables by Area 120"
-        },
         "https://www.googleapis.com/auth/spreadsheets": {
           "description": "See, edit, create, and delete your spreadsheets in Google Drive"
         },
+        "https://www.googleapis.com/auth/spreadsheets.readonly": {
+          "description": "View your Google Spreadsheets"
+        },
         "https://www.googleapis.com/auth/drive": {
           "description": "See, edit, create, and delete all of your Google Drive files"
+        },
+        "https://www.googleapis.com/auth/tables": {
+          "description": "See, edit, create, and delete your tables in Tables by Area 120"
         }
       }
     }
   },
-  "description": "",
-  "name": "area120tables",
-  "version_module": true,
-  "batchPath": "batch",
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  "parameters": {
+    "callback": {
+      "location": "query",
+      "description": "JSONP",
+      "type": "string"
+    },
+    "uploadType": {
+      "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "type": "string"
+    },
+    "$.xgafv": {
+      "description": "V1 error format.",
+      "location": "query",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "enum": [
+        "1",
+        "2"
+      ],
+      "type": "string"
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true",
+      "location": "query"
+    },
+    "access_token": {
+      "type": "string",
+      "description": "OAuth access token.",
+      "location": "query"
+    },
+    "oauth_token": {
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
+    },
+    "alt": {
+      "type": "string",
+      "location": "query",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "description": "Data format for response.",
+      "default": "json",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ]
+    },
+    "key": {
+      "location": "query",
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "upload_protocol": {
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string"
+    },
+    "fields": {
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string",
+      "location": "query"
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    }
   },
-  "baseUrl": "https://area120tables.googleapis.com/"
+  "revision": "20210319",
+  "batchPath": "batch"
 }

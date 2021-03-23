@@ -1651,6 +1651,283 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Campaigns {
 
       /**
+       * Lists assigned targeting options of a campaign across targeting types.
+       *
+       * Create a request for the method "campaigns.bulkListCampaignAssignedTargetingOptions".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkListCampaignAssignedTargetingOptions#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+       * @param campaignId Required. The ID of the campaign to list assigned targeting options for.
+       * @return the request
+       */
+      public BulkListCampaignAssignedTargetingOptions bulkListCampaignAssignedTargetingOptions(java.lang.Long advertiserId, java.lang.Long campaignId) throws java.io.IOException {
+        BulkListCampaignAssignedTargetingOptions result = new BulkListCampaignAssignedTargetingOptions(advertiserId, campaignId);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkListCampaignAssignedTargetingOptions extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkListCampaignAssignedTargetingOptionsResponse> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/campaigns/{+campaignId}:bulkListCampaignAssignedTargetingOptions";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern CAMPAIGN_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists assigned targeting options of a campaign across targeting types.
+         *
+         * Create a request for the method "campaigns.bulkListCampaignAssignedTargetingOptions".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkListCampaignAssignedTargetingOptions#execute()} method
+         * to invoke the remote operation. <p> {@link BulkListCampaignAssignedTargetingOptions#initialize(
+         * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+         * initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+         * @param campaignId Required. The ID of the campaign to list assigned targeting options for.
+         * @since 1.13
+         */
+        protected BulkListCampaignAssignedTargetingOptions(java.lang.Long advertiserId, java.lang.Long campaignId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.BulkListCampaignAssignedTargetingOptionsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.campaignId = com.google.api.client.util.Preconditions.checkNotNull(campaignId, "Required parameter campaignId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkListCampaignAssignedTargetingOptions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setAlt(java.lang.String alt) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setCallback(java.lang.String callback) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setFields(java.lang.String fields) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setFields(fields);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setKey(java.lang.String key) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setKey(key);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setQuotaUser(java.lang.String quotaUser) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setUploadType(java.lang.String uploadType) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkListCampaignAssignedTargetingOptions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the campaign belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the campaign belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the campaign belongs to. */
+        public BulkListCampaignAssignedTargetingOptions setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the campaign to list assigned targeting options for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long campaignId;
+
+        /** Required. The ID of the campaign to list assigned targeting options for.
+         */
+        public java.lang.Long getCampaignId() {
+          return campaignId;
+        }
+
+        /** Required. The ID of the campaign to list assigned targeting options for. */
+        public BulkListCampaignAssignedTargetingOptions setCampaignId(java.lang.Long campaignId) {
+          this.campaignId = campaignId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER `targetingType="TARGETING_TYPE_LANGUAGE"
+         * OR targetingType="TARGETING_TYPE_GENDER"` * AssignedTargetingOptions with inheritance
+         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
+       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
+       AssignedTargetingOptions of targeting type TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER
+       `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` *
+       AssignedTargetingOptions with inheritance status of NOT_INHERITED or INHERITED_FROM_PARTNER
+       `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field
+       should be no more than 500 characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER `targetingType="TARGETING_TYPE_LANGUAGE"
+         * OR targetingType="TARGETING_TYPE_GENDER"` * AssignedTargetingOptions with inheritance
+         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
+         */
+        public BulkListCampaignAssignedTargetingOptions setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
+         * "desc" should be added to the field name. Example: `targetingType desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `targetingType` (default) The default
+       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+       added to the field name. Example: `targetingType desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
+         * "desc" should be added to the field name. Example: `targetingType desc`.
+         */
+        public BulkListCampaignAssignedTargetingOptions setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The size must be an integer between `1` and `5000`. If unspecified, the
+       default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        public BulkListCampaignAssignedTargetingOptions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to
+         * `BulkListCampaignAssignedTargetingOptions` method. If not specified, the first page of
+         * results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token that lets the client fetch the next page of results. Typically, this is the value of
+       next_page_token returned from the previous call to `BulkListCampaignAssignedTargetingOptions`
+       method. If not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to
+         * `BulkListCampaignAssignedTargetingOptions` method. If not specified, the first page of
+         * results will be returned.
+         */
+        public BulkListCampaignAssignedTargetingOptions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public BulkListCampaignAssignedTargetingOptions set(String parameterName, Object value) {
+          return (BulkListCampaignAssignedTargetingOptions) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a new campaign. Returns the newly created campaign if successful.
        *
        * Create a request for the method "campaigns.create".
@@ -2487,6 +2764,682 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the TargetingTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.TargetingTypes.List request = displayvideo.targetingTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TargetingTypes targetingTypes() {
+        return new TargetingTypes();
+      }
+
+      /**
+       * The "targetingTypes" collection of methods.
+       */
+      public class TargetingTypes {
+
+        /**
+         * An accessor for creating requests from the AssignedTargetingOptions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+         *   {@code DisplayVideo.AssignedTargetingOptions.List request = displayvideo.assignedTargetingOptions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AssignedTargetingOptions assignedTargetingOptions() {
+          return new AssignedTargetingOptions();
+        }
+
+        /**
+         * The "assignedTargetingOptions" collection of methods.
+         */
+        public class AssignedTargetingOptions {
+
+          /**
+           * Gets a single targeting option assigned to a campaign.
+           *
+           * Create a request for the method "assignedTargetingOptions.get".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+           * @param campaignId Required. The ID of the campaign the assigned targeting option belongs to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           *        `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           *        `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this campaign that identifies the assigned
+           *        targeting option being requested.
+           * @return the request
+           */
+          public Get get(java.lang.Long advertiserId, java.lang.Long campaignId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+            Get result = new Get(advertiserId, campaignId, targetingType, assignedTargetingOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedTargetingOption> {
+
+            private static final String REST_PATH = "v1/advertisers/{+advertiserId}/campaigns/{+campaignId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern CAMPAIGN_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Gets a single targeting option assigned to a campaign.
+             *
+             * Create a request for the method "assignedTargetingOptions.get".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+             * @param campaignId Required. The ID of the campaign the assigned targeting option belongs to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           *        `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           *        `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this campaign that identifies the assigned
+           *        targeting option being requested.
+             * @since 1.13
+             */
+            protected Get(java.lang.Long advertiserId, java.lang.Long campaignId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.campaignId = com.google.api.client.util.Preconditions.checkNotNull(campaignId, "Required parameter campaignId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the campaign belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the campaign belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the campaign belongs to. */
+            public Get setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the campaign the assigned targeting option belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long campaignId;
+
+            /** Required. The ID of the campaign the assigned targeting option belongs to.
+             */
+            public java.lang.Long getCampaignId() {
+              return campaignId;
+            }
+
+            /** Required. The ID of the campaign the assigned targeting option belongs to. */
+            public Get setCampaignId(java.lang.Long campaignId) {
+              this.campaignId = campaignId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+             * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` *
+             * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+             * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+             * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+             * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` *
+             * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+             * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+             * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public Get setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this campaign that identifies
+             * the assigned targeting option being requested.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String assignedTargetingOptionId;
+
+            /** Required. An identifier unique to the targeting type in this campaign that identifies the assigned
+           targeting option being requested.
+             */
+            public java.lang.String getAssignedTargetingOptionId() {
+              return assignedTargetingOptionId;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this campaign that identifies
+             * the assigned targeting option being requested.
+             */
+            public Get setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = assignedTargetingOptionId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the targeting options assigned to a campaign for a specified targeting type.
+           *
+           * Create a request for the method "assignedTargetingOptions.list".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+           * @param campaignId Required. The ID of the campaign to list assigned targeting options for.
+           * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           *        `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           *        `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+           * @return the request
+           */
+          public List list(java.lang.Long advertiserId, java.lang.Long campaignId, java.lang.String targetingType) throws java.io.IOException {
+            List result = new List(advertiserId, campaignId, targetingType);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListCampaignAssignedTargetingOptionsResponse> {
+
+            private static final String REST_PATH = "v1/advertisers/{+advertiserId}/campaigns/{+campaignId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern CAMPAIGN_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Lists the targeting options assigned to a campaign for a specified targeting type.
+             *
+             * Create a request for the method "assignedTargetingOptions.list".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the campaign belongs to.
+             * @param campaignId Required. The ID of the campaign to list assigned targeting options for.
+             * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           *        `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           *        `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           *        `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           *        `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             * @since 1.13
+             */
+            protected List(java.lang.Long advertiserId, java.lang.Long campaignId, java.lang.String targetingType) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListCampaignAssignedTargetingOptionsResponse.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.campaignId = com.google.api.client.util.Preconditions.checkNotNull(campaignId, "Required parameter campaignId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the campaign belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the campaign belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the campaign belongs to. */
+            public List setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the campaign to list assigned targeting options for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long campaignId;
+
+            /** Required. The ID of the campaign to list assigned targeting options for.
+             */
+            public java.lang.Long getCampaignId() {
+              return campaignId;
+            }
+
+            /** Required. The ID of the campaign to list assigned targeting options for. */
+            public List setCampaignId(java.lang.Long campaignId) {
+              this.campaignId = campaignId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of assigned targeting options to list. Supported
+             * targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+             * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` *
+             * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+             * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+             * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+           `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+           `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+           `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+           `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+           `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+           `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of assigned targeting options to list. Supported
+             * targeting types: * `TARGETING_TYPE_AGE_RANGE` *
+             * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` *
+             * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION` *
+             * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION` *
+             * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` *
+             * `TARGETING_TYPE_EXCHANGE` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_INVENTORY_SOURCE` *
+             * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP` * `TARGETING_TYPE_LANGUAGE` *
+             * `TARGETING_TYPE_ON_SCREEN_POSITION` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
+             * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_VIEWABILITY`
+             */
+            public List setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
+           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
+           assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
+           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+           length of this field should be no more than 500 characters.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+           default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+           be added to the field name. Example: `assignedTargetingOptionId desc`.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `100`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+           error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `100`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListCampaignAssignedTargetingOptions` method. If not specified, the first page of
+             * results will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           next_page_token returned from the previous call to `ListCampaignAssignedTargetingOptions` method.
+           If not specified, the first page of results will be returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListCampaignAssignedTargetingOptions` method. If not specified, the first page of
+             * results will be returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
     /**
      * An accessor for creating requests from the Channels collection.
@@ -4011,6 +4964,148 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces all of the sites under a single channel. The operation will replace the sites under a
+         * channel with the sites provided in ReplaceSitesRequest.new_sites.
+         *
+         * Create a request for the method "sites.replace".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId The ID of the advertiser that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel whose sites will be replaced.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest}
+         * @return the request
+         */
+        public Replace replace(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest content) throws java.io.IOException {
+          Replace result = new Replace(advertiserId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Replace extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ReplaceSitesResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/channels/{+channelId}/sites:replace";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Replaces all of the sites under a single channel. The operation will replace the sites under a
+           * channel with the sites provided in ReplaceSitesRequest.new_sites.
+           *
+           * Create a request for the method "sites.replace".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Replace#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId The ID of the advertiser that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel whose sites will be replaced.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest}
+           * @since 1.13
+           */
+          protected Replace(java.lang.Long advertiserId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ReplaceSitesResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public Replace set$Xgafv(java.lang.String $Xgafv) {
+            return (Replace) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Replace setAccessToken(java.lang.String accessToken) {
+            return (Replace) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Replace setAlt(java.lang.String alt) {
+            return (Replace) super.setAlt(alt);
+          }
+
+          @Override
+          public Replace setCallback(java.lang.String callback) {
+            return (Replace) super.setCallback(callback);
+          }
+
+          @Override
+          public Replace setFields(java.lang.String fields) {
+            return (Replace) super.setFields(fields);
+          }
+
+          @Override
+          public Replace setKey(java.lang.String key) {
+            return (Replace) super.setKey(key);
+          }
+
+          @Override
+          public Replace setOauthToken(java.lang.String oauthToken) {
+            return (Replace) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Replace setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Replace) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Replace setQuotaUser(java.lang.String quotaUser) {
+            return (Replace) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Replace setUploadType(java.lang.String uploadType) {
+            return (Replace) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Replace setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Replace) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** The ID of the advertiser that owns the parent channel.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /** The ID of the advertiser that owns the parent channel. */
+          public Replace setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel whose sites will be replaced. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel whose sites will be replaced.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel whose sites will be replaced. */
+          public Replace setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public Replace set(String parameterName, Object value) {
+            return (Replace) super.set(parameterName, value);
           }
         }
 
@@ -7361,6 +8456,133 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new line item with settings (including targeting) inherited from the insertion order.
+       * Returns the newly created line item if successful. There are default values based on the three
+       * fields: * The insertion order's InsertionOrderType * The insertion order's
+       * InsertionOrderAutomationType * The given line_item_type
+       *
+       * Create a request for the method "lineItems.generateDefault".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link GenerateDefault#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this line item belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GenerateDefaultLineItemRequest}
+       * @return the request
+       */
+      public GenerateDefault generateDefault(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.GenerateDefaultLineItemRequest content) throws java.io.IOException {
+        GenerateDefault result = new GenerateDefault(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateDefault extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.LineItem> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/lineItems:generateDefault";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new line item with settings (including targeting) inherited from the insertion order.
+         * Returns the newly created line item if successful. There are default values based on the three
+         * fields: * The insertion order's InsertionOrderType * The insertion order's
+         * InsertionOrderAutomationType * The given line_item_type
+         *
+         * Create a request for the method "lineItems.generateDefault".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link GenerateDefault#execute()} method to invoke the remote
+         * operation. <p> {@link GenerateDefault#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this line item belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.GenerateDefaultLineItemRequest}
+         * @since 1.13
+         */
+        protected GenerateDefault(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.GenerateDefaultLineItemRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.LineItem.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public GenerateDefault set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateDefault) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateDefault setAccessToken(java.lang.String accessToken) {
+          return (GenerateDefault) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateDefault setAlt(java.lang.String alt) {
+          return (GenerateDefault) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateDefault setCallback(java.lang.String callback) {
+          return (GenerateDefault) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateDefault setFields(java.lang.String fields) {
+          return (GenerateDefault) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateDefault setKey(java.lang.String key) {
+          return (GenerateDefault) super.setKey(key);
+        }
+
+        @Override
+        public GenerateDefault setOauthToken(java.lang.String oauthToken) {
+          return (GenerateDefault) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateDefault setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateDefault) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateDefault setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateDefault) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateDefault setUploadType(java.lang.String uploadType) {
+          return (GenerateDefault) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateDefault setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateDefault) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this line item belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this line item belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this line item belongs to. */
+        public GenerateDefault setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public GenerateDefault set(String parameterName, Object value) {
+          return (GenerateDefault) super.set(parameterName, value);
         }
       }
       /**
@@ -12879,6 +14101,162 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces all negative keywords in a single negative keyword list. The operation will replace the
+         * keywords in a negative keywords with keywords provided in
+         * ReplaceNegativeKeywordsRequest.new_negative_keywords.
+         *
+         * Create a request for the method "negativeKeywords.replace".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+         *
+         * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+         * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords belong.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsRequest}
+         * @return the request
+         */
+        public Replace replace(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsRequest content) throws java.io.IOException {
+          Replace result = new Replace(advertiserId, negativeKeywordListId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Replace extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsResponse> {
+
+          private static final String REST_PATH = "v1/advertisers/{advertiserId}/negativeKeywordLists/{+negativeKeywordListId}/negativeKeywords:replace";
+
+          private final java.util.regex.Pattern NEGATIVE_KEYWORD_LIST_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Replaces all negative keywords in a single negative keyword list. The operation will replace
+           * the keywords in a negative keywords with keywords provided in
+           * ReplaceNegativeKeywordsRequest.new_negative_keywords.
+           *
+           * Create a request for the method "negativeKeywords.replace".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Replace#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param advertiserId Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           * @param negativeKeywordListId Required. The ID of the parent negative keyword list to which the negative keywords belong.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsRequest}
+           * @since 1.13
+           */
+          protected Replace(java.lang.Long advertiserId, java.lang.Long negativeKeywordListId, com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ReplaceNegativeKeywordsResponse.class);
+            this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+            this.negativeKeywordListId = com.google.api.client.util.Preconditions.checkNotNull(negativeKeywordListId, "Required parameter negativeKeywordListId must be specified.");
+          }
+
+          @Override
+          public Replace set$Xgafv(java.lang.String $Xgafv) {
+            return (Replace) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Replace setAccessToken(java.lang.String accessToken) {
+            return (Replace) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Replace setAlt(java.lang.String alt) {
+            return (Replace) super.setAlt(alt);
+          }
+
+          @Override
+          public Replace setCallback(java.lang.String callback) {
+            return (Replace) super.setCallback(callback);
+          }
+
+          @Override
+          public Replace setFields(java.lang.String fields) {
+            return (Replace) super.setFields(fields);
+          }
+
+          @Override
+          public Replace setKey(java.lang.String key) {
+            return (Replace) super.setKey(key);
+          }
+
+          @Override
+          public Replace setOauthToken(java.lang.String oauthToken) {
+            return (Replace) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Replace setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Replace) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Replace setQuotaUser(java.lang.String quotaUser) {
+            return (Replace) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Replace setUploadType(java.lang.String uploadType) {
+            return (Replace) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Replace setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Replace) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long advertiserId;
+
+          /** Required. The ID of the DV360 advertiser to which the parent negative keyword list belongs.
+           */
+          public java.lang.Long getAdvertiserId() {
+            return advertiserId;
+          }
+
+          /**
+           * Required. The ID of the DV360 advertiser to which the parent negative keyword list
+           * belongs.
+           */
+          public Replace setAdvertiserId(java.lang.Long advertiserId) {
+            this.advertiserId = advertiserId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keywords
+           * belong.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long negativeKeywordListId;
+
+          /** Required. The ID of the parent negative keyword list to which the negative keywords belong.
+           */
+          public java.lang.Long getNegativeKeywordListId() {
+            return negativeKeywordListId;
+          }
+
+          /**
+           * Required. The ID of the parent negative keyword list to which the negative keywords
+           * belong.
+           */
+          public Replace setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
+            this.negativeKeywordListId = negativeKeywordListId;
+            return this;
+          }
+
+          @Override
+          public Replace set(String parameterName, Object value) {
+            return (Replace) super.set(parameterName, value);
           }
         }
 
@@ -20660,6 +22038,148 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces all of the sites under a single channel. The operation will replace the sites under a
+         * channel with the sites provided in ReplaceSitesRequest.new_sites.
+         *
+         * Create a request for the method "sites.replace".
+         *
+         * This request holds the parameters needed by the displayvideo server.  After setting any optional
+         * parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+         *
+         * @param partnerId The ID of the partner that owns the parent channel.
+         * @param channelId Required. The ID of the parent channel whose sites will be replaced.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest}
+         * @return the request
+         */
+        public Replace replace(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest content) throws java.io.IOException {
+          Replace result = new Replace(partnerId, channelId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Replace extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ReplaceSitesResponse> {
+
+          private static final String REST_PATH = "v1/partners/{partnerId}/channels/{+channelId}/sites:replace";
+
+          private final java.util.regex.Pattern CHANNEL_ID_PATTERN =
+              java.util.regex.Pattern.compile("^[^/]+$");
+
+          /**
+           * Replaces all of the sites under a single channel. The operation will replace the sites under a
+           * channel with the sites provided in ReplaceSitesRequest.new_sites.
+           *
+           * Create a request for the method "sites.replace".
+           *
+           * This request holds the parameters needed by the the displayvideo server.  After setting any
+           * optional parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Replace#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param partnerId The ID of the partner that owns the parent channel.
+           * @param channelId Required. The ID of the parent channel whose sites will be replaced.
+           * @param content the {@link com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest}
+           * @since 1.13
+           */
+          protected Replace(java.lang.Long partnerId, java.lang.Long channelId, com.google.api.services.displayvideo.v1.model.ReplaceSitesRequest content) {
+            super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ReplaceSitesResponse.class);
+            this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+            this.channelId = com.google.api.client.util.Preconditions.checkNotNull(channelId, "Required parameter channelId must be specified.");
+          }
+
+          @Override
+          public Replace set$Xgafv(java.lang.String $Xgafv) {
+            return (Replace) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Replace setAccessToken(java.lang.String accessToken) {
+            return (Replace) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Replace setAlt(java.lang.String alt) {
+            return (Replace) super.setAlt(alt);
+          }
+
+          @Override
+          public Replace setCallback(java.lang.String callback) {
+            return (Replace) super.setCallback(callback);
+          }
+
+          @Override
+          public Replace setFields(java.lang.String fields) {
+            return (Replace) super.setFields(fields);
+          }
+
+          @Override
+          public Replace setKey(java.lang.String key) {
+            return (Replace) super.setKey(key);
+          }
+
+          @Override
+          public Replace setOauthToken(java.lang.String oauthToken) {
+            return (Replace) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Replace setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Replace) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Replace setQuotaUser(java.lang.String quotaUser) {
+            return (Replace) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Replace setUploadType(java.lang.String uploadType) {
+            return (Replace) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Replace setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Replace) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          @com.google.api.client.util.Key
+          private java.lang.Long partnerId;
+
+          /** The ID of the partner that owns the parent channel.
+           */
+          public java.lang.Long getPartnerId() {
+            return partnerId;
+          }
+
+          /** The ID of the partner that owns the parent channel. */
+          public Replace setPartnerId(java.lang.Long partnerId) {
+            this.partnerId = partnerId;
+            return this;
+          }
+
+          /** Required. The ID of the parent channel whose sites will be replaced. */
+          @com.google.api.client.util.Key
+          private java.lang.Long channelId;
+
+          /** Required. The ID of the parent channel whose sites will be replaced.
+           */
+          public java.lang.Long getChannelId() {
+            return channelId;
+          }
+
+          /** Required. The ID of the parent channel whose sites will be replaced. */
+          public Replace setChannelId(java.lang.Long channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public Replace set(String parameterName, Object value) {
+            return (Replace) super.set(parameterName, value);
           }
         }
 

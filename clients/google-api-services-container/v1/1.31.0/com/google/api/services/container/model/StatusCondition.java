@@ -32,7 +32,14 @@ package com.google.api.services.container.model;
 public final class StatusCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Machine-friendly representation of the condition
+   * Canonical code of the condition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalCode;
+
+  /**
+   * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +53,24 @@ public final class StatusCondition extends com.google.api.client.json.GenericJso
   private java.lang.String message;
 
   /**
-   * Machine-friendly representation of the condition
+   * Canonical code of the condition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalCode() {
+    return canonicalCode;
+  }
+
+  /**
+   * Canonical code of the condition.
+   * @param canonicalCode canonicalCode or {@code null} for none
+   */
+  public StatusCondition setCanonicalCode(java.lang.String canonicalCode) {
+    this.canonicalCode = canonicalCode;
+    return this;
+  }
+
+  /**
+   * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -54,7 +78,7 @@ public final class StatusCondition extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Machine-friendly representation of the condition
+   * Machine-friendly representation of the condition Deprecated. Use canonical_code instead.
    * @param code code or {@code null} for none
    */
   public StatusCondition setCode(java.lang.String code) {

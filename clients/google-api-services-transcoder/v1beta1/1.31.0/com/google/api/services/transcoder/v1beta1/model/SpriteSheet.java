@@ -86,14 +86,19 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   private java.lang.Integer rowCount;
 
   /**
-   * Required. The height of sprite in pixels. Must be an even integer.
+   * Required. The height of sprite in pixels. Must be an even integer. To preserve the source
+   * aspect ratio, set the SpriteSheet.sprite_height_pixels field or the
+   * SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the
+   * missing field).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer spriteHeightPixels;
 
   /**
-   * Required. The width of sprite in pixels. Must be an even integer.
+   * Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect
+   * ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels
+   * field, but not both (the API will automatically calculate the missing field).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +254,10 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The height of sprite in pixels. Must be an even integer.
+   * Required. The height of sprite in pixels. Must be an even integer. To preserve the source
+   * aspect ratio, set the SpriteSheet.sprite_height_pixels field or the
+   * SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the
+   * missing field).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSpriteHeightPixels() {
@@ -257,7 +265,10 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The height of sprite in pixels. Must be an even integer.
+   * Required. The height of sprite in pixels. Must be an even integer. To preserve the source
+   * aspect ratio, set the SpriteSheet.sprite_height_pixels field or the
+   * SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the
+   * missing field).
    * @param spriteHeightPixels spriteHeightPixels or {@code null} for none
    */
   public SpriteSheet setSpriteHeightPixels(java.lang.Integer spriteHeightPixels) {
@@ -266,7 +277,9 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The width of sprite in pixels. Must be an even integer.
+   * Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect
+   * ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels
+   * field, but not both (the API will automatically calculate the missing field).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSpriteWidthPixels() {
@@ -274,7 +287,9 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The width of sprite in pixels. Must be an even integer.
+   * Required. The width of sprite in pixels. Must be an even integer. To preserve the source aspect
+   * ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels
+   * field, but not both (the API will automatically calculate the missing field).
    * @param spriteWidthPixels spriteWidthPixels or {@code null} for none
    */
   public SpriteSheet setSpriteWidthPixels(java.lang.Integer spriteWidthPixels) {

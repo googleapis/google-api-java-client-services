@@ -1,291 +1,97 @@
 {
-  "canonicalName": "GKE Hub",
-  "basePath": "",
-  "baseUrl": "https://gkehub.googleapis.com/",
   "protocol": "rest",
   "resources": {
     "projects": {
       "resources": {
         "locations": {
-          "methods": {
-            "list": {
-              "path": "v1alpha/{+name}/locations",
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "gkehub.projects.locations.list",
-              "httpMethod": "GET",
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
-                  "description": "The resource that owns the locations collection, if applicable."
-                },
-                "pageSize": {
-                  "location": "query",
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "The maximum number of results to return. If not set, the service will select a default."
-                },
-                "filter": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "A filter to narrow down results to a preferred subset. The filtering language accepts strings like \"displayName=tokyo\", and is documented in more detail in [AIP-160](https://google.aip.dev/160)."
-                },
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "A page token received from the `next_page_token` field in the response. Send that page token to receive the subsequent page."
-                }
-              },
-              "flatPath": "v1alpha/projects/{projectsId}/locations",
-              "description": "Lists information about the supported locations for this service.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "ListLocationsResponse"
-              }
-            },
-            "get": {
-              "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}",
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/locations/[^/]+$",
-                  "description": "Resource name for the location.",
-                  "required": true,
-                  "type": "string",
-                  "location": "path"
-                }
-              },
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "Location"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "description": "Gets information about a location.",
-              "id": "gkehub.projects.locations.get",
-              "path": "v1alpha/{+name}"
-            }
-          },
           "resources": {
             "memberships": {
               "methods": {
-                "getIamPolicy": {
-                  "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:getIamPolicy",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "id": "gkehub.projects.locations.memberships.getIamPolicy",
-                  "parameters": {
-                    "resource": {
-                      "location": "path",
-                      "required": true,
-                      "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$",
-                      "type": "string"
-                    },
-                    "options.requestedPolicyVersion": {
-                      "type": "integer",
-                      "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-                      "format": "int32",
-                      "location": "query"
-                    }
-                  },
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "path": "v1alpha/{+resource}:getIamPolicy",
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "httpMethod": "GET"
-                },
-                "setIamPolicy": {
-                  "id": "gkehub.projects.locations.memberships.setIamPolicy",
-                  "request": {
-                    "$ref": "SetIamPolicyRequest"
-                  },
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:setIamPolicy",
-                  "parameters": {
-                    "resource": {
-                      "required": true,
-                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
-                      "type": "string",
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$"
-                    }
-                  },
-                  "description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "httpMethod": "POST",
-                  "path": "v1alpha/{+resource}:setIamPolicy"
-                },
                 "testIamPermissions": {
-                  "httpMethod": "POST",
-                  "path": "v1alpha/{+resource}:testIamPermissions",
-                  "parameters": {
-                    "resource": {
-                      "location": "path",
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$",
-                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
-                      "required": true
-                    }
+                  "request": {
+                    "$ref": "TestIamPermissionsRequest"
                   },
                   "id": "gkehub.projects.locations.memberships.testIamPermissions",
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:testIamPermissions",
-                  "description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning.",
                   "response": {
                     "$ref": "TestIamPermissionsResponse"
                   },
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "request": {
-                    "$ref": "TestIamPermissionsRequest"
-                  }
-                }
-              }
-            },
-            "operations": {
-              "methods": {
-                "delete": {
-                  "id": "gkehub.projects.locations.operations.delete",
-                  "description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
-                  "path": "v1alpha/{+name}",
-                  "httpMethod": "DELETE",
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
                   "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "type": "string",
-                      "description": "The name of the operation resource to be deleted.",
-                      "location": "path",
-                      "required": true
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                },
-                "list": {
-                  "response": {
-                    "$ref": "ListOperationsResponse"
-                  },
-                  "parameters": {
-                    "filter": {
-                      "description": "The standard list filter.",
-                      "location": "query",
-                      "type": "string"
-                    },
-                    "pageToken": {
-                      "location": "query",
-                      "description": "The standard list page token.",
-                      "type": "string"
-                    },
-                    "pageSize": {
-                      "type": "integer",
-                      "location": "query",
-                      "description": "The standard list page size.",
-                      "format": "int32"
-                    },
-                    "name": {
-                      "description": "The name of the operation's parent resource.",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "location": "path",
-                      "type": "string",
-                      "required": true
-                    }
-                  },
-                  "httpMethod": "GET",
-                  "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
-                  "id": "gkehub.projects.locations.operations.list",
-                  "path": "v1alpha/{+name}/operations",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations"
-                },
-                "cancel": {
-                  "description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
-                  "path": "v1alpha/{+name}:cancel",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "description": "The name of the operation resource to be cancelled.",
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                    "resource": {
+                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
                       "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$",
+                      "type": "string",
                       "location": "path"
                     }
                   },
                   "parameterOrder": [
-                    "name"
+                    "resource"
                   ],
+                  "description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning.",
                   "httpMethod": "POST",
-                  "request": {
-                    "$ref": "CancelOperationRequest"
-                  },
-                  "id": "gkehub.projects.locations.operations.cancel",
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel"
-                },
-                "get": {
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "httpMethod": "GET",
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
-                  "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "location": "path",
-                      "description": "The name of the operation resource.",
-                      "required": true,
-                      "type": "string"
-                    }
-                  },
-                  "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
-                  "path": "v1alpha/{+name}",
+                  "path": "v1alpha/{+resource}:testIamPermissions",
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
-                  "id": "gkehub.projects.locations.operations.get",
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:testIamPermissions"
+                },
+                "setIamPolicy": {
+                  "path": "v1alpha/{+resource}:setIamPolicy",
+                  "httpMethod": "POST",
+                  "description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
+                  "parameters": {
+                    "resource": {
+                      "required": true,
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$",
+                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
+                      "type": "string"
+                    }
+                  },
                   "parameterOrder": [
-                    "name"
+                    "resource"
+                  ],
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:setIamPolicy",
+                  "response": {
+                    "$ref": "Policy"
+                  },
+                  "request": {
+                    "$ref": "SetIamPolicyRequest"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "id": "gkehub.projects.locations.memberships.setIamPolicy"
+                },
+                "getIamPolicy": {
+                  "parameters": {
+                    "options.requestedPolicyVersion": {
+                      "format": "int32",
+                      "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+                      "type": "integer",
+                      "location": "query"
+                    },
+                    "resource": {
+                      "location": "path",
+                      "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$",
+                      "required": true
+                    }
+                  },
+                  "response": {
+                    "$ref": "Policy"
+                  },
+                  "parameterOrder": [
+                    "resource"
+                  ],
+                  "id": "gkehub.projects.locations.memberships.getIamPolicy",
+                  "httpMethod": "GET",
+                  "path": "v1alpha/{+resource}:getIamPolicy",
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/memberships/{membershipsId}:getIamPolicy",
+                  "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
                   ]
                 }
               }
@@ -293,90 +99,90 @@
             "features": {
               "methods": {
                 "setIamPolicy": {
-                  "path": "v1alpha/{+resource}:setIamPolicy",
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/features/{featuresId}:setIamPolicy",
+                  "parameterOrder": [
+                    "resource"
+                  ],
                   "description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
-                  "id": "gkehub.projects.locations.features.setIamPolicy",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "resource": {
+                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/features/[^/]+$",
+                      "type": "string",
+                      "required": true
+                    }
+                  },
                   "httpMethod": "POST",
+                  "path": "v1alpha/{+resource}:setIamPolicy",
+                  "id": "gkehub.projects.locations.features.setIamPolicy",
+                  "response": {
+                    "$ref": "Policy"
+                  },
                   "request": {
                     "$ref": "SetIamPolicyRequest"
-                  },
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "resource": {
-                      "type": "string",
-                      "required": true,
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/features/[^/]+$",
-                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field."
-                    }
-                  },
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/features/{featuresId}:setIamPolicy"
+                  }
                 },
                 "getIamPolicy": {
-                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/features/{featuresId}:getIamPolicy",
-                  "id": "gkehub.projects.locations.features.getIamPolicy",
+                  "path": "v1alpha/{+resource}:getIamPolicy",
                   "parameters": {
+                    "options.requestedPolicyVersion": {
+                      "type": "integer",
+                      "location": "query",
+                      "format": "int32",
+                      "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
+                    },
                     "resource": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/features/[^/]+$",
-                      "required": true,
                       "type": "string",
                       "location": "path",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/features/[^/]+$",
                       "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field."
-                    },
-                    "options.requestedPolicyVersion": {
-                      "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-                      "type": "integer",
-                      "format": "int32",
-                      "location": "query"
                     }
                   },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "path": "v1alpha/{+resource}:getIamPolicy",
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "httpMethod": "GET",
                   "parameterOrder": [
                     "resource"
                   ],
-                  "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set."
+                  "id": "gkehub.projects.locations.features.getIamPolicy",
+                  "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "response": {
+                    "$ref": "Policy"
+                  },
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/features/{featuresId}:getIamPolicy",
+                  "httpMethod": "GET"
                 },
                 "testIamPermissions": {
                   "description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning.",
-                  "id": "gkehub.projects.locations.features.testIamPermissions",
-                  "request": {
-                    "$ref": "TestIamPermissionsRequest"
-                  },
-                  "response": {
-                    "$ref": "TestIamPermissionsResponse"
-                  },
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
-                  "path": "v1alpha/{+resource}:testIamPermissions",
+                  "request": {
+                    "$ref": "TestIamPermissionsRequest"
+                  },
                   "parameters": {
                     "resource": {
-                      "type": "string",
-                      "location": "path",
-                      "required": true,
+                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
                       "pattern": "^projects/[^/]+/locations/[^/]+/features/[^/]+$",
-                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field."
+                      "type": "string",
+                      "required": true,
+                      "location": "path"
                     }
                   },
                   "parameterOrder": [
                     "resource"
                   ],
+                  "path": "v1alpha/{+resource}:testIamPermissions",
                   "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/features/{featuresId}:testIamPermissions",
+                  "id": "gkehub.projects.locations.features.testIamPermissions",
+                  "response": {
+                    "$ref": "TestIamPermissionsResponse"
+                  },
                   "httpMethod": "POST"
                 }
               }
@@ -385,216 +191,1256 @@
               "resources": {
                 "features": {
                   "methods": {
-                    "delete": {
-                      "httpMethod": "DELETE",
+                    "patch": {
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "httpMethod": "PATCH",
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "description": "Updates an existing Feature.",
+                      "id": "gkehub.projects.locations.global.features.patch",
+                      "request": {
+                        "$ref": "Feature"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$",
+                          "location": "path",
+                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`.",
+                          "required": true,
+                          "type": "string"
+                        },
+                        "updateMask": {
+                          "location": "query",
+                          "type": "string",
+                          "format": "google-fieldmask",
+                          "description": "Mask of fields to update."
+                        },
+                        "requestId": {
+                          "description": "Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+                          "location": "query",
+                          "type": "string"
+                        }
+                      },
                       "path": "v1alpha/{+name}",
-                      "description": "Removes a Feature.",
+                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}"
+                    },
+                    "delete": {
+                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}",
+                      "id": "gkehub.projects.locations.global.features.delete",
                       "scopes": [
                         "https://www.googleapis.com/auth/cloud-platform"
                       ],
                       "parameterOrder": [
                         "name"
                       ],
-                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}",
+                      "path": "v1alpha/{+name}",
                       "parameters": {
+                        "requestId": {
+                          "type": "string",
+                          "description": "Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+                          "location": "query"
+                        },
+                        "name": {
+                          "required": true,
+                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$",
+                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`.",
+                          "type": "string",
+                          "location": "path"
+                        },
                         "force": {
                           "description": "If set to true, the delete will ignore any outstanding resources for this Feature (that is, `FeatureState.has_resources` is set to true). These resources will NOT be cleaned up or modified in any way.",
                           "location": "query",
                           "type": "boolean"
-                        },
-                        "name": {
-                          "required": true,
-                          "type": "string",
-                          "location": "path",
-                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`.",
-                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$"
                         }
                       },
-                      "id": "gkehub.projects.locations.global.features.delete",
+                      "httpMethod": "DELETE",
+                      "description": "Removes a Feature.",
                       "response": {
                         "$ref": "Operation"
                       }
+                    },
+                    "get": {
+                      "id": "gkehub.projects.locations.global.features.get",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "httpMethod": "GET",
+                      "path": "v1alpha/{+name}",
+                      "response": {
+                        "$ref": "Feature"
+                      },
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`",
+                          "type": "string",
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$"
+                        }
+                      },
+                      "description": "Gets details of a single Feature."
                     },
                     "list": {
                       "description": "Lists Features in a given project and location.",
                       "parameters": {
-                        "pageToken": {
+                        "orderBy": {
                           "type": "string",
                           "location": "query",
-                          "description": "Token returned by previous call to `ListFeatures` which specifies the position in the list from where to continue listing the resources."
+                          "description": "One or more fields to compare and use to sort the output. See https://google.aip.dev/132#ordering."
+                        },
+                        "pageToken": {
+                          "description": "Token returned by previous call to `ListFeatures` which specifies the position in the list from where to continue listing the resources.",
+                          "type": "string",
+                          "location": "query"
+                        },
+                        "parent": {
+                          "pattern": "^projects/[^/]+/locations/global$",
+                          "description": "The parent (project and location) where the Features will be listed. Specified in the format `projects/*/locations/global`.",
+                          "type": "string",
+                          "location": "path",
+                          "required": true
                         },
                         "filter": {
                           "type": "string",
-                          "description": "Lists Features that match the filter expression, following the syntax outlined in https://google.aip.dev/160. Examples: - Feature with the name \"servicemesh\" in project \"foo-proj\": name = \"projects/foo-proj/locations/global/features/servicemesh\" - Features that have a label called `foo`: labels.foo:* - Features that have a label called `foo` whose value is `bar`: labels.foo = bar",
-                          "location": "query"
-                        },
-                        "orderBy": {
-                          "description": "One or more fields to compare and use to sort the output. See https://google.aip.dev/132#ordering.",
                           "location": "query",
-                          "type": "string"
+                          "description": "Lists Features that match the filter expression, following the syntax outlined in https://google.aip.dev/160. Examples: - Feature with the name \"servicemesh\" in project \"foo-proj\": name = \"projects/foo-proj/locations/global/features/servicemesh\" - Features that have a label called `foo`: labels.foo:* - Features that have a label called `foo` whose value is `bar`: labels.foo = bar"
                         },
                         "pageSize": {
-                          "type": "integer",
                           "format": "int32",
                           "description": "When requesting a 'page' of resources, `page_size` specifies number of resources to return. If unspecified or set to 0, all resources will be returned.",
-                          "location": "query"
-                        },
-                        "parent": {
-                          "pattern": "^projects/[^/]+/locations/global$",
-                          "location": "path",
-                          "required": true,
-                          "description": "The parent (project and location) where the Features will be listed. Specified in the format `projects/*/locations/global`.",
-                          "type": "string"
+                          "location": "query",
+                          "type": "integer"
                         }
                       },
-                      "httpMethod": "GET",
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "path": "v1alpha/{+parent}/features",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
                       "response": {
                         "$ref": "ListFeaturesResponse"
                       },
-                      "id": "gkehub.projects.locations.global.features.list",
-                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features"
-                    },
-                    "get": {
-                      "id": "gkehub.projects.locations.global.features.get",
-                      "parameters": {
-                        "name": {
-                          "type": "string",
-                          "location": "path",
-                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$"
-                        }
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}",
-                      "description": "Gets details of a single Feature.",
-                      "path": "v1alpha/{+name}",
-                      "response": {
-                        "$ref": "Feature"
-                      },
-                      "httpMethod": "GET"
-                    },
-                    "patch": {
-                      "description": "Updates an existing Feature.",
-                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features/{featuresId}",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "path": "v1alpha/{+name}",
-                      "request": {
-                        "$ref": "Feature"
-                      },
-                      "httpMethod": "PATCH",
-                      "id": "gkehub.projects.locations.global.features.patch",
-                      "parameters": {
-                        "name": {
-                          "location": "path",
-                          "description": "The Feature resource name in the format `projects/*/locations/global/features/*`.",
-                          "type": "string",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/features/[^/]+$"
-                        },
-                        "updateMask": {
-                          "type": "string",
-                          "format": "google-fieldmask",
-                          "description": "Mask of fields to update.",
-                          "location": "query"
-                        }
-                      }
-                    },
-                    "create": {
                       "parameterOrder": [
                         "parent"
                       ],
+                      "path": "v1alpha/{+parent}/features",
                       "flatPath": "v1alpha/projects/{projectsId}/locations/global/features",
-                      "httpMethod": "POST",
-                      "request": {
-                        "$ref": "Feature"
-                      },
-                      "id": "gkehub.projects.locations.global.features.create",
                       "scopes": [
                         "https://www.googleapis.com/auth/cloud-platform"
                       ],
-                      "path": "v1alpha/{+parent}/features",
+                      "httpMethod": "GET",
+                      "id": "gkehub.projects.locations.global.features.list"
+                    },
+                    "create": {
+                      "httpMethod": "POST",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
                       "response": {
                         "$ref": "Operation"
                       },
-                      "description": "Adds a new Feature.",
+                      "id": "gkehub.projects.locations.global.features.create",
                       "parameters": {
-                        "parent": {
-                          "pattern": "^projects/[^/]+/locations/global$",
-                          "description": "The parent (project and location) where the Feature will be created. Specified in the format `projects/*/locations/global`.",
-                          "required": true,
-                          "location": "path",
-                          "type": "string"
+                        "requestId": {
+                          "description": "Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes after the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).",
+                          "type": "string",
+                          "location": "query"
                         },
                         "featureId": {
-                          "location": "query",
+                          "description": "The ID of the feature to create.",
                           "type": "string",
-                          "description": "The ID of the feature to create."
+                          "location": "query"
+                        },
+                        "parent": {
+                          "location": "path",
+                          "description": "The parent (project and location) where the Feature will be created. Specified in the format `projects/*/locations/global`.",
+                          "pattern": "^projects/[^/]+/locations/global$",
+                          "type": "string",
+                          "required": true
                         }
-                      }
+                      },
+                      "flatPath": "v1alpha/projects/{projectsId}/locations/global/features",
+                      "path": "v1alpha/{+parent}/features",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "request": {
+                        "$ref": "Feature"
+                      },
+                      "description": "Adds a new Feature."
                     }
                   }
                 }
               }
+            },
+            "operations": {
+              "methods": {
+                "get": {
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "id": "gkehub.projects.locations.operations.get",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
+                  "httpMethod": "GET",
+                  "response": {
+                    "$ref": "Operation"
+                  },
+                  "parameters": {
+                    "name": {
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "type": "string",
+                      "description": "The name of the operation resource.",
+                      "location": "path",
+                      "required": true
+                    }
+                  },
+                  "path": "v1alpha/{+name}",
+                  "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service."
+                },
+                "cancel": {
+                  "response": {
+                    "$ref": "Empty"
+                  },
+                  "parameters": {
+                    "name": {
+                      "description": "The name of the operation resource to be cancelled.",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "location": "path",
+                      "type": "string"
+                    }
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+                  "id": "gkehub.projects.locations.operations.cancel",
+                  "path": "v1alpha/{+name}:cancel",
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel",
+                  "httpMethod": "POST",
+                  "request": {
+                    "$ref": "CancelOperationRequest"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
+                },
+                "delete": {
+                  "response": {
+                    "$ref": "Empty"
+                  },
+                  "path": "v1alpha/{+name}",
+                  "description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "id": "gkehub.projects.locations.operations.delete",
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "DELETE",
+                  "parameters": {
+                    "name": {
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "description": "The name of the operation resource to be deleted.",
+                      "location": "path",
+                      "type": "string"
+                    }
+                  }
+                },
+                "list": {
+                  "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}/operations",
+                  "parameters": {
+                    "pageSize": {
+                      "location": "query",
+                      "format": "int32",
+                      "description": "The standard list page size.",
+                      "type": "integer"
+                    },
+                    "pageToken": {
+                      "location": "query",
+                      "description": "The standard list page token.",
+                      "type": "string"
+                    },
+                    "filter": {
+                      "type": "string",
+                      "description": "The standard list filter.",
+                      "location": "query"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the operation's parent resource.",
+                      "required": true,
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+$"
+                    }
+                  },
+                  "path": "v1alpha/{+name}/operations",
+                  "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
+                  "id": "gkehub.projects.locations.operations.list",
+                  "response": {
+                    "$ref": "ListOperationsResponse"
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "GET",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
+                }
+              }
+            }
+          },
+          "methods": {
+            "get": {
+              "flatPath": "v1alpha/projects/{projectsId}/locations/{locationsId}",
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/locations/[^/]+$",
+                  "description": "Resource name for the location.",
+                  "location": "path"
+                }
+              },
+              "id": "gkehub.projects.locations.get",
+              "parameterOrder": [
+                "name"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "response": {
+                "$ref": "Location"
+              },
+              "description": "Gets information about a location.",
+              "path": "v1alpha/{+name}",
+              "httpMethod": "GET"
+            },
+            "list": {
+              "parameters": {
+                "pageSize": {
+                  "description": "The maximum number of results to return. If not set, the service will select a default.",
+                  "location": "query",
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "name": {
+                  "required": true,
+                  "pattern": "^projects/[^/]+$",
+                  "description": "The resource that owns the locations collection, if applicable.",
+                  "location": "path",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "description": "A page token received from the `next_page_token` field in the response. Send that page token to receive the subsequent page.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "filter": {
+                  "description": "A filter to narrow down results to a preferred subset. The filtering language accepts strings like \"displayName=tokyo\", and is documented in more detail in [AIP-160](https://google.aip.dev/160).",
+                  "location": "query",
+                  "type": "string"
+                }
+              },
+              "path": "v1alpha/{+name}/locations",
+              "description": "Lists information about the supported locations for this service.",
+              "flatPath": "v1alpha/projects/{projectsId}/locations",
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "ListLocationsResponse"
+              },
+              "httpMethod": "GET",
+              "id": "gkehub.projects.locations.list",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
             }
           }
         }
       }
     }
   },
-  "revision": "20210315",
-  "description": "",
-  "title": "GKE Hub",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "See, edit, configure, and delete your Google Cloud Platform data"
+  "rootUrl": "https://gkehub.googleapis.com/",
+  "servicePath": "",
+  "schemas": {
+    "FeatureResourceState": {
+      "type": "object",
+      "id": "FeatureResourceState",
+      "description": "FeatureResourceState describes the state of a Feature *resource* in the GkeHub API. See `FeatureState` for the \"running state\" of the Feature in the Hub and across Memberships.",
+      "properties": {
+        "state": {
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "ENABLING",
+            "ACTIVE",
+            "DISABLING",
+            "UPDATING",
+            "SERVICE_UPDATING"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "State is unknown or not set.",
+            "The Feature is being enabled, and the Feature resource is being created. Once complete, the corresponding Feature will be enabled in this Hub.",
+            "The Feature is enabled in this Hub, and the Feature resource is fully available.",
+            "The Feature is being disabled in this Hub, and the Feature resource is being deleted.",
+            "The Feature resource is being updated.",
+            "The Feature resource is being updated by the Hub Service."
+          ],
+          "description": "The current state of the Feature resource in the Hub API."
         }
       }
-    }
-  },
-  "icons": {
-    "x32": "http://www.google.com/images/icons/product/search-32.gif",
-    "x16": "http://www.google.com/images/icons/product/search-16.gif"
-  },
-  "ownerDomain": "google.com",
-  "id": "gkehub:v1alpha",
-  "discoveryVersion": "v1",
-  "documentationLink": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
-  "rootUrl": "https://gkehub.googleapis.com/",
-  "batchPath": "batch",
-  "ownerName": "Google",
-  "kind": "discovery#restDescription",
-  "servicePath": "",
-  "version": "v1alpha",
-  "mtlsRootUrl": "https://gkehub.mtls.googleapis.com/",
-  "version_module": true,
-  "schemas": {
-    "ConfigManagementHierarchyControllerDeploymentState": {
-      "description": "Deployment state for Hierarchy Controller",
+    },
+    "ConfigManagementGroupVersionKind": {
       "type": "object",
-      "id": "ConfigManagementHierarchyControllerDeploymentState",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Kubernetes Version"
+        },
+        "kind": {
+          "type": "string",
+          "description": "Kubernetes Kind"
+        },
+        "group": {
+          "description": "Kubernetes Group",
+          "type": "string"
+        }
+      },
+      "description": "A Kubernetes object's GVK",
+      "id": "ConfigManagementGroupVersionKind"
+    },
+    "Empty": {
+      "id": "Empty",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "properties": {},
+      "type": "object"
+    },
+    "Operation": {
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
+      "id": "Operation",
+      "properties": {
+        "response": {
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any."
+        },
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "GoogleRpcStatus"
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "ConfigManagementBinauthzConfig": {
+      "type": "object",
+      "id": "ConfigManagementBinauthzConfig",
+      "description": "Configuration for Binauthz",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Whether binauthz is enabled in this cluster."
+        }
+      }
+    },
+    "FeatureState": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "description": "A human-readable description of the current status.",
+          "type": "string"
+        },
+        "updateTime": {
+          "description": "The time this status and any related Feature-specific details were updated.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "code": {
+          "enum": [
+            "CODE_UNSPECIFIED",
+            "OK",
+            "WARNING",
+            "ERROR"
+          ],
+          "enumDescriptions": [
+            "Unknown or not set.",
+            "The Feature is operating normally.",
+            "The Feature has encountered an issue, and is operating in a degraded state. The Feature may need intervention to return to normal operation. See the description and any associated Feature-specific details for more information.",
+            "The Feature is not operating or is in a severely degraded state. The Feature may need intervention to return to normal operation. See the description and any associated Feature-specific details for more information."
+          ],
+          "type": "string",
+          "description": "The high-level, machine-readable status of this Feature."
+        }
+      },
+      "description": "FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.",
+      "id": "FeatureState"
+    },
+    "ConfigManagementHierarchyControllerState": {
+      "description": "State for Hierarchy Controller",
+      "id": "ConfigManagementHierarchyControllerState",
+      "properties": {
+        "state": {
+          "description": "The deployment state for Hierarchy Controller",
+          "$ref": "ConfigManagementHierarchyControllerDeploymentState"
+        },
+        "version": {
+          "description": "The version for Hierarchy Controller",
+          "$ref": "ConfigManagementHierarchyControllerVersion"
+        }
+      },
+      "type": "object"
+    },
+    "Feature": {
+      "properties": {
+        "labels": {
+          "description": "GCP labels for this Feature.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "membershipStates": {
+          "readOnly": true,
+          "additionalProperties": {
+            "$ref": "MembershipFeatureState"
+          },
+          "type": "object",
+          "description": "Output only. Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number."
+        },
+        "name": {
+          "description": "Output only. The full, unique name of this Feature resource in the format `projects/*/locations/global/features/*`.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "deleteTime": {
+          "readOnly": true,
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Output only. When the Feature resource was deleted."
+        },
+        "spec": {
+          "$ref": "CommonFeatureSpec",
+          "description": "Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused."
+        },
+        "membershipSpecs": {
+          "additionalProperties": {
+            "$ref": "MembershipFeatureSpec"
+          },
+          "type": "object",
+          "description": "Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number."
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "description": "Output only. When the Feature resource was created.",
+          "type": "string",
+          "readOnly": true
+        },
+        "state": {
+          "description": "Output only. The Hub-wide Feature state.",
+          "readOnly": true,
+          "$ref": "CommonFeatureState"
+        },
+        "updateTime": {
+          "readOnly": true,
+          "format": "google-datetime",
+          "description": "Output only. When the Feature resource was last updated.",
+          "type": "string"
+        },
+        "resourceState": {
+          "readOnly": true,
+          "$ref": "FeatureResourceState",
+          "description": "Output only. State of the Feature resource itself."
+        }
+      },
+      "type": "object",
+      "description": "Feature represents the settings and status of any Hub Feature.",
+      "id": "Feature"
+    },
+    "ConfigManagementPolicyControllerState": {
+      "description": "State for PolicyControllerState.",
+      "id": "ConfigManagementPolicyControllerState",
+      "properties": {
+        "deploymentState": {
+          "description": "The state about the policy controller installation.",
+          "$ref": "ConfigManagementGatekeeperDeploymentState"
+        },
+        "version": {
+          "description": "The version of Gatekeeper Policy Controller deployed.",
+          "$ref": "ConfigManagementPolicyControllerVersion"
+        }
+      },
+      "type": "object"
+    },
+    "ServiceMeshAnalysisMessageBase": {
+      "properties": {
+        "level": {
+          "enumDescriptions": [
+            "Illegal. Same istio.analysis.v1alpha1.AnalysisMessageBase.Level.UNKNOWN.",
+            "ERROR represents a misconfiguration that must be fixed.",
+            "WARNING represents a misconfiguration that should be fixed.",
+            "INFO represents an informational finding."
+          ],
+          "description": "Represents how severe a message is.",
+          "type": "string",
+          "enum": [
+            "LEVEL_UNSPECIFIED",
+            "ERROR",
+            "WARNING",
+            "INFO"
+          ]
+        },
+        "type": {
+          "$ref": "ServiceMeshType",
+          "description": "Represents the specific type of a message."
+        },
+        "documentationUrl": {
+          "type": "string",
+          "description": "A url pointing to the Service Mesh or Istio documentation for this specific error type."
+        }
+      },
+      "description": "AnalysisMessageBase describes some common information that is needed for all messages.",
+      "type": "object",
+      "id": "ServiceMeshAnalysisMessageBase"
+    },
+    "ConfigManagementConfigSyncDeploymentState": {
+      "description": "The state of ConfigSync's deployment on a cluster",
+      "id": "ConfigManagementConfigSyncDeploymentState",
+      "properties": {
+        "reconcilerManager": {
+          "type": "string",
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "description": "Deployment state of reconciler-manager pod"
+        },
+        "syncer": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string",
+          "description": "Deployment state of the syncer pod"
+        },
+        "rootReconciler": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "type": "string",
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "description": "Deployment state of root-reconciler"
+        },
+        "monitor": {
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "description": "Deployment state of the monitor pod"
+        },
+        "gitSync": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string",
+          "description": "Deployment state of the git-sync pod"
+        },
+        "importer": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string",
+          "description": "Deployment state of the importer pod"
+        }
+      },
+      "type": "object"
+    },
+    "MembershipFeatureSpec": {
+      "properties": {
+        "configmanagement": {
+          "$ref": "ConfigManagementMembershipSpec",
+          "description": "Config Management-specific spec."
+        }
+      },
+      "type": "object",
+      "description": "MembershipFeatureSpec contains configuration information for a single Membership.",
+      "id": "MembershipFeatureSpec"
+    },
+    "ConfigManagementConfigSyncVersion": {
+      "description": "Specific versioning information pertaining to ConfigSync's Pods",
+      "type": "object",
+      "properties": {
+        "gitSync": {
+          "type": "string",
+          "description": "Version of the deployed git-sync pod"
+        },
+        "reconcilerManager": {
+          "type": "string",
+          "description": "Version of the deployed reconciler-manager pod"
+        },
+        "rootReconciler": {
+          "type": "string",
+          "description": "Version of the deployed reconciler container in root-reconciler pod"
+        },
+        "monitor": {
+          "type": "string",
+          "description": "Version of the deployed monitor pod"
+        },
+        "importer": {
+          "type": "string",
+          "description": "Version of the deployed importer pod"
+        },
+        "syncer": {
+          "description": "Version of the deployed syncer pod",
+          "type": "string"
+        }
+      },
+      "id": "ConfigManagementConfigSyncVersion"
+    },
+    "TestIamPermissionsRequest": {
+      "description": "Request message for `TestIamPermissions` method.",
+      "properties": {
+        "permissions": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).",
+          "type": "array"
+        }
+      },
+      "type": "object",
+      "id": "TestIamPermissionsRequest"
+    },
+    "AuditConfig": {
+      "type": "object",
+      "description": "Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs. If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each AuditLogConfig are exempted. Example Policy with multiple AuditConfigs: { \"audit_configs\": [ { \"service\": \"allServices\", \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\", \"exempted_members\": [ \"user:jose@example.com\" ] }, { \"log_type\": \"DATA_WRITE\" }, { \"log_type\": \"ADMIN_READ\" } ] }, { \"service\": \"sampleservice.googleapis.com\", \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\" }, { \"log_type\": \"DATA_WRITE\", \"exempted_members\": [ \"user:aliya@example.com\" ] } ] } ] } For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts jose@example.com from DATA_READ logging, and aliya@example.com from DATA_WRITE logging.",
+      "id": "AuditConfig",
+      "properties": {
+        "auditLogConfigs": {
+          "items": {
+            "$ref": "AuditLogConfig"
+          },
+          "description": "The configuration for logging of each type of permission.",
+          "type": "array"
+        },
+        "service": {
+          "type": "string",
+          "description": "Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services."
+        }
+      }
+    },
+    "ServiceMeshType": {
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "description": "A human-readable name for the message type. e.g. \"InternalError\", \"PodMissingProxy\". This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)",
+          "type": "string"
+        },
+        "code": {
+          "type": "string",
+          "description": "A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. \"IST0001\" is mapped to the \"InternalError\" message type.)"
+        }
+      },
+      "id": "ServiceMeshType",
+      "description": "A unique identifier for the type of message. Display_name is intended to be human-readable, code is intended to be machine readable. There should be a one-to-one mapping between display_name and code. (i.e. do not re-use display_names or codes between message types.) See istio.analysis.v1alpha1.AnalysisMessageBase.Type"
+    },
+    "ConfigManagementSyncState": {
+      "id": "ConfigManagementSyncState",
+      "properties": {
+        "lastSync": {
+          "type": "string",
+          "description": "Timestamp of when ACM last successfully synced the repo The time format is specified in https://golang.org/pkg/time/#Time.String This field is being deprecated. Use last_sync_time instead. (b/154053616)"
+        },
+        "sourceToken": {
+          "type": "string",
+          "description": "Token indicating the state of the repo."
+        },
+        "syncToken": {
+          "description": "Token indicating the state of the syncer.",
+          "type": "string"
+        },
+        "code": {
+          "type": "string",
+          "enum": [
+            "SYNC_CODE_UNSPECIFIED",
+            "SYNCED",
+            "PENDING",
+            "ERROR",
+            "NOT_CONFIGURED",
+            "NOT_INSTALLED",
+            "UNAUTHORIZED",
+            "UNREACHABLE"
+          ],
+          "enumDescriptions": [
+            "ACM cannot determine a sync code",
+            "ACM successfully synced the git Repo with the cluster",
+            "ACM is in the progress of syncing a new change",
+            "Indicates an error configuring ACM, and user action is required",
+            "ACM has been installed (operator manifest deployed), but not configured.",
+            "ACM has not been installed (no operator pod found)",
+            "Error authorizing with the cluster",
+            "Cluster could not be reached"
+          ],
+          "description": "Sync status code"
+        },
+        "lastSyncTime": {
+          "description": "Timestamp type of when ACM last successfully synced the repo",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "errors": {
+          "items": {
+            "$ref": "ConfigManagementSyncError"
+          },
+          "type": "array",
+          "description": "A list of errors resulting from problematic configs. This list will be truncated after 100 errors, although it is unlikely for that many errors to simultaneously exist."
+        },
+        "importToken": {
+          "description": "Token indicating the state of the importer.",
+          "type": "string"
+        }
+      },
+      "description": "State indicating an ACM's progress syncing configurations to a cluster",
+      "type": "object"
+    },
+    "AuditLogConfig": {
+      "id": "AuditLogConfig",
+      "description": "Provides the configuration for logging a type of permissions. Example: { \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\", \"exempted_members\": [ \"user:jose@example.com\" ] }, { \"log_type\": \"DATA_WRITE\" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.",
+      "properties": {
+        "logType": {
+          "enumDescriptions": [
+            "Default case. Should never be this.",
+            "Admin reads. Example: CloudIAM getIamPolicy",
+            "Data writes. Example: CloudSQL Users create",
+            "Data reads. Example: CloudSQL Users list"
+          ],
+          "type": "string",
+          "enum": [
+            "LOG_TYPE_UNSPECIFIED",
+            "ADMIN_READ",
+            "DATA_WRITE",
+            "DATA_READ"
+          ],
+          "description": "The log type that this config enables."
+        },
+        "exemptedMembers": {
+          "description": "Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "type": "object"
+    },
+    "ServiceMeshFeatureState": {
+      "id": "ServiceMeshFeatureState",
+      "properties": {
+        "analysisMessages": {
+          "items": {
+            "$ref": "ServiceMeshAnalysisMessage"
+          },
+          "description": "Output only. Results of running Service Mesh analyzers.",
+          "readOnly": true,
+          "type": "array"
+        }
+      },
+      "description": "FeatureState describes the state of the Service Mesh Hub Feature as analyzed by the Service Mesh Hub Controller, for the whole Hub.",
+      "type": "object"
+    },
+    "ConfigManagementPolicyControllerVersion": {
+      "description": "The build version of Gatekeeper Policy Controller is using.",
+      "properties": {
+        "version": {
+          "description": "The gatekeeper image tag that is composed of ACM version, git tag, build number.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "id": "ConfigManagementPolicyControllerVersion"
+    },
+    "ListOperationsResponse": {
+      "description": "The response message for Operations.ListOperations.",
+      "type": "object",
+      "id": "ListOperationsResponse",
+      "properties": {
+        "operations": {
+          "description": "A list of operations that matches the specified filter in the request.",
+          "type": "array",
+          "items": {
+            "$ref": "Operation"
+          }
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The standard List next-page token."
+        }
+      }
+    },
+    "ConfigManagementGitConfig": {
+      "description": "Git repo configuration for a single cluster.",
+      "type": "object",
+      "properties": {
+        "syncRev": {
+          "description": "Git revision (tag or hash) to check out. Default HEAD.",
+          "type": "string"
+        },
+        "gcpServiceAccountEmail": {
+          "type": "string",
+          "description": "The GCP Service Account Email used for auth when secret_type is gcpServiceAccount."
+        },
+        "syncWaitSecs": {
+          "type": "string",
+          "format": "int64",
+          "description": "Period in seconds between consecutive syncs. Default: 15."
+        },
+        "httpsProxy": {
+          "description": "URL for the HTTPS proxy to be used when communicating with the Git repo.",
+          "type": "string"
+        },
+        "syncRepo": {
+          "description": "The URL of the Git repository to use as the source of truth.",
+          "type": "string"
+        },
+        "policyDir": {
+          "description": "The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.",
+          "type": "string"
+        },
+        "secretType": {
+          "description": "Type of secret configured for access to the Git repo.",
+          "type": "string"
+        },
+        "syncBranch": {
+          "type": "string",
+          "description": "The branch of the repository to sync from. Default: master."
+        }
+      },
+      "id": "ConfigManagementGitConfig"
+    },
+    "ListFeaturesResponse": {
+      "type": "object",
+      "id": "ListFeaturesResponse",
+      "description": "Response message for the `GkeHub.ListFeatures` method.",
+      "properties": {
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "Feature"
+          },
+          "description": "The list of matching Features"
+        },
+        "nextPageToken": {
+          "description": "A token to request the next page of resources from the `ListFeatures` method. The value of an empty string means that there are no more resources to return.",
+          "type": "string"
+        }
+      }
+    },
+    "CommonFeatureSpec": {
+      "description": "CommonFeatureSpec contains Hub-wide configuration information",
+      "type": "object",
+      "properties": {
+        "cloudauditlogging": {
+          "$ref": "CloudAuditLoggingFeatureSpec",
+          "description": "Cloud Audit Logging-specific spec."
+        },
+        "multiclusteringress": {
+          "$ref": "MultiClusterIngressFeatureSpec",
+          "description": "Multicluster Ingress-specific spec."
+        }
+      },
+      "id": "CommonFeatureSpec"
+    },
+    "Policy": {
+      "properties": {
+        "version": {
+          "type": "integer",
+          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+          "format": "int32"
+        },
+        "bindings": {
+          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
+          "type": "array",
+          "items": {
+            "$ref": "Binding"
+          }
+        },
+        "etag": {
+          "format": "byte",
+          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
+          "type": "string"
+        },
+        "auditConfigs": {
+          "items": {
+            "$ref": "AuditConfig"
+          },
+          "type": "array",
+          "description": "Specifies cloud audit logging configuration for this policy."
+        }
+      },
+      "type": "object",
+      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
+      "id": "Policy"
+    },
+    "ListLocationsResponse": {
+      "description": "The response message for Locations.ListLocations.",
+      "type": "object",
+      "id": "ListLocationsResponse",
+      "properties": {
+        "nextPageToken": {
+          "description": "The standard List next-page token.",
+          "type": "string"
+        },
+        "locations": {
+          "description": "A list of locations that matches the specified filter in the request.",
+          "items": {
+            "$ref": "Location"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "CancelOperationRequest": {
+      "id": "CancelOperationRequest",
+      "description": "The request message for Operations.CancelOperation.",
+      "type": "object",
+      "properties": {}
+    },
+    "Location": {
+      "id": "Location",
+      "description": "A resource that represents Google Cloud Platform location.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`"
+        },
+        "displayName": {
+          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\".",
+          "type": "string"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "description": "Service-specific metadata. For example the available capacity at the given location.",
+          "type": "object"
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object",
+          "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}"
+        },
+        "locationId": {
+          "description": "The canonical id for this location. For example: `\"us-east1\"`.",
+          "type": "string"
+        }
+      }
+    },
+    "ConfigManagementConfigSync": {
+      "properties": {
+        "git": {
+          "description": "Git repo configuration for the cluster.",
+          "$ref": "ConfigManagementGitConfig"
+        },
+        "sourceFormat": {
+          "description": "Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "Configuration for Config Sync",
+      "id": "ConfigManagementConfigSync"
+    },
+    "ConfigManagementErrorResource": {
+      "id": "ConfigManagementErrorResource",
+      "description": "Model for a config file in the git repo with an associated Sync error",
+      "properties": {
+        "resourceNamespace": {
+          "description": "Namespace of the resource that is causing an error",
+          "type": "string"
+        },
+        "resourceGvk": {
+          "$ref": "ConfigManagementGroupVersionKind",
+          "description": "Group/version/kind of the resource that is causing an error"
+        },
+        "sourcePath": {
+          "type": "string",
+          "description": "Path in the git repo of the erroneous config"
+        },
+        "resourceName": {
+          "description": "Metadata name of the resource that is causing an error",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ConfigManagementConfigSyncState": {
+      "description": "State information for ConfigSync",
+      "type": "object",
+      "id": "ConfigManagementConfigSyncState",
+      "properties": {
+        "version": {
+          "$ref": "ConfigManagementConfigSyncVersion",
+          "description": "The version of ConfigSync deployed"
+        },
+        "deploymentState": {
+          "$ref": "ConfigManagementConfigSyncDeploymentState",
+          "description": "Information about the deployment of ConfigSync, including the version of the various Pods deployed"
+        },
+        "syncState": {
+          "$ref": "ConfigManagementSyncState",
+          "description": "The state of ConfigSync's process to sync configs to a cluster"
+        }
+      }
+    },
+    "ConfigManagementInstallError": {
+      "description": "Errors pertaining to the installation of ACM",
+      "type": "object",
+      "properties": {
+        "errorMessage": {
+          "description": "A string representing the user facing error message",
+          "type": "string"
+        }
+      },
+      "id": "ConfigManagementInstallError"
+    },
+    "GoogleRpcStatus": {
+      "type": "object",
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "properties": {
+        "code": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code."
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
+        },
+        "details": {
+          "type": "array",
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
+          "items": {
+            "additionalProperties": {
+              "type": "any",
+              "description": "Properties of the object. Contains field @type with type URL."
+            },
+            "type": "object"
+          }
+        }
+      },
+      "id": "GoogleRpcStatus"
+    },
+    "ConfigManagementSyncError": {
+      "type": "object",
+      "properties": {
+        "errorMessage": {
+          "description": "A description of the error",
+          "type": "string"
+        },
+        "errorResources": {
+          "items": {
+            "$ref": "ConfigManagementErrorResource"
+          },
+          "description": "A list of config(s) associated with the error, if any",
+          "type": "array"
+        },
+        "code": {
+          "description": "An ACM defined error code",
+          "type": "string"
+        }
+      },
+      "id": "ConfigManagementSyncError",
+      "description": "An ACM created error representing a problem syncing configurations"
+    },
+    "ConfigManagementHierarchyControllerDeploymentState": {
+      "type": "object",
+      "description": "Deployment state for Hierarchy Controller",
       "properties": {
         "extension": {
           "enumDescriptions": [
@@ -613,1219 +1459,32 @@
           "description": "The deployment state for Hierarchy Controller extension (e.g. v0.7.0-hc.1)"
         },
         "hnc": {
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "type": "string",
           "enum": [
             "DEPLOYMENT_STATE_UNSPECIFIED",
             "NOT_INSTALLED",
             "INSTALLED",
             "ERROR"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
           ],
           "description": "The deployment state for open source HNC (e.g. v0.7.0-hc.0)"
         }
-      }
-    },
-    "ConfigManagementGroupVersionKind": {
-      "type": "object",
-      "id": "ConfigManagementGroupVersionKind",
-      "properties": {
-        "group": {
-          "type": "string",
-          "description": "Kubernetes Group"
-        },
-        "version": {
-          "type": "string",
-          "description": "Kubernetes Version"
-        },
-        "kind": {
-          "type": "string",
-          "description": "Kubernetes Kind"
-        }
       },
-      "description": "A Kubernetes object's GVK"
-    },
-    "OperationMetadata": {
-      "properties": {
-        "verb": {
-          "type": "string",
-          "description": "Output only. Name of the verb executed by the operation.",
-          "readOnly": true
-        },
-        "statusDetail": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Human-readable status of the operation, if any."
-        },
-        "apiVersion": {
-          "readOnly": true,
-          "description": "Output only. API version used to start the operation.",
-          "type": "string"
-        },
-        "createTime": {
-          "readOnly": true,
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. The time the operation was created."
-        },
-        "cancelRequested": {
-          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
-          "readOnly": true,
-          "type": "boolean"
-        },
-        "endTime": {
-          "description": "Output only. The time the operation finished running.",
-          "readOnly": true,
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "target": {
-          "readOnly": true,
-          "description": "Output only. Server-defined resource path for the target of the operation.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "OperationMetadata",
-      "description": "Represents the metadata of the long-running operation."
-    },
-    "ConfigManagementGitConfig": {
-      "description": "Git repo configuration for a single cluster.",
-      "properties": {
-        "secretType": {
-          "type": "string",
-          "description": "Type of secret configured for access to the Git repo."
-        },
-        "syncBranch": {
-          "description": "The branch of the repository to sync from. Default: master.",
-          "type": "string"
-        },
-        "syncRev": {
-          "description": "Git revision (tag or hash) to check out. Default HEAD.",
-          "type": "string"
-        },
-        "syncRepo": {
-          "description": "The URL of the Git repository to use as the source of truth.",
-          "type": "string"
-        },
-        "policyDir": {
-          "description": "The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.",
-          "type": "string"
-        },
-        "httpsProxy": {
-          "description": "URL for the HTTPS proxy to be used when communicating with the Git repo.",
-          "type": "string"
-        },
-        "syncWaitSecs": {
-          "description": "Period in seconds between consecutive syncs. Default: 15.",
-          "format": "int64",
-          "type": "string"
-        }
-      },
-      "id": "ConfigManagementGitConfig",
-      "type": "object"
-    },
-    "ConfigManagementConfigSync": {
-      "type": "object",
-      "id": "ConfigManagementConfigSync",
-      "description": "Configuration for Config Sync",
-      "properties": {
-        "sourceFormat": {
-          "type": "string",
-          "description": "Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode."
-        },
-        "git": {
-          "$ref": "ConfigManagementGitConfig",
-          "description": "Git repo configuration for the cluster."
-        }
-      }
-    },
-    "ConfigManagementPolicyControllerState": {
-      "properties": {
-        "version": {
-          "description": "The version of Gatekeeper Policy Controller deployed.",
-          "$ref": "ConfigManagementPolicyControllerVersion"
-        },
-        "deploymentState": {
-          "description": "The state about the policy controller installation.",
-          "$ref": "ConfigManagementGatekeeperDeploymentState"
-        }
-      },
-      "description": "State for PolicyControllerState.",
-      "type": "object",
-      "id": "ConfigManagementPolicyControllerState"
-    },
-    "ConfigManagementInstallError": {
-      "id": "ConfigManagementInstallError",
-      "properties": {
-        "errorMessage": {
-          "type": "string",
-          "description": "A string representing the user facing error message"
-        }
-      },
-      "type": "object",
-      "description": "Errors pertaining to the installation of ACM"
-    },
-    "ConfigManagementConfigSyncDeploymentState": {
-      "properties": {
-        "syncer": {
-          "type": "string",
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "description": "Deployment state of the syncer pod"
-        },
-        "gitSync": {
-          "description": "Deployment state of the git-sync pod",
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "type": "string"
-        },
-        "importer": {
-          "description": "Deployment state of the importer pod",
-          "type": "string",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ]
-        },
-        "reconcilerManager": {
-          "type": "string",
-          "description": "Deployment state of reconciler-manager pod",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ]
-        },
-        "rootReconciler": {
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "description": "Deployment state of root-reconciler",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "type": "string"
-        },
-        "monitor": {
-          "type": "string",
-          "description": "Deployment state of the monitor pod",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ]
-        }
-      },
-      "id": "ConfigManagementConfigSyncDeploymentState",
-      "description": "The state of ConfigSync's deployment on a cluster",
-      "type": "object"
-    },
-    "GoogleRpcStatus": {
-      "type": "object",
-      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "id": "GoogleRpcStatus",
-      "properties": {
-        "details": {
-          "items": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
-            }
-          },
-          "type": "array",
-          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use."
-        },
-        "code": {
-          "type": "integer",
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string",
-          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
-        }
-      }
-    },
-    "ConfigManagementBinauthzState": {
-      "properties": {
-        "webhook": {
-          "description": "The state of the binauthz webhook.",
-          "type": "string",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ]
-        },
-        "version": {
-          "$ref": "ConfigManagementBinauthzVersion",
-          "description": "The version of binauthz that is installed."
-        }
-      },
-      "id": "ConfigManagementBinauthzState",
-      "type": "object",
-      "description": "State for Binauthz"
-    },
-    "ConfigManagementSyncError": {
-      "type": "object",
-      "properties": {
-        "errorResources": {
-          "description": "A list of config(s) associated with the error, if any",
-          "type": "array",
-          "items": {
-            "$ref": "ConfigManagementErrorResource"
-          }
-        },
-        "errorMessage": {
-          "description": "A description of the error",
-          "type": "string"
-        },
-        "code": {
-          "description": "An ACM defined error code",
-          "type": "string"
-        }
-      },
-      "id": "ConfigManagementSyncError",
-      "description": "An ACM created error representing a problem syncing configurations"
-    },
-    "MembershipFeatureSpec": {
-      "type": "object",
-      "properties": {
-        "configmanagement": {
-          "description": "Config Management-specific spec.",
-          "$ref": "ConfigManagementMembershipSpec"
-        }
-      },
-      "id": "MembershipFeatureSpec",
-      "description": "MembershipFeatureSpec contains configuration information for a single Membership."
-    },
-    "ConfigManagementErrorResource": {
-      "properties": {
-        "sourcePath": {
-          "type": "string",
-          "description": "Path in the git repo of the erroneous config"
-        },
-        "resourceName": {
-          "description": "Metadata name of the resource that is causing an error",
-          "type": "string"
-        },
-        "resourceNamespace": {
-          "type": "string",
-          "description": "Namespace of the resource that is causing an error"
-        },
-        "resourceGvk": {
-          "description": "Group/version/kind of the resource that is causing an error",
-          "$ref": "ConfigManagementGroupVersionKind"
-        }
-      },
-      "description": "Model for a config file in the git repo with an associated Sync error",
-      "id": "ConfigManagementErrorResource",
-      "type": "object"
-    },
-    "Policy": {
-      "id": "Policy",
-      "type": "object",
-      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
-      "properties": {
-        "etag": {
-          "type": "string",
-          "format": "byte",
-          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost."
-        },
-        "auditConfigs": {
-          "items": {
-            "$ref": "AuditConfig"
-          },
-          "type": "array",
-          "description": "Specifies cloud audit logging configuration for this policy."
-        },
-        "bindings": {
-          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
-          "type": "array",
-          "items": {
-            "$ref": "Binding"
-          }
-        },
-        "version": {
-          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "format": "int32",
-          "type": "integer"
-        }
-      }
-    },
-    "Binding": {
-      "description": "Associates `members` with a `role`.",
-      "id": "Binding",
-      "properties": {
-        "role": {
-          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.",
-          "type": "string"
-        },
-        "members": {
-          "items": {
-            "type": "string"
-          },
-          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. ",
-          "type": "array"
-        },
-        "condition": {
-          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "$ref": "Expr"
-        }
-      },
-      "type": "object"
-    },
-    "MeteringMembershipState": {
-      "properties": {
-        "lastMeasurementTime": {
-          "format": "google-datetime",
-          "description": "The time stamp of the most recent measurement of the number of vCPUs in the cluster.",
-          "type": "string"
-        },
-        "preciseLastMeasuredClusterVcpuCapacity": {
-          "format": "float",
-          "type": "number",
-          "description": "The vCPUs capacity in the cluster according to the most recent measurement (1/1000 precision)."
-        }
-      },
-      "type": "object",
-      "id": "MeteringMembershipState",
-      "description": "Metering per-Membership Feature State."
-    },
-    "ConfigManagementHierarchyControllerConfig": {
-      "id": "ConfigManagementHierarchyControllerConfig",
-      "description": "Configuration for Hierarchy Controller",
-      "type": "object",
-      "properties": {
-        "enabled": {
-          "type": "boolean",
-          "description": "Whether Hierarchy Controller is enabled in this cluster."
-        },
-        "enableHierarchicalResourceQuota": {
-          "type": "boolean",
-          "description": "Whether hierarchical resource quota is enabled in this cluster."
-        },
-        "enablePodTreeLabels": {
-          "type": "boolean",
-          "description": "Whether pod tree labels are enabled in this cluster."
-        }
-      }
-    },
-    "ServiceMeshMembershipState": {
-      "description": "MembershipState describes the state of the Service Mesh Hub Feature as analyzed by the Service Mesh Hub Controller, for single Membership.",
-      "type": "object",
-      "properties": {
-        "analysisMessages": {
-          "description": "Output only. Results of running Service Mesh analyzers.",
-          "items": {
-            "$ref": "ServiceMeshAnalysisMessage"
-          },
-          "type": "array",
-          "readOnly": true
-        }
-      },
-      "id": "ServiceMeshMembershipState"
-    },
-    "MultiClusterIngressFeatureSpec": {
-      "type": "object",
-      "description": "FeatureSpec contains the input for the MultiClusterIngress feature.",
-      "id": "MultiClusterIngressFeatureSpec",
-      "properties": {
-        "configMembership": {
-          "description": "Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`",
-          "type": "string"
-        }
-      }
-    },
-    "ConfigManagementConfigSyncVersion": {
-      "properties": {
-        "rootReconciler": {
-          "type": "string",
-          "description": "Version of the deployed reconciler container in root-reconciler pod"
-        },
-        "gitSync": {
-          "description": "Version of the deployed git-sync pod",
-          "type": "string"
-        },
-        "syncer": {
-          "type": "string",
-          "description": "Version of the deployed syncer pod"
-        },
-        "monitor": {
-          "description": "Version of the deployed monitor pod",
-          "type": "string"
-        },
-        "reconcilerManager": {
-          "description": "Version of the deployed reconciler-manager pod",
-          "type": "string"
-        },
-        "importer": {
-          "description": "Version of the deployed importer pod",
-          "type": "string"
-        }
-      },
-      "description": "Specific versioning information pertaining to ConfigSync's Pods",
-      "id": "ConfigManagementConfigSyncVersion",
-      "type": "object"
-    },
-    "Empty": {
-      "id": "Empty",
-      "type": "object",
-      "properties": {},
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "ConfigManagementOperatorState": {
-      "description": "State information for an ACM's Operator",
-      "id": "ConfigManagementOperatorState",
-      "type": "object",
-      "properties": {
-        "version": {
-          "description": "The semenatic version number of the operator",
-          "type": "string"
-        },
-        "deploymentState": {
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "description": "The state of the Operator's deployment",
-          "type": "string",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ]
-        },
-        "errors": {
-          "description": "Install errors.",
-          "type": "array",
-          "items": {
-            "$ref": "ConfigManagementInstallError"
-          }
-        }
-      }
-    },
-    "SetIamPolicyRequest": {
-      "id": "SetIamPolicyRequest",
-      "type": "object",
-      "properties": {
-        "policy": {
-          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them.",
-          "$ref": "Policy"
-        },
-        "updateMask": {
-          "description": "OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: \"bindings, etag\"`",
-          "format": "google-fieldmask",
-          "type": "string"
-        }
-      },
-      "description": "Request message for `SetIamPolicy` method."
-    },
-    "Feature": {
-      "id": "Feature",
-      "type": "object",
-      "description": "Feature represents the settings and status of any Hub Feature.",
-      "properties": {
-        "state": {
-          "readOnly": true,
-          "$ref": "CommonFeatureState",
-          "description": "Output only. The Hub-wide Feature state."
-        },
-        "membershipStates": {
-          "readOnly": true,
-          "type": "object",
-          "description": "Output only. Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.",
-          "additionalProperties": {
-            "$ref": "MembershipFeatureState"
-          }
-        },
-        "createTime": {
-          "description": "Output only. When the Feature resource was created.",
-          "format": "google-datetime",
-          "type": "string",
-          "readOnly": true
-        },
-        "spec": {
-          "description": "Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.",
-          "$ref": "CommonFeatureSpec"
-        },
-        "resourceState": {
-          "readOnly": true,
-          "description": "Output only. State of the Feature resource itself.",
-          "$ref": "FeatureResourceState"
-        },
-        "labels": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "type": "object",
-          "description": "GCP labels for this Feature."
-        },
-        "deleteTime": {
-          "description": "Output only. When the Feature resource was deleted.",
-          "readOnly": true,
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "updateTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Output only. When the Feature resource was last updated.",
-          "readOnly": true
-        },
-        "name": {
-          "type": "string",
-          "description": "Output only. The full, unique name of this Feature resource in the format `projects/*/locations/global/features/*`.",
-          "readOnly": true
-        },
-        "membershipSpecs": {
-          "description": "Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.",
-          "additionalProperties": {
-            "$ref": "MembershipFeatureSpec"
-          },
-          "type": "object"
-        }
-      }
-    },
-    "Location": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`",
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\"."
-        },
-        "labels": {
-          "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "type": "object"
-        },
-        "metadata": {
-          "description": "Service-specific metadata. For example the available capacity at the given location.",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          },
-          "type": "object"
-        },
-        "locationId": {
-          "type": "string",
-          "description": "The canonical id for this location. For example: `\"us-east1\"`."
-        }
-      },
-      "description": "A resource that represents Google Cloud Platform location.",
-      "id": "Location"
-    },
-    "CommonFeatureSpec": {
-      "properties": {
-        "multiclusteringress": {
-          "$ref": "MultiClusterIngressFeatureSpec",
-          "description": "Multicluster Ingress-specific spec."
-        },
-        "cloudauditlogging": {
-          "$ref": "CloudAuditLoggingFeatureSpec",
-          "description": "Cloud Audit Logging-specific spec."
-        }
-      },
-      "type": "object",
-      "id": "CommonFeatureSpec",
-      "description": "CommonFeatureSpec contains Hub-wide configuration information"
-    },
-    "FeatureState": {
-      "description": "FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.",
-      "type": "object",
-      "id": "FeatureState",
-      "properties": {
-        "updateTime": {
-          "format": "google-datetime",
-          "description": "The time this status and any related Feature-specific details were updated.",
-          "type": "string"
-        },
-        "code": {
-          "description": "The high-level, machine-readable status of this Feature.",
-          "enumDescriptions": [
-            "Unknown or not set.",
-            "The Feature is operating normally.",
-            "The Feature has encountered an issue, and is operating in a degraded state. The Feature may need intervention to return to normal operation. See the description and any associated Feature-specific details for more information.",
-            "The Feature is not operating or is in a severely degraded state. The Feature may need intervention to return to normal operation. See the description and any associated Feature-specific details for more information."
-          ],
-          "enum": [
-            "CODE_UNSPECIFIED",
-            "OK",
-            "WARNING",
-            "ERROR"
-          ],
-          "type": "string"
-        },
-        "description": {
-          "type": "string",
-          "description": "A human-readable description of the current status."
-        }
-      }
-    },
-    "AuditConfig": {
-      "id": "AuditConfig",
-      "type": "object",
-      "properties": {
-        "service": {
-          "type": "string",
-          "description": "Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services."
-        },
-        "auditLogConfigs": {
-          "type": "array",
-          "description": "The configuration for logging of each type of permission.",
-          "items": {
-            "$ref": "AuditLogConfig"
-          }
-        }
-      },
-      "description": "Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs. If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each AuditLogConfig are exempted. Example Policy with multiple AuditConfigs: { \"audit_configs\": [ { \"service\": \"allServices\", \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\", \"exempted_members\": [ \"user:jose@example.com\" ] }, { \"log_type\": \"DATA_WRITE\" }, { \"log_type\": \"ADMIN_READ\" } ] }, { \"service\": \"sampleservice.googleapis.com\", \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\" }, { \"log_type\": \"DATA_WRITE\", \"exempted_members\": [ \"user:aliya@example.com\" ] } ] } ] } For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts jose@example.com from DATA_READ logging, and aliya@example.com from DATA_WRITE logging."
-    },
-    "ListOperationsResponse": {
-      "description": "The response message for Operations.ListOperations.",
-      "properties": {
-        "nextPageToken": {
-          "description": "The standard List next-page token.",
-          "type": "string"
-        },
-        "operations": {
-          "items": {
-            "$ref": "Operation"
-          },
-          "type": "array",
-          "description": "A list of operations that matches the specified filter in the request."
-        }
-      },
-      "id": "ListOperationsResponse",
-      "type": "object"
-    },
-    "ConfigManagementBinauthzConfig": {
-      "type": "object",
-      "id": "ConfigManagementBinauthzConfig",
-      "properties": {
-        "enabled": {
-          "description": "Whether binauthz is enabled in this cluster.",
-          "type": "boolean"
-        }
-      },
-      "description": "Configuration for Binauthz"
-    },
-    "CloudAuditLoggingFeatureSpec": {
-      "description": "Spec for Audit Logging Allowlisting.",
-      "type": "object",
-      "id": "CloudAuditLoggingFeatureSpec",
-      "properties": {
-        "allowlistedServiceAccounts": {
-          "items": {
-            "type": "string"
-          },
-          "description": "Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer's entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)",
-          "type": "array"
-        }
-      }
-    },
-    "ServiceMeshAnalysisMessage": {
-      "id": "ServiceMeshAnalysisMessage",
-      "properties": {
-        "messageBase": {
-          "description": "Details common to all types of Istio and ServiceMesh analysis messages.",
-          "$ref": "ServiceMeshAnalysisMessageBase"
-        },
-        "args": {
-          "description": "A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.",
-          "additionalProperties": {
-            "description": "Properties of the object.",
-            "type": "any"
-          },
-          "type": "object"
-        },
-        "description": {
-          "description": "A human readable description of what the error means. It is suitable for non-internationalize display purposes.",
-          "type": "string"
-        },
-        "resourcePaths": {
-          "description": "A list of strings specifying the resource identifiers that were the cause of message generation. A \"path\" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "type": "object",
-      "description": "AnalysisMessage is a single message produced by an analyzer, and it used to communicate to the end user about the state of their Service Mesh configuration."
-    },
-    "ListFeaturesResponse": {
-      "description": "Response message for the `GkeHub.ListFeatures` method.",
-      "type": "object",
-      "properties": {
-        "resources": {
-          "type": "array",
-          "items": {
-            "$ref": "Feature"
-          },
-          "description": "The list of matching Features"
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "A token to request the next page of resources from the `ListFeatures` method. The value of an empty string means that there are no more resources to return."
-        }
-      },
-      "id": "ListFeaturesResponse"
-    },
-    "ServiceMeshAnalysisMessageBase": {
-      "properties": {
-        "type": {
-          "description": "Represents the specific type of a message.",
-          "$ref": "ServiceMeshType"
-        },
-        "documentationUrl": {
-          "description": "A url pointing to the Service Mesh or Istio documentation for this specific error type.",
-          "type": "string"
-        },
-        "level": {
-          "type": "string",
-          "description": "Represents how severe a message is.",
-          "enum": [
-            "LEVEL_UNSPECIFIED",
-            "ERROR",
-            "WARNING",
-            "INFO"
-          ],
-          "enumDescriptions": [
-            "Illegal. Same istio.analysis.v1alpha1.AnalysisMessageBase.Level.UNKNOWN.",
-            "ERROR represents a misconfiguration that must be fixed.",
-            "WARNING represents a misconfiguration that should be fixed.",
-            "INFO represents an informational finding."
-          ]
-        }
-      },
-      "type": "object",
-      "id": "ServiceMeshAnalysisMessageBase",
-      "description": "AnalysisMessageBase describes some common information that is needed for all messages."
-    },
-    "ServiceMeshFeatureState": {
-      "id": "ServiceMeshFeatureState",
-      "type": "object",
-      "description": "FeatureState describes the state of the Service Mesh Hub Feature as analyzed by the Service Mesh Hub Controller, for the whole Hub.",
-      "properties": {
-        "analysisMessages": {
-          "description": "Output only. Results of running Service Mesh analyzers.",
-          "readOnly": true,
-          "items": {
-            "$ref": "ServiceMeshAnalysisMessage"
-          },
-          "type": "array"
-        }
-      }
-    },
-    "ListLocationsResponse": {
-      "type": "object",
-      "id": "ListLocationsResponse",
-      "description": "The response message for Locations.ListLocations.",
-      "properties": {
-        "nextPageToken": {
-          "description": "The standard List next-page token.",
-          "type": "string"
-        },
-        "locations": {
-          "description": "A list of locations that matches the specified filter in the request.",
-          "type": "array",
-          "items": {
-            "$ref": "Location"
-          }
-        }
-      }
-    },
-    "CommonFeatureState": {
-      "id": "CommonFeatureState",
-      "properties": {
-        "state": {
-          "description": "Output only. The \"running state\" of the Feature in this Hub.",
-          "readOnly": true,
-          "$ref": "FeatureState"
-        },
-        "servicemesh": {
-          "$ref": "ServiceMeshFeatureState",
-          "description": "Service Mesh-specific state."
-        }
-      },
-      "type": "object",
-      "description": "CommonFeatureState contains Hub-wide Feature status information."
-    },
-    "ConfigManagementMembershipSpec": {
-      "properties": {
-        "configSync": {
-          "description": "Config Sync configuration for the cluster.",
-          "$ref": "ConfigManagementConfigSync"
-        },
-        "binauthz": {
-          "$ref": "ConfigManagementBinauthzConfig",
-          "description": "Binauthz conifguration for the cluster."
-        },
-        "policyController": {
-          "description": "Policy Controller configuration for the cluster.",
-          "$ref": "ConfigManagementPolicyController"
-        },
-        "hierarchyController": {
-          "$ref": "ConfigManagementHierarchyControllerConfig",
-          "description": "Hierarchy Controller configuration for the cluster."
-        },
-        "version": {
-          "description": "Version of ACM installed.",
-          "type": "string"
-        }
-      },
-      "id": "ConfigManagementMembershipSpec",
-      "type": "object",
-      "description": "Configuration for a single cluster. Intended to parallel the ConfigManagement CR."
-    },
-    "Operation": {
-      "type": "object",
-      "id": "Operation",
-      "properties": {
-        "response": {
-          "type": "object",
-          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          }
-        },
-        "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "GoogleRpcStatus"
-        },
-        "metadata": {
-          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          }
-        },
-        "name": {
-          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
-          "type": "string"
-        },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
-          "type": "boolean"
-        }
-      },
-      "description": "This resource represents a long-running operation that is the result of a network API call."
-    },
-    "ConfigManagementMembershipState": {
-      "description": "State for Anthos Config Management",
-      "id": "ConfigManagementMembershipState",
-      "type": "object",
-      "properties": {
-        "configSyncState": {
-          "description": "Current sync status",
-          "$ref": "ConfigManagementConfigSyncState"
-        },
-        "policyControllerState": {
-          "$ref": "ConfigManagementPolicyControllerState",
-          "description": "PolicyController status"
-        },
-        "membershipSpec": {
-          "$ref": "ConfigManagementMembershipSpec",
-          "description": "Membership configuration in the cluster. This represents the actual state in the cluster, while the MembershipSpec in the FeatureSpec represents the intended state"
-        },
-        "binauthzState": {
-          "description": "Binauthz status",
-          "$ref": "ConfigManagementBinauthzState"
-        },
-        "clusterName": {
-          "description": "The user-defined name for the cluster used by ClusterSelectors to group clusters together. This should match Membership's membership_name, unless the user installed ACM on the cluster manually prior to enabling the ACM hub feature. Unique within a Anthos Config Management installation.",
-          "type": "string"
-        },
-        "hierarchyControllerState": {
-          "$ref": "ConfigManagementHierarchyControllerState",
-          "description": "Hierarchy Controller status"
-        },
-        "operatorState": {
-          "$ref": "ConfigManagementOperatorState",
-          "description": "Current install status of ACM's Operator"
-        }
-      }
-    },
-    "Expr": {
-      "properties": {
-        "location": {
-          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.",
-          "type": "string"
-        },
-        "description": {
-          "type": "string",
-          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
-        },
-        "expression": {
-          "description": "Textual representation of an expression in Common Expression Language syntax.",
-          "type": "string"
-        },
-        "title": {
-          "type": "string",
-          "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
-        }
-      },
-      "id": "Expr",
-      "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
-      "type": "object"
-    },
-    "CancelOperationRequest": {
-      "description": "The request message for Operations.CancelOperation.",
-      "properties": {},
-      "type": "object",
-      "id": "CancelOperationRequest"
-    },
-    "ServiceMeshType": {
-      "properties": {
-        "code": {
-          "description": "A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. \"IST0001\" is mapped to the \"InternalError\" message type.)",
-          "type": "string"
-        },
-        "displayName": {
-          "description": "A human-readable name for the message type. e.g. \"InternalError\", \"PodMissingProxy\". This should be the same for all messages of the same type. (This corresponds to the `name` field in open-source Istio.)",
-          "type": "string"
-        }
-      },
-      "description": "A unique identifier for the type of message. Display_name is intended to be human-readable, code is intended to be machine readable. There should be a one-to-one mapping between display_name and code. (i.e. do not re-use display_names or codes between message types.) See istio.analysis.v1alpha1.AnalysisMessageBase.Type",
-      "type": "object",
-      "id": "ServiceMeshType"
-    },
-    "TestIamPermissionsResponse": {
-      "type": "object",
-      "id": "TestIamPermissionsResponse",
-      "description": "Response message for `TestIamPermissions` method.",
-      "properties": {
-        "permissions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed."
-        }
-      }
-    },
-    "ConfigManagementConfigSyncState": {
-      "properties": {
-        "version": {
-          "description": "The version of ConfigSync deployed",
-          "$ref": "ConfigManagementConfigSyncVersion"
-        },
-        "syncState": {
-          "description": "The state of ConfigSync's process to sync configs to a cluster",
-          "$ref": "ConfigManagementSyncState"
-        },
-        "deploymentState": {
-          "description": "Information about the deployment of ConfigSync, including the version of the various Pods deployed",
-          "$ref": "ConfigManagementConfigSyncDeploymentState"
-        }
-      },
-      "type": "object",
-      "id": "ConfigManagementConfigSyncState",
-      "description": "State information for ConfigSync"
-    },
-    "ConfigManagementHierarchyControllerState": {
-      "properties": {
-        "state": {
-          "$ref": "ConfigManagementHierarchyControllerDeploymentState",
-          "description": "The deployment state for Hierarchy Controller"
-        },
-        "version": {
-          "description": "The version for Hierarchy Controller",
-          "$ref": "ConfigManagementHierarchyControllerVersion"
-        }
-      },
-      "id": "ConfigManagementHierarchyControllerState",
-      "type": "object",
-      "description": "State for Hierarchy Controller"
-    },
-    "ConfigManagementBinauthzVersion": {
-      "description": "The version of binauthz.",
-      "id": "ConfigManagementBinauthzVersion",
-      "type": "object",
-      "properties": {
-        "webhookVersion": {
-          "description": "The version of the binauthz webhook.",
-          "type": "string"
-        }
-      }
-    },
-    "ConfigManagementSyncState": {
-      "description": "State indicating an ACM's progress syncing configurations to a cluster",
-      "type": "object",
-      "properties": {
-        "sourceToken": {
-          "description": "Token indicating the state of the repo.",
-          "type": "string"
-        },
-        "importToken": {
-          "description": "Token indicating the state of the importer.",
-          "type": "string"
-        },
-        "syncToken": {
-          "description": "Token indicating the state of the syncer.",
-          "type": "string"
-        },
-        "lastSync": {
-          "description": "Timestamp of when ACM last successfully synced the repo The time format is specified in https://golang.org/pkg/time/#Time.String This field is being deprecated. Use last_sync_time instead. (b/154053616)",
-          "type": "string"
-        },
-        "errors": {
-          "type": "array",
-          "items": {
-            "$ref": "ConfigManagementSyncError"
-          },
-          "description": "A list of errors resulting from problematic configs. This list will be truncated after 100 errors, although it is unlikely for that many errors to simultaneously exist."
-        },
-        "code": {
-          "enum": [
-            "SYNC_CODE_UNSPECIFIED",
-            "SYNCED",
-            "PENDING",
-            "ERROR",
-            "NOT_CONFIGURED",
-            "NOT_INSTALLED",
-            "UNAUTHORIZED",
-            "UNREACHABLE"
-          ],
-          "description": "Sync status code",
-          "type": "string",
-          "enumDescriptions": [
-            "ACM cannot determine a sync code",
-            "ACM successfully synced the git Repo with the cluster",
-            "ACM is in the progress of syncing a new change",
-            "Indicates an error configuring ACM, and user action is required",
-            "ACM has been installed (operator manifest deployed), but not configured.",
-            "ACM has not been installed (no operator pod found)",
-            "Error authorizing with the cluster",
-            "Cluster could not be reached"
-          ]
-        },
-        "lastSyncTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Timestamp type of when ACM last successfully synced the repo"
-        }
-      },
-      "id": "ConfigManagementSyncState"
-    },
-    "ConfigManagementHierarchyControllerVersion": {
-      "properties": {
-        "extension": {
-          "type": "string",
-          "description": "Version for Hierarchy Controller extension"
-        },
-        "hnc": {
-          "description": "Version for open source HNC",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "ConfigManagementHierarchyControllerVersion",
-      "description": "Version for Hierarchy Controller"
-    },
-    "FeatureResourceState": {
-      "properties": {
-        "state": {
-          "description": "The current state of the Feature resource in the Hub API.",
-          "enumDescriptions": [
-            "State is unknown or not set.",
-            "The Feature is being enabled, and the Feature resource is being created. Once complete, the corresponding Feature will be enabled in this Hub.",
-            "The Feature is enabled in this Hub, and the Feature resource is fully available.",
-            "The Feature is being disabled in this Hub, and the Feature resource is being deleted.",
-            "The Feature resource is being updated.",
-            "The Feature resource is being updated by the Hub Service."
-          ],
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "ENABLING",
-            "ACTIVE",
-            "DISABLING",
-            "UPDATING",
-            "SERVICE_UPDATING"
-          ],
-          "type": "string"
-        }
-      },
-      "id": "FeatureResourceState",
-      "description": "FeatureResourceState describes the state of a Feature *resource* in the GkeHub API. See `FeatureState` for the \"running state\" of the Feature in the Hub and across Memberships.",
-      "type": "object"
+      "id": "ConfigManagementHierarchyControllerDeploymentState"
     },
     "MembershipFeatureState": {
       "type": "object",
-      "description": "MembershipFeatureState contains Feature status information for a single Membership.",
+      "id": "MembershipFeatureState",
       "properties": {
+        "servicemesh": {
+          "$ref": "ServiceMeshMembershipState",
+          "description": "Service Mesh-specific state."
+        },
         "configmanagement": {
           "$ref": "ConfigManagementMembershipState",
           "description": "Config Management-specific state."
@@ -1834,224 +1493,584 @@
           "$ref": "MeteringMembershipState",
           "description": "Metering-specific spec."
         },
-        "servicemesh": {
-          "$ref": "ServiceMeshMembershipState",
-          "description": "Service Mesh-specific state."
-        },
         "state": {
           "$ref": "FeatureState",
           "description": "The high-level state of this Feature for a single membership."
         }
       },
-      "id": "MembershipFeatureState"
+      "description": "MembershipFeatureState contains Feature status information for a single Membership."
+    },
+    "CloudAuditLoggingFeatureSpec": {
+      "type": "object",
+      "description": "Spec for Audit Logging Allowlisting.",
+      "properties": {
+        "allowlistedServiceAccounts": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer's entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)"
+        }
+      },
+      "id": "CloudAuditLoggingFeatureSpec"
+    },
+    "CommonFeatureState": {
+      "type": "object",
+      "description": "CommonFeatureState contains Hub-wide Feature status information.",
+      "properties": {
+        "state": {
+          "readOnly": true,
+          "description": "Output only. The \"running state\" of the Feature in this Hub.",
+          "$ref": "FeatureState"
+        },
+        "servicemesh": {
+          "description": "Service Mesh-specific state.",
+          "$ref": "ServiceMeshFeatureState"
+        }
+      },
+      "id": "CommonFeatureState"
+    },
+    "SetIamPolicyRequest": {
+      "properties": {
+        "policy": {
+          "$ref": "Policy",
+          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them."
+        },
+        "updateMask": {
+          "type": "string",
+          "description": "OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask will be modified. If no mask is provided, the following default mask is used: `paths: \"bindings, etag\"`",
+          "format": "google-fieldmask"
+        }
+      },
+      "description": "Request message for `SetIamPolicy` method.",
+      "id": "SetIamPolicyRequest",
+      "type": "object"
+    },
+    "MeteringMembershipState": {
+      "id": "MeteringMembershipState",
+      "type": "object",
+      "description": "Metering per-Membership Feature State.",
+      "properties": {
+        "lastMeasurementTime": {
+          "description": "The time stamp of the most recent measurement of the number of vCPUs in the cluster.",
+          "type": "string",
+          "format": "google-datetime"
+        },
+        "preciseLastMeasuredClusterVcpuCapacity": {
+          "description": "The vCPUs capacity in the cluster according to the most recent measurement (1/1000 precision).",
+          "type": "number",
+          "format": "float"
+        }
+      }
+    },
+    "OperationMetadata": {
+      "id": "OperationMetadata",
+      "type": "object",
+      "description": "Represents the metadata of the long-running operation.",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "description": "Output only. API version used to start the operation.",
+          "readOnly": true
+        },
+        "cancelRequested": {
+          "readOnly": true,
+          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+          "type": "boolean"
+        },
+        "statusDetail": {
+          "type": "string",
+          "description": "Output only. Human-readable status of the operation, if any.",
+          "readOnly": true
+        },
+        "verb": {
+          "description": "Output only. Name of the verb executed by the operation.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "target": {
+          "readOnly": true,
+          "description": "Output only. Server-defined resource path for the target of the operation.",
+          "type": "string"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Output only. The time the operation finished running.",
+          "readOnly": true
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "readOnly": true,
+          "description": "Output only. The time the operation was created.",
+          "type": "string"
+        }
+      }
+    },
+    "Expr": {
+      "id": "Expr",
+      "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
+        },
+        "location": {
+          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.",
+          "type": "string"
+        },
+        "expression": {
+          "description": "Textual representation of an expression in Common Expression Language syntax.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.",
+          "type": "string"
+        }
+      }
+    },
+    "ConfigManagementGatekeeperDeploymentState": {
+      "id": "ConfigManagementGatekeeperDeploymentState",
+      "description": "State of Policy Controller installation.",
+      "properties": {
+        "gatekeeperAudit": {
+          "description": "Status of gatekeeper-audit deployment.",
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ]
+        },
+        "gatekeeperControllerManagerState": {
+          "type": "string",
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "description": "Status of gatekeeper-controller-manager pod."
+        }
+      },
+      "type": "object"
+    },
+    "ServiceMeshMembershipState": {
+      "description": "MembershipState describes the state of the Service Mesh Hub Feature as analyzed by the Service Mesh Hub Controller, for single Membership.",
+      "properties": {
+        "analysisMessages": {
+          "readOnly": true,
+          "description": "Output only. Results of running Service Mesh analyzers.",
+          "type": "array",
+          "items": {
+            "$ref": "ServiceMeshAnalysisMessage"
+          }
+        }
+      },
+      "id": "ServiceMeshMembershipState",
+      "type": "object"
     },
     "ConfigManagementPolicyController": {
       "type": "object",
-      "description": "Configuration for Policy Controller",
-      "id": "ConfigManagementPolicyController",
       "properties": {
-        "referentialRulesEnabled": {
+        "logDeniesEnabled": {
           "type": "boolean",
-          "description": "Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated."
+          "description": "Logs all denies and dry run failures."
         },
         "auditIntervalSeconds": {
           "format": "int64",
           "type": "string",
           "description": "Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether."
         },
-        "enabled": {
-          "type": "boolean",
-          "description": "Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect."
-        },
         "exemptableNamespaces": {
-          "description": "The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.",
+          "type": "array",
           "items": {
             "type": "string"
           },
-          "type": "array"
+          "description": "The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster."
+        },
+        "enabled": {
+          "description": "Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.",
+          "type": "boolean"
+        },
+        "referentialRulesEnabled": {
+          "type": "boolean",
+          "description": "Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated."
         },
         "templateLibraryInstalled": {
-          "description": "Installs the default template library along with Policy Controller.",
-          "type": "boolean"
-        },
-        "logDeniesEnabled": {
-          "description": "Logs all denies and dry run failures.",
-          "type": "boolean"
-        }
-      }
-    },
-    "ConfigManagementGatekeeperDeploymentState": {
-      "description": "State of Policy Controller installation.",
-      "type": "object",
-      "properties": {
-        "gatekeeperControllerManagerState": {
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "type": "string",
-          "description": "Status of gatekeeper-controller-manager pod."
-        },
-        "gatekeeperAudit": {
-          "enumDescriptions": [
-            "Deployment's state cannot be determined",
-            "Deployment is not installed",
-            "Deployment is installed",
-            "Deployment was attempted to be installed, but has errors"
-          ],
-          "description": "Status of gatekeeper-audit deployment.",
-          "type": "string",
-          "enum": [
-            "DEPLOYMENT_STATE_UNSPECIFIED",
-            "NOT_INSTALLED",
-            "INSTALLED",
-            "ERROR"
-          ]
+          "type": "boolean",
+          "description": "Installs the default template library along with Policy Controller."
         }
       },
-      "id": "ConfigManagementGatekeeperDeploymentState"
+      "description": "Configuration for Policy Controller",
+      "id": "ConfigManagementPolicyController"
     },
-    "TestIamPermissionsRequest": {
+    "TestIamPermissionsResponse": {
+      "type": "object",
+      "description": "Response message for `TestIamPermissions` method.",
+      "id": "TestIamPermissionsResponse",
       "properties": {
         "permissions": {
-          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).",
           "items": {
             "type": "string"
           },
+          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed.",
           "type": "array"
-        }
-      },
-      "id": "TestIamPermissionsRequest",
-      "description": "Request message for `TestIamPermissions` method.",
-      "type": "object"
-    },
-    "AuditLogConfig": {
-      "description": "Provides the configuration for logging a type of permissions. Example: { \"audit_log_configs\": [ { \"log_type\": \"DATA_READ\", \"exempted_members\": [ \"user:jose@example.com\" ] }, { \"log_type\": \"DATA_WRITE\" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.",
-      "type": "object",
-      "id": "AuditLogConfig",
-      "properties": {
-        "exemptedMembers": {
-          "items": {
-            "type": "string"
-          },
-          "description": "Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.",
-          "type": "array"
-        },
-        "logType": {
-          "type": "string",
-          "enum": [
-            "LOG_TYPE_UNSPECIFIED",
-            "ADMIN_READ",
-            "DATA_WRITE",
-            "DATA_READ"
-          ],
-          "enumDescriptions": [
-            "Default case. Should never be this.",
-            "Admin reads. Example: CloudIAM getIamPolicy",
-            "Data writes. Example: CloudSQL Users create",
-            "Data reads. Example: CloudSQL Users list"
-          ],
-          "description": "The log type that this config enables."
         }
       }
     },
-    "ConfigManagementPolicyControllerVersion": {
+    "ConfigManagementHierarchyControllerConfig": {
       "type": "object",
-      "id": "ConfigManagementPolicyControllerVersion",
-      "description": "The build version of Gatekeeper Policy Controller is using.",
+      "description": "Configuration for Hierarchy Controller",
+      "properties": {
+        "enableHierarchicalResourceQuota": {
+          "type": "boolean",
+          "description": "Whether hierarchical resource quota is enabled in this cluster."
+        },
+        "enabled": {
+          "description": "Whether Hierarchy Controller is enabled in this cluster.",
+          "type": "boolean"
+        },
+        "enablePodTreeLabels": {
+          "description": "Whether pod tree labels are enabled in this cluster.",
+          "type": "boolean"
+        }
+      },
+      "id": "ConfigManagementHierarchyControllerConfig"
+    },
+    "ConfigManagementOperatorState": {
+      "type": "object",
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "ConfigManagementInstallError"
+          },
+          "type": "array",
+          "description": "Install errors."
+        },
+        "deploymentState": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "description": "The state of the Operator's deployment",
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "description": "The semenatic version number of the operator"
+        }
+      },
+      "description": "State information for an ACM's Operator",
+      "id": "ConfigManagementOperatorState"
+    },
+    "ConfigManagementBinauthzState": {
+      "type": "object",
+      "properties": {
+        "webhook": {
+          "enumDescriptions": [
+            "Deployment's state cannot be determined",
+            "Deployment is not installed",
+            "Deployment is installed",
+            "Deployment was attempted to be installed, but has errors"
+          ],
+          "description": "The state of the binauthz webhook.",
+          "enum": [
+            "DEPLOYMENT_STATE_UNSPECIFIED",
+            "NOT_INSTALLED",
+            "INSTALLED",
+            "ERROR"
+          ],
+          "type": "string"
+        },
+        "version": {
+          "$ref": "ConfigManagementBinauthzVersion",
+          "description": "The version of binauthz that is installed."
+        }
+      },
+      "id": "ConfigManagementBinauthzState",
+      "description": "State for Binauthz"
+    },
+    "ConfigManagementBinauthzVersion": {
+      "properties": {
+        "webhookVersion": {
+          "type": "string",
+          "description": "The version of the binauthz webhook."
+        }
+      },
+      "id": "ConfigManagementBinauthzVersion",
+      "type": "object",
+      "description": "The version of binauthz."
+    },
+    "ConfigManagementHierarchyControllerVersion": {
+      "type": "object",
+      "id": "ConfigManagementHierarchyControllerVersion",
+      "properties": {
+        "hnc": {
+          "type": "string",
+          "description": "Version for open source HNC"
+        },
+        "extension": {
+          "description": "Version for Hierarchy Controller extension",
+          "type": "string"
+        }
+      },
+      "description": "Version for Hierarchy Controller"
+    },
+    "Binding": {
+      "description": "Associates `members` with a `role`.",
+      "type": "object",
+      "id": "Binding",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
+        },
+        "condition": {
+          "$ref": "Expr",
+          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
+        },
+        "members": {
+          "items": {
+            "type": "string"
+          },
+          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. ",
+          "type": "array"
+        }
+      }
+    },
+    "MultiClusterIngressFeatureSpec": {
+      "properties": {
+        "configMembership": {
+          "description": "Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "id": "MultiClusterIngressFeatureSpec",
+      "description": "FeatureSpec contains the input for the MultiClusterIngress feature."
+    },
+    "ConfigManagementMembershipState": {
+      "type": "object",
+      "id": "ConfigManagementMembershipState",
+      "description": "State for Anthos Config Management",
+      "properties": {
+        "membershipSpec": {
+          "description": "Membership configuration in the cluster. This represents the actual state in the cluster, while the MembershipSpec in the FeatureSpec represents the intended state",
+          "$ref": "ConfigManagementMembershipSpec"
+        },
+        "policyControllerState": {
+          "$ref": "ConfigManagementPolicyControllerState",
+          "description": "PolicyController status"
+        },
+        "configSyncState": {
+          "$ref": "ConfigManagementConfigSyncState",
+          "description": "Current sync status"
+        },
+        "clusterName": {
+          "type": "string",
+          "description": "The user-defined name for the cluster used by ClusterSelectors to group clusters together. This should match Membership's membership_name, unless the user installed ACM on the cluster manually prior to enabling the ACM hub feature. Unique within a Anthos Config Management installation."
+        },
+        "binauthzState": {
+          "description": "Binauthz status",
+          "$ref": "ConfigManagementBinauthzState"
+        },
+        "hierarchyControllerState": {
+          "$ref": "ConfigManagementHierarchyControllerState",
+          "description": "Hierarchy Controller status"
+        },
+        "operatorState": {
+          "description": "Current install status of ACM's Operator",
+          "$ref": "ConfigManagementOperatorState"
+        }
+      }
+    },
+    "ServiceMeshAnalysisMessage": {
+      "properties": {
+        "args": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object."
+          },
+          "description": "A UI can combine these args with a template (based on message_base.type) to produce an internationalized message."
+        },
+        "description": {
+          "type": "string",
+          "description": "A human readable description of what the error means. It is suitable for non-internationalize display purposes."
+        },
+        "messageBase": {
+          "description": "Details common to all types of Istio and ServiceMesh analysis messages.",
+          "$ref": "ServiceMeshAnalysisMessageBase"
+        },
+        "resourcePaths": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "A list of strings specifying the resource identifiers that were the cause of message generation. A \"path\" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster"
+        }
+      },
+      "type": "object",
+      "description": "AnalysisMessage is a single message produced by an analyzer, and it used to communicate to the end user about the state of their Service Mesh configuration.",
+      "id": "ServiceMeshAnalysisMessage"
+    },
+    "ConfigManagementMembershipSpec": {
+      "id": "ConfigManagementMembershipSpec",
+      "description": "Configuration for a single cluster. Intended to parallel the ConfigManagement CR.",
       "properties": {
         "version": {
           "type": "string",
-          "description": "The gatekeeper image tag that is composed of ACM version, git tag, build number."
+          "description": "Version of ACM installed."
+        },
+        "configSync": {
+          "$ref": "ConfigManagementConfigSync",
+          "description": "Config Sync configuration for the cluster."
+        },
+        "policyController": {
+          "$ref": "ConfigManagementPolicyController",
+          "description": "Policy Controller configuration for the cluster."
+        },
+        "binauthz": {
+          "description": "Binauthz conifguration for the cluster.",
+          "$ref": "ConfigManagementBinauthzConfig"
+        },
+        "hierarchyController": {
+          "description": "Hierarchy Controller configuration for the cluster.",
+          "$ref": "ConfigManagementHierarchyControllerConfig"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "canonicalName": "GKE Hub",
+  "baseUrl": "https://gkehub.googleapis.com/",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
+  "basePath": "",
+  "title": "GKE Hub",
+  "version": "v1alpha",
+  "fullyEncodeReservedExpansion": true,
+  "discoveryVersion": "v1",
+  "ownerName": "Google",
+  "revision": "20210322",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "See, edit, configure, and delete your Google Cloud Platform data"
         }
       }
     }
   },
+  "name": "gkehub",
+  "documentationLink": "https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster",
   "parameters": {
-    "prettyPrint": {
-      "description": "Returns response with indentations and line breaks.",
+    "key": {
       "location": "query",
-      "type": "boolean",
-      "default": "true"
-    },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "location": "query",
-      "type": "string"
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
     },
     "$.xgafv": {
-      "location": "query",
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
       ],
-      "type": "string",
       "description": "V1 error format.",
+      "type": "string",
+      "location": "query",
       "enum": [
         "1",
         "2"
       ]
     },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+    "access_token": {
       "type": "string",
-      "location": "query"
+      "location": "query",
+      "description": "OAuth access token."
     },
     "callback": {
-      "location": "query",
       "description": "JSONP",
+      "location": "query",
       "type": "string"
     },
-    "uploadType": {
+    "fields": {
+      "location": "query",
       "type": "string",
-      "location": "query",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
+      "description": "Selector specifying which fields to include in a partial response."
     },
     "oauth_token": {
       "type": "string",
-      "description": "OAuth 2.0 token for the current user.",
-      "location": "query"
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user."
+    },
+    "upload_protocol": {
+      "location": "query",
+      "type": "string",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
     },
     "alt": {
-      "description": "Data format for response.",
+      "default": "json",
       "enum": [
         "json",
         "media",
         "proto"
       ],
-      "type": "string",
-      "default": "json",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
-      "location": "query"
-    },
-    "access_token": {
       "location": "query",
       "type": "string",
-      "description": "OAuth access token."
+      "description": "Data format for response."
+    },
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "type": "boolean",
+      "default": "true",
+      "location": "query"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "location": "query",
+      "type": "string"
     }
   },
-  "fullyEncodeReservedExpansion": true,
-  "name": "gkehub"
+  "version_module": true,
+  "id": "gkehub:v1alpha",
+  "description": "",
+  "mtlsRootUrl": "https://gkehub.mtls.googleapis.com/",
+  "kind": "discovery#restDescription",
+  "ownerDomain": "google.com",
+  "batchPath": "batch"
 }

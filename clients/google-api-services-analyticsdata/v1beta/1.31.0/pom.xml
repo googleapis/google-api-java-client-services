@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-analyticsadmin</artifactId>
-  <version>v1alpha-rev20210322-1.31.0</version>
-  <name>Google Analytics Admin API v1alpha-rev20210322-1.31.0</name>
+  <artifactId>google-api-services-analyticsdata</artifactId>
+  <version>v1beta-rev20210320-1.31.0</version>
+  <name>Google Analytics Data API v1beta-rev20210320-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -67,7 +67,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.api.services.analyticsadmin</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.api.services.analyticsdata</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Google Analytics Admin API ${project.version}</doctitle>
-          <windowtitle>Google Analytics Admin API ${project.version}</windowtitle>
+          <doctitle>Google Analytics Data API ${project.version}</doctitle>
+          <windowtitle>Google Analytics Data API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

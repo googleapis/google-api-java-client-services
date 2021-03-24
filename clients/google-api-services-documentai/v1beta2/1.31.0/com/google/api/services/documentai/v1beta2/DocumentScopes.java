@@ -23,7 +23,7 @@ package com.google.api.services.documentai.v1beta2;
  */
 public class DocumentScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

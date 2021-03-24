@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementGitConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpServiceAccountEmail;
+
+  /**
    * URL for the HTTPS proxy to be used when communicating with the Git repo.
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long syncWaitSecs;
+
+  /**
+   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpServiceAccountEmail() {
+    return gcpServiceAccountEmail;
+  }
+
+  /**
+   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
+   */
+  public ConfigManagementGitConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
+    this.gcpServiceAccountEmail = gcpServiceAccountEmail;
+    return this;
+  }
 
   /**
    * URL for the HTTPS proxy to be used when communicating with the Git repo.

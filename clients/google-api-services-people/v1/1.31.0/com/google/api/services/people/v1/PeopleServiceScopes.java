@@ -53,7 +53,7 @@ public class PeopleServiceScopes {
   /** See and download your personal phone numbers. */
   public static final String USER_PHONENUMBERS_READ = "https://www.googleapis.com/auth/user.phonenumbers.read";
 
-  /** View your email address. */
+  /** See your primary Google Account email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
   /** See your personal info, including any personal info you've made publicly available. */

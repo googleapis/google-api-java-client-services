@@ -144,7 +144,7 @@ packages on [Maven Central][maven-search].
 | Gmail Postmaster Tools API | [v1](clients/google-api-services-gmailpostmastertools/v1), [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Analytics Admin API | [v1alpha](clients/google-api-services-analyticsadmin/v1alpha) |
-| Google Analytics Data API | [v1alpha](clients/google-api-services-analyticsdata/v1alpha) |
+| Google Analytics Data API | [v1beta](clients/google-api-services-analyticsdata/v1beta) |
 | Google Chat API | [v1](clients/google-api-services-chat/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |

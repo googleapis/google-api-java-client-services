@@ -44,18 +44,18 @@ public final class FailureInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String errorMessage;
 
   /**
-   * Failed printers.
+   * Failed printer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Printer printer;
 
   /**
-   * Ids of failed printers.
+   * Id of a failed printer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String printerIds;
+  private java.lang.String printerId;
 
   /**
    * Canonical code for why the update failed to apply.
@@ -92,7 +92,7 @@ public final class FailureInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Failed printers.
+   * Failed printer.
    * @return value or {@code null} for none
    */
   public Printer getPrinter() {
@@ -100,7 +100,7 @@ public final class FailureInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Failed printers.
+   * Failed printer.
    * @param printer printer or {@code null} for none
    */
   public FailureInfo setPrinter(Printer printer) {
@@ -109,19 +109,19 @@ public final class FailureInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ids of failed printers.
+   * Id of a failed printer.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrinterIds() {
-    return printerIds;
+  public java.lang.String getPrinterId() {
+    return printerId;
   }
 
   /**
-   * Ids of failed printers.
-   * @param printerIds printerIds or {@code null} for none
+   * Id of a failed printer.
+   * @param printerId printerId or {@code null} for none
    */
-  public FailureInfo setPrinterIds(java.lang.String printerIds) {
-    this.printerIds = printerIds;
+  public FailureInfo setPrinterId(java.lang.String printerId) {
+    this.printerId = printerId;
     return this;
   }
 

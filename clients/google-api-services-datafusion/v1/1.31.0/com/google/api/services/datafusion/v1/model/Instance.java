@@ -88,6 +88,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Option to enable granular role-based access control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableRbac;
+
+  /**
    * Option to enable Stackdriver Logging.
    * The value may be {@code null}.
    */
@@ -339,6 +346,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Option to enable granular role-based access control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableRbac() {
+    return enableRbac;
+  }
+
+  /**
+   * Option to enable granular role-based access control.
+   * @param enableRbac enableRbac or {@code null} for none
+   */
+  public Instance setEnableRbac(java.lang.Boolean enableRbac) {
+    this.enableRbac = enableRbac;
     return this;
   }
 

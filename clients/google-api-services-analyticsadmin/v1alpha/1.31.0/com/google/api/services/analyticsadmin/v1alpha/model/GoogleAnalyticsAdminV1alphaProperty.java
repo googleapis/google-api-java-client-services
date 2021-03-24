@@ -85,10 +85,10 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   private java.lang.String parent;
 
   /**
-   * Reporting Time Zone, used as the day boundary for reports, regardless of where the data
-   * originates. If the time zone honors DST, Analytics will automatically adjust for the changes.
-   * NOTE: Changing the time zone only affects data going forward, and is not applied retroactively.
-   * Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
+   * Required. Reporting Time Zone, used as the day boundary for reports, regardless of where the
+   * data originates. If the time zone honors DST, Analytics will automatically adjust for the
+   * changes. NOTE: Changing the time zone only affects data going forward, and is not applied
+   * retroactively. Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,10 +231,10 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   }
 
   /**
-   * Reporting Time Zone, used as the day boundary for reports, regardless of where the data
-   * originates. If the time zone honors DST, Analytics will automatically adjust for the changes.
-   * NOTE: Changing the time zone only affects data going forward, and is not applied retroactively.
-   * Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
+   * Required. Reporting Time Zone, used as the day boundary for reports, regardless of where the
+   * data originates. If the time zone honors DST, Analytics will automatically adjust for the
+   * changes. NOTE: Changing the time zone only affects data going forward, and is not applied
+   * retroactively. Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -242,10 +242,10 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   }
 
   /**
-   * Reporting Time Zone, used as the day boundary for reports, regardless of where the data
-   * originates. If the time zone honors DST, Analytics will automatically adjust for the changes.
-   * NOTE: Changing the time zone only affects data going forward, and is not applied retroactively.
-   * Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
+   * Required. Reporting Time Zone, used as the day boundary for reports, regardless of where the
+   * data originates. If the time zone honors DST, Analytics will automatically adjust for the
+   * changes. NOTE: Changing the time zone only affects data going forward, and is not applied
+   * retroactively. Format: https://www.iana.org/time-zones Example: "America/Los_Angeles"
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaProperty setTimeZone(java.lang.String timeZone) {

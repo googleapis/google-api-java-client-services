@@ -40,7 +40,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this
-   * will be the resource name of the master billing account that it is being resold through.
+   * will be the resource name of the parent billing account that it is being resold through.
    * Otherwise this will be empty.
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this
-   * will be the resource name of the master billing account that it is being resold through.
+   * will be the resource name of the parent billing account that it is being resold through.
    * Otherwise this will be empty.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this
-   * will be the resource name of the master billing account that it is being resold through.
+   * will be the resource name of the parent billing account that it is being resold through.
    * Otherwise this will be empty.
    * @param masterBillingAccount masterBillingAccount or {@code null} for none
    */

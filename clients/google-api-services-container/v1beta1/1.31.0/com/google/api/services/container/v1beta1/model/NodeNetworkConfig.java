@@ -32,8 +32,8 @@ package com.google.api.services.container.v1beta1.model;
 public final class NodeNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. [Input only] Whether to create a new range for pod IPs in this node pool. Defaults
-   * are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
+   * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided
+   * for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
    * `create_pod_range` or `pod_range` are specified, the cluster-level default
    * (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.
    * The value may be {@code null}.
@@ -44,7 +44,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
    * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
    * use.
    * The value may be {@code null}.
@@ -54,15 +54,15 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for
-   * the new range.
+   * the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String podRange;
 
   /**
-   * Input only. [Input only] Whether to create a new range for pod IPs in this node pool. Defaults
-   * are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
+   * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided
+   * for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
    * `create_pod_range` or `pod_range` are specified, the cluster-level default
    * (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.
    * @return value or {@code null} for none
@@ -72,8 +72,8 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Input only. [Input only] Whether to create a new range for pod IPs in this node pool. Defaults
-   * are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
+   * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided
+   * for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
    * `create_pod_range` or `pod_range` are specified, the cluster-level default
    * (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used.
    * @param createPodRange createPodRange or {@code null} for none
@@ -86,7 +86,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
    * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
    * use.
    * @return value or {@code null} for none
@@ -98,7 +98,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
    * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
    * use.
    * @param podIpv4CidrBlock podIpv4CidrBlock or {@code null} for none
@@ -110,7 +110,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for
-   * the new range.
+   * the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getPodRange() {
@@ -119,7 +119,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for
-   * the new range.
+   * the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
    * @param podRange podRange or {@code null} for none
    */
   public NodeNetworkConfig setPodRange(java.lang.String podRange) {

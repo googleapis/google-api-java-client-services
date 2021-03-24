@@ -32,7 +32,7 @@ package com.google.api.services.container.model;
 public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which conditions caused the current cluster state.
+   * Which conditions caused the current cluster state. Deprecated. Use field error instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +54,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String endTime;
 
   /**
+   * The error result of the operation in case of failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
+
+  /**
    * [Output only] The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
@@ -71,7 +78,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Which conditions caused the current node pool state.
+   * Which conditions caused the current node pool state. Deprecated. Use field error instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +121,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Output only. If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error. Deprecated. Use the
+   * field error instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +145,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * Which conditions caused the current cluster state.
+   * Which conditions caused the current cluster state. Deprecated. Use field error instead.
    * @return value or {@code null} for none
    */
   public java.util.List<StatusCondition> getClusterConditions() {
@@ -145,7 +153,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which conditions caused the current cluster state.
+   * Which conditions caused the current cluster state. Deprecated. Use field error instead.
    * @param clusterConditions clusterConditions or {@code null} for none
    */
   public Operation setClusterConditions(java.util.List<StatusCondition> clusterConditions) {
@@ -190,6 +198,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The error result of the operation in case of failure.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * The error result of the operation in case of failure.
+   * @param error error or {@code null} for none
+   */
+  public Operation setError(Status error) {
+    this.error = error;
+    return this;
+  }
+
+  /**
    * [Output only] The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
@@ -230,7 +255,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which conditions caused the current node pool state.
+   * Which conditions caused the current node pool state. Deprecated. Use field error instead.
    * @return value or {@code null} for none
    */
   public java.util.List<StatusCondition> getNodepoolConditions() {
@@ -238,7 +263,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which conditions caused the current node pool state.
+   * Which conditions caused the current node pool state. Deprecated. Use field error instead.
    * @param nodepoolConditions nodepoolConditions or {@code null} for none
    */
   public Operation setNodepoolConditions(java.util.List<StatusCondition> nodepoolConditions) {
@@ -334,7 +359,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error. Deprecated. Use the
+   * field error instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -342,7 +368,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If an error has occurred, a textual description of the error.
+   * Output only. If an error has occurred, a textual description of the error. Deprecated. Use the
+   * field error instead.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public Operation setStatusMessage(java.lang.String statusMessage) {

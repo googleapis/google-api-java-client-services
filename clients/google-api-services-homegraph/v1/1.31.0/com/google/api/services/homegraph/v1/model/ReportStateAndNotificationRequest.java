@@ -49,9 +49,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   private java.lang.String eventId;
 
   /**
-   * Token to maintain state in the follow up notification response. Deprecated. See the
-   * [notifications guide](https://developers.google.com/assistant/smarthome/develop/notifications)
-   * for details on implementing follow up notifications.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,9 +104,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   }
 
   /**
-   * Token to maintain state in the follow up notification response. Deprecated. See the
-   * [notifications guide](https://developers.google.com/assistant/smarthome/develop/notifications)
-   * for details on implementing follow up notifications.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getFollowUpToken() {
@@ -116,9 +112,7 @@ public final class ReportStateAndNotificationRequest extends com.google.api.clie
   }
 
   /**
-   * Token to maintain state in the follow up notification response. Deprecated. See the
-   * [notifications guide](https://developers.google.com/assistant/smarthome/develop/notifications)
-   * for details on implementing follow up notifications.
+   * Deprecated.
    * @param followUpToken followUpToken or {@code null} for none
    */
   public ReportStateAndNotificationRequest setFollowUpToken(java.lang.String followUpToken) {

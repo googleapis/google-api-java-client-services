@@ -1,192 +1,150 @@
 {
-  "ownerName": "Google",
+  "mtlsRootUrl": "https://billingbudgets.mtls.googleapis.com/",
   "baseUrl": "https://billingbudgets.googleapis.com/",
-  "revision": "20210220",
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "ownerDomain": "google.com",
+  "description": "The Cloud Billing Budget API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
+  "rootUrl": "https://billingbudgets.googleapis.com/",
   "schemas": {
-    "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest": {
-      "description": "Request for CreateBudget",
-      "properties": {
-        "budget": {
-          "$ref": "GoogleCloudBillingBudgetsV1beta1Budget",
-          "description": "Required. Budget to create."
-        }
-      },
+    "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse": {
       "type": "object",
-      "id": "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest"
-    },
-    "GoogleCloudBillingBudgetsV1beta1Budget": {
-      "type": "object",
-      "id": "GoogleCloudBillingBudgetsV1beta1Budget",
       "properties": {
-        "etag": {
-          "description": "Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.",
+        "nextPageToken": {
+          "description": "If not empty, indicates that there may be more budgets that match the request; this value should be passed in a new `ListBudgetsRequest`.",
           "type": "string"
         },
-        "allUpdatesRule": {
-          "description": "Optional. Rules to apply to notifications sent based on budget spend and thresholds.",
-          "$ref": "GoogleCloudBillingBudgetsV1beta1AllUpdatesRule"
-        },
-        "amount": {
-          "description": "Required. Budgeted amount.",
-          "$ref": "GoogleCloudBillingBudgetsV1beta1BudgetAmount"
-        },
-        "displayName": {
-          "description": "User data for display name in UI. Validation: \u003c= 60 chars.",
-          "type": "string"
-        },
-        "budgetFilter": {
-          "$ref": "GoogleCloudBillingBudgetsV1beta1Filter",
-          "description": "Optional. Filters that define which resources are used to compute the actual spend against the budget."
-        },
-        "thresholdRules": {
+        "budgets": {
+          "type": "array",
+          "description": "List of the budgets owned by the requested billing account.",
           "items": {
-            "$ref": "GoogleCloudBillingBudgetsV1beta1ThresholdRule"
-          },
-          "description": "Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget.",
-          "type": "array"
-        },
-        "name": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`."
+            "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
+          }
         }
       },
-      "description": "A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to execute as spend is tracked against that plan, (for example, send an alert when 90% of the target spend is met). The budget time period is configurable, with options such as month (default), quarter, year, or custom time period."
+      "id": "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse",
+      "description": "Response for ListBudgets"
     },
-    "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount": {
-      "id": "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount",
+    "GoogleProtobufEmpty": {
       "properties": {},
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "id": "GoogleProtobufEmpty",
+      "type": "object"
+    },
+    "GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest": {
+      "description": "Request for UpdateBudget",
       "type": "object",
-      "description": "Describes a budget amount targeted to last period's spend. At this time, the amount is automatically 100% of last period's spend; that is, there are no other options yet. Future configuration will be described here (for example, configuring a percentage of last period's spend)."
+      "properties": {
+        "updateMask": {
+          "type": "string",
+          "format": "google-fieldmask",
+          "description": "Optional. Indicates which fields in the provided budget to update. Read-only fields (such as `name`) cannot be changed. If this is not provided, then only fields with non-default values from the request are updated. See https://developers.google.com/protocol-buffers/docs/proto3#default for more details about default values."
+        },
+        "budget": {
+          "description": "Required. The updated budget object. The budget to update is specified by the budget name in the budget.",
+          "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
+        }
+      },
+      "id": "GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest"
+    },
+    "GoogleCloudBillingBudgetsV1beta1CustomPeriod": {
+      "type": "object",
+      "id": "GoogleCloudBillingBudgetsV1beta1CustomPeriod",
+      "properties": {
+        "endDate": {
+          "$ref": "GoogleTypeDate",
+          "description": "Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date."
+        },
+        "startDate": {
+          "description": "Required. The start date must be after January 1, 2017.",
+          "$ref": "GoogleTypeDate"
+        }
+      },
+      "description": "All date times begin at 12 AM US and Canadian Pacific Time (UTC-8)."
+    },
+    "GoogleCloudBillingBudgetsV1beta1BudgetAmount": {
+      "properties": {
+        "specifiedAmount": {
+          "description": "A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.",
+          "$ref": "GoogleTypeMoney"
+        },
+        "lastPeriodAmount": {
+          "description": "Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.",
+          "$ref": "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount"
+        }
+      },
+      "description": "The budgeted amount for each usage period.",
+      "id": "GoogleCloudBillingBudgetsV1beta1BudgetAmount",
+      "type": "object"
+    },
+    "GoogleTypeMoney": {
+      "id": "GoogleTypeMoney",
+      "type": "object",
+      "properties": {
+        "nanos": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000."
+        },
+        "currencyCode": {
+          "description": "The three-letter currency code defined in ISO 4217.",
+          "type": "string"
+        },
+        "units": {
+          "description": "The whole units of the amount. For example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
+          "type": "string",
+          "format": "int64"
+        }
+      },
+      "description": "Represents an amount of money with its currency type."
     },
     "GoogleCloudBillingBudgetsV1beta1ThresholdRule": {
       "properties": {
         "spendBasis": {
-          "description": "Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.",
-          "type": "string",
           "enum": [
             "BASIS_UNSPECIFIED",
             "CURRENT_SPEND",
             "FORECASTED_SPEND"
           ],
+          "type": "string",
           "enumDescriptions": [
             "Unspecified threshold basis.",
             "Use current spend as the basis for comparison against the threshold.",
             "Use forecasted spend for the period as the basis for comparison against the threshold. Cannot be set in combination with Filter.custom_period."
-          ]
+          ],
+          "description": "Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set."
         },
         "thresholdPercent": {
-          "type": "number",
           "format": "double",
-          "description": "Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number."
+          "description": "Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.",
+          "type": "number"
         }
       },
+      "description": "ThresholdRule contains a definition of a threshold which triggers an alert (a notification of a threshold being crossed) to be sent when spend goes above the specified amount. Alerts are automatically e-mailed to users with the Billing Account Administrator role or the Billing Account User role. The thresholds here have no effect on notifications sent to anything configured under `Budget.all_updates_rule`.",
       "id": "GoogleCloudBillingBudgetsV1beta1ThresholdRule",
-      "type": "object",
-      "description": "ThresholdRule contains a definition of a threshold which triggers an alert (a notification of a threshold being crossed) to be sent when spend goes above the specified amount. Alerts are automatically e-mailed to users with the Billing Account Administrator role or the Billing Account User role. The thresholds here have no effect on notifications sent to anything configured under `Budget.all_updates_rule`."
-    },
-    "GoogleProtobufEmpty": {
-      "properties": {},
-      "type": "object",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
-      "id": "GoogleProtobufEmpty"
-    },
-    "GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest": {
-      "id": "GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest",
-      "properties": {
-        "budget": {
-          "$ref": "GoogleCloudBillingBudgetsV1beta1Budget",
-          "description": "Required. The updated budget object. The budget to update is specified by the budget name in the budget."
-        },
-        "updateMask": {
-          "type": "string",
-          "description": "Optional. Indicates which fields in the provided budget to update. Read-only fields (such as `name`) cannot be changed. If this is not provided, then only fields with non-default values from the request are updated. See https://developers.google.com/protocol-buffers/docs/proto3#default for more details about default values.",
-          "format": "google-fieldmask"
-        }
-      },
-      "description": "Request for UpdateBudget",
-      "type": "object"
-    },
-    "GoogleCloudBillingBudgetsV1beta1BudgetAmount": {
-      "description": "The budgeted amount for each usage period.",
-      "properties": {
-        "lastPeriodAmount": {
-          "description": "Use the last period's actual spend as the budget for the present period. Cannot be set in combination with Filter.custom_period.",
-          "$ref": "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount"
-        },
-        "specifiedAmount": {
-          "$ref": "GoogleTypeMoney",
-          "description": "A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output."
-        }
-      },
-      "id": "GoogleCloudBillingBudgetsV1beta1BudgetAmount",
-      "type": "object"
-    },
-    "GoogleTypeDate": {
-      "description": "Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values * A month and day value, with a zero year, such as an anniversary * A year on its own, with zero month and day values * A year and month value, with a zero day, such as a credit card expiration date Related types are google.type.TimeOfDay and `google.protobuf.Timestamp`.",
-      "properties": {
-        "year": {
-          "description": "Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "day": {
-          "type": "integer",
-          "description": "Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.",
-          "format": "int32"
-        },
-        "month": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day."
-        }
-      },
-      "id": "GoogleTypeDate",
-      "type": "object"
-    },
-    "GoogleCloudBillingBudgetsV1beta1CustomPeriod": {
-      "properties": {
-        "startDate": {
-          "$ref": "GoogleTypeDate",
-          "description": "Required. The start date must be after January 1, 2017."
-        },
-        "endDate": {
-          "description": "Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.",
-          "$ref": "GoogleTypeDate"
-        }
-      },
-      "id": "GoogleCloudBillingBudgetsV1beta1CustomPeriod",
-      "type": "object",
-      "description": "All date times begin at 12 AM US and Canadian Pacific Time (UTC-8)."
-    },
-    "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse": {
-      "id": "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse",
-      "description": "Response for ListBudgets",
-      "properties": {
-        "budgets": {
-          "description": "List of the budgets owned by the requested billing account.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
-          }
-        },
-        "nextPageToken": {
-          "description": "If not empty, indicates that there may be more budgets that match the request; this value should be passed in a new `ListBudgetsRequest`.",
-          "type": "string"
-        }
-      },
       "type": "object"
     },
     "GoogleCloudBillingBudgetsV1beta1Filter": {
+      "id": "GoogleCloudBillingBudgetsV1beta1Filter",
+      "description": "A filter for a budget, limiting the scope of the cost to calculate.",
+      "type": "object",
       "properties": {
-        "subaccounts": {
-          "type": "array",
+        "projects": {
+          "description": "Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.",
           "items": {
             "type": "string"
           },
-          "description": "Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist."
+          "type": "array"
+        },
+        "subaccounts": {
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account will be included. If omitted, the report will include usage from the parent account and all subaccounts, if they exist.",
+          "type": "array"
         },
         "calendarPeriod": {
+          "type": "string",
           "enumDescriptions": [
             "",
             "A month. Month starts on the first day of each month, such as January 1, February 1, March 1, and so on.",
@@ -199,379 +157,421 @@
             "MONTH",
             "QUARTER",
             "YEAR"
-          ],
-          "type": "string"
-        },
-        "services": {
-          "description": "Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
+          ]
         },
         "creditTypes": {
+          "type": "array",
+          "description": "Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "services": {
           "items": {
             "type": "string"
           },
           "type": "array",
-          "description": "Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type)."
-        },
-        "projects": {
-          "description": "Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report will include all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
+          "description": "Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api."
         },
         "customPeriod": {
-          "description": "Optional. Specifies to track usage from any start date (required) to any end date (optional).",
-          "$ref": "GoogleCloudBillingBudgetsV1beta1CustomPeriod"
+          "$ref": "GoogleCloudBillingBudgetsV1beta1CustomPeriod",
+          "description": "Optional. Specifies to track usage from any start date (required) to any end date (optional)."
+        },
+        "labels": {
+          "description": "Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "any"
+            }
+          },
+          "type": "object"
         },
         "creditTypesTreatment": {
+          "description": "Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.",
           "enum": [
             "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
             "INCLUDE_ALL_CREDITS",
             "EXCLUDE_ALL_CREDITS",
             "INCLUDE_SPECIFIED_CREDITS"
           ],
-          "type": "string",
           "enumDescriptions": [
             "",
             "All types of credit are subtracted from the gross cost to determine the spend for threshold calculations.",
             "All types of credit are added to the net cost to determine the spend for threshold calculations.",
             "Credit types specified in the credit_types field are subtracted from the gross cost to determine the spend for threshold calculations."
           ],
-          "description": "Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`."
+          "type": "string"
+        }
+      }
+    },
+    "GoogleCloudBillingBudgetsV1beta1Budget": {
+      "properties": {
+        "amount": {
+          "description": "Required. Budgeted amount.",
+          "$ref": "GoogleCloudBillingBudgetsV1beta1BudgetAmount"
         },
-        "labels": {
-          "description": "Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.",
-          "type": "object",
-          "additionalProperties": {
-            "items": {
-              "type": "any"
-            },
-            "type": "array"
+        "name": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User data for display name in UI. Validation: \u003c= 60 chars."
+        },
+        "allUpdatesRule": {
+          "$ref": "GoogleCloudBillingBudgetsV1beta1AllUpdatesRule",
+          "description": "Optional. Rules to apply to notifications sent based on budget spend and thresholds."
+        },
+        "etag": {
+          "type": "string",
+          "description": "Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes."
+        },
+        "budgetFilter": {
+          "$ref": "GoogleCloudBillingBudgetsV1beta1Filter",
+          "description": "Optional. Filters that define which resources are used to compute the actual spend against the budget."
+        },
+        "thresholdRules": {
+          "type": "array",
+          "description": "Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget.",
+          "items": {
+            "$ref": "GoogleCloudBillingBudgetsV1beta1ThresholdRule"
           }
         }
       },
-      "id": "GoogleCloudBillingBudgetsV1beta1Filter",
+      "description": "A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to execute as spend is tracked against that plan, (for example, send an alert when 90% of the target spend is met). The budget time period is configurable, with options such as month (default), quarter, year, or custom time period.",
       "type": "object",
-      "description": "A filter for a budget, limiting the scope of the cost to calculate."
+      "id": "GoogleCloudBillingBudgetsV1beta1Budget"
+    },
+    "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest": {
+      "id": "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest",
+      "properties": {
+        "budget": {
+          "$ref": "GoogleCloudBillingBudgetsV1beta1Budget",
+          "description": "Required. Budget to create."
+        }
+      },
+      "description": "Request for CreateBudget",
+      "type": "object"
     },
     "GoogleCloudBillingBudgetsV1beta1AllUpdatesRule": {
+      "type": "object",
+      "description": "AllUpdatesRule defines notifications that are sent based on budget spend and thresholds.",
+      "id": "GoogleCloudBillingBudgetsV1beta1AllUpdatesRule",
       "properties": {
-        "disableDefaultIamRecipients": {
-          "type": "boolean",
-          "description": "Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account."
+        "pubsubTopic": {
+          "description": "Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.",
+          "type": "string"
         },
         "monitoringNotificationChannels": {
+          "description": "Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.",
           "items": {
             "type": "string"
           },
-          "description": "Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.",
           "type": "array"
         },
         "schemaVersion": {
-          "description": "Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only \"1.0\" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.",
-          "type": "string"
-        },
-        "pubsubTopic": {
           "type": "string",
-          "description": "Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions."
+          "description": "Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only \"1.0\" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format."
+        },
+        "disableDefaultIamRecipients": {
+          "type": "boolean",
+          "description": "Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account."
         }
-      },
-      "description": "AllUpdatesRule defines notifications that are sent based on budget spend and thresholds.",
-      "type": "object",
-      "id": "GoogleCloudBillingBudgetsV1beta1AllUpdatesRule"
+      }
     },
-    "GoogleTypeMoney": {
+    "GoogleTypeDate": {
+      "type": "object",
       "properties": {
-        "nanos": {
-          "format": "int32",
+        "day": {
+          "description": "Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.",
           "type": "integer",
-          "description": "Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000."
+          "format": "int32"
         },
-        "currencyCode": {
-          "type": "string",
-          "description": "The three-letter currency code defined in ISO 4217."
+        "month": {
+          "format": "int32",
+          "description": "Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.",
+          "type": "integer"
         },
-        "units": {
-          "format": "int64",
-          "description": "The whole units of the amount. For example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
-          "type": "string"
+        "year": {
+          "format": "int32",
+          "description": "Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.",
+          "type": "integer"
         }
       },
-      "id": "GoogleTypeMoney",
+      "id": "GoogleTypeDate",
+      "description": "Represents a whole or partial calendar date, such as a birthday. The time of day and time zone are either specified elsewhere or are insignificant. The date is relative to the Gregorian Calendar. This can represent one of the following: * A full date, with non-zero year, month, and day values * A month and day value, with a zero year, such as an anniversary * A year on its own, with zero month and day values * A year and month value, with a zero day, such as a credit card expiration date Related types are google.type.TimeOfDay and `google.protobuf.Timestamp`."
+    },
+    "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount": {
+      "id": "GoogleCloudBillingBudgetsV1beta1LastPeriodAmount",
       "type": "object",
-      "description": "Represents an amount of money with its currency type."
+      "description": "Describes a budget amount targeted to last period's spend. At this time, the amount is automatically 100% of last period's spend; that is, there are no other options yet. Future configuration will be described here (for example, configuring a percentage of last period's spend).",
+      "properties": {}
     }
   },
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  "ownerName": "Google",
+  "canonicalName": "CloudBillingBudget",
+  "version": "v1beta1",
+  "documentationLink": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
+  "protocol": "rest",
+  "title": "Cloud Billing Budget API",
+  "batchPath": "batch",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "See, edit, configure, and delete your Google Cloud Platform data"
+        },
+        "https://www.googleapis.com/auth/cloud-billing": {
+          "description": "View and manage your Google Cloud Platform billing accounts"
+        }
+      }
+    }
   },
   "basePath": "",
-  "rootUrl": "https://billingbudgets.googleapis.com/",
   "resources": {
     "billingAccounts": {
       "resources": {
         "budgets": {
           "methods": {
-            "delete": {
-              "id": "billingbudgets.billingAccounts.budgets.delete",
+            "list": {
               "response": {
-                "$ref": "GoogleProtobufEmpty"
+                "$ref": "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse"
               },
-              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}",
-              "parameterOrder": [
-                "name"
-              ],
+              "id": "billingbudgets.billingAccounts.budgets.list",
+              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-billing",
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "parameters": {
-                "name": {
-                  "required": true,
-                  "description": "Required. Name of the budget to delete. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
+                "pageToken": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Optional. The value returned by the last `ListBudgetsResponse` which indicates that this is a continuation of a prior `ListBudgets` call, and that the system should return the next page of data."
+                },
+                "parent": {
+                  "pattern": "^billingAccounts/[^/]+$",
+                  "description": "Required. Name of billing account to list budgets under. Values are of the form `billingAccounts/{billingAccountId}`.",
                   "location": "path",
-                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$",
-                  "type": "string"
+                  "type": "string",
+                  "required": true
+                },
+                "pageSize": {
+                  "location": "query",
+                  "description": "Optional. The maximum number of budgets to return per page. The default and maximum value are 100.",
+                  "type": "integer",
+                  "format": "int32"
                 }
               },
-              "path": "v1beta1/{+name}",
-              "description": "Deletes a budget. Returns successfully if already deleted.",
-              "httpMethod": "DELETE"
+              "path": "v1beta1/{+parent}/budgets",
+              "description": "Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.",
+              "httpMethod": "GET",
+              "parameterOrder": [
+                "parent"
+              ]
             },
             "patch": {
-              "description": "Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.",
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}",
               "request": {
                 "$ref": "GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest"
               },
-              "httpMethod": "PATCH",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-billing",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
+              "path": "v1beta1/{+name}",
               "id": "billingbudgets.billingAccounts.budgets.patch",
               "parameters": {
                 "name": {
-                  "required": true,
-                  "description": "Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
                   "location": "path",
-                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$",
-                  "type": "string"
+                  "type": "string",
+                  "description": "Output only. Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
+                  "required": true,
+                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$"
                 }
               },
-              "path": "v1beta1/{+name}",
               "response": {
                 "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
-              }
-            },
-            "create": {
-              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets",
-              "id": "billingbudgets.billingAccounts.budgets.create",
-              "path": "v1beta1/{+parent}/budgets",
+              },
+              "description": "Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.",
+              "httpMethod": "PATCH",
+              "parameterOrder": [
+                "name"
+              ],
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-billing",
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "request": {
-                "$ref": "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest"
-              },
-              "response": {
-                "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
-              },
-              "httpMethod": "POST",
-              "description": "Creates a new budget. See Quotas and limits for more information on the limits of the number of budgets you can create.",
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "type": "string",
-                  "location": "path",
-                  "description": "Required. The name of the billing account to create the budget in. Values are of the form `billingAccounts/{billingAccountId}`.",
-                  "pattern": "^billingAccounts/[^/]+$"
-                }
-              }
+              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}"
             },
             "get": {
               "response": {
                 "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
               },
+              "httpMethod": "GET",
+              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}",
+              "description": "Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.",
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$",
+                  "description": "Required. Name of budget to get. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
+                  "required": true,
+                  "location": "path"
+                }
+              },
               "path": "v1beta1/{+name}",
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "billingbudgets.billingAccounts.budgets.get",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-billing",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            },
+            "create": {
+              "id": "billingbudgets.billingAccounts.budgets.create",
+              "response": {
+                "$ref": "GoogleCloudBillingBudgetsV1beta1Budget"
+              },
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "description": "Required. The name of the billing account to create the budget in. Values are of the form `billingAccounts/{billingAccountId}`.",
+                  "location": "path",
+                  "required": true,
+                  "pattern": "^billingAccounts/[^/]+$"
+                }
+              },
+              "path": "v1beta1/{+parent}/budgets",
+              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets",
+              "request": {
+                "$ref": "GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest"
+              },
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "parent"
+              ],
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-billing",
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}",
-              "parameters": {
-                "name": {
-                  "description": "Required. Name of budget to get. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
-                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$",
-                  "location": "path",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "id": "billingbudgets.billingAccounts.budgets.get",
-              "description": "Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.",
+              "description": "Creates a new budget. See Quotas and limits for more information on the limits of the number of budgets you can create."
+            },
+            "delete": {
               "parameterOrder": [
                 "name"
               ],
-              "httpMethod": "GET"
-            },
-            "list": {
-              "id": "billingbudgets.billingAccounts.budgets.list",
-              "httpMethod": "GET",
-              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets",
-              "parameterOrder": [
-                "parent"
-              ],
+              "description": "Deletes a budget. Returns successfully if already deleted.",
+              "path": "v1beta1/{+name}",
               "parameters": {
-                "pageSize": {
-                  "location": "query",
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Optional. The maximum number of budgets to return per page. The default and maximum value are 100."
-                },
-                "pageToken": {
-                  "type": "string",
-                  "description": "Optional. The value returned by the last `ListBudgetsResponse` which indicates that this is a continuation of a prior `ListBudgets` call, and that the system should return the next page of data.",
-                  "location": "query"
-                },
-                "parent": {
-                  "type": "string",
+                "name": {
+                  "description": "Required. Name of the budget to delete. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.",
+                  "pattern": "^billingAccounts/[^/]+/budgets/[^/]+$",
                   "required": true,
-                  "location": "path",
-                  "description": "Required. Name of billing account to list budgets under. Values are of the form `billingAccounts/{billingAccountId}`.",
-                  "pattern": "^billingAccounts/[^/]+$"
+                  "type": "string",
+                  "location": "path"
                 }
               },
-              "description": "Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.",
+              "httpMethod": "DELETE",
+              "id": "billingbudgets.billingAccounts.budgets.delete",
+              "flatPath": "v1beta1/billingAccounts/{billingAccountsId}/budgets/{budgetsId}",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-billing",
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "response": {
-                "$ref": "GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse"
-              },
-              "path": "v1beta1/{+parent}/budgets"
+                "$ref": "GoogleProtobufEmpty"
+              }
             }
           }
         }
       }
     }
   },
-  "version": "v1beta1",
-  "documentationLink": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-billing": {
-          "description": "View and manage your Google Cloud Platform billing accounts"
-        },
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "version_module": true,
-  "description": "The Cloud Billing Budget API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
-  "mtlsRootUrl": "https://billingbudgets.mtls.googleapis.com/",
   "name": "billingbudgets",
-  "batchPath": "batch",
-  "discoveryVersion": "v1",
   "id": "billingbudgets:v1beta1",
-  "title": "Cloud Billing Budget API",
-  "ownerDomain": "google.com",
-  "fullyEncodeReservedExpansion": true,
-  "protocol": "rest",
+  "version_module": true,
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
   "servicePath": "",
-  "canonicalName": "CloudBillingBudget",
+  "revision": "20210319",
+  "fullyEncodeReservedExpansion": true,
   "parameters": {
-    "upload_protocol": {
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "location": "query",
-      "type": "string"
-    },
-    "fields": {
-      "type": "string",
-      "location": "query",
-      "description": "Selector specifying which fields to include in a partial response."
-    },
-    "access_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth access token."
-    },
-    "quotaUser": {
-      "location": "query",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string"
-    },
     "prettyPrint": {
-      "type": "boolean",
-      "default": "true",
       "location": "query",
+      "default": "true",
+      "type": "boolean",
       "description": "Returns response with indentations and line breaks."
     },
-    "oauth_token": {
-      "location": "query",
+    "callback": {
       "type": "string",
-      "description": "OAuth 2.0 token for the current user."
+      "description": "JSONP",
+      "location": "query"
     },
-    "key": {
-      "type": "string",
+    "uploadType": {
       "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "type": "string"
     },
     "$.xgafv": {
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
       ],
+      "description": "V1 error format.",
       "enum": [
         "1",
         "2"
       ],
       "type": "string",
+      "location": "query"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
       "location": "query",
-      "description": "V1 error format."
+      "type": "string"
+    },
+    "upload_protocol": {
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string"
+    },
+    "oauth_token": {
+      "type": "string",
+      "description": "OAuth 2.0 token for the current user.",
+      "location": "query"
     },
     "alt": {
-      "location": "query",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "type": "string",
-      "description": "Data format for response.",
       "enum": [
         "json",
         "media",
         "proto"
       ],
-      "default": "json"
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "location": "query",
+      "default": "json",
+      "description": "Data format for response.",
+      "type": "string"
     },
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "type": "string",
-      "location": "query"
-    },
-    "callback": {
+    "access_token": {
       "type": "string",
       "location": "query",
-      "description": "JSONP"
+      "description": "OAuth access token."
+    },
+    "key": {
+      "type": "string",
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "fields": {
+      "location": "query",
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response."
     }
-  },
-  "kind": "discovery#restDescription"
+  }
 }

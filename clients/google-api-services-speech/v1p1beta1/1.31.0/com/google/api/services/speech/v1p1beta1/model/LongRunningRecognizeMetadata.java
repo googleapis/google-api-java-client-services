@@ -40,6 +40,13 @@ public final class LongRunningRecognizeMetadata extends com.google.api.client.js
   private String lastUpdateTime;
 
   /**
+   * Output only. A copy of the TranscriptOutputConfig if it was set in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TranscriptOutputConfig outputConfig;
+
+  /**
    * Approximate percentage of audio processed thus far. Guaranteed to be 100 when the audio is
    * fully processed and the results are available.
    * The value may be {@code null}.
@@ -76,6 +83,23 @@ public final class LongRunningRecognizeMetadata extends com.google.api.client.js
    */
   public LongRunningRecognizeMetadata setLastUpdateTime(String lastUpdateTime) {
     this.lastUpdateTime = lastUpdateTime;
+    return this;
+  }
+
+  /**
+   * Output only. A copy of the TranscriptOutputConfig if it was set in the request.
+   * @return value or {@code null} for none
+   */
+  public TranscriptOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Output only. A copy of the TranscriptOutputConfig if it was set in the request.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public LongRunningRecognizeMetadata setOutputConfig(TranscriptOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
     return this;
   }
 

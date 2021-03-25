@@ -26,7 +26,7 @@ public class CloudBillingBudgetScopes {
   /** View and manage your Google Cloud Platform billing accounts. */
   public static final String CLOUD_BILLING = "https://www.googleapis.com/auth/cloud-billing";
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

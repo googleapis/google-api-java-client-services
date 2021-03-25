@@ -170,10 +170,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String redisVersion;
 
   /**
-   * Optional. The CIDR range of internal addresses that are reserved for this instance. If not
-   * provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or
-   * 192.168.0.0/29. Ranges must be unique and non-overlapping with existing subnets in an
-   * authorized network.
+   * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for
+   * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
+   * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
+   * associated with this private service access connection. If not provided, the service will
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -542,10 +543,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The CIDR range of internal addresses that are reserved for this instance. If not
-   * provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or
-   * 192.168.0.0/29. Ranges must be unique and non-overlapping with existing subnets in an
-   * authorized network.
+   * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for
+   * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
+   * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
+   * associated with this private service access connection. If not provided, the service will
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedIpRange() {
@@ -553,10 +555,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The CIDR range of internal addresses that are reserved for this instance. If not
-   * provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or
-   * 192.168.0.0/29. Ranges must be unique and non-overlapping with existing subnets in an
-   * authorized network.
+   * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for
+   * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
+   * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
+   * associated with this private service access connection. If not provided, the service will
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
    * @param reservedIpRange reservedIpRange or {@code null} for none
    */
   public Instance setReservedIpRange(java.lang.String reservedIpRange) {

@@ -768,6 +768,15 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   public static final class TransferInfo extends com.google.api.client.json.GenericJson {
 
     /**
+     * Sku id of the current resold subscription. This is populated only when customer has
+     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
+     * transfer in.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String currentLegacySkuId;
+
+    /**
      * When inserting a subscription, this is the minimum number of seats listed in the transfer order
      * for this product. For example, if the customer has 20 users, the reseller cannot place a
      * transfer order of 15 seats. The minimum is 20 seats.
@@ -783,6 +792,27 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long transferabilityExpirationTime;
+
+    /**
+     * Sku id of the current resold subscription. This is populated only when customer has
+     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
+     * transfer in.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCurrentLegacySkuId() {
+      return currentLegacySkuId;
+    }
+
+    /**
+     * Sku id of the current resold subscription. This is populated only when customer has
+     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
+     * transfer in.
+     * @param currentLegacySkuId currentLegacySkuId or {@code null} for none
+     */
+    public TransferInfo setCurrentLegacySkuId(java.lang.String currentLegacySkuId) {
+      this.currentLegacySkuId = currentLegacySkuId;
+      return this;
+    }
 
     /**
      * When inserting a subscription, this is the minimum number of seats listed in the transfer order

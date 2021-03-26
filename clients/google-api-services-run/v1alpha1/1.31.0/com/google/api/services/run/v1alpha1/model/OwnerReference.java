@@ -55,8 +55,8 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   private java.lang.Boolean controller;
 
   /**
-   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#types-kinds
+   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#types-kinds
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#types-kinds
+   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#types-kinds
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -143,8 +143,8 @@ public final class OwnerReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#types-kinds
+   * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#types-kinds
    * @param kind kind or {@code null} for none
    */
   public OwnerReference setKind(java.lang.String kind) {

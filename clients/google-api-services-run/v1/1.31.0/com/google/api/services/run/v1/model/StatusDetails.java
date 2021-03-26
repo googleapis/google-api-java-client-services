@@ -56,7 +56,8 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,8 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -136,7 +138,8 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
    * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds +optional
+   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * +optional
    * @param kind kind or {@code null} for none
    */
   public StatusDetails setKind(java.lang.String kind) {

@@ -38,6 +38,13 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.util.List<Mutation> mutations;
 
   /**
+   * Common options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * If `true`, then statistics related to the transaction will be included in the CommitResponse.
    * Default value is `false`.
    * The value may be {@code null}.
@@ -79,6 +86,23 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   public CommitRequest setMutations(java.util.List<Mutation> mutations) {
     this.mutations = mutations;
+    return this;
+  }
+
+  /**
+   * Common options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Common options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public CommitRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

@@ -75,6 +75,13 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String partitionToken;
 
   /**
+   * Common options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * If this request is resuming a previously interrupted read, `resume_token` should be copied from
    * the last PartialResultSet yielded before the interruption. Doing this enables the new read to
    * resume where the last read left off. The rest of the request parameters must exactly match the
@@ -233,6 +240,23 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    */
   public ReadRequest encodePartitionToken(byte[] partitionToken) {
     this.partitionToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(partitionToken);
+    return this;
+  }
+
+  /**
+   * Common options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Common options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public ReadRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

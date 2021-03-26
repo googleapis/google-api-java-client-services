@@ -23,7 +23,7 @@ package com.google.api.services.monitoring.v3;
  */
 public class MonitoringScopes {
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** View and write monitoring data for all of your Google and third-party Cloud and API projects. */

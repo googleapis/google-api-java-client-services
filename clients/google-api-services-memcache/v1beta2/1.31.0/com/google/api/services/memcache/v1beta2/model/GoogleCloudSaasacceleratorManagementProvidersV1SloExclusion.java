@@ -53,7 +53,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
 
   /**
    * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
-   * should be excluded from all SLIs defined in the service SLO configuration.
+   * should be excluded from all SLIs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
 
   /**
    * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
-   * should be excluded from all SLIs defined in the service SLO configuration.
+   * should be excluded from all SLIs.
    * @return value or {@code null} for none
    */
   public java.lang.String getSliName() {
@@ -125,7 +125,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
 
   /**
    * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
-   * should be excluded from all SLIs defined in the service SLO configuration.
+   * should be excluded from all SLIs.
    * @param sliName sliName or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setSliName(java.lang.String sliName) {

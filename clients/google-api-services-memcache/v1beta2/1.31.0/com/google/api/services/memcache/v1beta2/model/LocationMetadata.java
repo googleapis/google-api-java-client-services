@@ -28,7 +28,7 @@ package com.google.api.services.memcache.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudMemcacheV1beta2LocationMetadata extends com.google.api.client.json.GenericJson {
+public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The set of available zones in the location. The map is keyed by the lowercase ID
@@ -37,7 +37,7 @@ public final class GoogleCloudMemcacheV1beta2LocationMetadata extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, GoogleCloudMemcacheV1beta2ZoneMetadata> availableZones;
+  private java.util.Map<String, ZoneMetadata> availableZones;
 
   /**
    * Output only. The set of available zones in the location. The map is keyed by the lowercase ID
@@ -45,7 +45,7 @@ public final class GoogleCloudMemcacheV1beta2LocationMetadata extends com.google
    * a Memcached instance.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, GoogleCloudMemcacheV1beta2ZoneMetadata> getAvailableZones() {
+  public java.util.Map<String, ZoneMetadata> getAvailableZones() {
     return availableZones;
   }
 
@@ -55,19 +55,19 @@ public final class GoogleCloudMemcacheV1beta2LocationMetadata extends com.google
    * a Memcached instance.
    * @param availableZones availableZones or {@code null} for none
    */
-  public GoogleCloudMemcacheV1beta2LocationMetadata setAvailableZones(java.util.Map<String, GoogleCloudMemcacheV1beta2ZoneMetadata> availableZones) {
+  public LocationMetadata setAvailableZones(java.util.Map<String, ZoneMetadata> availableZones) {
     this.availableZones = availableZones;
     return this;
   }
 
   @Override
-  public GoogleCloudMemcacheV1beta2LocationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudMemcacheV1beta2LocationMetadata) super.set(fieldName, value);
+  public LocationMetadata set(String fieldName, Object value) {
+    return (LocationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudMemcacheV1beta2LocationMetadata clone() {
-    return (GoogleCloudMemcacheV1beta2LocationMetadata) super.clone();
+  public LocationMetadata clone() {
+    return (LocationMetadata) super.clone();
   }
 
 }

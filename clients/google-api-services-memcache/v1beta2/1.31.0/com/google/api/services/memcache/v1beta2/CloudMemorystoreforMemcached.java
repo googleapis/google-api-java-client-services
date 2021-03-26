@@ -443,49 +443,69 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return this;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+       "displayName=tokyo", and is documented in more detail in [AIP-160](https://google.aip.dev/160).
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
+        /**
+         * A filter to narrow down results to a preferred subset. The filtering language accepts
+         * strings like "displayName=tokyo", and is documented in more detail in
+         * [AIP-160](https://google.aip.dev/160).
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /** The maximum number of results to return. If not set, the service will select a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
+        /**
+         * The maximum number of results to return. If not set, the service will select a default.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /** A page token received from the `next_page_token` field in the response. Send that page token to
+       receive the subsequent page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
+        /**
+         * A page token received from the `next_page_token` field in the response. Send that page
+         * token to receive the subsequent page.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -518,8 +538,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
       public class Instances {
 
         /**
-         * ApplyParameters will restart the set of specified nodes in order to update them to the current
-         * set of parameters for the Memcached Instance.
+         * `ApplyParameters` restarts the set of specified nodes in order to update them to the current set
+         * of parameters for the Memcached Instance.
          *
          * Create a request for the method "instances.applyParameters".
          *
@@ -545,7 +565,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * ApplyParameters will restart the set of specified nodes in order to update them to the current
+           * `ApplyParameters` restarts the set of specified nodes in order to update them to the current
            * set of parameters for the Memcached Instance.
            *
            * Create a request for the method "instances.applyParameters".
@@ -937,8 +957,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Required. The logical name of the Memcached instance in the user project with the
            * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
            * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
-           * or a letter. * Must be unique within the user project / location If any of the above
-           * are not met, will raise an invalid argument error.
+           * or a letter. * Must be unique within the user project / location. If any of the above
+           * are not met, the API raises an invalid argument error.
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
@@ -946,8 +966,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /** Required. The logical name of the Memcached instance in the user project with the following
          restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
          letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
-         within the user project / location If any of the above are not met, will raise an invalid argument
-         error.
+         within the user project / location. If any of the above are not met, the API raises an invalid
+         argument error.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
@@ -957,8 +977,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Required. The logical name of the Memcached instance in the user project with the
            * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
            * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
-           * or a letter. * Must be unique within the user project / location If any of the above
-           * are not met, will raise an invalid argument error.
+           * or a letter. * Must be unique within the user project / location. If any of the above
+           * are not met, the API raises an invalid argument error.
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -1411,13 +1431,13 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * List filter. For example, exclude all Memcached instances with name as my-instance by
-           * specifying "name != my-instance".
+           * specifying `"name != my-instance"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** List filter. For example, exclude all Memcached instances with name as my-instance by specifying
-         "name != my-instance".
+         `"name != my-instance"`.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1425,7 +1445,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * List filter. For example, exclude all Memcached instances with name as my-instance by
-           * specifying "name != my-instance".
+           * specifying `"name != my-instance"`.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1450,17 +1470,17 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * The maximum number of items to return. If not specified, a default value of 1000 will
-           * be used by the service. Regardless of the page_size value, the response may include a
-           * partial list and a caller should only rely on response's next_page_token to determine
+           * be used by the service. Regardless of the `page_size` value, the response may include a
+           * partial list and a caller should only rely on response's `next_page_token` to determine
            * if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of items to return. If not specified, a default value of 1000 will be used by
-         the service. Regardless of the page_size value, the response may include a partial list and a
-         caller should only rely on response's next_page_token to determine if there are more instances left
-         to be queried.
+         the service. Regardless of the `page_size` value, the response may include a partial list and a
+         caller should only rely on response's `next_page_token` to determine if there are more instances
+         left to be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1468,8 +1488,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * The maximum number of items to return. If not specified, a default value of 1000 will
-           * be used by the service. Regardless of the page_size value, the response may include a
-           * partial list and a caller should only rely on response's next_page_token to determine
+           * be used by the service. Regardless of the `page_size` value, the response may include a
+           * partial list and a caller should only rely on response's `next_page_token` to determine
            * if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -1477,17 +1497,17 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
             return this;
           }
 
-          /** The next_page_token value returned from a previous List request, if any. */
+          /** The `next_page_token` value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token value returned from a previous List request, if any.
+          /** The `next_page_token` value returned from a previous List request, if any.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The next_page_token value returned from a previous List request, if any. */
+          /** The `next_page_token` value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1508,9 +1528,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          *
          * @param name Required. Unique name of the resource in this scope including project and location using the form:
          *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
-         *        instances are managed and addressed at regional level so location_id here refers to a GCP
-         *        region; however, users may choose which zones Memcached nodes within an instances should
-         *        be provisioned in. Refer to [zones] field for more details.
+         *        instances are managed and addressed at the regional level so `location_id` here refers to
+         *        a Google Cloud region; however, users may choose which zones Memcached nodes should be
+         *        provisioned in within an instance. Refer to zones field for more details.
          * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
          * @return the request
          */
@@ -1540,9 +1560,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            *
            * @param name Required. Unique name of the resource in this scope including project and location using the form:
          *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
-         *        instances are managed and addressed at regional level so location_id here refers to a GCP
-         *        region; however, users may choose which zones Memcached nodes within an instances should
-         *        be provisioned in. Refer to [zones] field for more details.
+         *        instances are managed and addressed at the regional level so `location_id` here refers to
+         *        a Google Cloud region; however, users may choose which zones Memcached nodes should be
+         *        provisioned in within an instance. Refer to zones field for more details.
            * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
            * @since 1.13
            */
@@ -1614,18 +1634,19 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           * Note: Memcached instances are managed and addressed at regional level so location_id
-           * here refers to a GCP region; however, users may choose which zones Memcached nodes
-           * within an instances should be provisioned in. Refer to [zones] field for more details.
+           * Note: Memcached instances are managed and addressed at the regional level so
+           * `location_id` here refers to a Google Cloud region; however, users may choose which
+           * zones Memcached nodes should be provisioned in within an instance. Refer to zones field
+           * for more details.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Unique name of the resource in this scope including project and location using the form:
          `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances
-         are managed and addressed at regional level so location_id here refers to a GCP region; however,
-         users may choose which zones Memcached nodes within an instances should be provisioned in. Refer to
-         [zones] field for more details.
+         are managed and addressed at the regional level so `location_id` here refers to a Google Cloud
+         region; however, users may choose which zones Memcached nodes should be provisioned in within an
+         instance. Refer to zones field for more details.
            */
           public java.lang.String getName() {
             return name;
@@ -1634,9 +1655,10 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           * Note: Memcached instances are managed and addressed at regional level so location_id
-           * here refers to a GCP region; however, users may choose which zones Memcached nodes
-           * within an instances should be provisioned in. Refer to [zones] field for more details.
+           * Note: Memcached instances are managed and addressed at the regional level so
+           * `location_id` here refers to a Google Cloud region; however, users may choose which
+           * zones Memcached nodes should be provisioned in within an instance. Refer to zones field
+           * for more details.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1670,9 +1692,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Updates the defined Memcached Parameters for an existing Instance. This method only stages the
-         * parameters, it must be followed by ApplyParameters to apply the parameters to nodes of the
-         * Memcached Instance.
+         * Updates the defined Memcached parameters for an existing instance. This method only stages the
+         * parameters, it must be followed by `ApplyParameters` to apply the parameters to nodes of the
+         * Memcached instance.
          *
          * Create a request for the method "instances.updateParameters".
          *
@@ -1697,9 +1719,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Updates the defined Memcached Parameters for an existing Instance. This method only stages the
-           * parameters, it must be followed by ApplyParameters to apply the parameters to nodes of the
-           * Memcached Instance.
+           * Updates the defined Memcached parameters for an existing instance. This method only stages the
+           * parameters, it must be followed by `ApplyParameters` to apply the parameters to nodes of the
+           * Memcached instance.
            *
            * Create a request for the method "instances.updateParameters".
            *

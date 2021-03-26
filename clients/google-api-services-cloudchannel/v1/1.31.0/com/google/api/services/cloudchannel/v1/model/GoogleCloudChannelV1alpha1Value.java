@@ -30,6 +30,13 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1alpha1Value extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents a boolean value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean boolValue;
+
+  /**
    * Represents a double value.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class GoogleCloudChannelV1alpha1Value extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
+
+  /**
+   * Represents a boolean value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBoolValue() {
+    return boolValue;
+  }
+
+  /**
+   * Represents a boolean value.
+   * @param boolValue boolValue or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1Value setBoolValue(java.lang.Boolean boolValue) {
+    this.boolValue = boolValue;
+    return this;
+  }
 
   /**
    * Represents a double value.

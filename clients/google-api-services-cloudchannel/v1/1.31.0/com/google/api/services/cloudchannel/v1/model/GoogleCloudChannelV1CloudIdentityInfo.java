@@ -58,7 +58,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfo extends com.google.api.
   private GoogleCloudChannelV1EduData eduData;
 
   /**
-   * Whether the domain is verified.
+   * Output only. Whether the domain is verified. This field is not returned for a Customer's
+   * cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's
+   * Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain
+   * verification of their resolve Workspace customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +157,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfo extends com.google.api.
   }
 
   /**
-   * Whether the domain is verified.
+   * Output only. Whether the domain is verified. This field is not returned for a Customer's
+   * cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's
+   * Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain
+   * verification of their resolve Workspace customers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDomainVerified() {
@@ -162,7 +168,10 @@ public final class GoogleCloudChannelV1CloudIdentityInfo extends com.google.api.
   }
 
   /**
-   * Whether the domain is verified.
+   * Output only. Whether the domain is verified. This field is not returned for a Customer's
+   * cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's
+   * Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain
+   * verification of their resolve Workspace customers.
    * @param isDomainVerified isDomainVerified or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityInfo setIsDomainVerified(java.lang.Boolean isDomainVerified) {

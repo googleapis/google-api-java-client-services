@@ -37,6 +37,15 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
   private TransactionOptions options;
 
   /**
+   * Common options for this request. Priority is ignored for this request. Setting the priority in
+   * this request_options struct will not do anything. To set the priority for a transaction, set it
+   * on the reads and writes that are part of this transaction instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * Required. Options for the new transaction.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
    */
   public BeginTransactionRequest setOptions(TransactionOptions options) {
     this.options = options;
+    return this;
+  }
+
+  /**
+   * Common options for this request. Priority is ignored for this request. Setting the priority in
+   * this request_options struct will not do anything. To set the priority for a transaction, set it
+   * on the reads and writes that are part of this transaction instead.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Common options for this request. Priority is ignored for this request. Setting the priority in
+   * this request_options struct will not do anything. To set the priority for a transaction, set it
+   * on the reads and writes that are part of this transaction instead.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public BeginTransactionRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

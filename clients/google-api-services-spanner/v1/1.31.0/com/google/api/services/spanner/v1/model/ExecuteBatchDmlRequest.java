@@ -30,6 +30,13 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Common options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * Required. A per-transaction sequence number used to identify this request. This field makes
    * each request idempotent such that if the request is received multiple times, at most one will
    * succeed. The sequence number must be monotonically increasing within the transaction. If a
@@ -59,6 +66,23 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private TransactionSelector transaction;
+
+  /**
+   * Common options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Common options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public ExecuteBatchDmlRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
+    return this;
+  }
 
   /**
    * Required. A per-transaction sequence number used to identify this request. This field makes

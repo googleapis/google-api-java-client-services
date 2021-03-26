@@ -78,6 +78,13 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private QueryOptions queryOptions;
 
   /**
+   * Common options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * If this request is resuming a previously interrupted SQL statement execution, `resume_token`
    * should be copied from the last PartialResultSet yielded before the interruption. Doing this
    * enables the new SQL statement execution to resume where the last one left off. The rest of the
@@ -257,6 +264,23 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlRequest setQueryOptions(QueryOptions queryOptions) {
     this.queryOptions = queryOptions;
+    return this;
+  }
+
+  /**
+   * Common options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Common options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public ExecuteSqlRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

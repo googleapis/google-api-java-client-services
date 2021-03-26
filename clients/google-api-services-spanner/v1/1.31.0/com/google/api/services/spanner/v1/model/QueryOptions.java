@@ -30,16 +30,16 @@ package com.google.api.services.spanner.v1.model;
 public final class QueryOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Query optimizer statistics package to use. This parameter allows individual queries to use a
-   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
-   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
-   * package set at the database level options, or latest if the database option is not set. The
-   * statistics package requested by the query has to be exempt from garbage collection. This can be
-   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
-   * ``` The list of available statistics packages can be queried from
-   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
-   * optimizer statistics package or with statistics package that allows garbage collection fails
-   * with an `INVALID_ARGUMENT` error.
+   * An option to control the selection of optimizer statistics package. This parameter allows
+   * individual queries to use a different query optimizer statistics package. Specifying `latest`
+   * as a value instructs Cloud Spanner to use the latest generated statistics package. If not
+   * specified, Cloud Spanner uses the statistics package set at the database level options, or the
+   * latest package if the database option is not set. The statistics package requested by the query
+   * has to be exempt from garbage collection. This can be achieved with the following DDL
+   * statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false) ``` The list of available
+   * statistics packages can be queried from `INFORMATION_SCHEMA.SPANNER_STATISTICS`. Executing a
+   * SQL statement with an invalid optimizer statistics package or with a statistics package that
+   * allows garbage collection fails with an `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,16 +62,16 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String optimizerVersion;
 
   /**
-   * Query optimizer statistics package to use. This parameter allows individual queries to use a
-   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
-   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
-   * package set at the database level options, or latest if the database option is not set. The
-   * statistics package requested by the query has to be exempt from garbage collection. This can be
-   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
-   * ``` The list of available statistics packages can be queried from
-   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
-   * optimizer statistics package or with statistics package that allows garbage collection fails
-   * with an `INVALID_ARGUMENT` error.
+   * An option to control the selection of optimizer statistics package. This parameter allows
+   * individual queries to use a different query optimizer statistics package. Specifying `latest`
+   * as a value instructs Cloud Spanner to use the latest generated statistics package. If not
+   * specified, Cloud Spanner uses the statistics package set at the database level options, or the
+   * latest package if the database option is not set. The statistics package requested by the query
+   * has to be exempt from garbage collection. This can be achieved with the following DDL
+   * statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false) ``` The list of available
+   * statistics packages can be queried from `INFORMATION_SCHEMA.SPANNER_STATISTICS`. Executing a
+   * SQL statement with an invalid optimizer statistics package or with a statistics package that
+   * allows garbage collection fails with an `INVALID_ARGUMENT` error.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizerStatisticsPackage() {
@@ -79,16 +79,16 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Query optimizer statistics package to use. This parameter allows individual queries to use a
-   * different query optimizer statistics. Specifying `latest` as a value instructs Cloud Spanner to
-   * use the latest generated statistics package. If not specified, Cloud Spanner uses statistics
-   * package set at the database level options, or latest if the database option is not set. The
-   * statistics package requested by the query has to be exempt from garbage collection. This can be
-   * achieved with the following DDL statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false)
-   * ``` The list of available statistics packages can be queried from
-   * `SPANNER_SYS.OPTIMIZER_STATISTICS_PACKAGES`. Executing a SQL statement with an invalid
-   * optimizer statistics package or with statistics package that allows garbage collection fails
-   * with an `INVALID_ARGUMENT` error.
+   * An option to control the selection of optimizer statistics package. This parameter allows
+   * individual queries to use a different query optimizer statistics package. Specifying `latest`
+   * as a value instructs Cloud Spanner to use the latest generated statistics package. If not
+   * specified, Cloud Spanner uses the statistics package set at the database level options, or the
+   * latest package if the database option is not set. The statistics package requested by the query
+   * has to be exempt from garbage collection. This can be achieved with the following DDL
+   * statement: ``` ALTER STATISTICS SET OPTIONS (allow_gc=false) ``` The list of available
+   * statistics packages can be queried from `INFORMATION_SCHEMA.SPANNER_STATISTICS`. Executing a
+   * SQL statement with an invalid optimizer statistics package or with a statistics package that
+   * allows garbage collection fails with an `INVALID_ARGUMENT` error.
    * @param optimizerStatisticsPackage optimizerStatisticsPackage or {@code null} for none
    */
   public QueryOptions setOptimizerStatisticsPackage(java.lang.String optimizerStatisticsPackage) {

@@ -50,7 +50,7 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
    * Optional. An encryption configuration describing the encryption type and key resources in Cloud
    * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
    * restored database will use the same encryption configuration as the backup by default, namely
-   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
    * Optional. An encryption configuration describing the encryption type and key resources in Cloud
    * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
    * restored database will use the same encryption configuration as the backup by default, namely
-   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION`.
    * @return value or {@code null} for none
    */
   public RestoreDatabaseEncryptionConfig getEncryptionConfig() {
@@ -111,7 +111,7 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
    * Optional. An encryption configuration describing the encryption type and key resources in Cloud
    * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
    * restored database will use the same encryption configuration as the backup by default, namely
-   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION`.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public RestoreDatabaseRequest setEncryptionConfig(RestoreDatabaseEncryptionConfig encryptionConfig) {

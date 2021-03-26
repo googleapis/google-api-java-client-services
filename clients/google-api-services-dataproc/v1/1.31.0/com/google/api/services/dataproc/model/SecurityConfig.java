@@ -30,11 +30,38 @@ package com.google.api.services.dataproc.model;
 public final class SecurityConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Identity related configuration, including service account based secure multi-tenancy
+   * user mappings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityConfig identityConfig;
+
+  /**
    * Optional. Kerberos related configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KerberosConfig kerberosConfig;
+
+  /**
+   * Optional. Identity related configuration, including service account based secure multi-tenancy
+   * user mappings.
+   * @return value or {@code null} for none
+   */
+  public IdentityConfig getIdentityConfig() {
+    return identityConfig;
+  }
+
+  /**
+   * Optional. Identity related configuration, including service account based secure multi-tenancy
+   * user mappings.
+   * @param identityConfig identityConfig or {@code null} for none
+   */
+  public SecurityConfig setIdentityConfig(IdentityConfig identityConfig) {
+    this.identityConfig = identityConfig;
+    return this;
+  }
 
   /**
    * Optional. Kerberos related configuration.

@@ -31,25 +31,25 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class ApplyParametersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to apply instance-level parameter group to all nodes. If set to true, will explicitly
-   * restrict users from specifying any nodes, and apply parameter group updates to all nodes within
-   * the instance.
+   * Whether to apply instance-level parameter group to all nodes. If set to true, users are
+   * restricted from specifying individual nodes, and `ApplyParameters` updates all nodes within the
+   * instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean applyAll;
 
   /**
-   * Nodes to which we should apply the instance-level parameter group.
+   * Nodes to which the instance-level parameter group is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> nodeIds;
 
   /**
-   * Whether to apply instance-level parameter group to all nodes. If set to true, will explicitly
-   * restrict users from specifying any nodes, and apply parameter group updates to all nodes within
-   * the instance.
+   * Whether to apply instance-level parameter group to all nodes. If set to true, users are
+   * restricted from specifying individual nodes, and `ApplyParameters` updates all nodes within the
+   * instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getApplyAll() {
@@ -57,9 +57,9 @@ public final class ApplyParametersRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to apply instance-level parameter group to all nodes. If set to true, will explicitly
-   * restrict users from specifying any nodes, and apply parameter group updates to all nodes within
-   * the instance.
+   * Whether to apply instance-level parameter group to all nodes. If set to true, users are
+   * restricted from specifying individual nodes, and `ApplyParameters` updates all nodes within the
+   * instance.
    * @param applyAll applyAll or {@code null} for none
    */
   public ApplyParametersRequest setApplyAll(java.lang.Boolean applyAll) {
@@ -68,7 +68,7 @@ public final class ApplyParametersRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Nodes to which we should apply the instance-level parameter group.
+   * Nodes to which the instance-level parameter group is applied.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNodeIds() {
@@ -76,7 +76,7 @@ public final class ApplyParametersRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Nodes to which we should apply the instance-level parameter group.
+   * Nodes to which the instance-level parameter group is applied.
    * @param nodeIds nodeIds or {@code null} for none
    */
   public ApplyParametersRequest setNodeIds(java.util.List<java.lang.String> nodeIds) {

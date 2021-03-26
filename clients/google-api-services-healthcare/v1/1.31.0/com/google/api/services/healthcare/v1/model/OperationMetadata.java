@@ -66,7 +66,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
-   * operations, listed at [Viewing logs](/healthcare/docs/how-tos/logging).
+   * operations, listed at [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +158,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
-   * operations, listed at [Viewing logs](/healthcare/docs/how-tos/logging).
+   * operations, listed at [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
    * @return value or {@code null} for none
    */
   public java.lang.String getLogsUrl() {
@@ -166,7 +168,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * A link to audit and error logs in the log viewer. Error logs are generated only by some
-   * operations, listed at [Viewing logs](/healthcare/docs/how-tos/logging).
+   * operations, listed at [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging).
    * @param logsUrl logsUrl or {@code null} for none
    */
   public OperationMetadata setLogsUrl(java.lang.String logsUrl) {

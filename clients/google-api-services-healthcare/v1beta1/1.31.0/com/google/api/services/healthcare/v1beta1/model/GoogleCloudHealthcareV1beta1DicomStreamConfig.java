@@ -45,8 +45,8 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * though the newly created table only contains data after the table recreation. BigQuery imposes
    * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
    * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
-   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
-   * logs](/healthcare/docs/how-tos/logging)).
+   * will be logged to Cloud Logging (see [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * though the newly created table only contains data after the table recreation. BigQuery imposes
    * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
    * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
-   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
-   * logs](/healthcare/docs/how-tos/logging)).
+   * will be logged to Cloud Logging (see [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination getBigqueryDestination() {
@@ -92,8 +92,8 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * though the newly created table only contains data after the table recreation. BigQuery imposes
    * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
    * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
-   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
-   * logs](/healthcare/docs/how-tos/logging)).
+   * will be logged to Cloud Logging (see [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomStreamConfig setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination) {

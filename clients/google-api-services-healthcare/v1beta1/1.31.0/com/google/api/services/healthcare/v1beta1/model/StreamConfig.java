@@ -51,7 +51,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * select statement to keep only one of the duplicate rows given an id and meta.versionId pair.
    * Alternatively, the server created view mentioned above also filters out duplicates. If a
    * resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * select statement to keep only one of the duplicate rows given an id and meta.versionId pair.
    * Alternatively, the server created view mentioned above also filters out duplicates. If a
    * resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging)).
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination getBigqueryDestination() {
@@ -117,7 +119,8 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * select statement to keep only one of the duplicate rows given an id and meta.versionId pair.
    * Alternatively, the server created view mentioned above also filters out duplicates. If a
    * resource mutation cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging)).
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging)).
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public StreamConfig setBigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestination bigqueryDestination) {

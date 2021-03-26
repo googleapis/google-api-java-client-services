@@ -72,6 +72,14 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private Replication replication;
 
   /**
+   * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation
+   * policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Rotation rotation;
+
+  /**
    * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane
    * operations are called on the secret or its versions.
    * The value may be {@code null}.
@@ -180,6 +188,25 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setReplication(Replication replication) {
     this.replication = replication;
+    return this;
+  }
+
+  /**
+   * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation
+   * policy.
+   * @return value or {@code null} for none
+   */
+  public Rotation getRotation() {
+    return rotation;
+  }
+
+  /**
+   * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation
+   * policy.
+   * @param rotation rotation or {@code null} for none
+   */
+  public Secret setRotation(Rotation rotation) {
+    this.rotation = rotation;
     return this;
   }
 

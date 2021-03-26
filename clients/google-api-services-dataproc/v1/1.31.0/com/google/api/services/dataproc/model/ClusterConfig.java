@@ -72,6 +72,16 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private GceClusterConfig gceClusterConfig;
 
   /**
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
+   * Setting this is considered mutually exclusive with Compute Engine-based options such as
+   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
+   * autoscaling_config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeClusterConfig gkeClusterConfig;
+
+  /**
    * Optional. Commands to execute on each node after config is completed. By default, executables
    * are run on master and all worker nodes. You can test a node's role metadata to run an
    * executable on a master or worker node, as shown below using curl (you can also use wget):
@@ -241,6 +251,29 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setGceClusterConfig(GceClusterConfig gceClusterConfig) {
     this.gceClusterConfig = gceClusterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
+   * Setting this is considered mutually exclusive with Compute Engine-based options such as
+   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
+   * autoscaling_config.
+   * @return value or {@code null} for none
+   */
+  public GkeClusterConfig getGkeClusterConfig() {
+    return gkeClusterConfig;
+  }
+
+  /**
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes.
+   * Setting this is considered mutually exclusive with Compute Engine-based options such as
+   * gce_cluster_config, master_config, worker_config, secondary_worker_config, and
+   * autoscaling_config.
+   * @param gkeClusterConfig gkeClusterConfig or {@code null} for none
+   */
+  public ClusterConfig setGkeClusterConfig(GkeClusterConfig gkeClusterConfig) {
+    this.gkeClusterConfig = gkeClusterConfig;
     return this;
   }
 

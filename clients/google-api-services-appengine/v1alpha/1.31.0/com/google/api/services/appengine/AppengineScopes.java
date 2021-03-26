@@ -26,7 +26,7 @@ public class AppengineScopes {
   /** View and manage your applications deployed on Google App Engine. */
   public static final String APPENGINE_ADMIN = "https://www.googleapis.com/auth/appengine.admin";
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** View your data across Google Cloud Platform services. */

@@ -17,7 +17,7 @@
 package com.google.api.services.memcache.v1.model;
 
 /**
- * Model definition for Instance.
+ * A Memorystore for Memcached instance
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Memorystore for Memcached API. For a detailed
@@ -47,22 +47,22 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. Endpoint for Discovery API
+   * Output only. Endpoint for the Discovery API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String discoveryEndpoint;
 
   /**
-   * User provided name for the instance only used for display purposes. Cannot be more than 80
-   * characters.
+   * User provided name for the instance, which is only used for display purposes. Cannot be more
+   * than 80 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * List of messages that describe current statuses of memcached instance.
+   * List of messages that describe the current state of the Memcached instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String memcacheFullVersion;
 
   /**
-   * Output only. List of Memcached nodes. Refer to [Node] message for more details.
+   * Output only. List of Memcached nodes. Refer to Node message for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The major version of Memcached software. If not provided, latest supported version will be
-   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be
    * automatically determined by our system based on the latest supported minor version.
    * The value may be {@code null}.
    */
@@ -104,9 +104,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. Unique name of the resource in this scope including project and location using the
    * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
-   * instances are managed and addressed at regional level so location_id here refers to a GCP
-   * region; however, users may choose which zones Memcached nodes within an instances should be
-   * provisioned in. Refer to [zones] field for more details.
+   * instances are managed and addressed at the regional level so `location_id` here refers to a
+   * Google Cloud region; however, users may choose which zones Memcached nodes should be
+   * provisioned in within an instance. Refer to zones field for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * The value may be {@code null}.
@@ -195,7 +195,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Endpoint for Discovery API
+   * Output only. Endpoint for the Discovery API.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiscoveryEndpoint() {
@@ -203,7 +203,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Endpoint for Discovery API
+   * Output only. Endpoint for the Discovery API.
    * @param discoveryEndpoint discoveryEndpoint or {@code null} for none
    */
   public Instance setDiscoveryEndpoint(java.lang.String discoveryEndpoint) {
@@ -212,8 +212,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User provided name for the instance only used for display purposes. Cannot be more than 80
-   * characters.
+   * User provided name for the instance, which is only used for display purposes. Cannot be more
+   * than 80 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -221,8 +221,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User provided name for the instance only used for display purposes. Cannot be more than 80
-   * characters.
+   * User provided name for the instance, which is only used for display purposes. Cannot be more
+   * than 80 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Instance setDisplayName(java.lang.String displayName) {
@@ -231,7 +231,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of messages that describe current statuses of memcached instance.
+   * List of messages that describe the current state of the Memcached instance.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceMessage> getInstanceMessages() {
@@ -239,7 +239,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of messages that describe current statuses of memcached instance.
+   * List of messages that describe the current state of the Memcached instance.
    * @param instanceMessages instanceMessages or {@code null} for none
    */
   public Instance setInstanceMessages(java.util.List<InstanceMessage> instanceMessages) {
@@ -288,7 +288,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of Memcached nodes. Refer to [Node] message for more details.
+   * Output only. List of Memcached nodes. Refer to Node message for more details.
    * @return value or {@code null} for none
    */
   public java.util.List<Node> getMemcacheNodes() {
@@ -296,7 +296,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of Memcached nodes. Refer to [Node] message for more details.
+   * Output only. List of Memcached nodes. Refer to Node message for more details.
    * @param memcacheNodes memcacheNodes or {@code null} for none
    */
   public Instance setMemcacheNodes(java.util.List<Node> memcacheNodes) {
@@ -306,7 +306,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The major version of Memcached software. If not provided, latest supported version will be
-   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be
    * automatically determined by our system based on the latest supported minor version.
    * @return value or {@code null} for none
    */
@@ -316,7 +316,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The major version of Memcached software. If not provided, latest supported version will be
-   * used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be
+   * used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be
    * automatically determined by our system based on the latest supported minor version.
    * @param memcacheVersion memcacheVersion or {@code null} for none
    */
@@ -328,9 +328,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. Unique name of the resource in this scope including project and location using the
    * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
-   * instances are managed and addressed at regional level so location_id here refers to a GCP
-   * region; however, users may choose which zones Memcached nodes within an instances should be
-   * provisioned in. Refer to [zones] field for more details.
+   * instances are managed and addressed at the regional level so `location_id` here refers to a
+   * Google Cloud region; however, users may choose which zones Memcached nodes should be
+   * provisioned in within an instance. Refer to zones field for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -340,9 +340,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. Unique name of the resource in this scope including project and location using the
    * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
-   * instances are managed and addressed at regional level so location_id here refers to a GCP
-   * region; however, users may choose which zones Memcached nodes within an instances should be
-   * provisioned in. Refer to [zones] field for more details.
+   * instances are managed and addressed at the regional level so `location_id` here refers to a
+   * Google Cloud region; however, users may choose which zones Memcached nodes should be
+   * provisioned in within an instance. Refer to zones field for more details.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {
@@ -436,7 +436,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * @return value or {@code null} for none
@@ -446,7 +446,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zones where Memcached nodes should be provisioned in. Memcached nodes will be equally
+   * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally
    * distributed across these zones. If not provided, the service will by default create nodes in
    * all zones in the region for the instance.
    * @param zones zones or {@code null} for none

@@ -31,8 +31,11 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class ListTagBindingsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue.
+   * Pagination token. If the result set is too large to fit in a single response, this token is
+   * returned. It encodes the position of the current result cursor. Feeding this value into a new
+   * list request with the `page_token` parameter gives the next page of the results. When
+   * `next_page_token` is not filled in, there is no next page and the list returned is the last
+   * page in the result set. Pagination tokens have a limited lifetime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +49,11 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
   private java.util.List<TagBinding> tagBindings;
 
   /**
-   * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue.
+   * Pagination token. If the result set is too large to fit in a single response, this token is
+   * returned. It encodes the position of the current result cursor. Feeding this value into a new
+   * list request with the `page_token` parameter gives the next page of the results. When
+   * `next_page_token` is not filled in, there is no next page and the list returned is the last
+   * page in the result set. Pagination tokens have a limited lifetime.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +61,11 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A pagination token returned from a previous call to `ListTagBindings` that indicates from where
-   * listing should continue.
+   * Pagination token. If the result set is too large to fit in a single response, this token is
+   * returned. It encodes the position of the current result cursor. Feeding this value into a new
+   * list request with the `page_token` parameter gives the next page of the results. When
+   * `next_page_token` is not filled in, there is no next page and the list returned is the last
+   * page in the result set. Pagination tokens have a limited lifetime.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTagBindingsResponse setNextPageToken(java.lang.String nextPageToken) {

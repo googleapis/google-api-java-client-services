@@ -67,17 +67,18 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   private java.lang.String filter;
 
   /**
-   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
-   * following fields: * `PubsubMessage.Data` contains the resource name. *
-   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
-   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
-   * notifications are only sent if the topic is non-empty. [Topic
+   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
+   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
+   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
+   * ID of this notification. It is guaranteed to be unique within the topic. *
+   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
+   * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail. If a notification
-   * can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For more information,
-   * see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
+   * can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,17 +162,18 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
-   * following fields: * `PubsubMessage.Data` contains the resource name. *
-   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
-   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
-   * notifications are only sent if the topic is non-empty. [Topic
+   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
+   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
+   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
+   * ID of this notification. It is guaranteed to be unique within the topic. *
+   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
+   * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail. If a notification
-   * can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For more information,
-   * see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
+   * can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging).
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -179,17 +181,18 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes
-   * are published on. Supplied by the client. The notification is a `PubsubMessage` with the
-   * following fields: * `PubsubMessage.Data` contains the resource name. *
-   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
-   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
-   * notifications are only sent if the topic is non-empty. [Topic
+   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
+   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
+   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
+   * ID of this notification. It is guaranteed to be unique within the topic. *
+   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
+   * are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. Cloud
    * Healthcare API service account must have publisher permissions on the given Pub/Sub topic. Not
    * having adequate permissions causes the calls that send notifications to fail. If a notification
-   * can't be published to Cloud Pub/Sub, errors are logged to Cloud Logging. For more information,
-   * see [Viewing error logs in Cloud Logging](/healthcare/docs/how-tos/logging).
+   * can't be published to Pub/Sub, errors are logged to Cloud Logging. For more information, see
+   * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+   * tos/logging).
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public Hl7V2NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

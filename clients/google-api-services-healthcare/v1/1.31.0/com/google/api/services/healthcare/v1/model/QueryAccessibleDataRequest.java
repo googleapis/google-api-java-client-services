@@ -19,8 +19,9 @@ package com.google.api.services.healthcare.v1.model;
 /**
  * Queries all data_ids that are consented for a given use in the given consent store and writes
  * them to a specified destination. The returned Operation includes a progress counter for the
- * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
- * (/healthcare/docs/how-tos/logging) and [QueryAccessibleData] for a sample log entry).
+ * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing error
+ * logs in Cloud Logging] (https://cloud.google.com/healthcare/docs/how-tos/logging) and
+ * [QueryAccessibleData] for a sample log entry).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

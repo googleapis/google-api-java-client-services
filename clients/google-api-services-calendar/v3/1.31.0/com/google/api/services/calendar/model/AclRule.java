@@ -37,7 +37,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Identifier of the ACL rule.
+   * Identifier of the Access Control List (ACL) rule. See Sharing calendars.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * The scope of the rule.
+   * The extent to which calendar access is granted by this ACL rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the ACL rule.
+   * Identifier of the Access Control List (ACL) rule. See Sharing calendars.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -96,7 +96,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier of the ACL rule.
+   * Identifier of the Access Control List (ACL) rule. See Sharing calendars.
    * @param id id or {@code null} for none
    */
   public AclRule setId(java.lang.String id) {
@@ -151,7 +151,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scope of the rule.
+   * The extent to which calendar access is granted by this ACL rule.
    * @return value or {@code null} for none
    */
   public Scope getScope() {
@@ -159,7 +159,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scope of the rule.
+   * The extent to which calendar access is granted by this ACL rule.
    * @param scope scope or {@code null} for none
    */
   public AclRule setScope(Scope scope) {
@@ -178,7 +178,7 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scope of the rule.
+   * The extent to which calendar access is granted by this ACL rule.
    */
   public static final class Scope extends com.google.api.client.json.GenericJson {
 

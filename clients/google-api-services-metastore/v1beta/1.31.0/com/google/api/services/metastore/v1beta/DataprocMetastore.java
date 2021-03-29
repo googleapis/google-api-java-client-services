@@ -2338,6 +2338,146 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Restores a service from a backup.
+         *
+         * Create a request for the method "services.restore".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to run restore, in the following
+         *        form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1beta.model.RestoreServiceRequest}
+         * @return the request
+         */
+        public Restore restore(java.lang.String service, com.google.api.services.metastore.v1beta.model.RestoreServiceRequest content) throws java.io.IOException {
+          Restore result = new Restore(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Restore extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+service}:restore";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Restores a service from a backup.
+           *
+           * Create a request for the method "services.restore".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to run restore, in the following
+         *        form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.RestoreServiceRequest}
+           * @since 1.13
+           */
+          protected Restore(java.lang.String service, com.google.api.services.metastore.v1beta.model.RestoreServiceRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public Restore set$Xgafv(java.lang.String $Xgafv) {
+            return (Restore) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Restore setAccessToken(java.lang.String accessToken) {
+            return (Restore) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Restore setAlt(java.lang.String alt) {
+            return (Restore) super.setAlt(alt);
+          }
+
+          @Override
+          public Restore setCallback(java.lang.String callback) {
+            return (Restore) super.setCallback(callback);
+          }
+
+          @Override
+          public Restore setFields(java.lang.String fields) {
+            return (Restore) super.setFields(fields);
+          }
+
+          @Override
+          public Restore setKey(java.lang.String key) {
+            return (Restore) super.setKey(key);
+          }
+
+          @Override
+          public Restore setOauthToken(java.lang.String oauthToken) {
+            return (Restore) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Restore) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Restore setQuotaUser(java.lang.String quotaUser) {
+            return (Restore) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Restore setUploadType(java.lang.String uploadType) {
+            return (Restore) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Restore) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to run restore, in the
+           * following form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to run restore, in the following
+         form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to run restore, in the
+           * following form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public Restore setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public Restore set(String parameterName, Object value) {
+            return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
          * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
@@ -2626,6 +2766,815 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
 
+        /**
+         * An accessor for creating requests from the Backups collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataprocMetastore metastore = new DataprocMetastore(...);}
+         *   {@code DataprocMetastore.Backups.List request = metastore.backups().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Backups backups() {
+          return new Backups();
+        }
+
+        /**
+         * The "backups" collection of methods.
+         */
+        public class Backups {
+
+          /**
+           * Creates a new Backup in a given project and location.
+           *
+           * Create a request for the method "backups.create".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The relative resource name of the service in which to create a backup of the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.Backup}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.metastore.v1beta.model.Backup content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/backups";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            /**
+             * Creates a new Backup in a given project and location.
+             *
+             * Create a request for the method "backups.create".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The relative resource name of the service in which to create a backup of the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+             * @param content the {@link com.google.api.services.metastore.v1beta.model.Backup}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.metastore.v1beta.model.Backup content) {
+              super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the service in which to create a backup of
+             * the following
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The relative resource name of the service in which to create a backup of the following
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The relative resource name of the service in which to create a backup of
+             * the following
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the backup, which is used as the final component of the backup's
+             * name.This value must be between 1 and 64 characters long, begin with a letter, end
+             * with a letter or number, and consist of alpha-numeric ASCII characters or hyphens.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String backupId;
+
+            /** Required. The ID of the backup, which is used as the final component of the backup's name.This
+           value must be between 1 and 64 characters long, begin with a letter, end with a letter or number,
+           and consist of alpha-numeric ASCII characters or hyphens.
+             */
+            public java.lang.String getBackupId() {
+              return backupId;
+            }
+
+            /**
+             * Required. The ID of the backup, which is used as the final component of the backup's
+             * name.This value must be between 1 and 64 characters long, begin with a letter, end
+             * with a letter or number, and consist of alpha-numeric ASCII characters or hyphens.
+             */
+            public Create setBackupId(java.lang.String backupId) {
+              this.backupId = backupId;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+           has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+           at least 60 minutes after the first request.For example, if an initial request times out, followed
+           by another request with the same request ID, the server ignores the second request to prevent the
+           creation of duplicate commitments.The request ID must be a valid UUID
+           (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single backup.
+           *
+           * Create a request for the method "backups.delete".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The relative resource name of the backup to delete, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{back
+           *        up_id}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+
+            /**
+             * Deletes a single backup.
+             *
+             * Create a request for the method "backups.delete".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The relative resource name of the backup to delete, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{back
+           *        up_id}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DataprocMetastore.this, "DELETE", REST_PATH, null, com.google.api.services.metastore.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the backup to delete, in the following form:p
+             * rojects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backu
+             * p_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The relative resource name of the backup to delete, in the following
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The relative resource name of the backup to delete, in the following form:p
+             * rojects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backu
+             * p_id}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+           has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+           at least 60 minutes after the first request.For example, if an initial request times out, followed
+           by another request with the same request ID, the server ignores the second request to prevent the
+           creation of duplicate commitments.The request ID must be a valid UUID
+           (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single backup.
+           *
+           * Create a request for the method "backups.get".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The relative resource name of the backup to retrieve, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{back
+           *        up_id}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Backup> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+
+            /**
+             * Gets details of a single backup.
+             *
+             * Create a request for the method "backups.get".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The relative resource name of the backup to retrieve, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{back
+           *        up_id}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1beta.model.Backup.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the backup to retrieve, in the following form
+             * :projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{bac
+             * kup_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The relative resource name of the backup to retrieve, in the following
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The relative resource name of the backup to retrieve, in the following form
+             * :projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{bac
+             * kup_id}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/backups/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists backups in a service.
+           *
+           * Create a request for the method "backups.list".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The relative resource name of the service whose backups to list, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.ListBackupsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/backups";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            /**
+             * Lists backups in a service.
+             *
+             * Create a request for the method "backups.list".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The relative resource name of the service whose backups to list, in the following
+           *        form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1beta.model.ListBackupsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the service whose backups to list, in the
+             * following
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The relative resource name of the service whose backups to list, in the following
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The relative resource name of the service whose backups to list, in the
+             * following
+             * form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The filter to apply to list results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The filter to apply to list results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. The filter to apply to list results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
+             * specified, the results will be sorted in the default order.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specify the ordering of results as described in Sorting Order
+           (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results
+           will be sorted in the default order.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
+             * specified, the results will be sorted in the default order.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of backups to return. The response may contain less than
+             * the maximum number. If unspecified, no more than 500 backups are returned. The
+             * maximum value is 1000; values above 1000 are changed to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of backups to return. The response may contain less than the maximum
+           number. If unspecified, no more than 500 backups are returned. The maximum value is 1000; values
+           above 1000 are changed to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of backups to return. The response may contain less than
+             * the maximum number. If unspecified, no more than 500 backups are returned. The
+             * maximum value is 1000; values above 1000 are changed to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous DataprocMetastore.ListBackups call.
+             * Provide this token to retrieve the subsequent page.To retrieve the first page, supply
+             * an empty page token.When paginating, other parameters provided to
+             * DataprocMetastore.ListBackups must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous DataprocMetastore.ListBackups call. Provide this
+           token to retrieve the subsequent page.To retrieve the first page, supply an empty page token.When
+           paginating, other parameters provided to DataprocMetastore.ListBackups must match the call that
+           provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous DataprocMetastore.ListBackups call.
+             * Provide this token to retrieve the subsequent page.To retrieve the first page, supply
+             * an empty page token.When paginating, other parameters provided to
+             * DataprocMetastore.ListBackups must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the MetadataImports collection.
          *

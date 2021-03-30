@@ -30,6 +30,18 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicyCpuUtilization extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predictiveMethod;
+
+  /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
    * (0, 1]. If not specified, the default is 0.6.
    *
@@ -44,6 +56,33 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.Double utilizationTarget;
+
+  /**
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredictiveMethod() {
+    return predictiveMethod;
+  }
+
+  /**
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
+   * @param predictiveMethod predictiveMethod or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setPredictiveMethod(java.lang.String predictiveMethod) {
+    this.predictiveMethod = predictiveMethod;
+    return this;
+  }
 
   /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range

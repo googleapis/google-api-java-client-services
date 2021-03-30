@@ -30,11 +30,38 @@ package com.google.api.services.compute.model;
 public final class DistributionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetShape;
+
+  /**
    * Zones where the regional managed instance group will create and manage its instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DistributionPolicyZoneConfiguration> zones;
+
+  /**
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetShape() {
+    return targetShape;
+  }
+
+  /**
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
+   * @param targetShape targetShape or {@code null} for none
+   */
+  public DistributionPolicy setTargetShape(java.lang.String targetShape) {
+    this.targetShape = targetShape;
+    return this;
+  }
 
   /**
    * Zones where the regional managed instance group will create and manage its instances.

@@ -75,7 +75,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private Billing billing;
 
   /**
-   * Deprecated. The service config compiler always sets this field to `3`.
+   * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always
+   * sets this field to `3`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +355,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. The service config compiler always sets this field to `3`.
+   * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always
+   * sets this field to `3`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConfigVersion() {
@@ -362,7 +364,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. The service config compiler always sets this field to `3`.
+   * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always
+   * sets this field to `3`.
    * @param configVersion configVersion or {@code null} for none
    */
   public Service setConfigVersion(java.lang.Long configVersion) {

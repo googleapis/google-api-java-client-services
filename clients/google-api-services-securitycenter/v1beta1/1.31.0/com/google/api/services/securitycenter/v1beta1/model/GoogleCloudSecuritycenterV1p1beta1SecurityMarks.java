@@ -33,6 +33,19 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1p1beta1SecurityMarks extends com.google.api.client.json.GenericJson {
 
   /**
+   * The canonical name of the marks. Examples:
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "folders/{folder_id}/assets/{asset_id}/securityMarks"
+   * "projects/{project_number}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalName;
+
+  /**
    * Mutable user specified security marks belonging to the parent resource. Constraints are as
    * follows: * Keys and values are treated as case insensitive * Keys must be between 1 - 256
    * characters (inclusive) * Keys must be letters, numbers, underscores, or dashes * Values have
@@ -52,6 +65,35 @@ public final class GoogleCloudSecuritycenterV1p1beta1SecurityMarks extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The canonical name of the marks. Examples:
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "folders/{folder_id}/assets/{asset_id}/securityMarks"
+   * "projects/{project_number}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalName() {
+    return canonicalName;
+  }
+
+  /**
+   * The canonical name of the marks. Examples:
+   * "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+   * "folders/{folder_id}/assets/{asset_id}/securityMarks"
+   * "projects/{project_number}/assets/{asset_id}/securityMarks"
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks"
+   * @param canonicalName canonicalName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1p1beta1SecurityMarks setCanonicalName(java.lang.String canonicalName) {
+    this.canonicalName = canonicalName;
+    return this;
+  }
 
   /**
    * Mutable user specified security marks belonging to the parent resource. Constraints are as

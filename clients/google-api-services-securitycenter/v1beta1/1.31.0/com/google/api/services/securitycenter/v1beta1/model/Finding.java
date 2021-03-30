@@ -34,6 +34,17 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
+   * The canonical name of the finding. It's either
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
+   * CRM ancestor of the resource associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalName;
+
+  /**
    * The additional taxonomy group within findings from a given source. This field is immutable
    * after creation time. Example: "XSS_FLASH_INJECTION"
    * The value may be {@code null}.
@@ -52,7 +63,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The time at which the event took place, or when an update to the finding occurred. For example,
    * if the finding represents an open firewall it would capture the time the detector believes the
    * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved.
+   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
+   * value greater than the current timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,6 +141,31 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * The canonical name of the finding. It's either
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
+   * CRM ancestor of the resource associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalName() {
+    return canonicalName;
+  }
+
+  /**
+   * The canonical name of the finding. It's either
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
+   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
+   * CRM ancestor of the resource associated with the finding.
+   * @param canonicalName canonicalName or {@code null} for none
+   */
+  public Finding setCanonicalName(java.lang.String canonicalName) {
+    this.canonicalName = canonicalName;
+    return this;
+  }
+
+  /**
    * The additional taxonomy group within findings from a given source. This field is immutable
    * after creation time. Example: "XSS_FLASH_INJECTION"
    * @return value or {@code null} for none
@@ -168,7 +205,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The time at which the event took place, or when an update to the finding occurred. For example,
    * if the finding represents an open firewall it would capture the time the detector believes the
    * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved.
+   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
+   * value greater than the current timestamp.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -179,7 +217,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The time at which the event took place, or when an update to the finding occurred. For example,
    * if the finding represents an open firewall it would capture the time the detector believes the
    * firewall became open. The accuracy is determined by the detector. If the finding were to be
-   * resolved afterward, this time would reflect when the finding was resolved.
+   * resolved afterward, this time would reflect when the finding was resolved. Must not be set to a
+   * value greater than the current timestamp.
    * @param eventTime eventTime or {@code null} for none
    */
   public Finding setEventTime(String eventTime) {

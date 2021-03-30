@@ -34,6 +34,16 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
+   * The canonical name of the resource. It's either
+   * "organizations/{organization_id}/assets/{asset_id}", "folders/{folder_id}/assets/{asset_id}" or
+   * "projects/{project_number}/assets/{asset_id}", depending on the closest CRM ancestor of the
+   * resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String canonicalName;
+
+  /**
    * The time at which the asset was created in Security Command Center.
    * The value may be {@code null}.
    */
@@ -88,6 +98,29 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * The canonical name of the resource. It's either
+   * "organizations/{organization_id}/assets/{asset_id}", "folders/{folder_id}/assets/{asset_id}" or
+   * "projects/{project_number}/assets/{asset_id}", depending on the closest CRM ancestor of the
+   * resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCanonicalName() {
+    return canonicalName;
+  }
+
+  /**
+   * The canonical name of the resource. It's either
+   * "organizations/{organization_id}/assets/{asset_id}", "folders/{folder_id}/assets/{asset_id}" or
+   * "projects/{project_number}/assets/{asset_id}", depending on the closest CRM ancestor of the
+   * resource.
+   * @param canonicalName canonicalName or {@code null} for none
+   */
+  public Asset setCanonicalName(java.lang.String canonicalName) {
+    this.canonicalName = canonicalName;
+    return this;
+  }
 
   /**
    * The time at which the asset was created in Security Command Center.

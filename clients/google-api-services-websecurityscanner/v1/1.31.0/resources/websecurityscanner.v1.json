@@ -1,171 +1,856 @@
 {
-  "title": "Web Security Scanner API",
-  "version": "v1",
-  "ownerDomain": "google.com",
-  "ownerName": "Google",
   "basePath": "",
-  "revision": "20200919",
+  "id": "websecurityscanner:v1",
+  "resources": {
+    "projects": {
+      "resources": {
+        "scanConfigs": {
+          "resources": {
+            "scanRuns": {
+              "methods": {
+                "list": {
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns",
+                  "description": "Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.",
+                  "parameters": {
+                    "parent": {
+                      "description": "Required. The parent resource name, which should be a scan resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
+                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
+                      "location": "path",
+                      "required": true,
+                      "type": "string"
+                    },
+                    "pageSize": {
+                      "description": "The maximum number of ScanRuns to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
+                      "location": "query",
+                      "format": "int32",
+                      "type": "integer"
+                    },
+                    "pageToken": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned."
+                    }
+                  },
+                  "path": "v1/{+parent}/scanRuns",
+                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.list",
+                  "httpMethod": "GET",
+                  "response": {
+                    "$ref": "ListScanRunsResponse"
+                  },
+                  "parameterOrder": [
+                    "parent"
+                  ]
+                },
+                "stop": {
+                  "parameters": {
+                    "name": {
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
+                      "location": "path",
+                      "required": true,
+                      "description": "Required. The resource name of the ScanRun to be stopped. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
+                    }
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "description": "Stops a ScanRun. The stopped ScanRun is returned.",
+                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.stop",
+                  "httpMethod": "POST",
+                  "request": {
+                    "$ref": "StopScanRunRequest"
+                  },
+                  "response": {
+                    "$ref": "ScanRun"
+                  },
+                  "path": "v1/{+name}:stop",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}:stop"
+                },
+                "get": {
+                  "description": "Gets a ScanRun.",
+                  "response": {
+                    "$ref": "ScanRun"
+                  },
+                  "parameters": {
+                    "name": {
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
+                      "required": true,
+                      "description": "Required. The resource name of the ScanRun to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.",
+                      "type": "string"
+                    }
+                  },
+                  "path": "v1/{+name}",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}",
+                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.get",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "httpMethod": "GET"
+                }
+              },
+              "resources": {
+                "crawledUrls": {
+                  "methods": {
+                    "list": {
+                      "parameters": {
+                        "parent": {
+                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
+                          "type": "string",
+                          "location": "path",
+                          "required": true,
+                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
+                        },
+                        "pageToken": {
+                          "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned.",
+                          "location": "query",
+                          "type": "string"
+                        },
+                        "pageSize": {
+                          "format": "int32",
+                          "type": "integer",
+                          "location": "query",
+                          "description": "The maximum number of CrawledUrls to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value."
+                        }
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.crawledUrls.list",
+                      "path": "v1/{+parent}/crawledUrls",
+                      "httpMethod": "GET",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "description": "List CrawledUrls under a given ScanRun.",
+                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/crawledUrls",
+                      "response": {
+                        "$ref": "ListCrawledUrlsResponse"
+                      }
+                    }
+                  }
+                },
+                "findings": {
+                  "methods": {
+                    "list": {
+                      "description": "List Findings under a given ScanRun.",
+                      "path": "v1/{+parent}/findings",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "response": {
+                        "$ref": "ListFindingsResponse"
+                      },
+                      "parameters": {
+                        "parent": {
+                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
+                          "location": "path",
+                          "required": true,
+                          "type": "string",
+                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
+                        },
+                        "pageToken": {
+                          "type": "string",
+                          "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned.",
+                          "location": "query"
+                        },
+                        "filter": {
+                          "location": "query",
+                          "description": "The filter expression. The expression must be in the format: . Supported field: 'finding_type'. Supported operator: '='.",
+                          "type": "string"
+                        },
+                        "pageSize": {
+                          "description": "The maximum number of Findings to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
+                          "format": "int32",
+                          "location": "query",
+                          "type": "integer"
+                        }
+                      },
+                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findings",
+                      "httpMethod": "GET",
+                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.list"
+                    },
+                    "get": {
+                      "response": {
+                        "$ref": "Finding"
+                      },
+                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.get",
+                      "description": "Gets a Finding.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "path": "v1/{+name}",
+                      "httpMethod": "GET",
+                      "parameters": {
+                        "name": {
+                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+/findings/[^/]+$",
+                          "location": "path",
+                          "description": "Required. The resource name of the Finding to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}'.",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findings/{findingsId}"
+                    }
+                  }
+                },
+                "findingTypeStats": {
+                  "methods": {
+                    "list": {
+                      "path": "v1/{+parent}/findingTypeStats",
+                      "response": {
+                        "$ref": "ListFindingTypeStatsResponse"
+                      },
+                      "description": "List all FindingTypeStats under a given ScanRun.",
+                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findingTypeStats.list",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "parent": {
+                          "required": true,
+                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
+                          "location": "path",
+                          "type": "string",
+                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
+                        }
+                      },
+                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findingTypeStats",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "httpMethod": "GET"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "methods": {
+            "create": {
+              "httpMethod": "POST",
+              "response": {
+                "$ref": "ScanConfig"
+              },
+              "request": {
+                "$ref": "ScanConfig"
+              },
+              "flatPath": "v1/projects/{projectsId}/scanConfigs",
+              "path": "v1/{+parent}/scanConfigs",
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "required": true,
+                  "description": "Required. The parent resource name where the scan is created, which should be a project resource name in the format 'projects/{projectId}'.",
+                  "location": "path"
+                }
+              },
+              "description": "Creates a new ScanConfig.",
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "id": "websecurityscanner.projects.scanConfigs.create"
+            },
+            "delete": {
+              "description": "Deletes an existing ScanConfig and its child resources.",
+              "httpMethod": "DELETE",
+              "response": {
+                "$ref": "Empty"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "websecurityscanner.projects.scanConfigs.delete",
+              "path": "v1/{+name}",
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "description": "Required. The resource name of the ScanConfig to be deleted. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
+                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$"
+                }
+              }
+            },
+            "list": {
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
+                  "description": "Required. The parent resource name, which should be a project resource name in the format 'projects/{projectId}'.",
+                  "required": true
+                },
+                "pageToken": {
+                  "type": "string",
+                  "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned.",
+                  "location": "query"
+                },
+                "pageSize": {
+                  "location": "query",
+                  "description": "The maximum number of ScanConfigs to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "response": {
+                "$ref": "ListScanConfigsResponse"
+              },
+              "path": "v1/{+parent}/scanConfigs",
+              "id": "websecurityscanner.projects.scanConfigs.list",
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Lists ScanConfigs under a given project.",
+              "flatPath": "v1/projects/{projectsId}/scanConfigs"
+            },
+            "patch": {
+              "description": "Updates a ScanConfig. This method support partial update of a ScanConfig.",
+              "response": {
+                "$ref": "ScanConfig"
+              },
+              "path": "v1/{+name}",
+              "request": {
+                "$ref": "ScanConfig"
+              },
+              "parameters": {
+                "updateMask": {
+                  "description": "Required. The update mask applies to the resource. For the `FieldMask` definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask",
+                  "type": "string",
+                  "location": "query",
+                  "format": "google-fieldmask"
+                },
+                "name": {
+                  "required": true,
+                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
+                  "type": "string",
+                  "description": "The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.",
+                  "location": "path"
+                }
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "websecurityscanner.projects.scanConfigs.patch",
+              "httpMethod": "PATCH",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}"
+            },
+            "start": {
+              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}:start",
+              "response": {
+                "$ref": "ScanRun"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "request": {
+                "$ref": "StartScanRunRequest"
+              },
+              "httpMethod": "POST",
+              "description": "Start a ScanRun according to the given ScanConfig.",
+              "id": "websecurityscanner.projects.scanConfigs.start",
+              "path": "v1/{+name}:start",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
+                  "description": "Required. The resource name of the ScanConfig to be used. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
+                  "required": true,
+                  "location": "path",
+                  "type": "string"
+                }
+              },
+              "parameterOrder": [
+                "name"
+              ]
+            },
+            "get": {
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "websecurityscanner.projects.scanConfigs.get",
+              "response": {
+                "$ref": "ScanConfig"
+              },
+              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
+              "path": "v1/{+name}",
+              "description": "Gets a ScanConfig.",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "description": "Required. The resource name of the ScanConfig to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
+                  "required": true,
+                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
+                  "type": "string",
+                  "location": "path"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "batchPath": "batch",
-  "name": "websecurityscanner",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "See, edit, configure, and delete your Google Cloud Platform data"
+        }
+      }
+    }
+  },
+  "documentationLink": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview/",
+  "ownerName": "Google",
+  "title": "Web Security Scanner API",
   "parameters": {
     "callback": {
-      "type": "string",
       "description": "JSONP",
+      "type": "string",
       "location": "query"
     },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
     "prettyPrint": {
+      "type": "boolean",
       "location": "query",
       "description": "Returns response with indentations and line breaks.",
-      "default": "true",
-      "type": "boolean"
+      "default": "true"
     },
-    "$.xgafv": {
-      "location": "query",
-      "enum": [
-        "1",
-        "2"
-      ],
+    "alt": {
+      "default": "json",
       "type": "string",
-      "description": "V1 error format.",
       "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ]
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "description": "Data format for response.",
+      "location": "query"
     },
-    "fields": {
+    "oauth_token": {
       "location": "query",
       "type": "string",
-      "description": "Selector specifying which fields to include in a partial response."
+      "description": "OAuth 2.0 token for the current user."
+    },
+    "uploadType": {
+      "location": "query",
+      "type": "string",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    },
+    "key": {
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query"
     },
     "quotaUser": {
       "location": "query",
       "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
       "type": "string"
     },
-    "alt": {
+    "$.xgafv": {
       "type": "string",
       "enum": [
-        "json",
-        "media",
-        "proto"
+        "1",
+        "2"
       ],
-      "default": "json",
       "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
+        "v1 error format",
+        "v2 error format"
       ],
-      "location": "query",
-      "description": "Data format for response."
-    },
-    "access_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth access token."
-    },
-    "oauth_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth 2.0 token for the current user."
+      "description": "V1 error format.",
+      "location": "query"
     },
     "upload_protocol": {
-      "type": "string",
       "location": "query",
+      "type": "string",
       "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
     },
-    "uploadType": {
+    "fields": {
       "location": "query",
       "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "access_token": {
+      "location": "query",
+      "description": "OAuth access token.",
+      "type": "string"
     }
   },
   "baseUrl": "https://websecurityscanner.googleapis.com/",
+  "version_module": true,
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
   "schemas": {
-    "Empty": {
-      "properties": {},
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+    "ScanRun": {
+      "description": "A ScanRun is a output-only resource representing an actual run of the scan. Next id: 12",
       "type": "object",
-      "id": "Empty"
-    },
-    "ListFindingTypeStatsResponse": {
+      "id": "ScanRun",
       "properties": {
-        "findingTypeStats": {
-          "type": "array",
+        "progressPercent": {
+          "description": "Output only. The percentage of total completion ranging from 0 to 100. If the scan is in queue, the value is 0. If the scan is running, the value ranges from 0 to 100. If the scan is finished, the value is 100.",
+          "type": "integer",
+          "format": "int32"
+        },
+        "resultState": {
+          "description": "Output only. The result state of the ScanRun. This field is only available after the execution state reaches \"FINISHED\".",
+          "enum": [
+            "RESULT_STATE_UNSPECIFIED",
+            "SUCCESS",
+            "ERROR",
+            "KILLED"
+          ],
+          "enumDescriptions": [
+            "Default value. This value is returned when the ScanRun is not yet finished.",
+            "The scan finished without errors.",
+            "The scan finished with errors.",
+            "The scan was terminated by user."
+          ],
+          "type": "string"
+        },
+        "errorTrace": {
+          "description": "Output only. If result_state is an ERROR, this field provides the primary reason for scan's termination and more details, if such are available.",
+          "$ref": "ScanRunErrorTrace"
+        },
+        "warningTraces": {
           "items": {
-            "$ref": "FindingTypeStats"
+            "$ref": "ScanRunWarningTrace"
           },
-          "description": "The list of FindingTypeStats returned."
-        }
-      },
-      "description": "Response for the `ListFindingTypeStats` method.",
-      "id": "ListFindingTypeStatsResponse",
-      "type": "object"
-    },
-    "Form": {
-      "id": "Form",
-      "description": "! Information about a vulnerability with an HTML.",
-      "type": "object",
-      "properties": {
-        "fields": {
-          "items": {
-            "type": "string"
-          },
-          "description": "! The names of form fields related to the vulnerability.",
+          "description": "Output only. A list of warnings, if such are encountered during this scan run.",
           "type": "array"
         },
-        "actionUri": {
+        "endTime": {
           "type": "string",
-          "description": "! The URI where to send the form when it's submitted."
+          "description": "Output only. The time at which the ScanRun reached termination state - that the ScanRun is either finished or stopped by user.",
+          "format": "google-datetime"
+        },
+        "startTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. The time at which the ScanRun started."
+        },
+        "name": {
+          "type": "string",
+          "description": "Output only. The resource name of the ScanRun. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'. The ScanRun IDs are generated by the system."
+        },
+        "urlsCrawledCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Output only. The number of URLs crawled during this ScanRun. If the scan is in progress, the value represents the number of URLs crawled up to now."
+        },
+        "executionState": {
+          "description": "Output only. The execution state of the ScanRun.",
+          "type": "string",
+          "enumDescriptions": [
+            "Represents an invalid state caused by internal server error. This value should never be returned.",
+            "The scan is waiting in the queue.",
+            "The scan is in progress.",
+            "The scan is either finished or stopped by user."
+          ],
+          "enum": [
+            "EXECUTION_STATE_UNSPECIFIED",
+            "QUEUED",
+            "SCANNING",
+            "FINISHED"
+          ]
+        },
+        "hasVulnerabilities": {
+          "description": "Output only. Whether the scan run has found any vulnerabilities.",
+          "type": "boolean"
+        },
+        "urlsTestedCount": {
+          "type": "string",
+          "description": "Output only. The number of URLs tested during this ScanRun. If the scan is in progress, the value represents the number of URLs tested up to now. The number of URLs tested is usually larger than the number URLS crawled because typically a crawled URL is tested with multiple test payloads.",
+          "format": "int64"
         }
       }
     },
+    "VulnerableHeaders": {
+      "id": "VulnerableHeaders",
+      "properties": {
+        "missingHeaders": {
+          "items": {
+            "$ref": "Header"
+          },
+          "type": "array",
+          "description": "List of missing headers."
+        },
+        "headers": {
+          "items": {
+            "$ref": "Header"
+          },
+          "description": "List of vulnerable headers.",
+          "type": "array"
+        }
+      },
+      "type": "object",
+      "description": "Information about vulnerable or missing HTTP Headers."
+    },
     "CustomAccount": {
       "properties": {
-        "loginUrl": {
-          "type": "string",
-          "description": "Required. The login form URL of the website."
-        },
         "username": {
           "type": "string",
           "description": "Required. The user name of the custom account."
         },
         "password": {
-          "description": "Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.",
+          "type": "string",
+          "description": "Required. Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs."
+        },
+        "loginUrl": {
+          "description": "Required. The login form URL of the website.",
           "type": "string"
         }
       },
       "id": "CustomAccount",
-      "description": "Describes authentication configuration that uses a custom account.",
+      "type": "object",
+      "description": "Describes authentication configuration that uses a custom account."
+    },
+    "FindingTypeStats": {
+      "properties": {
+        "findingCount": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Output only. The count of findings belonging to this finding type."
+        },
+        "findingType": {
+          "type": "string",
+          "description": "Output only. The finding type associated with the stats."
+        }
+      },
+      "description": "A FindingTypeStats resource represents stats regarding a specific FindingType of Findings under a given ScanRun.",
+      "id": "FindingTypeStats",
       "type": "object"
     },
-    "ScanConfig": {
-      "id": "ScanConfig",
+    "Schedule": {
       "properties": {
-        "displayName": {
-          "type": "string",
-          "description": "Required. The user provided display name of the ScanConfig."
+        "intervalDurationDays": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Required. The duration of time between executions in days."
         },
-        "name": {
-          "description": "The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.",
+        "scheduleTime": {
+          "type": "string",
+          "description": "A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.",
+          "format": "google-datetime"
+        }
+      },
+      "type": "object",
+      "id": "Schedule",
+      "description": "Scan schedule configuration."
+    },
+    "ListFindingTypeStatsResponse": {
+      "type": "object",
+      "properties": {
+        "findingTypeStats": {
+          "items": {
+            "$ref": "FindingTypeStats"
+          },
+          "description": "The list of FindingTypeStats returned.",
+          "type": "array"
+        }
+      },
+      "id": "ListFindingTypeStatsResponse",
+      "description": "Response for the `ListFindingTypeStats` method."
+    },
+    "StartScanRunRequest": {
+      "description": "Request for the `StartScanRun` method.",
+      "id": "StartScanRunRequest",
+      "type": "object",
+      "properties": {}
+    },
+    "StopScanRunRequest": {
+      "type": "object",
+      "description": "Request for the `StopScanRun` method.",
+      "properties": {},
+      "id": "StopScanRunRequest"
+    },
+    "ScanRunWarningTrace": {
+      "properties": {
+        "code": {
+          "description": "Output only. Indicates the warning code.",
+          "type": "string",
+          "enumDescriptions": [
+            "Default value is never used.",
+            "Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.",
+            "Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.",
+            "Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.",
+            "Indicates that a scan is blocked by IAP.",
+            "Indicates that no seeds is found for a scan"
+          ],
+          "enum": [
+            "CODE_UNSPECIFIED",
+            "INSUFFICIENT_CRAWL_RESULTS",
+            "TOO_MANY_CRAWL_RESULTS",
+            "TOO_MANY_FUZZ_TASKS",
+            "BLOCKED_BY_IAP",
+            "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN"
+          ]
+        }
+      },
+      "id": "ScanRunWarningTrace",
+      "type": "object",
+      "description": "Output only. Defines a warning trace message for ScanRun. Warning traces provide customers with useful information that helps make the scanning process more effective."
+    },
+    "ListFindingsResponse": {
+      "properties": {
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "Finding"
+          },
+          "description": "The list of Findings returned."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
+        }
+      },
+      "description": "Response for the `ListFindings` method.",
+      "type": "object",
+      "id": "ListFindingsResponse"
+    },
+    "Finding": {
+      "description": "A Finding resource represents a vulnerability instance identified during a ScanRun.",
+      "type": "object",
+      "properties": {
+        "form": {
+          "description": "Output only. An addon containing information reported for a vulnerability with an HTML form, if any.",
+          "$ref": "Form"
+        },
+        "vulnerableHeaders": {
+          "$ref": "VulnerableHeaders",
+          "description": "Output only. An addon containing information about vulnerable or missing HTTP headers."
+        },
+        "xss": {
+          "description": "Output only. An addon containing information reported for an XSS, if any.",
+          "$ref": "Xss"
+        },
+        "outdatedLibrary": {
+          "$ref": "OutdatedLibrary",
+          "description": "Output only. An addon containing information about outdated libraries."
+        },
+        "trackingId": {
+          "description": "Output only. The tracking ID uniquely identifies a vulnerability instance across multiple ScanRuns.",
           "type": "string"
         },
-        "blacklistPatterns": {
-          "type": "array",
-          "description": "The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs/how-to-use-web-security-scanner#excluding_urls",
-          "items": {
-            "type": "string"
-          }
+        "fuzzedUrl": {
+          "description": "Output only. The URL produced by the server-side fuzzer and used in the request that triggered the vulnerability.",
+          "type": "string"
+        },
+        "frameUrl": {
+          "description": "Output only. If the vulnerability was originated from nested IFrame, the immediate parent IFrame is reported.",
+          "type": "string"
+        },
+        "httpMethod": {
+          "description": "Output only. The http method of the request that triggered the vulnerability, in uppercase.",
+          "type": "string"
+        },
+        "severity": {
+          "enumDescriptions": [
+            "No severity specified. The default value.",
+            "Critical severity.",
+            "High severity.",
+            "Medium severity.",
+            "Low severity."
+          ],
+          "description": "Output only. The severity level of the reported vulnerability.",
+          "enum": [
+            "SEVERITY_UNSPECIFIED",
+            "CRITICAL",
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ],
+          "readOnly": true,
+          "type": "string"
+        },
+        "body": {
+          "type": "string",
+          "description": "Output only. The body of the request that triggered the vulnerability."
+        },
+        "vulnerableParameters": {
+          "description": "Output only. An addon containing information about request parameters which were found to be vulnerable.",
+          "$ref": "VulnerableParameters"
+        },
+        "reproductionUrl": {
+          "description": "Output only. The URL containing human-readable payload that user can leverage to reproduce the vulnerability.",
+          "type": "string"
+        },
+        "violatingResource": {
+          "description": "Output only. An addon containing detailed information regarding any resource causing the vulnerability such as JavaScript sources, image, audio files, etc.",
+          "$ref": "ViolatingResource"
+        },
+        "description": {
+          "description": "Output only. The description of the vulnerability.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Output only. The resource name of the Finding. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanruns/{scanRunId}/findings/{findingId}'. The finding IDs are generated by the system.",
+          "type": "string"
+        },
+        "finalUrl": {
+          "description": "Output only. The URL where the browser lands when the vulnerability is detected.",
+          "type": "string"
+        },
+        "findingType": {
+          "type": "string",
+          "description": "Output only. The type of the Finding. Detailed and up-to-date information on findings can be found here: https://cloud.google.com/security-command-center/docs/how-to-remediate-web-security-scanner-findings"
+        }
+      },
+      "id": "Finding"
+    },
+    "ScanConfig": {
+      "type": "object",
+      "description": "A ScanConfig resource contains the configurations to launch a scan.",
+      "properties": {
+        "maxQps": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20] range will be rejected with INVALID_ARGUMENT error."
         },
         "startingUrls": {
+          "description": "Required. The starting URLs from which the scanner finds site pages.",
           "items": {
             "type": "string"
           },
-          "description": "Required. The starting URLs from which the scanner finds site pages.",
           "type": "array"
         },
         "staticIpScan": {
@@ -180,114 +865,74 @@
           "description": "The authentication configuration. If specified, service will use the authentication configuration during scanning.",
           "$ref": "Authentication"
         },
-        "exportToSecurityCommandCenter": {
-          "description": "Controls export of scan configurations and results to Security Command Center.",
-          "enumDescriptions": [
-            "Use default, which is ENABLED.",
-            "Export results of this scan to Security Command Center.",
-            "Do not export results of this scan to Security Command Center."
-          ],
-          "enum": [
-            "EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED",
-            "ENABLED",
-            "DISABLED"
-          ],
-          "type": "string"
-        },
-        "managedScan": {
-          "description": "Whether the scan config is managed by Web Security Scanner, output only.",
-          "type": "boolean"
-        },
         "userAgent": {
-          "type": "string",
           "enum": [
             "USER_AGENT_UNSPECIFIED",
             "CHROME_LINUX",
             "CHROME_ANDROID",
             "SAFARI_IPHONE"
           ],
-          "description": "The user agent used during scanning.",
           "enumDescriptions": [
             "The user agent is unknown. Service will default to CHROME_LINUX.",
             "Chrome on Linux. This is the service default if unspecified.",
             "Chrome on Android.",
             "Safari on IPhone."
-          ]
+          ],
+          "type": "string",
+          "description": "The user agent used during scanning."
+        },
+        "blacklistPatterns": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs/how-to-use-web-security-scanner#excluding_urls",
+          "type": "array"
+        },
+        "name": {
+          "description": "The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.",
+          "type": "string"
+        },
+        "managedScan": {
+          "description": "Whether the scan config is managed by Web Security Scanner, output only.",
+          "type": "boolean"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Required. The user provided display name of the ScanConfig."
         },
         "riskLevel": {
           "type": "string",
-          "enumDescriptions": [
-            "Use default, which is NORMAL.",
-            "Normal scanning (Recommended)",
-            "Lower impact scanning"
-          ],
+          "description": "The risk level selected for the scan",
           "enum": [
             "RISK_LEVEL_UNSPECIFIED",
             "NORMAL",
             "LOW"
           ],
-          "description": "The risk level selected for the scan"
+          "enumDescriptions": [
+            "Use default, which is NORMAL.",
+            "Normal scanning (Recommended)",
+            "Lower impact scanning"
+          ]
         },
-        "maxQps": {
-          "description": "The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is unspecified or its value is set 0, server will default to 15. Other values outside of [5, 20] range will be rejected with INVALID_ARGUMENT error.",
-          "format": "int32",
-          "type": "integer"
+        "exportToSecurityCommandCenter": {
+          "type": "string",
+          "enum": [
+            "EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED",
+            "ENABLED",
+            "DISABLED"
+          ],
+          "enumDescriptions": [
+            "Use default, which is ENABLED.",
+            "Export results of this scan to Security Command Center.",
+            "Do not export results of this scan to Security Command Center."
+          ],
+          "description": "Controls export of scan configurations and results to Security Command Center."
         }
       },
-      "description": "A ScanConfig resource contains the configurations to launch a scan.",
-      "type": "object"
-    },
-    "StartScanRunRequest": {
-      "type": "object",
-      "id": "StartScanRunRequest",
-      "properties": {},
-      "description": "Request for the `StartScanRun` method."
-    },
-    "VulnerableHeaders": {
-      "description": "Information about vulnerable or missing HTTP Headers.",
-      "type": "object",
-      "properties": {
-        "headers": {
-          "type": "array",
-          "items": {
-            "$ref": "Header"
-          },
-          "description": "List of vulnerable headers."
-        },
-        "missingHeaders": {
-          "type": "array",
-          "description": "List of missing headers.",
-          "items": {
-            "$ref": "Header"
-          }
-        }
-      },
-      "id": "VulnerableHeaders"
-    },
-    "ViolatingResource": {
-      "description": "Information regarding any resource causing the vulnerability such as JavaScript sources, image, audio files, etc.",
-      "type": "object",
-      "id": "ViolatingResource",
-      "properties": {
-        "contentType": {
-          "type": "string",
-          "description": "The MIME type of this resource."
-        },
-        "resourceUrl": {
-          "type": "string",
-          "description": "URL of this violating resource."
-        }
-      }
+      "id": "ScanConfig"
     },
     "OutdatedLibrary": {
-      "type": "object",
-      "description": "Information reported for an outdated library.",
-      "id": "OutdatedLibrary",
       "properties": {
-        "version": {
-          "description": "The version number.",
-          "type": "string"
-        },
         "learnMoreUrls": {
           "type": "array",
           "description": "URLs to learn more information about the vulnerabilities in the library.",
@@ -298,206 +943,24 @@
         "libraryName": {
           "type": "string",
           "description": "The name of the outdated library."
-        }
-      }
-    },
-    "FindingTypeStats": {
-      "description": "A FindingTypeStats resource represents stats regarding a specific FindingType of Findings under a given ScanRun.",
-      "id": "FindingTypeStats",
-      "properties": {
-        "findingType": {
-          "description": "Output only. The finding type associated with the stats.",
-          "type": "string"
         },
-        "findingCount": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Output only. The count of findings belonging to this finding type."
-        }
-      },
-      "type": "object"
-    },
-    "VulnerableParameters": {
-      "description": "Information about vulnerable request parameters.",
-      "id": "VulnerableParameters",
-      "type": "object",
-      "properties": {
-        "parameterNames": {
-          "items": {
-            "type": "string"
-          },
-          "description": "The vulnerable parameter names.",
-          "type": "array"
-        }
-      }
-    },
-    "GoogleAccount": {
-      "id": "GoogleAccount",
-      "description": "Describes authentication configuration that uses a Google account.",
-      "type": "object",
-      "properties": {
-        "username": {
-          "description": "Required. The user name of the Google account.",
-          "type": "string"
-        },
-        "password": {
-          "description": "Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.",
-          "type": "string"
-        }
-      }
-    },
-    "Header": {
-      "properties": {
-        "value": {
-          "type": "string",
-          "description": "Header value."
-        },
-        "name": {
-          "description": "Header name.",
+        "version": {
+          "description": "The version number.",
           "type": "string"
         }
       },
-      "id": "Header",
+      "description": "Information reported for an outdated library.",
       "type": "object",
-      "description": "Describes a HTTP Header."
-    },
-    "ScanRun": {
-      "type": "object",
-      "id": "ScanRun",
-      "properties": {
-        "endTime": {
-          "description": "Output only. The time at which the ScanRun reached termination state - that the ScanRun is either finished or stopped by user.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "startTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. The time at which the ScanRun started."
-        },
-        "errorTrace": {
-          "description": "Output only. If result_state is an ERROR, this field provides the primary reason for scan's termination and more details, if such are available.",
-          "$ref": "ScanRunErrorTrace"
-        },
-        "warningTraces": {
-          "type": "array",
-          "items": {
-            "$ref": "ScanRunWarningTrace"
-          },
-          "description": "Output only. A list of warnings, if such are encountered during this scan run."
-        },
-        "hasVulnerabilities": {
-          "description": "Output only. Whether the scan run has found any vulnerabilities.",
-          "type": "boolean"
-        },
-        "urlsTestedCount": {
-          "type": "string",
-          "description": "Output only. The number of URLs tested during this ScanRun. If the scan is in progress, the value represents the number of URLs tested up to now. The number of URLs tested is usually larger than the number URLS crawled because typically a crawled URL is tested with multiple test payloads.",
-          "format": "int64"
-        },
-        "urlsCrawledCount": {
-          "description": "Output only. The number of URLs crawled during this ScanRun. If the scan is in progress, the value represents the number of URLs crawled up to now.",
-          "type": "string",
-          "format": "int64"
-        },
-        "progressPercent": {
-          "description": "Output only. The percentage of total completion ranging from 0 to 100. If the scan is in queue, the value is 0. If the scan is running, the value ranges from 0 to 100. If the scan is finished, the value is 100.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "resultState": {
-          "type": "string",
-          "enum": [
-            "RESULT_STATE_UNSPECIFIED",
-            "SUCCESS",
-            "ERROR",
-            "KILLED"
-          ],
-          "enumDescriptions": [
-            "Default value. This value is returned when the ScanRun is not yet finished.",
-            "The scan finished without errors.",
-            "The scan finished with errors.",
-            "The scan was terminated by user."
-          ],
-          "description": "Output only. The result state of the ScanRun. This field is only available after the execution state reaches \"FINISHED\"."
-        },
-        "name": {
-          "type": "string",
-          "description": "Output only. The resource name of the ScanRun. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'. The ScanRun IDs are generated by the system."
-        },
-        "executionState": {
-          "description": "Output only. The execution state of the ScanRun.",
-          "type": "string",
-          "enum": [
-            "EXECUTION_STATE_UNSPECIFIED",
-            "QUEUED",
-            "SCANNING",
-            "FINISHED"
-          ],
-          "enumDescriptions": [
-            "Represents an invalid state caused by internal server error. This value should never be returned.",
-            "The scan is waiting in the queue.",
-            "The scan is in progress.",
-            "The scan is either finished or stopped by user."
-          ]
-        }
-      },
-      "description": "A ScanRun is a output-only resource representing an actual run of the scan. Next id: 12"
-    },
-    "IapTestServiceAccountInfo": {
-      "description": "Describes authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.",
-      "type": "object",
-      "properties": {
-        "targetAudienceClientId": {
-          "description": "Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).",
-          "type": "string"
-        }
-      },
-      "id": "IapTestServiceAccountInfo"
-    },
-    "StopScanRunRequest": {
-      "type": "object",
-      "properties": {},
-      "id": "StopScanRunRequest",
-      "description": "Request for the `StopScanRun` method."
-    },
-    "Schedule": {
-      "id": "Schedule",
-      "description": "Scan schedule configuration.",
-      "properties": {
-        "intervalDurationDays": {
-          "description": "Required. The duration of time between executions in days.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "scheduleTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately."
-        }
-      },
-      "type": "object"
-    },
-    "IapCredential": {
-      "type": "object",
-      "id": "IapCredential",
-      "description": "Describes authentication configuration for Identity-Aware-Proxy (IAP).",
-      "properties": {
-        "iapTestServiceAccountInfo": {
-          "description": "Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.",
-          "$ref": "IapTestServiceAccountInfo"
-        }
-      }
+      "id": "OutdatedLibrary"
     },
     "ScanConfigError": {
+      "type": "object",
       "properties": {
         "fieldName": {
-          "type": "string",
-          "description": "Output only. Indicates the full name of the ScanConfig field that triggers this error, for example \"scan_config.max_qps\". This field is provided for troubleshooting purposes only and its actual value can change in the future."
+          "description": "Output only. Indicates the full name of the ScanConfig field that triggers this error, for example \"scan_config.max_qps\". This field is provided for troubleshooting purposes only and its actual value can change in the future.",
+          "type": "string"
         },
         "code": {
-          "type": "string",
-          "description": "Output only. Indicates the reason code for a configuration failure.",
           "enumDescriptions": [
             "There is no error.",
             "There is no error.",
@@ -542,6 +1005,8 @@
             "The supplied finding type is not supported. For example, we do not provide findings of the given finding type.",
             "The URL scheme of one or more of the supplied URLs is not supported."
           ],
+          "type": "string",
+          "description": "Output only. Indicates the reason code for a configuration failure.",
           "enum": [
             "CODE_UNSPECIFIED",
             "OK",
@@ -588,72 +1053,23 @@
           ]
         }
       },
-      "type": "object",
-      "description": "Defines a custom error message used by CreateScanConfig and UpdateScanConfig APIs when scan configuration validation fails. It is also reported as part of a ScanRunErrorTrace message if scan validation fails due to a scan configuration error.",
-      "id": "ScanConfigError"
+      "id": "ScanConfigError",
+      "description": "Defines a custom error message used by CreateScanConfig and UpdateScanConfig APIs when scan configuration validation fails. It is also reported as part of a ScanRunErrorTrace message if scan validation fails due to a scan configuration error."
     },
-    "ListFindingsResponse": {
+    "Header": {
+      "description": "Describes a HTTP Header.",
+      "id": "Header",
       "properties": {
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list.",
+        "name": {
+          "description": "Header name.",
           "type": "string"
         },
-        "findings": {
-          "description": "The list of Findings returned.",
-          "type": "array",
-          "items": {
-            "$ref": "Finding"
-          }
+        "value": {
+          "description": "Header value.",
+          "type": "string"
         }
       },
-      "description": "Response for the `ListFindings` method.",
-      "id": "ListFindingsResponse",
       "type": "object"
-    },
-    "ListScanConfigsResponse": {
-      "type": "object",
-      "properties": {
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list.",
-          "type": "string"
-        },
-        "scanConfigs": {
-          "type": "array",
-          "description": "The list of ScanConfigs returned.",
-          "items": {
-            "$ref": "ScanConfig"
-          }
-        }
-      },
-      "description": "Response for the `ListScanConfigs` method.",
-      "id": "ListScanConfigsResponse"
-    },
-    "ScanRunWarningTrace": {
-      "description": "Output only. Defines a warning trace message for ScanRun. Warning traces provide customers with useful information that helps make the scanning process more effective.",
-      "type": "object",
-      "id": "ScanRunWarningTrace",
-      "properties": {
-        "code": {
-          "description": "Output only. Indicates the warning code.",
-          "enum": [
-            "CODE_UNSPECIFIED",
-            "INSUFFICIENT_CRAWL_RESULTS",
-            "TOO_MANY_CRAWL_RESULTS",
-            "TOO_MANY_FUZZ_TASKS",
-            "BLOCKED_BY_IAP",
-            "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Default value is never used.",
-            "Indicates that a scan discovered an unexpectedly low number of URLs. This is sometimes caused by complex navigation features or by using a single URL for numerous pages.",
-            "Indicates that a scan discovered too many URLs to test, or excessive redundant URLs.",
-            "Indicates that too many tests have been generated for the scan. Customer should try reducing the number of starting URLs, increasing the QPS rate, or narrowing down the scope of the scan using the excluded patterns.",
-            "Indicates that a scan is blocked by IAP.",
-            "Indicates that no seeds is found for a scan"
-          ]
-        }
-      }
     },
     "ListCrawledUrlsResponse": {
       "properties": {
@@ -662,78 +1078,90 @@
           "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
         },
         "crawledUrls": {
-          "description": "The list of CrawledUrls returned.",
+          "type": "array",
           "items": {
             "$ref": "CrawledUrl"
           },
-          "type": "array"
+          "description": "The list of CrawledUrls returned."
         }
       },
       "id": "ListCrawledUrlsResponse",
-      "type": "object",
-      "description": "Response for the `ListCrawledUrls` method."
-    },
-    "CrawledUrl": {
-      "id": "CrawledUrl",
-      "description": "A CrawledUrl resource represents a URL that was crawled during a ScanRun. Web Security Scanner Service crawls the web applications, following all links within the scope of sites, to find the URLs to test against.",
-      "properties": {
-        "httpMethod": {
-          "description": "Output only. The http method of the request that was used to visit the URL, in uppercase.",
-          "type": "string"
-        },
-        "url": {
-          "description": "Output only. The URL that was crawled.",
-          "type": "string"
-        },
-        "body": {
-          "description": "Output only. The body of the request that was used to visit the URL.",
-          "type": "string"
-        }
-      },
+      "description": "Response for the `ListCrawledUrls` method.",
       "type": "object"
     },
-    "Authentication": {
+    "Empty": {
       "type": "object",
+      "properties": {},
+      "id": "Empty",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
+    },
+    "IapCredential": {
+      "id": "IapCredential",
+      "type": "object",
+      "properties": {
+        "iapTestServiceAccountInfo": {
+          "description": "Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.",
+          "$ref": "IapTestServiceAccountInfo"
+        }
+      },
+      "description": "Describes authentication configuration for Identity-Aware-Proxy (IAP)."
+    },
+    "Authentication": {
       "description": "Scan authentication configuration.",
+      "type": "object",
       "id": "Authentication",
       "properties": {
         "googleAccount": {
           "$ref": "GoogleAccount",
           "description": "Authentication using a Google account."
         },
-        "iapCredential": {
-          "description": "Authentication using Identity-Aware-Proxy (IAP).",
-          "$ref": "IapCredential"
-        },
         "customAccount": {
           "description": "Authentication using a custom account.",
           "$ref": "CustomAccount"
+        },
+        "iapCredential": {
+          "$ref": "IapCredential",
+          "description": "Authentication using Identity-Aware-Proxy (IAP)."
         }
       }
     },
+    "VulnerableParameters": {
+      "type": "object",
+      "properties": {
+        "parameterNames": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "The vulnerable parameter names."
+        }
+      },
+      "description": "Information about vulnerable request parameters.",
+      "id": "VulnerableParameters"
+    },
+    "CrawledUrl": {
+      "id": "CrawledUrl",
+      "description": "A CrawledUrl resource represents a URL that was crawled during a ScanRun. Web Security Scanner Service crawls the web applications, following all links within the scope of sites, to find the URLs to test against.",
+      "properties": {
+        "url": {
+          "description": "Output only. The URL that was crawled.",
+          "type": "string"
+        },
+        "httpMethod": {
+          "type": "string",
+          "description": "Output only. The http method of the request that was used to visit the URL, in uppercase."
+        },
+        "body": {
+          "type": "string",
+          "description": "Output only. The body of the request that was used to visit the URL."
+        }
+      },
+      "type": "object"
+    },
     "ScanRunErrorTrace": {
-      "description": "Output only. Defines an error trace message for a ScanRun.",
       "id": "ScanRunErrorTrace",
       "properties": {
-        "scanConfigError": {
-          "description": "Output only. If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.",
-          "$ref": "ScanConfigError"
-        },
-        "mostCommonHttpErrorCode": {
-          "format": "int32",
-          "description": "Output only. If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.",
-          "type": "integer"
-        },
         "code": {
-          "enumDescriptions": [
-            "Default value is never used.",
-            "Indicates that the scan run failed due to an internal server error.",
-            "Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.",
-            "Indicates an authentication error, usually due to outdated ScanConfig authentication settings.",
-            "Indicates a scan operation timeout, usually caused by a very large site.",
-            "Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.",
-            "Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan."
-          ],
           "enum": [
             "CODE_UNSPECIFIED",
             "INTERNAL_ERROR",
@@ -743,46 +1171,102 @@
             "TOO_MANY_REDIRECTS",
             "TOO_MANY_HTTP_ERRORS"
           ],
+          "enumDescriptions": [
+            "Default value is never used.",
+            "Indicates that the scan run failed due to an internal server error.",
+            "Indicates a scan configuration error, usually due to outdated ScanConfig settings, such as starting_urls or the DNS configuration.",
+            "Indicates an authentication error, usually due to outdated ScanConfig authentication settings.",
+            "Indicates a scan operation timeout, usually caused by a very large site.",
+            "Indicates that a scan encountered excessive redirects, either to authentication or some other page outside of the scan scope.",
+            "Indicates that a scan encountered numerous errors from the web site pages. When available, most_common_http_error_code field indicates the most common HTTP error code encountered during the scan."
+          ],
           "type": "string",
           "description": "Output only. Indicates the error reason code."
+        },
+        "mostCommonHttpErrorCode": {
+          "description": "Output only. If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "scanConfigError": {
+          "description": "Output only. If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.",
+          "$ref": "ScanConfigError"
+        }
+      },
+      "type": "object",
+      "description": "Output only. Defines an error trace message for a ScanRun."
+    },
+    "Form": {
+      "id": "Form",
+      "description": "! Information about a vulnerability with an HTML.",
+      "properties": {
+        "actionUri": {
+          "type": "string",
+          "description": "! The URI where to send the form when it's submitted."
+        },
+        "fields": {
+          "description": "! The names of form fields related to the vulnerability.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
       "type": "object"
     },
-    "Xss": {
-      "id": "Xss",
-      "type": "object",
+    "GoogleAccount": {
       "properties": {
-        "storedXssSeedingUrl": {
-          "description": "The reproduction url for the seeding POST request of a Stored XSS.",
+        "password": {
+          "description": "Required. Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.",
           "type": "string"
         },
-        "stackTraces": {
+        "username": {
+          "type": "string",
+          "description": "Required. The user name of the Google account."
+        }
+      },
+      "description": "Describes authentication configuration that uses a Google account.",
+      "type": "object",
+      "id": "GoogleAccount"
+    },
+    "ListScanRunsResponse": {
+      "description": "Response for the `ListScanRuns` method.",
+      "id": "ListScanRunsResponse",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
+        },
+        "scanRuns": {
           "items": {
-            "type": "string"
+            "$ref": "ScanRun"
           },
           "type": "array",
-          "description": "Stack traces leading to the point where the XSS occurred."
+          "description": "The list of ScanRuns returned."
+        }
+      }
+    },
+    "ViolatingResource": {
+      "id": "ViolatingResource",
+      "description": "Information regarding any resource causing the vulnerability such as JavaScript sources, image, audio files, etc.",
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string",
+          "description": "The MIME type of this resource."
         },
+        "resourceUrl": {
+          "type": "string",
+          "description": "URL of this violating resource."
+        }
+      }
+    },
+    "Xss": {
+      "description": "Information reported for an XSS.",
+      "type": "object",
+      "properties": {
         "attackVector": {
-          "enum": [
-            "ATTACK_VECTOR_UNSPECIFIED",
-            "LOCAL_STORAGE",
-            "SESSION_STORAGE",
-            "WINDOW_NAME",
-            "REFERRER",
-            "FORM_INPUT",
-            "COOKIE",
-            "POST_MESSAGE",
-            "GET_PARAMETERS",
-            "URL_FRAGMENT",
-            "HTML_COMMENT",
-            "POST_PARAMETERS",
-            "PROTOCOL",
-            "STORED_XSS",
-            "SAME_ORIGIN",
-            "USER_CONTROLLABLE_URL"
-          ],
           "enumDescriptions": [
             "Unknown attack vector.",
             "The attack comes from fuzzing the browser's localStorage.",
@@ -801,570 +1285,86 @@
             "The attack is a Same-Origin Method Execution attack via a GET parameter.",
             "The attack payload is received from a third-party host via a URL that is user-controllable"
           ],
-          "description": "The attack vector of the payload triggering this XSS.",
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "ATTACK_VECTOR_UNSPECIFIED",
+            "LOCAL_STORAGE",
+            "SESSION_STORAGE",
+            "WINDOW_NAME",
+            "REFERRER",
+            "FORM_INPUT",
+            "COOKIE",
+            "POST_MESSAGE",
+            "GET_PARAMETERS",
+            "URL_FRAGMENT",
+            "HTML_COMMENT",
+            "POST_PARAMETERS",
+            "PROTOCOL",
+            "STORED_XSS",
+            "SAME_ORIGIN",
+            "USER_CONTROLLABLE_URL"
+          ],
+          "description": "The attack vector of the payload triggering this XSS."
+        },
+        "stackTraces": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "Stack traces leading to the point where the XSS occurred."
         },
         "errorMessage": {
           "type": "string",
           "description": "An error message generated by a javascript breakage."
+        },
+        "storedXssSeedingUrl": {
+          "description": "The reproduction url for the seeding POST request of a Stored XSS.",
+          "type": "string"
         }
       },
-      "description": "Information reported for an XSS."
+      "id": "Xss"
     },
-    "ListScanRunsResponse": {
-      "type": "object",
-      "description": "Response for the `ListScanRuns` method.",
+    "ListScanConfigsResponse": {
+      "id": "ListScanConfigsResponse",
       "properties": {
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list.",
-          "type": "string"
-        },
-        "scanRuns": {
-          "description": "The list of ScanRuns returned.",
-          "type": "array",
-          "items": {
-            "$ref": "ScanRun"
-          }
-        }
-      },
-      "id": "ListScanRunsResponse"
-    },
-    "Finding": {
-      "id": "Finding",
-      "properties": {
-        "outdatedLibrary": {
-          "$ref": "OutdatedLibrary",
-          "description": "Output only. An addon containing information about outdated libraries."
-        },
-        "vulnerableParameters": {
-          "$ref": "VulnerableParameters",
-          "description": "Output only. An addon containing information about request parameters which were found to be vulnerable."
-        },
-        "xss": {
-          "description": "Output only. An addon containing information reported for an XSS, if any.",
-          "$ref": "Xss"
-        },
-        "fuzzedUrl": {
-          "type": "string",
-          "description": "Output only. The URL produced by the server-side fuzzer and used in the request that triggered the vulnerability."
-        },
-        "body": {
-          "description": "Output only. The body of the request that triggered the vulnerability.",
-          "type": "string"
-        },
-        "reproductionUrl": {
-          "type": "string",
-          "description": "Output only. The URL containing human-readable payload that user can leverage to reproduce the vulnerability."
-        },
-        "severity": {
-          "enumDescriptions": [
-            "No severity specified. The default value.",
-            "Critical severity.",
-            "High severity.",
-            "Medium severity.",
-            "Low severity."
-          ],
-          "readOnly": true,
-          "enum": [
-            "SEVERITY_UNSPECIFIED",
-            "CRITICAL",
-            "HIGH",
-            "MEDIUM",
-            "LOW"
-          ],
-          "type": "string",
-          "description": "Output only. The severity level of the reported vulnerability."
-        },
-        "finalUrl": {
-          "type": "string",
-          "description": "Output only. The URL where the browser lands when the vulnerability is detected."
-        },
-        "httpMethod": {
-          "type": "string",
-          "description": "Output only. The http method of the request that triggered the vulnerability, in uppercase."
-        },
-        "name": {
-          "description": "Output only. The resource name of the Finding. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanruns/{scanRunId}/findings/{findingId}'. The finding IDs are generated by the system.",
-          "type": "string"
-        },
-        "description": {
-          "description": "Output only. The description of the vulnerability.",
-          "type": "string"
-        },
-        "form": {
-          "$ref": "Form",
-          "description": "Output only. An addon containing information reported for a vulnerability with an HTML form, if any."
-        },
-        "violatingResource": {
-          "description": "Output only. An addon containing detailed information regarding any resource causing the vulnerability such as JavaScript sources, image, audio files, etc.",
-          "$ref": "ViolatingResource"
-        },
-        "trackingId": {
-          "type": "string",
-          "description": "Output only. The tracking ID uniquely identifies a vulnerability instance across multiple ScanRuns."
-        },
-        "findingType": {
-          "description": "Output only. The type of the Finding. Detailed and up-to-date information on findings can be found here: https://cloud.google.com/security-command-center/docs/how-to-remediate-web-security-scanner-findings",
-          "type": "string"
-        },
-        "frameUrl": {
-          "description": "Output only. If the vulnerability was originated from nested IFrame, the immediate parent IFrame is reported.",
-          "type": "string"
-        },
-        "vulnerableHeaders": {
-          "$ref": "VulnerableHeaders",
-          "description": "Output only. An addon containing information about vulnerable or missing HTTP headers."
-        }
-      },
-      "type": "object",
-      "description": "A Finding resource represents a vulnerability instance identified during a ScanRun."
-    }
-  },
-  "discoveryVersion": "v1",
-  "id": "websecurityscanner:v1",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "icons": {
-    "x32": "http://www.google.com/images/icons/product/search-32.gif",
-    "x16": "http://www.google.com/images/icons/product/search-16.gif"
-  },
-  "documentationLink": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview/",
-  "rootUrl": "https://websecurityscanner.googleapis.com/",
-  "canonicalName": "WebSecurityScanner",
-  "kind": "discovery#restDescription",
-  "resources": {
-    "projects": {
-      "resources": {
         "scanConfigs": {
-          "methods": {
-            "create": {
-              "id": "websecurityscanner.projects.scanConfigs.create",
-              "httpMethod": "POST",
-              "flatPath": "v1/projects/{projectsId}/scanConfigs",
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "type": "string",
-                  "required": true,
-                  "location": "path",
-                  "description": "Required. The parent resource name where the scan is created, which should be a project resource name in the format 'projects/{projectId}'."
-                }
-              },
-              "request": {
-                "$ref": "ScanConfig"
-              },
-              "response": {
-                "$ref": "ScanConfig"
-              },
-              "path": "v1/{+parent}/scanConfigs",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "description": "Creates a new ScanConfig."
-            },
-            "start": {
-              "request": {
-                "$ref": "StartScanRunRequest"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "description": "Start a ScanRun according to the given ScanConfig.",
-              "response": {
-                "$ref": "ScanRun"
-              },
-              "httpMethod": "POST",
-              "id": "websecurityscanner.projects.scanConfigs.start",
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "description": "Required. The resource name of the ScanConfig to be used. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
-                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
-                  "type": "string",
-                  "location": "path"
-                }
-              },
-              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}:start",
-              "parameterOrder": [
-                "name"
-              ],
-              "path": "v1/{+name}:start"
-            },
-            "delete": {
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "websecurityscanner.projects.scanConfigs.delete",
-              "httpMethod": "DELETE",
-              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
-              "parameterOrder": [
-                "name"
-              ],
-              "path": "v1/{+name}",
-              "description": "Deletes an existing ScanConfig and its child resources.",
-              "response": {
-                "$ref": "Empty"
-              },
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
-                  "location": "path",
-                  "description": "Required. The resource name of the ScanConfig to be deleted. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
-                  "type": "string",
-                  "required": true
-                }
-              }
-            },
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
-                  "type": "string",
-                  "description": "Required. The resource name of the ScanConfig to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'.",
-                  "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "websecurityscanner.projects.scanConfigs.get",
-              "path": "v1/{+name}",
-              "httpMethod": "GET",
-              "response": {
-                "$ref": "ScanConfig"
-              },
-              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
-              "description": "Gets a ScanConfig."
-            },
-            "patch": {
-              "httpMethod": "PATCH",
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "websecurityscanner.projects.scanConfigs.patch",
-              "response": {
-                "$ref": "ScanConfig"
-              },
-              "request": {
-                "$ref": "ScanConfig"
-              },
-              "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
-              "path": "v1/{+name}",
-              "parameters": {
-                "name": {
-                  "description": "The resource name of the ScanConfig. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}'. The ScanConfig IDs are generated by the system.",
-                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
-                  "required": true,
-                  "location": "path",
-                  "type": "string"
-                },
-                "updateMask": {
-                  "type": "string",
-                  "format": "google-fieldmask",
-                  "description": "Required. The update mask applies to the resource. For the `FieldMask` definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask",
-                  "location": "query"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "description": "Updates a ScanConfig. This method support partial update of a ScanConfig."
-            },
-            "list": {
-              "httpMethod": "GET",
-              "description": "Lists ScanConfigs under a given project.",
-              "response": {
-                "$ref": "ListScanConfigsResponse"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned."
-                },
-                "parent": {
-                  "location": "path",
-                  "description": "Required. The parent resource name, which should be a project resource name in the format 'projects/{projectId}'.",
-                  "pattern": "^projects/[^/]+$",
-                  "required": true,
-                  "type": "string"
-                },
-                "pageSize": {
-                  "description": "The maximum number of ScanConfigs to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
-                  "type": "integer",
-                  "location": "query",
-                  "format": "int32"
-                }
-              },
-              "id": "websecurityscanner.projects.scanConfigs.list",
-              "parameterOrder": [
-                "parent"
-              ],
-              "path": "v1/{+parent}/scanConfigs",
-              "flatPath": "v1/projects/{projectsId}/scanConfigs"
-            }
+          "items": {
+            "$ref": "ScanConfig"
           },
-          "resources": {
-            "scanRuns": {
-              "resources": {
-                "crawledUrls": {
-                  "methods": {
-                    "list": {
-                      "description": "List CrawledUrls under a given ScanRun.",
-                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/crawledUrls",
-                      "path": "v1/{+parent}/crawledUrls",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "response": {
-                        "$ref": "ListCrawledUrlsResponse"
-                      },
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "httpMethod": "GET",
-                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.crawledUrls.list",
-                      "parameters": {
-                        "parent": {
-                          "required": true,
-                          "type": "string",
-                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
-                          "location": "path",
-                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
-                        },
-                        "pageSize": {
-                          "location": "query",
-                          "format": "int32",
-                          "description": "The maximum number of CrawledUrls to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
-                          "type": "integer"
-                        },
-                        "pageToken": {
-                          "location": "query",
-                          "type": "string",
-                          "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned."
-                        }
-                      }
-                    }
-                  }
-                },
-                "findingTypeStats": {
-                  "methods": {
-                    "list": {
-                      "parameters": {
-                        "parent": {
-                          "location": "path",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
-                          "type": "string",
-                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'."
-                        }
-                      },
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "path": "v1/{+parent}/findingTypeStats",
-                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findingTypeStats",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "description": "List all FindingTypeStats under a given ScanRun.",
-                      "httpMethod": "GET",
-                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findingTypeStats.list",
-                      "response": {
-                        "$ref": "ListFindingTypeStatsResponse"
-                      }
-                    }
-                  }
-                },
-                "findings": {
-                  "methods": {
-                    "get": {
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "response": {
-                        "$ref": "Finding"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findings/{findingsId}",
-                      "description": "Gets a Finding.",
-                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.get",
-                      "path": "v1/{+name}",
-                      "parameters": {
-                        "name": {
-                          "required": true,
-                          "description": "Required. The resource name of the Finding to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}'.",
-                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+/findings/[^/]+$",
-                          "type": "string",
-                          "location": "path"
-                        }
-                      },
-                      "httpMethod": "GET"
-                    },
-                    "list": {
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "parameters": {
-                        "pageSize": {
-                          "description": "The maximum number of Findings to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value.",
-                          "type": "integer",
-                          "format": "int32",
-                          "location": "query"
-                        },
-                        "filter": {
-                          "type": "string",
-                          "location": "query",
-                          "description": "The filter expression. The expression must be in the format: . Supported field: 'finding_type'. Supported operator: '='."
-                        },
-                        "parent": {
-                          "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$",
-                          "type": "string",
-                          "description": "Required. The parent resource name, which should be a scan run resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.",
-                          "location": "path",
-                          "required": true
-                        },
-                        "pageToken": {
-                          "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned.",
-                          "location": "query",
-                          "type": "string"
-                        }
-                      },
-                      "path": "v1/{+parent}/findings",
-                      "id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.list",
-                      "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}/findings",
-                      "httpMethod": "GET",
-                      "description": "List Findings under a given ScanRun.",
-                      "response": {
-                        "$ref": "ListFindingsResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "methods": {
-                "stop": {
-                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}:stop",
-                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.stop",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "request": {
-                    "$ref": "StopScanRunRequest"
-                  },
-                  "parameters": {
-                    "name": {
-                      "required": true,
-                      "type": "string",
-                      "description": "Required. The resource name of the ScanRun to be stopped. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.",
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$"
-                    }
-                  },
-                  "httpMethod": "POST",
-                  "description": "Stops a ScanRun. The stopped ScanRun is returned.",
-                  "response": {
-                    "$ref": "ScanRun"
-                  },
-                  "path": "v1/{+name}:stop",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                },
-                "list": {
-                  "parameters": {
-                    "pageToken": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "A token identifying a page of results to be returned. This should be a `next_page_token` value returned from a previous List request. If unspecified, the first page of results is returned."
-                    },
-                    "pageSize": {
-                      "format": "int32",
-                      "type": "integer",
-                      "location": "query",
-                      "description": "The maximum number of ScanRuns to return, can be limited by server. If not specified or not positive, the implementation will select a reasonable value."
-                    },
-                    "parent": {
-                      "location": "path",
-                      "required": true,
-                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
-                      "type": "string",
-                      "description": "Required. The parent resource name, which should be a scan resource name in the format 'projects/{projectId}/scanConfigs/{scanConfigId}'."
-                    }
-                  },
-                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.list",
-                  "response": {
-                    "$ref": "ListScanRunsResponse"
-                  },
-                  "httpMethod": "GET",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "description": "Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.",
-                  "path": "v1/{+parent}/scanRuns",
-                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns"
-                },
-                "get": {
-                  "description": "Gets a ScanRun.",
-                  "path": "v1/{+name}",
-                  "parameters": {
-                    "name": {
-                      "type": "string",
-                      "location": "path",
-                      "description": "Required. The resource name of the ScanRun to be returned. The name follows the format of 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.",
-                      "required": true,
-                      "pattern": "^projects/[^/]+/scanConfigs/[^/]+/scanRuns/[^/]+$"
-                    }
-                  },
-                  "flatPath": "v1/projects/{projectsId}/scanConfigs/{scanConfigsId}/scanRuns/{scanRunsId}",
-                  "httpMethod": "GET",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "id": "websecurityscanner.projects.scanConfigs.scanRuns.get",
-                  "response": {
-                    "$ref": "ScanRun"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ]
-                }
-              }
-            }
-          }
+          "type": "array",
+          "description": "The list of ScanConfigs returned."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
         }
-      }
+      },
+      "description": "Response for the `ListScanConfigs` method.",
+      "type": "object"
+    },
+    "IapTestServiceAccountInfo": {
+      "id": "IapTestServiceAccountInfo",
+      "properties": {
+        "targetAudienceClientId": {
+          "description": "Required. Describes OAuth2 client id of resources protected by Identity-Aware-Proxy (IAP).",
+          "type": "string"
+        }
+      },
+      "description": "Describes authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.",
+      "type": "object"
     }
   },
   "description": "Scans your Compute and App Engine apps for common web vulnerabilities.",
-  "protocol": "rest",
-  "version_module": true,
-  "servicePath": "",
+  "version": "v1",
+  "name": "websecurityscanner",
+  "revision": "20210324",
+  "mtlsRootUrl": "https://websecurityscanner.mtls.googleapis.com/",
+  "ownerDomain": "google.com",
   "fullyEncodeReservedExpansion": true,
-  "mtlsRootUrl": "https://websecurityscanner.mtls.googleapis.com/"
+  "protocol": "rest",
+  "kind": "discovery#restDescription",
+  "canonicalName": "WebSecurityScanner",
+  "discoveryVersion": "v1",
+  "rootUrl": "https://websecurityscanner.googleapis.com/",
+  "servicePath": ""
 }

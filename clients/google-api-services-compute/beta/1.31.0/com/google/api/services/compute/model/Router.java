@@ -63,7 +63,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
 
   /**
    * Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment
-   * (IPsec-encrypted Cloud Interconnect feature).
+   * (IPsec-encrypted Cloud Interconnect feature). Not currently available in all Interconnect
+   * locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +206,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
 
   /**
    * Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment
-   * (IPsec-encrypted Cloud Interconnect feature).
+   * (IPsec-encrypted Cloud Interconnect feature). Not currently available in all Interconnect
+   * locations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEncryptedInterconnectRouter() {
@@ -214,7 +216,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
 
   /**
    * Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment
-   * (IPsec-encrypted Cloud Interconnect feature).
+   * (IPsec-encrypted Cloud Interconnect feature). Not currently available in all Interconnect
+   * locations.
    * @param encryptedInterconnectRouter encryptedInterconnectRouter or {@code null} for none
    */
   public Router setEncryptedInterconnectRouter(java.lang.Boolean encryptedInterconnectRouter) {

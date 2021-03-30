@@ -37,6 +37,20 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * URL of the forwarding rule associated with the health status of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRule;
+
+  /**
+   * A forwarding rule IP address assigned to this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRuleIp;
+
+  /**
    * Health state of the instance.
    * The value may be {@code null}.
    */
@@ -92,6 +106,40 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
    */
   public HealthStatus setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * URL of the forwarding rule associated with the health status of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRule() {
+    return forwardingRule;
+  }
+
+  /**
+   * URL of the forwarding rule associated with the health status of the instance.
+   * @param forwardingRule forwardingRule or {@code null} for none
+   */
+  public HealthStatus setForwardingRule(java.lang.String forwardingRule) {
+    this.forwardingRule = forwardingRule;
+    return this;
+  }
+
+  /**
+   * A forwarding rule IP address assigned to this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRuleIp() {
+    return forwardingRuleIp;
+  }
+
+  /**
+   * A forwarding rule IP address assigned to this instance.
+   * @param forwardingRuleIp forwardingRuleIp or {@code null} for none
+   */
+  public HealthStatus setForwardingRuleIp(java.lang.String forwardingRuleIp) {
+    this.forwardingRuleIp = forwardingRuleIp;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Action to preform when the client connection triggers the rule. Can currently be either
+   * The Action to perform when the client connection triggers the rule. Can currently be either
    * "allow" or "deny()" where valid values for status are 403, 404, and 502.
    * The value may be {@code null}.
    */
@@ -151,7 +151,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
-   * The Action to preform when the client connection triggers the rule. Can currently be either
+   * The Action to perform when the client connection triggers the rule. Can currently be either
    * "allow" or "deny()" where valid values for status are 403, 404, and 502.
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Action to preform when the client connection triggers the rule. Can currently be either
+   * The Action to perform when the client connection triggers the rule. Can currently be either
    * "allow" or "deny()" where valid values for status are 403, 404, and 502.
    * @param action action or {@code null} for none
    */

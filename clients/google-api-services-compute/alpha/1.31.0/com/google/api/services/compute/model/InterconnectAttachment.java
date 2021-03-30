@@ -120,7 +120,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
    * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
-   * encrypted Cloud Interconnect, create the attachment using this option.
+   * encrypted Cloud Interconnect, create the attachment using this option.  Not currently available
+   * in all Interconnect locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +159,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption
    * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
-   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * VPN gateway's IP address will be allocated from regional external IP address pool. Not
+   * currently available in all Interconnect locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -520,7 +522,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
    * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
-   * encrypted Cloud Interconnect, create the attachment using this option.
+   * encrypted Cloud Interconnect, create the attachment using this option.  Not currently available
+   * in all Interconnect locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryption() {
@@ -533,7 +536,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * traffic to, or receive traffic from, this type of attachment.  - IPSEC indicates that the
    * attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs
    * cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec-
-   * encrypted Cloud Interconnect, create the attachment using this option.
+   * encrypted Cloud Interconnect, create the attachment using this option.  Not currently available
+   * in all Interconnect locations.
    * @param encryption encryption or {@code null} for none
    */
   public InterconnectAttachment setEncryption(java.lang.String encryption) {
@@ -604,7 +608,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption
    * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
-   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * VPN gateway's IP address will be allocated from regional external IP address pool. Not
+   * currently available in all Interconnect locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIpsecInternalAddresses() {
@@ -621,7 +626,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption
    * option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA
-   * VPN gateway's IP address will be allocated from regional external IP address pool.
+   * VPN gateway's IP address will be allocated from regional external IP address pool. Not
+   * currently available in all Interconnect locations.
    * @param ipsecInternalAddresses ipsecInternalAddresses or {@code null} for none
    */
   public InterconnectAttachment setIpsecInternalAddresses(java.util.List<java.lang.String> ipsecInternalAddresses) {

@@ -39,7 +39,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
    * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
+   * currently available in all Interconnect locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
    * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
+   * currently available in all Interconnect locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectAttachment() {
@@ -82,7 +84,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
    * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource.
+   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
+   * currently available in all Interconnect locations.
    * @param interconnectAttachment interconnectAttachment or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setInterconnectAttachment(java.lang.String interconnectAttachment) {

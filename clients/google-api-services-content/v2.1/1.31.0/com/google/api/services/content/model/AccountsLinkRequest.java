@@ -54,9 +54,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   private java.lang.String linkedAccountId;
 
   /**
-   * Acceptable values are: - "`shoppingAdsProductManagement`" - "`shoppingAdsOther`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`shoppingActionsOther`"
+   * Acceptable values are: - "`shoppingAdsProductManagement`" -
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +117,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Acceptable values are: - "`shoppingAdsProductManagement`" - "`shoppingAdsOther`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`shoppingActionsOther`"
+   * Acceptable values are: - "`shoppingAdsProductManagement`" -
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -128,9 +126,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Acceptable values are: - "`shoppingAdsProductManagement`" - "`shoppingAdsOther`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
-   * "`shoppingActionsOther`"
+   * Acceptable values are: - "`shoppingAdsProductManagement`" -
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * @param services services or {@code null} for none
    */
   public AccountsLinkRequest setServices(java.util.List<java.lang.String> services) {

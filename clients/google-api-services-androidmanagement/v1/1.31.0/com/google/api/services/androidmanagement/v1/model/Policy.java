@@ -159,9 +159,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean cellBroadcastsConfigDisabled;
 
   /**
-   * Rules for automatically choosing a private key and certificate to authenticate the device to a
-   * server. The rules are ordered by increasing precedence, so if an outgoing request matches more
-   * than one rule, the last rule defines which private key to use.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,7 +440,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.
+   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -994,9 +993,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rules for automatically choosing a private key and certificate to authenticate the device to a
-   * server. The rules are ordered by increasing precedence, so if an outgoing request matches more
-   * than one rule, the last rule defines which private key to use.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
    * @return value or {@code null} for none
    */
   public java.util.List<ChoosePrivateKeyRule> getChoosePrivateKeyRules() {
@@ -1004,9 +1001,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rules for automatically choosing a private key and certificate to authenticate the device to a
-   * server. The rules are ordered by increasing precedence, so if an outgoing request matches more
-   * than one rule, the last rule defines which private key to use.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
    * @param choosePrivateKeyRules choosePrivateKeyRules or {@code null} for none
    */
   public Policy setChoosePrivateKeyRules(java.util.List<ChoosePrivateKeyRule> choosePrivateKeyRules) {
@@ -1613,7 +1608,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.
+   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
    * @return value or {@code null} for none
    */
   public PasswordRequirements getPasswordRequirements() {
@@ -1622,7 +1618,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Password requirements. The field password_requirements.require_password_unlock must not be set.
-   * DEPRECATED - Use password_policies.
+   * DEPRECATED - Use password_policies.Note:Complexity-based values of PasswordQuality, that is,
+   * COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used here.
    * @param passwordRequirements passwordRequirements or {@code null} for none
    */
   public Policy setPasswordRequirements(PasswordRequirements passwordRequirements) {

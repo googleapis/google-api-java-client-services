@@ -72,6 +72,16 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean italic;
 
   /**
+   * The link destination of the text, if any. Setting a link in a format run will clear an existing
+   * cell-level link. When a link is set, the text foreground color will be set to the default link
+   * color and the text will be underlined. If these fields are modified in the same request, those
+   * values will be used instead of the link defaults.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Link link;
+
+  /**
    * True if the text has a strikethrough.
    * The value may be {@code null}.
    */
@@ -184,6 +194,29 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
    */
   public TextFormat setItalic(java.lang.Boolean italic) {
     this.italic = italic;
+    return this;
+  }
+
+  /**
+   * The link destination of the text, if any. Setting a link in a format run will clear an existing
+   * cell-level link. When a link is set, the text foreground color will be set to the default link
+   * color and the text will be underlined. If these fields are modified in the same request, those
+   * values will be used instead of the link defaults.
+   * @return value or {@code null} for none
+   */
+  public Link getLink() {
+    return link;
+  }
+
+  /**
+   * The link destination of the text, if any. Setting a link in a format run will clear an existing
+   * cell-level link. When a link is set, the text foreground color will be set to the default link
+   * color and the text will be underlined. If these fields are modified in the same request, those
+   * values will be used instead of the link defaults.
+   * @param link link or {@code null} for none
+   */
+  public TextFormat setLink(Link link) {
+    this.link = link;
     return this;
   }
 

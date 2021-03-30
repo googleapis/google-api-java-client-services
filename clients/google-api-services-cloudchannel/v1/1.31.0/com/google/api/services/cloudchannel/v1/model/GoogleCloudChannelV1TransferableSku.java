@@ -31,6 +31,13 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1TransferableSku extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The customer to transfer has an entitlement with the populated legacy SKU.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudChannelV1Sku legacySku;
+
+  /**
    * The SKU pertaining to the provisioning resource as specified in the Offer.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudChannelV1TransferableSku extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1TransferEligibility transferEligibility;
+
+  /**
+   * Optional. The customer to transfer has an entitlement with the populated legacy SKU.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudChannelV1Sku getLegacySku() {
+    return legacySku;
+  }
+
+  /**
+   * Optional. The customer to transfer has an entitlement with the populated legacy SKU.
+   * @param legacySku legacySku or {@code null} for none
+   */
+  public GoogleCloudChannelV1TransferableSku setLegacySku(GoogleCloudChannelV1Sku legacySku) {
+    this.legacySku = legacySku;
+    return this;
+  }
 
   /**
    * The SKU pertaining to the provisioning resource as specified in the Offer.

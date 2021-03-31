@@ -42,6 +42,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> additionalImageLinks;
 
   /**
+   * Additional cut of the item. Used together with size_type to represent combined size types for
+   * apparel items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String additionalSizeType;
+
+  /**
    * Used to group items in an arbitrary way. Only for CPA%, discouraged otherwise.
    * The value may be {@code null}.
    */
@@ -641,6 +649,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setAdditionalImageLinks(java.util.List<java.lang.String> additionalImageLinks) {
     this.additionalImageLinks = additionalImageLinks;
+    return this;
+  }
+
+  /**
+   * Additional cut of the item. Used together with size_type to represent combined size types for
+   * apparel items.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdditionalSizeType() {
+    return additionalSizeType;
+  }
+
+  /**
+   * Additional cut of the item. Used together with size_type to represent combined size types for
+   * apparel items.
+   * @param additionalSizeType additionalSizeType or {@code null} for none
+   */
+  public Product setAdditionalSizeType(java.lang.String additionalSizeType) {
+    this.additionalSizeType = additionalSizeType;
     return this;
   }
 

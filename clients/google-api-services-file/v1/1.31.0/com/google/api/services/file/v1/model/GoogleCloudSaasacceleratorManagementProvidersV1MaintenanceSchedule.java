@@ -31,8 +31,9 @@ package com.google.api.services.file.v1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
-   * check whether it's set, if it's set as false explicitly, it's false
+   * This field is deprecated, and will be always set to true since reschedule can happen multiple
+   * times now. This field should not be removed until all service producers remove this for their
+   * customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +71,9 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
   private String startTime;
 
   /**
-   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
-   * check whether it's set, if it's set as false explicitly, it's false
+   * This field is deprecated, and will be always set to true since reschedule can happen multiple
+   * times now. This field should not be removed until all service producers remove this for their
+   * customers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanReschedule() {
@@ -79,8 +81,9 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
   }
 
   /**
-   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
-   * check whether it's set, if it's set as false explicitly, it's false
+   * This field is deprecated, and will be always set to true since reschedule can happen multiple
+   * times now. This field should not be removed until all service producers remove this for their
+   * customers.
    * @param canReschedule canReschedule or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setCanReschedule(java.lang.Boolean canReschedule) {

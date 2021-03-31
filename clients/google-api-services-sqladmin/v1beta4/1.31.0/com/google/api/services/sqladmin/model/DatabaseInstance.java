@@ -57,9 +57,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default).
-   * SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
-   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
+   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,9 +337,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default).
-   * SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
-   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
+   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -349,9 +349,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default).
-   * SQL Server instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
-   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
+   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {

@@ -58,7 +58,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> region;
 
   /**
-   * An identifier for the machine type, for example, db-n1-standard-1. For related information, see
+   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
    * Pricing.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the machine type, for example, db-n1-standard-1. For related information, see
+   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
    * Pricing.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Tier extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the machine type, for example, db-n1-standard-1. For related information, see
+   * An identifier for the machine type, for example, db-custom-1-3840. For related information, see
    * Pricing.
    * @param tier tier or {@code null} for none
    */

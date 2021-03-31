@@ -1901,6 +1901,129 @@ public class MyBusinessAccountManagement extends com.google.api.client.googleapi
   public class Locations {
 
     /**
+     * Moves a location from an account that the user owns to another account that the same user
+     * administers. The user must be an owner of the account the location is currently associated with
+     * and must also be at least a manager of the destination account.
+     *
+     * Create a request for the method "locations.transferLocation".
+     *
+     * This request holds the parameters needed by the mybusinessaccountmanagement server.  After
+     * setting any optional parameters, call the {@link TransferLocation#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param locationsId
+     * @param content the {@link com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest}
+     * @return the request
+     */
+    public TransferLocation transferLocation(java.lang.String locationsId, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) throws java.io.IOException {
+      TransferLocation result = new TransferLocation(locationsId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TransferLocation extends MyBusinessAccountManagementRequest<com.google.api.services.mybusinessaccountmanagement.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/locations/{locationsId}:transferLocation";
+
+      /**
+       * Moves a location from an account that the user owns to another account that the same user
+       * administers. The user must be an owner of the account the location is currently associated with
+       * and must also be at least a manager of the destination account.
+       *
+       * Create a request for the method "locations.transferLocation".
+       *
+       * This request holds the parameters needed by the the mybusinessaccountmanagement server.  After
+       * setting any optional parameters, call the {@link TransferLocation#execute()} method to invoke
+       * the remote operation. <p> {@link TransferLocation#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param locationsId
+       * @param content the {@link com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest}
+       * @since 1.13
+       */
+      protected TransferLocation(java.lang.String locationsId, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) {
+        super(MyBusinessAccountManagement.this, "POST", REST_PATH, content, com.google.api.services.mybusinessaccountmanagement.v1.model.Empty.class);
+        this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+      }
+
+      @Override
+      public TransferLocation set$Xgafv(java.lang.String $Xgafv) {
+        return (TransferLocation) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TransferLocation setAccessToken(java.lang.String accessToken) {
+        return (TransferLocation) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TransferLocation setAlt(java.lang.String alt) {
+        return (TransferLocation) super.setAlt(alt);
+      }
+
+      @Override
+      public TransferLocation setCallback(java.lang.String callback) {
+        return (TransferLocation) super.setCallback(callback);
+      }
+
+      @Override
+      public TransferLocation setFields(java.lang.String fields) {
+        return (TransferLocation) super.setFields(fields);
+      }
+
+      @Override
+      public TransferLocation setKey(java.lang.String key) {
+        return (TransferLocation) super.setKey(key);
+      }
+
+      @Override
+      public TransferLocation setOauthToken(java.lang.String oauthToken) {
+        return (TransferLocation) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TransferLocation setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TransferLocation) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TransferLocation setQuotaUser(java.lang.String quotaUser) {
+        return (TransferLocation) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TransferLocation setUploadType(java.lang.String uploadType) {
+        return (TransferLocation) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TransferLocation setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TransferLocation) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String locationsId;
+
+      /**
+
+       */
+      public java.lang.String getLocationsId() {
+        return locationsId;
+      }
+
+      public TransferLocation setLocationsId(java.lang.String locationsId) {
+        this.locationsId = locationsId;
+        return this;
+      }
+
+      @Override
+      public TransferLocation set(String parameterName, Object value) {
+        return (TransferLocation) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Admins collection.
      *
      * <p>The typical use is:</p>

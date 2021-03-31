@@ -48,7 +48,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfig extends com.googl
   private GooglePrivacyDlpV2FieldId context;
 
   /**
-   * The key used by the encryption function.
+   * The key used by the encryption function. For deterministic encryption using AES-SIV, the
+   * provided key is internally expanded to 64 bytes prior to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfig extends com.googl
   }
 
   /**
-   * The key used by the encryption function.
+   * The key used by the encryption function. For deterministic encryption using AES-SIV, the
+   * provided key is internally expanded to 64 bytes prior to use.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey getCryptoKey() {
@@ -120,7 +122,8 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfig extends com.googl
   }
 
   /**
-   * The key used by the encryption function.
+   * The key used by the encryption function. For deterministic encryption using AES-SIV, the
+   * provided key is internally expanded to 64 bytes prior to use.
    * @param cryptoKey cryptoKey or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoDeterministicConfig setCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {

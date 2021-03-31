@@ -171,7 +171,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String parentAssetType;
 
   /**
-   * The full resource name of this resource's parent, if it has one.
+   * The full resource name of this resource's parent, if it has one. To search against the
+   * `parent_full_resource_name`: * use a field query. Example: `parentFullResourceName:"project-
+   * name"` * use a free text query. Example: `project-name`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -536,7 +538,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The full resource name of this resource's parent, if it has one.
+   * The full resource name of this resource's parent, if it has one. To search against the
+   * `parent_full_resource_name`: * use a field query. Example: `parentFullResourceName:"project-
+   * name"` * use a free text query. Example: `project-name`
    * @return value or {@code null} for none
    */
   public java.lang.String getParentFullResourceName() {
@@ -544,7 +548,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The full resource name of this resource's parent, if it has one.
+   * The full resource name of this resource's parent, if it has one. To search against the
+   * `parent_full_resource_name`: * use a field query. Example: `parentFullResourceName:"project-
+   * name"` * use a free text query. Example: `project-name`
    * @param parentFullResourceName parentFullResourceName or {@code null} for none
    */
   public ResourceSearchResult setParentFullResourceName(java.lang.String parentFullResourceName) {

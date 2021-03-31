@@ -38,7 +38,7 @@ TEMPLATE_VERSIONS = [
 ]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 
-repository = Path('.')
+repository = Path(".")
 
 log.debug(f"Cloning {discovery_url}.")
 discovery = git.clone(discovery_url)
@@ -47,25 +47,23 @@ log.debug("Cleaning output directory.")
 shell.run("rm -rf .cache".split(), cwd=repository)
 
 log.debug("Installing dependencies.")
-shell.run(
-    "python2 -m pip install -e generator/ --user".split(),
-    cwd=repository
-)
+shell.run("python2 -m pip install -e generator/ --user".split(), cwd=repository)
+
 
 def write_metadata_file(name: str, version: str, metadata: dict):
-    metadata_file = f'clients/{name}/{version}.metadata.json'
+    metadata_file = f"clients/{name}/{version}.metadata.json"
     print(f"Writing json metadata to {metadata_file}")
-    metadata = {
-        "maven": metadata
-    }
+    metadata = {"maven": metadata}
     with open(metadata_file, "w") as outfile:
         json.dump(metadata, outfile, indent=2)
 
+
 def write_readme_file(name: str, version: str, metadata: dict):
-    readme_file = f'clients/{name}/{version}/README.md'
+    readme_file = f"clients/{name}/{version}/README.md"
     print(f"Writing README to {readme_file}")
     with open(readme_file, "w") as outfile:
         outfile.write("FIXME")
+
 
 def maven_metadata(pom_file: str):
     tree = etree.parse(pom_file)
@@ -73,14 +71,22 @@ def maven_metadata(pom_file: str):
     version = root.find("{http://maven.apache.org/POM/4.0.0}version").text
     group_id = root.find("{http://maven.apache.org/POM/4.0.0}groupId").text
     artifact_id = root.find("{http://maven.apache.org/POM/4.0.0}artifactId").text
-    return {
-        "groupId": group_id,
-        "artifactId": artifact_id,
-        "version": version
-    }
+    return {"groupId": group_id, "artifactId": artifact_id, "version": version}
+
+
+def write_discovery_file(input_file: str, output_file: str):
+    """Write discovery doc contents to the resource directory, but sort the contents
+    to attempt making a readable diff.
+    """
+    discovery_json = ""
+    with open(input_file) as json_file:
+        discovery_json = json.load(json_file)
+
+    with open(output_file, "w") as discovery_file:
+        json.dump(discovery_json, discovery_file, indent=1, sort_keys=True)
+
 
 def generate_service(disco: str):
-
     m = re.search(VERSION_REGEX, disco)
     if m is None:
         log.info(f"Skipping {disco}.")
@@ -99,9 +105,9 @@ def generate_service(disco: str):
         log.info(f"\t{template}")
 
         command = (
-            f"python2 -m googleapis.codegen --output_dir={output_dir}" +
-            f" --input={input_file} --language=java --language_variant={template}" +
-            f" --package_path=api/services"
+            f"python2 -m googleapis.codegen --output_dir={output_dir}"
+            + f" --input={input_file} --language=java --language_variant={template}"
+            + f" --package_path=api/services"
         )
 
         shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
@@ -109,27 +115,35 @@ def generate_service(disco: str):
 
         s.copy(output_dir, f"clients/{library_name}/{version}/{template}")
 
-        resource_dir = repository / "clients" / library_name / version / template / "resources"
+        resource_dir = (
+            repository / "clients" / library_name / version / template / "resources"
+        )
         shell.run(f"mkdir -p {resource_dir}".split())
-        shutil.copy(input_file, resource_dir / path.basename(disco))
+        write_discovery_file(input_file, resource_dir / path.basename(disco))
 
     # write the metadata file
     latest_version = TEMPLATE_VERSIONS[-1]
-    metadata = maven_metadata(str(repository / "clients" / library_name / version / latest_version / "pom.xml"))
+    metadata = maven_metadata(
+        str(
+            repository / "clients" / library_name / version / latest_version / "pom.xml"
+        )
+    )
     write_metadata_file(library_name, version, metadata)
 
     # copy the latest README to the main service location
     shutil.copy(
         repository / "clients" / library_name / version / latest_version / "README.md",
-        repository / "clients" / library_name / version / "README.md"
+        repository / "clients" / library_name / version / "README.md",
     )
+
 
 def all_discoveries():
     discos = []
-    for file in glob.glob(str(discovery / 'discoveries/*.*.json')):
+    for file in glob.glob(str(discovery / "discoveries/*.*.json")):
         discos.append(path.basename(file))
 
     return discos
+
 
 class Service:
     id: str = None
@@ -139,30 +153,36 @@ class Service:
     def __init__(self, discovery_path: str):
         match = re.match(VERSION_REGEX, path.basename(discovery_path))
         if match is not None:
-          self.id = match[1]
-          self.version = match[2]
+            self.id = match[1]
+            self.version = match[2]
 
-          with open(discovery_path, "r") as f:
-              data = json.load(f)
-              self.title = data["title"]
+            with open(discovery_path, "r") as f:
+                data = json.load(f)
+                self.title = data["title"]
         else:
             print(path.basename(discovery_path))
 
+
 def all_services():
     services = []
-    for file in glob.glob(str(discovery / 'discoveries/*.*.json')):
+    for file in glob.glob(str(discovery / "discoveries/*.*.json")):
         match = re.match(VERSION_REGEX, path.basename(file))
         service = Service(file)
         services.append(service)
 
     return services
 
+
 def service_row(services: List[Service]) -> str:
-  services = sorted(services, key=lambda service: service.version)
-  links = [f"[{service.version}](clients/google-api-services-{service.id}/{service.version})" for service in services]
-  link = ", ".join(links)
-  name = services[0].title
-  return f"| {name} | {link} |\n"
+    services = sorted(services, key=lambda service: service.version)
+    links = [
+        f"[{service.version}](clients/google-api-services-{service.id}/{service.version})"
+        for service in services
+    ]
+    link = ", ".join(links)
+    name = services[0].title
+    return f"| {name} | {link} |\n"
+
 
 def replace_content_in_readme(content_rows: List[str]) -> None:
     START_MARKER = "[//]: # (API_TABLE_START)"
@@ -186,6 +206,7 @@ def replace_content_in_readme(content_rows: List[str]) -> None:
         for line in newlines:
             f.write(line)
 
+
 def generate_service_list(services: List[Service]) -> None:
     services_by_name = {}
     for service in services:
@@ -204,10 +225,12 @@ def generate_service_list(services: List[Service]) -> None:
     ]
 
     # print(services_by_name.keys())
-    content_rows += [service_row(services_by_name[name])
-        for name in sorted(services_by_name.keys())]
+    content_rows += [
+        service_row(services_by_name[name]) for name in sorted(services_by_name.keys())
+    ]
 
     replace_content_in_readme(content_rows)
+
 
 def remove_unused_services(services: List[Service]) -> None:
     print("removing unused service versions")
@@ -231,9 +254,11 @@ def remove_unused_services(services: List[Service]) -> None:
             shutil.rmtree(f"clients/{client_name}/{version}")
             remove(f"clients/{client_name}/{version}.metadata.json")
 
+
 def generate_services(services):
     for service in services:
         generate_service(service)
+
 
 if extra_args():
     api_name = extra_args()[0]
@@ -243,7 +268,9 @@ if extra_args():
         remove_unused_services(services)
     else:
         discoveries = all_discoveries()
-        discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
+        discoveries = [
+            discovery for discovery in discoveries if discovery.startswith(api_name)
+        ]
         generate_services(discoveries)
 else:
     discoveries = all_discoveries()

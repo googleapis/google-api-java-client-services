@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-policysimulator",
+    "version": "v1-rev20210330-1.31.0"
+  }
+}

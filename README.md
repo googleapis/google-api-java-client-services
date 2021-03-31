@@ -37,7 +37,7 @@ packages on [Maven Central][maven-search].
 | Android Device Provisioning Partner API | [v1](clients/google-api-services-androiddeviceprovisioning/v1) |
 | Android Management API | [v1](clients/google-api-services-androidmanagement/v1) |
 | Apigee API | [v1](clients/google-api-services-apigee/v1) |
-| App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
+| App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
@@ -70,7 +70,7 @@ packages on [Maven Central][maven-search].
 | Cloud Datastore API | [v1](clients/google-api-services-datastore/v1), [v1beta1](clients/google-api-services-datastore/v1beta1), [v1beta3](clients/google-api-services-datastore/v1beta3) |
 | Cloud Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
 | Cloud Deployment Manager V2 API | [alpha](clients/google-api-services-deploymentmanager/alpha), [v2](clients/google-api-services-deploymentmanager/v2), [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
-| Cloud Document AI API | [v1beta2](clients/google-api-services-documentai/v1beta2), [v1beta3](clients/google-api-services-documentai/v1beta3) |
+| Cloud Document AI API | [v1](clients/google-api-services-documentai/v1), [v1beta2](clients/google-api-services-documentai/v1beta2), [v1beta3](clients/google-api-services-documentai/v1beta3) |
 | Cloud Domains API | [v1alpha2](clients/google-api-services-domains/v1alpha2), [v1beta1](clients/google-api-services-domains/v1beta1) |
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
 | Cloud Firestore API | [v1](clients/google-api-services-firestore/v1), [v1beta1](clients/google-api-services-firestore/v1beta1), [v1beta2](clients/google-api-services-firestore/v1beta2) |
@@ -188,7 +188,7 @@ packages on [Maven Central][maven-search].
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
-| Policy Simulator API | [v1beta1](clients/google-api-services-policysimulator/v1beta1) |
+| Policy Simulator API | [v1](clients/google-api-services-policysimulator/v1), [v1beta1](clients/google-api-services-policysimulator/v1beta1) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
 | Pub/Sub Lite API | [v1](clients/google-api-services-pubsublite/v1) |

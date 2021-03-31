@@ -215,8 +215,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
-   * or *db-custom-1-3840* (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-custom-1-3840* .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -642,8 +641,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
-   * or *db-custom-1-3840* (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-custom-1-3840* .
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -651,8 +649,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
-   * or *db-custom-1-3840* (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-custom-1-3840* .
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

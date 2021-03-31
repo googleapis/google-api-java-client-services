@@ -1655,7 +1655,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides a list of contacts in the authenticated user's other contacts that matches the search
-     * query.
+     * query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that
+     * are from the OTHER_CONTACT source.
      *
      * Create a request for the method "otherContacts.search".
      *
@@ -1676,7 +1677,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides a list of contacts in the authenticated user's other contacts that matches the search
-       * query.
+       * query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields
+       * that are from the OTHER_CONTACT source.
        *
        * Create a request for the method "otherContacts.search".
        *
@@ -1857,6 +1859,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
     /**
      * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
+     * Limited to 10 parallel requests per user.
      *
      * Create a request for the method "people.batchCreateContacts".
      *
@@ -1878,6 +1881,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Create a batch of new contacts and return the PersonResponses for the newly created contacts.
+       * Limited to 10 parallel requests per user.
        *
        * Create a request for the method "people.batchCreateContacts".
        *
@@ -1955,7 +1959,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Delete a batch of contacts. Any non-contact data will not be deleted.
+     * Delete a batch of contacts. Any non-contact data will not be deleted. Limited to 10 parallel
+     * requests per user.
      *
      * Create a request for the method "people.batchDeleteContacts".
      *
@@ -1976,7 +1981,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/people:batchDeleteContacts";
 
       /**
-       * Delete a batch of contacts. Any non-contact data will not be deleted.
+       * Delete a batch of contacts. Any non-contact data will not be deleted. Limited to 10 parallel
+       * requests per user.
        *
        * Create a request for the method "people.batchDeleteContacts".
        *
@@ -2055,7 +2061,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Update a batch of contacts and return a map of resource names to PersonResponses for the updated
-     * contacts.
+     * contacts. Limited to 10 parallel requests per user.
      *
      * Create a request for the method "people.batchUpdateContacts".
      *
@@ -2077,7 +2083,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Update a batch of contacts and return a map of resource names to PersonResponses for the
-       * updated contacts.
+       * updated contacts. Limited to 10 parallel requests per user.
        *
        * Create a request for the method "people.batchUpdateContacts".
        *
@@ -3400,7 +3406,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides a list of contacts in the authenticated user's grouped contacts that matches the search
-     * query.
+     * query. The query matches on a contact's `names`, `nickNames`, `emailAddresses`, `phoneNumbers`,
+     * and `organizations` fields that are from the CONTACT" source.
      *
      * Create a request for the method "people.searchContacts".
      *
@@ -3421,7 +3428,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides a list of contacts in the authenticated user's grouped contacts that matches the
-       * search query.
+       * search query. The query matches on a contact's `names`, `nickNames`, `emailAddresses`,
+       * `phoneNumbers`, and `organizations` fields that are from the CONTACT" source.
        *
        * Create a request for the method "people.searchContacts".
        *

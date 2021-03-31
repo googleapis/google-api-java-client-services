@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiV1beta2Vertex extends com.google.api.cli
   private java.lang.Integer x;
 
   /**
-   * Y coordinate.
+   * Y coordinate (starts from the top of the image).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudDocumentaiV1beta2Vertex extends com.google.api.cli
   }
 
   /**
-   * Y coordinate.
+   * Y coordinate (starts from the top of the image).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getY() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDocumentaiV1beta2Vertex extends com.google.api.cli
   }
 
   /**
-   * Y coordinate.
+   * Y coordinate (starts from the top of the image).
    * @param y y or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Vertex setY(java.lang.Integer y) {

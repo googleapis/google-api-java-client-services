@@ -336,6 +336,22 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** The view configures whether to retrieve security keys information. */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** The view configures whether to retrieve security keys information.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /** The view configures whether to retrieve security keys information. */
+      public GetLoginProfile setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
       @Override
       public GetLoginProfile set(String parameterName, Object value) {
         return (GetLoginProfile) super.set(parameterName, value);
@@ -482,6 +498,22 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
       /** The project ID of the Google Cloud Platform project. */
       public ImportSshPublicKey setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
+        return this;
+      }
+
+      /** The view configures whether to retrieve security keys information. */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** The view configures whether to retrieve security keys information.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /** The view configures whether to retrieve security keys information. */
+      public ImportSshPublicKey setView(java.lang.String view) {
+        this.view = view;
         return this;
       }
 

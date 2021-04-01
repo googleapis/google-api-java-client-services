@@ -18,7 +18,7 @@ package com.google.api.services.localservices.v1.model;
 
 /**
  * An Account Report of a GLS account identified by their account id containing aggregate data
- * gathered from a particular date range.
+ * gathered from a particular date range. Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Local Services API. For a detailed explanation see:
@@ -100,6 +100,13 @@ public final class GoogleAdsHomeservicesLocalservicesV1AccountReport extends com
    */
   @com.google.api.client.util.Key
   private java.lang.Double currentPeriodTotalCost;
+
+  /**
+   * Number of impressions that customers have had in the past 2 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long impressionsLastTwoDays;
 
   /**
    * Phone lead responsiveness of the account for the past 90 days from current date. This is
@@ -315,6 +322,23 @@ public final class GoogleAdsHomeservicesLocalservicesV1AccountReport extends com
    */
   public GoogleAdsHomeservicesLocalservicesV1AccountReport setCurrentPeriodTotalCost(java.lang.Double currentPeriodTotalCost) {
     this.currentPeriodTotalCost = currentPeriodTotalCost;
+    return this;
+  }
+
+  /**
+   * Number of impressions that customers have had in the past 2 days.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getImpressionsLastTwoDays() {
+    return impressionsLastTwoDays;
+  }
+
+  /**
+   * Number of impressions that customers have had in the past 2 days.
+   * @param impressionsLastTwoDays impressionsLastTwoDays or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1AccountReport setImpressionsLastTwoDays(java.lang.Long impressionsLastTwoDays) {
+    this.impressionsLastTwoDays = impressionsLastTwoDays;
     return this;
   }
 

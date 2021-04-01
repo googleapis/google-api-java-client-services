@@ -37,6 +37,28 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   private java.lang.String priority;
 
   /**
+   * A per-request tag which can be applied to queries or reads, used for statistics collection.
+   * Both request_tag and transaction_tag can be specified for a read or query that belongs to a
+   * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
+   * `request_tag` must be a valid identifier of the form: `a-zA-Z` between 2 and 64 characters in
+   * length
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestTag;
+
+  /**
+   * A tag used for statistics collection about this transaction. Both request_tag and
+   * transaction_tag can be specified for a read or query that belongs to a transaction. The value
+   * of transaction_tag should be the same for all requests belonging to the same transaction. If
+   * this request doesn’t belong to any transaction, transaction_tag will be ignored.
+   * `transaction_tag` must be a valid identifier of the format: `a-zA-Z{0,49}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transactionTag;
+
+  /**
    * Priority for the request.
    * @return value or {@code null} for none
    */
@@ -50,6 +72,56 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    */
   public RequestOptions setPriority(java.lang.String priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * A per-request tag which can be applied to queries or reads, used for statistics collection.
+   * Both request_tag and transaction_tag can be specified for a read or query that belongs to a
+   * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
+   * `request_tag` must be a valid identifier of the form: `a-zA-Z` between 2 and 64 characters in
+   * length
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestTag() {
+    return requestTag;
+  }
+
+  /**
+   * A per-request tag which can be applied to queries or reads, used for statistics collection.
+   * Both request_tag and transaction_tag can be specified for a read or query that belongs to a
+   * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
+   * `request_tag` must be a valid identifier of the form: `a-zA-Z` between 2 and 64 characters in
+   * length
+   * @param requestTag requestTag or {@code null} for none
+   */
+  public RequestOptions setRequestTag(java.lang.String requestTag) {
+    this.requestTag = requestTag;
+    return this;
+  }
+
+  /**
+   * A tag used for statistics collection about this transaction. Both request_tag and
+   * transaction_tag can be specified for a read or query that belongs to a transaction. The value
+   * of transaction_tag should be the same for all requests belonging to the same transaction. If
+   * this request doesn’t belong to any transaction, transaction_tag will be ignored.
+   * `transaction_tag` must be a valid identifier of the format: `a-zA-Z{0,49}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransactionTag() {
+    return transactionTag;
+  }
+
+  /**
+   * A tag used for statistics collection about this transaction. Both request_tag and
+   * transaction_tag can be specified for a read or query that belongs to a transaction. The value
+   * of transaction_tag should be the same for all requests belonging to the same transaction. If
+   * this request doesn’t belong to any transaction, transaction_tag will be ignored.
+   * `transaction_tag` must be a valid identifier of the format: `a-zA-Z{0,49}`
+   * @param transactionTag transactionTag or {@code null} for none
+   */
+  public RequestOptions setTransactionTag(java.lang.String transactionTag) {
+    this.transactionTag = transactionTag;
     return this;
   }
 

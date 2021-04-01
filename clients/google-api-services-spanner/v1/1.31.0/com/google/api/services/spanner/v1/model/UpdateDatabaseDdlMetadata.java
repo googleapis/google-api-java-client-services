@@ -45,6 +45,23 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   private java.lang.String database;
 
   /**
+   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
+   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
+   * will have start time and end time populated with commit timestamp of operation, as well as a
+   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
+   * `statements[i]`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OperationProgress> progress;
+
+  static {
+    // hack to force ProGuard to consider OperationProgress used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OperationProgress.class);
+  }
+
+  /**
    * For an update this list contains all the statements. For an individual statement, this list
    * contains only that statement.
    * The value may be {@code null}.
@@ -94,6 +111,31 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
    */
   public UpdateDatabaseDdlMetadata setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
+   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
+   * will have start time and end time populated with commit timestamp of operation, as well as a
+   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
+   * `statements[i]`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OperationProgress> getProgress() {
+    return progress;
+  }
+
+  /**
+   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
+   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
+   * will have start time and end time populated with commit timestamp of operation, as well as a
+   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
+   * `statements[i]`.
+   * @param progress progress or {@code null} for none
+   */
+  public UpdateDatabaseDdlMetadata setProgress(java.util.List<OperationProgress> progress) {
+    this.progress = progress;
     return this;
   }
 

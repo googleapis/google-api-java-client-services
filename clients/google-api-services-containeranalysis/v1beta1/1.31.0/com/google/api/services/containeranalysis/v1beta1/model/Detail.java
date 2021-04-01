@@ -111,6 +111,13 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   private String sourceUpdateTime;
 
   /**
+   * The name of the vendor of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vendor;
+
+  /**
    * Required. The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the
    * vulnerability manifests. Examples include distro or storage location for vulnerable jar.
    * @return value or {@code null} for none
@@ -298,6 +305,23 @@ public final class Detail extends com.google.api.client.json.GenericJson {
    */
   public Detail setSourceUpdateTime(String sourceUpdateTime) {
     this.sourceUpdateTime = sourceUpdateTime;
+    return this;
+  }
+
+  /**
+   * The name of the vendor of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVendor() {
+    return vendor;
+  }
+
+  /**
+   * The name of the vendor of the product.
+   * @param vendor vendor or {@code null} for none
+   */
+  public Detail setVendor(java.lang.String vendor) {
+    this.vendor = vendor;
     return this;
   }
 

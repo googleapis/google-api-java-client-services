@@ -33,8 +33,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Speech adaptation configuration improves the accuracy of speech recognition. When speech
    * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
-   * documentation.
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,8 +204,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
-   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
-   * strength).
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,8 +224,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Speech adaptation configuration improves the accuracy of speech recognition. When speech
    * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
-   * documentation.
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
    * @return value or {@code null} for none
    */
   public SpeechAdaptation getAdaptation() {
@@ -237,8 +234,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Speech adaptation configuration improves the accuracy of speech recognition. When speech
    * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
-   * documentation.
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
    * @param adaptation adaptation or {@code null} for none
    */
   public RecognitionConfig setAdaptation(SpeechAdaptation adaptation) {
@@ -622,8 +618,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
-   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
-   * strength).
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation).
    * @return value or {@code null} for none
    */
   public java.util.List<SpeechContext> getSpeechContexts() {
@@ -632,8 +627,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Array of SpeechContext. A means to provide context to assist the speech recognition. For more
-   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-
-   * strength).
+   * information, see [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation).
    * @param speechContexts speechContexts or {@code null} for none
    */
   public RecognitionConfig setSpeechContexts(java.util.List<SpeechContext> speechContexts) {

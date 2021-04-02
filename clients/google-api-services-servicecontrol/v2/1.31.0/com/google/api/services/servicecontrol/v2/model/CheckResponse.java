@@ -37,7 +37,7 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> headers;
 
   /**
-   * An 'OK' status allows the operation. Any other status indicates a denial;
+   * Operation is allowed when this field is not set. Any non-'OK' status indicates a denial;
    * [google.rpc.Status.details]() would contain additional details about the denial.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An 'OK' status allows the operation. Any other status indicates a denial;
+   * Operation is allowed when this field is not set. Any non-'OK' status indicates a denial;
    * [google.rpc.Status.details]() would contain additional details about the denial.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An 'OK' status allows the operation. Any other status indicates a denial;
+   * Operation is allowed when this field is not set. Any non-'OK' status indicates a denial;
    * [google.rpc.Status.details]() would contain additional details about the denial.
    * @param status status or {@code null} for none
    */

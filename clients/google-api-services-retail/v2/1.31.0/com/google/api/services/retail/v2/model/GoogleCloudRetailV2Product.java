@@ -186,7 +186,8 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   private java.lang.String title;
 
   /**
-   * Immutable. The type of the product. This field is output-only.
+   * Immutable. The type of the product. This field is output-only. Default to
+   * Catalog.product_level_config.ingestion_product_type if unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -532,7 +533,8 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * Immutable. The type of the product. This field is output-only.
+   * Immutable. The type of the product. This field is output-only. Default to
+   * Catalog.product_level_config.ingestion_product_type if unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -540,7 +542,8 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * Immutable. The type of the product. This field is output-only.
+   * Immutable. The type of the product. This field is output-only. Default to
+   * Catalog.product_level_config.ingestion_product_type if unset.
    * @param type type or {@code null} for none
    */
   public GoogleCloudRetailV2Product setType(java.lang.String type) {

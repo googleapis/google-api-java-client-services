@@ -38,8 +38,8 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
    * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
    * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using catalog levels](/retail/recommendations-ai/docs/catalog#catalog-levels) for more
-   * details.
+   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
+   * levels) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,9 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * that Retail API will choose one item from the ones with the same `itemGroupId`, and use it to
    * represent the item group. If this field is set to an invalid value other than these, an
    * INVALID_ARGUMENT error is returned. If this field is `itemGroupId` and ingestion_product_type
-   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using catalog levels](/retail
-   * /recommendations-ai/docs/catalog#catalog-levels) for more details.
+   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using product
+   * levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels) for
+   * more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +68,8 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
    * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
    * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using catalog levels](/retail/recommendations-ai/docs/catalog#catalog-levels) for more
-   * details.
+   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
+   * levels) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getIngestionProductType() {
@@ -83,8 +84,8 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
    * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
    * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using catalog levels](/retail/recommendations-ai/docs/catalog#catalog-levels) for more
-   * details.
+   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
+   * levels) for more details.
    * @param ingestionProductType ingestionProductType or {@code null} for none
    */
   public GoogleCloudRetailV2ProductLevelConfig setIngestionProductType(java.lang.String ingestionProductType) {
@@ -99,8 +100,9 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * that Retail API will choose one item from the ones with the same `itemGroupId`, and use it to
    * represent the item group. If this field is set to an invalid value other than these, an
    * INVALID_ARGUMENT error is returned. If this field is `itemGroupId` and ingestion_product_type
-   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using catalog levels](/retail
-   * /recommendations-ai/docs/catalog#catalog-levels) for more details.
+   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using product
+   * levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels) for
+   * more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantCenterProductIdField() {
@@ -114,8 +116,9 @@ public final class GoogleCloudRetailV2ProductLevelConfig extends com.google.api.
    * that Retail API will choose one item from the ones with the same `itemGroupId`, and use it to
    * represent the item group. If this field is set to an invalid value other than these, an
    * INVALID_ARGUMENT error is returned. If this field is `itemGroupId` and ingestion_product_type
-   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using catalog levels](/retail
-   * /recommendations-ai/docs/catalog#catalog-levels) for more details.
+   * is `variant`, an INVALID_ARGUMENT error is returned. See [Using product
+   * levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels) for
+   * more details.
    * @param merchantCenterProductIdField merchantCenterProductIdField or {@code null} for none
    */
   public GoogleCloudRetailV2ProductLevelConfig setMerchantCenterProductIdField(java.lang.String merchantCenterProductIdField) {

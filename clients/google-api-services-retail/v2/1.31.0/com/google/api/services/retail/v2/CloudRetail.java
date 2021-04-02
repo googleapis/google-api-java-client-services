@@ -525,27 +525,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided Catalog to update. If not set, will only update
-           * the Catalog.product_level_config field, which is also the only currently supported
-           * field to update. If an unsupported or unknown field is provided, an INVALID_ARGUMENT
-           * error is returned.
+           * Indicates which fields in the provided Catalog to update. If an unsupported or unknown
+           * field is provided, an INVALID_ARGUMENT error is returned.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Indicates which fields in the provided Catalog to update. If not set, will only update the
-         Catalog.product_level_config field, which is also the only currently supported field to update. If
-         an unsupported or unknown field is provided, an INVALID_ARGUMENT error is returned.
+          /** Indicates which fields in the provided Catalog to update. If an unsupported or unknown field is
+         provided, an INVALID_ARGUMENT error is returned.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Indicates which fields in the provided Catalog to update. If not set, will only update
-           * the Catalog.product_level_config field, which is also the only currently supported
-           * field to update. If an unsupported or unknown field is provided, an INVALID_ARGUMENT
-           * error is returned.
+           * Indicates which fields in the provided Catalog to update. If an unsupported or unknown
+           * field is provided, an INVALID_ARGUMENT error is returned.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

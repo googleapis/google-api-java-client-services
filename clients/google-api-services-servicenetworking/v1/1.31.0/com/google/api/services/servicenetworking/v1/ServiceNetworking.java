@@ -1721,6 +1721,162 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
       }
       /**
+       * Deletes a private service access connection.
+       *
+       * Create a request for the method "connections.deleteConnection".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link DeleteConnection#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The private service connection that connects to a service producer organization. The name
+       *        includes both the private service name and the VPC network peering name in the format of
+       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
+       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
+       *        /servicenetworking-googleapis-com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest}
+       * @return the request
+       */
+      public DeleteConnection deleteConnection(java.lang.String name, com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest content) throws java.io.IOException {
+        DeleteConnection result = new DeleteConnection(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class DeleteConnection extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/connections/[^/]+$");
+
+        /**
+         * Deletes a private service access connection.
+         *
+         * Create a request for the method "connections.deleteConnection".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link DeleteConnection#execute()} method to invoke the
+         * remote operation. <p> {@link DeleteConnection#initialize(com.google.api.client.googleapis.servi
+         * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The private service connection that connects to a service producer organization. The name
+       *        includes both the private service name and the VPC network peering name in the format of
+       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
+       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
+       *        /servicenetworking-googleapis-com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest}
+         * @since 1.13
+         */
+        protected DeleteConnection(java.lang.String name, com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/connections/[^/]+$");
+          }
+        }
+
+        @Override
+        public DeleteConnection set$Xgafv(java.lang.String $Xgafv) {
+          return (DeleteConnection) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DeleteConnection setAccessToken(java.lang.String accessToken) {
+          return (DeleteConnection) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DeleteConnection setAlt(java.lang.String alt) {
+          return (DeleteConnection) super.setAlt(alt);
+        }
+
+        @Override
+        public DeleteConnection setCallback(java.lang.String callback) {
+          return (DeleteConnection) super.setCallback(callback);
+        }
+
+        @Override
+        public DeleteConnection setFields(java.lang.String fields) {
+          return (DeleteConnection) super.setFields(fields);
+        }
+
+        @Override
+        public DeleteConnection setKey(java.lang.String key) {
+          return (DeleteConnection) super.setKey(key);
+        }
+
+        @Override
+        public DeleteConnection setOauthToken(java.lang.String oauthToken) {
+          return (DeleteConnection) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DeleteConnection setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DeleteConnection) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DeleteConnection setQuotaUser(java.lang.String quotaUser) {
+          return (DeleteConnection) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DeleteConnection setUploadType(java.lang.String uploadType) {
+          return (DeleteConnection) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DeleteConnection setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DeleteConnection) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The private service connection that connects to a service producer
+         * organization. The name includes both the private service name and the VPC network peering
+         * name in the format of `services/{peering_service_name}/connections/{vpc_peering_name}`.
+         * For Google services that support this functionality, this is
+         * `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The private service connection that connects to a service producer organization. The name
+       includes both the private service name and the VPC network peering name in the format of
+       `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that support
+       this functionality, this is `services/servicenetworking.googleapis.com/connections
+       /servicenetworking-googleapis-com`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The private service connection that connects to a service producer
+         * organization. The name includes both the private service name and the VPC network peering
+         * name in the format of `services/{peering_service_name}/connections/{vpc_peering_name}`.
+         * For Google services that support this functionality, this is
+         * `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
+         */
+        public DeleteConnection setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/connections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public DeleteConnection set(String parameterName, Object value) {
+          return (DeleteConnection) super.set(parameterName, value);
+        }
+      }
+      /**
        * List the private connections that are configured in a service consumer's VPC network.
        *
        * Create a request for the method "connections.list".

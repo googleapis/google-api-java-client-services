@@ -31,7 +31,7 @@ package com.google.api.services.dataflow.model;
 public final class WorkerHealthReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * A message describing any unusual health reports.
+   * Message describing any unusual health reports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +53,13 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private String reportInterval;
+
+  /**
+   * Code to describe a specific reason, if known, that a VM has reported broken state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmBrokenCode;
 
   /**
    * Whether the VM is in a permanently broken state. Broken VMs should be abandoned or deleted ASAP
@@ -77,7 +84,7 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
   private String vmStartupTime;
 
   /**
-   * A message describing any unusual health reports.
+   * Message describing any unusual health reports.
    * @return value or {@code null} for none
    */
   public java.lang.String getMsg() {
@@ -85,7 +92,7 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
   }
 
   /**
-   * A message describing any unusual health reports.
+   * Message describing any unusual health reports.
    * @param msg msg or {@code null} for none
    */
   public WorkerHealthReport setMsg(java.lang.String msg) {
@@ -130,6 +137,23 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
    */
   public WorkerHealthReport setReportInterval(String reportInterval) {
     this.reportInterval = reportInterval;
+    return this;
+  }
+
+  /**
+   * Code to describe a specific reason, if known, that a VM has reported broken state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmBrokenCode() {
+    return vmBrokenCode;
+  }
+
+  /**
+   * Code to describe a specific reason, if known, that a VM has reported broken state.
+   * @param vmBrokenCode vmBrokenCode or {@code null} for none
+   */
+  public WorkerHealthReport setVmBrokenCode(java.lang.String vmBrokenCode) {
+    this.vmBrokenCode = vmBrokenCode;
     return this;
   }
 

@@ -7095,13 +7095,13 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Path to dynamic template spec file on GCS. The file must be a Json serialized
+           * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
            * DynamicTemplateFieSpec object.
            */
           @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
           private java.lang.String dynamicTemplateGcsPath;
 
-          /** Path to dynamic template spec file on GCS. The file must be a Json serialized
+          /** Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
          DynamicTemplateFieSpec object.
            */
           public java.lang.String getDynamicTemplateGcsPath() {
@@ -7109,7 +7109,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Path to dynamic template spec file on GCS. The file must be a Json serialized
+           * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
            * DynamicTemplateFieSpec object.
            */
           public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {
@@ -7965,13 +7965,13 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Path to dynamic template spec file on GCS. The file must be a Json serialized
+         * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
          * DynamicTemplateFieSpec object.
          */
         @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
         private java.lang.String dynamicTemplateGcsPath;
 
-        /** Path to dynamic template spec file on GCS. The file must be a Json serialized
+        /** Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
        DynamicTemplateFieSpec object.
          */
         public java.lang.String getDynamicTemplateGcsPath() {
@@ -7979,7 +7979,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Path to dynamic template spec file on GCS. The file must be a Json serialized
+         * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
          * DynamicTemplateFieSpec object.
          */
         public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {

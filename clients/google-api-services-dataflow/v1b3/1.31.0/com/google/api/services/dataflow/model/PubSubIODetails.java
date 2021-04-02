@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Metadata for a PubSub connector used by the job.
+ * Metadata for a Pub/Sub connector used by the job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

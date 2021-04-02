@@ -107,9 +107,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
-   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
-   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
-   * launch.
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,9 +314,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
-   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
-   * launch.
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".
    * @return value or {@code null} for none
    */
   public StandardSqlTableType getReturnTableType() {
@@ -326,9 +322,7 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION". TODO(b/173344646) - Update
-   * return_type documentation to say it cannot be set for TABLE_VALUED_FUNCTION before preview
-   * launch.
+   * Optional. Set only if Routine is a "TABLE_VALUED_FUNCTION".
    * @param returnTableType returnTableType or {@code null} for none
    */
   public Routine setReturnTableType(StandardSqlTableType returnTableType) {

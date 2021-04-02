@@ -17,7 +17,7 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * Metadata pertaining to the Folder move process.
+ * Metadata pertaining to the folder move process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

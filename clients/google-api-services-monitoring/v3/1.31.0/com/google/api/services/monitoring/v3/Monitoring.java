@@ -180,8 +180,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -207,8 +208,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -287,22 +289,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project, organization or folder on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -888,8 +893,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -915,8 +921,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -995,22 +1002,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project, organization or folder on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1596,13 +1606,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project in which to create the alerting policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-       *        the alerting policy will be written, not the name of the created policy. |name| must be a
-       *        host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
-       *        policy that is returned will have a name that contains a normalized representation of this
-       *        name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
-       *        identifying the policy in the container.
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field
+       *        names the parent container in which the alerting policy will be written, not the name of
+       *        the created policy. |name| must be a host project of a workspace, otherwise
+       *        INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name
+       *        that contains a normalized representation of this name as a prefix but adds a suffix of
+       *        the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
        * @param content the {@link com.google.api.services.monitoring.v3.model.AlertPolicy}
        * @return the request
        */
@@ -1630,13 +1640,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project in which to create the alerting policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-       *        the alerting policy will be written, not the name of the created policy. |name| must be a
-       *        host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
-       *        policy that is returned will have a name that contains a normalized representation of this
-       *        name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
-       *        identifying the policy in the container.
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field
+       *        names the parent container in which the alerting policy will be written, not the name of
+       *        the created policy. |name| must be a host project of a workspace, otherwise
+       *        INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name
+       *        that contains a normalized representation of this name as a prefix but adds a suffix of
+       *        the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
          * @param content the {@link com.google.api.services.monitoring.v3.model.AlertPolicy}
          * @since 1.13
          */
@@ -1706,36 +1716,37 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project in which to create the alerting policy. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policy will be written, not the name of the created policy. |name| must be a
-         * host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
-         * policy that is returned will have a name that contains a normalized representation of
-         * this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
-         * identifying the policy in the container.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that
+         * this field names the parent container in which the alerting policy will be written, not
+         * the name of the created policy. |name| must be a host project of a workspace, otherwise
+         * INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name
+         * that contains a normalized representation of this name as a prefix but adds a suffix of
+         * the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project in which to create the alerting policy. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which the
-       alerting policy will be written, not the name of the created policy. |name| must be a host project
-       of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting policy that is returned
-       will have a name that contains a normalized representation of this name as a prefix but adds a
-       suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field names the
+       parent container in which the alerting policy will be written, not the name of the created policy.
+       |name| must be a host project of a workspace, otherwise INVALID_ARGUMENT error will return. The
+       alerting policy that is returned will have a name that contains a normalized representation of this
+       name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the
+       policy in the container.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project in which to create the alerting policy. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policy will be written, not the name of the created policy. |name| must be a
-         * host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
-         * policy that is returned will have a name that contains a normalized representation of
-         * this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
-         * identifying the policy in the container.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the alerting policy. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that
+         * this field names the parent container in which the alerting policy will be written, not
+         * the name of the created policy. |name| must be a host project of a workspace, otherwise
+         * INVALID_ARGUMENT error will return. The alerting policy that is returned will have a name
+         * that contains a normalized representation of this name as a prefix but adds a suffix of
+         * the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2050,10 +2061,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project whose alert policies are to be listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-       *        the alerting policies to be listed are stored. To retrieve a single alerting policy by
-       *        name, use the GetAlertPolicy operation, instead.
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose alert policies
+       *        are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field
+       *        names the parent container in which the alerting policies to be listed are stored. To
+       *        retrieve a single alerting policy by name, use the GetAlertPolicy operation, instead.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -2079,10 +2090,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project whose alert policies are to be listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-       *        the alerting policies to be listed are stored. To retrieve a single alerting policy by
-       *        name, use the GetAlertPolicy operation, instead.
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose alert policies
+       *        are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field
+       *        names the parent container in which the alerting policies to be listed are stored. To
+       *        retrieve a single alerting policy by name, use the GetAlertPolicy operation, instead.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -2161,28 +2172,30 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project whose alert policies are to be listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policies to be listed are stored. To retrieve a single alerting policy by
-         * name, use the GetAlertPolicy operation, instead.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * alert policies are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that
+         * this field names the parent container in which the alerting policies to be listed are
+         * stored. To retrieve a single alerting policy by name, use the GetAlertPolicy operation,
+         * instead.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project whose alert policies are to be listed. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which the
-       alerting policies to be listed are stored. To retrieve a single alerting policy by name, use the
-       GetAlertPolicy operation, instead.
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose alert
+       policies are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that this field
+       names the parent container in which the alerting policies to be listed are stored. To retrieve a
+       single alerting policy by name, use the GetAlertPolicy operation, instead.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project whose alert policies are to be listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policies to be listed are stored. To retrieve a single alerting policy by
-         * name, use the GetAlertPolicy operation, instead.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * alert policies are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER] Note that
+         * this field names the parent container in which the alerting policies to be listed are
+         * stored. To retrieve a single alerting policy by name, use the GetAlertPolicy operation,
+         * instead.
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2540,7 +2553,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name The project in which to create the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param name The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create the time
+       *        series. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.CreateCollectdTimeSeriesRequest}
        * @return the request
        */
@@ -2569,7 +2583,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The project in which to create the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @param name The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create the time
+       *        series. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.CreateCollectdTimeSeriesRequest}
          * @since 1.13
          */
@@ -2639,21 +2654,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The project in which to create the time series. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+         * the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The project in which to create the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
+        /** The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create the time
+       series. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The project in which to create the time series. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+         * the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2700,7 +2716,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project in which to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
        * @return the request
        */
@@ -2728,7 +2745,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project in which to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
          * @since 1.13
          */
@@ -2798,21 +2816,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project in which to create the group. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project in which to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project in which to create the group. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3158,7 +3177,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project whose groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose groups are to
+       *        be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -3184,7 +3204,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project whose groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose groups are to
+       *        be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -3263,21 +3284,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project whose groups are to be listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project whose groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose groups are to
+       be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project whose groups are to be listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3894,8 +3916,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: 4 projects/PROJECT_ID_OR_NUMBER
        * @param content the {@link com.google.api.services.monitoring.v3.model.MetricDescriptor}
        * @return the request
        */
@@ -3924,8 +3946,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: 4 projects/PROJECT_ID_OR_NUMBER
          * @param content the {@link com.google.api.services.monitoring.v3.model.MetricDescriptor}
          * @since 1.13
          */
@@ -3995,22 +4017,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: 4 projects/PROJECT_ID_OR_NUMBER
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: 4 projects/PROJECT_ID_OR_NUMBER
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: 4 projects/PROJECT_ID_OR_NUMBER
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4332,8 +4354,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -4359,8 +4381,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -4439,22 +4461,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4728,8 +4750,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -4756,8 +4778,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -4836,22 +4858,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5121,8 +5143,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        *
        * @param name Required. The REST resource name of the parent from which to retrieve the notification channel
        *        descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names
-       *        the parent container in which to look for the descriptors; to retrieve a single descriptor
-       *        by name, use the GetNotificationChannelDescriptor operation, instead.
+       *        (https://cloud.google.com/monitoring/api/v3#project_name) the parent container in which to
+       *        look for the descriptors; to retrieve a single descriptor by name, use the
+       *        GetNotificationChannelDescriptor operation, instead.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -5151,8 +5174,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. The REST resource name of the parent from which to retrieve the notification channel
        *        descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names
-       *        the parent container in which to look for the descriptors; to retrieve a single descriptor
-       *        by name, use the GetNotificationChannelDescriptor operation, instead.
+       *        (https://cloud.google.com/monitoring/api/v3#project_name) the parent container in which to
+       *        look for the descriptors; to retrieve a single descriptor by name, use the
+       *        GetNotificationChannelDescriptor operation, instead.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -5233,16 +5257,18 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The REST resource name of the parent from which to retrieve the notification
          * channel descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that
-         * this names the parent container in which to look for the descriptors; to retrieve a
-         * single descriptor by name, use the GetNotificationChannelDescriptor operation, instead.
+         * this names (https://cloud.google.com/monitoring/api/v3#project_name) the parent container
+         * in which to look for the descriptors; to retrieve a single descriptor by name, use the
+         * GetNotificationChannelDescriptor operation, instead.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The REST resource name of the parent from which to retrieve the notification channel
-       descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names the
-       parent container in which to look for the descriptors; to retrieve a single descriptor by name, use
-       the GetNotificationChannelDescriptor operation, instead.
+       descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names
+       (https://cloud.google.com/monitoring/api/v3#project_name) the parent container in which to look for
+       the descriptors; to retrieve a single descriptor by name, use the GetNotificationChannelDescriptor
+       operation, instead.
          */
         public java.lang.String getName() {
           return name;
@@ -5251,8 +5277,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The REST resource name of the parent from which to retrieve the notification
          * channel descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that
-         * this names the parent container in which to look for the descriptors; to retrieve a
-         * single descriptor by name, use the GetNotificationChannelDescriptor operation, instead.
+         * this names (https://cloud.google.com/monitoring/api/v3#project_name) the parent container
+         * in which to look for the descriptors; to retrieve a single descriptor by name, use the
+         * GetNotificationChannelDescriptor operation, instead.
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5346,11 +5373,11 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
-       *        written, this does not name the newly created channel. The resulting channel's name will
-       *        have a normalized version of this field as a prefix, but will add
-       *        /notificationChannels/[CHANNEL_ID] to identify the channel.
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container into
+       *        which the channel will be written, this does not name the newly created channel. The
+       *        resulting channel's name will have a normalized version of this field as a prefix, but
+       *        will add /notificationChannels/[CHANNEL_ID] to identify the channel.
        * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
        * @return the request
        */
@@ -5379,11 +5406,11 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
-       *        written, this does not name the newly created channel. The resulting channel's name will
-       *        have a normalized version of this field as a prefix, but will add
-       *        /notificationChannels/[CHANNEL_ID] to identify the channel.
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container into
+       *        which the channel will be written, this does not name the newly created channel. The
+       *        resulting channel's name will have a normalized version of this field as a prefix, but
+       *        will add /notificationChannels/[CHANNEL_ID] to identify the channel.
          * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
          * @since 1.13
          */
@@ -5453,31 +5480,31 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
-         * written, this does not name the newly created channel. The resulting channel's name will
-         * have a normalized version of this field as a prefix, but will add
-         * /notificationChannels/[CHANNEL_ID] to identify the channel.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the
+         * container into which the channel will be written, this does not name the newly created
+         * channel. The resulting channel's name will have a normalized version of this field as a
+         * prefix, but will add /notificationChannels/[CHANNEL_ID] to identify the channel.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be written,
-       this does not name the newly created channel. The resulting channel's name will have a normalized
-       version of this field as a prefix, but will add /notificationChannels/[CHANNEL_ID] to identify the
-       channel.
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container into which the
+       channel will be written, this does not name the newly created channel. The resulting channel's name
+       will have a normalized version of this field as a prefix, but will add
+       /notificationChannels/[CHANNEL_ID] to identify the channel.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
-         * written, this does not name the newly created channel. The resulting channel's name will
-         * have a normalized version of this field as a prefix, but will add
-         * /notificationChannels/[CHANNEL_ID] to identify the channel.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the
+         * container into which the channel will be written, this does not name the newly created
+         * channel. The resulting channel's name will have a normalized version of this field as a
+         * prefix, but will add /notificationChannels/[CHANNEL_ID] to identify the channel.
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5991,10 +6018,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
-       *        notification channels; it does not name a specific channel. To query a specific channel by
-       *        REST resource name, use the GetNotificationChannel operation.
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container in
+       *        which to look for the notification channels; it does not name a specific channel. To query
+       *        a specific channel by REST resource name, use the GetNotificationChannel operation.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -6020,10 +6047,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
-       *        notification channels; it does not name a specific channel. To query a specific channel by
-       *        REST resource name, use the GetNotificationChannel operation.
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container in
+       *        which to look for the notification channels; it does not name a specific channel. To query
+       *        a specific channel by REST resource name, use the GetNotificationChannel operation.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -6102,28 +6129,30 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
-         * notification channels; it does not name a specific channel. To query a specific channel
-         * by REST resource name, use the GetNotificationChannel operation.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the
+         * container in which to look for the notification channels; it does not name a specific
+         * channel. To query a specific channel by REST resource name, use the
+         * GetNotificationChannel operation.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the notification
-       channels; it does not name a specific channel. To query a specific channel by REST resource name,
-       use the GetNotificationChannel operation.
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the container in which to
+       look for the notification channels; it does not name a specific channel. To query a specific
+       channel by REST resource name, use the GetNotificationChannel operation.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
-         * notification channels; it does not name a specific channel. To query a specific channel
-         * by REST resource name, use the GetNotificationChannel operation.
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] This names the
+         * container in which to look for the notification channels; it does not name a specific
+         * channel. To query a specific channel by REST resource name, use the
+         * GetNotificationChannel operation.
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6701,8 +6730,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest}
        * @return the request
        */
@@ -6732,8 +6761,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest}
          * @since 1.13
          */
@@ -6803,22 +6832,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6843,8 +6872,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -6870,8 +6900,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project, organization or folder on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       *        folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       *        organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -6950,22 +6981,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project, organization or folder on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or
+       folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project, organization or folder on which to execute the request. The format
-         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name),
+         * organization or folder on which to execute the request. The format is:
+         * projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7507,8 +7541,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Query#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest}
        * @return the request
        */
@@ -7536,8 +7570,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.QueryTimeSeriesRequest}
          * @since 1.13
          */
@@ -7607,22 +7641,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public Query setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7669,8 +7703,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The project in which to create the Uptime check. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the Uptime check. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
        */
@@ -7698,8 +7732,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The project in which to create the Uptime check. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       *        the Uptime check. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
          */
@@ -7769,22 +7803,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project in which to create the Uptime check. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the Uptime check. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The project in which to create the Uptime check. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which to create
+       the Uptime check. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The project in which to create the Uptime check. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) in which
+         * to create the Uptime check. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8099,8 +8133,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The project whose Uptime check configurations are listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Uptime check
+       *        configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8127,8 +8161,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The project whose Uptime check configurations are listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param parent Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Uptime check
+       *        configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8207,22 +8241,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project whose Uptime check configurations are listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * Uptime check configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The project whose Uptime check configurations are listed. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose Uptime check
+       configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The project whose Uptime check configurations are listed. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) whose
+         * Uptime check configurations are listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8508,7 +8542,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Resource name of the parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
+     * @param parent Required. Resource name (https://cloud.google.com/monitoring/api/v3#project_name) of the parent
+     *        workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
      * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
      * @return the request
      */
@@ -8536,7 +8571,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Resource name of the parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param parent Required. Resource name (https://cloud.google.com/monitoring/api/v3#project_name) of the parent
+     *        workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
        * @since 1.13
        */
@@ -8606,21 +8642,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Resource name of the parent workspace. The format is:
-       * projects/[PROJECT_ID_OR_NUMBER]
+       * Required. Resource name (https://cloud.google.com/monitoring/api/v3#project_name) of the
+       * parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Resource name of the parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
+      /** Required. Resource name (https://cloud.google.com/monitoring/api/v3#project_name) of the parent
+     workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Resource name of the parent workspace. The format is:
-       * projects/[PROJECT_ID_OR_NUMBER]
+       * Required. Resource name (https://cloud.google.com/monitoring/api/v3#project_name) of the
+       * parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
        */
       public Create setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -8953,9 +8990,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Resource name of the parent containing the listed services, either a project or a
-     *        Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-     *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
+     * @param parent Required. Resource name of the parent containing the listed services, either a project
+     *        (https://cloud.google.com/monitoring/api/v3#project_name) or a Monitoring Workspace. The
+     *        formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -8981,9 +9018,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Resource name of the parent containing the listed services, either a project or a
-     *        Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-     *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
+       * @param parent Required. Resource name of the parent containing the listed services, either a project
+     *        (https://cloud.google.com/monitoring/api/v3#project_name) or a Monitoring Workspace. The
+     *        formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -9062,25 +9099,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Resource name of the parent containing the listed services, either a project or a
-       * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-       * workspaces/[HOST_PROJECT_ID_OR_NUMBER]
+       * Required. Resource name of the parent containing the listed services, either a project
+       * (https://cloud.google.com/monitoring/api/v3#project_name) or a Monitoring Workspace. The
+       * formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Resource name of the parent containing the listed services, either a project or a
-     Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-     workspaces/[HOST_PROJECT_ID_OR_NUMBER]
+      /** Required. Resource name of the parent containing the listed services, either a project
+     (https://cloud.google.com/monitoring/api/v3#project_name) or a Monitoring Workspace. The formats
+     are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Resource name of the parent containing the listed services, either a project or a
-       * Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
-       * workspaces/[HOST_PROJECT_ID_OR_NUMBER]
+       * Required. Resource name of the parent containing the listed services, either a project
+       * (https://cloud.google.com/monitoring/api/v3#project_name) or a Monitoring Workspace. The
+       * formats are: projects/[PROJECT_ID_OR_NUMBER] workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

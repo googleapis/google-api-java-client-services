@@ -17,8 +17,8 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * The root node in the resource hierarchy to which a particular entity's (e.g., company) resources
- * belong.
+ * The root node in the resource hierarchy to which a particular entity's (a company, for example)
+ * resources belong.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -53,9 +53,10 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   private java.lang.String directoryCustomerId;
 
   /**
-   * Output only. A human-readable string that refers to the Organization in the GCP Console UI.
-   * This string is set by the server and cannot be changed. The string will be set to the primary
-   * domain (for example, "google.com") of the G Suite customer that owns the organization.
+   * Output only. A human-readable string that refers to the organization in the Google Cloud
+   * Console. This string is set by the server and cannot be changed. The string will be set to the
+   * primary domain (for example, "google.com") of the Google Workspace customer that owns the
+   * organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +145,10 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A human-readable string that refers to the Organization in the GCP Console UI.
-   * This string is set by the server and cannot be changed. The string will be set to the primary
-   * domain (for example, "google.com") of the G Suite customer that owns the organization.
+   * Output only. A human-readable string that refers to the organization in the Google Cloud
+   * Console. This string is set by the server and cannot be changed. The string will be set to the
+   * primary domain (for example, "google.com") of the Google Workspace customer that owns the
+   * organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -154,9 +156,10 @@ public final class Organization extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A human-readable string that refers to the Organization in the GCP Console UI.
-   * This string is set by the server and cannot be changed. The string will be set to the primary
-   * domain (for example, "google.com") of the G Suite customer that owns the organization.
+   * Output only. A human-readable string that refers to the organization in the Google Cloud
+   * Console. This string is set by the server and cannot be changed. The string will be set to the
+   * primary domain (for example, "google.com") of the Google Workspace customer that owns the
+   * organization.
    * @param displayName displayName or {@code null} for none
    */
   public Organization setDisplayName(java.lang.String displayName) {

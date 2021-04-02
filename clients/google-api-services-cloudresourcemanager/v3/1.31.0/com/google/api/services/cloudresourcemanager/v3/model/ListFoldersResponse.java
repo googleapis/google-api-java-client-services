@@ -31,7 +31,7 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class ListFoldersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A possibly paginated list of Folders that are direct descendants of the specified parent
+   * A possibly paginated list of folders that are direct descendants of the specified parent
    * resource.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * A possibly paginated list of Folders that are direct descendants of the specified parent
+   * A possibly paginated list of folders that are direct descendants of the specified parent
    * resource.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A possibly paginated list of Folders that are direct descendants of the specified parent
+   * A possibly paginated list of folders that are direct descendants of the specified parent
    * resource.
    * @param folders folders or {@code null} for none
    */

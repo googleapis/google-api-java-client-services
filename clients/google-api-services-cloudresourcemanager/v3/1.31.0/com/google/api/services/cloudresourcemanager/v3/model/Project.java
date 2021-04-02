@@ -17,8 +17,8 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * A Project is a high-level Google Cloud Platform entity. It is a container for ACLs, APIs, App
- * Engine Apps, VMs, and other Google Cloud Platform resources.
+ * A project is a high-level Google Cloud entity. It is a container for ACLs, APIs, App Engine Apps,
+ * VMs, and other Google Cloud Platform resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -46,7 +46,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
-   * Optional. A user-assigned display name of the Project. When present it must be between 4 to 30
+   * Optional. A user-assigned display name of the project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
    * quote, double-quote, space, and exclamation point. Example: `My Project`
    * The value may be {@code null}.
@@ -64,7 +64,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. The labels associated with this Project. Label keys must be between 1 and 63
+   * Optional. The labels associated with this project. Label keys must be between 1 and 63
    * characters long and must conform to the following regular expression:
    * \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and
    * must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256
@@ -77,7 +77,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The unique resource name of the Project. It is an int64 generated number prefixed
+   * Output only. The unique resource name of the project. It is an int64 generated number prefixed
    * by "projects/". Example: `projects/415104041262`
    * The value may be {@code null}.
    */
@@ -92,7 +92,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
-   * Immutable. The unique, user-assigned id of the Project. It must be 6 to 30 lowercase ASCII
+   * Immutable. The unique, user-assigned id of the project. It must be 6 to 30 lowercase ASCII
    * letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited.
    * Example: `tokyo-rain-123`
    * The value may be {@code null}.
@@ -101,7 +101,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Output only. The Project lifecycle state.
+   * Output only. The project lifecycle state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-assigned display name of the Project. When present it must be between 4 to 30
+   * Optional. A user-assigned display name of the project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
    * quote, double-quote, space, and exclamation point. Example: `My Project`
    * @return value or {@code null} for none
@@ -159,7 +159,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-assigned display name of the Project. When present it must be between 4 to 30
+   * Optional. A user-assigned display name of the project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
    * quote, double-quote, space, and exclamation point. Example: `My Project`
    * @param displayName displayName or {@code null} for none
@@ -191,7 +191,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The labels associated with this Project. Label keys must be between 1 and 63
+   * Optional. The labels associated with this project. Label keys must be between 1 and 63
    * characters long and must conform to the following regular expression:
    * \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and
    * must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256
@@ -205,7 +205,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The labels associated with this Project. Label keys must be between 1 and 63
+   * Optional. The labels associated with this project. Label keys must be between 1 and 63
    * characters long and must conform to the following regular expression:
    * \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and
    * must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256
@@ -220,7 +220,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique resource name of the Project. It is an int64 generated number prefixed
+   * Output only. The unique resource name of the project. It is an int64 generated number prefixed
    * by "projects/". Example: `projects/415104041262`
    * @return value or {@code null} for none
    */
@@ -229,7 +229,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique resource name of the Project. It is an int64 generated number prefixed
+   * Output only. The unique resource name of the project. It is an int64 generated number prefixed
    * by "projects/". Example: `projects/415104041262`
    * @param name name or {@code null} for none
    */
@@ -256,7 +256,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The unique, user-assigned id of the Project. It must be 6 to 30 lowercase ASCII
+   * Immutable. The unique, user-assigned id of the project. It must be 6 to 30 lowercase ASCII
    * letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited.
    * Example: `tokyo-rain-123`
    * @return value or {@code null} for none
@@ -266,7 +266,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The unique, user-assigned id of the Project. It must be 6 to 30 lowercase ASCII
+   * Immutable. The unique, user-assigned id of the project. It must be 6 to 30 lowercase ASCII
    * letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited.
    * Example: `tokyo-rain-123`
    * @param projectId projectId or {@code null} for none
@@ -277,7 +277,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Project lifecycle state.
+   * Output only. The project lifecycle state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -285,7 +285,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Project lifecycle state.
+   * Output only. The project lifecycle state.
    * @param state state or {@code null} for none
    */
   public Project setState(java.lang.String state) {

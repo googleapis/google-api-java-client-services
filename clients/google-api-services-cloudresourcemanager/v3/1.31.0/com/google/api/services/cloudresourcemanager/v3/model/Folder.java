@@ -17,7 +17,7 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
+ * A folder in an organization's resource hierarchy, used to organize that organization's resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -31,32 +31,32 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class Folder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Timestamp when the Folder was created.
+   * Output only. Timestamp when the folder was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Timestamp when the Folder was requested to be deleted.
+   * Output only. Timestamp when the folder was requested to be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deleteTime;
 
   /**
-   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
-   * two folders with the same parent can share the same display name. The display name must start
-   * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
-   * and can be no longer than 30 characters. This is captured by the regular expression:
-   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+   * The folder's display name. A folder's display name must be unique amongst its siblings. For
+   * example, no two folders with the same parent can share the same display name. The display name
+   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and
+   * underscores and can be no longer than 30 characters. This is captured by the regular
+   * expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Folder
+   * Output only. A checksum computed by the server based on the current value of the folder
    * resource. This may be sent on update and delete requests to ensure the client has an up-to-date
    * value before proceeding.
    * The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * The value may be {@code null}.
    */
@@ -73,15 +73,15 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
-   * via MoveFolder.
+   * Required. The folder's parent's resource name. Updates to the folder's parent must be performed
+   * using MoveFolder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Output only. The lifecycle state of the folder. Updates to the state must be performed via
+   * Output only. The lifecycle state of the folder. Updates to the state must be performed using
    * DeleteFolder and UndeleteFolder.
    * The value may be {@code null}.
    */
@@ -89,14 +89,14 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. Timestamp when the Folder was last modified.
+   * Output only. Timestamp when the folder was last modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Timestamp when the Folder was created.
+   * Output only. Timestamp when the folder was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -104,7 +104,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the Folder was created.
+   * Output only. Timestamp when the folder was created.
    * @param createTime createTime or {@code null} for none
    */
   public Folder setCreateTime(String createTime) {
@@ -113,7 +113,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the Folder was requested to be deleted.
+   * Output only. Timestamp when the folder was requested to be deleted.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -121,7 +121,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the Folder was requested to be deleted.
+   * Output only. Timestamp when the folder was requested to be deleted.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public Folder setDeleteTime(String deleteTime) {
@@ -130,11 +130,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
-   * two folders with the same parent can share the same display name. The display name must start
-   * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
-   * and can be no longer than 30 characters. This is captured by the regular expression:
-   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+   * The folder's display name. A folder's display name must be unique amongst its siblings. For
+   * example, no two folders with the same parent can share the same display name. The display name
+   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and
+   * underscores and can be no longer than 30 characters. This is captured by the regular
+   * expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -142,11 +142,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
-   * two folders with the same parent can share the same display name. The display name must start
-   * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
-   * and can be no longer than 30 characters. This is captured by the regular expression:
-   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+   * The folder's display name. A folder's display name must be unique amongst its siblings. For
+   * example, no two folders with the same parent can share the same display name. The display name
+   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and
+   * underscores and can be no longer than 30 characters. This is captured by the regular
+   * expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * @param displayName displayName or {@code null} for none
    */
   public Folder setDisplayName(java.lang.String displayName) {
@@ -155,7 +155,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Folder
+   * Output only. A checksum computed by the server based on the current value of the folder
    * resource. This may be sent on update and delete requests to ensure the client has an up-to-date
    * value before proceeding.
    * @return value or {@code null} for none
@@ -165,7 +165,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Folder
+   * Output only. A checksum computed by the server based on the current value of the folder
    * resource. This may be sent on update and delete requests to ensure the client has an up-to-date
    * value before proceeding.
    * @param etag etag or {@code null} for none
@@ -176,7 +176,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * @return value or {@code null} for none
    */
@@ -185,7 +185,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
+   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * @param name name or {@code null} for none
    */
@@ -195,8 +195,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
-   * via MoveFolder.
+   * Required. The folder's parent's resource name. Updates to the folder's parent must be performed
+   * using MoveFolder.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -204,8 +204,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
-   * via MoveFolder.
+   * Required. The folder's parent's resource name. Updates to the folder's parent must be performed
+   * using MoveFolder.
    * @param parent parent or {@code null} for none
    */
   public Folder setParent(java.lang.String parent) {
@@ -214,7 +214,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The lifecycle state of the folder. Updates to the state must be performed via
+   * Output only. The lifecycle state of the folder. Updates to the state must be performed using
    * DeleteFolder and UndeleteFolder.
    * @return value or {@code null} for none
    */
@@ -223,7 +223,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The lifecycle state of the folder. Updates to the state must be performed via
+   * Output only. The lifecycle state of the folder. Updates to the state must be performed using
    * DeleteFolder and UndeleteFolder.
    * @param state state or {@code null} for none
    */
@@ -233,7 +233,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the Folder was last modified.
+   * Output only. Timestamp when the folder was last modified.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -241,7 +241,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the Folder was last modified.
+   * Output only. Timestamp when the folder was last modified.
    * @param updateTime updateTime or {@code null} for none
    */
   public Folder setUpdateTime(String updateTime) {

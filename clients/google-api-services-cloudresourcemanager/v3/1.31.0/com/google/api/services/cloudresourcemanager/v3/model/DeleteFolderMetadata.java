@@ -17,7 +17,8 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * A status object which is used as the `metadata` field for the Operation returned by DeleteFolder.
+ * A status object which is used as the `metadata` field for the `Operation` returned by
+ * `DeleteFolder`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed

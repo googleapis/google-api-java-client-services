@@ -40,7 +40,7 @@ public final class CreateProjectMetadata extends com.google.api.client.json.Gene
   private String createTime;
 
   /**
-   * True if the project can be retrieved using GetProject. No other operations on the project are
+   * True if the project can be retrieved using `GetProject`. No other operations on the project are
    * guaranteed to work until the project creation is complete.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class CreateProjectMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * True if the project can be retrieved using GetProject. No other operations on the project are
+   * True if the project can be retrieved using `GetProject`. No other operations on the project are
    * guaranteed to work until the project creation is complete.
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class CreateProjectMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * True if the project can be retrieved using GetProject. No other operations on the project are
+   * True if the project can be retrieved using `GetProject`. No other operations on the project are
    * guaranteed to work until the project creation is complete.
    * @param gettable gettable or {@code null} for none
    */

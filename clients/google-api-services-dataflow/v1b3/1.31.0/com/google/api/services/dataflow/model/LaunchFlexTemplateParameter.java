@@ -37,7 +37,7 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   private ContainerSpec containerSpec;
 
   /**
-   * Gcs path to a file with json serialized ContainerSpec as content.
+   * Cloud Storage path to a file with json serialized ContainerSpec as content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Gcs path to a file with json serialized ContainerSpec as content.
+   * Cloud Storage path to a file with json serialized ContainerSpec as content.
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerSpecGcsPath() {
@@ -115,7 +115,7 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Gcs path to a file with json serialized ContainerSpec as content.
+   * Cloud Storage path to a file with json serialized ContainerSpec as content.
    * @param containerSpecGcsPath containerSpecGcsPath or {@code null} for none
    */
   public LaunchFlexTemplateParameter setContainerSpecGcsPath(java.lang.String containerSpecGcsPath) {

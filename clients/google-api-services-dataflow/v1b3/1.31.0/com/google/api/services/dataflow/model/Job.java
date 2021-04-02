@@ -214,7 +214,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.List<Step> steps;
 
   /**
-   * The GCS location where the steps are stored.
+   * The Cloud Storage location where the steps are stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -665,7 +665,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GCS location where the steps are stored.
+   * The Cloud Storage location where the steps are stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getStepsLocation() {
@@ -673,7 +673,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GCS location where the steps are stored.
+   * The Cloud Storage location where the steps are stored.
    * @param stepsLocation stepsLocation or {@code null} for none
    */
   public Job setStepsLocation(java.lang.String stepsLocation) {

@@ -72,7 +72,7 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
   private java.util.List<StageSource> inputSource;
 
   /**
-   * Type of tranform this stage is executing.
+   * Type of transform this stage is executing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
   }
 
   /**
-   * Type of tranform this stage is executing.
+   * Type of transform this stage is executing.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -176,7 +176,7 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
   }
 
   /**
-   * Type of tranform this stage is executing.
+   * Type of transform this stage is executing.
    * @param kind kind or {@code null} for none
    */
   public ExecutionStageSummary setKind(java.lang.String kind) {

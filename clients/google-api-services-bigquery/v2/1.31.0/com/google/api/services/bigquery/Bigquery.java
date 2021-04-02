@@ -1111,6 +1111,181 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Requests that a job is deleted. This call will return when the job is deleted. This method is
+     * available in limited preview.
+     *
+     * Create a request for the method "jobs.delete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the job to be deleted.
+     * @param jobId Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
+     *        jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+     * @return the request
+     */
+    public Delete delete(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
+      Delete result = new Delete(projectId, jobId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends BigqueryRequest<Void> {
+
+      private static final String REST_PATH = "projects/{+projectId}/jobs/{+jobId}/delete";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern JOB_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Requests that a job is deleted. This call will return when the job is deleted. This method is
+       * available in limited preview.
+       *
+       * Create a request for the method "jobs.delete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the job to be deleted.
+       * @param jobId Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
+     *        jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String projectId, java.lang.String jobId) {
+        super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID of the job to be deleted. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the job to be deleted.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the job to be deleted. */
+      public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /**
+       * Required. Job ID of the job to be deleted. If this is a parent job which has child jobs,
+       * all child jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String jobId;
+
+      /** Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
+     jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       */
+      public java.lang.String getJobId() {
+        return jobId;
+      }
+
+      /**
+       * Required. Job ID of the job to be deleted. If this is a parent job which has child jobs,
+       * all child jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       */
+      public Delete setJobId(java.lang.String jobId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_ID_PATTERN.matcher(jobId).matches(),
+              "Parameter jobId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.jobId = jobId;
+        return this;
+      }
+
+      /**
+       * The geographic location of the job. Required. See details at:
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** The geographic location of the job. Required. See details at:
+     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /**
+       * The geographic location of the job. Required. See details at:
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       */
+      public Delete setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns information about a specific job. Job information is available for a six month period
      * after creation. Requires that you're the person who ran the job, or have the Is Owner project
      * role.

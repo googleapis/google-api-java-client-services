@@ -78,7 +78,8 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
    * The associated monitored resource. Custom metrics can use only certain monitored resource types
-   * in their time series data.
+   * in their time series data. For more information, see Monitored resources for custom metrics
+   * (https://cloud.google.com/monitoring/custom-metrics/creating-metrics#custom-metric-resources).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +196,8 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
    * The associated monitored resource. Custom metrics can use only certain monitored resource types
-   * in their time series data.
+   * in their time series data. For more information, see Monitored resources for custom metrics
+   * (https://cloud.google.com/monitoring/custom-metrics/creating-metrics#custom-metric-resources).
    * @return value or {@code null} for none
    */
   public MonitoredResource getResource() {
@@ -204,7 +206,8 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
    * The associated monitored resource. Custom metrics can use only certain monitored resource types
-   * in their time series data.
+   * in their time series data. For more information, see Monitored resources for custom metrics
+   * (https://cloud.google.com/monitoring/custom-metrics/creating-metrics#custom-metric-resources).
    * @param resource resource or {@code null} for none
    */
   public TimeSeries setResource(MonitoredResource resource) {

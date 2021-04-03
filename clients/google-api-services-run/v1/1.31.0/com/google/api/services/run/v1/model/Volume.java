@@ -38,14 +38,14 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private ConfigMapVolumeSource configMap;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Volume's name.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Volume's name.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +77,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Volume's name.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Volume's name.
    * @param name name or {@code null} for none
    */
   public Volume setName(java.lang.String name) {
@@ -86,7 +86,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported
    * @return value or {@code null} for none
    */
   public SecretVolumeSource getSecret() {
@@ -94,7 +94,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported
    * @param secret secret or {@code null} for none
    */
   public Volume setSecret(SecretVolumeSource secret) {

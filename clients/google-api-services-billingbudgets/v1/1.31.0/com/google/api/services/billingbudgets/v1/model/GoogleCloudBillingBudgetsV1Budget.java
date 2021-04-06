@@ -42,7 +42,8 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Filters that define which resources are used to compute the actual spend against the
-   * budget.
+   * budget amount, such as projects, services, and the budget's time period, as well as other
+   * filters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +106,8 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Filters that define which resources are used to compute the actual spend against the
-   * budget.
+   * budget amount, such as projects, services, and the budget's time period, as well as other
+   * filters.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter getBudgetFilter() {
@@ -114,7 +116,8 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Filters that define which resources are used to compute the actual spend against the
-   * budget.
+   * budget amount, such as projects, services, and the budget's time period, as well as other
+   * filters.
    * @param budgetFilter budgetFilter or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Budget setBudgetFilter(GoogleCloudBillingBudgetsV1Filter budgetFilter) {

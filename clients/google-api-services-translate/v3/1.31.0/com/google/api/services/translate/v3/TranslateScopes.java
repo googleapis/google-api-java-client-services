@@ -23,7 +23,7 @@ package com.google.api.services.translate.v3;
  */
 public class TranslateScopes {
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** Translate text from one language to another using Google Translate. */

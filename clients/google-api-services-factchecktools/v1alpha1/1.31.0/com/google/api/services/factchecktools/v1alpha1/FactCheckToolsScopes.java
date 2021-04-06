@@ -23,7 +23,7 @@ package com.google.api.services.factchecktools.v1alpha1;
  */
 public class FactCheckToolsScopes {
 
-  /** View your email address. */
+  /** See your primary Google Account email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
   /**

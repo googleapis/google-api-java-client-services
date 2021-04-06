@@ -31,23 +31,23 @@ package com.google.api.services.run.v1.model;
 public final class VolumeMount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the
-   * container at which the volume should be mounted. Must not contain ':'.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at
+   * which the volume should be mounted. Must not contain ':'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mountPath;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported This must match the Name
-   * of a Volume.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of
+   * a Volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Only true is
+   * (Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is
    * accepted. Defaults to true.
    * The value may be {@code null}.
    */
@@ -63,8 +63,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String subPath;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the
-   * container at which the volume should be mounted. Must not contain ':'.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at
+   * which the volume should be mounted. Must not contain ':'.
    * @return value or {@code null} for none
    */
   public java.lang.String getMountPath() {
@@ -72,8 +72,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path within the
-   * container at which the volume should be mounted. Must not contain ':'.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported Path within the container at
+   * which the volume should be mounted. Must not contain ':'.
    * @param mountPath mountPath or {@code null} for none
    */
   public VolumeMount setMountPath(java.lang.String mountPath) {
@@ -82,8 +82,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported This must match the Name
-   * of a Volume.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of
+   * a Volume.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -91,8 +91,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported This must match the Name
-   * of a Volume.
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported This must match the Name of
+   * a Volume.
    * @param name name or {@code null} for none
    */
   public VolumeMount setName(java.lang.String name) {
@@ -101,7 +101,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Only true is
+   * (Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is
    * accepted. Defaults to true.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Only true is
+   * (Optional) Cloud Run fully managed: supported Cloud Run for Anthos: supported Only true is
    * accepted. Defaults to true.
    * @param readOnly readOnly or {@code null} for none
    */

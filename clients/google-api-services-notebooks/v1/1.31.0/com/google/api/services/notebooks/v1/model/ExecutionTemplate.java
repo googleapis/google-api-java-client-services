@@ -114,6 +114,14 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   private java.lang.String scaleTier;
 
   /**
+   * The email address of a service account to use when running the execution. You must have the
+   * `iam.serviceAccounts.actAs` permission for the specified service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Configuration (count and accelerator type) for hardware running notebook execution.
    * @return value or {@code null} for none
    */
@@ -305,6 +313,25 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setScaleTier(java.lang.String scaleTier) {
     this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
+   * The email address of a service account to use when running the execution. You must have the
+   * `iam.serviceAccounts.actAs` permission for the specified service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * The email address of a service account to use when running the execution. You must have the
+   * `iam.serviceAccounts.actAs` permission for the specified service account.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public ExecutionTemplate setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

@@ -127,6 +127,13 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nicType;
+
+  /**
    * Optional. Shielded VM Instance configuration settings.
    * The value may be {@code null}.
    */
@@ -369,6 +376,23 @@ public final class VirtualMachineConfig extends com.google.api.client.json.Gener
    */
   public VirtualMachineConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNicType() {
+    return nicType;
+  }
+
+  /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @param nicType nicType or {@code null} for none
+   */
+  public VirtualMachineConfig setNicType(java.lang.String nicType) {
+    this.nicType = nicType;
     return this;
   }
 

@@ -178,6 +178,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nicType;
+
+  /**
    * If true, the notebook instance will not register with the proxy.
    * The value may be {@code null}.
    */
@@ -622,6 +629,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNicType() {
+    return nicType;
+  }
+
+  /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @param nicType nicType or {@code null} for none
+   */
+  public Instance setNicType(java.lang.String nicType) {
+    this.nicType = nicType;
     return this;
   }
 

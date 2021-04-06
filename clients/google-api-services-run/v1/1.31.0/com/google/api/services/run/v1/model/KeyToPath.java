@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Maps a string key to a
- * path within a volume.
+ * Cloud Run fully managed: supported Cloud Run for Anthos: supported Maps a string key to a path
+ * within a volume.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,7 +31,9 @@ package com.google.api.services.run.v1.model;
 public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
+   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
+   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
+   * to project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,7 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   private java.lang.Integer mode;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
    * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
    * not start with the string '..'.
    * The value may be {@code null}.
@@ -57,7 +59,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
+   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
+   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
+   * to project.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -65,7 +69,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The key to project.
+   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
+   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
+   * to project.
    * @param key key or {@code null} for none
    */
   public KeyToPath setKey(java.lang.String key) {
@@ -97,7 +103,7 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
    * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
    * not start with the string '..'.
    * @return value or {@code null} for none
@@ -107,7 +113,7 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The relative path of the
+   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
    * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
    * not start with the string '..'.
    * @param path path or {@code null} for none

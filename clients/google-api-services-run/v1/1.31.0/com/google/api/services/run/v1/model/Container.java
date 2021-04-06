@@ -99,7 +99,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private Probe livenessProbe;
 
   /**
-   * (Optional) Name of the container specified as a DNS_LABEL.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,8 +169,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String terminationMessagePolicy;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Pod volumes
-   * to mount into the container's filesystem.
+   * (Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem.
+   * Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into
+   * the container's filesystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -340,7 +342,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Name of the container specified as a DNS_LABEL.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -348,7 +351,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Name of the container specified as a DNS_LABEL.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -499,8 +503,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Pod volumes
-   * to mount into the container's filesystem.
+   * (Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem.
+   * Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into
+   * the container's filesystem.
    * @return value or {@code null} for none
    */
   public java.util.List<VolumeMount> getVolumeMounts() {
@@ -508,8 +513,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Pod volumes
-   * to mount into the container's filesystem.
+   * (Optional) Cloud Run fully managed: supported Volume to mount into the container's filesystem.
+   * Only supports SecretVolumeSources. Cloud Run for Anthos: supported Pod volumes to mount into
+   * the container's filesystem.
    * @param volumeMounts volumeMounts or {@code null} for none
    */
   public Container setVolumeMounts(java.util.List<VolumeMount> volumeMounts) {

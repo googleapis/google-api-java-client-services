@@ -17,7 +17,9 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * Model definition for PolicyName.
+ * An internal name for an IAM policy, based on the resource to which the policy applies. Not to be
+ * confused with a resource's external full resource name. For more information on this distinction,
+ * see go/iam-full-resource-names.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity-Aware Proxy API. For a detailed
@@ -31,6 +33,8 @@ package com.google.api.services.iap.v1.model;
 public final class PolicyName extends com.google.api.client.json.GenericJson {
 
   /**
+   * Identifies an instance of the type. ID format varies by type. The ID format is defined in the
+   * IAM .service file that defines the type, either in path_mapping or in a comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,13 +50,16 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * Valid values for type might be 'gce', 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
+   * 'gcs', 'project', 'account' etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
+   * Identifies an instance of the type. ID format varies by type. The ID format is defined in the
+   * IAM .service file that defines the type, either in path_mapping or in a comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -60,6 +67,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Identifies an instance of the type. ID format varies by type. The ID format is defined in the
+   * IAM .service file that defines the type, either in path_mapping or in a comment.
    * @param id id or {@code null} for none
    */
   public PolicyName setId(java.lang.String id) {
@@ -89,7 +98,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Valid values for type might be 'gce', 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
+   * 'gcs', 'project', 'account' etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -97,7 +107,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Valid values for type might be 'gce', 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
+   * 'gcs', 'project', 'account' etc.
    * @param type type or {@code null} for none
    */
   public PolicyName setType(java.lang.String type) {

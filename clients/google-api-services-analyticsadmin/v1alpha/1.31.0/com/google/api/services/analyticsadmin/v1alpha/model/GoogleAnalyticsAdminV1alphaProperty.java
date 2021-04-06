@@ -46,12 +46,12 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   private java.lang.String currencyCode;
 
   /**
-   * Output only. Indicates whether this Property is soft-deleted or not. Deleted properties are
-   * excluded from List results unless specifically requested.
+   * Output only. If set, the time at which this property was trashed. If not set, then this
+   * property is not currently in the trash can.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean deleted;
+  private String deleteTime;
 
   /**
    * Required. Human-readable display name for this property. The max allowed display name length is
@@ -60,6 +60,14 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Output only. If set, the time at which this trashed property will be permanently deleted. If
+   * not set, then this property is not currently in the trash can and is not slated to be deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
 
   /**
    * Industry associated with this property Example: AUTOMOTIVE, FOOD_AND_DRINK
@@ -138,21 +146,21 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   }
 
   /**
-   * Output only. Indicates whether this Property is soft-deleted or not. Deleted properties are
-   * excluded from List results unless specifically requested.
+   * Output only. If set, the time at which this property was trashed. If not set, then this
+   * property is not currently in the trash can.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getDeleted() {
-    return deleted;
+  public String getDeleteTime() {
+    return deleteTime;
   }
 
   /**
-   * Output only. Indicates whether this Property is soft-deleted or not. Deleted properties are
-   * excluded from List results unless specifically requested.
-   * @param deleted deleted or {@code null} for none
+   * Output only. If set, the time at which this property was trashed. If not set, then this
+   * property is not currently in the trash can.
+   * @param deleteTime deleteTime or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaProperty setDeleted(java.lang.Boolean deleted) {
-    this.deleted = deleted;
+  public GoogleAnalyticsAdminV1alphaProperty setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 
@@ -172,6 +180,25 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
    */
   public GoogleAnalyticsAdminV1alphaProperty setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. If set, the time at which this trashed property will be permanently deleted. If
+   * not set, then this property is not currently in the trash can and is not slated to be deleted.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. If set, the time at which this trashed property will be permanently deleted. If
+   * not set, then this property is not currently in the trash can and is not slated to be deleted.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaProperty setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 

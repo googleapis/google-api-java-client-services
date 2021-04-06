@@ -3013,7 +3013,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       return result;
     }
 
-    public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+    public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProperty> {
 
       private static final String REST_PATH = "v1alpha/{+name}";
 
@@ -3041,7 +3041,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
-        super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+        super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProperty.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

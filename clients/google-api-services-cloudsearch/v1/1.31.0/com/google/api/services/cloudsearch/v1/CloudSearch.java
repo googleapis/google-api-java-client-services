@@ -4412,6 +4412,241 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Settings {
 
     /**
+     * Get customer settings. **Note:** This API requires an admin account to execute.
+     *
+     * Create a request for the method "settings.getCustomer".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link GetCustomer#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetCustomer getCustomer() throws java.io.IOException {
+      GetCustomer result = new GetCustomer();
+      initialize(result);
+      return result;
+    }
+
+    public class GetCustomer extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.CustomerSettings> {
+
+      private static final String REST_PATH = "v1/settings/customer";
+
+      /**
+       * Get customer settings. **Note:** This API requires an admin account to execute.
+       *
+       * Create a request for the method "settings.getCustomer".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link GetCustomer#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetCustomer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetCustomer() {
+        super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.CustomerSettings.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetCustomer set$Xgafv(java.lang.String $Xgafv) {
+        return (GetCustomer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetCustomer setAccessToken(java.lang.String accessToken) {
+        return (GetCustomer) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetCustomer setAlt(java.lang.String alt) {
+        return (GetCustomer) super.setAlt(alt);
+      }
+
+      @Override
+      public GetCustomer setCallback(java.lang.String callback) {
+        return (GetCustomer) super.setCallback(callback);
+      }
+
+      @Override
+      public GetCustomer setFields(java.lang.String fields) {
+        return (GetCustomer) super.setFields(fields);
+      }
+
+      @Override
+      public GetCustomer setKey(java.lang.String key) {
+        return (GetCustomer) super.setKey(key);
+      }
+
+      @Override
+      public GetCustomer setOauthToken(java.lang.String oauthToken) {
+        return (GetCustomer) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetCustomer setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetCustomer) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetCustomer setQuotaUser(java.lang.String quotaUser) {
+        return (GetCustomer) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetCustomer setUploadType(java.lang.String uploadType) {
+        return (GetCustomer) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetCustomer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetCustomer) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetCustomer set(String parameterName, Object value) {
+        return (GetCustomer) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update customer settings. **Note:** This API requires an admin account to execute.
+     *
+     * Create a request for the method "settings.updateCustomer".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link UpdateCustomer#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudsearch.v1.model.CustomerSettings}
+     * @return the request
+     */
+    public UpdateCustomer updateCustomer(com.google.api.services.cloudsearch.v1.model.CustomerSettings content) throws java.io.IOException {
+      UpdateCustomer result = new UpdateCustomer(content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateCustomer extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/settings/customer";
+
+      /**
+       * Update customer settings. **Note:** This API requires an admin account to execute.
+       *
+       * Create a request for the method "settings.updateCustomer".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link UpdateCustomer#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateCustomer#initialize(com.google.api.client.googleapis.services.Abstr
+       * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.CustomerSettings}
+       * @since 1.13
+       */
+      protected UpdateCustomer(com.google.api.services.cloudsearch.v1.model.CustomerSettings content) {
+        super(CloudSearch.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.Operation.class);
+      }
+
+      @Override
+      public UpdateCustomer set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateCustomer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateCustomer setAccessToken(java.lang.String accessToken) {
+        return (UpdateCustomer) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateCustomer setAlt(java.lang.String alt) {
+        return (UpdateCustomer) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateCustomer setCallback(java.lang.String callback) {
+        return (UpdateCustomer) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateCustomer setFields(java.lang.String fields) {
+        return (UpdateCustomer) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateCustomer setKey(java.lang.String key) {
+        return (UpdateCustomer) super.setKey(key);
+      }
+
+      @Override
+      public UpdateCustomer setOauthToken(java.lang.String oauthToken) {
+        return (UpdateCustomer) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateCustomer setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateCustomer) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateCustomer setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateCustomer) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateCustomer setUploadType(java.lang.String uploadType) {
+        return (UpdateCustomer) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateCustomer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateCustomer) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Update mask to control which fields get updated. If you specify a field in the update_mask
+       * but don't specify its value here, that field will be cleared. If the mask is not present or
+       * empty, all fields will be updated. Currently supported field paths: vpc_settings and
+       * audit_logging_settings
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Update mask to control which fields get updated. If you specify a field in the update_mask but
+     don't specify its value here, that field will be cleared. If the mask is not present or empty, all
+     fields will be updated. Currently supported field paths: vpc_settings and audit_logging_settings
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Update mask to control which fields get updated. If you specify a field in the update_mask
+       * but don't specify its value here, that field will be cleared. If the mask is not present or
+       * empty, all fields will be updated. Currently supported field paths: vpc_settings and
+       * audit_logging_settings
+       */
+      public UpdateCustomer setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateCustomer set(String parameterName, Object value) {
+        return (UpdateCustomer) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Datasources collection.
      *
      * <p>The typical use is:</p>

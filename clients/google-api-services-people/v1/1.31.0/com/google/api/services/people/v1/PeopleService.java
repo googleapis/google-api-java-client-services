@@ -3589,6 +3589,28 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
+       * not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
+       * not set.
+       */
+      public SearchContacts setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
       @Override
       public SearchContacts set(String parameterName, Object value) {
         return (SearchContacts) super.set(parameterName, value);

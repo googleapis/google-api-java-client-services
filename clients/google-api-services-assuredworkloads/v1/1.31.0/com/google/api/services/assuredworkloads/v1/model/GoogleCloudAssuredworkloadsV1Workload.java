@@ -106,6 +106,15 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String provisionedResourcesParent;
 
   /**
+   * Input only. Resource properties that are used to customize workload resources. These properties
+   * (such as custom project id) will be used to create workload resources if possible. This field
+   * is optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettings> resourceSettings;
+
+  /**
    * Output only. The resources associated with this workload. These resources will be created when
    * creating the workload. If any of the projects already exist, the workload creation will fail.
    * Always read only.
@@ -288,6 +297,27 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setProvisionedResourcesParent(java.lang.String provisionedResourcesParent) {
     this.provisionedResourcesParent = provisionedResourcesParent;
+    return this;
+  }
+
+  /**
+   * Input only. Resource properties that are used to customize workload resources. These properties
+   * (such as custom project id) will be used to create workload resources if possible. This field
+   * is optional.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettings> getResourceSettings() {
+    return resourceSettings;
+  }
+
+  /**
+   * Input only. Resource properties that are used to customize workload resources. These properties
+   * (such as custom project id) will be used to create workload resources if possible. This field
+   * is optional.
+   * @param resourceSettings resourceSettings or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setResourceSettings(java.util.List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettings> resourceSettings) {
+    this.resourceSettings = resourceSettings;
     return this;
   }
 

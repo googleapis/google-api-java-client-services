@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * [Output Only] A consumer forwarding rule connected to this service attachment.
+ * [Output Only] A consumer forwarding rule connected to this service attachment. [Deprecated] Do
+ * not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * A service attachment represents a service that a producer has exposed. It encapsulates the load
  * balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to
- * represent the consumers connecting to the service. next tag = 17
+ * represent the consumers connecting to the service. next tag = 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -129,6 +129,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * The URL of a service serving the endpoint identified by this service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetService;
 
   /**
    * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
@@ -357,6 +364,23 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * The URL of a service serving the endpoint identified by this service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetService() {
+    return targetService;
+  }
+
+  /**
+   * The URL of a service serving the endpoint identified by this service attachment.
+   * @param targetService targetService or {@code null} for none
+   */
+  public ServiceAttachment setTargetService(java.lang.String targetService) {
+    this.targetService = targetService;
     return this;
   }
 

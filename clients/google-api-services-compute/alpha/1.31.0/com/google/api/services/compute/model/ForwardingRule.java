@@ -316,6 +316,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.math.BigInteger pscConnectionId;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscConnectionStatus;
+
+  /**
    * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
    * applicable to global forwarding rules. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -1074,6 +1080,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscConnectionStatus() {
+    return pscConnectionStatus;
+  }
+
+  /**
+   * @param pscConnectionStatus pscConnectionStatus or {@code null} for none
+   */
+  public ForwardingRule setPscConnectionStatus(java.lang.String pscConnectionStatus) {
+    this.pscConnectionStatus = pscConnectionStatus;
     return this;
   }
 

@@ -37,7 +37,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
-   * The instance defining the VM instances to be created.
+   * DEPRECATED: Please use instance_properties instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +52,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private InstanceProperties instanceProperties;
 
   /**
+   * Policy for chosing target zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,22 +60,23 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
-   * the default value. If min_count instances cannot be created, then no instances will be created.
+   * the default value. If min_count instances cannot be created, then no instances will be created
+   * and instances already created will be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minCount;
 
   /**
-   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
-   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
-   * with each character corresponding to one digit of the generated instance name. Example:
-   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
-   * there already exist instance(s) whose names match the name pattern in the same project and
-   * zone, then the generated instance numbers will start after the biggest existing number. For
-   * example, if there exists an instance with name inst-0050, then instance names generated using
-   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
-   * contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or
+   * per_instance_properties must be set. The pattern should contain one continuous sequence of
+   * placeholder hash characters (#) with each character corresponding to one digit of the generated
+   * instance name. Example: name_pattern of inst-#### will generate instance names such as
+   * inst-0001, inst-0002, ... . If there already exist instance(s) whose names match the name
+   * pattern in the same project and zone, then the generated instance numbers will start after the
+   * biggest existing number. For example, if there exists an instance with name inst-0050, then
+   * instance names generated using the pattern inst-#### will be inst-0051, inst-0052, etc. The
+   * name pattern placeholder #...# can contain up to 18 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +91,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> perInstanceProperties;
 
   /**
-   * List of predefined names. The number of names provided must be equal to count.
+   * DEPRECATED: Please use per_instance_properties instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +131,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The instance defining the VM instances to be created.
+   * DEPRECATED: Please use instance_properties instead.
    * @return value or {@code null} for none
    */
   public Instance getInstance() {
@@ -137,7 +139,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The instance defining the VM instances to be created.
+   * DEPRECATED: Please use instance_properties instead.
    * @param instance instance or {@code null} for none
    */
   public BulkInsertInstanceResource setInstance(Instance instance) {
@@ -165,6 +167,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * Policy for chosing target zone.
    * @return value or {@code null} for none
    */
   public LocationPolicy getLocationPolicy() {
@@ -172,6 +175,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * Policy for chosing target zone.
    * @param locationPolicy locationPolicy or {@code null} for none
    */
   public BulkInsertInstanceResource setLocationPolicy(LocationPolicy locationPolicy) {
@@ -181,7 +185,8 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
-   * the default value. If min_count instances cannot be created, then no instances will be created.
+   * the default value. If min_count instances cannot be created, then no instances will be created
+   * and instances already created will be deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinCount() {
@@ -190,7 +195,8 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
-   * the default value. If min_count instances cannot be created, then no instances will be created.
+   * the default value. If min_count instances cannot be created, then no instances will be created
+   * and instances already created will be deleted.
    * @param minCount minCount or {@code null} for none
    */
   public BulkInsertInstanceResource setMinCount(java.lang.Long minCount) {
@@ -199,15 +205,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
-   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
-   * with each character corresponding to one digit of the generated instance name. Example:
-   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
-   * there already exist instance(s) whose names match the name pattern in the same project and
-   * zone, then the generated instance numbers will start after the biggest existing number. For
-   * example, if there exists an instance with name inst-0050, then instance names generated using
-   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
-   * contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or
+   * per_instance_properties must be set. The pattern should contain one continuous sequence of
+   * placeholder hash characters (#) with each character corresponding to one digit of the generated
+   * instance name. Example: name_pattern of inst-#### will generate instance names such as
+   * inst-0001, inst-0002, ... . If there already exist instance(s) whose names match the name
+   * pattern in the same project and zone, then the generated instance numbers will start after the
+   * biggest existing number. For example, if there exists an instance with name inst-0050, then
+   * instance names generated using the pattern inst-#### will be inst-0051, inst-0052, etc. The
+   * name pattern placeholder #...# can contain up to 18 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamePattern() {
@@ -215,15 +221,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
-   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
-   * with each character corresponding to one digit of the generated instance name. Example:
-   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
-   * there already exist instance(s) whose names match the name pattern in the same project and
-   * zone, then the generated instance numbers will start after the biggest existing number. For
-   * example, if there exists an instance with name inst-0050, then instance names generated using
-   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
-   * contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or
+   * per_instance_properties must be set. The pattern should contain one continuous sequence of
+   * placeholder hash characters (#) with each character corresponding to one digit of the generated
+   * instance name. Example: name_pattern of inst-#### will generate instance names such as
+   * inst-0001, inst-0002, ... . If there already exist instance(s) whose names match the name
+   * pattern in the same project and zone, then the generated instance numbers will start after the
+   * biggest existing number. For example, if there exists an instance with name inst-0050, then
+   * instance names generated using the pattern inst-#### will be inst-0051, inst-0052, etc. The
+   * name pattern placeholder #...# can contain up to 18 characters.
    * @param namePattern namePattern or {@code null} for none
    */
   public BulkInsertInstanceResource setNamePattern(java.lang.String namePattern) {
@@ -251,7 +257,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * List of predefined names. The number of names provided must be equal to count.
+   * DEPRECATED: Please use per_instance_properties instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPredefinedNames() {
@@ -259,7 +265,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * List of predefined names. The number of names provided must be equal to count.
+   * DEPRECATED: Please use per_instance_properties instead.
    * @param predefinedNames predefinedNames or {@code null} for none
    */
   public BulkInsertInstanceResource setPredefinedNames(java.util.List<java.lang.String> predefinedNames) {

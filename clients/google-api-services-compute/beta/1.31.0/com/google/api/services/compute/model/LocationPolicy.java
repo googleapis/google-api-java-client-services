@@ -32,7 +32,7 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, like: zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, like: zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, LocationPolicyLocation> getLocations() {
@@ -49,7 +49,7 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, like: zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a.
    * @param locations locations or {@code null} for none
    */
   public LocationPolicy setLocations(java.util.Map<String, LocationPolicyLocation> locations) {

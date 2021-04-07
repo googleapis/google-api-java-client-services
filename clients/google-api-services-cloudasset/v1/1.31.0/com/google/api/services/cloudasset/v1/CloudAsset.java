@@ -1293,6 +1293,29 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
+       * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not
+       * be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+       */
+      @com.google.api.client.util.Key("analysisQuery.conditionContext.accessTime")
+      private String analysisQueryConditionContextAccessTime;
+
+      /** The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be
+     earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+       */
+      public String getAnalysisQueryConditionContextAccessTime() {
+        return analysisQueryConditionContextAccessTime;
+      }
+
+      /**
+       * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not
+       * be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryConditionContextAccessTime(String analysisQueryConditionContextAccessTime) {
+        this.analysisQueryConditionContextAccessTime = analysisQueryConditionContextAccessTime;
+        return this;
+      }
+
+      /**
        * Required. The identity appear in the form of members in [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
        * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",

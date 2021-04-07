@@ -50,6 +50,14 @@ public final class GoogleCloudAssetV1AccessControlList extends com.google.api.cl
   }
 
   /**
+   * Condition evaluation for this AccessControlList, if there is a condition defined in the above
+   * IAM policy binding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConditionEvaluation conditionEvaluation;
+
+  /**
    * Resource edges of the graph starting from the policy attached resource to any descendant
    * resources. The Edge.source_node contains the full resource name of a parent resource and
    * Edge.target_node contains the full resource name of a child resource. This field is present
@@ -83,6 +91,25 @@ public final class GoogleCloudAssetV1AccessControlList extends com.google.api.cl
    */
   public GoogleCloudAssetV1AccessControlList setAccesses(java.util.List<GoogleCloudAssetV1Access> accesses) {
     this.accesses = accesses;
+    return this;
+  }
+
+  /**
+   * Condition evaluation for this AccessControlList, if there is a condition defined in the above
+   * IAM policy binding.
+   * @return value or {@code null} for none
+   */
+  public ConditionEvaluation getConditionEvaluation() {
+    return conditionEvaluation;
+  }
+
+  /**
+   * Condition evaluation for this AccessControlList, if there is a condition defined in the above
+   * IAM policy binding.
+   * @param conditionEvaluation conditionEvaluation or {@code null} for none
+   */
+  public GoogleCloudAssetV1AccessControlList setConditionEvaluation(ConditionEvaluation conditionEvaluation) {
+    this.conditionEvaluation = conditionEvaluation;
     return this;
   }
 

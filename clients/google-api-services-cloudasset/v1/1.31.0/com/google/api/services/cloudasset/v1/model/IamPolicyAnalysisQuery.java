@@ -37,6 +37,13 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
   private AccessSelector accessSelector;
 
   /**
+   * Optional. The hypothetical context for IAM conditions evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConditionContext conditionContext;
+
+  /**
    * Optional. Specifies an identity for analysis.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class IamPolicyAnalysisQuery extends com.google.api.client.json.Gen
    */
   public IamPolicyAnalysisQuery setAccessSelector(AccessSelector accessSelector) {
     this.accessSelector = accessSelector;
+    return this;
+  }
+
+  /**
+   * Optional. The hypothetical context for IAM conditions evaluation.
+   * @return value or {@code null} for none
+   */
+  public ConditionContext getConditionContext() {
+    return conditionContext;
+  }
+
+  /**
+   * Optional. The hypothetical context for IAM conditions evaluation.
+   * @param conditionContext conditionContext or {@code null} for none
+   */
+  public IamPolicyAnalysisQuery setConditionContext(ConditionContext conditionContext) {
+    this.conditionContext = conditionContext;
     return this;
   }
 

@@ -39,8 +39,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long clicks;
 
   /**
-   * Number of clicks merchant's products receive (clicks) divided by the number of times the
-   * products are shown (impressions).
+   * Click-through rate - the number of clicks merchant's products receive (clicks) divided by the
+   * number of times the products are shown (impressions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of clicks merchant's products receive (clicks) divided by the number of times the
-   * products are shown (impressions).
+   * Click-through rate - the number of clicks merchant's products receive (clicks) divided by the
+   * number of times the products are shown (impressions).
    * @return value or {@code null} for none
    */
   public java.lang.Double getCtr() {
@@ -80,8 +80,8 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of clicks merchant's products receive (clicks) divided by the number of times the
-   * products are shown (impressions).
+   * Click-through rate - the number of clicks merchant's products receive (clicks) divided by the
+   * number of times the products are shown (impressions).
    * @param ctr ctr or {@code null} for none
    */
   public Metrics setCtr(java.lang.Double ctr) {

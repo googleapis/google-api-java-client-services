@@ -37,6 +37,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String acceleratorType;
 
   /**
+   * Output only. The API version that created this Node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiVersion;
+
+  /**
    * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be
    * a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block
    * would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block
@@ -191,6 +198,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setAcceleratorType(java.lang.String acceleratorType) {
     this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * Output only. The API version that created this Node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiVersion() {
+    return apiVersion;
+  }
+
+  /**
+   * Output only. The API version that created this Node.
+   * @param apiVersion apiVersion or {@code null} for none
+   */
+  public Node setApiVersion(java.lang.String apiVersion) {
+    this.apiVersion = apiVersion;
     return this;
   }
 

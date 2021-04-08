@@ -72,8 +72,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * Otherwise, the specified name is used as the unique name for this job. If the specified name is
    * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
    * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
-   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
-   * with an INVALID_ARGUMENT error.
+   * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
+   * fail with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,8 +215,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * Otherwise, the specified name is used as the unique name for this job. If the specified name is
    * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
    * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
-   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
-   * with an INVALID_ARGUMENT error.
+   * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
+   * fail with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -228,8 +230,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * Otherwise, the specified name is used as the unique name for this job. If the specified name is
    * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
    * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
-   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
-   * with an INVALID_ARGUMENT error.
+   * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
+   * fail with an INVALID_ARGUMENT error.
    * @param name name or {@code null} for none
    */
   public TransferJob setName(java.lang.String name) {

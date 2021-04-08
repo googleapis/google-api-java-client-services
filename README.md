@@ -179,6 +179,7 @@ packages on [Maven Central][maven-search].
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | My Business Account Management API | [v1](clients/google-api-services-mybusinessaccountmanagement/v1) |
+| My Business Lodging API | [v1](clients/google-api-services-mybusinesslodging/v1) |
 | Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |

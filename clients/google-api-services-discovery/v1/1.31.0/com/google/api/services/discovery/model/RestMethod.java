@@ -46,6 +46,14 @@ public final class RestMethod extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean etagRequired;
 
   /**
+   * The URI path of this REST method in (RFC 6570) format without level 2 features ({+var}).
+   * Supplementary to the path property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flatPath;
+
+  /**
    * HTTP method used by this method.
    * The value may be {@code null}.
    */
@@ -180,6 +188,25 @@ public final class RestMethod extends com.google.api.client.json.GenericJson {
    */
   public RestMethod setEtagRequired(java.lang.Boolean etagRequired) {
     this.etagRequired = etagRequired;
+    return this;
+  }
+
+  /**
+   * The URI path of this REST method in (RFC 6570) format without level 2 features ({+var}).
+   * Supplementary to the path property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlatPath() {
+    return flatPath;
+  }
+
+  /**
+   * The URI path of this REST method in (RFC 6570) format without level 2 features ({+var}).
+   * Supplementary to the path property.
+   * @param flatPath flatPath or {@code null} for none
+   */
+  public RestMethod setFlatPath(java.lang.String flatPath) {
+    this.flatPath = flatPath;
     return this;
   }
 

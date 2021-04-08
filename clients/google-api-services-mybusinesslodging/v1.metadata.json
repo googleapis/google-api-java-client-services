@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-mybusinesslodging",
+    "version": "v1-rev20210406-1.31.0"
+  }
+}

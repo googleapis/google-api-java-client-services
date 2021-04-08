@@ -74,8 +74,8 @@ public final class DeviceSettings extends com.google.api.client.json.GenericJson
   private java.lang.Boolean unknownSourcesEnabled;
 
   /**
-   * Whether Verify Apps (Google Play Protect
-   * (https://support.google.com/googleplay/answer/2812853)) is enabled on the device.
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +186,8 @@ public final class DeviceSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether Verify Apps (Google Play Protect
-   * (https://support.google.com/googleplay/answer/2812853)) is enabled on the device.
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced on the device.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifyAppsEnabled() {
@@ -195,8 +195,8 @@ public final class DeviceSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether Verify Apps (Google Play Protect
-   * (https://support.google.com/googleplay/answer/2812853)) is enabled on the device.
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced on the device.
    * @param verifyAppsEnabled verifyAppsEnabled or {@code null} for none
    */
   public DeviceSettings setVerifyAppsEnabled(java.lang.Boolean verifyAppsEnabled) {

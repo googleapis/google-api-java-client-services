@@ -45,6 +45,22 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String commonCriteriaMode;
 
   /**
+   * Controls access to developer settings: developer options and safe boot. Replaces
+   * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String developerSettings;
+
+  /**
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googlePlayProtectVerifyApps;
+
+  /**
    * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
    * install_unknown_sources_allowed (deprecated).
    * The value may be {@code null}.
@@ -78,6 +94,44 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    */
   public AdvancedSecurityOverrides setCommonCriteriaMode(java.lang.String commonCriteriaMode) {
     this.commonCriteriaMode = commonCriteriaMode;
+    return this;
+  }
+
+  /**
+   * Controls access to developer settings: developer options and safe boot. Replaces
+   * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeveloperSettings() {
+    return developerSettings;
+  }
+
+  /**
+   * Controls access to developer settings: developer options and safe boot. Replaces
+   * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated).
+   * @param developerSettings developerSettings or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setDeveloperSettings(java.lang.String developerSettings) {
+    this.developerSettings = developerSettings;
+    return this;
+  }
+
+  /**
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGooglePlayProtectVerifyApps() {
+    return googlePlayProtectVerifyApps;
+  }
+
+  /**
+   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
+   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * @param googlePlayProtectVerifyApps googlePlayProtectVerifyApps or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setGooglePlayProtectVerifyApps(java.lang.String googlePlayProtectVerifyApps) {
+    this.googlePlayProtectVerifyApps = googlePlayProtectVerifyApps;
     return this;
   }
 

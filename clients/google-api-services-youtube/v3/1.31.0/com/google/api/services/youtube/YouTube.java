@@ -6835,6 +6835,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.LiveBroadcast content) {
         super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.LiveBroadcast.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getId(), "LiveBroadcast.getId()");
       }
 
       @Override
@@ -9122,6 +9124,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.LiveStream content) {
         super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.LiveStream.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getId(), "LiveStream.getId()");
       }
 
       @Override
@@ -14698,7 +14702,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       return result;
     }
 
-    public class GetRating extends YouTubeRequest<com.google.api.services.youtube.model.VideoRatingListResponse> {
+    public class GetRating extends YouTubeRequest<com.google.api.services.youtube.model.VideoGetRatingResponse> {
 
       private static final String REST_PATH = "youtube/v3/videos/getRating";
 
@@ -14717,7 +14721,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * @since 1.13
        */
       protected GetRating(java.util.List<java.lang.String> id) {
-        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.VideoRatingListResponse.class);
+        super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.VideoGetRatingResponse.class);
         this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
@@ -15997,6 +16001,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.Video content) {
         super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.Video.class);
         this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
+        checkRequiredParameter(content, "content");
+        checkRequiredParameter(content.getId(), "Video.getId()");
       }
 
       @Override

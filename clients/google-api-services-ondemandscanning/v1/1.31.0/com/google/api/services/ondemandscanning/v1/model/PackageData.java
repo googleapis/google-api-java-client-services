@@ -60,6 +60,15 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String package__;
 
   /**
+   * The projectId of the package to which this data belongs. Most of Drydock's code does not set or
+   * use this field. This is added specifically so we can group packages by projects and decide
+   * whether or not to apply NVD data to the packages belonging to a specific project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
    * The version of the package being analysed
    * The value may be {@code null}.
    */
@@ -133,6 +142,27 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setPackage(java.lang.String package__) {
     this.package__ = package__;
+    return this;
+  }
+
+  /**
+   * The projectId of the package to which this data belongs. Most of Drydock's code does not set or
+   * use this field. This is added specifically so we can group packages by projects and decide
+   * whether or not to apply NVD data to the packages belonging to a specific project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * The projectId of the package to which this data belongs. Most of Drydock's code does not set or
+   * use this field. This is added specifically so we can group packages by projects and decide
+   * whether or not to apply NVD data to the packages belonging to a specific project.
+   * @param projectId projectId or {@code null} for none
+   */
+  public PackageData setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
     return this;
   }
 

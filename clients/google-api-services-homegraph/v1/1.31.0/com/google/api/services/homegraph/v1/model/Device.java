@@ -69,16 +69,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private DeviceNames name;
 
   /**
-   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
-   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
-   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
-   * /shed-per-trait-routing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<NonLocalTrait> nonLocalTraits;
-
-  /**
    * Indicates whether your smart home Action will report notifications to Google for this device
    * via ReportStateAndNotification. If your smart home Action enables users to control device
    * notifications, you should update this field and call RequestSyncDevices.
@@ -232,29 +222,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setName(DeviceNames name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
-   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
-   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
-   * /shed-per-trait-routing.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<NonLocalTrait> getNonLocalTraits() {
-    return nonLocalTraits;
-  }
-
-  /**
-   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
-   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
-   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
-   * /shed-per-trait-routing.
-   * @param nonLocalTraits nonLocalTraits or {@code null} for none
-   */
-  public Device setNonLocalTraits(java.util.List<NonLocalTrait> nonLocalTraits) {
-    this.nonLocalTraits = nonLocalTraits;
     return this;
   }
 

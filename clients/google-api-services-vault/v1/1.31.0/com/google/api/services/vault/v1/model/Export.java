@@ -17,7 +17,10 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * An export
+ * An export To work with Vault resources, the account must have the [required Vault privileges]
+ * (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter,
+ * the account must have created the matter, have the matter shared with them, or have the **View
+ * All Matters** privilege.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:

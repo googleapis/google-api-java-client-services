@@ -82,14 +82,14 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private com.google.api.client.util.DateTime publishedAt;
 
   /**
-   * The date and time that the broadcast is scheduled to start.
+   * The date and time that the broadcast is scheduled to end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime scheduledEndTime;
 
   /**
-   * The date and time that the broadcast is scheduled to end.
+   * The date and time that the broadcast is scheduled to start.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,7 +239,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The date and time that the broadcast is scheduled to start.
+   * The date and time that the broadcast is scheduled to end.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getScheduledEndTime() {
@@ -247,7 +247,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The date and time that the broadcast is scheduled to start.
+   * The date and time that the broadcast is scheduled to end.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
   public LiveBroadcastSnippet setScheduledEndTime(com.google.api.client.util.DateTime scheduledEndTime) {
@@ -256,7 +256,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The date and time that the broadcast is scheduled to end.
+   * The date and time that the broadcast is scheduled to start.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getScheduledStartTime() {
@@ -264,7 +264,7 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The date and time that the broadcast is scheduled to end.
+   * The date and time that the broadcast is scheduled to start.
    * @param scheduledStartTime scheduledStartTime or {@code null} for none
    */
   public LiveBroadcastSnippet setScheduledStartTime(com.google.api.client.util.DateTime scheduledStartTime) {

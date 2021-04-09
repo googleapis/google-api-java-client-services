@@ -77,13 +77,6 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   private java.lang.Double learnRate;
 
   /**
-   * The information of the principal components.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PrincipalComponentInfo> principalComponentInfos;
-
-  /**
    * Loss computed on the training data at the end of iteration.
    * The value may be {@code null}.
    */
@@ -187,23 +180,6 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
    */
   public IterationResult setLearnRate(java.lang.Double learnRate) {
     this.learnRate = learnRate;
-    return this;
-  }
-
-  /**
-   * The information of the principal components.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PrincipalComponentInfo> getPrincipalComponentInfos() {
-    return principalComponentInfos;
-  }
-
-  /**
-   * The information of the principal components.
-   * @param principalComponentInfos principalComponentInfos or {@code null} for none
-   */
-  public IterationResult setPrincipalComponentInfos(java.util.List<PrincipalComponentInfo> principalComponentInfos) {
-    this.principalComponentInfos = principalComponentInfos;
     return this;
   }
 

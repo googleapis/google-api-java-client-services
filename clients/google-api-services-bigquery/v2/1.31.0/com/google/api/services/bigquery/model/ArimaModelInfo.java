@@ -51,6 +51,27 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
   private java.lang.Boolean hasDrift;
 
   /**
+   * If true, holiday_effect is a part of time series decomposition result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasHolidayEffect;
+
+  /**
+   * If true, spikes_and_dips is a part of time series decomposition result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasSpikesAndDips;
+
+  /**
+   * If true, step_changes is a part of time series decomposition result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasStepChanges;
+
+  /**
    * Non-seasonal order.
    * The value may be {@code null}.
    */
@@ -72,6 +93,16 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String timeSeriesId;
+
+  /**
+   * The tuple of time_series_ids identifying this time series. It will be one of the unique tuples
+   * of values present in the time_series_id_columns specified during ARIMA model training. Only
+   * present when time_series_id_columns training option was used and the order of values here are
+   * same as the order of time_series_id_columns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> timeSeriesIds;
 
   /**
    * Arima coefficients.
@@ -121,6 +152,57 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
    */
   public ArimaModelInfo setHasDrift(java.lang.Boolean hasDrift) {
     this.hasDrift = hasDrift;
+    return this;
+  }
+
+  /**
+   * If true, holiday_effect is a part of time series decomposition result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasHolidayEffect() {
+    return hasHolidayEffect;
+  }
+
+  /**
+   * If true, holiday_effect is a part of time series decomposition result.
+   * @param hasHolidayEffect hasHolidayEffect or {@code null} for none
+   */
+  public ArimaModelInfo setHasHolidayEffect(java.lang.Boolean hasHolidayEffect) {
+    this.hasHolidayEffect = hasHolidayEffect;
+    return this;
+  }
+
+  /**
+   * If true, spikes_and_dips is a part of time series decomposition result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasSpikesAndDips() {
+    return hasSpikesAndDips;
+  }
+
+  /**
+   * If true, spikes_and_dips is a part of time series decomposition result.
+   * @param hasSpikesAndDips hasSpikesAndDips or {@code null} for none
+   */
+  public ArimaModelInfo setHasSpikesAndDips(java.lang.Boolean hasSpikesAndDips) {
+    this.hasSpikesAndDips = hasSpikesAndDips;
+    return this;
+  }
+
+  /**
+   * If true, step_changes is a part of time series decomposition result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasStepChanges() {
+    return hasStepChanges;
+  }
+
+  /**
+   * If true, step_changes is a part of time series decomposition result.
+   * @param hasStepChanges hasStepChanges or {@code null} for none
+   */
+  public ArimaModelInfo setHasStepChanges(java.lang.Boolean hasStepChanges) {
+    this.hasStepChanges = hasStepChanges;
     return this;
   }
 
@@ -176,6 +258,29 @@ public final class ArimaModelInfo extends com.google.api.client.json.GenericJson
    */
   public ArimaModelInfo setTimeSeriesId(java.lang.String timeSeriesId) {
     this.timeSeriesId = timeSeriesId;
+    return this;
+  }
+
+  /**
+   * The tuple of time_series_ids identifying this time series. It will be one of the unique tuples
+   * of values present in the time_series_id_columns specified during ARIMA model training. Only
+   * present when time_series_id_columns training option was used and the order of values here are
+   * same as the order of time_series_id_columns.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTimeSeriesIds() {
+    return timeSeriesIds;
+  }
+
+  /**
+   * The tuple of time_series_ids identifying this time series. It will be one of the unique tuples
+   * of values present in the time_series_id_columns specified during ARIMA model training. Only
+   * present when time_series_id_columns training option was used and the order of values here are
+   * same as the order of time_series_id_columns.
+   * @param timeSeriesIds timeSeriesIds or {@code null} for none
+   */
+  public ArimaModelInfo setTimeSeriesIds(java.util.List<java.lang.String> timeSeriesIds) {
+    this.timeSeriesIds = timeSeriesIds;
     return this;
   }
 

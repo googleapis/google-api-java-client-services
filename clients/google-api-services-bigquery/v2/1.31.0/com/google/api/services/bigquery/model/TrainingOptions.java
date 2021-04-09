@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class TrainingOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, detect step changes and make data adjustment in the input time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean adjustStepChanges;
+
+  /**
    * Whether to enable auto ARIMA or not.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long batchSize;
+
+  /**
+   * If true, clean spikes and dips in the input time series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cleanSpikesAndDips;
 
   /**
    * The data frequency of a time series.
@@ -85,6 +99,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String dataSplitMethod;
+
+  /**
+   * If true, perform decompose time series and save the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean decomposeTimeSeries;
 
   /**
    * Distance type for clustering models.
@@ -321,6 +342,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String timeSeriesIdColumn;
 
   /**
+   * The time series id columns that were used during ARIMA model training.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> timeSeriesIdColumns;
+
+  /**
    * Column to be designated as time series timestamp for ARIMA model.
    * The value may be {@code null}.
    */
@@ -347,6 +375,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean warmStart;
+
+  /**
+   * If true, detect step changes and make data adjustment in the input time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAdjustStepChanges() {
+    return adjustStepChanges;
+  }
+
+  /**
+   * If true, detect step changes and make data adjustment in the input time series.
+   * @param adjustStepChanges adjustStepChanges or {@code null} for none
+   */
+  public TrainingOptions setAdjustStepChanges(java.lang.Boolean adjustStepChanges) {
+    this.adjustStepChanges = adjustStepChanges;
+    return this;
+  }
 
   /**
    * Whether to enable auto ARIMA or not.
@@ -396,6 +441,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setBatchSize(java.lang.Long batchSize) {
     this.batchSize = batchSize;
+    return this;
+  }
+
+  /**
+   * If true, clean spikes and dips in the input time series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCleanSpikesAndDips() {
+    return cleanSpikesAndDips;
+  }
+
+  /**
+   * If true, clean spikes and dips in the input time series.
+   * @param cleanSpikesAndDips cleanSpikesAndDips or {@code null} for none
+   */
+  public TrainingOptions setCleanSpikesAndDips(java.lang.Boolean cleanSpikesAndDips) {
+    this.cleanSpikesAndDips = cleanSpikesAndDips;
     return this;
   }
 
@@ -480,6 +542,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setDataSplitMethod(java.lang.String dataSplitMethod) {
     this.dataSplitMethod = dataSplitMethod;
+    return this;
+  }
+
+  /**
+   * If true, perform decompose time series and save the results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDecomposeTimeSeries() {
+    return decomposeTimeSeries;
+  }
+
+  /**
+   * If true, perform decompose time series and save the results.
+   * @param decomposeTimeSeries decomposeTimeSeries or {@code null} for none
+   */
+  public TrainingOptions setDecomposeTimeSeries(java.lang.Boolean decomposeTimeSeries) {
+    this.decomposeTimeSeries = decomposeTimeSeries;
     return this;
   }
 
@@ -1044,6 +1123,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setTimeSeriesIdColumn(java.lang.String timeSeriesIdColumn) {
     this.timeSeriesIdColumn = timeSeriesIdColumn;
+    return this;
+  }
+
+  /**
+   * The time series id columns that were used during ARIMA model training.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTimeSeriesIdColumns() {
+    return timeSeriesIdColumns;
+  }
+
+  /**
+   * The time series id columns that were used during ARIMA model training.
+   * @param timeSeriesIdColumns timeSeriesIdColumns or {@code null} for none
+   */
+  public TrainingOptions setTimeSeriesIdColumns(java.util.List<java.lang.String> timeSeriesIdColumns) {
+    this.timeSeriesIdColumns = timeSeriesIdColumns;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
-   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * The amount of time it takes the backend service to fully respond to a request. Measured from
    * when the destination service starts to send the request to the backend until when the
    * destination service receives the complete response from the backend.
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private String time;
 
   /**
-   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * The amount of time it takes the backend service to fully respond to a request. Measured from
    * when the destination service starts to send the request to the backend until when the
    * destination service receives the complete response from the backend.
    * @return value or {@code null} for none
@@ -80,7 +80,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * The amount of time it takes the backend service to fully respond to a request. Measured from
    * when the destination service starts to send the request to the backend until when the
    * destination service receives the complete response from the backend.
    * @param backendLatency backendLatency or {@code null} for none

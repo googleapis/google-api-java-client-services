@@ -70,7 +70,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private java.lang.String method;
 
   /**
-   * The HTTP URL path.
+   * The HTTP URL path, excluding the query parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +216,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL path.
+   * The HTTP URL path, excluding the query parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -224,7 +224,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL path.
+   * The HTTP URL path, excluding the query parameters.
    * @param path path or {@code null} for none
    */
   public Request setPath(java.lang.String path) {

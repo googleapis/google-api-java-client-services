@@ -146,6 +146,17 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private SecurityContext securityContext;
 
   /**
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup
+   * probe of application within the container. All other probes are disabled if a startup probe is
+   * provided, until it succeeds. Container will not be added to service endpoints if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Probe startupProbe;
+
+  /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path at which
    * the file to which the container's termination message will be written is mounted into the
    * container's filesystem. Message written is intended to be brief final status, such as an
@@ -447,6 +458,31 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   public Container setSecurityContext(SecurityContext securityContext) {
     this.securityContext = securityContext;
+    return this;
+  }
+
+  /**
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup
+   * probe of application within the container. All other probes are disabled if a startup probe is
+   * provided, until it succeeds. Container will not be added to service endpoints if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
+   * @return value or {@code null} for none
+   */
+  public Probe getStartupProbe() {
+    return startupProbe;
+  }
+
+  /**
+   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: not supported Startup
+   * probe of application within the container. All other probes are disabled if a startup probe is
+   * provided, until it succeeds. Container will not be added to service endpoints if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
+   * @param startupProbe startupProbe or {@code null} for none
+   */
+  public Container setStartupProbe(Probe startupProbe) {
+    this.startupProbe = startupProbe;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Collection of Compute Engine network tags that can be applied to a node's underyling VM instance.
+ * Collection of Compute Engine network tags that can be applied to a node's underlying VM instance.
  * (See `tags` field in [`NodeConfig`](/kubernetes-engine/docs/reference/rest/v1/NodeConfig)).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

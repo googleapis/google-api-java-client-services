@@ -179,6 +179,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String expireTime;
 
   /**
+   * Output only. Unique id for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * The initial Kubernetes version for this cluster. Valid versions are those found in
    * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
    * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
@@ -834,6 +841,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setExpireTime(java.lang.String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. Unique id for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Output only. Unique id for the cluster.
+   * @param id id or {@code null} for none
+   */
+  public Cluster setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

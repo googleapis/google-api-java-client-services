@@ -187,6 +187,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String expireTime;
 
   /**
+   * Output only. Unique id for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * The initial Kubernetes version for this cluster. Valid versions are those found in
    * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
    * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
@@ -514,6 +521,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VerticalPodAutoscaling verticalPodAutoscaling;
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadCertificates workloadCertificates;
 
   /**
    * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
@@ -900,6 +914,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setExpireTime(java.lang.String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. Unique id for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Output only. Unique id for the cluster.
+   * @param id id or {@code null} for none
+   */
+  public Cluster setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
@@ -1672,6 +1703,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
     this.verticalPodAutoscaling = verticalPodAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @return value or {@code null} for none
+   */
+  public WorkloadCertificates getWorkloadCertificates() {
+    return workloadCertificates;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @param workloadCertificates workloadCertificates or {@code null} for none
+   */
+  public Cluster setWorkloadCertificates(WorkloadCertificates workloadCertificates) {
+    this.workloadCertificates = workloadCertificates;
     return this;
   }
 

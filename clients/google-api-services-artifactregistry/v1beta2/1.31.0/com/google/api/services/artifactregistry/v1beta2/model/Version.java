@@ -46,6 +46,15 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Output only. Repository-specific Metadata stored against this version. The fields returned are
+   * defined by the underlying repository-specific resource. Currently, the only resource in use is
+   * DockerImage
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
+
+  /**
    * The name of the version, for example: "projects/p1/locations/us-
    * central1/repositories/repo1/packages/pkg1/versions/art1".
    * The value may be {@code null}.
@@ -104,6 +113,27 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. Repository-specific Metadata stored against this version. The fields returned are
+   * defined by the underlying repository-specific resource. Currently, the only resource in use is
+   * DockerImage
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Repository-specific Metadata stored against this version. The fields returned are
+   * defined by the underlying repository-specific resource. Currently, the only resource in use is
+   * DockerImage
+   * @param metadata metadata or {@code null} for none
+   */
+  public Version setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

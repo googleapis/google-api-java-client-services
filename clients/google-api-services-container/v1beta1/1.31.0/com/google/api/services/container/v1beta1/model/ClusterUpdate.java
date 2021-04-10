@@ -256,6 +256,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private VerticalPodAutoscaling desiredVerticalPodAutoscaling;
 
   /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadCertificates desiredWorkloadCertificates;
+
+  /**
    * Configuration for Workload Identity.
    * The value may be {@code null}.
    */
@@ -791,6 +798,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredVerticalPodAutoscaling(VerticalPodAutoscaling desiredVerticalPodAutoscaling) {
     this.desiredVerticalPodAutoscaling = desiredVerticalPodAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @return value or {@code null} for none
+   */
+  public WorkloadCertificates getDesiredWorkloadCertificates() {
+    return desiredWorkloadCertificates;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @param desiredWorkloadCertificates desiredWorkloadCertificates or {@code null} for none
+   */
+  public ClusterUpdate setDesiredWorkloadCertificates(WorkloadCertificates desiredWorkloadCertificates) {
+    this.desiredWorkloadCertificates = desiredWorkloadCertificates;
     return this;
   }
 

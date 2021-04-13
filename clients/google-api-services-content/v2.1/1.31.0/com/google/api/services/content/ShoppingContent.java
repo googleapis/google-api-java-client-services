@@ -4213,7 +4213,157 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Buyongoogleprograms {
 
     /**
-     * Retrieves a status of BoG program for your Merchant Center account.
+     * Reactivates the BoG program in your Merchant Center account. Moves the program to the active
+     * state when allowed, e.g. when paused. Important: This method is only whitelisted for selected
+     * merchants.
+     *
+     * Create a request for the method "buyongoogleprograms.activate".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+     * @param content the {@link com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest}
+     * @return the request
+     */
+    public Activate activate(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest content) throws java.io.IOException {
+      Activate result = new Activate(merchantId, regionCode, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Activate extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/activate";
+
+      /**
+       * Reactivates the BoG program in your Merchant Center account. Moves the program to the active
+       * state when allowed, e.g. when paused. Important: This method is only whitelisted for selected
+       * merchants.
+       *
+       * Create a request for the method "buyongoogleprograms.activate".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Activate#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+       * @param content the {@link com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest}
+       * @since 1.13
+       */
+      protected Activate(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public Activate set$Xgafv(java.lang.String $Xgafv) {
+        return (Activate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Activate setAccessToken(java.lang.String accessToken) {
+        return (Activate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Activate setAlt(java.lang.String alt) {
+        return (Activate) super.setAlt(alt);
+      }
+
+      @Override
+      public Activate setCallback(java.lang.String callback) {
+        return (Activate) super.setCallback(callback);
+      }
+
+      @Override
+      public Activate setFields(java.lang.String fields) {
+        return (Activate) super.setFields(fields);
+      }
+
+      @Override
+      public Activate setKey(java.lang.String key) {
+        return (Activate) super.setKey(key);
+      }
+
+      @Override
+      public Activate setOauthToken(java.lang.String oauthToken) {
+        return (Activate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Activate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Activate setQuotaUser(java.lang.String quotaUser) {
+        return (Activate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Activate setUploadType(java.lang.String uploadType) {
+        return (Activate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Activate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Activate setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Activate setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Activate set(String parameterName, Object value) {
+        return (Activate) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a status of the BoG program for your Merchant Center account.
      *
      * Create a request for the method "buyongoogleprograms.get".
      *
@@ -4236,7 +4386,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}";
 
       /**
-       * Retrieves a status of BoG program for your Merchant Center account.
+       * Retrieves a status of the BoG program for your Merchant Center account.
        *
        * Create a request for the method "buyongoogleprograms.get".
        *
@@ -4366,11 +4516,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Onboards BoG in your Merchant Center account. By using this method, you agree to the [Terms of
-     * Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest). Calling this
-     * method is only possible if the authenticated account is the same as the merchant id in the
-     * request. Calling this method multiple times will only accept Terms of Service if the latest
-     * version is not currently signed.
+     * Onboards the BoG program in your Merchant Center account. By using this method, you agree to the
+     * [Terms of Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest).
+     * Calling this method is only possible if the authenticated account is the same as the merchant id
+     * in the request. Calling this method multiple times will only accept Terms of Service if the
+     * latest version is not currently signed.
      *
      * Create a request for the method "buyongoogleprograms.onboard".
      *
@@ -4394,11 +4544,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/onboard";
 
       /**
-       * Onboards BoG in your Merchant Center account. By using this method, you agree to the [Terms of
-       * Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest). Calling this
-       * method is only possible if the authenticated account is the same as the merchant id in the
-       * request. Calling this method multiple times will only accept Terms of Service if the latest
-       * version is not currently signed.
+       * Onboards the BoG program in your Merchant Center account. By using this method, you agree to
+       * the [Terms of Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest).
+       * Calling this method is only possible if the authenticated account is the same as the merchant
+       * id in the request. Calling this method multiple times will only accept Terms of Service if the
+       * latest version is not currently signed.
        *
        * Create a request for the method "buyongoogleprograms.onboard".
        *
@@ -4517,6 +4667,303 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Onboard set(String parameterName, Object value) {
         return (Onboard) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Pauses the BoG program in your Merchant Center account. Important: This method is only
+     * whitelisted for selected merchants.
+     *
+     * Create a request for the method "buyongoogleprograms.pause".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+     * @param content the {@link com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest}
+     * @return the request
+     */
+    public Pause pause(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest content) throws java.io.IOException {
+      Pause result = new Pause(merchantId, regionCode, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Pause extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/pause";
+
+      /**
+       * Pauses the BoG program in your Merchant Center account. Important: This method is only
+       * whitelisted for selected merchants.
+       *
+       * Create a request for the method "buyongoogleprograms.pause".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
+       * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+       * @param content the {@link com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest}
+       * @since 1.13
+       */
+      protected Pause(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public Pause set$Xgafv(java.lang.String $Xgafv) {
+        return (Pause) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Pause setAccessToken(java.lang.String accessToken) {
+        return (Pause) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Pause setAlt(java.lang.String alt) {
+        return (Pause) super.setAlt(alt);
+      }
+
+      @Override
+      public Pause setCallback(java.lang.String callback) {
+        return (Pause) super.setCallback(callback);
+      }
+
+      @Override
+      public Pause setFields(java.lang.String fields) {
+        return (Pause) super.setFields(fields);
+      }
+
+      @Override
+      public Pause setKey(java.lang.String key) {
+        return (Pause) super.setKey(key);
+      }
+
+      @Override
+      public Pause setOauthToken(java.lang.String oauthToken) {
+        return (Pause) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Pause) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Pause setQuotaUser(java.lang.String quotaUser) {
+        return (Pause) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Pause setUploadType(java.lang.String uploadType) {
+        return (Pause) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Pause) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Pause setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Pause setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Pause set(String parameterName, Object value) {
+        return (Pause) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Requests review and then activates the BoG program in your Merchant Center account for the first
+     * time. Moves the program to the REVIEW_PENDING state. Important: This method is only whitelisted
+     * for selected merchants.
+     *
+     * Create a request for the method "buyongoogleprograms.requestreview".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+     * @param content the {@link com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest}
+     * @return the request
+     */
+    public Requestreview requestreview(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest content) throws java.io.IOException {
+      Requestreview result = new Requestreview(merchantId, regionCode, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Requestreview extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}/requestreview";
+
+      /**
+       * Requests review and then activates the BoG program in your Merchant Center account for the
+       * first time. Moves the program to the REVIEW_PENDING state. Important: This method is only
+       * whitelisted for selected merchants.
+       *
+       * Create a request for the method "buyongoogleprograms.requestreview".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation. <p>
+       * {@link Requestreview#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+       * @param content the {@link com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest}
+       * @since 1.13
+       */
+      protected Requestreview(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public Requestreview set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestreview) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestreview setAccessToken(java.lang.String accessToken) {
+        return (Requestreview) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Requestreview setAlt(java.lang.String alt) {
+        return (Requestreview) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestreview setCallback(java.lang.String callback) {
+        return (Requestreview) super.setCallback(callback);
+      }
+
+      @Override
+      public Requestreview setFields(java.lang.String fields) {
+        return (Requestreview) super.setFields(fields);
+      }
+
+      @Override
+      public Requestreview setKey(java.lang.String key) {
+        return (Requestreview) super.setKey(key);
+      }
+
+      @Override
+      public Requestreview setOauthToken(java.lang.String oauthToken) {
+        return (Requestreview) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Requestreview setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Requestreview) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Requestreview setQuotaUser(java.lang.String quotaUser) {
+        return (Requestreview) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Requestreview setUploadType(java.lang.String uploadType) {
+        return (Requestreview) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestreview setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestreview) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Requestreview setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Requestreview setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Requestreview set(String parameterName, Object value) {
+        return (Requestreview) super.set(parameterName, value);
       }
     }
 

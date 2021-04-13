@@ -21,7 +21,7 @@ package com.google.api.services.content.model;
  * dimensions, e.g., offer id, reflect the state of a product at the time of the corresponding
  * event, e.g., impression or order. Segment fields cannot be selected in queries without also
  * selecting at least one metric field. Values are only set for dimensions requested explicitly in
- * the request's search query. Next id: 22
+ * the request's search query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

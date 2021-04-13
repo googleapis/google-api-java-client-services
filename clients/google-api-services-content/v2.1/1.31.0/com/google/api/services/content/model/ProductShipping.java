@@ -52,6 +52,45 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
   private java.lang.Long locationId;
 
   /**
+   * Maximum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
+   * speeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxHandlingTime;
+
+  /**
+   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. Both
+   * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxTransitTime;
+
+  /**
+   * Minimum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * not required if maxHandlingTime is present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minHandlingTime;
+
+  /**
+   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
+   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minTransitTime;
+
+  /**
    * The postal code range that the shipping rate applies to, represented by a postal code, a postal
    * code prefix followed by a * wildcard, a range between two postal codes or two postal code
    * prefixes of equal length.
@@ -129,6 +168,96 @@ public final class ProductShipping extends com.google.api.client.json.GenericJso
    */
   public ProductShipping setLocationId(java.lang.Long locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Maximum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
+   * speeds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxHandlingTime() {
+    return maxHandlingTime;
+  }
+
+  /**
+   * Maximum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
+   * speeds.
+   * @param maxHandlingTime maxHandlingTime or {@code null} for none
+   */
+  public ProductShipping setMaxHandlingTime(java.lang.Long maxHandlingTime) {
+    this.maxHandlingTime = maxHandlingTime;
+    return this;
+  }
+
+  /**
+   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. Both
+   * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxTransitTime() {
+    return maxTransitTime;
+  }
+
+  /**
+   * Maximum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. Both
+   * maxHandlingTime and maxTransitTime are required if providing shipping speeds.
+   * @param maxTransitTime maxTransitTime or {@code null} for none
+   */
+  public ProductShipping setMaxTransitTime(java.lang.Long maxTransitTime) {
+    this.maxTransitTime = maxTransitTime;
+    return this;
+  }
+
+  /**
+   * Minimum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * not required if maxHandlingTime is present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinHandlingTime() {
+    return minHandlingTime;
+  }
+
+  /**
+   * Minimum handling time (inclusive) between when the order is received and shipped in business
+   * days. 0 means that the order is shipped on the same day as it is received if it happens before
+   * the cut-off time. minHandlingTime can only be present together with maxHandlingTime; but it is
+   * not required if maxHandlingTime is present.
+   * @param minHandlingTime minHandlingTime or {@code null} for none
+   */
+  public ProductShipping setMinHandlingTime(java.lang.Long minHandlingTime) {
+    this.minHandlingTime = minHandlingTime;
+    return this;
+  }
+
+  /**
+   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
+   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinTransitTime() {
+    return minTransitTime;
+  }
+
+  /**
+   * Minimum transit time (inclusive) between when the order has shipped and when it is delivered in
+   * business days. 0 means that the order is delivered on the same day as it ships. minTransitTime
+   * can only be present together with maxTransitTime; but it is not required if maxTransitTime is
+   * present.
+   * @param minTransitTime minTransitTime or {@code null} for none
+   */
+  public ProductShipping setMinTransitTime(java.lang.Long minTransitTime) {
+    this.minTransitTime = minTransitTime;
     return this;
   }
 

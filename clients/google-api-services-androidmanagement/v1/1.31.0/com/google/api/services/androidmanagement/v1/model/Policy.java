@@ -377,7 +377,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * the device policy. After applying policy, the temporary network will be forgotten and the
    * device will continue booting. This prevents being unable to connect to a network if there is no
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
-   * user is otherwise unable to reach device settings.
+   * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
+   * override this setting under specific circumstances. Please see wifiConfigDisabled for further
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -689,7 +691,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vpnConfigDisabled;
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.
+   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
+   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
+   * to refresh the device policy (see networkEscapeHatchEnabled).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1481,7 +1485,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * the device policy. After applying policy, the temporary network will be forgotten and the
    * device will continue booting. This prevents being unable to connect to a network if there is no
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
-   * user is otherwise unable to reach device settings.
+   * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
+   * override this setting under specific circumstances. Please see wifiConfigDisabled for further
+   * details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNetworkEscapeHatchEnabled() {
@@ -1494,7 +1500,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * the device policy. After applying policy, the temporary network will be forgotten and the
    * device will continue booting. This prevents being unable to connect to a network if there is no
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
-   * user is otherwise unable to reach device settings.
+   * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
+   * override this setting under specific circumstances. Please see wifiConfigDisabled for further
+   * details.
    * @param networkEscapeHatchEnabled networkEscapeHatchEnabled or {@code null} for none
    */
   public Policy setNetworkEscapeHatchEnabled(java.lang.Boolean networkEscapeHatchEnabled) {
@@ -2176,7 +2184,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.
+   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
+   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
+   * to refresh the device policy (see networkEscapeHatchEnabled).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigDisabled() {
@@ -2184,7 +2194,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled.
+   * Whether configuring Wi-Fi access points is disabled.Note: If a network connection can't be made
+   * at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in order
+   * to refresh the device policy (see networkEscapeHatchEnabled).
    * @param wifiConfigDisabled wifiConfigDisabled or {@code null} for none
    */
   public Policy setWifiConfigDisabled(java.lang.Boolean wifiConfigDisabled) {

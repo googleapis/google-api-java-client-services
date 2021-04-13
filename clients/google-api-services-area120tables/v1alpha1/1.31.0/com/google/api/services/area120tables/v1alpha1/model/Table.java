@@ -17,7 +17,7 @@
 package com.google.api.services.area120tables.v1alpha1.model;
 
 /**
- * A single table.
+ * A single table. NextId: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Area120 Tables API. For a detailed explanation see:
@@ -62,6 +62,19 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Saved views for this table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SavedView> savedViews;
+
+  static {
+    // hack to force ProGuard to consider SavedView used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SavedView.class);
+  }
 
   /**
    * Time when the table was last updated excluding updates to individual rows
@@ -135,6 +148,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Saved views for this table.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SavedView> getSavedViews() {
+    return savedViews;
+  }
+
+  /**
+   * Saved views for this table.
+   * @param savedViews savedViews or {@code null} for none
+   */
+  public Table setSavedViews(java.util.List<SavedView> savedViews) {
+    this.savedViews = savedViews;
     return this;
   }
 

@@ -576,7 +576,7 @@
    }
   }
  },
- "revision": "20210319",
+ "revision": "20210410",
  "rootUrl": "https://area120tables.googleapis.com/",
  "schemas": {
   "BatchCreateRowsRequest": {
@@ -839,8 +839,23 @@
    },
    "type": "object"
   },
+  "SavedView": {
+   "description": "A saved view of a table. NextId: 3",
+   "id": "SavedView",
+   "properties": {
+    "id": {
+     "description": "Internal id associated with the saved view.",
+     "type": "string"
+    },
+    "name": {
+     "description": "Display name of the saved view.",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
   "Table": {
-   "description": "A single table.",
+   "description": "A single table. NextId: 7",
    "id": "Table",
    "properties": {
     "columns": {
@@ -862,6 +877,13 @@
     "name": {
      "description": "The resource name of the table. Table names have the form `tables/{table}`.",
      "type": "string"
+    },
+    "savedViews": {
+     "description": "Saved views for this table.",
+     "items": {
+      "$ref": "SavedView"
+     },
+     "type": "array"
     },
     "updateTime": {
      "description": "Time when the table was last updated excluding updates to individual rows",

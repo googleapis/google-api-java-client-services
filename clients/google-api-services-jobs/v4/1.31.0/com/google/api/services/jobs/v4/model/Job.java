@@ -40,7 +40,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * on.) as multiple jobs with the same company, language_code and requisition_id are not allowed.
    * If the original requisition_id must be preserved, a custom field should be used for storage. It
    * is also suggested to group the locations that close to each other in the same job for better
-   * search experience. The maximum number of allowed characters is 500.
+   * search experience. Jobs with multiple addresses must have their addresses with the same
+   * LocationType to allow location filtering to work properly. (For example, a Job with addresses
+   * "1600 Amphitheatre Parkway, Mountain View, CA, USA" and "London, UK" may not have location
+   * filters applied correctly at search time since the first is a LocationType.STREET_ADDRESS and
+   * the second is a LocationType.LOCALITY.) If a job needs to have multiple addresses, it is
+   * suggested to split it into multiple jobs with same LocationTypes. The maximum number of allowed
+   * characters is 500.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,7 +338,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * on.) as multiple jobs with the same company, language_code and requisition_id are not allowed.
    * If the original requisition_id must be preserved, a custom field should be used for storage. It
    * is also suggested to group the locations that close to each other in the same job for better
-   * search experience. The maximum number of allowed characters is 500.
+   * search experience. Jobs with multiple addresses must have their addresses with the same
+   * LocationType to allow location filtering to work properly. (For example, a Job with addresses
+   * "1600 Amphitheatre Parkway, Mountain View, CA, USA" and "London, UK" may not have location
+   * filters applied correctly at search time since the first is a LocationType.STREET_ADDRESS and
+   * the second is a LocationType.LOCALITY.) If a job needs to have multiple addresses, it is
+   * suggested to split it into multiple jobs with same LocationTypes. The maximum number of allowed
+   * characters is 500.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddresses() {
@@ -348,7 +360,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * on.) as multiple jobs with the same company, language_code and requisition_id are not allowed.
    * If the original requisition_id must be preserved, a custom field should be used for storage. It
    * is also suggested to group the locations that close to each other in the same job for better
-   * search experience. The maximum number of allowed characters is 500.
+   * search experience. Jobs with multiple addresses must have their addresses with the same
+   * LocationType to allow location filtering to work properly. (For example, a Job with addresses
+   * "1600 Amphitheatre Parkway, Mountain View, CA, USA" and "London, UK" may not have location
+   * filters applied correctly at search time since the first is a LocationType.STREET_ADDRESS and
+   * the second is a LocationType.LOCALITY.) If a job needs to have multiple addresses, it is
+   * suggested to split it into multiple jobs with same LocationTypes. The maximum number of allowed
+   * characters is 500.
    * @param addresses addresses or {@code null} for none
    */
   public Job setAddresses(java.util.List<java.lang.String> addresses) {

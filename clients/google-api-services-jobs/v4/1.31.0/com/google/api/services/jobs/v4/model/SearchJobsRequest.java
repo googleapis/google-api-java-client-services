@@ -118,7 +118,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * by. Example expressions: * `count(admin1)` * `count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)])` * `count(string_custom_attribute["some-string-
    * custom-attribute"])` * `count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])`
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -369,7 +369,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * by. Example expressions: * `count(admin1)` * `count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)])` * `count(string_custom_attribute["some-string-
    * custom-attribute"])` * `count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])`
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])`
    * @return value or {@code null} for none
    */
   public java.util.List<HistogramQuery> getHistogramQueries() {
@@ -420,7 +420,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * by. Example expressions: * `count(admin1)` * `count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)])` * `count(string_custom_attribute["some-string-
    * custom-attribute"])` * `count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])`
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])`
    * @param histogramQueries histogramQueries or {@code null} for none
    */
   public SearchJobsRequest setHistogramQueries(java.util.List<HistogramQuery> histogramQueries) {

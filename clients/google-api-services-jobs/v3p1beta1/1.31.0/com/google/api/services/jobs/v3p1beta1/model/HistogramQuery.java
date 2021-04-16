@@ -75,7 +75,7 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * by. Example expressions: * count(admin1) * count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)]) * count(string_custom_attribute["some-string-
    * custom-attribute"]) * count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * by. Example expressions: * count(admin1) * count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)]) * count(string_custom_attribute["some-string-
    * custom-attribute"]) * count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])
    * @return value or {@code null} for none
    */
   public java.lang.String getHistogramQuery() {
@@ -178,7 +178,7 @@ public final class HistogramQuery extends com.google.api.client.json.GenericJson
    * by. Example expressions: * count(admin1) * count(base_compensation, [bucket(1000, 10000),
    * bucket(10000, 100000), bucket(100000, MAX)]) * count(string_custom_attribute["some-string-
    * custom-attribute"]) * count(numeric_custom_attribute["some-numeric-custom-attribute"],
-   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])
+   * [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative")])
    * @param histogramQuery histogramQuery or {@code null} for none
    */
   public HistogramQuery setHistogramQuery(java.lang.String histogramQuery) {

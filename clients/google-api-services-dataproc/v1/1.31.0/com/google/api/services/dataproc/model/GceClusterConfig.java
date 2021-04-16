@@ -31,6 +31,14 @@ package com.google.api.services.dataproc.model;
 public final class GceClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Confidential Instance Config for clusters using Confidential VMs
+   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * Optional. If true, all instances in the cluster will only have internal IP addresses. By
    * default, clusters are not restricted to internal IP addresses, and will have ephemeral external
    * IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled
@@ -149,6 +157,25 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String zoneUri;
+
+  /**
+   * Optional. Confidential Instance Config for clusters using Confidential VMs
+   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * Optional. Confidential Instance Config for clusters using Confidential VMs
+   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public GceClusterConfig setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
+    return this;
+  }
 
   /**
    * Optional. If true, all instances in the cluster will only have internal IP addresses. By

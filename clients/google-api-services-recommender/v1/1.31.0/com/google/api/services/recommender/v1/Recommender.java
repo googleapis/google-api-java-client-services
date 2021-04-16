@@ -368,7 +368,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -402,7 +402,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -488,7 +488,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -499,7 +499,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
-           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.)
+           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public java.lang.String getParent() {
               return parent;
@@ -513,7 +513,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1845,7 +1845,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1879,7 +1879,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1965,7 +1965,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -1976,7 +1976,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
-           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.)
+           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1990,7 +1990,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3322,7 +3322,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3356,7 +3356,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3442,7 +3442,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -3453,7 +3453,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
-           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.)
+           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3467,7 +3467,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4799,7 +4799,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4833,7 +4833,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
-           *        https://cloud.google.com/recommender/docs/insights/insight-types.)
+           *        https://cloud.google.com/recommender/docs/insights/insight-types.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4919,7 +4919,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -4930,7 +4930,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
-           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.)
+           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public java.lang.String getParent() {
               return parent;
@@ -4944,7 +4944,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
-             * https://cloud.google.com/recommender/docs/insights/insight-types.)
+             * https://cloud.google.com/recommender/docs/insights/insight-types.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

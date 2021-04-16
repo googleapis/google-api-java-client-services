@@ -446,6 +446,432 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     }
 
     /**
+     * An accessor for creating requests from the AdUnits collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.AdUnits.List request = admob.adUnits().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AdUnits adUnits() {
+      return new AdUnits();
+    }
+
+    /**
+     * The "adUnits" collection of methods.
+     */
+    public class AdUnits {
+
+      /**
+       * List the ad units under the specified AdMob account.
+       *
+       * Create a request for the method "adUnits.list".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the account to list ad units for. Example: accounts/pub-9876543210987654
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdMobRequest<com.google.api.services.admob.v1.model.ListAdUnitsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/adUnits";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List the ad units under the specified AdMob account.
+         *
+         * Create a request for the method "adUnits.list".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the account to list ad units for. Example: accounts/pub-9876543210987654
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1.model.ListAdUnitsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the account to list ad units for. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the account to list ad units for. Example: accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the account to list ad units for. Example:
+         * accounts/pub-9876543210987654
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
+         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will be
+       returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
+         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListAdUnitsResponse`; indicates that this is a
+         * continuation of a prior `ListAdUnits` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListAdUnitsResponse`; indicates that this is a continuation of a
+       prior `ListAdUnits` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListAdUnitsResponse`; indicates that this is a
+         * continuation of a prior `ListAdUnits` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Apps collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.Apps.List request = admob.apps().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Apps apps() {
+      return new Apps();
+    }
+
+    /**
+     * The "apps" collection of methods.
+     */
+    public class Apps {
+
+      /**
+       * List the apps under the specified AdMob account.
+       *
+       * Create a request for the method "apps.list".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the account to list apps for. Example: accounts/pub-9876543210987654
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdMobRequest<com.google.api.services.admob.v1.model.ListAppsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/apps";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List the apps under the specified AdMob account.
+         *
+         * Create a request for the method "apps.list".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the account to list apps for. Example: accounts/pub-9876543210987654
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1.model.ListAppsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the account to list apps for. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the account to list apps for. Example: accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the account to list apps for. Example:
+         * accounts/pub-9876543210987654
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be
+         * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be returned. The
+       maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of apps to return. If unspecified or 0, at most 1000 apps will be
+         * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListAppsResponse`; indicates that this is a continuation
+         * of a prior `ListApps` call, and that the system should return the next page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListAppsResponse`; indicates that this is a continuation of a prior
+       `ListApps` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListAppsResponse`; indicates that this is a continuation
+         * of a prior `ListApps` call, and that the system should return the next page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the MediationReport collection.
      *
      * <p>The typical use is:</p>

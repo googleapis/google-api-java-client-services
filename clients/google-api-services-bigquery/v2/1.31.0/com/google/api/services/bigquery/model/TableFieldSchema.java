@@ -71,7 +71,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_), and must start with a letter or underscore. The maximum length is 128
+   * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * The value may be {@code null}.
    */
@@ -217,7 +217,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_), and must start with a letter or underscore. The maximum length is 128
+   * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * @return value or {@code null} for none
    */
@@ -227,7 +227,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or
-   * underscores (_), and must start with a letter or underscore. The maximum length is 128
+   * underscores (_), and must start with a letter or underscore. The maximum length is 300
    * characters.
    * @param name name or {@code null} for none
    */

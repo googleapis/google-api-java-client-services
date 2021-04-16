@@ -38,6 +38,14 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
   private java.lang.String buildId;
 
   /**
+   * The Cloud Build Name of the function deployment. This field is only populated for Create and
+   * Update operations. projects//locations//builds/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildName;
+
+  /**
    * The original request that started the operation.
    * The value may be {@code null}.
    */
@@ -98,6 +106,25 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
    */
   public OperationMetadataV1 setBuildId(java.lang.String buildId) {
     this.buildId = buildId;
+    return this;
+  }
+
+  /**
+   * The Cloud Build Name of the function deployment. This field is only populated for Create and
+   * Update operations. projects//locations//builds/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildName() {
+    return buildName;
+  }
+
+  /**
+   * The Cloud Build Name of the function deployment. This field is only populated for Create and
+   * Update operations. projects//locations//builds/.
+   * @param buildName buildName or {@code null} for none
+   */
+  public OperationMetadataV1 setBuildName(java.lang.String buildName) {
+    this.buildName = buildName;
     return this;
   }
 

@@ -105,6 +105,13 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   private java.lang.String source;
 
   /**
+   * The vendor of the product. e.g. "google"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vendor;
+
+  /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
    * manifests. Examples include distro or storage location for vulnerable jar. This field can be
    * used as a filter in list requests.
@@ -277,6 +284,23 @@ public final class Detail extends com.google.api.client.json.GenericJson {
    */
   public Detail setSource(java.lang.String source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * The vendor of the product. e.g. "google"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVendor() {
+    return vendor;
+  }
+
+  /**
+   * The vendor of the product. e.g. "google"
+   * @param vendor vendor or {@code null} for none
+   */
+  public Detail setVendor(java.lang.String vendor) {
+    this.vendor = vendor;
     return this;
   }
 

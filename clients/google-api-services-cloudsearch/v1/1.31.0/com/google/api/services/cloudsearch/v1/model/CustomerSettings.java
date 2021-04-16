@@ -30,12 +30,39 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class CustomerSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Audit Logging settings for the customer. If update_mask is empty then this field will be
+   * updated based on UpdateCustomerSettings request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuditLoggingSettings auditLoggingSettings;
+
+  /**
    * VPC SC settings for the customer. If update_mask is empty then this field will be updated based
    * on UpdateCustomerSettings request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VPCSettings vpcSettings;
+
+  /**
+   * Audit Logging settings for the customer. If update_mask is empty then this field will be
+   * updated based on UpdateCustomerSettings request.
+   * @return value or {@code null} for none
+   */
+  public AuditLoggingSettings getAuditLoggingSettings() {
+    return auditLoggingSettings;
+  }
+
+  /**
+   * Audit Logging settings for the customer. If update_mask is empty then this field will be
+   * updated based on UpdateCustomerSettings request.
+   * @param auditLoggingSettings auditLoggingSettings or {@code null} for none
+   */
+  public CustomerSettings setAuditLoggingSettings(AuditLoggingSettings auditLoggingSettings) {
+    this.auditLoggingSettings = auditLoggingSettings;
+    return this;
+  }
 
   /**
    * VPC SC settings for the customer. If update_mask is empty then this field will be updated based

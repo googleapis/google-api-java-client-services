@@ -71,6 +71,14 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
+   * Indicates whether audit logging is on/off for requests made for the search application in query
+   * APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAuditLog;
+
+  /**
    * Name of the Search Application. Format: searchapplications/{application_id}.
    * The value may be {@code null}.
    */
@@ -166,6 +174,25 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
    */
   public SearchApplication setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Indicates whether audit logging is on/off for requests made for the search application in query
+   * APIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAuditLog() {
+    return enableAuditLog;
+  }
+
+  /**
+   * Indicates whether audit logging is on/off for requests made for the search application in query
+   * APIs.
+   * @param enableAuditLog enableAuditLog or {@code null} for none
+   */
+  public SearchApplication setEnableAuditLog(java.lang.Boolean enableAuditLog) {
+    this.enableAuditLog = enableAuditLog;
     return this;
   }
 

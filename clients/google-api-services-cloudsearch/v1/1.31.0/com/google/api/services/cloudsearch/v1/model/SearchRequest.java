@@ -30,6 +30,20 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SearchRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Context attributes for the request which will be used to adjust ranking of search results. The
+   * maximum number of elements is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContextAttribute> contextAttributes;
+
+  static {
+    // hack to force ProGuard to consider ContextAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContextAttribute.class);
+  }
+
+  /**
    * The sources to use for querying. If not specified, all data sources from the current search
    * application are used.
    * The value may be {@code null}.
@@ -98,6 +112,25 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Integer start;
+
+  /**
+   * Context attributes for the request which will be used to adjust ranking of search results. The
+   * maximum number of elements is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContextAttribute> getContextAttributes() {
+    return contextAttributes;
+  }
+
+  /**
+   * Context attributes for the request which will be used to adjust ranking of search results. The
+   * maximum number of elements is 10.
+   * @param contextAttributes contextAttributes or {@code null} for none
+   */
+  public SearchRequest setContextAttributes(java.util.List<ContextAttribute> contextAttributes) {
+    this.contextAttributes = contextAttributes;
+    return this;
+  }
 
   /**
    * The sources to use for querying. If not specified, all data sources from the current search

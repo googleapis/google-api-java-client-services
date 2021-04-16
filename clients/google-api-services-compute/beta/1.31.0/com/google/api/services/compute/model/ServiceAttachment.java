@@ -34,6 +34,14 @@ package com.google.api.services.compute.model;
 public final class ServiceAttachment extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] An array of connections for all the consumers connected to this service
+   * attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceAttachmentConnectedEndpoint> connectedEndpoints;
+
+  /**
    * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
    * ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer
    * forwarding rules.
@@ -115,6 +123,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String producerForwardingRule;
 
   /**
+   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Uint128 pscServiceAttachmentId;
+
+  /**
    * [Output Only] URL of the region where the service attachment resides. This field applies only
    * to the region resource. You must specify this field as part of the HTTP request URL. It is not
    * settable as a field in the request body.
@@ -136,6 +151,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String targetService;
+
+  /**
+   * [Output Only] An array of connections for all the consumers connected to this service
+   * attachment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceAttachmentConnectedEndpoint> getConnectedEndpoints() {
+    return connectedEndpoints;
+  }
+
+  /**
+   * [Output Only] An array of connections for all the consumers connected to this service
+   * attachment.
+   * @param connectedEndpoints connectedEndpoints or {@code null} for none
+   */
+  public ServiceAttachment setConnectedEndpoints(java.util.List<ServiceAttachmentConnectedEndpoint> connectedEndpoints) {
+    this.connectedEndpoints = connectedEndpoints;
+    return this;
+  }
 
   /**
    * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
@@ -326,6 +360,23 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setProducerForwardingRule(java.lang.String producerForwardingRule) {
     this.producerForwardingRule = producerForwardingRule;
+    return this;
+  }
+
+  /**
+   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * @return value or {@code null} for none
+   */
+  public Uint128 getPscServiceAttachmentId() {
+    return pscServiceAttachmentId;
+  }
+
+  /**
+   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * @param pscServiceAttachmentId pscServiceAttachmentId or {@code null} for none
+   */
+  public ServiceAttachment setPscServiceAttachmentId(Uint128 pscServiceAttachmentId) {
+    this.pscServiceAttachmentId = pscServiceAttachmentId;
     return this;
   }
 

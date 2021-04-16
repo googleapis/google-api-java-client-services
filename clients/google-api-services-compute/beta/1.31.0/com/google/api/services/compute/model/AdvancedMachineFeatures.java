@@ -40,6 +40,15 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
+   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
+   * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
+   * assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer threadsPerCore;
+
+  /**
    * Whether to enable nested virtualization or not (default is false).
    * @return value or {@code null} for none
    */
@@ -53,6 +62,27 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
     this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
+   * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
+   * assumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getThreadsPerCore() {
+    return threadsPerCore;
+  }
+
+  /**
+   * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
+   * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
+   * assumed.
+   * @param threadsPerCore threadsPerCore or {@code null} for none
+   */
+  public AdvancedMachineFeatures setThreadsPerCore(java.lang.Integer threadsPerCore) {
+    this.threadsPerCore = threadsPerCore;
     return this;
   }
 

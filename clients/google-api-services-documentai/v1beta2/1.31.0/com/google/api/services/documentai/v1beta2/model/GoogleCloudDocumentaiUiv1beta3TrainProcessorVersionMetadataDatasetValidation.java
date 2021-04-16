@@ -32,6 +32,13 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The total number of dataset errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer datasetErrorCount;
+
+  /**
    * Error information for the dataset as a whole. A maximum of 10 dataset errors will be returned.
    * A single dataset error is terminal for training.
    * The value may be {@code null}.
@@ -40,12 +47,36 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDa
   private java.util.List<GoogleRpcStatus> datasetErrors;
 
   /**
+   * The total number of document errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer documentErrorCount;
+
+  /**
    * Error information pertaining to specific documents. A maximum of 10 document errors will be
    * returned. Any document with errors will not be used throughout training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> documentErrors;
+
+  /**
+   * The total number of dataset errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDatasetErrorCount() {
+    return datasetErrorCount;
+  }
+
+  /**
+   * The total number of dataset errors.
+   * @param datasetErrorCount datasetErrorCount or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation setDatasetErrorCount(java.lang.Integer datasetErrorCount) {
+    this.datasetErrorCount = datasetErrorCount;
+    return this;
+  }
 
   /**
    * Error information for the dataset as a whole. A maximum of 10 dataset errors will be returned.
@@ -63,6 +94,23 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDa
    */
   public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation setDatasetErrors(java.util.List<GoogleRpcStatus> datasetErrors) {
     this.datasetErrors = datasetErrors;
+    return this;
+  }
+
+  /**
+   * The total number of document errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDocumentErrorCount() {
+    return documentErrorCount;
+  }
+
+  /**
+   * The total number of document errors.
+   * @param documentErrorCount documentErrorCount or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation setDocumentErrorCount(java.lang.Integer documentErrorCount) {
+    this.documentErrorCount = documentErrorCount;
     return this;
   }
 

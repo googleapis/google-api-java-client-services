@@ -46,6 +46,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean causesDrop;
 
   /**
+   * Display info of a Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSQLInstanceInfo cloudSqlInstance;
+
+  /**
    * Display info of the final state "deliver" and reason.
    * The value may be {@code null}.
    */
@@ -95,6 +102,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ForwardingRuleInfo forwardingRule;
+
+  /**
+   * Display info of a Google Kubernetes Engine cluster master.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GKEMasterInfo gkeMaster;
 
   /**
    * Display info of a Compute Engine instance.
@@ -183,6 +197,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setCausesDrop(java.lang.Boolean causesDrop) {
     this.causesDrop = causesDrop;
+    return this;
+  }
+
+  /**
+   * Display info of a Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public CloudSQLInstanceInfo getCloudSqlInstance() {
+    return cloudSqlInstance;
+  }
+
+  /**
+   * Display info of a Cloud SQL instance.
+   * @param cloudSqlInstance cloudSqlInstance or {@code null} for none
+   */
+  public Step setCloudSqlInstance(CloudSQLInstanceInfo cloudSqlInstance) {
+    this.cloudSqlInstance = cloudSqlInstance;
     return this;
   }
 
@@ -306,6 +337,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setForwardingRule(ForwardingRuleInfo forwardingRule) {
     this.forwardingRule = forwardingRule;
+    return this;
+  }
+
+  /**
+   * Display info of a Google Kubernetes Engine cluster master.
+   * @return value or {@code null} for none
+   */
+  public GKEMasterInfo getGkeMaster() {
+    return gkeMaster;
+  }
+
+  /**
+   * Display info of a Google Kubernetes Engine cluster master.
+   * @param gkeMaster gkeMaster or {@code null} for none
+   */
+  public Step setGkeMaster(GKEMasterInfo gkeMaster) {
+    this.gkeMaster = gkeMaster;
     return this;
   }
 

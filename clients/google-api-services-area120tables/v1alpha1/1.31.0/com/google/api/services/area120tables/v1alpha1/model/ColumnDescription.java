@@ -65,6 +65,14 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
   private LookupDetails lookupDetails;
 
   /**
+   * Optional. Indicates whether or not multiple values are allowed for array types where such a
+   * restriction is possible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multipleValuesDisallowed;
+
+  /**
    * column name
    * The value may be {@code null}.
    */
@@ -158,6 +166,25 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
    */
   public ColumnDescription setLookupDetails(LookupDetails lookupDetails) {
     this.lookupDetails = lookupDetails;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether or not multiple values are allowed for array types where such a
+   * restriction is possible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultipleValuesDisallowed() {
+    return multipleValuesDisallowed;
+  }
+
+  /**
+   * Optional. Indicates whether or not multiple values are allowed for array types where such a
+   * restriction is possible.
+   * @param multipleValuesDisallowed multipleValuesDisallowed or {@code null} for none
+   */
+  public ColumnDescription setMultipleValuesDisallowed(java.lang.Boolean multipleValuesDisallowed) {
+    this.multipleValuesDisallowed = multipleValuesDisallowed;
     return this;
   }
 

@@ -391,6 +391,22 @@ public class Area120Tables extends com.google.api.client.googleapis.services.jso
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional. Sorting order for the list of tables on createTime/updateTime. */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. Sorting order for the list of tables on createTime/updateTime.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /** Optional. Sorting order for the list of tables on createTime/updateTime. */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
       /**
        * The maximum number of tables to return. The service may return fewer than this value. If
        * unspecified, at most 20 tables are returned. The maximum value is 100; values above 100 are
@@ -1447,6 +1463,22 @@ public class Area120Tables extends com.google.api.client.googleapis.services.jso
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** Optional. Sorting order for the list of rows on createTime/updateTime. */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Sorting order for the list of rows on createTime/updateTime.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /** Optional. Sorting order for the list of rows on createTime/updateTime. */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
           return this;
         }
 

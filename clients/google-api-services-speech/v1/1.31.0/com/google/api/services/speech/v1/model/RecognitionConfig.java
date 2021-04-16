@@ -125,8 +125,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
    * queries such as voice commands or voice search. phone_call Best for audio that originated from
    * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
-   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
+   * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * The value may be {@code null}.
@@ -384,8 +384,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
    * queries such as voice commands or voice search. phone_call Best for audio that originated from
    * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
-   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
+   * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @return value or {@code null} for none
@@ -400,8 +400,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
    * queries such as voice commands or voice search. phone_call Best for audio that originated from
    * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
-   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
-   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * originated from video or includes multiple speakers. Ideally the audio is recorded at a 16khz
+   * or greater sampling rate. This is a premium model that costs more than the standard rate.
    * default Best for audio that is not one of the specific audio models. For example, long-form
    * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @param model model or {@code null} for none

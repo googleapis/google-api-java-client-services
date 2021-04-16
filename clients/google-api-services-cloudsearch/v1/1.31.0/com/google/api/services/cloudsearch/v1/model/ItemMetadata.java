@@ -48,6 +48,20 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.String contentLanguage;
 
   /**
+   * A set of named attributes associated with the item. This can be used for influencing the
+   * ranking of the item based on the context in the request. The maximum number of elements is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContextAttribute> contextAttributes;
+
+  static {
+    // hack to force ProGuard to consider ContextAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContextAttribute.class);
+  }
+
+  /**
    * The time when the item was created in the source repository.
    * The value may be {@code null}.
    */
@@ -172,6 +186,25 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
    */
   public ItemMetadata setContentLanguage(java.lang.String contentLanguage) {
     this.contentLanguage = contentLanguage;
+    return this;
+  }
+
+  /**
+   * A set of named attributes associated with the item. This can be used for influencing the
+   * ranking of the item based on the context in the request. The maximum number of elements is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContextAttribute> getContextAttributes() {
+    return contextAttributes;
+  }
+
+  /**
+   * A set of named attributes associated with the item. This can be used for influencing the
+   * ranking of the item based on the context in the request. The maximum number of elements is 10.
+   * @param contextAttributes contextAttributes or {@code null} for none
+   */
+  public ItemMetadata setContextAttributes(java.util.List<ContextAttribute> contextAttributes) {
+    this.contextAttributes = contextAttributes;
     return this;
   }
 

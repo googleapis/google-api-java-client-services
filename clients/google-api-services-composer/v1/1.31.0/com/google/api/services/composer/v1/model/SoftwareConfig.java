@@ -88,7 +88,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
    * updated.
    * The value may be {@code null}.
    */
@@ -223,7 +223,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
    * updated.
    * @return value or {@code null} for none
    */
@@ -233,7 +233,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
    * updated.
    * @param pythonVersion pythonVersion or {@code null} for none
    */

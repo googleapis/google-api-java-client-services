@@ -38,6 +38,13 @@ public final class ServiceAttachmentConsumerForwardingRule extends com.google.ap
   private java.lang.String forwardingRule;
 
   /**
+   * The PSC connection id of the PSC Forwarding Rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger pscConnectionId;
+
+  /**
    * The status of the forwarding rule.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class ServiceAttachmentConsumerForwardingRule extends com.google.ap
    */
   public ServiceAttachmentConsumerForwardingRule setForwardingRule(java.lang.String forwardingRule) {
     this.forwardingRule = forwardingRule;
+    return this;
+  }
+
+  /**
+   * The PSC connection id of the PSC Forwarding Rule.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getPscConnectionId() {
+    return pscConnectionId;
+  }
+
+  /**
+   * The PSC connection id of the PSC Forwarding Rule.
+   * @param pscConnectionId pscConnectionId or {@code null} for none
+   */
+  public ServiceAttachmentConsumerForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
+    this.pscConnectionId = pscConnectionId;
     return this;
   }
 

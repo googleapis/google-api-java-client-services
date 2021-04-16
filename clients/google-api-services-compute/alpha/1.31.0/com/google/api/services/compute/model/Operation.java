@@ -123,13 +123,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * [Output Only] Service-specific metadata attached to this operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Any metadata;
-
-  /**
    * [Output Only] Name of the operation.
    * The value may be {@code null}.
    */
@@ -430,23 +423,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * [Output Only] Service-specific metadata attached to this operation.
-   * @return value or {@code null} for none
-   */
-  public Any getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * [Output Only] Service-specific metadata attached to this operation.
-   * @param metadata metadata or {@code null} for none
-   */
-  public Operation setMetadata(Any metadata) {
-    this.metadata = metadata;
     return this;
   }
 

@@ -117,6 +117,14 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private java.lang.String tag;
 
   /**
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetStatus;
+
+  /**
    * [Output Only] Intended version of this instance.
    * The value may be {@code null}.
    */
@@ -324,6 +332,25 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setTag(java.lang.String tag) {
     this.tag = tag;
+    return this;
+  }
+
+  /**
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetStatus() {
+    return targetStatus;
+  }
+
+  /**
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
+   * @param targetStatus targetStatus or {@code null} for none
+   */
+  public ManagedInstance setTargetStatus(java.lang.String targetStatus) {
+    this.targetStatus = targetStatus;
     return this;
   }
 

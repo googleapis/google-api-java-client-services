@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * [Output Only] A consumer forwarding rule connected to this service attachment. [Deprecated] Do
- * not use.
+ * [Output Only] A connection connected to this service attachment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -28,31 +27,55 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceAttachmentConsumerForwardingRule extends com.google.api.client.json.GenericJson {
+public final class ServiceAttachmentConnectedEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * The url of a consumer forwarding rule.
+   * The url of a connected endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpoint;
+
+  /**
+   * The url of a consumer forwarding rule. [Deprecated] Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String forwardingRule;
 
   /**
-   * The PSC connection id of the PSC Forwarding Rule.
+   * The PSC connection id of the connected endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger pscConnectionId;
 
   /**
-   * The status of the forwarding rule.
+   * The status of a connected endpoint to this service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The url of a consumer forwarding rule.
+   * The url of a connected endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpoint() {
+    return endpoint;
+  }
+
+  /**
+   * The url of a connected endpoint.
+   * @param endpoint endpoint or {@code null} for none
+   */
+  public ServiceAttachmentConnectedEndpoint setEndpoint(java.lang.String endpoint) {
+    this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * The url of a consumer forwarding rule. [Deprecated] Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getForwardingRule() {
@@ -60,16 +83,16 @@ public final class ServiceAttachmentConsumerForwardingRule extends com.google.ap
   }
 
   /**
-   * The url of a consumer forwarding rule.
+   * The url of a consumer forwarding rule. [Deprecated] Do not use.
    * @param forwardingRule forwardingRule or {@code null} for none
    */
-  public ServiceAttachmentConsumerForwardingRule setForwardingRule(java.lang.String forwardingRule) {
+  public ServiceAttachmentConnectedEndpoint setForwardingRule(java.lang.String forwardingRule) {
     this.forwardingRule = forwardingRule;
     return this;
   }
 
   /**
-   * The PSC connection id of the PSC Forwarding Rule.
+   * The PSC connection id of the connected endpoint.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getPscConnectionId() {
@@ -77,16 +100,16 @@ public final class ServiceAttachmentConsumerForwardingRule extends com.google.ap
   }
 
   /**
-   * The PSC connection id of the PSC Forwarding Rule.
+   * The PSC connection id of the connected endpoint.
    * @param pscConnectionId pscConnectionId or {@code null} for none
    */
-  public ServiceAttachmentConsumerForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
+  public ServiceAttachmentConnectedEndpoint setPscConnectionId(java.math.BigInteger pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
     return this;
   }
 
   /**
-   * The status of the forwarding rule.
+   * The status of a connected endpoint to this service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -94,22 +117,22 @@ public final class ServiceAttachmentConsumerForwardingRule extends com.google.ap
   }
 
   /**
-   * The status of the forwarding rule.
+   * The status of a connected endpoint to this service attachment.
    * @param status status or {@code null} for none
    */
-  public ServiceAttachmentConsumerForwardingRule setStatus(java.lang.String status) {
+  public ServiceAttachmentConnectedEndpoint setStatus(java.lang.String status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public ServiceAttachmentConsumerForwardingRule set(String fieldName, Object value) {
-    return (ServiceAttachmentConsumerForwardingRule) super.set(fieldName, value);
+  public ServiceAttachmentConnectedEndpoint set(String fieldName, Object value) {
+    return (ServiceAttachmentConnectedEndpoint) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceAttachmentConsumerForwardingRule clone() {
-    return (ServiceAttachmentConsumerForwardingRule) super.clone();
+  public ServiceAttachmentConnectedEndpoint clone() {
+    return (ServiceAttachmentConnectedEndpoint) super.clone();
   }
 
 }

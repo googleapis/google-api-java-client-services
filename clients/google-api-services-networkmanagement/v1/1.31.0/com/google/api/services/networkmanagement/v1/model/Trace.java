@@ -18,7 +18,7 @@ package com.google.api.services.networkmanagement.v1.model;
 
 /**
  * Trace represents one simulated packet forwarding path. * Each trace contains multiple ordered
- * Steps. * Each step is in a particular state with associated configuration. * State is categorized
+ * steps. * Each step is in a particular state with associated configuration. * State is categorized
  * as final or non-final states. * Each final state has a reason associated. * Each trace must end
  * with a final state (the last step). ``` |---------------------Trace----------------------|
  * Step1(State) Step2(State) --- StepN(State(final)) ```

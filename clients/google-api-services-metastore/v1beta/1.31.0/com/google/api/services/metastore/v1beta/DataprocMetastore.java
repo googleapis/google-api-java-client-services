@@ -468,21 +468,17 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2787,7 +2783,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
         public class Backups {
 
           /**
-           * Creates a new Backup in a given project and location.
+           * Creates a new backup in a given project and location.
            *
            * Create a request for the method "backups.create".
            *
@@ -2813,7 +2809,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
             /**
-             * Creates a new Backup in a given project and location.
+             * Creates a new backup in a given project and location.
              *
              * Create a request for the method "backups.create".
              *

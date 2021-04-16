@@ -17608,6 +17608,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** Events to watch for. */
+        @com.google.api.client.util.Key
+        private java.lang.String event;
+
+        /** Events to watch for.
+         */
+        public java.lang.String getEvent() {
+          return event;
+        }
+
+        /** Events to watch for. */
+        public List setEvent(java.lang.String event) {
+          this.event = event;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

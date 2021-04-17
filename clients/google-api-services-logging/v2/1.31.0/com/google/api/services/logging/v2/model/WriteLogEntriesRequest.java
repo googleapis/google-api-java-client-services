@@ -75,11 +75,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default log resource name that is assigned to all log entries in entries that do
-   * not specify a value for log_name: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-   * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-   * [LOG_ID] must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity" The permission
+   * not specify a value for log_name: projects/[PROJECT_ID]/logs/[LOG_ID]
+   * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+   * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID] folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID]
+   * must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
+   * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
    * individual log entry.
@@ -194,11 +194,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default log resource name that is assigned to all log entries in entries that do
-   * not specify a value for log_name: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-   * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-   * [LOG_ID] must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity" The permission
+   * not specify a value for log_name: projects/[PROJECT_ID]/logs/[LOG_ID]
+   * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+   * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID] folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID]
+   * must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
+   * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
    * individual log entry.
@@ -210,11 +210,11 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. A default log resource name that is assigned to all log entries in entries that do
-   * not specify a value for log_name: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-   * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-   * [LOG_ID] must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity" The permission
+   * not specify a value for log_name: projects/[PROJECT_ID]/logs/[LOG_ID]
+   * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+   * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID] folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID]
+   * must be URL-encoded. For example: "projects/my-project-id/logs/syslog"
+   * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
    * individual log entry.

@@ -1720,21 +1720,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -3455,12 +3451,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+       * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -3489,12 +3484,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+         * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -3563,34 +3557,30 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
 
-        /** Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" [LOG_ID]
-       must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       information about log names, see LogEntry.
+        /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
+       id/logs/syslog".For more information about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -3616,9 +3606,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3645,9 +3634,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3726,24 +3714,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3809,23 +3795,23 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
         /** Optional. The resource name that owns the logs:
-       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
-       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+       queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
@@ -3833,12 +3819,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -7484,21 +7470,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -9542,12 +9524,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+       * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -9576,12 +9557,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+         * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -9650,34 +9630,30 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
 
-        /** Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" [LOG_ID]
-       must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       information about log names, see LogEntry.
+        /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
+       id/logs/syslog".For more information about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -9703,9 +9679,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9732,9 +9707,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -9813,24 +9787,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -9896,23 +9868,23 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
         /** Optional. The resource name that owns the logs:
-       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
-       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+       queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
@@ -9920,12 +9892,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -11451,21 +11423,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * The maximum number of results to return. If not set, the service will select a default.
-       */
+      /** The maximum number of results to return. If not set, the service selects a default. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of results to return. If not set, the service will select a default.
+      /** The maximum number of results to return. If not set, the service selects a default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /**
-       * The maximum number of results to return. If not set, the service will select a default.
-       */
+      /** The maximum number of results to return. If not set, the service selects a default. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -13508,12 +13476,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-     *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-     *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-     *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-     *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-     *        information about log names, see LogEntry.
+     * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+     *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+     *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+     *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+     *        project-id/logs/syslog".For more information about log names, see LogEntry.
      * @return the request
      */
     public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -13542,12 +13509,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-     *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-     *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-     *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-     *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-     *        information about log names, see LogEntry.
+       * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+     *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+     *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+     *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+     *        project-id/logs/syslog".For more information about log names, see LogEntry.
        * @since 1.13
        */
       protected Delete(java.lang.String logName) {
@@ -13616,34 +13582,30 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       * information about log names, see LogEntry.
+       * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       * project-id/logs/syslog".For more information about log names, see LogEntry.
        */
       @com.google.api.client.util.Key
       private java.lang.String logName;
 
-      /** Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" [LOG_ID]
-     must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-     "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-     information about log names, see LogEntry.
+      /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+     organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+     folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
+     id/logs/syslog".For more information about log names, see LogEntry.
        */
       public java.lang.String getLogName() {
         return logName;
       }
 
       /**
-       * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       * information about log names, see LogEntry.
+       * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       * project-id/logs/syslog".For more information about log names, see LogEntry.
        */
       public Delete setLogName(java.lang.String logName) {
         if (!getSuppressPatternChecks()) {
@@ -13669,9 +13631,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-     *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-     *        "folders/[FOLDER_ID]"
+     * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+     *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -13698,9 +13659,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-     *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-     *        "folders/[FOLDER_ID]"
+       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+     *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -13779,24 +13739,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       * "folders/[FOLDER_ID]"
+       * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-     "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+      /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+     organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       * "folders/[FOLDER_ID]"
+       * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -13862,23 +13820,23 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. The resource name that owns the logs:
-       * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-       * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIE
+       * W_ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+       * support legacy queries, it could also be: projects/[PROJECT_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
       /** Optional. The resource name that owns the logs:
-     projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-     organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-     billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-     folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
-     it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-     "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+     projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+     organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+     billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+     folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+     queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+     billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
@@ -13886,12 +13844,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. The resource name that owns the logs:
-       * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-       * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIE
+       * W_ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+       * support legacy queries, it could also be: projects/[PROJECT_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
@@ -15679,21 +15637,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -17737,12 +17691,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+       * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -17771,12 +17724,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+         * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -17845,34 +17797,30 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
 
-        /** Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" [LOG_ID]
-       must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       information about log names, see LogEntry.
+        /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
+       id/logs/syslog".For more information about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -17898,9 +17846,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -17927,9 +17874,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -18008,24 +17954,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -18091,23 +18035,23 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
         /** Optional. The resource name that owns the logs:
-       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
-       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+       queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
@@ -18115,12 +18059,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -20551,21 +20495,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -22609,12 +22549,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+       * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -22643,12 +22582,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param logName Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       *        "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       *        "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-       *        [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       *        "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       *        information about log names, see LogEntry.
+         * @param logName Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+       *        project-id/logs/syslog".For more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -22717,34 +22655,30 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
 
-        /** Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-       "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-       "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" [LOG_ID]
-       must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-       "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-       information about log names, see LogEntry.
+        /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+       organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+       folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
+       id/logs/syslog".For more information about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
         }
 
         /**
-         * Required. The resource name of the log to delete: "projects/[PROJECT_ID]/logs/[LOG_ID]"
-         * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-         * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
-         * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog",
-         * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-         * information about log names, see LogEntry.
+         * Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
+         * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
+         * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
+         * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
+         * project-id/logs/syslog".For more information about log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -22770,9 +22704,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -22799,9 +22732,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       *        "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-       *        "folders/[FOLDER_ID]"
+         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -22880,24 +22812,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-       "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
+        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: "projects/[PROJECT_ID]"
-         * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]"
-         * "folders/[FOLDER_ID]"
+         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -22963,23 +22893,23 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
         /** Optional. The resource name that owns the logs:
-       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
-       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+       folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
+       queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
@@ -22987,12 +22917,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. The resource name that owns the logs:
-         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
-         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
-         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
-         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
+         * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
+         * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
+         * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
+         * support legacy queries, it could also be: projects/[PROJECT_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;

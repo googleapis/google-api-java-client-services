@@ -50,13 +50,13 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   private java.lang.String filter;
 
   /**
-   * Required. Name of a parent resource from which to retrieve log entries: "projects/[PROJECT_ID]"
-   * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
-   * May alternatively be one or more views:
-   * "projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
+   * Required. Name of a parent resource from which to retrieve log entries: projects/[PROJECT_ID]
+   * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]May
+   * alternatively be one or more views:
+   * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
+   * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,13 +109,13 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Name of a parent resource from which to retrieve log entries: "projects/[PROJECT_ID]"
-   * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
-   * May alternatively be one or more views:
-   * "projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
+   * Required. Name of a parent resource from which to retrieve log entries: projects/[PROJECT_ID]
+   * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]May
+   * alternatively be one or more views:
+   * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
+   * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNames() {
@@ -123,13 +123,13 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Name of a parent resource from which to retrieve log entries: "projects/[PROJECT_ID]"
-   * "organizations/[ORGANIZATION_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
-   * May alternatively be one or more views:
-   * "projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID"
+   * Required. Name of a parent resource from which to retrieve log entries: projects/[PROJECT_ID]
+   * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]May
+   * alternatively be one or more views:
+   * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bil
+   * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+   * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
    * @param resourceNames resourceNames or {@code null} for none
    */
   public TailLogEntriesRequest setResourceNames(java.util.List<java.lang.String> resourceNames) {

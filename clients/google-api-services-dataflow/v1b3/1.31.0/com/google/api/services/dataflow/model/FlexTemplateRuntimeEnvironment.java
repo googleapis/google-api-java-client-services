@@ -113,6 +113,14 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.String serviceAccountEmail;
 
   /**
+   * The Cloud Storage path for staging local files. Must be a valid Cloud Storage URL, beginning
+   * with `gs://`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stagingLocation;
+
+  /**
    * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either
    * a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/c
    * ompute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or
@@ -356,6 +364,25 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setServiceAccountEmail(java.lang.String serviceAccountEmail) {
     this.serviceAccountEmail = serviceAccountEmail;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage path for staging local files. Must be a valid Cloud Storage URL, beginning
+   * with `gs://`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStagingLocation() {
+    return stagingLocation;
+  }
+
+  /**
+   * The Cloud Storage path for staging local files. Must be a valid Cloud Storage URL, beginning
+   * with `gs://`.
+   * @param stagingLocation stagingLocation or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setStagingLocation(java.lang.String stagingLocation) {
+    this.stagingLocation = stagingLocation;
     return this;
   }
 

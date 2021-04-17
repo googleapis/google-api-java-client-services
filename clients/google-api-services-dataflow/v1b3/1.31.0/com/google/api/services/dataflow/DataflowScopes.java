@@ -32,7 +32,7 @@ public class DataflowScopes {
   /** View your Google Compute Engine resources. */
   public static final String COMPUTE_READONLY = "https://www.googleapis.com/auth/compute.readonly";
 
-  /** View your email address. */
+  /** See your primary Google Account email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
   /**

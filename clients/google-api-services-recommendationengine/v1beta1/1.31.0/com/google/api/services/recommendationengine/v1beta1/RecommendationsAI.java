@@ -564,7 +564,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent catalog resource name, such as
-           *        "projects/locations/global/catalogs/default_catalog".
+           *        `projects/locations/global/catalogs/default_catalog`.
            * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CatalogItem}
            * @return the request
            */
@@ -593,7 +593,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent catalog resource name, such as
-           *        "projects/locations/global/catalogs/default_catalog".
+           *        `projects/locations/global/catalogs/default_catalog`.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CatalogItem}
              * @since 1.13
              */
@@ -664,13 +664,13 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Required. The parent catalog resource name, such as
-             * "projects/locations/global/catalogs/default_catalog".
+             * `projects/locations/global/catalogs/default_catalog`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent catalog resource name, such as
-           "projects/locations/global/catalogs/default_catalog".
+           `projects/locations/global/catalogs/default_catalog`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -678,7 +678,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Required. The parent catalog resource name, such as
-             * "projects/locations/global/catalogs/default_catalog".
+             * `projects/locations/global/catalogs/default_catalog`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -704,7 +704,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -732,7 +732,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -801,22 +801,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogItems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Full resource name of catalog item, such as
-           "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogItems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -842,7 +842,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -870,7 +870,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -949,22 +949,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogitems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogitems/some_catalog_item_id`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Full resource name of catalog item, such as
-           "projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+           `projects/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogitems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogitems/some_catalog_item_id`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -992,7 +992,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link RecommendationsAIImport#execute()} method to invoke the
            * remote operation.
            *
-           * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+           * @param parent Required. `projects/1234/locations/global/catalogs/default_catalog` If no updateMask is specified,
            *        requires catalogItems.create permission. If updateMask is specified, requires
            *        catalogItems.update permission.
            * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest}
@@ -1024,7 +1024,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+             * @param parent Required. `projects/1234/locations/global/catalogs/default_catalog` If no updateMask is specified,
            *        requires catalogItems.create permission. If updateMask is specified, requires
            *        catalogItems.update permission.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest}
@@ -1096,14 +1096,14 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask
+             * Required. `projects/1234/locations/global/catalogs/default_catalog` If no updateMask
              * is specified, requires catalogItems.create permission. If updateMask is specified,
              * requires catalogItems.update permission.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask is specified,
+            /** Required. `projects/1234/locations/global/catalogs/default_catalog` If no updateMask is specified,
            requires catalogItems.create permission. If updateMask is specified, requires catalogItems.update
            permission.
              */
@@ -1112,7 +1112,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. "projects/1234/locations/global/catalogs/default_catalog" If no updateMask
+             * Required. `projects/1234/locations/global/catalogs/default_catalog` If no updateMask
              * is specified, requires catalogItems.create permission. If updateMask is specified,
              * requires catalogItems.update permission.
              */
@@ -1140,7 +1140,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent catalog resource name, such as
-           *        "projects/locations/global/catalogs/default_catalog".
+           *        `projects/locations/global/catalogs/default_catalog`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1168,7 +1168,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent catalog resource name, such as
-           *        "projects/locations/global/catalogs/default_catalog".
+           *        `projects/locations/global/catalogs/default_catalog`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1248,13 +1248,13 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Required. The parent catalog resource name, such as
-             * "projects/locations/global/catalogs/default_catalog".
+             * `projects/locations/global/catalogs/default_catalog`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent catalog resource name, such as
-           "projects/locations/global/catalogs/default_catalog".
+           `projects/locations/global/catalogs/default_catalog`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1262,7 +1262,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Required. The parent catalog resource name, such as
-             * "projects/locations/global/catalogs/default_catalog".
+             * `projects/locations/global/catalogs/default_catalog`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1343,7 +1343,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
            * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CatalogItem}
            * @return the request
            */
@@ -1372,7 +1372,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Full resource name of catalog item, such as
-           *        "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           *        `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CatalogItem}
              * @since 1.13
              */
@@ -1442,22 +1442,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogItems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Full resource name of catalog item, such as
-           "projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+           `projects/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full resource name of catalog item, such as "projects/locations/global/cata
-             * logs/default_catalog/catalogItems/some_catalog_item_id".
+             * Required. Full resource name of catalog item, such as `projects/locations/global/cata
+             * logs/default_catalog/catalogItems/some_catalog_item_id`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1911,23 +1911,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the recommendationengine server.  After setting any
              * optional parameters, call the {@link Predict#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Full resource name of the format:
-             *        {name=projects/locations/global/catalogs/default_catalog/eventStores/default_event_store/p
-             *        lacements} The id of the recommendation engine placement. This id is used to identify the
-             *        set of models that will be used to make the prediction. We currently support three
-             *        placements with the following IDs by default: * `shopping_cart`: Predicts items frequently
-             *        bought together with one or more catalog items in the same shopping session. Commonly
-             *        displayed after `add-to-cart` events, on product detail pages, or on the shopping cart
-             *        page. * `home_page`: Predicts the next product that a user will most likely engage with or
-             *        purchase based on the shopping or viewing history of the specified `userId` or
-             *        `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the next
-             *        product that a user will most likely engage with or purchase. The prediction is based on
-             *        the shopping or viewing history of the specified `userId` or `visitorId` and its relevance
-             *        to a specified `CatalogItem`. Typically used on product detail pages. For example - More
-             *        items like this. * `recently_viewed_default`: Returns up to 75 items recently viewed by
-             *        the specified `userId` or `visitorId`, most recent ones first. Returns nothing if neither
-             *        of them has viewed any items yet. For example - Recently viewed. The full list of
-             *        available placements can be seen at
+             * @param name Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catalo
+             *        g/eventStores/default_event_store/placements}` The id of the recommendation engine
+             *        placement. This id is used to identify the set of models that will be used to make the
+             *        prediction. We currently support three placements with the following IDs by default: *
+             *        `shopping_cart`: Predicts items frequently bought together with one or more catalog items
+             *        in the same shopping session. Commonly displayed after `add-to-cart` events, on product
+             *        detail pages, or on the shopping cart page. * `home_page`: Predicts the next product that
+             *        a user will most likely engage with or purchase based on the shopping or viewing history
+             *        of the specified `userId` or `visitorId`. For example - Recommendations for you. *
+             *        `product_detail`: Predicts the next product that a user will most likely engage with or
+             *        purchase. The prediction is based on the shopping or viewing history of the specified
+             *        `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
+             *        product detail pages. For example - More items like this. * `recently_viewed_default`:
+             *        Returns up to 75 items recently viewed by the specified `userId` or `visitorId`, most
+             *        recent ones first. Returns nothing if neither of them has viewed any items yet. For
+             *        example - Recently viewed. The full list of available placements can be seen at
              *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
              * @return the request
@@ -1958,23 +1957,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Predict#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Full resource name of the format:
-             *        {name=projects/locations/global/catalogs/default_catalog/eventStores/default_event_store/p
-             *        lacements} The id of the recommendation engine placement. This id is used to identify the
-             *        set of models that will be used to make the prediction. We currently support three
-             *        placements with the following IDs by default: * `shopping_cart`: Predicts items frequently
-             *        bought together with one or more catalog items in the same shopping session. Commonly
-             *        displayed after `add-to-cart` events, on product detail pages, or on the shopping cart
-             *        page. * `home_page`: Predicts the next product that a user will most likely engage with or
-             *        purchase based on the shopping or viewing history of the specified `userId` or
-             *        `visitorId`. For example - Recommendations for you. * `product_detail`: Predicts the next
-             *        product that a user will most likely engage with or purchase. The prediction is based on
-             *        the shopping or viewing history of the specified `userId` or `visitorId` and its relevance
-             *        to a specified `CatalogItem`. Typically used on product detail pages. For example - More
-             *        items like this. * `recently_viewed_default`: Returns up to 75 items recently viewed by
-             *        the specified `userId` or `visitorId`, most recent ones first. Returns nothing if neither
-             *        of them has viewed any items yet. For example - Recently viewed. The full list of
-             *        available placements can be seen at
+               * @param name Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catalo
+             *        g/eventStores/default_event_store/placements}` The id of the recommendation engine
+             *        placement. This id is used to identify the set of models that will be used to make the
+             *        prediction. We currently support three placements with the following IDs by default: *
+             *        `shopping_cart`: Predicts items frequently bought together with one or more catalog items
+             *        in the same shopping session. Commonly displayed after `add-to-cart` events, on product
+             *        detail pages, or on the shopping cart page. * `home_page`: Predicts the next product that
+             *        a user will most likely engage with or purchase based on the shopping or viewing history
+             *        of the specified `userId` or `visitorId`. For example - Recommendations for you. *
+             *        `product_detail`: Predicts the next product that a user will most likely engage with or
+             *        purchase. The prediction is based on the shopping or viewing history of the specified
+             *        `userId` or `visitorId` and its relevance to a specified `CatalogItem`. Typically used on
+             *        product detail pages. For example - More items like this. * `recently_viewed_default`:
+             *        Returns up to 75 items recently viewed by the specified `userId` or `visitorId`, most
+             *        recent ones first. Returns nothing if neither of them has viewed any items yet. For
+             *        example - Recently viewed. The full list of available placements can be seen at
              *        https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PredictRequest}
                * @since 1.13
@@ -2045,8 +2043,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. Full resource name of the format: {name=projects/locations/global/catalog
-               * s/default_catalog/eventStores/default_event_store/placements} The id of the
+               * Required. Full resource name of the format: `{name=projects/locations/global/catalo
+               * gs/default_catalog/eventStores/default_event_store/placements}` The id of the
                * recommendation engine placement. This id is used to identify the set of models that
                * will be used to make the prediction. We currently support three placements with the
                * following IDs by default: * `shopping_cart`: Predicts items frequently bought
@@ -2068,8 +2066,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Full resource name of the format: {name=projects/locations/global/catalogs/default_catalo
-             g/eventStores/default_event_store/placements} The id of the recommendation engine placement. This
+              /** Required. Full resource name of the format: `{name=projects/locations/global/catalogs/default_catal
+             og/eventStores/default_event_store/placements}` The id of the recommendation engine placement. This
              id is used to identify the set of models that will be used to make the prediction. We currently
              support three placements with the following IDs by default: * `shopping_cart`: Predicts items
              frequently bought together with one or more catalog items in the same shopping session. Commonly
@@ -2090,8 +2088,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. Full resource name of the format: {name=projects/locations/global/catalog
-               * s/default_catalog/eventStores/default_event_store/placements} The id of the
+               * Required. Full resource name of the format: `{name=projects/locations/global/catalo
+               * gs/default_catalog/eventStores/default_event_store/placements}` The id of the
                * recommendation engine placement. This id is used to identify the set of models that
                * will be used to make the prediction. We currently support three placements with the
                * following IDs by default: * `shopping_cart`: Predicts items frequently bought
@@ -2156,7 +2154,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent resource path.
-             *        "projects/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest}
              * @return the request
              */
@@ -2185,7 +2183,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent resource path.
-             *        "projects/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest}
                * @since 1.13
                */
@@ -2255,22 +2253,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. The parent resource path. "projects/locations/global/catalogs/default_cat
-               * alog/eventStores/default_event_store".
+               * Required. The parent resource path. `projects/locations/global/catalogs/default_cat
+               * alog/eventStores/default_event_store`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The parent resource path.
-             "projects/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             `projects/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent resource path. "projects/locations/global/catalogs/default_cat
-               * alog/eventStores/default_event_store".
+               * Required. The parent resource path. `projects/locations/global/catalogs/default_cat
+               * alog/eventStores/default_event_store`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -2295,8 +2293,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the recommendationengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The API key to unregister including full resource path. "projects/locations/global/catalog
-             *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/"
+             * @param name Required. The API key to unregister including full resource path. `projects/locations/global/catalog
+             *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2323,8 +2321,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The API key to unregister including full resource path. "projects/locations/global/catalog
-             *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/"
+               * @param name Required. The API key to unregister including full resource path. `projects/locations/global/catalog
+             *        s/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -2393,24 +2391,24 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. The API key to unregister including full resource path. "projects/locatio
+               * Required. The API key to unregister including full resource path. `projects/locatio
                * ns/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKey
-               * Registrations/"
+               * Registrations/`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The API key to unregister including full resource path. "projects/locations/global/catalo
-             gs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/"
+              /** Required. The API key to unregister including full resource path. `projects/locations/global/catalo
+             gs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The API key to unregister including full resource path. "projects/locatio
+               * Required. The API key to unregister including full resource path. `projects/locatio
                * ns/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKey
-               * Registrations/"
+               * Registrations/`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -2436,7 +2434,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent placement resource name such as
-             *        "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+             *        `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -2464,7 +2462,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent placement resource name such as
-             *        "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+             *        `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -2543,22 +2541,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. The parent placement resource name such as "projects/1234/locations/globa
-               * l/catalogs/default_catalog/eventStores/default_event_store"
+               * Required. The parent placement resource name such as `projects/1234/locations/globa
+               * l/catalogs/default_catalog/eventStores/default_event_store`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The parent placement resource name such as
-             "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+             `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent placement resource name such as "projects/1234/locations/globa
-               * l/catalogs/default_catalog/eventStores/default_event_store"
+               * Required. The parent placement resource name such as `projects/1234/locations/globa
+               * l/catalogs/default_catalog/eventStores/default_event_store`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -2647,7 +2645,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent eventStore name, such as
-             *        "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
              * @return the request
              */
             public Collect collect(java.lang.String parent) throws java.io.IOException {
@@ -2677,7 +2675,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent eventStore name, such as
-             *        "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
                * @since 1.13
                */
               protected Collect(java.lang.String parent) {
@@ -2756,22 +2754,22 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. The parent eventStore name, such as "projects/1234/locations/global/catal
-               * ogs/default_catalog/eventStores/default_event_store".
+               * Required. The parent eventStore name, such as `projects/1234/locations/global/catal
+               * ogs/default_catalog/eventStores/default_event_store`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The parent eventStore name, such as
-             "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+             `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent eventStore name, such as "projects/1234/locations/global/catal
-               * ogs/default_catalog/eventStores/default_event_store".
+               * Required. The parent eventStore name, such as `projects/1234/locations/global/catal
+               * ogs/default_catalog/eventStores/default_event_store`.
                */
               public Collect setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -2869,7 +2867,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link RecommendationsAIImport#execute()} method to invoke the
              * remote operation.
              *
-             * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+             * @param parent Required. `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportUserEventsRequest}
              * @return the request
              */
@@ -2900,7 +2898,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
                * immediately after invoking the constructor. </p>
                *
-               * @param parent Required. "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+               * @param parent Required. `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1ImportUserEventsRequest}
                * @since 1.13
                */
@@ -2970,21 +2968,21 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Required. "projects/1234/locations/global/catalogs/default_catalog/eventStores/defa
-               * ult_event_store"
+               * Required. `projects/1234/locations/global/catalogs/default_catalog/eventStores/defa
+               * ult_event_store`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+              /** Required. `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. "projects/1234/locations/global/catalogs/default_catalog/eventStores/defa
-               * ult_event_store"
+               * Required. `projects/1234/locations/global/catalogs/default_catalog/eventStores/defa
+               * ult_event_store`
                */
               public RecommendationsAIImport setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -3014,7 +3012,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The parent eventStore resource name, such as
-             *        "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3046,7 +3044,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The parent eventStore resource name, such as
-             *        "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3126,13 +3124,13 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. The parent eventStore resource name, such as
-               * "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+               * `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The parent eventStore resource name, such as
-             "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -3140,7 +3138,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. The parent eventStore resource name, such as
-               * "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+               * `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -3275,7 +3273,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the event_store under which the events are created. The format is
-             *        "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+             *        `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest}
              * @return the request
              */
@@ -3306,7 +3304,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the event_store under which the events are created. The format is
-             *        "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+             *        `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest}
                * @since 1.13
                */
@@ -3377,14 +3375,14 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. The resource name of the event_store under which the events are created.
-               * The format is "projects/${projectId}/locations/global/catalogs/${catalogId}/eventSt
-               * ores/${eventStoreId}"
+               * The format is `projects/${projectId}/locations/global/catalogs/${catalogId}/eventSt
+               * ores/${eventStoreId}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the event_store under which the events are created. The format is
-             "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+             `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -3392,8 +3390,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. The resource name of the event_store under which the events are created.
-               * The format is "projects/${projectId}/locations/global/catalogs/${catalogId}/eventSt
-               * ores/${eventStoreId}"
+               * The format is `projects/${projectId}/locations/global/catalogs/${catalogId}/eventSt
+               * ores/${eventStoreId}`
                */
               public Purge setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -3423,7 +3421,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link Rejoin#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Full resource name of user event, such as
-             *        "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
              * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest}
              * @return the request
              */
@@ -3457,7 +3455,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Full resource name of user event, such as
-             *        "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             *        `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                * @param content the {@link com.google.api.services.recommendationengine.v1beta1.model.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest}
                * @since 1.13
                */
@@ -3528,13 +3526,13 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. Full resource name of user event, such as
-               * "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+               * `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. Full resource name of user event, such as
-             "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+             `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -3542,7 +3540,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Required. Full resource name of user event, such as
-               * "projects/locations/catalogs/default_catalog/eventStores/default_event_store".
+               * `projects/locations/catalogs/default_catalog/eventStores/default_event_store`.
                */
               public Rejoin setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {

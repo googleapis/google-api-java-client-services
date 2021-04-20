@@ -61,6 +61,13 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String exportToSecurityCommandCenter;
 
   /**
+   * Whether to keep scanning even if most requests return HTTP error codes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreHttpStatusErrors;
+
+  /**
    * Latest ScanRun if available.
    * The value may be {@code null}.
    */
@@ -205,6 +212,23 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   public ScanConfig setExportToSecurityCommandCenter(java.lang.String exportToSecurityCommandCenter) {
     this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
+    return this;
+  }
+
+  /**
+   * Whether to keep scanning even if most requests return HTTP error codes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreHttpStatusErrors() {
+    return ignoreHttpStatusErrors;
+  }
+
+  /**
+   * Whether to keep scanning even if most requests return HTTP error codes.
+   * @param ignoreHttpStatusErrors ignoreHttpStatusErrors or {@code null} for none
+   */
+  public ScanConfig setIgnoreHttpStatusErrors(java.lang.Boolean ignoreHttpStatusErrors) {
+    this.ignoreHttpStatusErrors = ignoreHttpStatusErrors;
     return this;
   }
 

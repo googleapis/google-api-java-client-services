@@ -65,6 +65,13 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String filename;
 
   /**
+   * Optional. A Common Expression Language string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
    * GitHub event is received. Mutually exclusive with `trigger_template`.
    * The value may be {@code null}.
@@ -110,6 +117,14 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a
+   * Pub/Sub message is published.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PubsubConfig pubsubConfig;
 
   /**
    * Substitutions for Build resource. The keys must match the following regular expression:
@@ -221,6 +236,23 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A Common Expression Language string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. A Common Expression Language string.
+   * @param filter filter or {@code null} for none
+   */
+  public BuildTrigger setFilter(java.lang.String filter) {
+    this.filter = filter;
+    return this;
+  }
+
+  /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
    * GitHub event is received. Mutually exclusive with `trigger_template`.
    * @return value or {@code null} for none
@@ -326,6 +358,25 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a
+   * Pub/Sub message is published.
+   * @return value or {@code null} for none
+   */
+  public PubsubConfig getPubsubConfig() {
+    return pubsubConfig;
+  }
+
+  /**
+   * Optional. PubsubConfig describes the configuration of a trigger that creates a build whenever a
+   * Pub/Sub message is published.
+   * @param pubsubConfig pubsubConfig or {@code null} for none
+   */
+  public BuildTrigger setPubsubConfig(PubsubConfig pubsubConfig) {
+    this.pubsubConfig = pubsubConfig;
     return this;
   }
 

@@ -4234,7 +4234,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * an operation which can be used to track the process of the project move workflow. Upon success,
      * the `Operation.response` field will be populated with the moved project. The caller must have
      * `resourcemanager.projects.update` permission on the project and have
-     * `resourcemanager.projects.move` permission on the project's current and proposed new parent.
+     * `resourcemanager.projects.move` permission on the project's current and proposed new parent. If
+     * project has no current parent, or it currently does not have an associated organization resource,
+     * you will also need the `resourcemanager.projects.setIamPolicy` permission in the project.
      *
      * Create a request for the method "projects.move".
      *
@@ -4263,7 +4265,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Returns an operation which can be used to track the process of the project move workflow. Upon
        * success, the `Operation.response` field will be populated with the moved project. The caller
        * must have `resourcemanager.projects.update` permission on the project and have
-       * `resourcemanager.projects.move` permission on the project's current and proposed new parent.
+       * `resourcemanager.projects.move` permission on the project's current and proposed new parent. If
+       * project has no current parent, or it currently does not have an associated organization
+       * resource, you will also need the `resourcemanager.projects.setIamPolicy` permission in the
+       * project.
        *
        * Create a request for the method "projects.move".
        *

@@ -18,7 +18,8 @@ package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
  * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on
- * information about the source of the request.
+ * information about the source of the request. The request must satisfy what is defined in
+ * `sources` AND identity related fields in order to match.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed

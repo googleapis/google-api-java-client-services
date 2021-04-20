@@ -35,8 +35,8 @@ public final class IngressSource extends com.google.api.client.json.GenericJson 
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins
-   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is
-   * specified, then all IngressSources will be allowed.
+   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single
+   * `*` is specified for `access_level`, then all IngressSources will be allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class IngressSource extends com.google.api.client.json.GenericJson 
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins
-   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is
-   * specified, then all IngressSources will be allowed.
+   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single
+   * `*` is specified for `access_level`, then all IngressSources will be allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessLevel() {
@@ -71,8 +71,8 @@ public final class IngressSource extends com.google.api.client.json.GenericJson 
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins
-   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If `*` is
-   * specified, then all IngressSources will be allowed.
+   * within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single
+   * `*` is specified for `access_level`, then all IngressSources will be allowed.
    * @param accessLevel accessLevel or {@code null} for none
    */
   public IngressSource setAccessLevel(java.lang.String accessLevel) {

@@ -54,8 +54,8 @@ public final class QuotaBucket extends com.google.api.client.json.GenericJson {
    * The dimensions of this quota bucket. If this map is empty, this is the global bucket, which is
    * the default quota value applied to all requests that do not have a more specific override. If
    * this map is nonempty, the default limit, effective limit, and quota overrides apply only to
-   * requests that have the dimensions given in the map. For example, if the map has key "region"
-   * and value "us-east-1", then the specified effective limit is only effective in that region, and
+   * requests that have the dimensions given in the map. For example, if the map has key `region`
+   * and value `us-east-1`, then the specified effective limit is only effective in that region, and
    * the specified overrides apply only in that region.
    * The value may be {@code null}.
    */
@@ -131,8 +131,8 @@ public final class QuotaBucket extends com.google.api.client.json.GenericJson {
    * The dimensions of this quota bucket. If this map is empty, this is the global bucket, which is
    * the default quota value applied to all requests that do not have a more specific override. If
    * this map is nonempty, the default limit, effective limit, and quota overrides apply only to
-   * requests that have the dimensions given in the map. For example, if the map has key "region"
-   * and value "us-east-1", then the specified effective limit is only effective in that region, and
+   * requests that have the dimensions given in the map. For example, if the map has key `region`
+   * and value `us-east-1`, then the specified effective limit is only effective in that region, and
    * the specified overrides apply only in that region.
    * @return value or {@code null} for none
    */
@@ -144,8 +144,8 @@ public final class QuotaBucket extends com.google.api.client.json.GenericJson {
    * The dimensions of this quota bucket. If this map is empty, this is the global bucket, which is
    * the default quota value applied to all requests that do not have a more specific override. If
    * this map is nonempty, the default limit, effective limit, and quota overrides apply only to
-   * requests that have the dimensions given in the map. For example, if the map has key "region"
-   * and value "us-east-1", then the specified effective limit is only effective in that region, and
+   * requests that have the dimensions given in the map. For example, if the map has key `region`
+   * and value `us-east-1`, then the specified effective limit is only effective in that region, and
    * the specified overrides apply only in that region.
    * @param dimensions dimensions or {@code null} for none
    */

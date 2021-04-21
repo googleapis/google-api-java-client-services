@@ -13351,10 +13351,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * DeleteStudy deletes all instances within the given study using a long running operation. The
              * method returns an Operation which will be marked successful when the deletion is complete.
-             * Warning: If you insert instances into a study while a delete operation is running for that study,
-             * the instances you insert might not appear in search results until after the deletion operation
-             * finishes. For samples that show how to call DeleteStudy, see [Deleting a study, series, or
-             * instance](https://cloud.google.com/healthcare/docs/how-
+             * Warning: Instances cannot be inserted into a study that is being deleted by an operation until
+             * the operation completes. For samples that show how to call DeleteStudy, see [Deleting a study,
+             * series, or instance](https://cloud.google.com/healthcare/docs/how-
              * tos/dicomweb#deleting_a_study_series_or_instance).
              *
              * Create a request for the method "studies.delete".
@@ -13385,9 +13384,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * DeleteStudy deletes all instances within the given study using a long running operation. The
                * method returns an Operation which will be marked successful when the deletion is complete.
-               * Warning: If you insert instances into a study while a delete operation is running for that
-               * study, the instances you insert might not appear in search results until after the deletion
-               * operation finishes. For samples that show how to call DeleteStudy, see [Deleting a study,
+               * Warning: Instances cannot be inserted into a study that is being deleted by an operation until
+               * the operation completes. For samples that show how to call DeleteStudy, see [Deleting a study,
                * series, or instance](https://cloud.google.com/healthcare/docs/how-
                * tos/dicomweb#deleting_a_study_series_or_instance).
                *
@@ -14545,10 +14543,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * DeleteSeries deletes all instances within the given study and series using a long running
                * operation. The method returns an Operation which will be marked successful when the deletion is
-               * complete. Warning: If you insert instances into a series while a delete operation is running for
-               * that series, the instances you insert might not appear in search results until after the deletion
-               * operation finishes. For samples that show how to call DeleteSeries, see [Deleting a study,
-               * series, or instance](https://cloud.google.com/healthcare/docs/how-
+               * complete. Warning: Instances cannot be inserted into a series that is being deleted by an
+               * operation until the operation completes. For samples that show how to call DeleteSeries, see
+               * [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs/how-
                * tos/dicomweb#deleting_a_study_series_or_instance).
                *
                * Create a request for the method "series.delete".
@@ -14581,10 +14578,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * DeleteSeries deletes all instances within the given study and series using a long running
                  * operation. The method returns an Operation which will be marked successful when the deletion is
-                 * complete. Warning: If you insert instances into a series while a delete operation is running
-                 * for that series, the instances you insert might not appear in search results until after the
-                 * deletion operation finishes. For samples that show how to call DeleteSeries, see [Deleting a
-                 * study, series, or instance](https://cloud.google.com/healthcare/docs/how-
+                 * complete. Warning: Instances cannot be inserted into a series that is being deleted by an
+                 * operation until the operation completes. For samples that show how to call DeleteSeries, see
+                 * [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs/how-
                  * tos/dicomweb#deleting_a_study_series_or_instance).
                  *
                  * Create a request for the method "series.delete".

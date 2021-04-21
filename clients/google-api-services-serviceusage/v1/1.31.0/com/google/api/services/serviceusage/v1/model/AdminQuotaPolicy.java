@@ -31,7 +31,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud resource container at which the quota policy is created. The format is
-   * {container_type}/{container_number}
+   * `{container_type}/{container_number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,11 +39,12 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
-   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
-   * applied to quota consumed in that region. This map has the following restrictions: * If
-   * "region" appears as a key, its value must be a valid Cloud region. * If "zone" appears as a
-   * key, its value must be a valid Cloud zone. * Keys other than "region" or "zone" are not valid.
+   * defined in the limit unit. For example, an policy on a limit with the unit
+   * `1/{project}/{region}` could contain an entry with the key `region` and the value `us-east-1`;
+   * the policy is only applied to quota consumed in that region. This map has the following
+   * restrictions: * If `region` appears as a key, its value must be a valid Cloud region. * If
+   * `zone` appears as a key, its value must be a valid Cloud zone. * Keys other than `region` or
+   * `zone` are not valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud resource container at which the quota policy is created. The format is
-   * {container_type}/{container_number}
+   * `{container_type}/{container_number}`
    * @return value or {@code null} for none
    */
   public java.lang.String getContainer() {
@@ -93,7 +94,7 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud resource container at which the quota policy is created. The format is
-   * {container_type}/{container_number}
+   * `{container_type}/{container_number}`
    * @param container container or {@code null} for none
    */
   public AdminQuotaPolicy setContainer(java.lang.String container) {
@@ -103,11 +104,12 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
-   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
-   * applied to quota consumed in that region. This map has the following restrictions: * If
-   * "region" appears as a key, its value must be a valid Cloud region. * If "zone" appears as a
-   * key, its value must be a valid Cloud zone. * Keys other than "region" or "zone" are not valid.
+   * defined in the limit unit. For example, an policy on a limit with the unit
+   * `1/{project}/{region}` could contain an entry with the key `region` and the value `us-east-1`;
+   * the policy is only applied to quota consumed in that region. This map has the following
+   * restrictions: * If `region` appears as a key, its value must be a valid Cloud region. * If
+   * `zone` appears as a key, its value must be a valid Cloud zone. * Keys other than `region` or
+   * `zone` are not valid.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDimensions() {
@@ -116,11 +118,12 @@ public final class AdminQuotaPolicy extends com.google.api.client.json.GenericJs
 
   /**
    * If this map is nonempty, then this policy applies only to specific values for dimensions
-   * defined in the limit unit. For example, an policy on a limit with the unit 1/{project}/{region}
-   * could contain an entry with the key "region" and the value "us-east-1"; the policy is only
-   * applied to quota consumed in that region. This map has the following restrictions: * If
-   * "region" appears as a key, its value must be a valid Cloud region. * If "zone" appears as a
-   * key, its value must be a valid Cloud zone. * Keys other than "region" or "zone" are not valid.
+   * defined in the limit unit. For example, an policy on a limit with the unit
+   * `1/{project}/{region}` could contain an entry with the key `region` and the value `us-east-1`;
+   * the policy is only applied to quota consumed in that region. This map has the following
+   * restrictions: * If `region` appears as a key, its value must be a valid Cloud region. * If
+   * `zone` appears as a key, its value must be a valid Cloud zone. * Keys other than `region` or
+   * `zone` are not valid.
    * @param dimensions dimensions or {@code null} for none
    */
   public AdminQuotaPolicy setDimensions(java.util.Map<String, java.lang.String> dimensions) {

@@ -40,14 +40,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the consumer and service. A valid name would be: -
-   * projects/123/services/serviceusage.googleapis.com
+   * `projects/123/services/serviceusage.googleapis.com`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The resource name of the consumer. A valid name would be: - projects/123
+   * The resource name of the consumer. A valid name would be: - `projects/123`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the consumer and service. A valid name would be: -
-   * projects/123/services/serviceusage.googleapis.com
+   * `projects/123/services/serviceusage.googleapis.com`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -92,7 +92,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the consumer and service. A valid name would be: -
-   * projects/123/services/serviceusage.googleapis.com
+   * `projects/123/services/serviceusage.googleapis.com`
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {
@@ -101,7 +101,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the consumer. A valid name would be: - projects/123
+   * The resource name of the consumer. A valid name would be: - `projects/123`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -109,7 +109,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the consumer. A valid name would be: - projects/123
+   * The resource name of the consumer. A valid name would be: - `projects/123`
    * @param parent parent or {@code null} for none
    */
   public Service setParent(java.lang.String parent) {

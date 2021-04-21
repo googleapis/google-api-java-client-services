@@ -22,6 +22,7 @@ packages on [Maven Central][maven-search].
 | AI Platform Training & Prediction API | [v1](clients/google-api-services-ml/v1) |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
 | API Gateway API | [v1](clients/google-api-services-apigateway/v1), [v1beta](clients/google-api-services-apigateway/v1beta) |
+| API Keys API | [v2](clients/google-api-services-apikeys/v2) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
 | Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |

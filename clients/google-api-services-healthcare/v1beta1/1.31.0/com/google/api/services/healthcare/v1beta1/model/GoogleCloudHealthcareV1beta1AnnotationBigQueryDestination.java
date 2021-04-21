@@ -54,8 +54,9 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
   private java.lang.String tableUri;
 
   /**
-   * Determines whether existing tables in the destination dataset are overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Determines if existing data in the destination dataset is overwritten, appended to, or not
+   * written if the tables contain data. If a write_disposition is specified, the `force` parameter
+   * is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +120,9 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
   }
 
   /**
-   * Determines whether existing tables in the destination dataset are overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Determines if existing data in the destination dataset is overwritten, appended to, or not
+   * written if the tables contain data. If a write_disposition is specified, the `force` parameter
+   * is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteDisposition() {
@@ -128,8 +130,9 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
   }
 
   /**
-   * Determines whether existing tables in the destination dataset are overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Determines if existing data in the destination dataset is overwritten, appended to, or not
+   * written if the tables contain data. If a write_disposition is specified, the `force` parameter
+   * is ignored.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination setWriteDisposition(java.lang.String writeDisposition) {

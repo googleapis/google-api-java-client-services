@@ -1760,11 +1760,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       * Values greater than 10 will be capped to 10.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+      /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
+     greater than 10 will be capped to 10.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -1772,6 +1774,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       * Values greater than 10 will be capped to 10.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -3510,17 +3513,24 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (SearchContacts) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Optional. The number of results to return. */
+      /**
+       * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       * Values greater than 10 will be capped to 10.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The number of results to return.
+      /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
+     greater than 10 will be capped to 10.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Optional. The number of results to return. */
+      /**
+       * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       * Values greater than 10 will be capped to 10.
+       */
       public SearchContacts setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

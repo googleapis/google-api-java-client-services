@@ -54,6 +54,13 @@ public final class ListOtherContactsResponse extends com.google.api.client.json.
   private java.util.List<Person> otherContacts;
 
   /**
+   * The total number of other contacts in the list without pagination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
    * there are no subsequent pages.
    * @return value or {@code null} for none
@@ -107,6 +114,23 @@ public final class ListOtherContactsResponse extends com.google.api.client.json.
    */
   public ListOtherContactsResponse setOtherContacts(java.util.List<Person> otherContacts) {
     this.otherContacts = otherContacts;
+    return this;
+  }
+
+  /**
+   * The total number of other contacts in the list without pagination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total number of other contacts in the list without pagination.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public ListOtherContactsResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

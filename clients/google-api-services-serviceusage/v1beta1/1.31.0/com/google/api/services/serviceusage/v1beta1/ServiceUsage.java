@@ -498,8 +498,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
   public class Services {
 
     /**
-     * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-     * then the entire batch fails, and no state changes occur. Operation
+     * Enables multiple services on a project. The operation is atomic: if enabling any service fails,
+     * then the entire batch fails, and no state changes occur. Operation response type:
+     * `google.protobuf.Empty`
      *
      * Create a request for the method "services.batchEnable".
      *
@@ -526,8 +527,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-       * then the entire batch fails, and no state changes occur. Operation
+       * Enables multiple services on a project. The operation is atomic: if enabling any service fails,
+       * then the entire batch fails, and no state changes occur. Operation response type:
+       * `google.protobuf.Empty`
        *
        * Create a request for the method "services.batchEnable".
        *
@@ -644,10 +646,11 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Disable a service so that it can no longer be used with a project. This prevents unintended usage
-     * that may cause unexpected billing charges or security leaks. It is not valid to call the disable
-     * method on a service that is not currently enabled. Callers will receive a `FAILED_PRECONDITION`
-     * status if the target service is not currently enabled. Operation
+     * Disables a service so that it can no longer be used with a project. This prevents unintended
+     * usage that may cause unexpected billing charges or security leaks. It is not valid to call the
+     * disable method on a service that is not currently enabled. Callers will receive a
+     * `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation response
+     * type: `google.protobuf.Empty`
      *
      * Create a request for the method "services.disable".
      *
@@ -675,10 +678,11 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
       /**
-       * Disable a service so that it can no longer be used with a project. This prevents unintended
+       * Disables a service so that it can no longer be used with a project. This prevents unintended
        * usage that may cause unexpected billing charges or security leaks. It is not valid to call the
        * disable method on a service that is not currently enabled. Callers will receive a
-       * `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation
+       * `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation response
+       * type: `google.protobuf.Empty`
        *
        * Create a request for the method "services.disable".
        *
@@ -800,7 +804,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Enable a service so that it can be used with a project. Operation
+     * Enables a service so that it can be used with a project. Operation response type:
+     * `google.protobuf.Empty`
      *
      * Create a request for the method "services.enable".
      *
@@ -829,7 +834,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
       /**
-       * Enable a service so that it can be used with a project. Operation
+       * Enables a service so that it can be used with a project. Operation response type:
+       * `google.protobuf.Empty`
        *
        * Create a request for the method "services.enable".
        *
@@ -955,7 +961,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Generate service identity for service.
+     * Generates service identity for service.
      *
      * Create a request for the method "services.generateServiceIdentity".
      *
@@ -982,7 +988,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
       /**
-       * Generate service identity for service.
+       * Generates service identity for service.
        *
        * Create a request for the method "services.generateServiceIdentity".
        *
@@ -1251,7 +1257,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * List all services available to the specified project, and the current state of those services
+     * Lists all services available to the specified project, and the current state of those services
      * with respect to the project. The list includes all public services, all services for which the
      * calling user has the `servicemanagement.services.bind` permission, and all services that have
      * already been enabled on the project. The list can be filtered to only include services in a
@@ -1280,7 +1286,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * List all services available to the specified project, and the current state of those services
+       * Lists all services available to the specified project, and the current state of those services
        * with respect to the project. The list includes all public services, all services for which the
        * calling user has the `servicemanagement.services.bind` permission, and all services that have
        * already been enabled on the project. The list can be filtered to only include services in a
@@ -1500,8 +1506,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the serviceusage server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.g
-       *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+       * @param name The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage.
+       *        googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1527,8 +1533,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.g
-       *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+         * @param name The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage.
+       *        googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1607,22 +1613,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The resource name of the quota limit. An example name would be: projects/123/services/ser
-         * viceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+         * The resource name of the quota limit. An example name would be: `projects/123/services/se
+         * rviceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.
-       googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+        /** The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage
+       .googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the quota limit. An example name would be: projects/123/services/ser
-         * viceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
+         * The resource name of the quota limit. An example name would be: `projects/123/services/se
+         * rviceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1656,7 +1662,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+       * Creates or updates multiple admin overrides atomically, all on the same consumer, but on many
        * different metrics or limits. The name field in the quota override message should not be set.
        *
        * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
@@ -1684,7 +1690,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
         /**
-         * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+         * Creates or updates multiple admin overrides atomically, all on the same consumer, but on many
          * different metrics or limits. The name field in the quota override message should not be set.
          *
          * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
@@ -1799,7 +1805,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
+       * Creates or updates multiple consumer overrides atomically, all on the same consumer, but on many
        * different metrics or limits. The name field in the quota override message should not be set.
        *
        * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
@@ -1827,8 +1833,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
         /**
-         * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
-         * different metrics or limits. The name field in the quota override message should not be set.
+         * Creates or updates multiple consumer overrides atomically, all on the same consumer, but on
+         * many different metrics or limits. The name field in the quota override message should not be
+         * set.
          *
          * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
          *
@@ -1953,9 +1960,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Parent of the quotas resource. Some example names would be:
-       *        projects/123/services/serviceconsumermanagement.googleapis.com
-       *        folders/345/services/serviceconsumermanagement.googleapis.com
-       *        organizations/456/services/serviceconsumermanagement.googleapis.com
+       *        `projects/123/services/serviceconsumermanagement.googleapis.com`
+       *        `folders/345/services/serviceconsumermanagement.googleapis.com`
+       *        `organizations/456/services/serviceconsumermanagement.googleapis.com`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1985,9 +1992,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Parent of the quotas resource. Some example names would be:
-       *        projects/123/services/serviceconsumermanagement.googleapis.com
-       *        folders/345/services/serviceconsumermanagement.googleapis.com
-       *        organizations/456/services/serviceconsumermanagement.googleapis.com
+       *        `projects/123/services/serviceconsumermanagement.googleapis.com`
+       *        `folders/345/services/serviceconsumermanagement.googleapis.com`
+       *        `organizations/456/services/serviceconsumermanagement.googleapis.com`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2067,17 +2074,17 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
         /**
          * Parent of the quotas resource. Some example names would be:
-         * projects/123/services/serviceconsumermanagement.googleapis.com
-         * folders/345/services/serviceconsumermanagement.googleapis.com
-         * organizations/456/services/serviceconsumermanagement.googleapis.com
+         * `projects/123/services/serviceconsumermanagement.googleapis.com`
+         * `folders/345/services/serviceconsumermanagement.googleapis.com`
+         * `organizations/456/services/serviceconsumermanagement.googleapis.com`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Parent of the quotas resource. Some example names would be:
-       projects/123/services/serviceconsumermanagement.googleapis.com
-       folders/345/services/serviceconsumermanagement.googleapis.com
-       organizations/456/services/serviceconsumermanagement.googleapis.com
+       `projects/123/services/serviceconsumermanagement.googleapis.com`
+       `folders/345/services/serviceconsumermanagement.googleapis.com`
+       `organizations/456/services/serviceconsumermanagement.googleapis.com`
          */
         public java.lang.String getParent() {
           return parent;
@@ -2085,9 +2092,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
         /**
          * Parent of the quotas resource. Some example names would be:
-         * projects/123/services/serviceconsumermanagement.googleapis.com
-         * folders/345/services/serviceconsumermanagement.googleapis.com
-         * organizations/456/services/serviceconsumermanagement.googleapis.com
+         * `projects/123/services/serviceconsumermanagement.googleapis.com`
+         * `folders/345/services/serviceconsumermanagement.googleapis.com`
+         * `organizations/456/services/serviceconsumermanagement.googleapis.com`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

@@ -19,9 +19,10 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 /**
  * Defines the conditions under which an EgressPolicy matches a request. Conditions are based on
  * information about the ApiOperation intended to be performed on the `resources` specified. Note
- * that if the destination of the request is protected by a ServicePerimeter, then that
+ * that if the destination of the request is also protected by a ServicePerimeter, then that
  * ServicePerimeter must have an IngressPolicy which allows access in order for this request to
- * succeed.
+ * succeed. The request must match `operations` AND `resources` fields in order to be allowed egress
+ * out of the perimeter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -34,8 +35,8 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of ApiOperations that this egress rule applies to. A request matches if it contains an
-   * operation/service in this list.
+   * A list of ApiOperations allowed to be performed by the sources specified in the corresponding
+   * EgressFrom. A request matches if it uses an operation/service in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,18 +49,18 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that match this to
-   * stanza. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this EgressTo rule will authorize access to all resources outside the
-   * perimeter.
+   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
+   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
+   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
+   * authorize access to all resources outside the perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
 
   /**
-   * A list of ApiOperations that this egress rule applies to. A request matches if it contains an
-   * operation/service in this list.
+   * A list of ApiOperations allowed to be performed by the sources specified in the corresponding
+   * EgressFrom. A request matches if it uses an operation/service in this list.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleIdentityAccesscontextmanagerV1ApiOperation> getOperations() {
@@ -67,8 +68,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of ApiOperations that this egress rule applies to. A request matches if it contains an
-   * operation/service in this list.
+   * A list of ApiOperations allowed to be performed by the sources specified in the corresponding
+   * EgressFrom. A request matches if it uses an operation/service in this list.
    * @param operations operations or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressTo setOperations(java.util.List<GoogleIdentityAccesscontextmanagerV1ApiOperation> operations) {
@@ -77,10 +78,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that match this to
-   * stanza. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this EgressTo rule will authorize access to all resources outside the
-   * perimeter.
+   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
+   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
+   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
+   * authorize access to all resources outside the perimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -88,10 +89,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that match this to
-   * stanza. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this EgressTo rule will authorize access to all resources outside the
-   * perimeter.
+   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
+   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
+   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
+   * authorize access to all resources outside the perimeter.
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressTo setResources(java.util.List<java.lang.String> resources) {

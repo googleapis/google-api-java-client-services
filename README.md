@@ -22,7 +22,6 @@ packages on [Maven Central][maven-search].
 | AI Platform Training & Prediction API | [v1](clients/google-api-services-ml/v1) |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
 | API Gateway API | [v1](clients/google-api-services-apigateway/v1), [v1beta](clients/google-api-services-apigateway/v1beta) |
-| API Keys API | [v2](clients/google-api-services-apikeys/v2) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
 | Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |
@@ -63,6 +62,7 @@ packages on [Maven Central][maven-search].
 | Cloud Billing Budget API | [v1](clients/google-api-services-billingbudgets/v1), [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
 | Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1), [v1alpha2](clients/google-api-services-cloudbuild/v1alpha2), [v1beta1](clients/google-api-services-cloudbuild/v1beta1) |
 | Cloud Channel API | [v1](clients/google-api-services-cloudchannel/v1) |
+| Cloud Commerce Partner Procurement API | [v1](clients/google-api-services-cloudcommerceprocurement/v1) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
 | Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2) |
 | Cloud Data Fusion API | [v1](clients/google-api-services-datafusion/v1), [v1beta1](clients/google-api-services-datafusion/v1beta1) |

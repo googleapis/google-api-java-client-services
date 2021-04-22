@@ -30,8 +30,8 @@ package com.google.api.services.drive.model;
 public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
-   * A region of the document represented as a JSON string. See anchor documentation for details on
-   * how to define and interpret anchor properties.
+   * A region of the document represented as a JSON string. For details on defining anchor
+   * properties, refer to  Add comments and replies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean resolved;
 
   /**
-   * A region of the document represented as a JSON string. See anchor documentation for details on
-   * how to define and interpret anchor properties.
+   * A region of the document represented as a JSON string. For details on defining anchor
+   * properties, refer to  Add comments and replies.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnchor() {
@@ -126,8 +126,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A region of the document represented as a JSON string. See anchor documentation for details on
-   * how to define and interpret anchor properties.
+   * A region of the document represented as a JSON string. For details on defining anchor
+   * properties, refer to  Add comments and replies.
    * @param anchor anchor or {@code null} for none
    */
   public Comment setAnchor(java.lang.String anchor) {

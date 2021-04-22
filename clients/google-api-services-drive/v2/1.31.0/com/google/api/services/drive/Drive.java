@@ -5929,7 +5929,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a file's metadata by ID.
+     * Gets a file's metadata or content by ID.
      *
      * Create a request for the method "files.get".
      *
@@ -5950,7 +5950,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}";
 
       /**
-       * Gets a file's metadata by ID.
+       * Gets a file's metadata or content by ID.
        *
        * Create a request for the method "files.get".
        *

@@ -43,6 +43,16 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The encrypted environment to pass into every action. Each action can also specify its own
+   * encrypted environment. The secret must decrypt to a JSON-encoded dictionary where key-value
+   * pairs serve as environment variable names and their values. The decoded environment variables
+   * can overwrite the values specified by the `environment` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Secret encryptedEnvironment;
+
+  /**
    * The environment to pass into every action. Each action can also specify additional environment
    * variables but cannot delete an entry from this map (though they can overwrite it with a
    * different value).
@@ -82,6 +92,29 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
    */
   public Pipeline setActions(java.util.List<Action> actions) {
     this.actions = actions;
+    return this;
+  }
+
+  /**
+   * The encrypted environment to pass into every action. Each action can also specify its own
+   * encrypted environment. The secret must decrypt to a JSON-encoded dictionary where key-value
+   * pairs serve as environment variable names and their values. The decoded environment variables
+   * can overwrite the values specified by the `environment` field.
+   * @return value or {@code null} for none
+   */
+  public Secret getEncryptedEnvironment() {
+    return encryptedEnvironment;
+  }
+
+  /**
+   * The encrypted environment to pass into every action. Each action can also specify its own
+   * encrypted environment. The secret must decrypt to a JSON-encoded dictionary where key-value
+   * pairs serve as environment variable names and their values. The decoded environment variables
+   * can overwrite the values specified by the `environment` field.
+   * @param encryptedEnvironment encryptedEnvironment or {@code null} for none
+   */
+  public Pipeline setEncryptedEnvironment(Secret encryptedEnvironment) {
+    this.encryptedEnvironment = encryptedEnvironment;
     return this;
   }
 

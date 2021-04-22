@@ -18,7 +18,9 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 
 /**
  * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on
- * information about the ApiOperation intended to be performed on the destination of the request.
+ * information about the ApiOperation intended to be performed on the target resource of the
+ * request. The request must satisfy what is defined in `operations` AND `resources` in order to
+ * match.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -31,8 +33,8 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to
-   * perform in this ServicePerimeter.
+   * A list of ApiOperations allowed to be performed by the sources specified in corresponding
+   * IngressFrom in this ServicePerimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,17 +49,16 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   /**
    * A list of resources, currently only projects in the form `projects/`, protected by this
    * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this IngressTo rule will authorize access to all resources inside the
-   * perimeter, provided that the request also matches the `operations` field.
+   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
+   * are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
 
   /**
-   * A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to
-   * perform in this ServicePerimeter.
+   * A list of ApiOperations allowed to be performed by the sources specified in corresponding
+   * IngressFrom in this ServicePerimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleIdentityAccesscontextmanagerV1ApiOperation> getOperations() {
@@ -65,8 +66,8 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   }
 
   /**
-   * A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to
-   * perform in this ServicePerimeter.
+   * A list of ApiOperations allowed to be performed by the sources specified in corresponding
+   * IngressFrom in this ServicePerimeter.
    * @param operations operations or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressTo setOperations(java.util.List<GoogleIdentityAccesscontextmanagerV1ApiOperation> operations) {
@@ -77,9 +78,8 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   /**
    * A list of resources, currently only projects in the form `projects/`, protected by this
    * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this IngressTo rule will authorize access to all resources inside the
-   * perimeter, provided that the request also matches the `operations` field.
+   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
+   * are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -89,9 +89,8 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   /**
    * A list of resources, currently only projects in the form `projects/`, protected by this
    * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. A request matches if it contains a resource in this list. If `*` is specified for
-   * resources, then this IngressTo rule will authorize access to all resources inside the
-   * perimeter, provided that the request also matches the `operations` field.
+   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
+   * are allowed.
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressTo setResources(java.util.List<java.lang.String> resources) {

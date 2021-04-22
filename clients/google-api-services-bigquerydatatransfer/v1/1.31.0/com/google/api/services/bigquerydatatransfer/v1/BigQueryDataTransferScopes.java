@@ -26,9 +26,6 @@ public class BigQueryDataTransferScopes {
   /** View and manage your data in Google BigQuery. */
   public static final String BIGQUERY = "https://www.googleapis.com/auth/bigquery";
 
-  /** View your data in Google BigQuery. */
-  public static final String BIGQUERY_READONLY = "https://www.googleapis.com/auth/bigquery.readonly";
-
   /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -43,7 +40,6 @@ public class BigQueryDataTransferScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(BIGQUERY);
-    set.add(BIGQUERY_READONLY);
     set.add(CLOUD_PLATFORM);
     set.add(CLOUD_PLATFORM_READ_ONLY);
     return java.util.Collections.unmodifiableSet(set);

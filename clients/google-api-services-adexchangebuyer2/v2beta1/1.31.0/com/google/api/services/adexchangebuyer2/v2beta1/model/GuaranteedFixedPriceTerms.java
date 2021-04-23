@@ -53,11 +53,36 @@ public final class GuaranteedFixedPriceTerms extends com.google.api.client.json.
   private java.lang.Long guaranteedLooks;
 
   /**
+   * The lifetime impression cap for CPM sponsorship deals. The deal will stop serving when the cap
+   * is reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long impressionCap;
+
+  /**
    * Daily minimum looks for CPD deal types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minimumDailyLooks;
+
+  /**
+   * For sponsorship deals, this is the percentage of the seller's eligible impressions that the
+   * deal will serve until the cap is reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long percentShareOfVoice;
+
+  /**
+   * The reservation type for a Programmatic Guaranteed deal. This indicates whether the number of
+   * impressions is fixed, or a percent of available impressions. If not specified, the default
+   * reservation type is STANDARD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationType;
 
   /**
    * Fixed price for the specified buyer.
@@ -113,6 +138,25 @@ public final class GuaranteedFixedPriceTerms extends com.google.api.client.json.
   }
 
   /**
+   * The lifetime impression cap for CPM sponsorship deals. The deal will stop serving when the cap
+   * is reached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getImpressionCap() {
+    return impressionCap;
+  }
+
+  /**
+   * The lifetime impression cap for CPM sponsorship deals. The deal will stop serving when the cap
+   * is reached.
+   * @param impressionCap impressionCap or {@code null} for none
+   */
+  public GuaranteedFixedPriceTerms setImpressionCap(java.lang.Long impressionCap) {
+    this.impressionCap = impressionCap;
+    return this;
+  }
+
+  /**
    * Daily minimum looks for CPD deal types.
    * @return value or {@code null} for none
    */
@@ -126,6 +170,46 @@ public final class GuaranteedFixedPriceTerms extends com.google.api.client.json.
    */
   public GuaranteedFixedPriceTerms setMinimumDailyLooks(java.lang.Long minimumDailyLooks) {
     this.minimumDailyLooks = minimumDailyLooks;
+    return this;
+  }
+
+  /**
+   * For sponsorship deals, this is the percentage of the seller's eligible impressions that the
+   * deal will serve until the cap is reached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPercentShareOfVoice() {
+    return percentShareOfVoice;
+  }
+
+  /**
+   * For sponsorship deals, this is the percentage of the seller's eligible impressions that the
+   * deal will serve until the cap is reached.
+   * @param percentShareOfVoice percentShareOfVoice or {@code null} for none
+   */
+  public GuaranteedFixedPriceTerms setPercentShareOfVoice(java.lang.Long percentShareOfVoice) {
+    this.percentShareOfVoice = percentShareOfVoice;
+    return this;
+  }
+
+  /**
+   * The reservation type for a Programmatic Guaranteed deal. This indicates whether the number of
+   * impressions is fixed, or a percent of available impressions. If not specified, the default
+   * reservation type is STANDARD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationType() {
+    return reservationType;
+  }
+
+  /**
+   * The reservation type for a Programmatic Guaranteed deal. This indicates whether the number of
+   * impressions is fixed, or a percent of available impressions. If not specified, the default
+   * reservation type is STANDARD.
+   * @param reservationType reservationType or {@code null} for none
+   */
+  public GuaranteedFixedPriceTerms setReservationType(java.lang.String reservationType) {
+    this.reservationType = reservationType;
     return this;
   }
 

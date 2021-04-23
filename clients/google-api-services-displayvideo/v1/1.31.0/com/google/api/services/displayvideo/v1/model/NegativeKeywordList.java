@@ -60,6 +60,13 @@ public final class NegativeKeywordList extends com.google.api.client.json.Generi
   private java.lang.Long negativeKeywordListId;
 
   /**
+   * Output only. Number of line items that are directly targeting this negative keyword list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long targetedLineItemCount;
+
+  /**
    * Output only. The unique ID of the advertiser the negative keyword list belongs to.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class NegativeKeywordList extends com.google.api.client.json.Generi
    */
   public NegativeKeywordList setNegativeKeywordListId(java.lang.Long negativeKeywordListId) {
     this.negativeKeywordListId = negativeKeywordListId;
+    return this;
+  }
+
+  /**
+   * Output only. Number of line items that are directly targeting this negative keyword list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTargetedLineItemCount() {
+    return targetedLineItemCount;
+  }
+
+  /**
+   * Output only. Number of line items that are directly targeting this negative keyword list.
+   * @param targetedLineItemCount targetedLineItemCount or {@code null} for none
+   */
+  public NegativeKeywordList setTargetedLineItemCount(java.lang.Long targetedLineItemCount) {
+    this.targetedLineItemCount = targetedLineItemCount;
     return this;
   }
 

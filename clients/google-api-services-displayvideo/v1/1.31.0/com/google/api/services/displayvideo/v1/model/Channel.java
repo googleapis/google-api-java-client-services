@@ -60,11 +60,25 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Number of line items that are directly targeting this channel negatively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long negativelyTargetedLineItemCount;
+
+  /**
    * The ID of the partner that owns the channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long partnerId;
+
+  /**
+   * Output only. Number of line items that are directly targeting this channel positively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long positivelyTargetedLineItemCount;
 
   /**
    * The ID of the advertiser that owns the channel.
@@ -137,6 +151,23 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Number of line items that are directly targeting this channel negatively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNegativelyTargetedLineItemCount() {
+    return negativelyTargetedLineItemCount;
+  }
+
+  /**
+   * Output only. Number of line items that are directly targeting this channel negatively.
+   * @param negativelyTargetedLineItemCount negativelyTargetedLineItemCount or {@code null} for none
+   */
+  public Channel setNegativelyTargetedLineItemCount(java.lang.Long negativelyTargetedLineItemCount) {
+    this.negativelyTargetedLineItemCount = negativelyTargetedLineItemCount;
+    return this;
+  }
+
+  /**
    * The ID of the partner that owns the channel.
    * @return value or {@code null} for none
    */
@@ -150,6 +181,23 @@ public final class Channel extends com.google.api.client.json.GenericJson {
    */
   public Channel setPartnerId(java.lang.Long partnerId) {
     this.partnerId = partnerId;
+    return this;
+  }
+
+  /**
+   * Output only. Number of line items that are directly targeting this channel positively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPositivelyTargetedLineItemCount() {
+    return positivelyTargetedLineItemCount;
+  }
+
+  /**
+   * Output only. Number of line items that are directly targeting this channel positively.
+   * @param positivelyTargetedLineItemCount positivelyTargetedLineItemCount or {@code null} for none
+   */
+  public Channel setPositivelyTargetedLineItemCount(java.lang.Long positivelyTargetedLineItemCount) {
+    this.positivelyTargetedLineItemCount = positivelyTargetedLineItemCount;
     return this;
   }
 

@@ -26,6 +26,12 @@ public class ServiceUsageScopes {
   /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** View your data across Google Cloud Platform services. */
+  public static final String CLOUD_PLATFORM_READ_ONLY = "https://www.googleapis.com/auth/cloud-platform.read-only";
+
+  /** Manage your Google API service configuration. */
+  public static final String SERVICE_MANAGEMENT = "https://www.googleapis.com/auth/service.management";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +40,8 @@ public class ServiceUsageScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(CLOUD_PLATFORM_READ_ONLY);
+    set.add(SERVICE_MANAGEMENT);
     return java.util.Collections.unmodifiableSet(set);
   }
 

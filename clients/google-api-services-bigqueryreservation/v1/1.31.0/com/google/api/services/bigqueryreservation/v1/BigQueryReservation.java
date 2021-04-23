@@ -1080,6 +1080,34 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
+           * The optional capacity commitment ID. Capacity commitment name will be generated
+           * automatically if this field is empty. This field must only contain lower case
+           * alphanumeric characters or dash. Max length is 64 characters. NOTE: this ID won't be
+           * kept if the capacity commitment is split or merged.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String capacityCommitmentId;
+
+          /** The optional capacity commitment ID. Capacity commitment name will be generated automatically if
+         this field is empty. This field must only contain lower case alphanumeric characters or dash. Max
+         length is 64 characters. NOTE: this ID won't be kept if the capacity commitment is split or merged.
+           */
+          public java.lang.String getCapacityCommitmentId() {
+            return capacityCommitmentId;
+          }
+
+          /**
+           * The optional capacity commitment ID. Capacity commitment name will be generated
+           * automatically if this field is empty. This field must only contain lower case
+           * alphanumeric characters or dash. Max length is 64 characters. NOTE: this ID won't be
+           * kept if the capacity commitment is split or merged.
+           */
+          public Create setCapacityCommitmentId(java.lang.String capacityCommitmentId) {
+            this.capacityCommitmentId = capacityCommitmentId;
+            return this;
+          }
+
+          /**
            * If true, fail the request if another project in the organization has a capacity
            * commitment.
            */
@@ -3005,6 +3033,32 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
               return this;
             }
 
+            /**
+             * The optional assignment ID. Assignment name will be generated automatically if this
+             * field is empty. This field must only contain lower case alphanumeric characters or
+             * dash. Max length is 64 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String assignmentId;
+
+            /** The optional assignment ID. Assignment name will be generated automatically if this field is empty.
+           This field must only contain lower case alphanumeric characters or dash. Max length is 64
+           characters.
+             */
+            public java.lang.String getAssignmentId() {
+              return assignmentId;
+            }
+
+            /**
+             * The optional assignment ID. Assignment name will be generated automatically if this
+             * field is empty. This field must only contain lower case alphanumeric characters or
+             * dash. Max length is 64 characters.
+             */
+            public Create setAssignmentId(java.lang.String assignmentId) {
+              this.assignmentId = assignmentId;
+              return this;
+            }
+
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
@@ -3496,6 +3550,162 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             @Override
             public Move set(String parameterName, Object value) {
               return (Move) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing assignment. Only the `priority` field can be updated.
+           *
+           * Create a request for the method "assignments.patch".
+           *
+           * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Name of the resource. E.g.:
+           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.Assignment}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.Assignment content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.Assignment> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/[^/]+/assignments/[^/]+$");
+
+            /**
+             * Updates an existing assignment. Only the `priority` field can be updated.
+             *
+             * Create a request for the method "assignments.patch".
+             *
+             * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+             * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Name of the resource. E.g.:
+           *        `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+             * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.Assignment}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.Assignment content) {
+              super(BigQueryReservation.this, "PATCH", REST_PATH, content, com.google.api.services.bigqueryreservation.v1.model.Assignment.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/assignments/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Name of the resource. E.g.:
+             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Name of the resource. E.g.:
+           `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Name of the resource. E.g.:
+             * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reservations/[^/]+/assignments/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Standard field mask for the set of fields to be updated. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Standard field mask for the set of fields to be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Standard field mask for the set of fields to be updated. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
 

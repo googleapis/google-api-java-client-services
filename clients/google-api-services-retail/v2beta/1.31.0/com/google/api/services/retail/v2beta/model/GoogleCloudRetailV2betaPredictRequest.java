@@ -48,11 +48,16 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   private java.lang.String filter;
 
   /**
-   * The labels for the predict request. * Label keys can contain lowercase letters, digits and
-   * hyphens, must start with a letter, and must end with a letter or digit. * Non-zero label values
-   * can contain lowercase letters, digits and hyphens, must start with a letter, and must end with
-   * a letter or digit. * No more than 64 labels can be associated with a given request. See
-   * https://goo.gl/xmQnxf for more information on and examples of labels.
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,11 +151,16 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * The labels for the predict request. * Label keys can contain lowercase letters, digits and
-   * hyphens, must start with a letter, and must end with a letter or digit. * Non-zero label values
-   * can contain lowercase letters, digits and hyphens, must start with a letter, and must end with
-   * a letter or digit. * No more than 64 labels can be associated with a given request. See
-   * https://goo.gl/xmQnxf for more information on and examples of labels.
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -158,11 +168,16 @@ public final class GoogleCloudRetailV2betaPredictRequest extends com.google.api.
   }
 
   /**
-   * The labels for the predict request. * Label keys can contain lowercase letters, digits and
-   * hyphens, must start with a letter, and must end with a letter or digit. * Non-zero label values
-   * can contain lowercase letters, digits and hyphens, must start with a letter, and must end with
-   * a letter or digit. * No more than 64 labels can be associated with a given request. See
-   * https://goo.gl/xmQnxf for more information on and examples of labels.
+   * The labels applied to a resource must meet the following requirements: * Each resource can have
+   * multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a
+   * minimum length of 1 character and a maximum length of 63 characters, and cannot be empty.
+   * Values can be empty, and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRetailV2betaPredictRequest setLabels(java.util.Map<String, java.lang.String> labels) {

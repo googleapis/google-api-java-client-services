@@ -1941,7 +1941,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
-         * is an alias to the `latest` SecretVersion.
+         * is an alias to the most recently created SecretVersion.
          *
          * Create a request for the method "versions.access".
          *
@@ -1949,6 +1949,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Access#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
+         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
          * @return the request
          */
         public Access access(java.lang.String name) throws java.io.IOException {
@@ -1966,7 +1967,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
-           * is an alias to the `latest` SecretVersion.
+           * is an alias to the most recently created SecretVersion.
            *
            * Create a request for the method "versions.access".
            *
@@ -1977,6 +1978,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
+         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
            * @since 1.13
            */
           protected Access(java.lang.String name) {
@@ -2056,12 +2058,14 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
+         `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
            */
           public java.lang.String getName() {
             return name;
@@ -2069,7 +2073,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`.
+           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
            */
           public Access setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2509,8 +2514,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the `latest`
-         * SecretVersion.
+         * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the most
+         * recently created SecretVersion.
          *
          * Create a request for the method "versions.get".
          *
@@ -2518,7 +2523,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2535,8 +2540,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the
-           * `latest` SecretVersion.
+           * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
            *
            * Create a request for the method "versions.get".
            *
@@ -2546,7 +2551,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+         *        `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2626,14 +2631,14 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the
-           * `latest` SecretVersion.
+           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-         `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+         `projects/secrets/versions/latest` is an alias to the most recently created SecretVersion.
            */
           public java.lang.String getName() {
             return name;
@@ -2641,8 +2646,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the SecretVersion in the format
-           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the
-           * `latest` SecretVersion.
+           * `projects/secrets/versions`. `projects/secrets/versions/latest` is an alias to the most
+           * recently created SecretVersion.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

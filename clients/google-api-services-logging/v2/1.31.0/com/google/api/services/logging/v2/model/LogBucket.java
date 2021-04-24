@@ -70,6 +70,16 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> restrictedFields;
+
+  /**
    * Logs will be retained by default for this amount of time, after which they will automatically
    * be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket
    * creation time, the default time of 30 days will be used.
@@ -177,6 +187,29 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
    */
   public LogBucket setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRestrictedFields() {
+    return restrictedFields;
+  }
+
+  /**
+   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
+   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * @param restrictedFields restrictedFields or {@code null} for none
+   */
+  public LogBucket setRestrictedFields(java.util.List<java.lang.String> restrictedFields) {
+    this.restrictedFields = restrictedFields;
     return this;
   }
 

@@ -58,8 +58,8 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
   private java.lang.String gcsStagingDir;
 
   /**
-   * The project id (can be project # or id) that the BigQuery source is in with a length limit of
-   * 128 characters. If not specified, inherits the project id from the parent request.
+   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * 128 characters. If not specified, inherits the project ID from the parent request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +138,8 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
   }
 
   /**
-   * The project id (can be project # or id) that the BigQuery source is in with a length limit of
-   * 128 characters. If not specified, inherits the project id from the parent request.
+   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * 128 characters. If not specified, inherits the project ID from the parent request.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -147,8 +147,8 @@ public final class GoogleCloudRetailV2BigQuerySource extends com.google.api.clie
   }
 
   /**
-   * The project id (can be project # or id) that the BigQuery source is in with a length limit of
-   * 128 characters. If not specified, inherits the project id from the parent request.
+   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * 128 characters. If not specified, inherits the project ID from the parent request.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudRetailV2BigQuerySource setProjectId(java.lang.String projectId) {

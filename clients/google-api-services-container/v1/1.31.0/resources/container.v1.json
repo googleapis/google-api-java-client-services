@@ -2459,7 +2459,7 @@
    }
   }
  },
- "revision": "20210326",
+ "revision": "20210413",
  "rootUrl": "https://container.googleapis.com/",
  "schemas": {
   "AcceleratorConfig": {
@@ -3001,6 +3001,10 @@
     "desiredAddonsConfig": {
      "$ref": "AddonsConfig",
      "description": "Configurations for the various addons available to run in the cluster."
+    },
+    "desiredAutopilot": {
+     "$ref": "Autopilot",
+     "description": "The desired Autopilot configuration for the cluster."
     },
     "desiredBinaryAuthorization": {
      "$ref": "BinaryAuthorization",

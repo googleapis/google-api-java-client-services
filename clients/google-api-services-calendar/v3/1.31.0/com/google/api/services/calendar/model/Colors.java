@@ -31,7 +31,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of calendar colors, mapping from the color ID to its definition. A
-   * calendarListEntry resource refers to one of these color IDs in its color field. Read-only.
+   * calendarListEntry resource refers to one of these color IDs in its colorId field. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of event colors, mapping from the color ID to its definition. An event
-   * resource may refer to one of these color IDs in its color field. Read-only.
+   * resource may refer to one of these color IDs in its colorId field. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of calendar colors, mapping from the color ID to its definition. A
-   * calendarListEntry resource refers to one of these color IDs in its color field. Read-only.
+   * calendarListEntry resource refers to one of these color IDs in its colorId field. Read-only.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ColorDefinition> getCalendar() {
@@ -82,7 +82,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of calendar colors, mapping from the color ID to its definition. A
-   * calendarListEntry resource refers to one of these color IDs in its color field. Read-only.
+   * calendarListEntry resource refers to one of these color IDs in its colorId field. Read-only.
    * @param calendar calendar or {@code null} for none
    */
   public Colors setCalendar(java.util.Map<String, ColorDefinition> calendar) {
@@ -92,7 +92,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of event colors, mapping from the color ID to its definition. An event
-   * resource may refer to one of these color IDs in its color field. Read-only.
+   * resource may refer to one of these color IDs in its colorId field. Read-only.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ColorDefinition> getEvent() {
@@ -101,7 +101,7 @@ public final class Colors extends com.google.api.client.json.GenericJson {
 
   /**
    * A global palette of event colors, mapping from the color ID to its definition. An event
-   * resource may refer to one of these color IDs in its color field. Read-only.
+   * resource may refer to one of these color IDs in its colorId field. Read-only.
    * @param event event or {@code null} for none
    */
   public Colors setEvent(java.util.Map<String, ColorDefinition> event) {

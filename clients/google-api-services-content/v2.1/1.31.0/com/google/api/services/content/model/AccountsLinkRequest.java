@@ -40,7 +40,7 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,16 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   private java.lang.String linkedAccountId;
 
   /**
+   * Additional information required for `paymentServiceProvider` link type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PaymentServiceProviderLinkInfo paymentServiceProviderLinkInfo;
+
+  /**
    * Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
+   * "`paymentProcessing`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +90,7 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`"
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -91,7 +99,7 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * "`eCommercePlatform`" - "`paymentServiceProvider`"
    * @param linkType linkType or {@code null} for none
    */
   public AccountsLinkRequest setLinkType(java.lang.String linkType) {
@@ -117,8 +125,26 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   }
 
   /**
+   * Additional information required for `paymentServiceProvider` link type.
+   * @return value or {@code null} for none
+   */
+  public PaymentServiceProviderLinkInfo getPaymentServiceProviderLinkInfo() {
+    return paymentServiceProviderLinkInfo;
+  }
+
+  /**
+   * Additional information required for `paymentServiceProvider` link type.
+   * @param paymentServiceProviderLinkInfo paymentServiceProviderLinkInfo or {@code null} for none
+   */
+  public AccountsLinkRequest setPaymentServiceProviderLinkInfo(PaymentServiceProviderLinkInfo paymentServiceProviderLinkInfo) {
+    this.paymentServiceProviderLinkInfo = paymentServiceProviderLinkInfo;
+    return this;
+  }
+
+  /**
    * Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
+   * "`paymentProcessing`"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -127,7 +153,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
+   * "`paymentProcessing`"
    * @param services services or {@code null} for none
    */
   public AccountsLinkRequest setServices(java.util.List<java.lang.String> services) {

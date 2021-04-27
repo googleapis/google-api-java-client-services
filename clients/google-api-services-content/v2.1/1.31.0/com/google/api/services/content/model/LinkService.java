@@ -33,7 +33,7 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
   /**
    * Service provided to or by the linked account. Acceptable values are: -
    * "`shoppingActionsOrderManagement`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingAdsProductManagement`"
+   * "`shoppingAdsProductManagement`" - "`paymentProcessing`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
   /**
    * Service provided to or by the linked account. Acceptable values are: -
    * "`shoppingActionsOrderManagement`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingAdsProductManagement`"
+   * "`shoppingAdsProductManagement`" - "`paymentProcessing`"
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -59,7 +59,7 @@ public final class LinkService extends com.google.api.client.json.GenericJson {
   /**
    * Service provided to or by the linked account. Acceptable values are: -
    * "`shoppingActionsOrderManagement`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingAdsProductManagement`"
+   * "`shoppingAdsProductManagement`" - "`paymentProcessing`"
    * @param service service or {@code null} for none
    */
   public LinkService setService(java.lang.String service) {

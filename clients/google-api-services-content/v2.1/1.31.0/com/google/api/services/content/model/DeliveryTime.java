@@ -104,6 +104,15 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   private TransitTable transitTimeTable;
 
   /**
+   * Indicates that the delivery time should be calculated per warehouse (shipping origin location)
+   * based on the settings of the selected carrier. When set, no other transit time related field in
+   * DeliveryTime should be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WarehouseBasedDeliveryTime> warehouseBasedDeliveryTimes;
+
+  /**
    * Business days cutoff time definition. If not configured the cutoff time will be defaulted to
    * 8AM PST.
    * @return value or {@code null} for none
@@ -273,6 +282,27 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
    */
   public DeliveryTime setTransitTimeTable(TransitTable transitTimeTable) {
     this.transitTimeTable = transitTimeTable;
+    return this;
+  }
+
+  /**
+   * Indicates that the delivery time should be calculated per warehouse (shipping origin location)
+   * based on the settings of the selected carrier. When set, no other transit time related field in
+   * DeliveryTime should be set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WarehouseBasedDeliveryTime> getWarehouseBasedDeliveryTimes() {
+    return warehouseBasedDeliveryTimes;
+  }
+
+  /**
+   * Indicates that the delivery time should be calculated per warehouse (shipping origin location)
+   * based on the settings of the selected carrier. When set, no other transit time related field in
+   * DeliveryTime should be set.
+   * @param warehouseBasedDeliveryTimes warehouseBasedDeliveryTimes or {@code null} for none
+   */
+  public DeliveryTime setWarehouseBasedDeliveryTimes(java.util.List<WarehouseBasedDeliveryTime> warehouseBasedDeliveryTimes) {
+    this.warehouseBasedDeliveryTimes = warehouseBasedDeliveryTimes;
     return this;
   }
 

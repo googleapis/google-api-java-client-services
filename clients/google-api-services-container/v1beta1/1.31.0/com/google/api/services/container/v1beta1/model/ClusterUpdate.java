@@ -39,13 +39,6 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AddonsConfig desiredAddonsConfig;
 
   /**
-   * The desired Autopilot configuration for the cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Autopilot desiredAutopilot;
-
-  /**
    * The desired configuration options for the Binary Authorization feature.
    * The value may be {@code null}.
    */
@@ -290,23 +283,6 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAddonsConfig(AddonsConfig desiredAddonsConfig) {
     this.desiredAddonsConfig = desiredAddonsConfig;
-    return this;
-  }
-
-  /**
-   * The desired Autopilot configuration for the cluster.
-   * @return value or {@code null} for none
-   */
-  public Autopilot getDesiredAutopilot() {
-    return desiredAutopilot;
-  }
-
-  /**
-   * The desired Autopilot configuration for the cluster.
-   * @param desiredAutopilot desiredAutopilot or {@code null} for none
-   */
-  public ClusterUpdate setDesiredAutopilot(Autopilot desiredAutopilot) {
-    this.desiredAutopilot = desiredAutopilot;
     return this;
   }
 

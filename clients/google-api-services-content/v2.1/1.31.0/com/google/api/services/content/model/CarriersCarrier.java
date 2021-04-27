@@ -38,6 +38,14 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   private java.lang.String country;
 
   /**
+   * A list of services supported for EDD (Estimated Delivery Date) calculation. This is the list of
+   * valid values for WarehouseBasedDeliveryTime.carrierService.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> eddServices;
+
+  /**
    * The name of the carrier (e.g., `"UPS"`). Always present.
    * The value may be {@code null}.
    */
@@ -46,7 +54,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
 
   /**
    * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
-   * service.
+   * service. This is the list of valid values for CarrierRate.carrierService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +78,25 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * A list of services supported for EDD (Estimated Delivery Date) calculation. This is the list of
+   * valid values for WarehouseBasedDeliveryTime.carrierService.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEddServices() {
+    return eddServices;
+  }
+
+  /**
+   * A list of services supported for EDD (Estimated Delivery Date) calculation. This is the list of
+   * valid values for WarehouseBasedDeliveryTime.carrierService.
+   * @param eddServices eddServices or {@code null} for none
+   */
+  public CarriersCarrier setEddServices(java.util.List<java.lang.String> eddServices) {
+    this.eddServices = eddServices;
+    return this;
+  }
+
+  /**
    * The name of the carrier (e.g., `"UPS"`). Always present.
    * @return value or {@code null} for none
    */
@@ -88,7 +115,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
 
   /**
    * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
-   * service.
+   * service. This is the list of valid values for CarrierRate.carrierService.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -97,7 +124,7 @@ public final class CarriersCarrier extends com.google.api.client.json.GenericJso
 
   /**
    * A list of supported services (e.g., `"ground"`) for that carrier. Contains at least one
-   * service.
+   * service. This is the list of valid values for CarrierRate.carrierService.
    * @param services services or {@code null} for none
    */
   public CarriersCarrier setServices(java.util.List<java.lang.String> services) {

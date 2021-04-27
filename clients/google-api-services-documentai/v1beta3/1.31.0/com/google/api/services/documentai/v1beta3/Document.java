@@ -173,6 +173,154 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * Fetches processor types.
+       *
+       * Create a request for the method "locations.fetchProcessorTypes".
+       *
+       * This request holds the parameters needed by the documentai server.  After setting any optional
+       * parameters, call the {@link FetchProcessorTypes#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project of processor type to list. The available processor types may depend on the
+       *        whitelisting on projects. Format: projects/{project}/locations/{location}
+       * @return the request
+       */
+      public FetchProcessorTypes fetchProcessorTypes(java.lang.String parent) throws java.io.IOException {
+        FetchProcessorTypes result = new FetchProcessorTypes(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchProcessorTypes extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse> {
+
+        private static final String REST_PATH = "v1beta3/{+parent}:fetchProcessorTypes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Fetches processor types.
+         *
+         * Create a request for the method "locations.fetchProcessorTypes".
+         *
+         * This request holds the parameters needed by the the documentai server.  After setting any
+         * optional parameters, call the {@link FetchProcessorTypes#execute()} method to invoke the remote
+         * operation. <p> {@link FetchProcessorTypes#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. The project of processor type to list. The available processor types may depend on the
+       *        whitelisting on projects. Format: projects/{project}/locations/{location}
+         * @since 1.13
+         */
+        protected FetchProcessorTypes(java.lang.String parent) {
+          super(Document.this, "GET", REST_PATH, null, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchProcessorTypes set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchProcessorTypes) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchProcessorTypes setAccessToken(java.lang.String accessToken) {
+          return (FetchProcessorTypes) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchProcessorTypes setAlt(java.lang.String alt) {
+          return (FetchProcessorTypes) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchProcessorTypes setCallback(java.lang.String callback) {
+          return (FetchProcessorTypes) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchProcessorTypes setFields(java.lang.String fields) {
+          return (FetchProcessorTypes) super.setFields(fields);
+        }
+
+        @Override
+        public FetchProcessorTypes setKey(java.lang.String key) {
+          return (FetchProcessorTypes) super.setKey(key);
+        }
+
+        @Override
+        public FetchProcessorTypes setOauthToken(java.lang.String oauthToken) {
+          return (FetchProcessorTypes) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchProcessorTypes setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchProcessorTypes) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchProcessorTypes setQuotaUser(java.lang.String quotaUser) {
+          return (FetchProcessorTypes) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchProcessorTypes setUploadType(java.lang.String uploadType) {
+          return (FetchProcessorTypes) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchProcessorTypes setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchProcessorTypes) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project of processor type to list. The available processor types may depend
+         * on the whitelisting on projects. Format: projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project of processor type to list. The available processor types may depend on the
+       whitelisting on projects. Format: projects/{project}/locations/{location}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project of processor type to list. The available processor types may depend
+         * on the whitelisting on projects. Format: projects/{project}/locations/{location}
+         */
+        public FetchProcessorTypes setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public FetchProcessorTypes set(String parameterName, Object value) {
+          return (FetchProcessorTypes) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".

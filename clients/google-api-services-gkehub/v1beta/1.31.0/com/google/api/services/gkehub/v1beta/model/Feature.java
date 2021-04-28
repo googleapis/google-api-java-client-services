@@ -78,7 +78,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique name of this Feature resource in the format
-   * `projects/locations/global/features`.
+   * `projects/locations/features`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +224,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique name of this Feature resource in the format
-   * `projects/locations/global/features`.
+   * `projects/locations/features`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,7 +233,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique name of this Feature resource in the format
-   * `projects/locations/global/features`.
+   * `projects/locations/features`.
    * @param name name or {@code null} for none
    */
   public Feature setName(java.lang.String name) {

@@ -33,7 +33,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   /**
    * Enable personalized advertising features with this integration. Automatically publish my Google
    * Analytics audience lists and Google Analytics remarketing events/parameters to the linked
-   * Google Ads account. If this field is not set on create/update it will be defaulted to true.
+   * Google Ads account. If this field is not set on create/update, it will be defaulted to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   /**
    * Enable personalized advertising features with this integration. Automatically publish my Google
    * Analytics audience lists and Google Analytics remarketing events/parameters to the linked
-   * Google Ads account. If this field is not set on create/update it will be defaulted to true.
+   * Google Ads account. If this field is not set on create/update, it will be defaulted to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdsPersonalizationEnabled() {
@@ -96,7 +96,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   /**
    * Enable personalized advertising features with this integration. Automatically publish my Google
    * Analytics audience lists and Google Analytics remarketing events/parameters to the linked
-   * Google Ads account. If this field is not set on create/update it will be defaulted to true.
+   * Google Ads account. If this field is not set on create/update, it will be defaulted to true.
    * @param adsPersonalizationEnabled adsPersonalizationEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaGoogleAdsLink setAdsPersonalizationEnabled(java.lang.Boolean adsPersonalizationEnabled) {

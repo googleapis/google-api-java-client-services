@@ -1,6 +1,6 @@
 # Workflows API Client Library for Java
 
-Orchestrate Workflows consisting of Google Cloud APIs, SaaS APIs or private API endpoints.
+Manage workflow definitions. To execute workflows and manage executions, see the Workflows Executions API.
 
 This page contains information about getting started with the Workflows API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-workflows</artifactId>
-      <version>v1beta-rev20210408-1.31.0</version>
+      <version>v1beta-rev20210422-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-workflows:v1beta-rev20210408-1.31.0'
+  compile 'com.google.apis:google-api-services-workflows:v1beta-rev20210422-1.31.0'
 }
 ```
 

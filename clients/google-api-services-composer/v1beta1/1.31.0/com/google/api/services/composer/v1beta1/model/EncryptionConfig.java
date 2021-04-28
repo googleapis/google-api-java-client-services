@@ -17,7 +17,7 @@
 package com.google.api.services.composer.v1beta1.model;
 
 /**
- * The encryption options for the Composer environment and its dependencies.
+ * The encryption options for the Cloud Composer environment and its dependencies.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:

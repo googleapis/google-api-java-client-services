@@ -56,8 +56,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private DatabaseConfig databaseConfig;
 
   /**
-   * Optional. The encryption options for the Composer environment and its dependencies. Cannot be
-   * updated.
+   * Optional. The encryption options for the Cloud Composer environment and its dependencies.
+   * Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,8 +188,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The encryption options for the Composer environment and its dependencies. Cannot be
-   * updated.
+   * Optional. The encryption options for the Cloud Composer environment and its dependencies.
+   * Cannot be updated.
    * @return value or {@code null} for none
    */
   public EncryptionConfig getEncryptionConfig() {
@@ -197,8 +197,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The encryption options for the Composer environment and its dependencies. Cannot be
-   * updated.
+   * Optional. The encryption options for the Cloud Composer environment and its dependencies.
+   * Cannot be updated.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public EnvironmentConfig setEncryptionConfig(EncryptionConfig encryptionConfig) {

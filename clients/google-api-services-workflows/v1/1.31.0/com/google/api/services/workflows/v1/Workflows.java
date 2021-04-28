@@ -20,7 +20,7 @@ package com.google.api.services.workflows.v1;
  * Service definition for Workflows (v1).
  *
  * <p>
- * Orchestrate Workflows consisting of Google Cloud APIs, SaaS APIs or private API endpoints.
+ * Manage workflow definitions. To execute workflows and manage executions, see the Workflows Executions API.
  * </p>
  *
  * <p>

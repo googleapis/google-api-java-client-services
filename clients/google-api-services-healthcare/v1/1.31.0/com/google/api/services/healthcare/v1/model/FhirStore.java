@@ -30,6 +30,17 @@ package com.google.api.services.healthcare.v1.model;
 public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
+   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
+   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
+   * always be changed from the default on an individual API call by setting the HTTP header
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultSearchHandlingStrict;
+
+  /**
    * Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable
    * after FHIR store creation. The default value is false, meaning that the API enforces
    * referential integrity and fails the requests that result in inconsistent state in the FHIR
@@ -119,6 +130,31 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
+   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
+   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
+   * always be changed from the default on an individual API call by setting the HTTP header
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultSearchHandlingStrict() {
+    return defaultSearchHandlingStrict;
+  }
+
+  /**
+   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
+   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
+   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
+   * always be changed from the default on an individual API call by setting the HTTP header
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * @param defaultSearchHandlingStrict defaultSearchHandlingStrict or {@code null} for none
+   */
+  public FhirStore setDefaultSearchHandlingStrict(java.lang.Boolean defaultSearchHandlingStrict) {
+    this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
+    return this;
+  }
 
   /**
    * Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable

@@ -1724,17 +1724,24 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Filter applied to resulting executions. */
+          /**
+           * Filter applied to resulting executions. Currently only supports filtering executions by
+           * a specified schedule_id. Format: "schedule_id="
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter applied to resulting executions.
+          /** Filter applied to resulting executions. Currently only supports filtering executions by a specified
+         schedule_id. Format: "schedule_id="
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter applied to resulting executions. */
+          /**
+           * Filter applied to resulting executions. Currently only supports filtering executions by
+           * a specified schedule_id. Format: "schedule_id="
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;

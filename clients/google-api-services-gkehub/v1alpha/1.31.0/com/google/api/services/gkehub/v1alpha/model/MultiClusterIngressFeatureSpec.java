@@ -30,12 +30,36 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class MultiClusterIngressFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customer's billing structure
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billing;
+
+  /**
    * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects
    * /foo-proj/locations/global/memberships/bar`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String configMembership;
+
+  /**
+   * Customer's billing structure
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBilling() {
+    return billing;
+  }
+
+  /**
+   * Customer's billing structure
+   * @param billing billing or {@code null} for none
+   */
+  public MultiClusterIngressFeatureSpec setBilling(java.lang.String billing) {
+    this.billing = billing;
+    return this;
+  }
 
   /**
    * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects

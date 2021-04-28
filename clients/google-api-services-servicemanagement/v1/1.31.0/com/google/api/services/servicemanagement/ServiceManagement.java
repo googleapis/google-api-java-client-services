@@ -1323,9 +1323,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
     }
     /**
      * Lists managed services. Returns all public services. For authenticated users, also returns all
-     * services the calling user has "servicemanagement.services.get" permission for. **BETA:** If the
-     * caller specifies the `consumer_id`, it returns only the services enabled on the consumer. The
-     * `consumer_id` must have the format of "project:{PROJECT-ID}".
+     * services the calling user has "servicemanagement.services.get" permission for.
      *
      * Create a request for the method "services.list".
      *
@@ -1346,9 +1344,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * Lists managed services. Returns all public services. For authenticated users, also returns all
-       * services the calling user has "servicemanagement.services.get" permission for. **BETA:** If the
-       * caller specifies the `consumer_id`, it returns only the services enabled on the consumer. The
-       * `consumer_id` must have the format of "project:{PROJECT-ID}".
+       * services the calling user has "servicemanagement.services.get" permission for.
        *
        * Create a request for the method "services.list".
        *

@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class ParameterMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Additional metadata for describing this parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> customMetadata;
+
+  /**
    * Required. The help text to display for the parameter.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> regexes;
+
+  /**
+   * Optional. Additional metadata for describing this parameter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getCustomMetadata() {
+    return customMetadata;
+  }
+
+  /**
+   * Optional. Additional metadata for describing this parameter.
+   * @param customMetadata customMetadata or {@code null} for none
+   */
+  public ParameterMetadata setCustomMetadata(java.util.Map<String, java.lang.String> customMetadata) {
+    this.customMetadata = customMetadata;
+    return this;
+  }
 
   /**
    * Required. The help text to display for the parameter.

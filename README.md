@@ -182,6 +182,7 @@ packages on [Maven Central][maven-search].
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | My Business Account Management API | [v1](clients/google-api-services-mybusinessaccountmanagement/v1) |
 | My Business Lodging API | [v1](clients/google-api-services-mybusinesslodging/v1) |
+| My Business Place Actions API | [v1](clients/google-api-services-mybusinessplaceactions/v1) |
 | Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
@@ -189,6 +190,7 @@ packages on [Maven Central][maven-search].
 | On-Demand Scanning API | [v1](clients/google-api-services-ondemandscanning/v1), [v1beta1](clients/google-api-services-ondemandscanning/v1beta1) |
 | Organization Policy API | [v2](clients/google-api-services-orgpolicy/v2) |
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
+| Payments Reseller Subscription API | [v1](clients/google-api-services-paymentsresellersubscription/v1) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
 | Policy Simulator API | [v1](clients/google-api-services-policysimulator/v1), [v1beta1](clients/google-api-services-policysimulator/v1beta1) |

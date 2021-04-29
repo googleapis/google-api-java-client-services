@@ -78,6 +78,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Cloud region where this snapshot lives in, e.g., "us-central1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * The job this snapshot was created from.
    * The value may be {@code null}.
    */
@@ -197,6 +204,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setPubsubMetadata(java.util.List<PubsubSnapshotMetadata> pubsubMetadata) {
     this.pubsubMetadata = pubsubMetadata;
+    return this;
+  }
+
+  /**
+   * Cloud region where this snapshot lives in, e.g., "us-central1".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Cloud region where this snapshot lives in, e.g., "us-central1".
+   * @param region region or {@code null} for none
+   */
+  public Snapshot setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

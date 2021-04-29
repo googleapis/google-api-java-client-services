@@ -37,6 +37,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer dnsKeysPerManagedZone;
 
   /**
+   * Maximum allowed number of GKE clusters to which a privately scoped zone can be attached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer gkeClustersPerManagedZone;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,6 +55,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer managedZones;
+
+  /**
+   * Maximum allowed number of managed zones which can be attached to a GKE cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer managedZonesPerGkeCluster;
 
   /**
    * Maximum allowed number of managed zones which can be attached to a network.
@@ -164,6 +178,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of GKE clusters to which a privately scoped zone can be attached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGkeClustersPerManagedZone() {
+    return gkeClustersPerManagedZone;
+  }
+
+  /**
+   * Maximum allowed number of GKE clusters to which a privately scoped zone can be attached.
+   * @param gkeClustersPerManagedZone gkeClustersPerManagedZone or {@code null} for none
+   */
+  public Quota setGkeClustersPerManagedZone(java.lang.Integer gkeClustersPerManagedZone) {
+    this.gkeClustersPerManagedZone = gkeClustersPerManagedZone;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -192,6 +223,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setManagedZones(java.lang.Integer managedZones) {
     this.managedZones = managedZones;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of managed zones which can be attached to a GKE cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getManagedZonesPerGkeCluster() {
+    return managedZonesPerGkeCluster;
+  }
+
+  /**
+   * Maximum allowed number of managed zones which can be attached to a GKE cluster.
+   * @param managedZonesPerGkeCluster managedZonesPerGkeCluster or {@code null} for none
+   */
+  public Quota setManagedZonesPerGkeCluster(java.lang.Integer managedZonesPerGkeCluster) {
+    this.managedZonesPerGkeCluster = managedZonesPerGkeCluster;
     return this;
   }
 

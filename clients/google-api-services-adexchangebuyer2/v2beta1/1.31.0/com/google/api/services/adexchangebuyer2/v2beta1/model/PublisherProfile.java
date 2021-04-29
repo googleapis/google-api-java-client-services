@@ -17,10 +17,9 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * Note: this resource requires whitelisting for access. Please contact your account manager for
- * access to Marketplace resources. Represents a publisher profile
- * (https://support.google.com/admanager/answer/6035806) in Marketplace. All fields are read only.
- * All string fields are free-form text entered by the publisher unless noted otherwise.
+ * Represents a publisher profile (https://support.google.com/admanager/answer/6035806) in
+ * Marketplace. All fields are read only. All string fields are free-form text entered by the
+ * publisher unless noted otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

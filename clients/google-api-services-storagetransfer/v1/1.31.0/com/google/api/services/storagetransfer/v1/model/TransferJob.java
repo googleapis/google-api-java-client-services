@@ -59,8 +59,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private String lastModificationTime;
 
   /**
-   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
-   * if at least one TransferOperation has been created for this JobConfig.
+   * The name of the most recently started TransferOperation of this JobConfig. Present if a
+   * TransferOperation has been created for this JobConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,8 +191,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
-   * if at least one TransferOperation has been created for this JobConfig.
+   * The name of the most recently started TransferOperation of this JobConfig. Present if a
+   * TransferOperation has been created for this JobConfig.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestOperationName() {
@@ -200,8 +200,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
-   * if at least one TransferOperation has been created for this JobConfig.
+   * The name of the most recently started TransferOperation of this JobConfig. Present if a
+   * TransferOperation has been created for this JobConfig.
    * @param latestOperationName latestOperationName or {@code null} for none
    */
   public TransferJob setLatestOperationName(java.lang.String latestOperationName) {

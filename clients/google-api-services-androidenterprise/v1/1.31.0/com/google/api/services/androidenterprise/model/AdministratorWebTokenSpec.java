@@ -81,6 +81,13 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private AdministratorWebTokenSpecWebApps webApps;
 
   /**
+   * Options for displaying the Zero Touch page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecZeroTouch zeroTouch;
+
+  /**
    * Options for displaying the Managed Configuration page.
    * @return value or {@code null} for none
    */
@@ -198,6 +205,23 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
    */
   public AdministratorWebTokenSpec setWebApps(AdministratorWebTokenSpecWebApps webApps) {
     this.webApps = webApps;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Zero Touch page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecZeroTouch getZeroTouch() {
+    return zeroTouch;
+  }
+
+  /**
+   * Options for displaying the Zero Touch page.
+   * @param zeroTouch zeroTouch or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setZeroTouch(AdministratorWebTokenSpecZeroTouch zeroTouch) {
+    this.zeroTouch = zeroTouch;
     return this;
   }
 

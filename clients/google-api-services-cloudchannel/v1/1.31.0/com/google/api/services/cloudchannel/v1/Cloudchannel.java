@@ -5892,6 +5892,159 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Returns the requested Offer resource. Possible error codes: * PERMISSION_DENIED: The entitlement
+         * doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or
+         * invalid. * NOT_FOUND: Entitlement or offer was not found. Return value: The Offer resource.
+         *
+         * Create a request for the method "entitlements.lookupOffer".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link LookupOffer#execute()} method to invoke the remote operation.
+         *
+         * @param entitlement Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses the format:
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+         * @return the request
+         */
+        public LookupOffer lookupOffer(java.lang.String entitlement) throws java.io.IOException {
+          LookupOffer result = new LookupOffer(entitlement);
+          initialize(result);
+          return result;
+        }
+
+        public class LookupOffer extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Offer> {
+
+          private static final String REST_PATH = "v1/{+entitlement}:lookupOffer";
+
+          private final java.util.regex.Pattern ENTITLEMENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+
+          /**
+           * Returns the requested Offer resource. Possible error codes: * PERMISSION_DENIED: The
+           * entitlement doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are
+           * missing or invalid. * NOT_FOUND: Entitlement or offer was not found. Return value: The Offer
+           * resource.
+           *
+           * Create a request for the method "entitlements.lookupOffer".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link LookupOffer#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * LookupOffer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param entitlement Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses the format:
+         *        accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+           * @since 1.13
+           */
+          protected LookupOffer(java.lang.String entitlement) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Offer.class);
+            this.entitlement = com.google.api.client.util.Preconditions.checkNotNull(entitlement, "Required parameter entitlement must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENTITLEMENT_PATTERN.matcher(entitlement).matches(),
+                  "Parameter entitlement must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public LookupOffer set$Xgafv(java.lang.String $Xgafv) {
+            return (LookupOffer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public LookupOffer setAccessToken(java.lang.String accessToken) {
+            return (LookupOffer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public LookupOffer setAlt(java.lang.String alt) {
+            return (LookupOffer) super.setAlt(alt);
+          }
+
+          @Override
+          public LookupOffer setCallback(java.lang.String callback) {
+            return (LookupOffer) super.setCallback(callback);
+          }
+
+          @Override
+          public LookupOffer setFields(java.lang.String fields) {
+            return (LookupOffer) super.setFields(fields);
+          }
+
+          @Override
+          public LookupOffer setKey(java.lang.String key) {
+            return (LookupOffer) super.setKey(key);
+          }
+
+          @Override
+          public LookupOffer setOauthToken(java.lang.String oauthToken) {
+            return (LookupOffer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public LookupOffer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (LookupOffer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public LookupOffer setQuotaUser(java.lang.String quotaUser) {
+            return (LookupOffer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public LookupOffer setUploadType(java.lang.String uploadType) {
+            return (LookupOffer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public LookupOffer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (LookupOffer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses
+           * the format: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String entitlement;
+
+          /** Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses the format:
+         accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+           */
+          public java.lang.String getEntitlement() {
+            return entitlement;
+          }
+
+          /**
+           * Required. The resource name of the entitlement to retrieve the Offer. Entitlement uses
+           * the format: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+           */
+          public LookupOffer setEntitlement(java.lang.String entitlement) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENTITLEMENT_PATTERN.matcher(entitlement).matches(),
+                  "Parameter entitlement must conform to the pattern " +
+                  "^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
+            }
+            this.entitlement = entitlement;
+            return this;
+          }
+
+          @Override
+          public LookupOffer set(String parameterName, Object value) {
+            return (LookupOffer) super.set(parameterName, value);
+          }
+        }
+        /**
          * Starts paid service for a trial entitlement. Starts paid service for a trial entitlement
          * immediately. This method is only applicable if a plan is set up for a trial entitlement but has
          * some trial days remaining. Possible error codes: * PERMISSION_DENIED: The customer doesn't belong

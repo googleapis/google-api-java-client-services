@@ -282,6 +282,32 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
+      /**
+       * Indicates that the changes in this edit will not be reviewed until they are explicitly sent
+       * for review from the Google Play Console UI. These changes will be added to any other
+       * changes that are not yet sent for review.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean changesNotSentForReview;
+
+      /** Indicates that the changes in this edit will not be reviewed until they are explicitly sent for
+     review from the Google Play Console UI. These changes will be added to any other changes that are
+     not yet sent for review.
+       */
+      public java.lang.Boolean getChangesNotSentForReview() {
+        return changesNotSentForReview;
+      }
+
+      /**
+       * Indicates that the changes in this edit will not be reviewed until they are explicitly sent
+       * for review from the Google Play Console UI. These changes will be added to any other
+       * changes that are not yet sent for review.
+       */
+      public Commit setChangesNotSentForReview(java.lang.Boolean changesNotSentForReview) {
+        this.changesNotSentForReview = changesNotSentForReview;
+        return this;
+      }
+
       @Override
       public Commit set(String parameterName, Object value) {
         return (Commit) super.set(parameterName, value);

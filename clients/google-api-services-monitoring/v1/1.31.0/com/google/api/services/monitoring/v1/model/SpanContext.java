@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * The context of a span, attached to Exemplars in Distribution values during aggregation.It
- * contains the name of a span with format:
+ * The context of a span. This is attached to an Exemplar in Distribution values during
+ * aggregation.It contains the name of a span with format:
  * projects/[PROJECT_ID_OR_NUMBER]/traces/[TRACE_ID]/spans/[SPAN_ID]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

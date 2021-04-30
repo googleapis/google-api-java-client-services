@@ -39,8 +39,7 @@ public final class UpgradeAvailableEvent extends com.google.api.client.json.Gene
   private ReleaseChannel releaseChannel;
 
   /**
-   * Optional. Optional relative path to the resource. For example, the relative path of the node
-   * pool.
+   * Optional relative path to the resource. For example, the relative path of the node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +77,7 @@ public final class UpgradeAvailableEvent extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Optional relative path to the resource. For example, the relative path of the node
-   * pool.
+   * Optional relative path to the resource. For example, the relative path of the node pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -87,8 +85,7 @@ public final class UpgradeAvailableEvent extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Optional relative path to the resource. For example, the relative path of the node
-   * pool.
+   * Optional relative path to the resource. For example, the relative path of the node pool.
    * @param resource resource or {@code null} for none
    */
   public UpgradeAvailableEvent setResource(java.lang.String resource) {

@@ -17,11 +17,9 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * Note: this resource requires whitelisting for access. Please contact your account manager for
- * access to Marketplace resources. Represents a proposal in the Marketplace. A proposal is the unit
- * of negotiation between a seller and a buyer and contains deals which are served. Note: you can
- * not update, create, or otherwise modify Private Auction or Preferred Deals deals through the API.
- * Fields are updatable unless noted otherwise.
+ * Represents a proposal in the Marketplace. A proposal is the unit of negotiation between a seller
+ * and a buyer and contains deals which are served. Note: You can't update, create, or otherwise
+ * modify Private Auction deals through the API. Fields are updatable unless noted otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

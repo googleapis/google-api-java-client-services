@@ -74,6 +74,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Name of the file share in the source Cloud Filestore instance that the backup is created from.
    * The value may be {@code null}.
    */
@@ -215,6 +222,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Backup setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

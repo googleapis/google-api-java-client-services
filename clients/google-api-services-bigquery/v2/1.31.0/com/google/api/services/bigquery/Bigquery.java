@@ -2553,7 +2553,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists all models in the specified dataset. Requires the READER dataset role.
+     * Lists all models in the specified dataset. Requires the READER dataset role. After retrieving the
+     * list of models, you can get information about a particular model by calling the models.get
+     * method.
      *
      * Create a request for the method "models.list".
      *
@@ -2581,7 +2583,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Lists all models in the specified dataset. Requires the READER dataset role.
+       * Lists all models in the specified dataset. Requires the READER dataset role. After retrieving
+       * the list of models, you can get information about a particular model by calling the models.get
+       * method.
        *
        * Create a request for the method "models.list".
        *

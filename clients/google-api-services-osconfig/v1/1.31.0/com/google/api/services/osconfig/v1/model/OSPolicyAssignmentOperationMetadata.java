@@ -38,8 +38,8 @@ public final class OSPolicyAssignmentOperationMetadata extends com.google.api.cl
   private java.lang.String apiMethod;
 
   /**
-   * Reference to the `OSPolicyAssignment` API resource. Format: projects/{project_number}/locations
-   * /{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}
+   * Reference to the `OSPolicyAssignment` API resource. Format: `projects/{project_number}/location
+   * s/{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class OSPolicyAssignmentOperationMetadata extends com.google.api.cl
   }
 
   /**
-   * Reference to the `OSPolicyAssignment` API resource. Format: projects/{project_number}/locations
-   * /{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}
+   * Reference to the `OSPolicyAssignment` API resource. Format: `projects/{project_number}/location
+   * s/{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getOsPolicyAssignment() {
@@ -93,8 +93,8 @@ public final class OSPolicyAssignmentOperationMetadata extends com.google.api.cl
   }
 
   /**
-   * Reference to the `OSPolicyAssignment` API resource. Format: projects/{project_number}/locations
-   * /{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}
+   * Reference to the `OSPolicyAssignment` API resource. Format: `projects/{project_number}/location
+   * s/{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}`
    * @param osPolicyAssignment osPolicyAssignment or {@code null} for none
    */
   public OSPolicyAssignmentOperationMetadata setOsPolicyAssignment(java.lang.String osPolicyAssignment) {

@@ -3455,7 +3455,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -3488,7 +3489,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -3561,7 +3563,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
@@ -3569,7 +3573,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
        organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
-       id/logs/syslog".For more information about log names, see LogEntry.
+       id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information
+       about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
@@ -3580,7 +3585,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -9528,7 +9535,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -9561,7 +9569,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -9634,7 +9643,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
@@ -9642,7 +9653,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
        organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
-       id/logs/syslog".For more information about log names, see LogEntry.
+       id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information
+       about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
@@ -9653,7 +9665,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -13480,7 +13494,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
      *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
      *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-     *        project-id/logs/syslog".For more information about log names, see LogEntry.
+     *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+     *        more information about log names, see LogEntry.
      * @return the request
      */
     public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -13513,7 +13528,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
      *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
      *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-     *        project-id/logs/syslog".For more information about log names, see LogEntry.
+     *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+     *        more information about log names, see LogEntry.
        * @since 1.13
        */
       protected Delete(java.lang.String logName) {
@@ -13586,7 +13602,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       * project-id/logs/syslog".For more information about log names, see LogEntry.
+       * project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       * more information about log names, see LogEntry.
        */
       @com.google.api.client.util.Key
       private java.lang.String logName;
@@ -13594,7 +13611,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
      organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
      folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
-     id/logs/syslog".For more information about log names, see LogEntry.
+     id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information
+     about log names, see LogEntry.
        */
       public java.lang.String getLogName() {
         return logName;
@@ -13605,7 +13623,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       * project-id/logs/syslog".For more information about log names, see LogEntry.
+       * project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       * more information about log names, see LogEntry.
        */
       public Delete setLogName(java.lang.String logName) {
         if (!getSuppressPatternChecks()) {
@@ -17695,7 +17714,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -17728,7 +17748,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -17801,7 +17822,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
@@ -17809,7 +17832,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
        organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
-       id/logs/syslog".For more information about log names, see LogEntry.
+       id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information
+       about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
@@ -17820,7 +17844,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {
@@ -22553,7 +22579,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
        * @return the request
        */
       public Delete delete(java.lang.String logName) throws java.io.IOException {
@@ -22586,7 +22613,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
        *        billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        *        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-       *        project-id/logs/syslog".For more information about log names, see LogEntry.
+       *        project-id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For
+       *        more information about log names, see LogEntry.
          * @since 1.13
          */
         protected Delete(java.lang.String logName) {
@@ -22659,7 +22687,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         @com.google.api.client.util.Key
         private java.lang.String logName;
@@ -22667,7 +22697,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /** Required. The resource name of the log to delete: projects/[PROJECT_ID]/logs/[LOG_ID]
        organizations/[ORGANIZATION_ID]/logs/[LOG_ID] billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
        folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-project-
-       id/logs/syslog".For more information about log names, see LogEntry.
+       id/logs/syslog", "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information
+       about log names, see LogEntry.
          */
         public java.lang.String getLogName() {
           return logName;
@@ -22678,7 +22709,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
          * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
          * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example, "projects/my-
-         * project-id/logs/syslog".For more information about log names, see LogEntry.
+         * project-id/logs/syslog",
+         * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more information about
+         * log names, see LogEntry.
          */
         public Delete setLogName(java.lang.String logName) {
           if (!getSuppressPatternChecks()) {

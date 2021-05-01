@@ -105,6 +105,17 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableFuse;
 
   /**
+   * The encrypted environment to pass into the container. This environment is merged with values
+   * specified in the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate
+   * values. The secret must decrypt to a JSON-encoded dictionary where key-value pairs serve as
+   * environment variable names and their values. The decoded environment variables can overwrite
+   * the values specified by the `environment` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Secret encryptedEnvironment;
+
+  /**
    * If specified, overrides the `ENTRYPOINT` specified in the container.
    * The value may be {@code null}.
    */
@@ -387,6 +398,31 @@ public final class Action extends com.google.api.client.json.GenericJson {
    */
   public Action setEnableFuse(java.lang.Boolean enableFuse) {
     this.enableFuse = enableFuse;
+    return this;
+  }
+
+  /**
+   * The encrypted environment to pass into the container. This environment is merged with values
+   * specified in the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate
+   * values. The secret must decrypt to a JSON-encoded dictionary where key-value pairs serve as
+   * environment variable names and their values. The decoded environment variables can overwrite
+   * the values specified by the `environment` field.
+   * @return value or {@code null} for none
+   */
+  public Secret getEncryptedEnvironment() {
+    return encryptedEnvironment;
+  }
+
+  /**
+   * The encrypted environment to pass into the container. This environment is merged with values
+   * specified in the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate
+   * values. The secret must decrypt to a JSON-encoded dictionary where key-value pairs serve as
+   * environment variable names and their values. The decoded environment variables can overwrite
+   * the values specified by the `environment` field.
+   * @param encryptedEnvironment encryptedEnvironment or {@code null} for none
+   */
+  public Action setEncryptedEnvironment(Secret encryptedEnvironment) {
+    this.encryptedEnvironment = encryptedEnvironment;
     return this;
   }
 

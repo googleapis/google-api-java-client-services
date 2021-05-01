@@ -32,7 +32,8 @@ public final class AdmissionWhitelistPattern extends com.google.api.client.json.
 
   /**
    * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
-   * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
+   * trailing `*` wildcard, but this is allowed only in text after the `registry/` part. This also
+   * supports a trailing `**` wildcard which matches subdirectories of a given entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class AdmissionWhitelistPattern extends com.google.api.client.json.
 
   /**
    * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
-   * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
+   * trailing `*` wildcard, but this is allowed only in text after the `registry/` part. This also
+   * supports a trailing `**` wildcard which matches subdirectories of a given entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamePattern() {
@@ -49,7 +51,8 @@ public final class AdmissionWhitelistPattern extends com.google.api.client.json.
 
   /**
    * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
-   * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
+   * trailing `*` wildcard, but this is allowed only in text after the `registry/` part. This also
+   * supports a trailing `**` wildcard which matches subdirectories of a given entry.
    * @param namePattern namePattern or {@code null} for none
    */
   public AdmissionWhitelistPattern setNamePattern(java.lang.String namePattern) {

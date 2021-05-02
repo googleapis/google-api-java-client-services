@@ -61,7 +61,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. A list of the URIs of all attached spokes
+   * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not
+   * be included in future API versions. Call ListSpokes on each region instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +160,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of the URIs of all attached spokes
+   * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not
+   * be included in future API versions. Call ListSpokes on each region instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSpokes() {
@@ -167,7 +169,8 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of the URIs of all attached spokes
+   * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not
+   * be included in future API versions. Call ListSpokes on each region instead.
    * @param spokes spokes or {@code null} for none
    */
   public Hub setSpokes(java.util.List<java.lang.String> spokes) {

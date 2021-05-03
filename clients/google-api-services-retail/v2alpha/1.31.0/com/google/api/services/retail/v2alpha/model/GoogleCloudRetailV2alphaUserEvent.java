@@ -18,7 +18,7 @@ package com.google.api.services.retail.v2alpha.model;
 
 /**
  * UserEvent captures all metadata information Retail API needs to know about how end users interact
- * with customers' website.
+ * with customers' website. Next tag: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -168,6 +168,14 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String searchQuery;
+
+  /**
+   * Represents the user sessions to aggregate user behavior within a time period. If not set,
+   * heuristics will be used to autogenerate one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sessionId;
 
   /**
    * Complete URL (window.location.href) of the user's current page. When using the client side
@@ -486,6 +494,25 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   public GoogleCloudRetailV2alphaUserEvent setSearchQuery(java.lang.String searchQuery) {
     this.searchQuery = searchQuery;
+    return this;
+  }
+
+  /**
+   * Represents the user sessions to aggregate user behavior within a time period. If not set,
+   * heuristics will be used to autogenerate one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSessionId() {
+    return sessionId;
+  }
+
+  /**
+   * Represents the user sessions to aggregate user behavior within a time period. If not set,
+   * heuristics will be used to autogenerate one.
+   * @param sessionId sessionId or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaUserEvent setSessionId(java.lang.String sessionId) {
+    this.sessionId = sessionId;
     return this;
   }
 

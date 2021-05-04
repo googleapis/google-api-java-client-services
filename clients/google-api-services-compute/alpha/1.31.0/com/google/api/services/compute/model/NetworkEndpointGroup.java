@@ -169,7 +169,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String selfLinkWithId;
 
   /**
-   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
    * cloudFunction or serverlessDeployment may be set.
    * The value may be {@code null}.
    */
@@ -518,7 +518,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
    * cloudFunction or serverlessDeployment may be set.
    * @return value or {@code null} for none
    */
@@ -527,7 +527,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
    * cloudFunction or serverlessDeployment may be set.
    * @param serverlessDeployment serverlessDeployment or {@code null} for none
    */

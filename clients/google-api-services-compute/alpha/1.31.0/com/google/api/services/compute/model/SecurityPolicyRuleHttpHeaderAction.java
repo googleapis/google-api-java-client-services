@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRuleHttpHeaderAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of request headers to add or overwrite if they?re already present.
+   * The list of request headers to add or overwrite if they're already present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOption> requestHeadersToAdds;
 
   /**
-   * The list of request headers to add or overwrite if they?re already present.
+   * The list of request headers to add or overwrite if they're already present.
    * @return value or {@code null} for none
    */
   public java.util.List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOption> getRequestHeadersToAdds() {
@@ -45,7 +45,7 @@ public final class SecurityPolicyRuleHttpHeaderAction extends com.google.api.cli
   }
 
   /**
-   * The list of request headers to add or overwrite if they?re already present.
+   * The list of request headers to add or overwrite if they're already present.
    * @param requestHeadersToAdds requestHeadersToAdds or {@code null} for none
    */
   public SecurityPolicyRuleHttpHeaderAction setRequestHeadersToAdds(java.util.List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOption> requestHeadersToAdds) {

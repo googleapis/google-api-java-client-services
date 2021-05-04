@@ -50,6 +50,21 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
+   * maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maintenanceFreezeDurationHours;
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceInterval;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -126,6 +141,42 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
+    return this;
+  }
+
+  /**
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
+   * maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaintenanceFreezeDurationHours() {
+    return maintenanceFreezeDurationHours;
+  }
+
+  /**
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
+   * maintenance.
+   * @param maintenanceFreezeDurationHours maintenanceFreezeDurationHours or {@code null} for none
+   */
+  public Scheduling setMaintenanceFreezeDurationHours(java.lang.Integer maintenanceFreezeDurationHours) {
+    this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+    return this;
+  }
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceInterval() {
+    return maintenanceInterval;
+  }
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * @param maintenanceInterval maintenanceInterval or {@code null} for none
+   */
+  public Scheduling setMaintenanceInterval(java.lang.String maintenanceInterval) {
+    this.maintenanceInterval = maintenanceInterval;
     return this;
   }
 

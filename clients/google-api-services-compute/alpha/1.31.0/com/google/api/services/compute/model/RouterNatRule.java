@@ -45,7 +45,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding ?action? is enforced.
+   * against. If it evaluates to true, the corresponding `action` is enforced.
    *
    * The following examples are valid match expressions:
    *
@@ -101,7 +101,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding ?action? is enforced.
+   * against. If it evaluates to true, the corresponding `action` is enforced.
    *
    * The following examples are valid match expressions:
    *
@@ -116,7 +116,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding ?action? is enforced.
+   * against. If it evaluates to true, the corresponding `action` is enforced.
    *
    * The following examples are valid match expressions:
    *

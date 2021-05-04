@@ -72,6 +72,14 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * ILB route behavior when ILB is deemed unhealthy based on user specified threshold on the
+   * Backend Service of the internal load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ilbRouteBehaviorOnUnhealthy;
+
+  /**
    * [Output Only] Type of this resource. Always compute#routes for Route resources.
    * The value may be {@code null}.
    */
@@ -296,6 +304,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * ILB route behavior when ILB is deemed unhealthy based on user specified threshold on the
+   * Backend Service of the internal load balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIlbRouteBehaviorOnUnhealthy() {
+    return ilbRouteBehaviorOnUnhealthy;
+  }
+
+  /**
+   * ILB route behavior when ILB is deemed unhealthy based on user specified threshold on the
+   * Backend Service of the internal load balancing.
+   * @param ilbRouteBehaviorOnUnhealthy ilbRouteBehaviorOnUnhealthy or {@code null} for none
+   */
+  public Route setIlbRouteBehaviorOnUnhealthy(java.lang.String ilbRouteBehaviorOnUnhealthy) {
+    this.ilbRouteBehaviorOnUnhealthy = ilbRouteBehaviorOnUnhealthy;
     return this;
   }
 

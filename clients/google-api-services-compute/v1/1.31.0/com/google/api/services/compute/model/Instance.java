@@ -248,13 +248,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * PostKeyRevocationActionType of the instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String postKeyRevocationActionType;
-
-  /**
    * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
    * as default.
    * The value may be {@code null}.
@@ -913,23 +906,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
-    return this;
-  }
-
-  /**
-   * PostKeyRevocationActionType of the instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPostKeyRevocationActionType() {
-    return postKeyRevocationActionType;
-  }
-
-  /**
-   * PostKeyRevocationActionType of the instance.
-   * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
-   */
-  public Instance setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
-    this.postKeyRevocationActionType = postKeyRevocationActionType;
     return this;
   }
 

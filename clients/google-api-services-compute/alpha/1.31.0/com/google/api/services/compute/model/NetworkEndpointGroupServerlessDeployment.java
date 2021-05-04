@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration for a Serverless Deployment network endpoint group (NEG). The platform must be
- * provided.
+ * Configuration for a serverless network endpoint group (NEG). The platform must be provided.
  *
  * Note: The target backend service must be in the same project and located in the same region as
  * the Serverless NEG.
@@ -36,8 +35,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   /**
    * The platform of the backend target(s) of this NEG. Possible values include:
    *
-   *   - apigateway.googleapis.com  - appengine.googleapies.com  - cloudfunctions.googleapis.com  -
-   * run.googleapis.com
+   *   - API Gateway: apigateway.googleapis.com  - App Engine: appengine.googleapis.com  - Cloud
+   * Functions: cloudfunctions.googleapis.com  - Cloud Run: run.googleapis.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
    * the urlMask. The resource identified by this value is platform-specific and is as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service name  - Cloud Functions: The function
-   * name  - Cloud Run: The service name
+   *   - API Gateway: The gateway ID  - App Engine: The service name  - Cloud Functions: The
+   * function name  - Cloud Run: The service name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,22 +55,22 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple services on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend services. The fields parsed by this template is platform-specific
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
    * and are as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service and version  - Cloud Functions: The
-   * function  - Cloud Run: The service and tag
+   *   - API Gateway: The gateway ID  - App Engine: The service and version  - Cloud Functions: The
+   * function name  - Cloud Run: The service and tag
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String urlMask;
 
   /**
-   * The optional resource version. The version identified by this value is as platform-specific and
-   * is follows:
+   * The optional resource version. The version identified by this value is platform-specific and is
+   * follows:
    *
-   *   - API Gateway: Unused  - AppEngine: The service version  - Cloud Functions: Unused  - Cloud
+   *   - API Gateway: Unused  - App Engine: The service version  - Cloud Functions: Unused  - Cloud
    * Run: The service tag
    * The value may be {@code null}.
    */
@@ -81,8 +80,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   /**
    * The platform of the backend target(s) of this NEG. Possible values include:
    *
-   *   - apigateway.googleapis.com  - appengine.googleapies.com  - cloudfunctions.googleapis.com  -
-   * run.googleapis.com
+   *   - API Gateway: apigateway.googleapis.com  - App Engine: appengine.googleapis.com  - Cloud
+   * Functions: cloudfunctions.googleapis.com  - Cloud Run: run.googleapis.com
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -92,8 +91,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   /**
    * The platform of the backend target(s) of this NEG. Possible values include:
    *
-   *   - apigateway.googleapis.com  - appengine.googleapies.com  - cloudfunctions.googleapis.com  -
-   * run.googleapis.com
+   *   - API Gateway: apigateway.googleapis.com  - App Engine: appengine.googleapis.com  - Cloud
+   * Functions: cloudfunctions.googleapis.com  - Cloud Run: run.googleapis.com
    * @param platform platform or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setPlatform(java.lang.String platform) {
@@ -105,8 +104,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
    * the urlMask. The resource identified by this value is platform-specific and is as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service name  - Cloud Functions: The function
-   * name  - Cloud Run: The service name
+   *   - API Gateway: The gateway ID  - App Engine: The service name  - Cloud Functions: The
+   * function name  - Cloud Run: The service name
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -117,8 +116,8 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
    * The user-defined name of the workload/instance. This value must be provided explicitly or in
    * the urlMask. The resource identified by this value is platform-specific and is as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service name  - Cloud Functions: The function
-   * name  - Cloud Run: The service name
+   *   - API Gateway: The gateway ID  - App Engine: The service name  - Cloud Functions: The
+   * function name  - Cloud Run: The service name
    * @param resource resource or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setResource(java.lang.String resource) {
@@ -128,12 +127,12 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple services on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend services. The fields parsed by this template is platform-specific
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
    * and are as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service and version  - Cloud Functions: The
-   * function  - Cloud Run: The service and tag
+   *   - API Gateway: The gateway ID  - App Engine: The service and version  - Cloud Functions: The
+   * function name  - Cloud Run: The service and tag
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMask() {
@@ -142,12 +141,12 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
 
   /**
    * A template to parse platform-specific fields from a request URL. URL mask allows for routing to
-   * multiple services on the same serverless platform without having to create multiple Network
-   * Endpoint Groups and backend services. The fields parsed by this template is platform-specific
+   * multiple resources on the same serverless platform without having to create multiple Network
+   * Endpoint Groups and backend resources. The fields parsed by this template are platform-specific
    * and are as follows:
    *
-   *   - API Gateway: The gateway id  - AppEngine: The service and version  - Cloud Functions: The
-   * function  - Cloud Run: The service and tag
+   *   - API Gateway: The gateway ID  - App Engine: The service and version  - Cloud Functions: The
+   * function name  - Cloud Run: The service and tag
    * @param urlMask urlMask or {@code null} for none
    */
   public NetworkEndpointGroupServerlessDeployment setUrlMask(java.lang.String urlMask) {
@@ -156,10 +155,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * The optional resource version. The version identified by this value is as platform-specific and
-   * is follows:
+   * The optional resource version. The version identified by this value is platform-specific and is
+   * follows:
    *
-   *   - API Gateway: Unused  - AppEngine: The service version  - Cloud Functions: Unused  - Cloud
+   *   - API Gateway: Unused  - App Engine: The service version  - Cloud Functions: Unused  - Cloud
    * Run: The service tag
    * @return value or {@code null} for none
    */
@@ -168,10 +167,10 @@ public final class NetworkEndpointGroupServerlessDeployment extends com.google.a
   }
 
   /**
-   * The optional resource version. The version identified by this value is as platform-specific and
-   * is follows:
+   * The optional resource version. The version identified by this value is platform-specific and is
+   * follows:
    *
-   *   - API Gateway: Unused  - AppEngine: The service version  - Cloud Functions: Unused  - Cloud
+   *   - API Gateway: Unused  - App Engine: The service version  - Cloud Functions: Unused  - Cloud
    * Run: The service tag
    * @param version version or {@code null} for none
    */

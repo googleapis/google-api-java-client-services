@@ -39,6 +39,14 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private java.lang.String allocationPriority;
 
   /**
+   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
+   * `FULL` in the relevant List/Get/Preview request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KubernetesClusterState clusterState;
+
+  /**
    * The game server cluster connection information. This information is used to manage game server
    * clusters.
    * The value may be {@code null}.
@@ -109,6 +117,25 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
    */
   public GameServerCluster setAllocationPriority(java.lang.String allocationPriority) {
     this.allocationPriority = allocationPriority;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
+   * `FULL` in the relevant List/Get/Preview request.
+   * @return value or {@code null} for none
+   */
+  public KubernetesClusterState getClusterState() {
+    return clusterState;
+  }
+
+  /**
+   * Output only. The state of the Kubernetes cluster, this will be available if 'view' is set to
+   * `FULL` in the relevant List/Get/Preview request.
+   * @param clusterState clusterState or {@code null} for none
+   */
+  public GameServerCluster setClusterState(KubernetesClusterState clusterState) {
+    this.clusterState = clusterState;
     return this;
   }
 

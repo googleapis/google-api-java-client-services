@@ -5388,6 +5388,38 @@ public class GameServices extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. View for the returned GameServerCluster objects. When `FULL` is specified,
+             * the `cluster_state` field is also returned in the GameServerCluster object, which
+             * includes the state of the referenced Kubernetes cluster such as versions and provider
+             * info. The default/unset value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC,
+             * which does not return the `cluster_state` field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. View for the returned GameServerCluster objects. When `FULL` is specified, the
+           `cluster_state` field is also returned in the GameServerCluster object, which includes the state of
+           the referenced Kubernetes cluster such as versions and provider info. The default/unset value is
+           GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does not return the `cluster_state`
+           field.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. View for the returned GameServerCluster objects. When `FULL` is specified,
+             * the `cluster_state` field is also returned in the GameServerCluster object, which
+             * includes the state of the referenced Kubernetes cluster such as versions and provider
+             * info. The default/unset value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC,
+             * which does not return the `cluster_state` field.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -5619,6 +5651,38 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. View for the returned GameServerCluster objects. When `FULL` is specified,
+             * the `cluster_state` field is also returned in the GameServerCluster object, which
+             * includes the state of the referenced Kubernetes cluster such as versions and provider
+             * info. The default/unset value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC,
+             * which does not return the `cluster_state` field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. View for the returned GameServerCluster objects. When `FULL` is specified, the
+           `cluster_state` field is also returned in the GameServerCluster object, which includes the state of
+           the referenced Kubernetes cluster such as versions and provider info. The default/unset value is
+           GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does not return the `cluster_state`
+           field.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. View for the returned GameServerCluster objects. When `FULL` is specified,
+             * the `cluster_state` field is also returned in the GameServerCluster object, which
+             * includes the state of the referenced Kubernetes cluster such as versions and provider
+             * info. The default/unset value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC,
+             * which does not return the `cluster_state` field.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 
@@ -5966,6 +6030,28 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             /** Optional. The target timestamp to compute the preview. */
             public PreviewCreate setPreviewTime(String previewTime) {
               this.previewTime = previewTime;
+              return this;
+            }
+
+            /**
+             * Optional. This field is deprecated, preview will always return
+             * KubernetesClusterState.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. This field is deprecated, preview will always return KubernetesClusterState.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. This field is deprecated, preview will always return
+             * KubernetesClusterState.
+             */
+            public PreviewCreate setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 

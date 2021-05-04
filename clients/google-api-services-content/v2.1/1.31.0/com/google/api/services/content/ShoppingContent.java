@@ -11490,6 +11490,170 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
 
+    /**
+     * An accessor for creating requests from the Labels collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Labels.List request = content.labels().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Labels labels() {
+      return new Labels();
+    }
+
+    /**
+     * The "labels" collection of methods.
+     */
+    public class Labels {
+
+      /**
+       * Links a return shipping label to a return id. You can only create one return label per return id.
+       * Since the label is sent to the buyer, the linked return label cannot be updated or deleted. If
+       * you try to create multiple return shipping labels for a single return id, every create request
+       * except the first will fail.
+       *
+       * Create a request for the method "labels.create".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. The merchant the Return Shipping Label belongs to.
+       * @param returnId Required. Provide the Google-generated merchant order return ID.
+       * @param content the {@link com.google.api.services.content.model.ReturnShippingLabel}
+       * @return the request
+       */
+      public Create create(java.lang.Long merchantId, java.lang.String returnId, com.google.api.services.content.model.ReturnShippingLabel content) throws java.io.IOException {
+        Create result = new Create(merchantId, returnId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ShoppingContentRequest<com.google.api.services.content.model.ReturnShippingLabel> {
+
+        private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/labels";
+
+        /**
+         * Links a return shipping label to a return id. You can only create one return label per return
+         * id. Since the label is sent to the buyer, the linked return label cannot be updated or deleted.
+         * If you try to create multiple return shipping labels for a single return id, every create
+         * request except the first will fail.
+         *
+         * Create a request for the method "labels.create".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. The merchant the Return Shipping Label belongs to.
+         * @param returnId Required. Provide the Google-generated merchant order return ID.
+         * @param content the {@link com.google.api.services.content.model.ReturnShippingLabel}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long merchantId, java.lang.String returnId, com.google.api.services.content.model.ReturnShippingLabel content) {
+          super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.ReturnShippingLabel.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+          this.returnId = com.google.api.client.util.Preconditions.checkNotNull(returnId, "Required parameter returnId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The merchant the Return Shipping Label belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. The merchant the Return Shipping Label belongs to.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. The merchant the Return Shipping Label belongs to. */
+        public Create setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        /** Required. Provide the Google-generated merchant order return ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String returnId;
+
+        /** Required. Provide the Google-generated merchant order return ID.
+         */
+        public java.lang.String getReturnId() {
+          return returnId;
+        }
+
+        /** Required. Provide the Google-generated merchant order return ID. */
+        public Create setReturnId(java.lang.String returnId) {
+          this.returnId = returnId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

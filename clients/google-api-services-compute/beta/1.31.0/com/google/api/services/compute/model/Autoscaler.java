@@ -43,9 +43,8 @@ package com.google.api.services.compute.model;
 public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration parameters for the autoscaling algorithm. You can define one or more of the
-   * policies for an autoscaler: cpuUtilization, customMetricUtilizations, and
-   * loadBalancingUtilization.
+   * The configuration parameters for the autoscaling algorithm. You can define one or more signals
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
    *
    * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
    * or 60%.
@@ -163,9 +162,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * The configuration parameters for the autoscaling algorithm. You can define one or more of the
-   * policies for an autoscaler: cpuUtilization, customMetricUtilizations, and
-   * loadBalancingUtilization.
+   * The configuration parameters for the autoscaling algorithm. You can define one or more signals
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
    *
    * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
    * or 60%.
@@ -176,9 +174,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration parameters for the autoscaling algorithm. You can define one or more of the
-   * policies for an autoscaler: cpuUtilization, customMetricUtilizations, and
-   * loadBalancingUtilization.
+   * The configuration parameters for the autoscaling algorithm. You can define one or more signals
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
    *
    * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
    * or 60%.

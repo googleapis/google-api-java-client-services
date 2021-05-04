@@ -111,18 +111,6 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetResources;
 
   /**
-   * A list of secure labels that controls which instances the firewall rule applies to. If
-   * targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC
-   * network that have one of those secure labels. targetSecureLabel may not be set at the same time
-   * as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified,
-   * the firewall rule applies to all instances on the specified network. Maximum number of target
-   * label values allowed is 256.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> targetSecureLabels;
-
-  /**
    * A list of secure tags that controls which instances the firewall rule applies to. If
    * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
    * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
@@ -329,33 +317,6 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {
     this.targetResources = targetResources;
-    return this;
-  }
-
-  /**
-   * A list of secure labels that controls which instances the firewall rule applies to. If
-   * targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC
-   * network that have one of those secure labels. targetSecureLabel may not be set at the same time
-   * as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified,
-   * the firewall rule applies to all instances on the specified network. Maximum number of target
-   * label values allowed is 256.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getTargetSecureLabels() {
-    return targetSecureLabels;
-  }
-
-  /**
-   * A list of secure labels that controls which instances the firewall rule applies to. If
-   * targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC
-   * network that have one of those secure labels. targetSecureLabel may not be set at the same time
-   * as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified,
-   * the firewall rule applies to all instances on the specified network. Maximum number of target
-   * label values allowed is 256.
-   * @param targetSecureLabels targetSecureLabels or {@code null} for none
-   */
-  public FirewallPolicyRule setTargetSecureLabels(java.util.List<java.lang.String> targetSecureLabels) {
-    this.targetSecureLabels = targetSecureLabels;
     return this;
   }
 

@@ -153,8 +153,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * URL of addresses that have been reserved for the interconnect attachment, Used only for
    * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
    * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
-   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
-   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway's
    * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption
@@ -595,8 +595,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * URL of addresses that have been reserved for the interconnect attachment, Used only for
    * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
    * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
-   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
-   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway's
    * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption
@@ -613,8 +613,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * URL of addresses that have been reserved for the interconnect attachment, Used only for
    * interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918
    * IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the
-   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will
-   * be allocated from the IP address range specified here. For example, if the HA VPN gateway?s
+   * attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP address will
+   * be allocated from the IP address range specified here. For example, if the HA VPN gateway's
    * interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN
    * gateway interface 0 will be allocated from the IP address specified for this interconnect
    * attachment. If this field is not specified for interconnect attachment that has encryption

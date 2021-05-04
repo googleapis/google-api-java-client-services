@@ -51,12 +51,27 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String connectionPreference;
 
   /**
+   * Projects that are allowed to connect to this service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists;
+
+  /**
    * [Output Only] An array of forwarding rules for all the consumers connected to this service
    * attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceAttachmentConsumerForwardingRule> consumerForwardingRules;
+
+  /**
+   * Projects that are not allowed to connect to this service attachment. The project can be
+   * specified using its id or number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> consumerRejectLists;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -79,6 +94,17 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableProxyProtocol;
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-
+   * date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise,
+   * the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a
+   * get() request to retrieve the ServiceAttachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
 
   /**
    * [Output Only] The unique identifier for the resource type. The server generates this
@@ -193,6 +219,23 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Projects that are allowed to connect to this service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceAttachmentConsumerProjectLimit> getConsumerAcceptLists() {
+    return consumerAcceptLists;
+  }
+
+  /**
+   * Projects that are allowed to connect to this service attachment.
+   * @param consumerAcceptLists consumerAcceptLists or {@code null} for none
+   */
+  public ServiceAttachment setConsumerAcceptLists(java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists) {
+    this.consumerAcceptLists = consumerAcceptLists;
+    return this;
+  }
+
+  /**
    * [Output Only] An array of forwarding rules for all the consumers connected to this service
    * attachment.
    * @return value or {@code null} for none
@@ -208,6 +251,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setConsumerForwardingRules(java.util.List<ServiceAttachmentConsumerForwardingRule> consumerForwardingRules) {
     this.consumerForwardingRules = consumerForwardingRules;
+    return this;
+  }
+
+  /**
+   * Projects that are not allowed to connect to this service attachment. The project can be
+   * specified using its id or number.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConsumerRejectLists() {
+    return consumerRejectLists;
+  }
+
+  /**
+   * Projects that are not allowed to connect to this service attachment. The project can be
+   * specified using its id or number.
+   * @param consumerRejectLists consumerRejectLists or {@code null} for none
+   */
+  public ServiceAttachment setConsumerRejectLists(java.util.List<java.lang.String> consumerRejectLists) {
+    this.consumerRejectLists = consumerRejectLists;
     return this;
   }
 
@@ -261,6 +323,67 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setEnableProxyProtocol(java.lang.Boolean enableProxyProtocol) {
     this.enableProxyProtocol = enableProxyProtocol;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-
+   * date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise,
+   * the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a
+   * get() request to retrieve the ServiceAttachment.
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-
+   * date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise,
+   * the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a
+   * get() request to retrieve the ServiceAttachment.
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-
+   * date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise,
+   * the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a
+   * get() request to retrieve the ServiceAttachment.
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public ServiceAttachment setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a ServiceAttachment. An up-to-
+   * date fingerprint must be provided in order to patch/update the ServiceAttachment; otherwise,
+   * the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a
+   * get() request to retrieve the ServiceAttachment.
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ServiceAttachment encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
     return this;
   }
 

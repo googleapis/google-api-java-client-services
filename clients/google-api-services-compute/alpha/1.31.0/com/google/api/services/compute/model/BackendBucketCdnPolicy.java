@@ -39,6 +39,13 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   private java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders;
 
   /**
+   * The CacheKeyPolicy for this CdnPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendBucketCdnPolicyCacheKeyPolicy cacheKeyPolicy;
+
+  /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
    *
    * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
@@ -183,6 +190,23 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   public BackendBucketCdnPolicy setBypassCacheOnRequestHeaders(java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders) {
     this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
+    return this;
+  }
+
+  /**
+   * The CacheKeyPolicy for this CdnPolicy.
+   * @return value or {@code null} for none
+   */
+  public BackendBucketCdnPolicyCacheKeyPolicy getCacheKeyPolicy() {
+    return cacheKeyPolicy;
+  }
+
+  /**
+   * The CacheKeyPolicy for this CdnPolicy.
+   * @param cacheKeyPolicy cacheKeyPolicy or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setCacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
+    this.cacheKeyPolicy = cacheKeyPolicy;
     return this;
   }
 

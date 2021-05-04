@@ -52,14 +52,6 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> srcIpRanges;
 
   /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> srcSecureLabels;
-
-  /**
    * List of secure tag values, which should be matched at the source of the traffic. For INGRESS
    * rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be
    * ignored. Maximum number of source tag values allowed is 256.
@@ -116,25 +108,6 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
-    return this;
-  }
-
-  /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSrcSecureLabels() {
-    return srcSecureLabels;
-  }
-
-  /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * @param srcSecureLabels srcSecureLabels or {@code null} for none
-   */
-  public FirewallPolicyRuleMatcher setSrcSecureLabels(java.util.List<java.lang.String> srcSecureLabels) {
-    this.srcSecureLabels = srcSecureLabels;
     return this;
   }
 

@@ -98,6 +98,14 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.util.List<java.lang.String> predefinedNames;
 
   /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureTags;
+
+  /**
    * Specifies the instance template from which to create instances. You may combine
    * sourceInstanceTemplate with instanceProperties to override specific values from an existing
    * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
@@ -270,6 +278,25 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setPredefinedNames(java.util.List<java.lang.String> predefinedNames) {
     this.predefinedNames = predefinedNames;
+    return this;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureTags() {
+    return secureTags;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @param secureTags secureTags or {@code null} for none
+   */
+  public BulkInsertInstanceResource setSecureTags(java.util.List<java.lang.String> secureTags) {
+    this.secureTags = secureTags;
     return this;
   }
 

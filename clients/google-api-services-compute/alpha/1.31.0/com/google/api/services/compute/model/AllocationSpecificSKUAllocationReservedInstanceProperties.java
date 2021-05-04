@@ -81,10 +81,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,10 +188,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceInterval() {
@@ -202,10 +196,7 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * @param maintenanceInterval maintenanceInterval or {@code null} for none
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceInterval(java.lang.String maintenanceInterval) {

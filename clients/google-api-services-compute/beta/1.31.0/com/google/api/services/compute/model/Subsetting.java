@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Subsetting options to make L4 ILB support any number of backend instances
+ * Subsetting configuration for this BackendService. Currently this is applicable only for Internal
+ * TCP/UDP load balancing and Internal HTTP(S) load balancing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -69,7 +69,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
-   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
    * maintenance.
    * The value may be {@code null}.
    */
@@ -77,10 +77,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +208,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
    * maintenance.
    * @return value or {@code null} for none
    */
@@ -220,7 +217,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the number of hours after instance creation where the instance won't be scheduled for
+   * Specifies the number of hours after VM instance creation where the VM won't be scheduled for
    * maintenance.
    * @param maintenanceFreezeDurationHours maintenanceFreezeDurationHours or {@code null} for none
    */
@@ -230,10 +227,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceInterval() {
@@ -241,10 +235,7 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
-   * VM as a Stable Fleet VM.
-   *
-   * See go/stable-fleet-ug for more details.
+   * For more information about maintenance intervals, see Setting maintenance intervals.
    * @param maintenanceInterval maintenanceInterval or {@code null} for none
    */
   public Scheduling setMaintenanceInterval(java.lang.String maintenanceInterval) {

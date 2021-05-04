@@ -73,6 +73,21 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   private java.lang.String machineType;
 
   /**
+   * Specifies the number of hours after reservation creation where instances using the reservation
+   * won't be scheduled for maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maintenanceFreezeDurationHours;
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceInterval;
+
+  /**
    * Minimum cpu platform the reservation.
    * The value may be {@code null}.
    */
@@ -150,6 +165,42 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Specifies the number of hours after reservation creation where instances using the reservation
+   * won't be scheduled for maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaintenanceFreezeDurationHours() {
+    return maintenanceFreezeDurationHours;
+  }
+
+  /**
+   * Specifies the number of hours after reservation creation where instances using the reservation
+   * won't be scheduled for maintenance.
+   * @param maintenanceFreezeDurationHours maintenanceFreezeDurationHours or {@code null} for none
+   */
+  public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceFreezeDurationHours(java.lang.Integer maintenanceFreezeDurationHours) {
+    this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+    return this;
+  }
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceInterval() {
+    return maintenanceInterval;
+  }
+
+  /**
+   * For more information about maintenance intervals, see Setting maintenance intervals.
+   * @param maintenanceInterval maintenanceInterval or {@code null} for none
+   */
+  public AllocationSpecificSKUAllocationReservedInstanceProperties setMaintenanceInterval(java.lang.String maintenanceInterval) {
+    this.maintenanceInterval = maintenanceInterval;
     return this;
   }
 

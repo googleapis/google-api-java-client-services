@@ -52,14 +52,6 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> srcIpRanges;
 
   /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> srcSecureLabels;
-
-  /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
    * @return value or {@code null} for none
    */
@@ -107,25 +99,6 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
-    return this;
-  }
-
-  /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSrcSecureLabels() {
-    return srcSecureLabels;
-  }
-
-  /**
-   * List of firewall label values, which should be matched at the source of the traffic. Maximum
-   * number of source label values allowed is 256.
-   * @param srcSecureLabels srcSecureLabels or {@code null} for none
-   */
-  public FirewallPolicyRuleMatcher setSrcSecureLabels(java.util.List<java.lang.String> srcSecureLabels) {
-    this.srcSecureLabels = srcSecureLabels;
     return this;
   }
 

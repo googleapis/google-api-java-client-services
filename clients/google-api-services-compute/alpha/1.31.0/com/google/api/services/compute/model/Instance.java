@@ -340,14 +340,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private Scheduling scheduling;
 
   /**
-   * Secure labels to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure labels allowed is 300.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> secureLabels;
-
-  /**
    * Secure tags to apply to this instance. These can be later modified by the update method.
    * Maximum number of secure tags allowed is 300.
    * The value may be {@code null}.
@@ -1237,25 +1229,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setScheduling(Scheduling scheduling) {
     this.scheduling = scheduling;
-    return this;
-  }
-
-  /**
-   * Secure labels to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure labels allowed is 300.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSecureLabels() {
-    return secureLabels;
-  }
-
-  /**
-   * Secure labels to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure labels allowed is 300.
-   * @param secureLabels secureLabels or {@code null} for none
-   */
-  public Instance setSecureLabels(java.util.List<java.lang.String> secureLabels) {
-    this.secureLabels = secureLabels;
     return this;
   }
 

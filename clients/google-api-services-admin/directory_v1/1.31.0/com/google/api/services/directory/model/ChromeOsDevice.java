@@ -292,6 +292,12 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<RecentUsers> recentUsers;
 
+  static {
+    // hack to force ProGuard to consider RecentUsers used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RecentUsers.class);
+  }
+
   /**
    * List of screenshot files to download. Type is always "SCREENSHOT_FILE". (Read-only)
    * The value may be {@code null}.
@@ -1591,6 +1597,71 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
     @Override
     public LastKnownNetwork clone() {
       return (LastKnownNetwork) super.clone();
+    }
+
+  }
+
+  /**
+   * List of recent device users, in descending order, by last login time.
+   */
+  public static final class RecentUsers extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The user's email address. This is only present if the user type is `USER_TYPE_MANAGED`.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String email;
+
+    /**
+     * The type of the user.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
+
+    /**
+     * The user's email address. This is only present if the user type is `USER_TYPE_MANAGED`.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getEmail() {
+      return email;
+    }
+
+    /**
+     * The user's email address. This is only present if the user type is `USER_TYPE_MANAGED`.
+     * @param email email or {@code null} for none
+     */
+    public RecentUsers setEmail(java.lang.String email) {
+      this.email = email;
+      return this;
+    }
+
+    /**
+     * The type of the user.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+      return type;
+    }
+
+    /**
+     * The type of the user.
+     * @param type type or {@code null} for none
+     */
+    public RecentUsers setType(java.lang.String type) {
+      this.type = type;
+      return this;
+    }
+
+    @Override
+    public RecentUsers set(String fieldName, Object value) {
+      return (RecentUsers) super.set(fieldName, value);
+    }
+
+    @Override
+    public RecentUsers clone() {
+      return (RecentUsers) super.clone();
     }
 
   }

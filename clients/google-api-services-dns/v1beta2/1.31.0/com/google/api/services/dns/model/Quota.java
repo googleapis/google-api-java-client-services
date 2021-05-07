@@ -44,6 +44,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer gkeClustersPerManagedZone;
 
   /**
+   * Maximum allowed number of GKE clusters per response policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer gkeClustersPerResponsePolicy;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,6 +198,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setGkeClustersPerManagedZone(java.lang.Integer gkeClustersPerManagedZone) {
     this.gkeClustersPerManagedZone = gkeClustersPerManagedZone;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of GKE clusters per response policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGkeClustersPerResponsePolicy() {
+    return gkeClustersPerResponsePolicy;
+  }
+
+  /**
+   * Maximum allowed number of GKE clusters per response policy.
+   * @param gkeClustersPerResponsePolicy gkeClustersPerResponsePolicy or {@code null} for none
+   */
+  public Quota setGkeClustersPerResponsePolicy(java.lang.Integer gkeClustersPerResponsePolicy) {
+    this.gkeClustersPerResponsePolicy = gkeClustersPerResponsePolicy;
     return this;
   }
 

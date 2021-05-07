@@ -39,13 +39,6 @@ public final class TransferLocationRequest extends com.google.api.client.json.Ge
   private java.lang.String destinationAccount;
 
   /**
-   * Required. The name of the location to transfer. `locations/{location_id}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * Required. Name of the account resource to transfer the location to (for example,
    * "accounts/{account}").
    * @return value or {@code null} for none
@@ -61,23 +54,6 @@ public final class TransferLocationRequest extends com.google.api.client.json.Ge
    */
   public TransferLocationRequest setDestinationAccount(java.lang.String destinationAccount) {
     this.destinationAccount = destinationAccount;
-    return this;
-  }
-
-  /**
-   * Required. The name of the location to transfer. `locations/{location_id}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Required. The name of the location to transfer. `locations/{location_id}`.
-   * @param name name or {@code null} for none
-   */
-  public TransferLocationRequest setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

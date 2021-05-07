@@ -31,7 +31,7 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class MetadataImport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time when the metadata import was created.
+   * Output only. The time when the metadata import was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   private String updateTime;
 
   /**
-   * Output only. The time when the metadata import was created.
+   * Output only. The time when the metadata import was started.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -82,7 +82,7 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time when the metadata import was created.
+   * Output only. The time when the metadata import was started.
    * @param createTime createTime or {@code null} for none
    */
   public MetadataImport setCreateTime(String createTime) {

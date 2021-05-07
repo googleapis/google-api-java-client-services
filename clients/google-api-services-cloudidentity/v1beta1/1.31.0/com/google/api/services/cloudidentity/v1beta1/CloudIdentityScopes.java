@@ -32,7 +32,7 @@ public class CloudIdentityScopes {
   /** See any Cloud Identity Groups that you can access, including group members and their emails. */
   public static final String CLOUD_IDENTITY_GROUPS_READONLY = "https://www.googleapis.com/auth/cloud-identity.groups.readonly";
 
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

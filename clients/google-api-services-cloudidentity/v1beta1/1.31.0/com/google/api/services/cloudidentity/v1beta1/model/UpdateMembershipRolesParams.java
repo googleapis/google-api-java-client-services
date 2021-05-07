@@ -30,7 +30,8 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class UpdateMembershipRolesParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field
+   * `expiry_detail.expire_time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   private MembershipRole membershipRole;
 
   /**
-   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field
+   * `expiry_detail.expire_time`.
    * @return value or {@code null} for none
    */
   public String getFieldMask() {
@@ -53,7 +55,8 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   }
 
   /**
-   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field
+   * `expiry_detail.expire_time`.
    * @param fieldMask fieldMask or {@code null} for none
    */
   public UpdateMembershipRolesParams setFieldMask(String fieldMask) {

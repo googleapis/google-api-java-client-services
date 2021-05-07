@@ -30,10 +30,9 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1Customer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Secondary contact email. Alternate email and primary contact email are required to have
-   * different domains if primary contact email is present. When creating admin.google.com accounts,
-   * users get notified credentials at this email. This email address is also used as a recovery
-   * email.
+   * Secondary contact email. You need to provide an alternate email to create different domains if
+   * a primary contact email already exists. Users will receive a notification with credentials when
+   * you create an admin.google.com account. Secondary emails are also recovery email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +47,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private java.lang.String channelPartnerId;
 
   /**
-   * Output only. Customer's cloud_identity_id. Populated only if a Cloud Identity resource exists
-   * for this customer.
+   * Output only. The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,15 +62,14 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private GoogleCloudChannelV1CloudIdentityInfo cloudIdentityInfo;
 
   /**
-   * Output only. The time at which the customer is created.
+   * Output only. Time when the customer was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. Primary domain used by the customer. Domain of primary contact email is required to
-   * be same as the provided domain.
+   * Required. The customer's primary domain. Must match the primary contact email's domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +99,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private java.lang.String orgDisplayName;
 
   /**
-   * Required. Address of the organization of the customer entity. Region and zip codes are required
-   * to enforce US laws and embargoes. Valid address lines are required for all customers. Language
-   * code is discarded. Use the Customer-level language code to set the customer's language.
+   * Required. The organization address for the customer. To enforce US laws and embargoes, we
+   * require a region and zip code. You must provide valid addresses for every customer. To set the
+   * customer's language, use the Customer-level language code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,17 +115,16 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private GoogleCloudChannelV1ContactInfo primaryContactInfo;
 
   /**
-   * Output only. The time at which the customer is updated.
+   * Output only. Time when the customer was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Secondary contact email. Alternate email and primary contact email are required to have
-   * different domains if primary contact email is present. When creating admin.google.com accounts,
-   * users get notified credentials at this email. This email address is also used as a recovery
-   * email.
+   * Secondary contact email. You need to provide an alternate email to create different domains if
+   * a primary contact email already exists. Users will receive a notification with credentials when
+   * you create an admin.google.com account. Secondary emails are also recovery email addresses.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateEmail() {
@@ -136,10 +132,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Secondary contact email. Alternate email and primary contact email are required to have
-   * different domains if primary contact email is present. When creating admin.google.com accounts,
-   * users get notified credentials at this email. This email address is also used as a recovery
-   * email.
+   * Secondary contact email. You need to provide an alternate email to create different domains if
+   * a primary contact email already exists. Users will receive a notification with credentials when
+   * you create an admin.google.com account. Secondary emails are also recovery email addresses.
    * @param alternateEmail alternateEmail or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setAlternateEmail(java.lang.String alternateEmail) {
@@ -167,8 +162,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. Customer's cloud_identity_id. Populated only if a Cloud Identity resource exists
-   * for this customer.
+   * Output only. The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudIdentityId() {
@@ -176,8 +170,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. Customer's cloud_identity_id. Populated only if a Cloud Identity resource exists
-   * for this customer.
+   * Output only. The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
    * @param cloudIdentityId cloudIdentityId or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setCloudIdentityId(java.lang.String cloudIdentityId) {
@@ -205,7 +198,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. The time at which the customer is created.
+   * Output only. Time when the customer was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -213,7 +206,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. The time at which the customer is created.
+   * Output only. Time when the customer was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setCreateTime(String createTime) {
@@ -222,8 +215,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Required. Primary domain used by the customer. Domain of primary contact email is required to
-   * be same as the provided domain.
+   * Required. The customer's primary domain. Must match the primary contact email's domain.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -231,8 +223,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Required. Primary domain used by the customer. Domain of primary contact email is required to
-   * be same as the provided domain.
+   * Required. The customer's primary domain. Must match the primary contact email's domain.
    * @param domain domain or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setDomain(java.lang.String domain) {
@@ -296,9 +287,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Required. Address of the organization of the customer entity. Region and zip codes are required
-   * to enforce US laws and embargoes. Valid address lines are required for all customers. Language
-   * code is discarded. Use the Customer-level language code to set the customer's language.
+   * Required. The organization address for the customer. To enforce US laws and embargoes, we
+   * require a region and zip code. You must provide valid addresses for every customer. To set the
+   * customer's language, use the Customer-level language code.
    * @return value or {@code null} for none
    */
   public GoogleTypePostalAddress getOrgPostalAddress() {
@@ -306,9 +297,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Required. Address of the organization of the customer entity. Region and zip codes are required
-   * to enforce US laws and embargoes. Valid address lines are required for all customers. Language
-   * code is discarded. Use the Customer-level language code to set the customer's language.
+   * Required. The organization address for the customer. To enforce US laws and embargoes, we
+   * require a region and zip code. You must provide valid addresses for every customer. To set the
+   * customer's language, use the Customer-level language code.
    * @param orgPostalAddress orgPostalAddress or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setOrgPostalAddress(GoogleTypePostalAddress orgPostalAddress) {
@@ -334,7 +325,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. The time at which the customer is updated.
+   * Output only. Time when the customer was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -342,7 +333,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   }
 
   /**
-   * Output only. The time at which the customer is updated.
+   * Output only. Time when the customer was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setUpdateTime(String updateTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1.model;
 
 /**
- * For display only. Metadata associated with a Google Kubernetes Engine cluster master.
+ * For display only. Metadata associated with a Google Kubernetes Engine (GKE) cluster master.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -31,35 +31,35 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class GKEMasterInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of a Google Kubernetes Engine cluster network.
+   * URI of a GKE cluster network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterNetworkUri;
 
   /**
-   * URI of a Google Kubernetes Engine cluster.
+   * URI of a GKE cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterUri;
 
   /**
-   * External IP address of a Google Kubernetes Engine cluster master.
+   * External IP address of a GKE cluster master.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIp;
 
   /**
-   * Internal IP address of a Google Kubernetes Engine cluster master.
+   * Internal IP address of a GKE cluster master.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String internalIp;
 
   /**
-   * URI of a Google Kubernetes Engine cluster network.
+   * URI of a GKE cluster network.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterNetworkUri() {
@@ -67,7 +67,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a Google Kubernetes Engine cluster network.
+   * URI of a GKE cluster network.
    * @param clusterNetworkUri clusterNetworkUri or {@code null} for none
    */
   public GKEMasterInfo setClusterNetworkUri(java.lang.String clusterNetworkUri) {
@@ -76,7 +76,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a Google Kubernetes Engine cluster.
+   * URI of a GKE cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterUri() {
@@ -84,7 +84,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a Google Kubernetes Engine cluster.
+   * URI of a GKE cluster.
    * @param clusterUri clusterUri or {@code null} for none
    */
   public GKEMasterInfo setClusterUri(java.lang.String clusterUri) {
@@ -93,7 +93,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * External IP address of a Google Kubernetes Engine cluster master.
+   * External IP address of a GKE cluster master.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIp() {
@@ -101,7 +101,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * External IP address of a Google Kubernetes Engine cluster master.
+   * External IP address of a GKE cluster master.
    * @param externalIp externalIp or {@code null} for none
    */
   public GKEMasterInfo setExternalIp(java.lang.String externalIp) {
@@ -110,7 +110,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internal IP address of a Google Kubernetes Engine cluster master.
+   * Internal IP address of a GKE cluster master.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIp() {
@@ -118,7 +118,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internal IP address of a Google Kubernetes Engine cluster master.
+   * Internal IP address of a GKE cluster master.
    * @param internalIp internalIp or {@code null} for none
    */
   public GKEMasterInfo setInternalIp(java.lang.String internalIp) {

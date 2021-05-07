@@ -52,7 +52,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   private java.lang.String networkUri;
 
   /**
-   * Name of a GCP region where this VPN gateway is configured.
+   * Name of a Google Cloud region where this VPN gateway is configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of a GCP region where this VPN gateway is configured.
+   * Name of a Google Cloud region where this VPN gateway is configured.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -133,7 +133,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of a GCP region where this VPN gateway is configured.
+   * Name of a Google Cloud region where this VPN gateway is configured.
    * @param region region or {@code null} for none
    */
   public VpnGatewayInfo setRegion(java.lang.String region) {

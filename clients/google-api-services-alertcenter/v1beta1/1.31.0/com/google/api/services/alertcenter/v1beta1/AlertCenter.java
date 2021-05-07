@@ -160,16 +160,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * This request holds the parameters needed by the alertcenter server.  After setting any optional
      * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsRequest}
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest}
      * @return the request
      */
-    public BatchDelete batchDelete(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsRequest content) throws java.io.IOException {
+    public BatchDelete batchDelete(com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest content) throws java.io.IOException {
       BatchDelete result = new BatchDelete(content);
       initialize(result);
       return result;
     }
 
-    public class BatchDelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsResponse> {
+    public class BatchDelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsResponse> {
 
       private static final String REST_PATH = "v1beta1/alerts:batchDelete";
 
@@ -184,11 +184,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsRequest}
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest}
        * @since 1.13
        */
-      protected BatchDelete(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsRequest content) {
-        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchDeleteAlertsResponse.class);
+      protected BatchDelete(com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.BatchDeleteAlertsResponse.class);
       }
 
       @Override
@@ -259,16 +259,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * This request holds the parameters needed by the alertcenter server.  After setting any optional
      * parameters, call the {@link BatchUndelete#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsRequest}
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest}
      * @return the request
      */
-    public BatchUndelete batchUndelete(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsRequest content) throws java.io.IOException {
+    public BatchUndelete batchUndelete(com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest content) throws java.io.IOException {
       BatchUndelete result = new BatchUndelete(content);
       initialize(result);
       return result;
     }
 
-    public class BatchUndelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsResponse> {
+    public class BatchUndelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsResponse> {
 
       private static final String REST_PATH = "v1beta1/alerts:batchUndelete";
 
@@ -283,11 +283,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsRequest}
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest}
        * @since 1.13
        */
-      protected BatchUndelete(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsRequest content) {
-        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1BatchUndeleteAlertsResponse.class);
+      protected BatchUndelete(com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.BatchUndeleteAlertsResponse.class);
       }
 
       @Override
@@ -370,7 +370,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       return result;
     }
 
-    public class Delete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleProtobufEmpty> {
+    public class Delete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Empty> {
 
       private static final String REST_PATH = "v1beta1/alerts/{alertId}";
 
@@ -392,7 +392,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * @since 1.13
        */
       protected Delete(java.lang.String alertId) {
-        super(AlertCenter.this, "DELETE", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleProtobufEmpty.class);
+        super(AlertCenter.this, "DELETE", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.Empty.class);
         this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
       }
 
@@ -512,7 +512,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       return result;
     }
 
-    public class Get extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Alert> {
+    public class Get extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Alert> {
 
       private static final String REST_PATH = "v1beta1/alerts/{alertId}";
 
@@ -530,7 +530,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * @since 1.13
        */
       protected Get(java.lang.String alertId) {
-        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Alert.class);
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.Alert.class);
         this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
       }
 
@@ -661,7 +661,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       return result;
     }
 
-    public class GetMetadata extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertMetadata> {
+    public class GetMetadata extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.AlertMetadata> {
 
       private static final String REST_PATH = "v1beta1/alerts/{alertId}/metadata";
 
@@ -681,7 +681,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * @since 1.13
        */
       protected GetMetadata(java.lang.String alertId) {
-        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertMetadata.class);
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.AlertMetadata.class);
         this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
       }
 
@@ -812,7 +812,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       return result;
     }
 
-    public class List extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1ListAlertsResponse> {
+    public class List extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.ListAlertsResponse> {
 
       private static final String REST_PATH = "v1beta1/alerts";
 
@@ -829,7 +829,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * @since 1.13
        */
       protected List() {
-        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1ListAlertsResponse.class);
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.ListAlertsResponse.class);
       }
 
       @Override
@@ -1041,16 +1041,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
      * @param alertId Required. The identifier of the alert to undelete.
-     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1UndeleteAlertRequest}
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest}
      * @return the request
      */
-    public Undelete undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1UndeleteAlertRequest content) throws java.io.IOException {
+    public Undelete undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest content) throws java.io.IOException {
       Undelete result = new Undelete(alertId, content);
       initialize(result);
       return result;
     }
 
-    public class Undelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Alert> {
+    public class Undelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Alert> {
 
       private static final String REST_PATH = "v1beta1/alerts/{alertId}:undelete";
 
@@ -1069,11 +1069,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param alertId Required. The identifier of the alert to undelete.
-       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1UndeleteAlertRequest}
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest}
        * @since 1.13
        */
-      protected Undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1UndeleteAlertRequest content) {
-        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Alert.class);
+      protected Undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.Alert.class);
         this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
       }
 
@@ -1185,16 +1185,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param alertId Required. The identifier of the alert this feedback belongs to.
-       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback}
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
        * @return the request
        */
-      public Create create(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback content) throws java.io.IOException {
+      public Create create(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.AlertFeedback content) throws java.io.IOException {
         Create result = new Create(alertId, content);
         initialize(result);
         return result;
       }
 
-      public class Create extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback> {
+      public class Create extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.AlertFeedback> {
 
         private static final String REST_PATH = "v1beta1/alerts/{alertId}/feedback";
 
@@ -1212,11 +1212,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param alertId Required. The identifier of the alert this feedback belongs to.
-         * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback}
+         * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
          * @since 1.13
          */
-        protected Create(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback content) {
-          super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1AlertFeedback.class);
+        protected Create(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.AlertFeedback content) {
+          super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.AlertFeedback.class);
           this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
         }
 
@@ -1337,7 +1337,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         return result;
       }
 
-      public class List extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1ListAlertFeedbackResponse> {
+      public class List extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.ListAlertFeedbackResponse> {
 
         private static final String REST_PATH = "v1beta1/alerts/{alertId}/feedback";
 
@@ -1356,7 +1356,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * @since 1.13
          */
         protected List(java.lang.String alertId) {
-          super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1ListAlertFeedbackResponse.class);
+          super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.ListAlertFeedbackResponse.class);
           this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
         }
 
@@ -1541,7 +1541,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       return result;
     }
 
-    public class GetSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings> {
+    public class GetSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Settings> {
 
       private static final String REST_PATH = "v1beta1/settings";
 
@@ -1559,7 +1559,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * @since 1.13
        */
       protected GetSettings() {
-        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings.class);
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.Settings.class);
       }
 
       @Override
@@ -1665,16 +1665,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * This request holds the parameters needed by the alertcenter server.  After setting any optional
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings}
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.Settings}
      * @return the request
      */
-    public UpdateSettings updateSettings(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings content) throws java.io.IOException {
+    public UpdateSettings updateSettings(com.google.api.services.alertcenter.v1beta1.model.Settings content) throws java.io.IOException {
       UpdateSettings result = new UpdateSettings(content);
       initialize(result);
       return result;
     }
 
-    public class UpdateSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings> {
+    public class UpdateSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Settings> {
 
       private static final String REST_PATH = "v1beta1/settings";
 
@@ -1689,11 +1689,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings}
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.Settings}
        * @since 1.13
        */
-      protected UpdateSettings(com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings content) {
-        super(AlertCenter.this, "PATCH", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.GoogleAppsAlertcenterV1beta1Settings.class);
+      protected UpdateSettings(com.google.api.services.alertcenter.v1beta1.model.Settings content) {
+        super(AlertCenter.this, "PATCH", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.Settings.class);
       }
 
       @Override

@@ -38,21 +38,21 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   private java.lang.String displayName;
 
   /**
-   * External IP address of Cloud SQL instance.
+   * External IP address of a Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIp;
 
   /**
-   * Internal IP address of Cloud SQL instance.
+   * Internal IP address of a Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String internalIp;
 
   /**
-   * URI of a Cloud SQL instance network or empty string if instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * External IP address of Cloud SQL instance.
+   * External IP address of a Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIp() {
@@ -98,7 +98,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * External IP address of Cloud SQL instance.
+   * External IP address of a Cloud SQL instance.
    * @param externalIp externalIp or {@code null} for none
    */
   public CloudSQLInstanceInfo setExternalIp(java.lang.String externalIp) {
@@ -107,7 +107,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Internal IP address of Cloud SQL instance.
+   * Internal IP address of a Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIp() {
@@ -115,7 +115,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Internal IP address of Cloud SQL instance.
+   * Internal IP address of a Cloud SQL instance.
    * @param internalIp internalIp or {@code null} for none
    */
   public CloudSQLInstanceInfo setInternalIp(java.lang.String internalIp) {
@@ -124,7 +124,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance network or empty string if instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -132,7 +132,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance network or empty string if instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
    * @param networkUri networkUri or {@code null} for none
    */
   public CloudSQLInstanceInfo setNetworkUri(java.lang.String networkUri) {

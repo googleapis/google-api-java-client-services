@@ -31,6 +31,21 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudSqlInstance;
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gkeMasterCluster;
+
+  /**
    * A Compute Engine instance URI.
    * The value may be {@code null}.
    */
@@ -78,6 +93,42 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudSqlInstance() {
+    return cloudSqlInstance;
+  }
+
+  /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * @param cloudSqlInstance cloudSqlInstance or {@code null} for none
+   */
+  public Endpoint setCloudSqlInstance(java.lang.String cloudSqlInstance) {
+    this.cloudSqlInstance = cloudSqlInstance;
+    return this;
+  }
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGkeMasterCluster() {
+    return gkeMasterCluster;
+  }
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * @param gkeMasterCluster gkeMasterCluster or {@code null} for none
+   */
+  public Endpoint setGkeMasterCluster(java.lang.String gkeMasterCluster) {
+    this.gkeMasterCluster = gkeMasterCluster;
+    return this;
+  }
 
   /**
    * A Compute Engine instance URI.

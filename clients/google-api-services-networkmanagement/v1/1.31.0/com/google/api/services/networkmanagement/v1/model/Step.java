@@ -32,7 +32,7 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class Step extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display info of the final state "abort" and reason.
+   * Display information of the final state "abort" and reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean causesDrop;
 
   /**
-   * Display info of a Cloud SQL instance.
+   * Display information of a Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudSQLInstanceInfo cloudSqlInstance;
 
   /**
-   * Display info of the final state "deliver" and reason.
+   * Display information of the final state "deliver" and reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,65 +67,65 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Display info of the final state "drop" and reason.
+   * Display information of the final state "drop" and reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DropInfo drop;
 
   /**
-   * Display info of the source and destination under analysis. The endpoint info in an intermediate
-   * state may differ with the initial input, as it might be modified by state like NAT, or
-   * Connection Proxy.
+   * Display information of the source and destination under analysis. The endpoint information in
+   * an intermediate state may differ with the initial input, as it might be modified by state like
+   * NAT, or Connection Proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EndpointInfo endpoint;
 
   /**
-   * Display info of a Compute Engine firewall rule.
+   * Display information of a Compute Engine firewall rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FirewallInfo firewall;
 
   /**
-   * Display info of the final state "forward" and reason.
+   * Display information of the final state "forward" and reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ForwardInfo forward;
 
   /**
-   * Display info of a Compute Engine forwarding rule.
+   * Display information of a Compute Engine forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ForwardingRuleInfo forwardingRule;
 
   /**
-   * Display info of a Google Kubernetes Engine cluster master.
+   * Display information of a Google Kubernetes Engine cluster master.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GKEMasterInfo gkeMaster;
 
   /**
-   * Display info of a Compute Engine instance.
+   * Display information of a Compute Engine instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceInfo instance;
 
   /**
-   * Display info of the load balancers.
+   * Display information of the load balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LoadBalancerInfo loadBalancer;
 
   /**
-   * Display info of a GCP network.
+   * Display information of a Google Cloud network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Display info of a Compute Engine route.
+   * Display information of a Compute Engine route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,21 +153,21 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Display info of a Compute Engine VPN gateway.
+   * Display information of a Compute Engine VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpnGatewayInfo vpnGateway;
 
   /**
-   * Display info of a Compute Engine VPN tunnel.
+   * Display information of a Compute Engine VPN tunnel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpnTunnelInfo vpnTunnel;
 
   /**
-   * Display info of the final state "abort" and reason.
+   * Display information of the final state "abort" and reason.
    * @return value or {@code null} for none
    */
   public AbortInfo getAbort() {
@@ -175,7 +175,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "abort" and reason.
+   * Display information of the final state "abort" and reason.
    * @param abort abort or {@code null} for none
    */
   public Step setAbort(AbortInfo abort) {
@@ -201,7 +201,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Cloud SQL instance.
+   * Display information of a Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public CloudSQLInstanceInfo getCloudSqlInstance() {
@@ -209,7 +209,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Cloud SQL instance.
+   * Display information of a Cloud SQL instance.
    * @param cloudSqlInstance cloudSqlInstance or {@code null} for none
    */
   public Step setCloudSqlInstance(CloudSQLInstanceInfo cloudSqlInstance) {
@@ -218,7 +218,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "deliver" and reason.
+   * Display information of the final state "deliver" and reason.
    * @return value or {@code null} for none
    */
   public DeliverInfo getDeliver() {
@@ -226,7 +226,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "deliver" and reason.
+   * Display information of the final state "deliver" and reason.
    * @param deliver deliver or {@code null} for none
    */
   public Step setDeliver(DeliverInfo deliver) {
@@ -252,7 +252,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "drop" and reason.
+   * Display information of the final state "drop" and reason.
    * @return value or {@code null} for none
    */
   public DropInfo getDrop() {
@@ -260,7 +260,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "drop" and reason.
+   * Display information of the final state "drop" and reason.
    * @param drop drop or {@code null} for none
    */
   public Step setDrop(DropInfo drop) {
@@ -269,9 +269,9 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the source and destination under analysis. The endpoint info in an intermediate
-   * state may differ with the initial input, as it might be modified by state like NAT, or
-   * Connection Proxy.
+   * Display information of the source and destination under analysis. The endpoint information in
+   * an intermediate state may differ with the initial input, as it might be modified by state like
+   * NAT, or Connection Proxy.
    * @return value or {@code null} for none
    */
   public EndpointInfo getEndpoint() {
@@ -279,9 +279,9 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the source and destination under analysis. The endpoint info in an intermediate
-   * state may differ with the initial input, as it might be modified by state like NAT, or
-   * Connection Proxy.
+   * Display information of the source and destination under analysis. The endpoint information in
+   * an intermediate state may differ with the initial input, as it might be modified by state like
+   * NAT, or Connection Proxy.
    * @param endpoint endpoint or {@code null} for none
    */
   public Step setEndpoint(EndpointInfo endpoint) {
@@ -290,7 +290,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine firewall rule.
+   * Display information of a Compute Engine firewall rule.
    * @return value or {@code null} for none
    */
   public FirewallInfo getFirewall() {
@@ -298,7 +298,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine firewall rule.
+   * Display information of a Compute Engine firewall rule.
    * @param firewall firewall or {@code null} for none
    */
   public Step setFirewall(FirewallInfo firewall) {
@@ -307,7 +307,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "forward" and reason.
+   * Display information of the final state "forward" and reason.
    * @return value or {@code null} for none
    */
   public ForwardInfo getForward() {
@@ -315,7 +315,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the final state "forward" and reason.
+   * Display information of the final state "forward" and reason.
    * @param forward forward or {@code null} for none
    */
   public Step setForward(ForwardInfo forward) {
@@ -324,7 +324,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine forwarding rule.
+   * Display information of a Compute Engine forwarding rule.
    * @return value or {@code null} for none
    */
   public ForwardingRuleInfo getForwardingRule() {
@@ -332,7 +332,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine forwarding rule.
+   * Display information of a Compute Engine forwarding rule.
    * @param forwardingRule forwardingRule or {@code null} for none
    */
   public Step setForwardingRule(ForwardingRuleInfo forwardingRule) {
@@ -341,7 +341,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Google Kubernetes Engine cluster master.
+   * Display information of a Google Kubernetes Engine cluster master.
    * @return value or {@code null} for none
    */
   public GKEMasterInfo getGkeMaster() {
@@ -349,7 +349,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Google Kubernetes Engine cluster master.
+   * Display information of a Google Kubernetes Engine cluster master.
    * @param gkeMaster gkeMaster or {@code null} for none
    */
   public Step setGkeMaster(GKEMasterInfo gkeMaster) {
@@ -358,7 +358,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine instance.
+   * Display information of a Compute Engine instance.
    * @return value or {@code null} for none
    */
   public InstanceInfo getInstance() {
@@ -366,7 +366,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine instance.
+   * Display information of a Compute Engine instance.
    * @param instance instance or {@code null} for none
    */
   public Step setInstance(InstanceInfo instance) {
@@ -375,7 +375,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the load balancers.
+   * Display information of the load balancers.
    * @return value or {@code null} for none
    */
   public LoadBalancerInfo getLoadBalancer() {
@@ -383,7 +383,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of the load balancers.
+   * Display information of the load balancers.
    * @param loadBalancer loadBalancer or {@code null} for none
    */
   public Step setLoadBalancer(LoadBalancerInfo loadBalancer) {
@@ -392,7 +392,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a GCP network.
+   * Display information of a Google Cloud network.
    * @return value or {@code null} for none
    */
   public NetworkInfo getNetwork() {
@@ -400,7 +400,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a GCP network.
+   * Display information of a Google Cloud network.
    * @param network network or {@code null} for none
    */
   public Step setNetwork(NetworkInfo network) {
@@ -426,7 +426,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine route.
+   * Display information of a Compute Engine route.
    * @return value or {@code null} for none
    */
   public RouteInfo getRoute() {
@@ -434,7 +434,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine route.
+   * Display information of a Compute Engine route.
    * @param route route or {@code null} for none
    */
   public Step setRoute(RouteInfo route) {
@@ -460,7 +460,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine VPN gateway.
+   * Display information of a Compute Engine VPN gateway.
    * @return value or {@code null} for none
    */
   public VpnGatewayInfo getVpnGateway() {
@@ -468,7 +468,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine VPN gateway.
+   * Display information of a Compute Engine VPN gateway.
    * @param vpnGateway vpnGateway or {@code null} for none
    */
   public Step setVpnGateway(VpnGatewayInfo vpnGateway) {
@@ -477,7 +477,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine VPN tunnel.
+   * Display information of a Compute Engine VPN tunnel.
    * @return value or {@code null} for none
    */
   public VpnTunnelInfo getVpnTunnel() {
@@ -485,7 +485,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display info of a Compute Engine VPN tunnel.
+   * Display information of a Compute Engine VPN tunnel.
    * @param vpnTunnel vpnTunnel or {@code null} for none
    */
   public Step setVpnTunnel(VpnTunnelInfo vpnTunnel) {

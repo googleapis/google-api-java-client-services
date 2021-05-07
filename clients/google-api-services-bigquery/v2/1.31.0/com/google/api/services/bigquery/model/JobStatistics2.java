@@ -52,6 +52,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long ddlAffectedRowAccessPolicyCount;
 
   /**
+   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * that ddl_target_table is used just for its type information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableReference ddlDestinationTable;
+
+  /**
    * The DDL operation performed, possibly dependent on the pre-existence of the DDL target.
    * Possible values (new values might be added in the future): "CREATE": The query created the DDL
    * target. "SKIP": No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table
@@ -302,6 +310,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setDdlAffectedRowAccessPolicyCount(java.lang.Long ddlAffectedRowAccessPolicyCount) {
     this.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
+    return this;
+  }
+
+  /**
+   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * that ddl_target_table is used just for its type information.
+   * @return value or {@code null} for none
+   */
+  public TableReference getDdlDestinationTable() {
+    return ddlDestinationTable;
+  }
+
+  /**
+   * [Output-only] The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note
+   * that ddl_target_table is used just for its type information.
+   * @param ddlDestinationTable ddlDestinationTable or {@code null} for none
+   */
+  public JobStatistics2 setDdlDestinationTable(TableReference ddlDestinationTable) {
+    this.ddlDestinationTable = ddlDestinationTable;
     return this;
   }
 

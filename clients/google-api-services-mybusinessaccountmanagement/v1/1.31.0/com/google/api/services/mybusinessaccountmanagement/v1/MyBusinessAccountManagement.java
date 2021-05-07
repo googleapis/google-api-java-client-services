@@ -1905,121 +1905,135 @@ public class MyBusinessAccountManagement extends com.google.api.client.googleapi
      * administers. The user must be an owner of the account the location is currently associated with
      * and must also be at least a manager of the destination account.
      *
-     * Create a request for the method "locations.transferLocation".
+     * Create a request for the method "locations.transfer".
      *
      * This request holds the parameters needed by the mybusinessaccountmanagement server.  After
-     * setting any optional parameters, call the {@link TransferLocation#execute()} method to invoke the
-     * remote operation.
+     * setting any optional parameters, call the {@link Transfer#execute()} method to invoke the remote
+     * operation.
      *
-     * @param locationsId
+     * @param name Required. The name of the location to transfer. `locations/{location_id}`.
      * @param content the {@link com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest}
      * @return the request
      */
-    public TransferLocation transferLocation(java.lang.String locationsId, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) throws java.io.IOException {
-      TransferLocation result = new TransferLocation(locationsId, content);
+    public Transfer transfer(java.lang.String name, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) throws java.io.IOException {
+      Transfer result = new Transfer(name, content);
       initialize(result);
       return result;
     }
 
-    public class TransferLocation extends MyBusinessAccountManagementRequest<com.google.api.services.mybusinessaccountmanagement.v1.model.Empty> {
+    public class Transfer extends MyBusinessAccountManagementRequest<com.google.api.services.mybusinessaccountmanagement.v1.model.Empty> {
 
-      private static final String REST_PATH = "v1/locations/{locationsId}:transferLocation";
+      private static final String REST_PATH = "v1/{+name}:transfer";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^locations/[^/]+$");
 
       /**
        * Moves a location from an account that the user owns to another account that the same user
        * administers. The user must be an owner of the account the location is currently associated with
        * and must also be at least a manager of the destination account.
        *
-       * Create a request for the method "locations.transferLocation".
+       * Create a request for the method "locations.transfer".
        *
        * This request holds the parameters needed by the the mybusinessaccountmanagement server.  After
-       * setting any optional parameters, call the {@link TransferLocation#execute()} method to invoke
-       * the remote operation. <p> {@link TransferLocation#initialize(com.google.api.client.googleapis.s
-       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
+       * setting any optional parameters, call the {@link Transfer#execute()} method to invoke the
+       * remote operation. <p> {@link
+       * Transfer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param locationsId
+       * @param name Required. The name of the location to transfer. `locations/{location_id}`.
        * @param content the {@link com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest}
        * @since 1.13
        */
-      protected TransferLocation(java.lang.String locationsId, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) {
+      protected Transfer(java.lang.String name, com.google.api.services.mybusinessaccountmanagement.v1.model.TransferLocationRequest content) {
         super(MyBusinessAccountManagement.this, "POST", REST_PATH, content, com.google.api.services.mybusinessaccountmanagement.v1.model.Empty.class);
-        this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^locations/[^/]+$");
+        }
       }
 
       @Override
-      public TransferLocation set$Xgafv(java.lang.String $Xgafv) {
-        return (TransferLocation) super.set$Xgafv($Xgafv);
+      public Transfer set$Xgafv(java.lang.String $Xgafv) {
+        return (Transfer) super.set$Xgafv($Xgafv);
       }
 
       @Override
-      public TransferLocation setAccessToken(java.lang.String accessToken) {
-        return (TransferLocation) super.setAccessToken(accessToken);
+      public Transfer setAccessToken(java.lang.String accessToken) {
+        return (Transfer) super.setAccessToken(accessToken);
       }
 
       @Override
-      public TransferLocation setAlt(java.lang.String alt) {
-        return (TransferLocation) super.setAlt(alt);
+      public Transfer setAlt(java.lang.String alt) {
+        return (Transfer) super.setAlt(alt);
       }
 
       @Override
-      public TransferLocation setCallback(java.lang.String callback) {
-        return (TransferLocation) super.setCallback(callback);
+      public Transfer setCallback(java.lang.String callback) {
+        return (Transfer) super.setCallback(callback);
       }
 
       @Override
-      public TransferLocation setFields(java.lang.String fields) {
-        return (TransferLocation) super.setFields(fields);
+      public Transfer setFields(java.lang.String fields) {
+        return (Transfer) super.setFields(fields);
       }
 
       @Override
-      public TransferLocation setKey(java.lang.String key) {
-        return (TransferLocation) super.setKey(key);
+      public Transfer setKey(java.lang.String key) {
+        return (Transfer) super.setKey(key);
       }
 
       @Override
-      public TransferLocation setOauthToken(java.lang.String oauthToken) {
-        return (TransferLocation) super.setOauthToken(oauthToken);
+      public Transfer setOauthToken(java.lang.String oauthToken) {
+        return (Transfer) super.setOauthToken(oauthToken);
       }
 
       @Override
-      public TransferLocation setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (TransferLocation) super.setPrettyPrint(prettyPrint);
+      public Transfer setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Transfer) super.setPrettyPrint(prettyPrint);
       }
 
       @Override
-      public TransferLocation setQuotaUser(java.lang.String quotaUser) {
-        return (TransferLocation) super.setQuotaUser(quotaUser);
+      public Transfer setQuotaUser(java.lang.String quotaUser) {
+        return (Transfer) super.setQuotaUser(quotaUser);
       }
 
       @Override
-      public TransferLocation setUploadType(java.lang.String uploadType) {
-        return (TransferLocation) super.setUploadType(uploadType);
+      public Transfer setUploadType(java.lang.String uploadType) {
+        return (Transfer) super.setUploadType(uploadType);
       }
 
       @Override
-      public TransferLocation setUploadProtocol(java.lang.String uploadProtocol) {
-        return (TransferLocation) super.setUploadProtocol(uploadProtocol);
+      public Transfer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Transfer) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Required. The name of the location to transfer. `locations/{location_id}`. */
       @com.google.api.client.util.Key
-      private java.lang.String locationsId;
+      private java.lang.String name;
 
-      /**
-
+      /** Required. The name of the location to transfer. `locations/{location_id}`.
        */
-      public java.lang.String getLocationsId() {
-        return locationsId;
+      public java.lang.String getName() {
+        return name;
       }
 
-      public TransferLocation setLocationsId(java.lang.String locationsId) {
-        this.locationsId = locationsId;
+      /** Required. The name of the location to transfer. `locations/{location_id}`. */
+      public Transfer setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^locations/[^/]+$");
+        }
+        this.name = name;
         return this;
       }
 
       @Override
-      public TransferLocation set(String parameterName, Object value) {
-        return (TransferLocation) super.set(parameterName, value);
+      public Transfer set(String parameterName, Object value) {
+        return (Transfer) super.set(parameterName, value);
       }
     }
 

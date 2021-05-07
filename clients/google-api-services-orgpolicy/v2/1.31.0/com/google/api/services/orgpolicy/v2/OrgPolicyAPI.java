@@ -25,7 +25,7 @@ package com.google.api.services.orgpolicy.v2;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/orgpolicy/docs/reference/rest/index.html" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -3883,7 +3883,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Lists the `Group`s under a customer or namespace.
+     * Lists the `Group` resources under a customer or namespace.
      *
      * Create a request for the method "groups.list".
      *
@@ -3903,7 +3903,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups";
 
       /**
-       * Lists the `Group`s under a customer or namespace.
+       * Lists the `Group` resources under a customer or namespace.
        *
        * Create a request for the method "groups.list".
        *
@@ -4032,25 +4032,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The parent resource under which to list all `Group`s. Must be of the form
-       * `identitysources/{identity_source_id}` for external- identity-mapped groups or
-       * `customers/{customer_id}` for Google Groups.
+       * Required. The parent resource under which to list all `Group` resources. Must be of the
+       * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
+       * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
+       * example, 'C046psxkn').
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The parent resource under which to list all `Group`s. Must be of the form
+      /** Required. The parent resource under which to list all `Group` resources. Must be of the form
      `identitysources/{identity_source_id}` for external- identity-mapped groups or
-     `customers/{customer_id}` for Google Groups.
+     `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for example,
+     'C046psxkn').
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The parent resource under which to list all `Group`s. Must be of the form
-       * `identitysources/{identity_source_id}` for external- identity-mapped groups or
-       * `customers/{customer_id}` for Google Groups.
+       * Required. The parent resource under which to list all `Group` resources. Must be of the
+       * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
+       * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
+       * example, 'C046psxkn').
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -4408,7 +4411,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Searches for `Group`s matching a specified query.
+     * Searches for `Group` resources matching a specified query.
      *
      * Create a request for the method "groups.search".
      *
@@ -4428,7 +4431,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups:search";
 
       /**
-       * Searches for `Group`s matching a specified query.
+       * Searches for `Group` resources matching a specified query.
        *
        * Create a request for the method "groups.search".
        *
@@ -4563,7 +4566,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Required. The search query. Must be specified in [Common Expression
        * Language](https://opensource.google/projects/cel). May only contain equality operators on
        * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
+       * begin with "C" (for example, 'C046psxkn').
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -4571,7 +4575,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /** Required. The search query. Must be specified in [Common Expression
      Language](https://opensource.google/projects/cel). May only contain equality operators on the
      parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must begin
+     with "C" (for example, 'C046psxkn').
        */
       public java.lang.String getQuery() {
         return query;
@@ -4581,7 +4586,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Required. The search query. Must be specified in [Common Expression
        * Language](https://opensource.google/projects/cel). May only contain equality operators on
        * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
+       * begin with "C" (for example, 'C046psxkn').
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -6233,9 +6239,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A CEL expression that MUST include member specification AND label(s). This is a
          * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
-         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
-         * and a 'member_key_namespace', which requires an additional query input:
-         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * is supported on labels. Identity-mapped groups are uniquely identified by both a
+         * `member_key_id` and a `member_key_namespace`, which requires an additional query input:
+         * `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && in
          * labels`
          */
         @com.google.api.client.util.Key
@@ -6243,8 +6249,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /** Required. A CEL expression that MUST include member specification AND label(s). This is a
        `required` field. Users can search on label attributes of groups. CONTAINS match ('in') is
-       supported on labels. Certain groups are uniquely identified by both a 'member_key_id' and a
-       'member_key_namespace', which requires an additional query input: 'member_key_namespace'. Example
+       supported on labels. Identity-mapped groups are uniquely identified by both a `member_key_id` and a
+       `member_key_namespace`, which requires an additional query input: `member_key_namespace`. Example
        query: `member_key_id == 'member_key_id_value' && in labels`
          */
         public java.lang.String getQuery() {
@@ -6254,9 +6260,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A CEL expression that MUST include member specification AND label(s). This is a
          * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
-         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
-         * and a 'member_key_namespace', which requires an additional query input:
-         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * is supported on labels. Identity-mapped groups are uniquely identified by both a
+         * `member_key_id` and a `member_key_namespace`, which requires an additional query input:
+         * `member_key_namespace`. Example query: `member_key_id == 'member_key_id_value' && in
          * labels`
          */
         public SearchTransitiveGroups setQuery(java.lang.String query) {

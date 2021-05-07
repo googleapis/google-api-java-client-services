@@ -87,8 +87,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Examples:
-   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +104,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
+   * `customer_id` must begin with "C" (for example, 'C046psxkn').
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,8 +230,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Examples:
-   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -246,8 +245,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an
    * immutable change and the security label cannot be removed once added.** Dynamic groups have a
    * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
-   * Cloud Search have a label with a key of `system/groups/external` and an empty value. Examples:
-   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
+   * Cloud Search have a label with a key of `system/groups/external` and an empty value.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -277,7 +275,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
+   * `customer_id` must begin with "C" (for example, 'C046psxkn').
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -287,7 +286,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
    * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
+   * `customer_id` must begin with "C" (for example, 'C046psxkn').
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {

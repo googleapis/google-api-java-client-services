@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class ListGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `Group`s under the specified `parent`.
+   * The `Group` resources under the specified `parent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ListGroupsResponse extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * The `Group`s under the specified `parent`.
+   * The `Group` resources under the specified `parent`.
    * @return value or {@code null} for none
    */
   public java.util.List<Group> getGroups() {
@@ -59,7 +59,7 @@ public final class ListGroupsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The `Group`s under the specified `parent`.
+   * The `Group` resources under the specified `parent`.
    * @param groups groups or {@code null} for none
    */
   public ListGroupsResponse setGroups(java.util.List<Group> groups) {

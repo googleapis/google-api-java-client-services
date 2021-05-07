@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class MemberRelation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name for this member if member is a GROUP, otherwise it is empty.
+   * Resource name for this member.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class MemberRelation extends com.google.api.client.json.GenericJson
   private java.util.List<TransitiveMembershipRole> roles;
 
   /**
-   * Resource name for this member if member is a GROUP, otherwise it is empty.
+   * Resource name for this member.
    * @return value or {@code null} for none
    */
   public java.lang.String getMember() {
@@ -73,7 +73,7 @@ public final class MemberRelation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Resource name for this member if member is a GROUP, otherwise it is empty.
+   * Resource name for this member.
    * @param member member or {@code null} for none
    */
   public MemberRelation setMember(java.lang.String member) {

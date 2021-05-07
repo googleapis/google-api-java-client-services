@@ -317,6 +317,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /** If set, validate the request and preview the review, but do not actually save it. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** If set, validate the request and preview the review, but do not actually save it.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /** If set, validate the request and preview the review, but do not actually save it. */
+        public Create setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -944,6 +960,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                 "^projects/[^/]+/dashboards/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /** If set, validate the request and preview the review, but do not actually save it. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** If set, validate the request and preview the review, but do not actually save it.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /** If set, validate the request and preview the review, but do not actually save it. */
+        public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
           return this;
         }
 

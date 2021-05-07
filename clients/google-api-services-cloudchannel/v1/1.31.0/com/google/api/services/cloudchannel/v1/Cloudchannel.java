@@ -1280,7 +1280,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Returns a requested ChannelPartnerLink resource. You must be a distributor to call this method.
+       * Returns the requested ChannelPartnerLink resource. You must be a distributor to call this method.
        * Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different
        * from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are
        * missing or invalid. * NOT_FOUND: ChannelPartnerLink resource not found because of an invalid
@@ -1310,11 +1310,11 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+$");
 
         /**
-         * Returns a requested ChannelPartnerLink resource. You must be a distributor to call this method.
-         * Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different
-         * from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters
-         * are missing or invalid. * NOT_FOUND: ChannelPartnerLink resource not found because of an
-         * invalid channel partner link name. Return value: The ChannelPartnerLink resource.
+         * Returns the requested ChannelPartnerLink resource. You must be a distributor to call this
+         * method. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is
+         * different from the reseller account in the API request. * INVALID_ARGUMENT: Required request
+         * parameters are missing or invalid. * NOT_FOUND: ChannelPartnerLink resource not found because
+         * of an invalid channel partner link name. Return value: The ChannelPartnerLink resource.
          *
          * Create a request for the method "channelPartnerLinks.get".
          *
@@ -2008,10 +2008,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Deletes the given Customer permanently and irreversibly. Possible error codes: *
-         * PERMISSION_DENIED: The account making the request does not own this customer. * INVALID_ARGUMENT:
-         * Required request parameters are missing or invalid. * FAILED_PRECONDITION: The customer has
-         * existing entitlements. * NOT_FOUND: No Customer resource found for the name in the request.
+         * Deletes the given Customer permanently. Possible error codes: * PERMISSION_DENIED: The account
+         * making the request does not own this customer. * INVALID_ARGUMENT: Required request parameters
+         * are missing or invalid. * FAILED_PRECONDITION: The customer has existing entitlements. *
+         * NOT_FOUND: No Customer resource found for the name in the request.
          *
          * Create a request for the method "customers.delete".
          *
@@ -2035,11 +2035,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+/customers/[^/]+$");
 
           /**
-           * Deletes the given Customer permanently and irreversibly. Possible error codes: *
-           * PERMISSION_DENIED: The account making the request does not own this customer. *
-           * INVALID_ARGUMENT: Required request parameters are missing or invalid. * FAILED_PRECONDITION:
-           * The customer has existing entitlements. * NOT_FOUND: No Customer resource found for the name in
-           * the request.
+           * Deletes the given Customer permanently. Possible error codes: * PERMISSION_DENIED: The account
+           * making the request does not own this customer. * INVALID_ARGUMENT: Required request parameters
+           * are missing or invalid. * FAILED_PRECONDITION: The customer has existing entitlements. *
+           * NOT_FOUND: No Customer resource found for the name in the request.
            *
            * Create a request for the method "customers.delete".
            *
@@ -2144,7 +2143,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Returns a requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
+         * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
          * account making the request is different from the reseller account in the API request. *
          * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer
          * resource doesn't exist. Usually the result of an invalid name parameter. Return value: The
@@ -2173,11 +2172,11 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+/customers/[^/]+$");
 
           /**
-           * Returns a requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
-           * account making the request is different from the reseller account in the API request. *
-           * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer
-           * resource doesn't exist. Usually the result of an invalid name parameter. Return value: The
-           * Customer resource.
+           * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The
+           * reseller account making the request is different from the reseller account in the API request.
+           * * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The
+           * customer resource doesn't exist. Usually the result of an invalid name parameter. Return value:
+           * The Customer resource.
            *
            * Create a request for the method "customers.get".
            *
@@ -2832,10 +2831,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes the given Customer permanently and irreversibly. Possible error codes: *
-       * PERMISSION_DENIED: The account making the request does not own this customer. * INVALID_ARGUMENT:
-       * Required request parameters are missing or invalid. * FAILED_PRECONDITION: The customer has
-       * existing entitlements. * NOT_FOUND: No Customer resource found for the name in the request.
+       * Deletes the given Customer permanently. Possible error codes: * PERMISSION_DENIED: The account
+       * making the request does not own this customer. * INVALID_ARGUMENT: Required request parameters
+       * are missing or invalid. * FAILED_PRECONDITION: The customer has existing entitlements. *
+       * NOT_FOUND: No Customer resource found for the name in the request.
        *
        * Create a request for the method "customers.delete".
        *
@@ -2859,11 +2858,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+$");
 
         /**
-         * Deletes the given Customer permanently and irreversibly. Possible error codes: *
-         * PERMISSION_DENIED: The account making the request does not own this customer. *
-         * INVALID_ARGUMENT: Required request parameters are missing or invalid. * FAILED_PRECONDITION:
-         * The customer has existing entitlements. * NOT_FOUND: No Customer resource found for the name in
-         * the request.
+         * Deletes the given Customer permanently. Possible error codes: * PERMISSION_DENIED: The account
+         * making the request does not own this customer. * INVALID_ARGUMENT: Required request parameters
+         * are missing or invalid. * FAILED_PRECONDITION: The customer has existing entitlements. *
+         * NOT_FOUND: No Customer resource found for the name in the request.
          *
          * Create a request for the method "customers.delete".
          *
@@ -2968,7 +2966,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Returns a requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
+       * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
        * account making the request is different from the reseller account in the API request. *
        * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer
        * resource doesn't exist. Usually the result of an invalid name parameter. Return value: The
@@ -2997,11 +2995,11 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+$");
 
         /**
-         * Returns a requested Customer resource. Possible error codes: * PERMISSION_DENIED: The reseller
-         * account making the request is different from the reseller account in the API request. *
-         * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer
-         * resource doesn't exist. Usually the result of an invalid name parameter. Return value: The
-         * Customer resource.
+         * Returns the requested Customer resource. Possible error codes: * PERMISSION_DENIED: The
+         * reseller account making the request is different from the reseller account in the API request.
+         * * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The
+         * customer resource doesn't exist. Usually the result of an invalid name parameter. Return value:
+         * The Customer resource.
          *
          * Create a request for the method "customers.get".
          *
@@ -5538,10 +5536,10 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Returns a requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer
-         * doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or
-         * invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested
-         * Entitlement resource.
+         * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The
+         * customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are
+         * missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The
+         * requested Entitlement resource.
          *
          * Create a request for the method "entitlements.get".
          *
@@ -5566,7 +5564,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+/entitlements/[^/]+$");
 
           /**
-           * Returns a requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The
+           * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The
            * customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are
            * missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The
            * requested Entitlement resource.

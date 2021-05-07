@@ -78,7 +78,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String name;
 
   /**
-   * Required. Identifier of the end-user in partner’s system.
+   * Required. Identifier of the end-user in partner’s system. The value is restricted to 63 ASCII
+   * characters at the maximum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,7 +248,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Identifier of the end-user in partner’s system.
+   * Required. Identifier of the end-user in partner’s system. The value is restricted to 63 ASCII
+   * characters at the maximum.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerUserToken() {
@@ -255,7 +257,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Identifier of the end-user in partner’s system.
+   * Required. Identifier of the end-user in partner’s system. The value is restricted to 63 ASCII
+   * characters at the maximum.
    * @param partnerUserToken partnerUserToken or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setPartnerUserToken(java.lang.String partnerUserToken) {

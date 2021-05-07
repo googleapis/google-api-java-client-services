@@ -916,22 +916,25 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
 
         /**
-         * Required. Identifies the subscription resource on the Partner side. If a subscription was
-         * previously created with the same subscription_id, we will directly return that one.
+         * Required. Identifies the subscription resource on the Partner side. The value is
+         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
+         * created with the same subscription_id, we will directly return that one.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
-        /** Required. Identifies the subscription resource on the Partner side. If a subscription was
-       previously created with the same subscription_id, we will directly return that one.
+        /** Required. Identifies the subscription resource on the Partner side. The value is restricted to 63
+       ASCII characters at the maximum. If a subscription was previously created with the same
+       subscription_id, we will directly return that one.
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
         }
 
         /**
-         * Required. Identifies the subscription resource on the Partner side. If a subscription was
-         * previously created with the same subscription_id, we will directly return that one.
+         * Required. Identifies the subscription resource on the Partner side. The value is
+         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
+         * created with the same subscription_id, we will directly return that one.
          */
         public Create setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
@@ -1525,22 +1528,25 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
 
         /**
-         * Required. Identifies the subscription resource on the Partner side. If a subscription was
-         * previously created with the same subscription_id, we will directly return that one.
+         * Required. Identifies the subscription resource on the Partner side. The value is
+         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
+         * created with the same subscription_id, we will directly return that one.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
-        /** Required. Identifies the subscription resource on the Partner side. If a subscription was
-       previously created with the same subscription_id, we will directly return that one.
+        /** Required. Identifies the subscription resource on the Partner side. The value is restricted to 63
+       ASCII characters at the maximum. If a subscription was previously created with the same
+       subscription_id, we will directly return that one.
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
         }
 
         /**
-         * Required. Identifies the subscription resource on the Partner side. If a subscription was
-         * previously created with the same subscription_id, we will directly return that one.
+         * Required. Identifies the subscription resource on the Partner side. The value is
+         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
+         * created with the same subscription_id, we will directly return that one.
          */
         public Provision setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;

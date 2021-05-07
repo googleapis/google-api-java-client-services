@@ -94,6 +94,13 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
   private GoogleCloudRecommenderV1beta1Impact primaryImpact;
 
   /**
+   * Recommendation's priority.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priority;
+
+  /**
    * Contains an identifier for a subtype of recommendations produced for the same recommender.
    * Subtype is a function of content and impact, meaning a new subtype might be added when
    * significant changes to `content` or `primary_impact.category` are introduced. See the
@@ -247,6 +254,23 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    */
   public GoogleCloudRecommenderV1beta1Recommendation setPrimaryImpact(GoogleCloudRecommenderV1beta1Impact primaryImpact) {
     this.primaryImpact = primaryImpact;
+    return this;
+  }
+
+  /**
+   * Recommendation's priority.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriority() {
+    return priority;
+  }
+
+  /**
+   * Recommendation's priority.
+   * @param priority priority or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Recommendation setPriority(java.lang.String priority) {
+    this.priority = priority;
     return this;
   }
 

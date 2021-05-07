@@ -95,6 +95,13 @@ public final class GoogleCloudRecommenderV1Insight extends com.google.api.client
   private String observationPeriod;
 
   /**
+   * Insight's severity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
    * Information state and metadata.
    * The value may be {@code null}.
    */
@@ -260,6 +267,23 @@ public final class GoogleCloudRecommenderV1Insight extends com.google.api.client
    */
   public GoogleCloudRecommenderV1Insight setObservationPeriod(String observationPeriod) {
     this.observationPeriod = observationPeriod;
+    return this;
+  }
+
+  /**
+   * Insight's severity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * Insight's severity.
+   * @param severity severity or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1Insight setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 

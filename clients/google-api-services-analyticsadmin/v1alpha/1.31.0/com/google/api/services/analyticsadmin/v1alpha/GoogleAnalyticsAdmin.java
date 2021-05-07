@@ -2744,7 +2744,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Example format: properties/1234/userLinks/5678
+       * @param name Output only. Example format: properties/1234/userLinks/5678
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserLink}
        * @return the request
        */
@@ -2772,7 +2772,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Example format: properties/1234/userLinks/5678
+         * @param name Output only. Example format: properties/1234/userLinks/5678
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserLink}
          * @since 1.13
          */
@@ -2841,17 +2841,17 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Example format: properties/1234/userLinks/5678 */
+        /** Output only. Example format: properties/1234/userLinks/5678 */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Example format: properties/1234/userLinks/5678
+        /** Output only. Example format: properties/1234/userLinks/5678
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Example format: properties/1234/userLinks/5678 */
+        /** Output only. Example format: properties/1234/userLinks/5678 */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7719,7 +7719,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Example format: properties/1234/userLinks/5678
+       * @param name Output only. Example format: properties/1234/userLinks/5678
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserLink}
        * @return the request
        */
@@ -7747,7 +7747,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Example format: properties/1234/userLinks/5678
+         * @param name Output only. Example format: properties/1234/userLinks/5678
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserLink}
          * @since 1.13
          */
@@ -7816,17 +7816,17 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Example format: properties/1234/userLinks/5678 */
+        /** Output only. Example format: properties/1234/userLinks/5678 */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Example format: properties/1234/userLinks/5678
+        /** Output only. Example format: properties/1234/userLinks/5678
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Example format: properties/1234/userLinks/5678 */
+        /** Output only. Example format: properties/1234/userLinks/5678 */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

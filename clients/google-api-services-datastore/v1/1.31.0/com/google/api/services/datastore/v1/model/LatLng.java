@@ -18,8 +18,8 @@ package com.google.api.services.datastore.v1.model;
 
 /**
  * An object that represents a latitude/longitude pair. This is expressed as a pair of doubles to
- * represent degrees latitude and degrees longitude. Unless specified otherwise, this must conform
- * to the WGS84 standard. Values must be within normalized ranges.
+ * represent degrees latitude and degrees longitude. Unless specified otherwise, this object must
+ * conform to the WGS84 standard. Values must be within normalized ranges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

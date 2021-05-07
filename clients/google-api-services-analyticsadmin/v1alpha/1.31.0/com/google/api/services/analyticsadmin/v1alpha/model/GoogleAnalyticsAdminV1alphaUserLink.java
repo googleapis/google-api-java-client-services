@@ -41,14 +41,14 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
   private java.util.List<java.lang.String> directRoles;
 
   /**
-   * Email address of the user to link
+   * Immutable. Email address of the user to link
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emailAddress;
 
   /**
-   * Example format: properties/1234/userLinks/5678
+   * Output only. Example format: properties/1234/userLinks/5678
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
   }
 
   /**
-   * Email address of the user to link
+   * Immutable. Email address of the user to link
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -86,7 +86,7 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
   }
 
   /**
-   * Email address of the user to link
+   * Immutable. Email address of the user to link
    * @param emailAddress emailAddress or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaUserLink setEmailAddress(java.lang.String emailAddress) {
@@ -95,7 +95,7 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
   }
 
   /**
-   * Example format: properties/1234/userLinks/5678
+   * Output only. Example format: properties/1234/userLinks/5678
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +103,7 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
   }
 
   /**
-   * Example format: properties/1234/userLinks/5678
+   * Output only. Example format: properties/1234/userLinks/5678
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaUserLink setName(java.lang.String name) {

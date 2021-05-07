@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class SearchGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `Group`s that match the search query.
+   * The `Group` resources that match the search query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * The `Group`s that match the search query.
+   * The `Group` resources that match the search query.
    * @return value or {@code null} for none
    */
   public java.util.List<Group> getGroups() {
@@ -59,7 +59,7 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The `Group`s that match the search query.
+   * The `Group` resources that match the search query.
    * @param groups groups or {@code null} for none
    */
   public SearchGroupsResponse setGroups(java.util.List<Group> groups) {

@@ -297,7 +297,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
      * server errors, the client should rely on the cached results for much longer time to avoid outage.
      * WARNING: There is general 60s delay for the configuration and policy propagation, therefore
      * callers MUST NOT depend on the `Check` method having the latest policy information. NOTE: the
-     * CheckRequest has the size limit of 64KB. This method requires the
+     * CheckRequest has the size limit (wire-format byte size) of 1MB. This method requires the
      * `servicemanagement.services.check` permission on the specified service. For more information, see
      * [Cloud IAM](https://cloud.google.com/iam).
      *
@@ -330,9 +330,9 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * In case of any server errors, the client should rely on the cached results for much longer time
        * to avoid outage. WARNING: There is general 60s delay for the configuration and policy
        * propagation, therefore callers MUST NOT depend on the `Check` method having the latest policy
-       * information. NOTE: the CheckRequest has the size limit of 64KB. This method requires the
-       * `servicemanagement.services.check` permission on the specified service. For more information,
-       * see [Cloud IAM](https://cloud.google.com/iam).
+       * information. NOTE: the CheckRequest has the size limit (wire-format byte size) of 1MB. This
+       * method requires the `servicemanagement.services.check` permission on the specified service. For
+       * more information, see [Cloud IAM](https://cloud.google.com/iam).
        *
        * Create a request for the method "services.check".
        *

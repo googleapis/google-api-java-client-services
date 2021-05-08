@@ -2261,6 +2261,138 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
         public class Subscriptions {
 
           /**
+           * Updates the committed cursor.
+           *
+           * Create a request for the method "subscriptions.commitCursor".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link CommitCursor#execute()} method to invoke the remote operation.
+           *
+           * @param subscription The subscription for which to update the cursor.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.CommitCursorRequest}
+           * @return the request
+           */
+          public CommitCursor commitCursor(java.lang.String subscription, com.google.api.services.pubsublite.v1.model.CommitCursorRequest content) throws java.io.IOException {
+            CommitCursor result = new CommitCursor(subscription, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CommitCursor extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.CommitCursorResponse> {
+
+            private static final String REST_PATH = "v1/cursor/{+subscription}:commitCursor";
+
+            private final java.util.regex.Pattern SUBSCRIPTION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+            /**
+             * Updates the committed cursor.
+             *
+             * Create a request for the method "subscriptions.commitCursor".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link CommitCursor#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * CommitCursor#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param subscription The subscription for which to update the cursor.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.CommitCursorRequest}
+             * @since 1.13
+             */
+            protected CommitCursor(java.lang.String subscription, com.google.api.services.pubsublite.v1.model.CommitCursorRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.CommitCursorResponse.class);
+              this.subscription = com.google.api.client.util.Preconditions.checkNotNull(subscription, "Required parameter subscription must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
+                    "Parameter subscription must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public CommitCursor set$Xgafv(java.lang.String $Xgafv) {
+              return (CommitCursor) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CommitCursor setAccessToken(java.lang.String accessToken) {
+              return (CommitCursor) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CommitCursor setAlt(java.lang.String alt) {
+              return (CommitCursor) super.setAlt(alt);
+            }
+
+            @Override
+            public CommitCursor setCallback(java.lang.String callback) {
+              return (CommitCursor) super.setCallback(callback);
+            }
+
+            @Override
+            public CommitCursor setFields(java.lang.String fields) {
+              return (CommitCursor) super.setFields(fields);
+            }
+
+            @Override
+            public CommitCursor setKey(java.lang.String key) {
+              return (CommitCursor) super.setKey(key);
+            }
+
+            @Override
+            public CommitCursor setOauthToken(java.lang.String oauthToken) {
+              return (CommitCursor) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CommitCursor setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CommitCursor) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CommitCursor setQuotaUser(java.lang.String quotaUser) {
+              return (CommitCursor) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CommitCursor setUploadType(java.lang.String uploadType) {
+              return (CommitCursor) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CommitCursor setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CommitCursor) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The subscription for which to update the cursor. */
+            @com.google.api.client.util.Key
+            private java.lang.String subscription;
+
+            /** The subscription for which to update the cursor.
+             */
+            public java.lang.String getSubscription() {
+              return subscription;
+            }
+
+            /** The subscription for which to update the cursor. */
+            public CommitCursor setSubscription(java.lang.String subscription) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SUBSCRIPTION_PATTERN.matcher(subscription).matches(),
+                    "Parameter subscription must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+              }
+              this.subscription = subscription;
+              return this;
+            }
+
+            @Override
+            public CommitCursor set(String parameterName, Object value) {
+              return (CommitCursor) super.set(parameterName, value);
+            }
+          }
+
+          /**
            * An accessor for creating requests from the Cursors collection.
            *
            * <p>The typical use is:</p>

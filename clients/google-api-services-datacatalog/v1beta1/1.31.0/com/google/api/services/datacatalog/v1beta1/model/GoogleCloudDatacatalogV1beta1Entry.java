@@ -128,6 +128,13 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   private java.lang.String type;
 
   /**
+   * Output only. Statistics on the usage level of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1beta1UsageSignal usageSignal;
+
+  /**
    * This field indicates the entry's source system that Data Catalog does not integrate with.
    * `user_specified_system` strings must begin with a letter or underscore and can only contain
    * letters, numbers, and underscores; are case insensitive; must be at least 1 character and at
@@ -366,6 +373,23 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
    */
   public GoogleCloudDatacatalogV1beta1Entry setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics on the usage level of the resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1UsageSignal getUsageSignal() {
+    return usageSignal;
+  }
+
+  /**
+   * Output only. Statistics on the usage level of the resource.
+   * @param usageSignal usageSignal or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Entry setUsageSignal(GoogleCloudDatacatalogV1beta1UsageSignal usageSignal) {
+    this.usageSignal = usageSignal;
     return this;
   }
 

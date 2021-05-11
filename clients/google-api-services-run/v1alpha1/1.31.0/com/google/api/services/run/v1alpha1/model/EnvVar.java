@@ -48,8 +48,9 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Source for the environment
-   * variable's value. Cannot be used if value is not empty. +optional
+   * Cloud Run fully managed: supported Source for the environment variable's value. Only supports
+   * secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value.
+   * Cannot be used if value is not empty. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +99,9 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Source for the environment
-   * variable's value. Cannot be used if value is not empty. +optional
+   * Cloud Run fully managed: supported Source for the environment variable's value. Only supports
+   * secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value.
+   * Cannot be used if value is not empty. +optional
    * @return value or {@code null} for none
    */
   public EnvVarSource getValueFrom() {
@@ -107,8 +109,9 @@ public final class EnvVar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Source for the environment
-   * variable's value. Cannot be used if value is not empty. +optional
+   * Cloud Run fully managed: supported Source for the environment variable's value. Only supports
+   * secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value.
+   * Cannot be used if value is not empty. +optional
    * @param valueFrom valueFrom or {@code null} for none
    */
   public EnvVar setValueFrom(EnvVarSource valueFrom) {

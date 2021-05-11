@@ -41,11 +41,15 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   private java.lang.Integer defaultMode;
 
   /**
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is
+   * the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret
+   * Manager and the path will be the name of the file exposed in the volume. When items are
+   * defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified,
+   * each key-value pair in the Data field of the referenced Secret will be projected into the
+   * volume as a file whose name is the key and content is the value. If specified, the listed keys
+   * will be projected into the specified paths, and unlisted keys will not be present. If a key is
+   * specified which is not present in the Secret, the volume setup will error unless it is marked
+   * optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +69,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   private java.lang.Boolean optional;
 
   /**
-   * Name of the secret in the container's namespace to use.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret
+   * in the container's namespace to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,11 +104,15 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is
+   * the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret
+   * Manager and the path will be the name of the file exposed in the volume. When items are
+   * defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified,
+   * each key-value pair in the Data field of the referenced Secret will be projected into the
+   * volume as a file whose name is the key and content is the value. If specified, the listed keys
+   * will be projected into the specified paths, and unlisted keys will not be present. If a key is
+   * specified which is not present in the Secret, the volume setup will error unless it is marked
+   * optional.
    * @return value or {@code null} for none
    */
   public java.util.List<KeyToPath> getItems() {
@@ -107,11 +120,15 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * If unspecified, each key-value pair in the Data field of the referenced Secret will be
-   * projected into the volume as a file whose name is the key and content is the value. If
-   * specified, the listed keys will be projected into the specified paths, and unlisted keys will
-   * not be present. If a key is specified which is not present in the Secret, the volume setup will
-   * error unless it is marked optional.
+   * Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is
+   * the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret
+   * Manager and the path will be the name of the file exposed in the volume. When items are
+   * defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified,
+   * each key-value pair in the Data field of the referenced Secret will be projected into the
+   * volume as a file whose name is the key and content is the value. If specified, the listed keys
+   * will be projected into the specified paths, and unlisted keys will not be present. If a key is
+   * specified which is not present in the Secret, the volume setup will error unless it is marked
+   * optional.
    * @param items items or {@code null} for none
    */
   public SecretVolumeSource setItems(java.util.List<KeyToPath> items) {
@@ -137,7 +154,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the secret in the container's namespace to use.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret
+   * in the container's namespace to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretName() {
@@ -145,7 +167,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the secret in the container's namespace to use.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret
+   * in the container's namespace to use.
    * @param secretName secretName or {@code null} for none
    */
   public SecretVolumeSource setSecretName(java.lang.String secretName) {

@@ -39,8 +39,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   private ConfigMapKeySelector configMapKeyRef;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
-   * the pod's namespace +optional
+   * Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager.
+   * Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
-   * the pod's namespace +optional
+   * Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager.
+   * Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional
    * @return value or {@code null} for none
    */
   public SecretKeySelector getSecretKeyRef() {
@@ -75,8 +75,8 @@ public final class EnvVarSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a secret in
-   * the pod's namespace +optional
+   * Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager.
+   * Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional
    * @param secretKeyRef secretKeyRef or {@code null} for none
    */
   public EnvVarSource setSecretKeyRef(SecretKeySelector secretKeyRef) {

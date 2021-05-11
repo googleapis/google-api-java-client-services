@@ -51,7 +51,12 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" -
    * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`" - "`principalRefundDoesNotFit`"
+   * - "`principalRefundOrderedWrongItem`" - "`principalRefundQualityNotExpected`" -
+   * "`principalRefundBetterPriceFound`" - "`principalRefundNoLongerNeeded`" -
+   * "`principalRefundChangedMind`" - "`principalRefundReceivedTooLate`" -
+   * "`principalRefundIncorrectItemReceived`" - "`principalRefundDamagedOrDefectiveItem`" -
+   * "`principalRefundDidNotMatchDescription`" - "`principalRefundExpiredItem`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +108,12 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" -
    * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`" - "`principalRefundDoesNotFit`"
+   * - "`principalRefundOrderedWrongItem`" - "`principalRefundQualityNotExpected`" -
+   * "`principalRefundBetterPriceFound`" - "`principalRefundNoLongerNeeded`" -
+   * "`principalRefundChangedMind`" - "`principalRefundReceivedTooLate`" -
+   * "`principalRefundIncorrectItemReceived`" - "`principalRefundDamagedOrDefectiveItem`" -
+   * "`principalRefundDidNotMatchDescription`" - "`principalRefundExpiredItem`"
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -125,7 +135,12 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" -
    * "`issueRelatedRefundAndReplacementAmountDescription`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`"
+   * "`returnLabelShippingFee`" - "`lumpSumCorrection`" - "`pspFee`" - "`principalRefundDoesNotFit`"
+   * - "`principalRefundOrderedWrongItem`" - "`principalRefundQualityNotExpected`" -
+   * "`principalRefundBetterPriceFound`" - "`principalRefundNoLongerNeeded`" -
+   * "`principalRefundChangedMind`" - "`principalRefundReceivedTooLate`" -
+   * "`principalRefundIncorrectItemReceived`" - "`principalRefundDamagedOrDefectiveItem`" -
+   * "`principalRefundDidNotMatchDescription`" - "`principalRefundExpiredItem`"
    * @param description description or {@code null} for none
    */
   public SettlementTransactionAmount setDescription(java.lang.String description) {

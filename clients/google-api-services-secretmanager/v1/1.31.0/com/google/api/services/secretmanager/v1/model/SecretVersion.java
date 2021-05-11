@@ -44,6 +44,13 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
   private String destroyTime;
 
   /**
+   * Output only. Etag of the currently stored SecretVersion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Output only. The resource name of the SecretVersion in the format `projects/secrets/versions`.
    * SecretVersion IDs in a Secret start at 1 and are incremented for each subsequent version of the
    * secret.
@@ -97,6 +104,23 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
    */
   public SecretVersion setDestroyTime(String destroyTime) {
     this.destroyTime = destroyTime;
+    return this;
+  }
+
+  /**
+   * Output only. Etag of the currently stored SecretVersion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Output only. Etag of the currently stored SecretVersion.
+   * @param etag etag or {@code null} for none
+   */
+  public SecretVersion setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

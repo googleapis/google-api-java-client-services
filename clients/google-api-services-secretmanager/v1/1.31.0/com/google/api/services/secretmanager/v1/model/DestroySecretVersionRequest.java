@@ -29,6 +29,33 @@ package com.google.api.services.secretmanager.v1.model;
 @SuppressWarnings("javadoc")
 public final class DestroySecretVersionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Etag of the SecretVersion. The request succeeds if it matches the etag of the
+   * currently stored secret version object. If the etag is omitted, the request succeeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Optional. Etag of the SecretVersion. The request succeeds if it matches the etag of the
+   * currently stored secret version object. If the etag is omitted, the request succeeds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. Etag of the SecretVersion. The request succeeds if it matches the etag of the
+   * currently stored secret version object. If the etag is omitted, the request succeeds.
+   * @param etag etag or {@code null} for none
+   */
+  public DestroySecretVersionRequest setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
   @Override
   public DestroySecretVersionRequest set(String fieldName, Object value) {
     return (DestroySecretVersionRequest) super.set(fieldName, value);

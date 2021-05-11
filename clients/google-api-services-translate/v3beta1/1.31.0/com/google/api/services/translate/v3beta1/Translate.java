@@ -1765,10 +1765,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link TranslateDocument#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
-       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
-       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
-       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`.
+       *        Non-global location is required for requests using AutoML models or custom glossaries.
+       *        Models and glossaries must be within the same region (have the same location-id),
+       *        otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3beta1.model.TranslateDocumentRequest}
        * @return the request
        */
@@ -1797,10 +1797,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * invoking the constructor. </p>
          *
          * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
-       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
-       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
-       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`.
+       *        Non-global location is required for requests using AutoML models or custom glossaries.
+       *        Models and glossaries must be within the same region (have the same location-id),
+       *        otherwise an INVALID_ARGUMENT (400) error is returned.
          * @param content the {@link com.google.api.services.translate.v3beta1.model.TranslateDocumentRequest}
          * @since 1.13
          */
@@ -1872,19 +1872,18 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Required. Location to make a regional call. Format: `projects/{project-number-or-
          * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for requests using AutoML models or custom glossaries. Models and glossaries
-         * must be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT
-         * (400) error is returned.
+         * id}/locations/global`. Non-global location is required for requests using AutoML models
+         * or custom glossaries. Models and glossaries must be within the same region (have the same
+         * location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
-       /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       `projects/{project-number-or-id}`. Non-global location is required for requests using AutoML models
-       or custom glossaries. Models and glossaries must be within the same region (have the same location-
-       id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`. Non-
+       global location is required for requests using AutoML models or custom glossaries. Models and
+       glossaries must be within the same region (have the same location-id), otherwise an
+       INVALID_ARGUMENT (400) error is returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1893,10 +1892,9 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Required. Location to make a regional call. Format: `projects/{project-number-or-
          * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for requests using AutoML models or custom glossaries. Models and glossaries
-         * must be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT
-         * (400) error is returned.
+         * id}/locations/global`. Non-global location is required for requests using AutoML models
+         * or custom glossaries. Models and glossaries must be within the same region (have the same
+         * location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         public TranslateDocument setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

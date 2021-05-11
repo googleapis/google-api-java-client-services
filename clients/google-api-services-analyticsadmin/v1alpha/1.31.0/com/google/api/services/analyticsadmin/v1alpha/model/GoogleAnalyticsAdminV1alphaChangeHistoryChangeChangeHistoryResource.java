@@ -45,6 +45,27 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAndroidAppDataStream androidAppDataStream;
 
   /**
+   * A snapshot of a ConversionEvent resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaConversionEvent conversionEvent;
+
+  /**
+   * A snapshot of a CustomDimension resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaCustomDimension customDimension;
+
+  /**
+   * A snapshot of a CustomMetric resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaCustomMetric customMetric;
+
+  /**
    * A snapshot of a FirebaseLink resource in change history.
    * The value may be {@code null}.
    */
@@ -110,6 +131,57 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAndroidAppDataStream(GoogleAnalyticsAdminV1alphaAndroidAppDataStream androidAppDataStream) {
     this.androidAppDataStream = androidAppDataStream;
+    return this;
+  }
+
+  /**
+   * A snapshot of a ConversionEvent resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaConversionEvent getConversionEvent() {
+    return conversionEvent;
+  }
+
+  /**
+   * A snapshot of a ConversionEvent resource in change history.
+   * @param conversionEvent conversionEvent or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setConversionEvent(GoogleAnalyticsAdminV1alphaConversionEvent conversionEvent) {
+    this.conversionEvent = conversionEvent;
+    return this;
+  }
+
+  /**
+   * A snapshot of a CustomDimension resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaCustomDimension getCustomDimension() {
+    return customDimension;
+  }
+
+  /**
+   * A snapshot of a CustomDimension resource in change history.
+   * @param customDimension customDimension or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setCustomDimension(GoogleAnalyticsAdminV1alphaCustomDimension customDimension) {
+    this.customDimension = customDimension;
+    return this;
+  }
+
+  /**
+   * A snapshot of a CustomMetric resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaCustomMetric getCustomMetric() {
+    return customMetric;
+  }
+
+  /**
+   * A snapshot of a CustomMetric resource in change history.
+   * @param customMetric customMetric or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setCustomMetric(GoogleAnalyticsAdminV1alphaCustomMetric customMetric) {
+    this.customMetric = customMetric;
     return this;
   }
 

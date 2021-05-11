@@ -59,6 +59,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMeta
   private java.lang.String parent;
 
   /**
+   * Optional. Resource properties in the input that are used for creating/customizing workload
+   * resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings> resourceSettings;
+
+  /**
    * Optional. Compliance controls that should be applied to the resources managed by the workload.
    * @return value or {@code null} for none
    */
@@ -123,6 +131,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMeta
    */
   public GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Optional. Resource properties in the input that are used for creating/customizing workload
+   * resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings> getResourceSettings() {
+    return resourceSettings;
+  }
+
+  /**
+   * Optional. Resource properties in the input that are used for creating/customizing workload
+   * resources.
+   * @param resourceSettings resourceSettings or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata setResourceSettings(java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings> resourceSettings) {
+    this.resourceSettings = resourceSettings;
     return this;
   }
 

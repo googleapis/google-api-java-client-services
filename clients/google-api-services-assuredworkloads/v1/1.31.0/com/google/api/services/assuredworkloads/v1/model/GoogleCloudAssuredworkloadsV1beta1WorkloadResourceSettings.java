@@ -31,6 +31,14 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * User-assigned resource display name. If not empty it will be used to create a resource with the
+   * specified name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Resource identifier. For a project this represents project_id. If the project is already taken,
    * the workload creation will fail.
    * The value may be {@code null}.
@@ -45,6 +53,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings ex
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * User-assigned resource display name. If not empty it will be used to create a resource with the
+   * specified name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * User-assigned resource display name. If not empty it will be used to create a resource with the
+   * specified name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadResourceSettings setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Resource identifier. For a project this represents project_id. If the project is already taken,

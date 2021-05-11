@@ -234,6 +234,7 @@ packages on [Maven Central][maven-search].
 | YouTube Analytics API | [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |
 | YouTube Reporting API | [v1](clients/google-api-services-youtubereporting/v1) |
+| reCAPTCHA Enterprise API | [v1](clients/google-api-services-recaptchaenterprise/v1) |
 
 [//]: # (API_TABLE_END)
 

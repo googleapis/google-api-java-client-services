@@ -31,6 +31,14 @@ package com.google.api.services.container.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy
+   * implementation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datapathProvider;
+
+  /**
    * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
    * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
    * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
@@ -72,6 +80,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy
+   * implementation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatapathProvider() {
+    return datapathProvider;
+  }
+
+  /**
+   * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy
+   * implementation.
+   * @param datapathProvider datapathProvider or {@code null} for none
+   */
+  public NetworkConfig setDatapathProvider(java.lang.String datapathProvider) {
+    this.datapathProvider = datapathProvider;
+    return this;
+  }
 
   /**
    * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled

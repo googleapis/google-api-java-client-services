@@ -67,6 +67,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DatabaseEncryption desiredDatabaseEncryption;
 
   /**
+   * The desired datapath provider for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredDatapathProvider;
+
+  /**
    * The desired status of whether to disable default sNAT for this cluster.
    * The value may be {@code null}.
    */
@@ -308,6 +315,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDatabaseEncryption(DatabaseEncryption desiredDatabaseEncryption) {
     this.desiredDatabaseEncryption = desiredDatabaseEncryption;
+    return this;
+  }
+
+  /**
+   * The desired datapath provider for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredDatapathProvider() {
+    return desiredDatapathProvider;
+  }
+
+  /**
+   * The desired datapath provider for the cluster.
+   * @param desiredDatapathProvider desiredDatapathProvider or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDatapathProvider(java.lang.String desiredDatapathProvider) {
+    this.desiredDatapathProvider = desiredDatapathProvider;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Etag of the currently stored Secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on
    * output, regardless of what was sent on input.
    * The value may be {@code null}.
@@ -108,6 +115,23 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Etag of the currently stored Secret.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. Etag of the currently stored Secret.
+   * @param etag etag or {@code null} for none
+   */
+  public Secret setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

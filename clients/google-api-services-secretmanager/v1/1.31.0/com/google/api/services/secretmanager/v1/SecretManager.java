@@ -965,6 +965,29 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /**
+         * Optional. Etag of the Secret. The request succeeds if it matches the etag of the
+         * currently stored secret object. If the etag is omitted, the request succeeds.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String etag;
+
+        /** Optional. Etag of the Secret. The request succeeds if it matches the etag of the currently stored
+       secret object. If the etag is omitted, the request succeeds.
+         */
+        public java.lang.String getEtag() {
+          return etag;
+        }
+
+        /**
+         * Optional. Etag of the Secret. The request succeeds if it matches the etag of the
+         * currently stored secret object. If the etag is omitted, the request succeeds.
+         */
+        public Delete setEtag(java.lang.String etag) {
+          this.etag = etag;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);

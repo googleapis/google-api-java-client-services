@@ -39,7 +39,7 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
   private java.lang.String catalogItem;
 
   /**
-   * GCS file path of the import source. Can be set for batch operation error.
+   * Cloud Storage file path of the import source. Can be set for batch operation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
   }
 
   /**
-   * GCS file path of the import source. Can be set for batch operation error.
+   * Cloud Storage file path of the import source. Can be set for batch operation error.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsPath() {
@@ -99,7 +99,7 @@ public final class GoogleCloudRetailLoggingImportErrorContext extends com.google
   }
 
   /**
-   * GCS file path of the import source. Can be set for batch operation error.
+   * Cloud Storage file path of the import source. Can be set for batch operation error.
    * @param gcsPath gcsPath or {@code null} for none
    */
   public GoogleCloudRetailLoggingImportErrorContext setGcsPath(java.lang.String gcsPath) {

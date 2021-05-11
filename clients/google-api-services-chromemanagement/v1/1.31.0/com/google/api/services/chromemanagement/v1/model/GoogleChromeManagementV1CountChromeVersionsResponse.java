@@ -44,7 +44,7 @@ public final class GoogleChromeManagementV1CountChromeVersionsResponse extends c
   }
 
   /**
-   * Token to specify the next page in the list.
+   * Token to specify the next page of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GoogleChromeManagementV1CountChromeVersionsResponse extends c
   }
 
   /**
-   * Token to specify the next page in the list.
+   * Token to specify the next page of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -83,7 +83,7 @@ public final class GoogleChromeManagementV1CountChromeVersionsResponse extends c
   }
 
   /**
-   * Token to specify the next page in the list.
+   * Token to specify the next page of the request.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleChromeManagementV1CountChromeVersionsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -371,17 +371,17 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Token to specify the next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token to specify the next page in the list.
+        /** Token to specify the page of the request to be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Token to specify the next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         public CountChromeVersions setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -619,17 +619,17 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Token to specify next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token to specify next page in the list.
+        /** Token to specify the page of the request to be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Token to specify next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         public CountInstalledApps setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -896,17 +896,17 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Token to specify the next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token to specify the next page in the list.
+        /** Token to specify the page of the request to be returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Token to specify the next page in the list. */
+        /** Token to specify the page of the request to be returned. */
         public FindInstalledAppDevices setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;

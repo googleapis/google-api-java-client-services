@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run on GKE: supported SecretKeySelector selects a
- * key of a Secret.
+ * Cloud Run fully managed: supported Cloud Run on GKE: supported SecretKeySelector selects a key of
+ * a Secret.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,8 +31,9 @@ package com.google.api.services.run.v1alpha1.model;
 public final class SecretKeySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key of the secret to
-   * select from. Must be a valid secret key.
+   * Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for
+   * the latest version or an integer for a specific version. Cloud Run for Anthos: supported The
+   * key of the secret to select from. Must be a valid secret key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +48,12 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   private LocalObjectReference localObjectReference;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The name of the secret in
-   * the pod's namespace to select from.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the
+   * secret in the pod's namespace to select from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +68,9 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   private java.lang.Boolean optional;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key of the secret to
-   * select from. Must be a valid secret key.
+   * Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for
+   * the latest version or an integer for a specific version. Cloud Run for Anthos: supported The
+   * key of the secret to select from. Must be a valid secret key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -72,8 +78,9 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The key of the secret to
-   * select from. Must be a valid secret key.
+   * Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for
+   * the latest version or an integer for a specific version. Cloud Run for Anthos: supported The
+   * key of the secret to select from. Must be a valid secret key.
    * @param key key or {@code null} for none
    */
   public SecretKeySelector setKey(java.lang.String key) {
@@ -101,8 +108,12 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The name of the secret in
-   * the pod's namespace to select from.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the
+   * secret in the pod's namespace to select from.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -110,8 +121,12 @@ public final class SecretKeySelector extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run on GKE: supported The name of the secret in
-   * the pod's namespace to select from.
+   * Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default,
+   * the secret is assumed to be in the same project. If the secret is in another project, you must
+   * define an alias. An alias definition has the form: :projects//secrets/. If multiple alias
+   * definitions are needed, they must be separated by commas. The alias definitions must be set on
+   * the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the
+   * secret in the pod's namespace to select from.
    * @param name name or {@code null} for none
    */
   public SecretKeySelector setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * State for Anthos Config Management
+ * **Anthos Config Management**: State for a single cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

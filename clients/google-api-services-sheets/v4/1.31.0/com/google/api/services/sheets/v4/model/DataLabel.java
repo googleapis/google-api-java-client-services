@@ -50,7 +50,7 @@ public final class DataLabel extends com.google.api.client.json.GenericJson {
   private java.lang.String placement;
 
   /**
-   * The text format used for the data label.
+   * The text format used for the data label. The link field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class DataLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text format used for the data label.
+   * The text format used for the data label. The link field is not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -114,7 +114,7 @@ public final class DataLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text format used for the data label.
+   * The text format used for the data label. The link field is not supported.
    * @param textFormat textFormat or {@code null} for none
    */
   public DataLabel setTextFormat(TextFormat textFormat) {

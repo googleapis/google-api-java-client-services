@@ -52,7 +52,7 @@ public final class ExtendedValue extends com.google.api.client.json.GenericJson 
 
   /**
    * Represents a double value. Note: Dates, Times and DateTimes are represented as doubles in
-   * "serial number" format.
+   * SERIAL_NUMBER format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class ExtendedValue extends com.google.api.client.json.GenericJson 
 
   /**
    * Represents a double value. Note: Dates, Times and DateTimes are represented as doubles in
-   * "serial number" format.
+   * SERIAL_NUMBER format.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNumberValue() {
@@ -128,7 +128,7 @@ public final class ExtendedValue extends com.google.api.client.json.GenericJson 
 
   /**
    * Represents a double value. Note: Dates, Times and DateTimes are represented as doubles in
-   * "serial number" format.
+   * SERIAL_NUMBER format.
    * @param numberValue numberValue or {@code null} for none
    */
   public ExtendedValue setNumberValue(java.lang.Double numberValue) {

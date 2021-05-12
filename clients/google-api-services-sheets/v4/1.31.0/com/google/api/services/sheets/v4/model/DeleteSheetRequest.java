@@ -30,16 +30,16 @@ package com.google.api.services.sheets.v4.model;
 public final class DeleteSheetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the sheet to delete. If the sheet is of SheetType.DATA_SOURCE type, the associated
-   * DataSource is also deleted.
+   * The ID of the sheet to delete. If the sheet is of DATA_SOURCE type, the associated DataSource
+   * is also deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sheetId;
 
   /**
-   * The ID of the sheet to delete. If the sheet is of SheetType.DATA_SOURCE type, the associated
-   * DataSource is also deleted.
+   * The ID of the sheet to delete. If the sheet is of DATA_SOURCE type, the associated DataSource
+   * is also deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSheetId() {
@@ -47,8 +47,8 @@ public final class DeleteSheetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The ID of the sheet to delete. If the sheet is of SheetType.DATA_SOURCE type, the associated
-   * DataSource is also deleted.
+   * The ID of the sheet to delete. If the sheet is of DATA_SOURCE type, the associated DataSource
+   * is also deleted.
    * @param sheetId sheetId or {@code null} for none
    */
   public DeleteSheetRequest setSheetId(java.lang.Integer sheetId) {

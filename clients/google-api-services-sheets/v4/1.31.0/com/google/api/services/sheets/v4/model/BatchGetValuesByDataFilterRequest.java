@@ -39,8 +39,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
 
   /**
    * How dates, times, and durations should be represented in the output. This is ignored if
-   * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * [DateTimeRenderOption.SERIAL_NUMBER].
+   * value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +56,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   private java.lang.String majorDimension;
 
   /**
-   * How values should be represented in the output. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * How values should be represented in the output. The default render option is FORMATTED_VALUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +83,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
 
   /**
    * How dates, times, and durations should be represented in the output. This is ignored if
-   * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * [DateTimeRenderOption.SERIAL_NUMBER].
+   * value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
    * @return value or {@code null} for none
    */
   public java.lang.String getDateTimeRenderOption() {
@@ -95,8 +92,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
 
   /**
    * How dates, times, and durations should be represented in the output. This is ignored if
-   * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * [DateTimeRenderOption.SERIAL_NUMBER].
+   * value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
    * @param dateTimeRenderOption dateTimeRenderOption or {@code null} for none
    */
   public BatchGetValuesByDataFilterRequest setDateTimeRenderOption(java.lang.String dateTimeRenderOption) {
@@ -128,8 +124,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   }
 
   /**
-   * How values should be represented in the output. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * How values should be represented in the output. The default render option is FORMATTED_VALUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueRenderOption() {
@@ -137,8 +132,7 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   }
 
   /**
-   * How values should be represented in the output. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * How values should be represented in the output. The default render option is FORMATTED_VALUE.
    * @param valueRenderOption valueRenderOption or {@code null} for none
    */
   public BatchGetValuesByDataFilterRequest setValueRenderOption(java.lang.String valueRenderOption) {

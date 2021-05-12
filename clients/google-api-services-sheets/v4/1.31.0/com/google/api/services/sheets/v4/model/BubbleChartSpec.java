@@ -83,7 +83,8 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   private ChartData bubbleSizes;
 
   /**
-   * The format of the text inside the bubbles. Strikethrough and underline are not supported.
+   * The format of the text inside the bubbles. Strikethrough, underline, and link are not
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +250,8 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The format of the text inside the bubbles. Strikethrough and underline are not supported.
+   * The format of the text inside the bubbles. Strikethrough, underline, and link are not
+   * supported.
    * @return value or {@code null} for none
    */
   public TextFormat getBubbleTextStyle() {
@@ -257,7 +259,8 @@ public final class BubbleChartSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The format of the text inside the bubbles. Strikethrough and underline are not supported.
+   * The format of the text inside the bubbles. Strikethrough, underline, and link are not
+   * supported.
    * @param bubbleTextStyle bubbleTextStyle or {@code null} for none
    */
   public BubbleChartSpec setBubbleTextStyle(TextFormat bubbleTextStyle) {

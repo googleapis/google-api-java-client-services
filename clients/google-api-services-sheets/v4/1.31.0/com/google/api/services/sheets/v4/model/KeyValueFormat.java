@@ -38,7 +38,7 @@ public final class KeyValueFormat extends com.google.api.client.json.GenericJson
   private TextPosition position;
 
   /**
-   * Text formatting options for key value.
+   * Text formatting options for key value. The link field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class KeyValueFormat extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Text formatting options for key value.
+   * Text formatting options for key value. The link field is not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -72,7 +72,7 @@ public final class KeyValueFormat extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Text formatting options for key value.
+   * Text formatting options for key value. The link field is not supported.
    * @param textFormat textFormat or {@code null} for none
    */
   public KeyValueFormat setTextFormat(TextFormat textFormat) {

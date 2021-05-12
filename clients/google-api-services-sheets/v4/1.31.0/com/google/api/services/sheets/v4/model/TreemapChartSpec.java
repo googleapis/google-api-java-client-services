@@ -135,7 +135,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   private ChartData sizeData;
 
   /**
-   * The text format for all labels on the chart.
+   * The text format for all labels on the chart. The link field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -388,7 +388,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The text format for all labels on the chart.
+   * The text format for all labels on the chart. The link field is not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -396,7 +396,7 @@ public final class TreemapChartSpec extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The text format for all labels on the chart.
+   * The text format for all labels on the chart. The link field is not supported.
    * @param textFormat textFormat or {@code null} for none
    */
   public TreemapChartSpec setTextFormat(TextFormat textFormat) {

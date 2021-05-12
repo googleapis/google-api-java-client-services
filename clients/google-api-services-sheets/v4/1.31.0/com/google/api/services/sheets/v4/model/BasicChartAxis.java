@@ -30,7 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class BasicChartAxis extends com.google.api.client.json.GenericJson {
 
   /**
-   * The format of the title. Only valid if the axis is not associated with the domain.
+   * The format of the title. Only valid if the axis is not associated with the domain. The link
+   * field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class BasicChartAxis extends com.google.api.client.json.GenericJson
   private ChartAxisViewWindowOptions viewWindowOptions;
 
   /**
-   * The format of the title. Only valid if the axis is not associated with the domain.
+   * The format of the title. Only valid if the axis is not associated with the domain. The link
+   * field is not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getFormat() {
@@ -73,7 +75,8 @@ public final class BasicChartAxis extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The format of the title. Only valid if the axis is not associated with the domain.
+   * The format of the title. Only valid if the axis is not associated with the domain. The link
+   * field is not supported.
    * @param format format or {@code null} for none
    */
   public BasicChartAxis setFormat(TextFormat format) {

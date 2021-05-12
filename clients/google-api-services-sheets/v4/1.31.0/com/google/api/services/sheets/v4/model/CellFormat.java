@@ -86,7 +86,9 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   private java.lang.String textDirection;
 
   /**
-   * The format of the text in the cell (unless overridden by a format run).
+   * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
+   * link will clear the cell's existing links. Setting a link in a format run will clear the cell-
+   * level link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +252,9 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of the text in the cell (unless overridden by a format run).
+   * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
+   * link will clear the cell's existing links. Setting a link in a format run will clear the cell-
+   * level link.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -258,7 +262,9 @@ public final class CellFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of the text in the cell (unless overridden by a format run).
+   * The format of the text in the cell (unless overridden by a format run). Setting a cell-level
+   * link will clear the cell's existing links. Setting a link in a format run will clear the cell-
+   * level link.
    * @param textFormat textFormat or {@code null} for none
    */
   public CellFormat setTextFormat(TextFormat textFormat) {

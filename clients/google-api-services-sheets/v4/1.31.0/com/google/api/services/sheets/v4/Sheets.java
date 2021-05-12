@@ -1366,14 +1366,14 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines how dates, times, and durations in the response should be rendered. This is
          * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is [DateTimeRenderOption.SERIAL_NUMBER].
+         * option is SERIAL_NUMBER.
          */
         @com.google.api.client.util.Key
         private java.lang.String responseDateTimeRenderOption;
 
         /** Determines how dates, times, and durations in the response should be rendered. This is ignored if
        response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-       [DateTimeRenderOption.SERIAL_NUMBER].
+       SERIAL_NUMBER.
          */
         public java.lang.String getResponseDateTimeRenderOption() {
           return responseDateTimeRenderOption;
@@ -1382,7 +1382,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines how dates, times, and durations in the response should be rendered. This is
          * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is [DateTimeRenderOption.SERIAL_NUMBER].
+         * option is SERIAL_NUMBER.
          */
         public Append setResponseDateTimeRenderOption(java.lang.String responseDateTimeRenderOption) {
           this.responseDateTimeRenderOption = responseDateTimeRenderOption;
@@ -1391,13 +1391,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         @com.google.api.client.util.Key
         private java.lang.String responseValueRenderOption;
 
         /** Determines how values in the response should be rendered. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
+       FORMATTED_VALUE.
          */
         public java.lang.String getResponseValueRenderOption() {
           return responseValueRenderOption;
@@ -1405,7 +1405,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         public Append setResponseValueRenderOption(java.lang.String responseValueRenderOption) {
           this.responseValueRenderOption = responseValueRenderOption;
@@ -1806,14 +1806,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-         * [DateTimeRenderOption.SERIAL_NUMBER].
+         * SERIAL_NUMBER.
          */
         @com.google.api.client.util.Key
         private java.lang.String dateTimeRenderOption;
 
         /** How dates, times, and durations should be represented in the output. This is ignored if
-       value_render_option is FORMATTED_VALUE. The default dateTime render option is
-       [DateTimeRenderOption.SERIAL_NUMBER].
+       value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
          */
         public java.lang.String getDateTimeRenderOption() {
           return dateTimeRenderOption;
@@ -1822,7 +1821,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-         * [DateTimeRenderOption.SERIAL_NUMBER].
+         * SERIAL_NUMBER.
          */
         public BatchGet setDateTimeRenderOption(java.lang.String dateTimeRenderOption) {
           this.dateTimeRenderOption = dateTimeRenderOption;
@@ -2549,14 +2548,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-         * [DateTimeRenderOption.SERIAL_NUMBER].
+         * SERIAL_NUMBER.
          */
         @com.google.api.client.util.Key
         private java.lang.String dateTimeRenderOption;
 
         /** How dates, times, and durations should be represented in the output. This is ignored if
-       value_render_option is FORMATTED_VALUE. The default dateTime render option is
-       [DateTimeRenderOption.SERIAL_NUMBER].
+       value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
          */
         public java.lang.String getDateTimeRenderOption() {
           return dateTimeRenderOption;
@@ -2565,7 +2563,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
-         * [DateTimeRenderOption.SERIAL_NUMBER].
+         * SERIAL_NUMBER.
          */
         public Get setDateTimeRenderOption(java.lang.String dateTimeRenderOption) {
           this.dateTimeRenderOption = dateTimeRenderOption;
@@ -2602,13 +2600,12 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         @com.google.api.client.util.Key
         private java.lang.String valueRenderOption;
 
-        /** How values should be represented in the output. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
+        /** How values should be represented in the output. The default render option is FORMATTED_VALUE.
          */
         public java.lang.String getValueRenderOption() {
           return valueRenderOption;
@@ -2616,7 +2613,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         public Get setValueRenderOption(java.lang.String valueRenderOption) {
           this.valueRenderOption = valueRenderOption;
@@ -2793,14 +2790,14 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines how dates, times, and durations in the response should be rendered. This is
          * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is DateTimeRenderOption.SERIAL_NUMBER.
+         * option is SERIAL_NUMBER.
          */
         @com.google.api.client.util.Key
         private java.lang.String responseDateTimeRenderOption;
 
         /** Determines how dates, times, and durations in the response should be rendered. This is ignored if
        response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-       DateTimeRenderOption.SERIAL_NUMBER.
+       SERIAL_NUMBER.
          */
         public java.lang.String getResponseDateTimeRenderOption() {
           return responseDateTimeRenderOption;
@@ -2809,7 +2806,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Determines how dates, times, and durations in the response should be rendered. This is
          * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is DateTimeRenderOption.SERIAL_NUMBER.
+         * option is SERIAL_NUMBER.
          */
         public Update setResponseDateTimeRenderOption(java.lang.String responseDateTimeRenderOption) {
           this.responseDateTimeRenderOption = responseDateTimeRenderOption;
@@ -2818,13 +2815,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         @com.google.api.client.util.Key
         private java.lang.String responseValueRenderOption;
 
         /** Determines how values in the response should be rendered. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
+       FORMATTED_VALUE.
          */
         public java.lang.String getResponseValueRenderOption() {
           return responseValueRenderOption;
@@ -2832,7 +2829,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * FORMATTED_VALUE.
          */
         public Update setResponseValueRenderOption(java.lang.String responseValueRenderOption) {
           this.responseValueRenderOption = responseValueRenderOption;

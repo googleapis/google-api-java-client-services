@@ -46,7 +46,7 @@ public final class BatchUpdateSpreadsheetResponse extends com.google.api.client.
 
   /**
    * The spreadsheet after updates were applied. This is only set if
-   * [BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response] is `true`.
+   * BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response is `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class BatchUpdateSpreadsheetResponse extends com.google.api.client.
 
   /**
    * The spreadsheet after updates were applied. This is only set if
-   * [BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response] is `true`.
+   * BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response is `true`.
    * @return value or {@code null} for none
    */
   public Spreadsheet getUpdatedSpreadsheet() {
@@ -99,7 +99,7 @@ public final class BatchUpdateSpreadsheetResponse extends com.google.api.client.
 
   /**
    * The spreadsheet after updates were applied. This is only set if
-   * [BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response] is `true`.
+   * BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response is `true`.
    * @param updatedSpreadsheet updatedSpreadsheet or {@code null} for none
    */
   public BatchUpdateSpreadsheetResponse setUpdatedSpreadsheet(Spreadsheet updatedSpreadsheet) {

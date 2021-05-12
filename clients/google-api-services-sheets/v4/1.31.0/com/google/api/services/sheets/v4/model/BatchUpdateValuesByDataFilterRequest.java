@@ -51,7 +51,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines how dates, times, and durations in the response should be rendered. This is ignored
    * if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * DateTimeRenderOption.SERIAL_NUMBER.
+   * SERIAL_NUMBER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * Determines how values in the response should be rendered. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * FORMATTED_VALUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines how dates, times, and durations in the response should be rendered. This is ignored
    * if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * DateTimeRenderOption.SERIAL_NUMBER.
+   * SERIAL_NUMBER.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseDateTimeRenderOption() {
@@ -129,7 +129,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   /**
    * Determines how dates, times, and durations in the response should be rendered. This is ignored
    * if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-   * DateTimeRenderOption.SERIAL_NUMBER.
+   * SERIAL_NUMBER.
    * @param responseDateTimeRenderOption responseDateTimeRenderOption or {@code null} for none
    */
   public BatchUpdateValuesByDataFilterRequest setResponseDateTimeRenderOption(java.lang.String responseDateTimeRenderOption) {
@@ -139,7 +139,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * Determines how values in the response should be rendered. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * FORMATTED_VALUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseValueRenderOption() {
@@ -148,7 +148,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
 
   /**
    * Determines how values in the response should be rendered. The default render option is
-   * ValueRenderOption.FORMATTED_VALUE.
+   * FORMATTED_VALUE.
    * @param responseValueRenderOption responseValueRenderOption or {@code null} for none
    */
   public BatchUpdateValuesByDataFilterRequest setResponseValueRenderOption(java.lang.String responseValueRenderOption) {

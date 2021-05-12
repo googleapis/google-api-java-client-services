@@ -57,8 +57,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
-   * Example: `createTime >= 1594294238`
+   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
+   * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
+   * "2021-01-01T00:00:00"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,8 +211,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query
-   * (value in seconds). Example: `updateTime < 1594294238`
+   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
+   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
+   * `updateTime < "2021-01-01T00:00:00"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,8 +279,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
-   * Example: `createTime >= 1594294238`
+   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
+   * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
+   * "2021-01-01T00:00:00"`
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -286,8 +292,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
-   * Example: `createTime >= 1594294238`
+   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
+   * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
+   * "2021-01-01T00:00:00"`
    * @param createTime createTime or {@code null} for none
    */
   public ResourceSearchResult setCreateTime(String createTime) {
@@ -621,8 +629,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query
-   * (value in seconds). Example: `updateTime < 1594294238`
+   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
+   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
+   * `updateTime < "2021-01-01T00:00:00"`
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -632,8 +642,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query
-   * (value in seconds). Example: `updateTime < 1594294238`
+   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
+   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
+   * `updateTime < "2021-01-01T00:00:00"`
    * @param updateTime updateTime or {@code null} for none
    */
   public ResourceSearchResult setUpdateTime(String updateTime) {

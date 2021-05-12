@@ -88,6 +88,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DefaultSnatStatus desiredDefaultSnatStatus;
 
   /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DNSConfig desiredDnsConfig;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -409,6 +416,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
     this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
+    return this;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @return value or {@code null} for none
+   */
+  public DNSConfig getDesiredDnsConfig() {
+    return desiredDnsConfig;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @param desiredDnsConfig desiredDnsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
+    this.desiredDnsConfig = desiredDnsConfig;
     return this;
   }
 

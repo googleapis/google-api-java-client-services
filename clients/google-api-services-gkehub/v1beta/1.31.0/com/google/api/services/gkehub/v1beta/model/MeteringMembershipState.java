@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Metering per-Membership Feature State.
+ * **Metering**: Per-Membership Feature State.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

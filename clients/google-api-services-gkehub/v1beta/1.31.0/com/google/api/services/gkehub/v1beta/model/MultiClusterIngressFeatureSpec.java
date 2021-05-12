@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * FeatureSpec contains the input for the MultiClusterIngress feature.
+ * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

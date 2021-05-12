@@ -39,6 +39,14 @@ public final class GoogleCloudDocumentaiV1beta1DocumentProvenanceParent extends 
   private java.lang.Integer id;
 
   /**
+   * The index of the parent revisions corresponding collection of items (eg. list of entities,
+   * properties within entities, etc.)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer index;
+
+  /**
    * The index of the [Document.revisions] identifying the parent revision.
    * The value may be {@code null}.
    */
@@ -59,6 +67,25 @@ public final class GoogleCloudDocumentaiV1beta1DocumentProvenanceParent extends 
    */
   public GoogleCloudDocumentaiV1beta1DocumentProvenanceParent setId(java.lang.Integer id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The index of the parent revisions corresponding collection of items (eg. list of entities,
+   * properties within entities, etc.)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getIndex() {
+    return index;
+  }
+
+  /**
+   * The index of the parent revisions corresponding collection of items (eg. list of entities,
+   * properties within entities, etc.)
+   * @param index index or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentProvenanceParent setIndex(java.lang.Integer index) {
+    this.index = index;
     return this;
   }
 

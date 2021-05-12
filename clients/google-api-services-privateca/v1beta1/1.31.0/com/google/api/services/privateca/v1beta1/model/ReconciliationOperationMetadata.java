@@ -31,16 +31,20 @@ package com.google.api.services.privateca.v1beta1.model;
 public final class ReconciliationOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to TRUE, the resource has to be deleted. When using this bit, the CLH should fail the
-   * operation.
+   * DEPRECATED. Use exclusive_action instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleteResource;
 
   /**
-   * If set to TRUE, the resource has to be deleted. When using this bit, the CLH should fail the
-   * operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exclusiveAction;
+
+  /**
+   * DEPRECATED. Use exclusive_action instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleteResource() {
@@ -48,12 +52,26 @@ public final class ReconciliationOperationMetadata extends com.google.api.client
   }
 
   /**
-   * If set to TRUE, the resource has to be deleted. When using this bit, the CLH should fail the
-   * operation.
+   * DEPRECATED. Use exclusive_action instead.
    * @param deleteResource deleteResource or {@code null} for none
    */
   public ReconciliationOperationMetadata setDeleteResource(java.lang.Boolean deleteResource) {
     this.deleteResource = deleteResource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExclusiveAction() {
+    return exclusiveAction;
+  }
+
+  /**
+   * @param exclusiveAction exclusiveAction or {@code null} for none
+   */
+  public ReconciliationOperationMetadata setExclusiveAction(java.lang.String exclusiveAction) {
+    this.exclusiveAction = exclusiveAction;
     return this;
   }
 

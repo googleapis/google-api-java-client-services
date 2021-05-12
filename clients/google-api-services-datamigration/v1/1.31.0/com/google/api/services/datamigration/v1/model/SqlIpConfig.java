@@ -54,7 +54,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, `/projects/myProject/global/networks/default`. This setting can be
+   * private IP. For example, `projects/myProject/global/networks/default`. This setting can be
    * updated, but it cannot be removed after it is set.
    * The value may be {@code null}.
    */
@@ -108,7 +108,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, `/projects/myProject/global/networks/default`. This setting can be
+   * private IP. For example, `projects/myProject/global/networks/default`. This setting can be
    * updated, but it cannot be removed after it is set.
    * @return value or {@code null} for none
    */
@@ -118,7 +118,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, `/projects/myProject/global/networks/default`. This setting can be
+   * private IP. For example, `projects/myProject/global/networks/default`. This setting can be
    * updated, but it cannot be removed after it is set.
    * @param privateNetwork privateNetwork or {@code null} for none
    */

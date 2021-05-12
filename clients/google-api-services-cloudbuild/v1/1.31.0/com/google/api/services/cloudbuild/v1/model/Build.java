@@ -241,6 +241,13 @@ public final class Build extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, TimeSpan> timing;
 
   /**
+   * Output only. Non-fatal problems encountered during the execution of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Warning> warnings;
+
+  /**
    * Artifacts produced by the build that should be uploaded upon successful completion of all build
    * steps.
    * @return value or {@code null} for none
@@ -721,6 +728,23 @@ public final class Build extends com.google.api.client.json.GenericJson {
    */
   public Build setTiming(java.util.Map<String, TimeSpan> timing) {
     this.timing = timing;
+    return this;
+  }
+
+  /**
+   * Output only. Non-fatal problems encountered during the execution of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Warning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Output only. Non-fatal problems encountered during the execution of the build.
+   * @param warnings warnings or {@code null} for none
+   */
+  public Build setWarnings(java.util.List<Warning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

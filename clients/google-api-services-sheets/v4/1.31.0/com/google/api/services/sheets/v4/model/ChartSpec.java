@@ -154,7 +154,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String subtitle;
 
   /**
-   * The subtitle text format. Strikethrough and underline are not supported.
+   * The subtitle text format. Strikethrough, underline, and link are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +175,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The title text format. Strikethrough and underline are not supported.
+   * The title text format. Strikethrough, underline, and link are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -502,7 +502,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subtitle text format. Strikethrough and underline are not supported.
+   * The subtitle text format. Strikethrough, underline, and link are not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getSubtitleTextFormat() {
@@ -510,7 +510,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subtitle text format. Strikethrough and underline are not supported.
+   * The subtitle text format. Strikethrough, underline, and link are not supported.
    * @param subtitleTextFormat subtitleTextFormat or {@code null} for none
    */
   public ChartSpec setSubtitleTextFormat(TextFormat subtitleTextFormat) {
@@ -553,7 +553,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title text format. Strikethrough and underline are not supported.
+   * The title text format. Strikethrough, underline, and link are not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getTitleTextFormat() {
@@ -561,7 +561,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title text format. Strikethrough and underline are not supported.
+   * The title text format. Strikethrough, underline, and link are not supported.
    * @param titleTextFormat titleTextFormat or {@code null} for none
    */
   public ChartSpec setTitleTextFormat(TextFormat titleTextFormat) {

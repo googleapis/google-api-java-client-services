@@ -80,7 +80,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String horizontalAlignment;
 
   /**
-   * The text format of title in the slicer.
+   * The text format of title in the slicer. The link field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text format of title in the slicer.
+   * The text format of title in the slicer. The link field is not supported.
    * @return value or {@code null} for none
    */
   public TextFormat getTextFormat() {
@@ -223,7 +223,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text format of title in the slicer.
+   * The text format of title in the slicer. The link field is not supported.
    * @param textFormat textFormat or {@code null} for none
    */
   public SlicerSpec setTextFormat(TextFormat textFormat) {

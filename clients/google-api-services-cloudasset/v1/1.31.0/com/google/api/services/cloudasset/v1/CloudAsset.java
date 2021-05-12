@@ -133,6 +133,321 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Assets collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudAsset cloudasset = new CloudAsset(...);}
+   *   {@code CloudAsset.Assets.List request = cloudasset.assets().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Assets assets() {
+    return new Assets();
+  }
+
+  /**
+   * The "assets" collection of methods.
+   */
+  public class Assets {
+
+    /**
+     * Lists assets with time and resource types and returns paged results in response.
+     *
+     * Create a request for the method "assets.list".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
+     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.ListAssetsResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}/assets";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Lists assets with time and resource types and returns paged results in response.
+       *
+       * Create a request for the method "assets.list".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
+     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.ListAssetsResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the organization or project the assets belong to. Format: "organizations
+       * /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
+       * "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Name of the organization or project the assets belong to. Format: "organizations
+     /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
+     "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. Name of the organization or project the assets belong to. Format: "organizations
+       * /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
+       * "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
+       * Regular expression is also supported. For example: * "compute.googleapis.com.*" snapshots
+       * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+       * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+       * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for
+       * all supported regular expression syntax. If the regular expression does not match any
+       * supported asset type, an INVALID_ARGUMENT error will be returned. If specified, only
+       * matching assets will be returned, otherwise, it will snapshot all asset types. See
+       * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
+       * inventory/docs/overview) for all supported asset types.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> assetTypes;
+
+      /** A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk". Regular
+     expression is also supported. For example: * "compute.googleapis.com.*" snapshots resources whose
+     asset type starts with "compute.googleapis.com". * ".*Instance" snapshots resources whose asset
+     type ends with "Instance". * ".*Instance.*" snapshots resources whose asset type contains
+     "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
+     expression syntax. If the regular expression does not match any supported asset type, an
+     INVALID_ARGUMENT error will be returned. If specified, only matching assets will be returned,
+     otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset
+     Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types.
+       */
+      public java.util.List<java.lang.String> getAssetTypes() {
+        return assetTypes;
+      }
+
+      /**
+       * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
+       * Regular expression is also supported. For example: * "compute.googleapis.com.*" snapshots
+       * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+       * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+       * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for
+       * all supported regular expression syntax. If the regular expression does not match any
+       * supported asset type, an INVALID_ARGUMENT error will be returned. If specified, only
+       * matching assets will be returned, otherwise, it will snapshot all asset types. See
+       * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
+       * inventory/docs/overview) for all supported asset types.
+       */
+      public List setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+        this.assetTypes = assetTypes;
+        return this;
+      }
+
+      /** Asset content type. If not specified, no content but the asset name will be returned. */
+      @com.google.api.client.util.Key
+      private java.lang.String contentType;
+
+      /** Asset content type. If not specified, no content but the asset name will be returned.
+       */
+      public java.lang.String getContentType() {
+        return contentType;
+      }
+
+      /** Asset content type. If not specified, no content but the asset name will be returned. */
+      public List setContentType(java.lang.String contentType) {
+        this.contentType = contentType;
+        return this;
+      }
+
+      /**
+       * The maximum number of assets to be returned in a single response. Default is 100, minimum
+       * is 1, and maximum is 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of assets to be returned in a single response. Default is 100, minimum is 1, and
+     maximum is 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of assets to be returned in a single response. Default is 100, minimum
+       * is 1, and maximum is 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * The `next_page_token` returned from the previous `ListAssetsResponse`, or unspecified for
+       * the first `ListAssetsRequest`. It is a continuation of a prior `ListAssets` call, and the
+       * API should return the next page of assets.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The `next_page_token` returned from the previous `ListAssetsResponse`, or unspecified for the first
+     `ListAssetsRequest`. It is a continuation of a prior `ListAssets` call, and the API should return
+     the next page of assets.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The `next_page_token` returned from the previous `ListAssetsResponse`, or unspecified for
+       * the first `ListAssetsRequest`. It is a continuation of a prior `ListAssets` call, and the
+       * API should return the next page of assets.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Timestamp to take an asset snapshot. This can only be set to a timestamp between the
+       * current time and the current time minus 35 days (inclusive). If not specified, the current
+       * time will be used. Due to delays in resource data collection and indexing, there is a
+       * volatile window during which running the same query may get different results.
+       */
+      @com.google.api.client.util.Key
+      private String readTime;
+
+      /** Timestamp to take an asset snapshot. This can only be set to a timestamp between the current time
+     and the current time minus 35 days (inclusive). If not specified, the current time will be used.
+     Due to delays in resource data collection and indexing, there is a volatile window during which
+     running the same query may get different results.
+       */
+      public String getReadTime() {
+        return readTime;
+      }
+
+      /**
+       * Timestamp to take an asset snapshot. This can only be set to a timestamp between the
+       * current time and the current time minus 35 days (inclusive). If not specified, the current
+       * time will be used. Due to delays in resource data collection and indexing, there is a
+       * volatile window during which running the same query may get different results.
+       */
+      public List setReadTime(String readTime) {
+        this.readTime = readTime;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Feeds collection.
    *
    * <p>The typical use is:</p>

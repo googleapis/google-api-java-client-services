@@ -48,6 +48,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private DefaultSnatStatus defaultSnatStatus;
 
   /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DNSConfig dnsConfig;
+
+  /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
    * traffic visible for VPC network.
    * The value may be {@code null}.
@@ -125,6 +132,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDefaultSnatStatus(DefaultSnatStatus defaultSnatStatus) {
     this.defaultSnatStatus = defaultSnatStatus;
+    return this;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @return value or {@code null} for none
+   */
+  public DNSConfig getDnsConfig() {
+    return dnsConfig;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @param dnsConfig dnsConfig or {@code null} for none
+   */
+  public NetworkConfig setDnsConfig(DNSConfig dnsConfig) {
+    this.dnsConfig = dnsConfig;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
   private GoogleCloudRecommenderV1beta1CostProjection costProjection;
 
   /**
+   * Use with CategoryType.SECURITY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecommenderV1beta1SecurityProjection securityProjection;
+
+  /**
    * Category that is being targeted.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
    */
   public GoogleCloudRecommenderV1beta1Impact setCostProjection(GoogleCloudRecommenderV1beta1CostProjection costProjection) {
     this.costProjection = costProjection;
+    return this;
+  }
+
+  /**
+   * Use with CategoryType.SECURITY
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1SecurityProjection getSecurityProjection() {
+    return securityProjection;
+  }
+
+  /**
+   * Use with CategoryType.SECURITY
+   * @param securityProjection securityProjection or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Impact setSecurityProjection(GoogleCloudRecommenderV1beta1SecurityProjection securityProjection) {
+    this.securityProjection = securityProjection;
     return this;
   }
 

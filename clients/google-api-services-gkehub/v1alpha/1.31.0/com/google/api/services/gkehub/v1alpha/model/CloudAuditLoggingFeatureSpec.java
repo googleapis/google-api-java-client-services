@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * Spec for Audit Logging Allowlisting.
+ * **Cloud Audit Logging**: Spec for Audit Logging Allowlisting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

@@ -42,7 +42,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   private GooglePrivacyDlpV2RecordCondition condition;
 
   /**
-   * Required. Input field(s) to apply the transformation to.
+   * Required. Input field(s) to apply the transformation to. When you have columns that reference
+   * their position within a list, omit the index from the FieldId. FieldId name matching ignores
+   * the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +97,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   }
 
   /**
-   * Required. Input field(s) to apply the transformation to.
+   * Required. Input field(s) to apply the transformation to. When you have columns that reference
+   * their position within a list, omit the index from the FieldId. FieldId name matching ignores
+   * the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FieldId> getFields() {
@@ -103,7 +107,9 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   }
 
   /**
-   * Required. Input field(s) to apply the transformation to.
+   * Required. Input field(s) to apply the transformation to. When you have columns that reference
+   * their position within a list, omit the index from the FieldId. FieldId name matching ignores
+   * the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
    * @param fields fields or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldTransformation setFields(java.util.List<GooglePrivacyDlpV2FieldId> fields) {

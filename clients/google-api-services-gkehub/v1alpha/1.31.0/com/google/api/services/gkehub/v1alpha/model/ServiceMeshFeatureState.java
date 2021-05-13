@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * FeatureState describes the state of the Service Mesh Hub Feature as analyzed by the Service Mesh
- * Hub Controller, for the whole Hub.
+ * **Service Mesh**: State for the whole Hub, as analyzed by the Service Mesh Hub Controller.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

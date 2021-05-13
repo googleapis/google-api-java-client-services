@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * MembershipState describes the state of the Service Mesh Hub Feature as analyzed by the Service
- * Mesh Hub Controller, for single Membership.
+ * **Service Mesh**: State for a single Membership, as analyzed by the Service Mesh Hub Controller.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

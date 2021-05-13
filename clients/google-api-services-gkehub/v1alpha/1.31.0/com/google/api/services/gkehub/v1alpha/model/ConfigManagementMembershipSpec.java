@@ -17,7 +17,8 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * Configuration for a single cluster. Intended to parallel the ConfigManagement CR.
+ * **Anthos Config Management**: Configuration for a single cluster. Intended to parallel the
+ * ConfigManagement CR.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:

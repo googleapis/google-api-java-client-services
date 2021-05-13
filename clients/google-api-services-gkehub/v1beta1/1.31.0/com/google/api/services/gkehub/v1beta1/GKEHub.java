@@ -534,7 +534,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class Memberships {
 
         /**
-         * Adds a new Membership.
+         * Creates a new Membership. **This is currently only supported for GKE clusters on Google Cloud**.
+         * To register other clusters, follow the instructions at https://cloud.google.com/anthos
+         * /multicluster-management/connect/registering-a-cluster.
          *
          * Create a request for the method "memberships.create".
          *
@@ -560,7 +562,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Adds a new Membership.
+           * Creates a new Membership. **This is currently only supported for GKE clusters on Google
+           * Cloud**. To register other clusters, follow the instructions at https://cloud.google.com/anthos
+           * /multicluster-management/connect/registering-a-cluster.
            *
            * Create a request for the method "memberships.create".
            *
@@ -747,7 +751,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Removes a Membership.
+         * Removes a Membership. **This is currently only supported for GKE clusters on Google Cloud**. To
+         * unregister other clusters, follow the instructions at https://cloud.google.com/anthos
+         * /multicluster-management/connect/unregistering-a-cluster.
          *
          * Create a request for the method "memberships.delete".
          *
@@ -771,7 +777,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
 
           /**
-           * Removes a Membership.
+           * Removes a Membership. **This is currently only supported for GKE clusters on Google Cloud**. To
+           * unregister other clusters, follow the instructions at https://cloud.google.com/anthos
+           * /multicluster-management/connect/unregistering-a-cluster.
            *
            * Create a request for the method "memberships.delete".
            *
@@ -922,7 +930,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Generates the manifest for deployment of the GKE connect agent.
+         * Generates the manifest for deployment of the GKE connect agent. **This method is used internally
+         * by Google-provided libraries.** Most clients should not need to call this method directly.
          *
          * Create a request for the method "memberships.generateConnectManifest".
          *
@@ -948,7 +957,9 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
 
           /**
-           * Generates the manifest for deployment of the GKE connect agent.
+           * Generates the manifest for deployment of the GKE connect agent. **This method is used
+           * internally by Google-provided libraries.** Most clients should not need to call this method
+           * directly.
            *
            * Create a request for the method "memberships.generateConnectManifest".
            *

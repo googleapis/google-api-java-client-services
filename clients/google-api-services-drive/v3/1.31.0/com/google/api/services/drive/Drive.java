@@ -4797,13 +4797,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The space in which the IDs can be used to create new files. Supported values are 'drive'
-       * and 'appDataFolder'.
+       * and 'appDataFolder'. (Default: 'drive')
        */
       @com.google.api.client.util.Key
       private java.lang.String space;
 
       /** The space in which the IDs can be used to create new files. Supported values are 'drive' and
-     'appDataFolder'. [default: drive]
+     'appDataFolder'. (Default: 'drive') [default: drive]
        */
       public java.lang.String getSpace() {
         return space;
@@ -4811,10 +4811,35 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The space in which the IDs can be used to create new files. Supported values are 'drive'
-       * and 'appDataFolder'.
+       * and 'appDataFolder'. (Default: 'drive')
        */
       public GenerateIds setSpace(java.lang.String space) {
         this.space = space;
+        return this;
+      }
+
+      /**
+       * The type of items which the IDs can be used for. Supported values are 'files' and
+       * 'shortcuts'. Note that 'shortcuts' are only supported in the drive 'space'. (Default:
+       * 'files')
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String type;
+
+      /** The type of items which the IDs can be used for. Supported values are 'files' and 'shortcuts'. Note
+     that 'shortcuts' are only supported in the drive 'space'. (Default: 'files') [default: files]
+       */
+      public java.lang.String getType() {
+        return type;
+      }
+
+      /**
+       * The type of items which the IDs can be used for. Supported values are 'files' and
+       * 'shortcuts'. Note that 'shortcuts' are only supported in the drive 'space'. (Default:
+       * 'files')
+       */
+      public GenerateIds setType(java.lang.String type) {
+        this.type = type;
         return this;
       }
 

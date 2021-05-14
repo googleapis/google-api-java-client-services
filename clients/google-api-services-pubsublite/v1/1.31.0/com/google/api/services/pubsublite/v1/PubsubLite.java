@@ -2963,6 +2963,137 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
               return (ComputeMessageStats) super.set(parameterName, value);
             }
           }
+          /**
+           * Compute the corresponding cursor for a publish or event time in a topic partition.
+           *
+           * Create a request for the method "topics.computeTimeCursor".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link ComputeTimeCursor#execute()} method to invoke the remote operation.
+           *
+           * @param topic Required. The topic for which we should compute the cursor.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeTimeCursorRequest}
+           * @return the request
+           */
+          public ComputeTimeCursor computeTimeCursor(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeTimeCursorRequest content) throws java.io.IOException {
+            ComputeTimeCursor result = new ComputeTimeCursor(topic, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ComputeTimeCursor extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.ComputeTimeCursorResponse> {
+
+            private static final String REST_PATH = "v1/topicStats/{+topic}:computeTimeCursor";
+
+            private final java.util.regex.Pattern TOPIC_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+
+            /**
+             * Compute the corresponding cursor for a publish or event time in a topic partition.
+             *
+             * Create a request for the method "topics.computeTimeCursor".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link ComputeTimeCursor#execute()} method to invoke the remote
+             * operation. <p> {@link ComputeTimeCursor#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param topic Required. The topic for which we should compute the cursor.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeTimeCursorRequest}
+             * @since 1.13
+             */
+            protected ComputeTimeCursor(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeTimeCursorRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.ComputeTimeCursorResponse.class);
+              this.topic = com.google.api.client.util.Preconditions.checkNotNull(topic, "Required parameter topic must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+            }
+
+            @Override
+            public ComputeTimeCursor set$Xgafv(java.lang.String $Xgafv) {
+              return (ComputeTimeCursor) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ComputeTimeCursor setAccessToken(java.lang.String accessToken) {
+              return (ComputeTimeCursor) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ComputeTimeCursor setAlt(java.lang.String alt) {
+              return (ComputeTimeCursor) super.setAlt(alt);
+            }
+
+            @Override
+            public ComputeTimeCursor setCallback(java.lang.String callback) {
+              return (ComputeTimeCursor) super.setCallback(callback);
+            }
+
+            @Override
+            public ComputeTimeCursor setFields(java.lang.String fields) {
+              return (ComputeTimeCursor) super.setFields(fields);
+            }
+
+            @Override
+            public ComputeTimeCursor setKey(java.lang.String key) {
+              return (ComputeTimeCursor) super.setKey(key);
+            }
+
+            @Override
+            public ComputeTimeCursor setOauthToken(java.lang.String oauthToken) {
+              return (ComputeTimeCursor) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ComputeTimeCursor setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ComputeTimeCursor) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ComputeTimeCursor setQuotaUser(java.lang.String quotaUser) {
+              return (ComputeTimeCursor) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ComputeTimeCursor setUploadType(java.lang.String uploadType) {
+              return (ComputeTimeCursor) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ComputeTimeCursor setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ComputeTimeCursor) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The topic for which we should compute the cursor. */
+            @com.google.api.client.util.Key
+            private java.lang.String topic;
+
+            /** Required. The topic for which we should compute the cursor.
+             */
+            public java.lang.String getTopic() {
+              return topic;
+            }
+
+            /** Required. The topic for which we should compute the cursor. */
+            public ComputeTimeCursor setTopic(java.lang.String topic) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+              this.topic = topic;
+              return this;
+            }
+
+            @Override
+            public ComputeTimeCursor set(String parameterName, Object value) {
+              return (ComputeTimeCursor) super.set(parameterName, value);
+            }
+          }
 
         }
       }

@@ -130,7 +130,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   private java.lang.String programmaticContact;
 
   /**
-   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of app IDs represented in this publisher profile. Empty if this is a parent profile.
    * Deprecated in favor of publisher_app.
    * The value may be {@code null}.
    */
@@ -138,7 +138,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   private java.util.List<java.lang.Long> publisherAppIds;
 
   /**
-   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -447,7 +447,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   }
 
   /**
-   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of app IDs represented in this publisher profile. Empty if this is a parent profile.
    * Deprecated in favor of publisher_app.
    * @return value or {@code null} for none
    */
@@ -456,7 +456,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   }
 
   /**
-   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of app IDs represented in this publisher profile. Empty if this is a parent profile.
    * Deprecated in favor of publisher_app.
    * @param publisherAppIds publisherAppIds or {@code null} for none
    */
@@ -466,7 +466,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   }
 
   /**
-   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
    * @return value or {@code null} for none
    */
   public java.util.List<MobileApplication> getPublisherApps() {
@@ -474,7 +474,7 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   }
 
   /**
-   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
    * @param publisherApps publisherApps or {@code null} for none
    */
   public PublisherProfileApiProto setPublisherApps(java.util.List<MobileApplication> publisherApps) {

@@ -56,10 +56,13 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> jsonPayload;
 
   /**
-   * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
-   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
-   * at the end of the character string.
+   * Optional. A map of key, value pairs that provides additional information about the log entry.
+   * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
+   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * platform logs. They have two components - a service namespace component and the attribute name.
+   * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
+   * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.
+   * The truncation is indicated by an ellipsis at the end of the character string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,11 +75,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * project number may be used in place of PROJECT_ID. The project number is translated to its
    * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
    * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
-   * be less than 512 characters long and can only include the following characters: upper and lower
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity".[LOG_ID] must be
+   * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual but the forward-slash is removed. Listing the log entry will not
+   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * The value may be {@code null}.
@@ -85,12 +88,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String logName;
 
   /**
-   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
-   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
-   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
-   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the log entry.
+   * Output only. Deprecated. This field is not used by Logging. Any value written to it is cleared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,10 +253,13 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
-   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
-   * at the end of the character string.
+   * Optional. A map of key, value pairs that provides additional information about the log entry.
+   * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
+   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * platform logs. They have two components - a service namespace component and the attribute name.
+   * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
+   * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.
+   * The truncation is indicated by an ellipsis at the end of the character string.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -266,10 +267,13 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
-   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
-   * at the end of the character string.
+   * Optional. A map of key, value pairs that provides additional information about the log entry.
+   * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
+   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * platform logs. They have two components - a service namespace component and the attribute name.
+   * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
+   * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.
+   * The truncation is indicated by an ellipsis at the end of the character string.
    * @param labels labels or {@code null} for none
    */
   public LogEntry setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -284,11 +288,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * project number may be used in place of PROJECT_ID. The project number is translated to its
    * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
    * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
-   * be less than 512 characters long and can only include the following characters: upper and lower
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity".[LOG_ID] must be
+   * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual but the forward-slash is removed. Listing the log entry will not
+   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * @return value or {@code null} for none
@@ -304,11 +308,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * project number may be used in place of PROJECT_ID. The project number is translated to its
    * corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in queries
    * and exports.[LOG_ID] must be URL-encoded within log_name. Example:
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
-   * be less than 512 characters long and can only include the following characters: upper and lower
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity".[LOG_ID] must be
+   * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual but the forward-slash is removed. Listing the log entry will not
+   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * @param logName logName or {@code null} for none
@@ -319,12 +323,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
-   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
-   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
-   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the log entry.
+   * Output only. Deprecated. This field is not used by Logging. Any value written to it is cleared.
    * @return value or {@code null} for none
    */
   public MonitoredResourceMetadata getMetadata() {
@@ -332,12 +331,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated. Additional metadata about the monitored resource.Only k8s_container,
-   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
-   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
-   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
-   * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the log entry.
+   * Output only. Deprecated. This field is not used by Logging. Any value written to it is cleared.
    * @param metadata metadata or {@code null} for none
    */
   public LogEntry setMetadata(MonitoredResourceMetadata metadata) {

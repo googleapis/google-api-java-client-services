@@ -17,7 +17,9 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * DockerImage represents a docker artifact.
+ * DockerImage represents a docker artifact. The following fields are returned as untyped metadata
+ * in the Version resource, using camelcase keys (i.e. metadata.imageSizeBytes): - imageSizeBytes -
+ * mediaType - buildTime
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -31,14 +33,27 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class DockerImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Calculated size of the image.
+   * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
+   * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
+   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
+   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String buildTime;
+
+  /**
+   * Calculated size of the image. This field is returned as the 'metadata.imageSizeBytes' field in
+   * the Version resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long imageSizeBytes;
 
   /**
-   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json".
+   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json". This
+   * field is returned as the 'metadata.mediaType' field in the Version resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +96,33 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
-   * Calculated size of the image.
+   * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
+   * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
+   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
+   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * @return value or {@code null} for none
+   */
+  public String getBuildTime() {
+    return buildTime;
+  }
+
+  /**
+   * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
+   * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
+   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
+   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * @param buildTime buildTime or {@code null} for none
+   */
+  public DockerImage setBuildTime(String buildTime) {
+    this.buildTime = buildTime;
+    return this;
+  }
+
+  /**
+   * Calculated size of the image. This field is returned as the 'metadata.imageSizeBytes' field in
+   * the Version resource.
    * @return value or {@code null} for none
    */
   public java.lang.Long getImageSizeBytes() {
@@ -89,7 +130,8 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Calculated size of the image.
+   * Calculated size of the image. This field is returned as the 'metadata.imageSizeBytes' field in
+   * the Version resource.
    * @param imageSizeBytes imageSizeBytes or {@code null} for none
    */
   public DockerImage setImageSizeBytes(java.lang.Long imageSizeBytes) {
@@ -98,7 +140,8 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json".
+   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json". This
+   * field is returned as the 'metadata.mediaType' field in the Version resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaType() {
@@ -106,7 +149,8 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json".
+   * Media type of this image, e.g. "application/vnd.docker.distribution.manifest.v2+json". This
+   * field is returned as the 'metadata.mediaType' field in the Version resource.
    * @param mediaType mediaType or {@code null} for none
    */
   public DockerImage setMediaType(java.lang.String mediaType) {

@@ -59,6 +59,13 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. If set to True, then this metric is disabled and it does not generate any points.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced_filters)
    * which is used to match log entries. Example: "resource.type=gae_app AND severity>=ERROR" The
    * maximum length of the filter is 20000 characters.
@@ -202,6 +209,23 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    */
   public LogMetric setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. If set to True, then this metric is disabled and it does not generate any points.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. If set to True, then this metric is disabled and it does not generate any points.
+   * @param disabled disabled or {@code null} for none
+   */
+  public LogMetric setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

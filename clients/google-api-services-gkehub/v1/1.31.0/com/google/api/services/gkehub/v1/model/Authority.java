@@ -51,6 +51,15 @@ public final class Authority extends com.google.api.client.json.GenericJson {
   private java.lang.String issuer;
 
   /**
+   * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field
+   * is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be
+   * validated using this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String oidcJwks;
+
+  /**
    * Output only. The name of the workload identity pool in which `issuer` will be recognized. There
    * is a single Workload Identity Pool per Hub that is shared between all Memberships that belong
    * to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is
@@ -101,6 +110,59 @@ public final class Authority extends com.google.api.client.json.GenericJson {
    */
   public Authority setIssuer(java.lang.String issuer) {
     this.issuer = issuer;
+    return this;
+  }
+
+  /**
+   * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field
+   * is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be
+   * validated using this field.
+   * @see #decodeOidcJwks()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOidcJwks() {
+    return oidcJwks;
+  }
+
+  /**
+   * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field
+   * is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be
+   * validated using this field.
+   * @see #getOidcJwks()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeOidcJwks() {
+    return com.google.api.client.util.Base64.decodeBase64(oidcJwks);
+  }
+
+  /**
+   * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field
+   * is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be
+   * validated using this field.
+   * @see #encodeOidcJwks()
+   * @param oidcJwks oidcJwks or {@code null} for none
+   */
+  public Authority setOidcJwks(java.lang.String oidcJwks) {
+    this.oidcJwks = oidcJwks;
+    return this;
+  }
+
+  /**
+   * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field
+   * is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be
+   * validated using this field.
+   * @see #setOidcJwks()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Authority encodeOidcJwks(byte[] oidcJwks) {
+    this.oidcJwks = com.google.api.client.util.Base64.encodeBase64URLSafeString(oidcJwks);
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.dataproc.model;
 
 /**
  * Confidential Instance Config for clusters using Confidential VMs
- * (https://cloud.google.com/compute/confidential-vm/docs) NEXT ID: 2
+ * (https://cloud.google.com/compute/confidential-vm/docs)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

@@ -58,7 +58,7 @@ public final class BatchOperationMetadata extends com.google.api.client.json.Gen
   private java.lang.String description;
 
   /**
-   * The time when the operation was finished.
+   * The time when the operation finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class BatchOperationMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time when the operation was finished.
+   * The time when the operation finished.
    * @return value or {@code null} for none
    */
   public String getDoneTime() {
@@ -162,7 +162,7 @@ public final class BatchOperationMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time when the operation was finished.
+   * The time when the operation finished.
    * @param doneTime doneTime or {@code null} for none
    */
   public BatchOperationMetadata setDoneTime(String doneTime) {

@@ -80,6 +80,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaGoogleAdsLink googleAdsLink;
 
   /**
+   * A snapshot of a GoogleSignalsSettings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings;
+
+  /**
    * A snapshot of an IosAppDataStream resource in change history.
    * The value may be {@code null}.
    */
@@ -216,6 +223,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setGoogleAdsLink(GoogleAnalyticsAdminV1alphaGoogleAdsLink googleAdsLink) {
     this.googleAdsLink = googleAdsLink;
+    return this;
+  }
+
+  /**
+   * A snapshot of a GoogleSignalsSettings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings getGoogleSignalsSettings() {
+    return googleSignalsSettings;
+  }
+
+  /**
+   * A snapshot of a GoogleSignalsSettings resource in change history.
+   * @param googleSignalsSettings googleSignalsSettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setGoogleSignalsSettings(GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings) {
+    this.googleSignalsSettings = googleSignalsSettings;
     return this;
   }
 

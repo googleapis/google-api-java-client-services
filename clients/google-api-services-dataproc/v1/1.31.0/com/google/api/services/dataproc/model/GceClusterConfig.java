@@ -32,7 +32,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
-   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * (https://cloud.google.com/compute/confidential-vm/docs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
-   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * (https://cloud.google.com/compute/confidential-vm/docs).
    * @return value or {@code null} for none
    */
   public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
@@ -169,7 +169,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Confidential Instance Config for clusters using Confidential VMs
-   * (https://cloud.google.com/compute/confidential-vm/docs)
+   * (https://cloud.google.com/compute/confidential-vm/docs).
    * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
    */
   public GceClusterConfig setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {

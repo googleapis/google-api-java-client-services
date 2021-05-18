@@ -59,6 +59,12 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   private java.lang.String exchange;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forecastInventory;
+
+  /**
    * Link to publisher's Google+ page.
    * The value may be {@code null}.
    */
@@ -271,6 +277,21 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
    */
   public PublisherProfileApiProto setExchange(java.lang.String exchange) {
     this.exchange = exchange;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForecastInventory() {
+    return forecastInventory;
+  }
+
+  /**
+   * @param forecastInventory forecastInventory or {@code null} for none
+   */
+  public PublisherProfileApiProto setForecastInventory(java.lang.String forecastInventory) {
+    this.forecastInventory = forecastInventory;
     return this;
   }
 

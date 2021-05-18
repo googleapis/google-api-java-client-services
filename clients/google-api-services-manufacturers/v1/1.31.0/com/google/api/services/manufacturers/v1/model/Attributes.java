@@ -283,7 +283,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sizeType;
+  private java.util.List<java.lang.String> sizeType;
 
   /**
    * The suggested retail price (MSRP) of the product. For more information, see
@@ -914,7 +914,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * https://support.google.com/manufacturers/answer/6124116#sizetype.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSizeType() {
+  public java.util.List<java.lang.String> getSizeType() {
     return sizeType;
   }
 
@@ -923,7 +923,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * https://support.google.com/manufacturers/answer/6124116#sizetype.
    * @param sizeType sizeType or {@code null} for none
    */
-  public Attributes setSizeType(java.lang.String sizeType) {
+  public Attributes setSizeType(java.util.List<java.lang.String> sizeType) {
     this.sizeType = sizeType;
     return this;
   }

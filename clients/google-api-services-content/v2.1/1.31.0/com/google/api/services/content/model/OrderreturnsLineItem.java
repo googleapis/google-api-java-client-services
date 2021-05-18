@@ -31,11 +31,20 @@ package com.google.api.services.content.model;
 public final class OrderreturnsLineItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the line item. This value is assigned by Google when an order is created.
+   * The ID of the line item. This value is assigned by Google when an order is created. Either
+   * lineItemId or productId is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lineItemId;
+
+  /**
+   * The ID of the product to cancel. This is the REST ID used in the products service. Either
+   * lineItemId or productId is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productId;
 
   /**
    * The quantity of this line item.
@@ -45,7 +54,8 @@ public final class OrderreturnsLineItem extends com.google.api.client.json.Gener
   private java.lang.Long quantity;
 
   /**
-   * The ID of the line item. This value is assigned by Google when an order is created.
+   * The ID of the line item. This value is assigned by Google when an order is created. Either
+   * lineItemId or productId is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineItemId() {
@@ -53,11 +63,31 @@ public final class OrderreturnsLineItem extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the line item. This value is assigned by Google when an order is created.
+   * The ID of the line item. This value is assigned by Google when an order is created. Either
+   * lineItemId or productId is required.
    * @param lineItemId lineItemId or {@code null} for none
    */
   public OrderreturnsLineItem setLineItemId(java.lang.String lineItemId) {
     this.lineItemId = lineItemId;
+    return this;
+  }
+
+  /**
+   * The ID of the product to cancel. This is the REST ID used in the products service. Either
+   * lineItemId or productId is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductId() {
+    return productId;
+  }
+
+  /**
+   * The ID of the product to cancel. This is the REST ID used in the products service. Either
+   * lineItemId or productId is required.
+   * @param productId productId or {@code null} for none
+   */
+  public OrderreturnsLineItem setProductId(java.lang.String productId) {
+    this.productId = productId;
     return this;
   }
 

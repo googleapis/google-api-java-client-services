@@ -52,7 +52,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   private java.math.BigInteger merchantId;
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
+   * "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +72,16 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
+
+  /**
+   * The list of product attributes to be updated. Attributes specified in the update mask without a
+   * value specified in the body will be deleted from the product. Only top-level product attributes
+   * can be updated. If not defined, product attributes with set values will be updated and other
+   * attributes will stay unchanged. Only defined if the method is `update`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
 
   /**
    * An entry ID, unique within the batch request.
@@ -124,7 +135,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
+   * "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -132,7 +144,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
+   * "`update`"
    * @param method method or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setMethod(java.lang.String method) {
@@ -171,6 +184,29 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
    */
   public ProductsCustomBatchRequestEntry setProductId(java.lang.String productId) {
     this.productId = productId;
+    return this;
+  }
+
+  /**
+   * The list of product attributes to be updated. Attributes specified in the update mask without a
+   * value specified in the body will be deleted from the product. Only top-level product attributes
+   * can be updated. If not defined, product attributes with set values will be updated and other
+   * attributes will stay unchanged. Only defined if the method is `update`.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * The list of product attributes to be updated. Attributes specified in the update mask without a
+   * value specified in the body will be deleted from the product. Only top-level product attributes
+   * can be updated. If not defined, product attributes with set values will be updated and other
+   * attributes will stay unchanged. Only defined if the method is `update`.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public ProductsCustomBatchRequestEntry setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

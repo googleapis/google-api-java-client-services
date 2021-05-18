@@ -72,7 +72,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   private DateTime latestDeliveryPromiseTime;
 
   /**
-   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016".
+   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016". This
+   * field will be anonymized in returned OrderTrackingSignal creation response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   private java.lang.String originRegionCode;
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +215,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   }
 
   /**
-   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016".
+   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016". This
+   * field will be anonymized in returned OrderTrackingSignal creation response.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginPostalCode() {
@@ -221,7 +224,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   }
 
   /**
-   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016".
+   * The origin postal code, as a continuous string without spaces or dashes, e.g. "95016". This
+   * field will be anonymized in returned OrderTrackingSignal creation response.
    * @param originPostalCode originPostalCode or {@code null} for none
    */
   public OrderTrackingSignalShippingInfo setOriginPostalCode(java.lang.String originPostalCode) {
@@ -249,7 +253,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   }
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentId() {
@@ -257,7 +262,8 @@ public final class OrderTrackingSignalShippingInfo extends com.google.api.client
   }
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * @param shipmentId shipmentId or {@code null} for none
    */
   public OrderTrackingSignalShippingInfo setShipmentId(java.lang.String shipmentId) {

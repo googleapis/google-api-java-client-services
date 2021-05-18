@@ -43,7 +43,7 @@ public final class RepricingProductReport extends com.google.api.client.json.Gen
   private java.lang.Long applicationCount;
 
   /**
-   * Stats specific to buybox winning rules for product report.
+   * Stats specific to buybox winning rules for product report (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class RepricingProductReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Stats specific to buybox winning rules for product report.
+   * Stats specific to buybox winning rules for product report (deprecated).
    * @return value or {@code null} for none
    */
   public RepricingProductReportBuyboxWinningProductStats getBuyboxWinningProductStats() {
@@ -145,7 +145,7 @@ public final class RepricingProductReport extends com.google.api.client.json.Gen
   }
 
   /**
-   * Stats specific to buybox winning rules for product report.
+   * Stats specific to buybox winning rules for product report (deprecated).
    * @param buyboxWinningProductStats buyboxWinningProductStats or {@code null} for none
    */
   public RepricingProductReport setBuyboxWinningProductStats(RepricingProductReportBuyboxWinningProductStats buyboxWinningProductStats) {

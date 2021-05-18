@@ -1516,17 +1516,27 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The maximum number of links to return in the response, used for pagination. */
+      /**
+       * The maximum number of links to return in the response, used for pagination. The minimum
+       * allowed value is 5 results per page. If provided value is lower than 5, it will be
+       * automatically increased to 5.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of links to return in the response, used for pagination.
+      /** The maximum number of links to return in the response, used for pagination. The minimum allowed
+     value is 5 results per page. If provided value is lower than 5, it will be automatically increased
+     to 5.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of links to return in the response, used for pagination. */
+      /**
+       * The maximum number of links to return in the response, used for pagination. The minimum
+       * allowed value is 5 results per page. If provided value is lower than 5, it will be
+       * automatically increased to 5.
+       */
       public Listlinks setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16618,6 +16628,179 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing product in your Merchant Center account. Only updates attributes provided in
+     * the request.
+     *
+     * Create a request for the method "products.update".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+     * @param productId The REST ID of the product for which to update.
+     * @param content the {@link com.google.api.services.content.model.Product}
+     * @return the request
+     */
+    public Update update(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.Product content) throws java.io.IOException {
+      Update result = new Update(merchantId, productId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends ShoppingContentRequest<com.google.api.services.content.model.Product> {
+
+      private static final String REST_PATH = "{merchantId}/products/{productId}";
+
+      /**
+       * Updates an existing product in your Merchant Center account. Only updates attributes provided
+       * in the request.
+       *
+       * Create a request for the method "products.update".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+       * @param productId The REST ID of the product for which to update.
+       * @param content the {@link com.google.api.services.content.model.Product}
+       * @since 1.13
+       */
+      protected Update(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.Product content) {
+        super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.Product.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that contains the product. This account cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      public Update setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The REST ID of the product for which to update. */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** The REST ID of the product for which to update.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /** The REST ID of the product for which to update. */
+      public Update setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      /**
+       * The list of product attributes to be updated. Attributes specified in the update mask
+       * without a value specified in the body will be deleted from the product. Only top-level
+       * product attributes can be updated. If not defined, product attributes with set values will
+       * be updated and other attributes will stay unchanged.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of product attributes to be updated. Attributes specified in the update mask without a
+     value specified in the body will be deleted from the product. Only top-level product attributes can
+     be updated. If not defined, product attributes with set values will be updated and other attributes
+     will stay unchanged.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * The list of product attributes to be updated. Attributes specified in the update mask
+       * without a value specified in the body will be deleted from the product. Only top-level
+       * product attributes can be updated. If not defined, product attributes with set values will
+       * be updated and other attributes will stay unchanged.
+       */
+      public Update setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
       }
     }
 

@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class RepricingRuleReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Stats specific to buybox winning rules for rule report.
+   * Stats specific to buybox winning rules for rule report (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class RepricingRuleReport extends com.google.api.client.json.Generi
   private java.lang.String type;
 
   /**
-   * Stats specific to buybox winning rules for rule report.
+   * Stats specific to buybox winning rules for rule report (deprecated).
    * @return value or {@code null} for none
    */
   public RepricingRuleReportBuyboxWinningRuleStats getBuyboxWinningRuleStats() {
@@ -116,7 +116,7 @@ public final class RepricingRuleReport extends com.google.api.client.json.Generi
   }
 
   /**
-   * Stats specific to buybox winning rules for rule report.
+   * Stats specific to buybox winning rules for rule report (deprecated).
    * @param buyboxWinningRuleStats buyboxWinningRuleStats or {@code null} for none
    */
   public RepricingRuleReport setBuyboxWinningRuleStats(RepricingRuleReportBuyboxWinningRuleStats buyboxWinningRuleStats) {

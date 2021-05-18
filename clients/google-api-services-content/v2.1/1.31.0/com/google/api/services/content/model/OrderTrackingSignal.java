@@ -39,7 +39,7 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
 
   /**
    * Required. The delivery postal code, as a continuous string without spaces or dashes, e.g.
-   * "95016".
+   * "95016". This field will be anonymized in returned OrderTrackingSignal creation response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   private DateTime orderCreatedTime;
 
   /**
-   * Required. The ID of the order on the merchant side.
+   * Required. The ID of the order on the merchant side. This field will be hashed in returned
+   * OrderTrackingSignal creation response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,7 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
 
   /**
    * Required. The delivery postal code, as a continuous string without spaces or dashes, e.g.
-   * "95016".
+   * "95016". This field will be anonymized in returned OrderTrackingSignal creation response.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliveryPostalCode() {
@@ -135,7 +136,7 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
 
   /**
    * Required. The delivery postal code, as a continuous string without spaces or dashes, e.g.
-   * "95016".
+   * "95016". This field will be anonymized in returned OrderTrackingSignal creation response.
    * @param deliveryPostalCode deliveryPostalCode or {@code null} for none
    */
   public OrderTrackingSignal setDeliveryPostalCode(java.lang.String deliveryPostalCode) {
@@ -224,7 +225,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The ID of the order on the merchant side.
+   * Required. The ID of the order on the merchant side. This field will be hashed in returned
+   * OrderTrackingSignal creation response.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderId() {
@@ -232,7 +234,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The ID of the order on the merchant side.
+   * Required. The ID of the order on the merchant side. This field will be hashed in returned
+   * OrderTrackingSignal creation response.
    * @param orderId orderId or {@code null} for none
    */
   public OrderTrackingSignal setOrderId(java.lang.String orderId) {

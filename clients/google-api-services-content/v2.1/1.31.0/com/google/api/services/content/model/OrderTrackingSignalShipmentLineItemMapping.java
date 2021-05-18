@@ -45,7 +45,8 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   private java.lang.Long quantity;
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   }
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentId() {
@@ -94,7 +96,8 @@ public final class OrderTrackingSignalShipmentLineItemMapping extends com.google
   }
 
   /**
-   * Required. The shipment ID.
+   * Required. The shipment ID. This field will be hashed in returned OrderTrackingSignal creation
+   * response.
    * @param shipmentId shipmentId or {@code null} for none
    */
   public OrderTrackingSignalShipmentLineItemMapping setShipmentId(java.lang.String shipmentId) {

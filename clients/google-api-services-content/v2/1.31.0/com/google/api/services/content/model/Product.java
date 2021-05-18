@@ -18,10 +18,8 @@ package com.google.api.services.content.model;
 
 /**
  * Required product attributes are primarily defined by the products data specification. See the
- * Products Data Specification Help Center article for information. Some attributes are country-
- * specific, so make sure you select the appropriate country in the drop-down selector at the top of
- * the page. Product data. After inserting, updating, or deleting a product, it may take several
- * minutes before changes take effect.
+ * Products Data Specification Help Center article for information. Product data. After inserting,
+ * updating, or deleting a product, it may take several minutes before changes take effect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

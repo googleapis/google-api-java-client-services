@@ -3286,6 +3286,155 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Lookup for Google Signals settings for a property.
+     *
+     * Create a request for the method "properties.getGoogleSignalsSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetGoogleSignalsSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the google signals settings to retrieve. Format:
+     *        properties/{property}/googleSignalsSettings
+     * @return the request
+     */
+    public GetGoogleSignalsSettings getGoogleSignalsSettings(java.lang.String name) throws java.io.IOException {
+      GetGoogleSignalsSettings result = new GetGoogleSignalsSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetGoogleSignalsSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/googleSignalsSettings$");
+
+      /**
+       * Lookup for Google Signals settings for a property.
+       *
+       * Create a request for the method "properties.getGoogleSignalsSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetGoogleSignalsSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetGoogleSignalsSettings#initialize(com.google.api.client.googleap
+       * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the google signals settings to retrieve. Format:
+     *        properties/{property}/googleSignalsSettings
+       * @since 1.13
+       */
+      protected GetGoogleSignalsSettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/googleSignalsSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetGoogleSignalsSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetGoogleSignalsSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setAccessToken(java.lang.String accessToken) {
+        return (GetGoogleSignalsSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setAlt(java.lang.String alt) {
+        return (GetGoogleSignalsSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setCallback(java.lang.String callback) {
+        return (GetGoogleSignalsSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setFields(java.lang.String fields) {
+        return (GetGoogleSignalsSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setKey(java.lang.String key) {
+        return (GetGoogleSignalsSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetGoogleSignalsSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetGoogleSignalsSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetGoogleSignalsSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setUploadType(java.lang.String uploadType) {
+        return (GetGoogleSignalsSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetGoogleSignalsSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetGoogleSignalsSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the google signals settings to retrieve. Format:
+       * properties/{property}/googleSignalsSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the google signals settings to retrieve. Format:
+     properties/{property}/googleSignalsSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the google signals settings to retrieve. Format:
+       * properties/{property}/googleSignalsSettings
+       */
+      public GetGoogleSignalsSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/googleSignalsSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetGoogleSignalsSettings set(String parameterName, Object value) {
+        return (GetGoogleSignalsSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns child Properties under the specified parent Account. Only "GA4" properties will be
      * returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie:
      * "trashed") properties are excluded by default. Returns an empty list if no relevant properties
@@ -3675,6 +3824,175 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates Google Signals settings for a property.
+     *
+     * Create a request for the method "properties.updateGoogleSignalsSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link UpdateGoogleSignalsSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Output only. Resource name of this setting. Format: properties/{property_id}/googleSignalsSettings
+     *        Example: "properties/1000/googleSignalsSettings"
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings}
+     * @return the request
+     */
+    public UpdateGoogleSignalsSettings updateGoogleSignalsSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings content) throws java.io.IOException {
+      UpdateGoogleSignalsSettings result = new UpdateGoogleSignalsSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateGoogleSignalsSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/googleSignalsSettings$");
+
+      /**
+       * Updates Google Signals settings for a property.
+       *
+       * Create a request for the method "properties.updateGoogleSignalsSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateGoogleSignalsSettings#execute()} method to invoke
+       * the remote operation. <p> {@link UpdateGoogleSignalsSettings#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. Resource name of this setting. Format: properties/{property_id}/googleSignalsSettings
+     *        Example: "properties/1000/googleSignalsSettings"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings}
+       * @since 1.13
+       */
+      protected UpdateGoogleSignalsSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings content) {
+        super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaGoogleSignalsSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/googleSignalsSettings$");
+        }
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateGoogleSignalsSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateGoogleSignalsSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setAlt(java.lang.String alt) {
+        return (UpdateGoogleSignalsSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setCallback(java.lang.String callback) {
+        return (UpdateGoogleSignalsSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setFields(java.lang.String fields) {
+        return (UpdateGoogleSignalsSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setKey(java.lang.String key) {
+        return (UpdateGoogleSignalsSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateGoogleSignalsSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateGoogleSignalsSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateGoogleSignalsSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateGoogleSignalsSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateGoogleSignalsSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. Resource name of this setting. Format:
+       * properties/{property_id}/googleSignalsSettings Example:
+       * "properties/1000/googleSignalsSettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. Resource name of this setting. Format: properties/{property_id}/googleSignalsSettings
+     Example: "properties/1000/googleSignalsSettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. Resource name of this setting. Format:
+       * properties/{property_id}/googleSignalsSettings Example:
+       * "properties/1000/googleSignalsSettings"
+       */
+      public UpdateGoogleSignalsSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/googleSignalsSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+     "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+     with the string "*" to match all fields.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      public UpdateGoogleSignalsSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateGoogleSignalsSettings set(String parameterName, Object value) {
+        return (UpdateGoogleSignalsSettings) super.set(parameterName, value);
       }
     }
 

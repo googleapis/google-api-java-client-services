@@ -94,6 +94,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaIosAppDataStream iosAppDataStream;
 
   /**
+   * A snapshot of a MeasurementProtocolSecret resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret measurementProtocolSecret;
+
+  /**
    * A snapshot of a Property resource in change history.
    * The value may be {@code null}.
    */
@@ -257,6 +264,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setIosAppDataStream(GoogleAnalyticsAdminV1alphaIosAppDataStream iosAppDataStream) {
     this.iosAppDataStream = iosAppDataStream;
+    return this;
+  }
+
+  /**
+   * A snapshot of a MeasurementProtocolSecret resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret getMeasurementProtocolSecret() {
+    return measurementProtocolSecret;
+  }
+
+  /**
+   * A snapshot of a MeasurementProtocolSecret resource in change history.
+   * @param measurementProtocolSecret measurementProtocolSecret or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setMeasurementProtocolSecret(GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret measurementProtocolSecret) {
+    this.measurementProtocolSecret = measurementProtocolSecret;
     return this;
   }
 

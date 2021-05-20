@@ -161,8 +161,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
-     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
-     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+     *        "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -189,8 +189,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
-     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
-     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+     *        "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -270,15 +270,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. Name of the organization or project the assets belong to. Format: "organizations
-       * /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
-       * "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       * /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+       * "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. Name of the organization or project the assets belong to. Format: "organizations
-     /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
-     "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+     /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as "projects
+     /my-project-id"), or "projects/[project-number]" (such as "projects/12345").
        */
       public java.lang.String getParent() {
         return parent;
@@ -286,8 +286,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. Name of the organization or project the assets belong to. Format: "organizations
-       * /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such as
-       * "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
+       * /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+       * "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -2126,6 +2126,217 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
+     * Analyze moving a resource to a specified destination without kicking off the actual move. The
+     * analysis is best effort depending on the user's permissions of viewing different hierarchical
+     * policies and configurations. The policies and configuration are subject to change before the
+     * actual resource migration takes place.
+     *
+     * Create a request for the method "v1.analyzeMove".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeMove#execute()} method to invoke the remote operation.
+     *
+     * @param resource Required. Name of the resource to perform the analysis against. Only GCP Project are supported as of
+     *        today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project
+     *        Number (such as "projects/12345").
+     * @return the request
+     */
+    public AnalyzeMove analyzeMove(java.lang.String resource) throws java.io.IOException {
+      AnalyzeMove result = new AnalyzeMove(resource);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeMove extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.AnalyzeMoveResponse> {
+
+      private static final String REST_PATH = "v1/{+resource}:analyzeMove";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyze moving a resource to a specified destination without kicking off the actual move. The
+       * analysis is best effort depending on the user's permissions of viewing different hierarchical
+       * policies and configurations. The policies and configuration are subject to change before the
+       * actual resource migration takes place.
+       *
+       * Create a request for the method "v1.analyzeMove".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeMove#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * AnalyzeMove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource Required. Name of the resource to perform the analysis against. Only GCP Project are supported as of
+     *        today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project
+     *        Number (such as "projects/12345").
+       * @since 1.13
+       */
+      protected AnalyzeMove(java.lang.String resource) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.AnalyzeMoveResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AnalyzeMove set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeMove) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeMove setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeMove) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeMove setAlt(java.lang.String alt) {
+        return (AnalyzeMove) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeMove setCallback(java.lang.String callback) {
+        return (AnalyzeMove) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeMove setFields(java.lang.String fields) {
+        return (AnalyzeMove) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeMove setKey(java.lang.String key) {
+        return (AnalyzeMove) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeMove setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeMove) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeMove setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeMove) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeMove setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeMove) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeMove setUploadType(java.lang.String uploadType) {
+        return (AnalyzeMove) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeMove setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeMove) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the resource to perform the analysis against. Only GCP Project are
+       * supported as of today. Hence, this can only be Project ID (such as "projects/my-project-
+       * id") or a Project Number (such as "projects/12345").
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Required. Name of the resource to perform the analysis against. Only GCP Project are supported as
+     of today. Hence, this can only be Project ID (such as "projects/my-project-id") or a Project Number
+     (such as "projects/12345").
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * Required. Name of the resource to perform the analysis against. Only GCP Project are
+       * supported as of today. Hence, this can only be Project ID (such as "projects/my-project-
+       * id") or a Project Number (such as "projects/12345").
+       */
+      public AnalyzeMove setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      /**
+       * Required. Name of the GCP Folder or Organization to reparent the target resource. The
+       * analysis will be performed against hypothetically moving the resource to this specified
+       * desitination parent. This can only be a Folder number (such as "folders/123") or an
+       * Organization number (such as "organizations/123").
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationParent;
+
+      /** Required. Name of the GCP Folder or Organization to reparent the target resource. The analysis will
+     be performed against hypothetically moving the resource to this specified desitination parent. This
+     can only be a Folder number (such as "folders/123") or an Organization number (such as
+     "organizations/123").
+       */
+      public java.lang.String getDestinationParent() {
+        return destinationParent;
+      }
+
+      /**
+       * Required. Name of the GCP Folder or Organization to reparent the target resource. The
+       * analysis will be performed against hypothetically moving the resource to this specified
+       * desitination parent. This can only be a Folder number (such as "folders/123") or an
+       * Organization number (such as "organizations/123").
+       */
+      public AnalyzeMove setDestinationParent(java.lang.String destinationParent) {
+        this.destinationParent = destinationParent;
+        return this;
+      }
+
+      /**
+       * Analysis view indicating what information should be included in the analysis response. If
+       * unspecified, the default view is FULL.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Analysis view indicating what information should be included in the analysis response. If
+     unspecified, the default view is FULL.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Analysis view indicating what information should be included in the analysis response. If
+       * unspecified, the default view is FULL.
+       */
+      public AnalyzeMove setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public AnalyzeMove set(String parameterName, Object value) {
+        return (AnalyzeMove) super.set(parameterName, value);
+      }
+    }
+    /**
      * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this
      * API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps
      * in the output history. Otherwise, this API outputs history with asset in both non-delete or
@@ -3069,21 +3280,23 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * Optional. A comma-separated list of fields specifying the sorting order of the results. The
        * default order is ascending. Add " DESC" after the field name to indicate descending order.
-       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
-       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
-       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
-       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only singular
+       * primitive fields in the response are sortable: * name * assetType * project * displayName *
+       * description * location * kmsKey * createTime * updateTime * state * parentFullResourceName
+       * * parentAssetType All the other fields such as repeated fields (e.g., `networkTags`), map
+       * fields (e.g., `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
+      /** Optional. A comma-separated list of fields specifying the sorting order of the results. The default
      order is ascending. Add " DESC" after the field name to indicate descending order. Redundant space
-     characters are ignored. Example: "location DESC, name". Only string fields in the response are
-     sortable, including `name`, `displayName`, `description`, `location`. All the other fields such as
-     repeated fields (e.g., `networkTags`), map fields (e.g., `labels`) and struct fields (e.g.,
+     characters are ignored. Example: "location DESC, name". Only singular primitive fields in the
+     response are sortable: * name * assetType * project * displayName * description * location * kmsKey
+     * createTime * updateTime * state * parentFullResourceName * parentAssetType All the other fields
+     such as repeated fields (e.g., `networkTags`), map fields (e.g., `labels`) and struct fields (e.g.,
      `additionalAttributes`) are not supported.
        */
       public java.lang.String getOrderBy() {
@@ -3091,12 +3304,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * Optional. A comma-separated list of fields specifying the sorting order of the results. The
        * default order is ascending. Add " DESC" after the field name to indicate descending order.
-       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
-       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
-       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
-       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only singular
+       * primitive fields in the response are sortable: * name * assetType * project * displayName *
+       * description * location * kmsKey * createTime * updateTime * state * parentFullResourceName
+       * * parentAssetType All the other fields such as repeated fields (e.g., `networkTags`), map
+       * fields (e.g., `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
        */
       public SearchAllResources setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;

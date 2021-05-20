@@ -49,6 +49,13 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   private java.lang.String rangeName;
 
   /**
+   * The URL of the reserved internal range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservedInternalRange;
+
+  /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
    * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
@@ -89,6 +96,23 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    */
   public SubnetworkSecondaryRange setRangeName(java.lang.String rangeName) {
     this.rangeName = rangeName;
+    return this;
+  }
+
+  /**
+   * The URL of the reserved internal range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservedInternalRange() {
+    return reservedInternalRange;
+  }
+
+  /**
+   * The URL of the reserved internal range.
+   * @param reservedInternalRange reservedInternalRange or {@code null} for none
+   */
+  public SubnetworkSecondaryRange setReservedInternalRange(java.lang.String reservedInternalRange) {
+    this.reservedInternalRange = reservedInternalRange;
     return this;
   }
 

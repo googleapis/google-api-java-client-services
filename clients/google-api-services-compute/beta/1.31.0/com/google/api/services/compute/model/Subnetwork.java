@@ -77,6 +77,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableFlowLogs;
 
   /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalIpv6Prefix;
+
+  /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
@@ -113,6 +120,15 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
 
   /**
    * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork.
@@ -223,6 +239,16 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
+
+  /**
    * [Output Only] The state of the subnetwork, which can be one of the following values: READY:
    * Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the
    * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
@@ -328,6 +354,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {
     this.enableFlowLogs = enableFlowLogs;
+    return this;
+  }
+
+  /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalIpv6Prefix() {
+    return externalIpv6Prefix;
+  }
+
+  /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
+   */
+  public Subnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {
+    this.externalIpv6Prefix = externalIpv6Prefix;
     return this;
   }
 
@@ -454,6 +497,27 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public Subnetwork setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 
@@ -706,6 +770,29 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * @param stackType stackType or {@code null} for none
+   */
+  public Subnetwork setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

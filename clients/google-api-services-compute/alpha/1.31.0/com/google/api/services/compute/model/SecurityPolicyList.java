@@ -30,6 +30,12 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyList extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
@@ -67,11 +73,33 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
+   * [Output Only] Unreachable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
+
+  /**
    * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * @param etag etag or {@code null} for none
+   */
+  public SecurityPolicyList setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
 
   /**
    * [Output Only] Unique identifier for the resource; defined by the server.
@@ -144,6 +172,23 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
    */
   public SecurityPolicyList setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public SecurityPolicyList setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 

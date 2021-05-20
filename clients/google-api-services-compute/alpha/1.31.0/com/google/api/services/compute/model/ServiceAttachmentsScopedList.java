@@ -34,7 +34,7 @@ public final class ServiceAttachmentsScopedList extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ServiceAttachment> resources;
+  private java.util.List<ServiceAttachment> serviceAttachments;
 
   static {
     // hack to force ProGuard to consider ServiceAttachment used, since otherwise it would be stripped out
@@ -53,16 +53,16 @@ public final class ServiceAttachmentsScopedList extends com.google.api.client.js
    * A list of ServiceAttachments contained in this scope.
    * @return value or {@code null} for none
    */
-  public java.util.List<ServiceAttachment> getResources() {
-    return resources;
+  public java.util.List<ServiceAttachment> getServiceAttachments() {
+    return serviceAttachments;
   }
 
   /**
    * A list of ServiceAttachments contained in this scope.
-   * @param resources resources or {@code null} for none
+   * @param serviceAttachments serviceAttachments or {@code null} for none
    */
-  public ServiceAttachmentsScopedList setResources(java.util.List<ServiceAttachment> resources) {
-    this.resources = resources;
+  public ServiceAttachmentsScopedList setServiceAttachments(java.util.List<ServiceAttachment> serviceAttachments) {
+    this.serviceAttachments = serviceAttachments;
     return this;
   }
 

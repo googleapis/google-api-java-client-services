@@ -340,8 +340,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private Scheduling scheduling;
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * [Input Only] Secure tags to apply to this instance. These can be later modified by the update
+   * method. Maximum number of secure tags allowed is 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1233,8 +1233,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * [Input Only] Secure tags to apply to this instance. These can be later modified by the update
+   * method. Maximum number of secure tags allowed is 50.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSecureTags() {
@@ -1242,8 +1242,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * [Input Only] Secure tags to apply to this instance. These can be later modified by the update
+   * method. Maximum number of secure tags allowed is 50.
    * @param secureTags secureTags or {@code null} for none
    */
   public Instance setSecureTags(java.util.List<java.lang.String> secureTags) {

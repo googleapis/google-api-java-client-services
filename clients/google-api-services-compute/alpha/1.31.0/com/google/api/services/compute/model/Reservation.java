@@ -104,7 +104,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AllocationShareSettings shareSettings;
+  private ShareSettings shareSettings;
 
   /**
    * Reservation for instances with specific machine shapes.
@@ -304,7 +304,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * Share-settings for shared-reservation
    * @return value or {@code null} for none
    */
-  public AllocationShareSettings getShareSettings() {
+  public ShareSettings getShareSettings() {
     return shareSettings;
   }
 
@@ -312,7 +312,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * Share-settings for shared-reservation
    * @param shareSettings shareSettings or {@code null} for none
    */
-  public Reservation setShareSettings(AllocationShareSettings shareSettings) {
+  public Reservation setShareSettings(ShareSettings shareSettings) {
     this.shareSettings = shareSettings;
     return this;
   }

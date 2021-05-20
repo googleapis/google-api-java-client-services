@@ -180,6 +180,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private Scheduling scheduling;
 
   /**
+   * Secure tags to apply to this instance. Maximum number of secure tags allowed is 50.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureTags;
+
+  /**
    * A list of service accounts with specified scopes. Access tokens for these service accounts are
    * available to the instances that are created from these properties. Use metadata queries to
    * obtain the access tokens for these instances.
@@ -537,6 +544,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setScheduling(Scheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Secure tags to apply to this instance. Maximum number of secure tags allowed is 50.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureTags() {
+    return secureTags;
+  }
+
+  /**
+   * Secure tags to apply to this instance. Maximum number of secure tags allowed is 50.
+   * @param secureTags secureTags or {@code null} for none
+   */
+  public InstanceProperties setSecureTags(java.util.List<java.lang.String> secureTags) {
+    this.secureTags = secureTags;
     return this;
   }
 

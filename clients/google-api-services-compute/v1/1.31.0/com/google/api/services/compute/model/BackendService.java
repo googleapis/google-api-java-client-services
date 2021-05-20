@@ -81,15 +81,6 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceCdnPolicy cdnPolicy;
 
   /**
-   * Settings controlling the volume of connections to a backend service. If not set, this feature
-   * is considered disabled.
-   *
-   * This field is applicable to either:   - A regional backend service with the service_protocol
-   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
-   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,8 +253,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
    * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
-   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
+   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
+   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -397,9 +390,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String sessionAffinity;
 
   /**
-   * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information see,  Backend service settings The default is 30 seconds. The full range of
-   * timeout values allowed is 1 - 2,147,483,647 seconds.
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -475,15 +467,6 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the volume of connections to a backend service. If not set, this feature
-   * is considered disabled.
-   *
-   * This field is applicable to either:   - A regional backend service with the service_protocol
-   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
-   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public CircuitBreakers getCircuitBreakers() {
@@ -491,15 +474,6 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the volume of connections to a backend service. If not set, this feature
-   * is considered disabled.
-   *
-   * This field is applicable to either:   - A regional backend service with the service_protocol
-   * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
-   * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @param circuitBreakers circuitBreakers or {@code null} for none
    */
   public BackendService setCircuitBreakers(CircuitBreakers circuitBreakers) {
@@ -923,8 +897,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
    * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
-   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
+   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
+   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public Duration getMaxStreamDuration() {
@@ -935,8 +911,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Specifies the default maximum duration (timeout) for streams to this service. Duration is
    * computed from the beginning of the stream until the response has been completely processed,
    * including all retries. A stream that does not complete in this duration is closed. If not
-   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This field is
-   * only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+   * specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value
+   * can be overridden in the PathMatcher configuration of the UrlMap that references this backend
+   * service. This field is only allowed when the loadBalancingScheme of the backend service is
+   * INTERNAL_SELF_MANAGED.
    * @param maxStreamDuration maxStreamDuration or {@code null} for none
    */
   public BackendService setMaxStreamDuration(Duration maxStreamDuration) {
@@ -1232,9 +1210,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information see,  Backend service settings The default is 30 seconds. The full range of
-   * timeout values allowed is 1 - 2,147,483,647 seconds.
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSec() {
@@ -1242,9 +1219,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information see,  Backend service settings The default is 30 seconds. The full range of
-   * timeout values allowed is 1 - 2,147,483,647 seconds.
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * @param timeoutSec timeoutSec or {@code null} for none
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {

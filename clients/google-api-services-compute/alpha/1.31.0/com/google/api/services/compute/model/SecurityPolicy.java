@@ -60,6 +60,12 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String creationTimestamp;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyDdosProtectionConfig ddosProtectionConfig;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
@@ -143,6 +149,14 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * [Output Only] URL of the region where the regional security policy resides. This field is not
+   * applicable to global security policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
 
   /**
    * [Output Only] Total count of all security policy rule tuples. A security policy can not exceed
@@ -244,6 +258,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyDdosProtectionConfig getDdosProtectionConfig() {
+    return ddosProtectionConfig;
+  }
+
+  /**
+   * @param ddosProtectionConfig ddosProtectionConfig or {@code null} for none
+   */
+  public SecurityPolicy setDdosProtectionConfig(SecurityPolicyDdosProtectionConfig ddosProtectionConfig) {
+    this.ddosProtectionConfig = ddosProtectionConfig;
     return this;
   }
 
@@ -519,6 +548,25 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional security policy resides. This field is not
+   * applicable to global security policies.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional security policy resides. This field is not
+   * applicable to global security policies.
+   * @param region region or {@code null} for none
+   */
+  public SecurityPolicy setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

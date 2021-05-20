@@ -58,10 +58,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT. For regional
-   * HealthCheckService, the HealthCheck must be regional and in the same region. For global
-   * HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not
-   * supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks
+   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
+   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
+   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
+   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
+   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
+   * NEGs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,10 +257,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT. For regional
-   * HealthCheckService, the HealthCheck must be regional and in the same region. For global
-   * HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not
-   * supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks
+   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
+   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
+   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
+   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
+   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
+   * NEGs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -267,10 +271,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
 
   /**
    * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
-   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT. For regional
-   * HealthCheckService, the HealthCheck must be regional and in the same region. For global
-   * HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not
-   * supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks
+   * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
+   * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
+   * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
+   * of regional and global HealthChecks is not supported. Multiple regional HealthChecks must
+   * belong to the same region. Regional HealthChecks must belong to the same region as zones of
+   * NEGs.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public HealthCheckService setHealthChecks(java.util.List<java.lang.String> healthChecks) {

@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class TargetSslProxiesSetSslCertificatesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. Currently
-   * exactly one ssl certificate must be specified.
+   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. At least one
+   * SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sslCertificates;
 
   /**
-   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. Currently
-   * exactly one ssl certificate must be specified.
+   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. At least one
+   * SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSslCertificates() {
@@ -47,8 +47,8 @@ public final class TargetSslProxiesSetSslCertificatesRequest extends com.google.
   }
 
   /**
-   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. Currently
-   * exactly one ssl certificate must be specified.
+   * New set of URLs to SslCertificate resources to associate with this TargetSslProxy. At least one
+   * SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates.
    * @param sslCertificates sslCertificates or {@code null} for none
    */
   public TargetSslProxiesSetSslCertificatesRequest setSslCertificates(java.util.List<java.lang.String> sslCertificates) {

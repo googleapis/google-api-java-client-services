@@ -31,7 +31,9 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The HTTP status code used to abort the request. The value must be between 200 and 599
-   * inclusive.
+   * inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to
+   * this  mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status
+   * is currently not supported by Traffic Director.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +49,9 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The HTTP status code used to abort the request. The value must be between 200 and 599
-   * inclusive.
+   * inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to
+   * this  mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status
+   * is currently not supported by Traffic Director.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHttpStatus() {
@@ -56,7 +60,9 @@ public final class HttpFaultAbort extends com.google.api.client.json.GenericJson
 
   /**
    * The HTTP status code used to abort the request. The value must be between 200 and 599
-   * inclusive.
+   * inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to
+   * this  mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status
+   * is currently not supported by Traffic Director.
    * @param httpStatus httpStatus or {@code null} for none
    */
   public HttpFaultAbort setHttpStatus(java.lang.Long httpStatus) {

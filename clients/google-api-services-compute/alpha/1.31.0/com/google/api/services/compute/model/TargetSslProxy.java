@@ -106,7 +106,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URLs to SslCertificate resources that are used to authenticate connections to Backends. At
    * least one SSL certificate must be specified. Currently, you may specify up to 15 SSL
-   * certificates.
+   * certificates. sslCertificates do not apply when the load balancing scheme is set to
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,7 +291,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URLs to SslCertificate resources that are used to authenticate connections to Backends. At
    * least one SSL certificate must be specified. Currently, you may specify up to 15 SSL
-   * certificates.
+   * certificates. sslCertificates do not apply when the load balancing scheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSslCertificates() {
@@ -300,7 +302,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URLs to SslCertificate resources that are used to authenticate connections to Backends. At
    * least one SSL certificate must be specified. Currently, you may specify up to 15 SSL
-   * certificates.
+   * certificates. sslCertificates do not apply when the load balancing scheme is set to
+   * INTERNAL_SELF_MANAGED.
    * @param sslCertificates sslCertificates or {@code null} for none
    */
   public TargetSslProxy setSslCertificates(java.util.List<java.lang.String> sslCertificates) {

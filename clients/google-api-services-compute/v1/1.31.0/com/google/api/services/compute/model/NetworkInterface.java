@@ -69,6 +69,31 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AccessConfig> ipv6AccessConfigs;
+
+  static {
+    // hack to force ProGuard to consider AccessConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AccessConfig.class);
+  }
+
+  /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * [Output Only] An IPv6 internal network address for this network interface.
    * The value may be {@code null}.
    */
@@ -118,6 +143,16 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String nicType;
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
 
   /**
    * The URL of the Subnetwork resource for this instance. If the network resource is in legacy
@@ -226,6 +261,50 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AccessConfig> getIpv6AccessConfigs() {
+    return ipv6AccessConfigs;
+  }
+
+  /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * @param ipv6AccessConfigs ipv6AccessConfigs or {@code null} for none
+   */
+  public NetworkInterface setIpv6AccessConfigs(java.util.List<AccessConfig> ipv6AccessConfigs) {
+    this.ipv6AccessConfigs = ipv6AccessConfigs;
+    return this;
+  }
+
+  /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public NetworkInterface setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 
@@ -346,6 +425,29 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNicType(java.lang.String nicType) {
     this.nicType = nicType;
+    return this;
+  }
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * @param stackType stackType or {@code null} for none
+   */
+  public NetworkInterface setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

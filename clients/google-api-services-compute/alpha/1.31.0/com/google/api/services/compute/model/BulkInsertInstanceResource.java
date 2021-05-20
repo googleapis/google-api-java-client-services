@@ -17,7 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for BulkInsertInstanceResource.
+ * A transient resource used in compute.instances.bulkInsert and compute.regionInstances.bulkInsert
+ * and compute.regionInstances.recommendLocations. This resource is not persisted anywhere, it is
+ * used only for processing the requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -99,7 +101,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * Maximum number of secure tags allowed is 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,7 +285,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * Maximum number of secure tags allowed is 50.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSecureTags() {
@@ -292,7 +294,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
 
   /**
    * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 300.
+   * Maximum number of secure tags allowed is 50.
    * @param secureTags secureTags or {@code null} for none
    */
   public BulkInsertInstanceResource setSecureTags(java.util.List<java.lang.String> secureTags) {

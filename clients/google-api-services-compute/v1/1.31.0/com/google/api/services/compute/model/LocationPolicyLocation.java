@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class LocationPolicyLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Preference for a given locaction: ALLOW or DENY.
+   * Preference for a given location: ALLOW or DENY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String preference;
 
   /**
-   * Preference for a given locaction: ALLOW or DENY.
+   * Preference for a given location: ALLOW or DENY.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreference() {
@@ -45,7 +45,7 @@ public final class LocationPolicyLocation extends com.google.api.client.json.Gen
   }
 
   /**
-   * Preference for a given locaction: ALLOW or DENY.
+   * Preference for a given location: ALLOW or DENY.
    * @param preference preference or {@code null} for none
    */
   public LocationPolicyLocation setPreference(java.lang.String preference) {

@@ -46,7 +46,7 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   private Duration perTryTimeout;
 
   /**
-   * Specfies one or more conditions when this retry rule applies. Valid values are: - 5xx:
+   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
    * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
    * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
    * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to
@@ -104,7 +104,7 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specfies one or more conditions when this retry rule applies. Valid values are: - 5xx:
+   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
    * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
    * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
    * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to
@@ -125,7 +125,7 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specfies one or more conditions when this retry rule applies. Valid values are: - 5xx:
+   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
    * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
    * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
    * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to

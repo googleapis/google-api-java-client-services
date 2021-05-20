@@ -17,6 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
+ * Whether the instance is a standby. Properties of a standby instance comparing to the regular
+ * instance: ========================================================================= | regular |
+ * standby ========================================================================= managed by IGM?
+ * | yes | yes added to the IG? | yes | yes counts towards IGM's target size? | yes | no taken into
+ * account by Autoscaler? | yes | no receives traffic from LB? | yes | no
+ * =========================================================================
+ *
  * Represents a Managed Instance Group resource.
  *
  * An instance group is a collection of VM instances that you can manage as a single entity. For

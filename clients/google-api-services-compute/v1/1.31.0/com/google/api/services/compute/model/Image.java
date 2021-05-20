@@ -194,11 +194,13 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private InitialStateConfig shieldedInstanceInitialState;
 
   /**
-   * URL of the source disk used to create this image. This can be a full or valid partial URL. You
-   * must provide either this property or the rawDisk.source property but not both to create an
-   * image. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * URL of the source disk used to create this image. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
    * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +227,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source image used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +255,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source snapshot used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
-   * sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -707,11 +710,13 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source disk used to create this image. This can be a full or valid partial URL. You
-   * must provide either this property or the rawDisk.source property but not both to create an
-   * image. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * URL of the source disk used to create this image. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
    * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -719,11 +724,13 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source disk used to create this image. This can be a full or valid partial URL. You
-   * must provide either this property or the rawDisk.source property but not both to create an
-   * image. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
+   * URL of the source disk used to create this image. For example, the following are valid values:
+   * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
    * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public Image setSourceDisk(java.lang.String sourceDisk) {
@@ -775,7 +782,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source image used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -786,7 +794,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source image used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Image setSourceImage(java.lang.String sourceImage) {
@@ -838,8 +847,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source snapshot used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
-   * sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -850,8 +859,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
    * URL of the source snapshot used to create this image.
    *
    * In order to create an image, you must provide the full or partial URL of one of the following:
-   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
-   * sourceDisk URL
+   * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+   * URL
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public Image setSourceSnapshot(java.lang.String sourceSnapshot) {
@@ -987,8 +996,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String sha1Checksum;
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. You must provide either this
-     * property or the sourceDisk property but not both.
+     * The full Google Cloud Storage URL where the disk image is stored.
+     *
+     * In order to create an image, you must provide the full or partial URL of one of the following:
+     * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+     * URL
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1035,8 +1047,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. You must provide either this
-     * property or the sourceDisk property but not both.
+     * The full Google Cloud Storage URL where the disk image is stored.
+     *
+     * In order to create an image, you must provide the full or partial URL of one of the following:
+     * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+     * URL
      * @return value or {@code null} for none
      */
     public java.lang.String getSource() {
@@ -1044,8 +1059,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. You must provide either this
-     * property or the sourceDisk property but not both.
+     * The full Google Cloud Storage URL where the disk image is stored.
+     *
+     * In order to create an image, you must provide the full or partial URL of one of the following:
+     * - The rawDisk.source URL   - The sourceDisk URL   - The sourceImage URL   - The sourceSnapshot
+     * URL
      * @param source source or {@code null} for none
      */
     public RawDisk setSource(java.lang.String source) {

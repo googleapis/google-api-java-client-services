@@ -17,7 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for BulkInsertInstanceResource.
+ * A transient resource used in compute.instances.bulkInsert and compute.regionInstances.bulkInsert
+ * and compute.regionInstances.recommendLocations. This resource is not persisted anywhere, it is
+ * used only for processing the requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

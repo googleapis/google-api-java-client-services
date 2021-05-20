@@ -208,7 +208,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to SslCertificate resources that are used to authenticate connections between users and
    * the load balancer. At least one SSL certificate must be specified. Currently, you may specify
-   * up to 15 SSL certificates.
+   * up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set
+   * to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -644,7 +645,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to SslCertificate resources that are used to authenticate connections between users and
    * the load balancer. At least one SSL certificate must be specified. Currently, you may specify
-   * up to 15 SSL certificates.
+   * up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set
+   * to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSslCertificates() {
@@ -654,7 +656,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to SslCertificate resources that are used to authenticate connections between users and
    * the load balancer. At least one SSL certificate must be specified. Currently, you may specify
-   * up to 15 SSL certificates.
+   * up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set
+   * to INTERNAL_SELF_MANAGED.
    * @param sslCertificates sslCertificates or {@code null} for none
    */
   public TargetHttpsProxy setSslCertificates(java.util.List<java.lang.String> sslCertificates) {

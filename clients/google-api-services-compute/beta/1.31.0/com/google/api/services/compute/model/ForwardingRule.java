@@ -73,28 +73,28 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies.
    *
-   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP and ICMP.
+   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT.
    *
    * The valid IP protocols are different for different load balancing products:   - Internal
-   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or ALL is
-   * valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is
-   * valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and
-   * only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing
-   * scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The load balancing scheme
-   * is EXTERNAL, and one of TCP or UDP is valid.
+   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or
+   * L3_DEFAULT is valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED,
+   * and only TCP is valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is
+   * INTERNAL_MANAGED, and only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing:
+   * The load balancing scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The
+   * load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPProtocol")
   private java.lang.String iPProtocol;
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. This field cannot be used with port or portRange
-   * fields.
+   * This field is used along with the backend_service field for Internal TCP/UDP Load Balancing or
+   * Network Load Balancing, or with the target field for internal and external TargetInstance.
    *
-   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
-   * packets addressed to any ports will be forwarded to the backends configured with this
-   * forwarding rule.
+   * You can only use one of ports and port_range, or allPorts. The three are mutually exclusive.
+   *
+   * For TCP, UDP and SCTP traffic, packets addressed to any ports will be forwarded to the target
+   * or backendService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,13 +272,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String networkTier;
 
   /**
-   * This field can be used only if: * Load balancing scheme is one of EXTERNAL,
-   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED, and * IPProtocol is one of TCP, UDP, or SCTP.
+   * This field can be used only if: - Load balancing scheme is one of EXTERNAL,
+   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED  - IPProtocol is one of TCP, UDP, or SCTP.
    *
    * Packets addressed to ports in the specified range will be forwarded to target or
-   * backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually
-   * exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port
-   * ranges.
+   * backend_service.
+   *
+   * You can only use one of ports, port_range, or allPorts. The three are mutually exclusive.
+   *
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
    * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: no constraints  - TargetTcpProxy: 25, 43,
@@ -299,7 +301,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * You can specify a list of up to five ports, which can be non-contiguous.
    *
-   * For Internal TCP/UDP Load Balancing, if you specify allPorts, you should not specify ports.
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-
    * concepts#port_specifications).
@@ -314,6 +316,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger pscConnectionId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscConnectionStatus;
 
   /**
    * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
@@ -442,15 +450,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies.
    *
-   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP and ICMP.
+   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT.
    *
    * The valid IP protocols are different for different load balancing products:   - Internal
-   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or ALL is
-   * valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is
-   * valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and
-   * only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing
-   * scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The load balancing scheme
-   * is EXTERNAL, and one of TCP or UDP is valid.
+   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or
+   * L3_DEFAULT is valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED,
+   * and only TCP is valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is
+   * INTERNAL_MANAGED, and only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing:
+   * The load balancing scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The
+   * load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid.
    * @return value or {@code null} for none
    */
   public java.lang.String getIPProtocol() {
@@ -460,15 +468,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies.
    *
-   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP and ICMP.
+   * For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT.
    *
    * The valid IP protocols are different for different load balancing products:   - Internal
-   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or ALL is
-   * valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is
-   * valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and
-   * only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing
-   * scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The load balancing scheme
-   * is EXTERNAL, and one of TCP or UDP is valid.
+   * TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or
+   * L3_DEFAULT is valid.  - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED,
+   * and only TCP is valid.   - Internal HTTP(S) Load Balancing: The load balancing scheme is
+   * INTERNAL_MANAGED, and only TCP is valid.  - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing:
+   * The load balancing scheme is EXTERNAL and only TCP is valid.  - Network Load Balancing: The
+   * load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid.
    * @param iPProtocol iPProtocol or {@code null} for none
    */
   public ForwardingRule setIPProtocol(java.lang.String iPProtocol) {
@@ -477,13 +485,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. This field cannot be used with port or portRange
-   * fields.
+   * This field is used along with the backend_service field for Internal TCP/UDP Load Balancing or
+   * Network Load Balancing, or with the target field for internal and external TargetInstance.
    *
-   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
-   * packets addressed to any ports will be forwarded to the backends configured with this
-   * forwarding rule.
+   * You can only use one of ports and port_range, or allPorts. The three are mutually exclusive.
+   *
+   * For TCP, UDP and SCTP traffic, packets addressed to any ports will be forwarded to the target
+   * or backendService.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllPorts() {
@@ -491,13 +499,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. This field cannot be used with port or portRange
-   * fields.
+   * This field is used along with the backend_service field for Internal TCP/UDP Load Balancing or
+   * Network Load Balancing, or with the target field for internal and external TargetInstance.
    *
-   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
-   * packets addressed to any ports will be forwarded to the backends configured with this
-   * forwarding rule.
+   * You can only use one of ports and port_range, or allPorts. The three are mutually exclusive.
+   *
+   * For TCP, UDP and SCTP traffic, packets addressed to any ports will be forwarded to the target
+   * or backendService.
    * @param allPorts allPorts or {@code null} for none
    */
   public ForwardingRule setAllPorts(java.lang.Boolean allPorts) {
@@ -974,13 +982,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can be used only if: * Load balancing scheme is one of EXTERNAL,
-   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED, and * IPProtocol is one of TCP, UDP, or SCTP.
+   * This field can be used only if: - Load balancing scheme is one of EXTERNAL,
+   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED  - IPProtocol is one of TCP, UDP, or SCTP.
    *
    * Packets addressed to ports in the specified range will be forwarded to target or
-   * backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually
-   * exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port
-   * ranges.
+   * backend_service.
+   *
+   * You can only use one of ports, port_range, or allPorts. The three are mutually exclusive.
+   *
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
    * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: no constraints  - TargetTcpProxy: 25, 43,
@@ -993,13 +1003,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field can be used only if: * Load balancing scheme is one of EXTERNAL,
-   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED, and * IPProtocol is one of TCP, UDP, or SCTP.
+   * This field can be used only if: - Load balancing scheme is one of EXTERNAL,
+   * INTERNAL_SELF_MANAGED or INTERNAL_MANAGED  - IPProtocol is one of TCP, UDP, or SCTP.
    *
    * Packets addressed to ports in the specified range will be forwarded to target or
-   * backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually
-   * exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint port
-   * ranges.
+   * backend_service.
+   *
+   * You can only use one of ports, port_range, or allPorts. The three are mutually exclusive.
+   *
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
    * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: no constraints  - TargetTcpProxy: 25, 43,
@@ -1022,7 +1034,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * You can specify a list of up to five ports, which can be non-contiguous.
    *
-   * For Internal TCP/UDP Load Balancing, if you specify allPorts, you should not specify ports.
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-
    * concepts#port_specifications).
@@ -1042,7 +1054,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * You can specify a list of up to five ports, which can be non-contiguous.
    *
-   * For Internal TCP/UDP Load Balancing, if you specify allPorts, you should not specify ports.
+   * Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports.
    *
    * For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-
    * concepts#port_specifications).
@@ -1067,6 +1079,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscConnectionStatus() {
+    return pscConnectionStatus;
+  }
+
+  /**
+   * @param pscConnectionStatus pscConnectionStatus or {@code null} for none
+   */
+  public ForwardingRule setPscConnectionStatus(java.lang.String pscConnectionStatus) {
+    this.pscConnectionStatus = pscConnectionStatus;
     return this;
   }
 

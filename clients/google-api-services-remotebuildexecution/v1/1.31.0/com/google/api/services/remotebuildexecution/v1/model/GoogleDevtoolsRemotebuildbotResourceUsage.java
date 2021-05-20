@@ -49,6 +49,12 @@ public final class GoogleDevtoolsRemotebuildbotResourceUsage extends com.google.
   private GoogleDevtoolsRemotebuildbotResourceUsageStat memoryUsage;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildbotResourceUsageIOStats totalDiskIoStats;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Double getCpuUsedPercent() {
@@ -90,6 +96,21 @@ public final class GoogleDevtoolsRemotebuildbotResourceUsage extends com.google.
    */
   public GoogleDevtoolsRemotebuildbotResourceUsage setMemoryUsage(GoogleDevtoolsRemotebuildbotResourceUsageStat memoryUsage) {
     this.memoryUsage = memoryUsage;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotResourceUsageIOStats getTotalDiskIoStats() {
+    return totalDiskIoStats;
+  }
+
+  /**
+   * @param totalDiskIoStats totalDiskIoStats or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotResourceUsage setTotalDiskIoStats(GoogleDevtoolsRemotebuildbotResourceUsageIOStats totalDiskIoStats) {
+    this.totalDiskIoStats = totalDiskIoStats;
     return this;
   }
 

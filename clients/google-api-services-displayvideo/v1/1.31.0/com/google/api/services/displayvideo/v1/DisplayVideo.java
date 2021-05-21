@@ -7743,6 +7743,390 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * An accessor for creating requests from the Invoices collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.Invoices.List request = displayvideo.invoices().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Invoices invoices() {
+      return new Invoices();
+    }
+
+    /**
+     * The "invoices" collection of methods.
+     */
+    public class Invoices {
+
+      /**
+       * List invoices for an advertiser.
+       *
+       * Create a request for the method "invoices.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to list invoices for.
+       * @return the request
+       */
+      public List list(java.lang.Long advertiserId) throws java.io.IOException {
+        List result = new List(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListInvoicesResponse> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/invoices";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * List invoices for an advertiser.
+         *
+         * Create a request for the method "invoices.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to list invoices for.
+         * @since 1.13
+         */
+        protected List(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListInvoicesResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to list invoices for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to list invoices for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to list invoices for. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. Month for which invoices are needed in the format YYYYMM. */
+        @com.google.api.client.util.Key
+        private java.lang.String issueMonth;
+
+        /** Required. Month for which invoices are needed in the format YYYYMM.
+         */
+        public java.lang.String getIssueMonth() {
+          return issueMonth;
+        }
+
+        /** Required. Month for which invoices are needed in the format YYYYMM. */
+        public List setIssueMonth(java.lang.String issueMonth) {
+          this.issueMonth = issueMonth;
+          return this;
+        }
+
+        /** Select type of invoice to query for Loi Sapin advertisers. Otherwise its ignored. */
+        @com.google.api.client.util.Key
+        private java.lang.String loiSapinInvoiceType;
+
+        /** Select type of invoice to query for Loi Sapin advertisers. Otherwise its ignored.
+         */
+        public java.lang.String getLoiSapinInvoiceType() {
+          return loiSapinInvoiceType;
+        }
+
+        /** Select type of invoice to query for Loi Sapin advertisers. Otherwise its ignored. */
+        public List setLoiSapinInvoiceType(java.lang.String loiSapinInvoiceType) {
+          this.loiSapinInvoiceType = loiSapinInvoiceType;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+       error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of [ListInvoicesResponse.next_page_token] returned from the previous call to
+         * `ListInvoice` method. If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       [ListInvoicesResponse.next_page_token] returned from the previous call to `ListInvoice` method. If
+       not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of [ListInvoicesResponse.next_page_token] returned from the previous call to
+         * `ListInvoice` method. If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lookup invoice currency for an advertiser.
+       *
+       * Create a request for the method "invoices.lookupInvoiceCurrency".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link LookupInvoiceCurrency#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to lookup currency for.
+       * @return the request
+       */
+      public LookupInvoiceCurrency lookupInvoiceCurrency(java.lang.Long advertiserId) throws java.io.IOException {
+        LookupInvoiceCurrency result = new LookupInvoiceCurrency(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class LookupInvoiceCurrency extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.LookupInvoiceCurrencyResponse> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/invoices:lookupInvoiceCurrency";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lookup invoice currency for an advertiser.
+         *
+         * Create a request for the method "invoices.lookupInvoiceCurrency".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link LookupInvoiceCurrency#execute()} method to invoke the
+         * remote operation. <p> {@link LookupInvoiceCurrency#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to lookup currency for.
+         * @since 1.13
+         */
+        protected LookupInvoiceCurrency(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.LookupInvoiceCurrencyResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public LookupInvoiceCurrency set$Xgafv(java.lang.String $Xgafv) {
+          return (LookupInvoiceCurrency) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setAccessToken(java.lang.String accessToken) {
+          return (LookupInvoiceCurrency) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setAlt(java.lang.String alt) {
+          return (LookupInvoiceCurrency) super.setAlt(alt);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setCallback(java.lang.String callback) {
+          return (LookupInvoiceCurrency) super.setCallback(callback);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setFields(java.lang.String fields) {
+          return (LookupInvoiceCurrency) super.setFields(fields);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setKey(java.lang.String key) {
+          return (LookupInvoiceCurrency) super.setKey(key);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setOauthToken(java.lang.String oauthToken) {
+          return (LookupInvoiceCurrency) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (LookupInvoiceCurrency) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setQuotaUser(java.lang.String quotaUser) {
+          return (LookupInvoiceCurrency) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setUploadType(java.lang.String uploadType) {
+          return (LookupInvoiceCurrency) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public LookupInvoiceCurrency setUploadProtocol(java.lang.String uploadProtocol) {
+          return (LookupInvoiceCurrency) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to lookup currency for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to lookup currency for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to lookup currency for. */
+        public LookupInvoiceCurrency setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Month for which currency is needed in the format YYYYMM. If not set Api would return
+         * currency based on current settings.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String invoiceMonth;
+
+        /** Month for which currency is needed in the format YYYYMM. If not set Api would return currency based
+       on current settings.
+         */
+        public java.lang.String getInvoiceMonth() {
+          return invoiceMonth;
+        }
+
+        /**
+         * Month for which currency is needed in the format YYYYMM. If not set Api would return
+         * currency based on current settings.
+         */
+        public LookupInvoiceCurrency setInvoiceMonth(java.lang.String invoiceMonth) {
+          this.invoiceMonth = invoiceMonth;
+          return this;
+        }
+
+        @Override
+        public LookupInvoiceCurrency set(String parameterName, Object value) {
+          return (LookupInvoiceCurrency) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the LineItems collection.
      *
      * <p>The typical use is:</p>

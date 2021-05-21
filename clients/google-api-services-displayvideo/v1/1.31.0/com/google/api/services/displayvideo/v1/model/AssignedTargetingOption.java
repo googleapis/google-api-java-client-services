@@ -254,6 +254,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
+   * Native content position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_NATIVE_CONTENT_POSITION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NativeContentPositionAssignedTargetingOptionDetails nativeContentPositionDetails;
+
+  /**
    * Keyword details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
    * to a resource.
@@ -889,6 +897,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Native content position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_NATIVE_CONTENT_POSITION`.
+   * @return value or {@code null} for none
+   */
+  public NativeContentPositionAssignedTargetingOptionDetails getNativeContentPositionDetails() {
+    return nativeContentPositionDetails;
+  }
+
+  /**
+   * Native content position details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_NATIVE_CONTENT_POSITION`.
+   * @param nativeContentPositionDetails nativeContentPositionDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setNativeContentPositionDetails(NativeContentPositionAssignedTargetingOptionDetails nativeContentPositionDetails) {
+    this.nativeContentPositionDetails = nativeContentPositionDetails;
     return this;
   }
 

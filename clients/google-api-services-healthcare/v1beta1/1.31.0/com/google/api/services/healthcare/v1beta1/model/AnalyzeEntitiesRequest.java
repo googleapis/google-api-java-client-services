@@ -37,6 +37,14 @@ public final class AnalyzeEntitiesRequest extends com.google.api.client.json.Gen
   private java.lang.String documentContent;
 
   /**
+   * A list of licensed vocabularies to use in the request, in addition to the default unlicensed
+   * vocabularies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licensedVocabularies;
+
+  /**
    * document_content is a document to be annotated.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class AnalyzeEntitiesRequest extends com.google.api.client.json.Gen
    */
   public AnalyzeEntitiesRequest setDocumentContent(java.lang.String documentContent) {
     this.documentContent = documentContent;
+    return this;
+  }
+
+  /**
+   * A list of licensed vocabularies to use in the request, in addition to the default unlicensed
+   * vocabularies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicensedVocabularies() {
+    return licensedVocabularies;
+  }
+
+  /**
+   * A list of licensed vocabularies to use in the request, in addition to the default unlicensed
+   * vocabularies.
+   * @param licensedVocabularies licensedVocabularies or {@code null} for none
+   */
+  public AnalyzeEntitiesRequest setLicensedVocabularies(java.util.List<java.lang.String> licensedVocabularies) {
+    this.licensedVocabularies = licensedVocabularies;
     return this;
   }
 

@@ -35,7 +35,9 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
 
   /**
    * The Cloud Storage destination. The Cloud Healthcare API service account must have the
-   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location.
+   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location. The object name is
+   * in the following format: query-accessible-data-result-{operation_id}.txt where each line
+   * contains a single data_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +60,9 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
 
   /**
    * The Cloud Storage destination. The Cloud Healthcare API service account must have the
-   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location.
+   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location. The object name is
+   * in the following format: query-accessible-data-result-{operation_id}.txt where each line
+   * contains a single data_id.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1ConsentGcsDestination getGcsDestination() {
@@ -67,7 +71,9 @@ public final class QueryAccessibleDataRequest extends com.google.api.client.json
 
   /**
    * The Cloud Storage destination. The Cloud Healthcare API service account must have the
-   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location.
+   * `roles/storage.objectAdmin` Cloud IAM role for this Cloud Storage location. The object name is
+   * in the following format: query-accessible-data-result-{operation_id}.txt where each line
+   * contains a single data_id.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public QueryAccessibleDataRequest setGcsDestination(GoogleCloudHealthcareV1beta1ConsentGcsDestination gcsDestination) {

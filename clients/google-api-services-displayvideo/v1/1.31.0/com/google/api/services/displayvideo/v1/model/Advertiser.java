@@ -108,6 +108,16 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.Long partnerId;
 
   /**
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
+   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
+   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
+   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean prismaEnabled;
+
+  /**
    * Targeting settings related to ad serving of the advertiser.
    * The value may be {@code null}.
    */
@@ -302,6 +312,29 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setPartnerId(java.lang.Long partnerId) {
     this.partnerId = partnerId;
+    return this;
+  }
+
+  /**
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
+   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
+   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
+   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrismaEnabled() {
+    return prismaEnabled;
+  }
+
+  /**
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
+   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
+   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
+   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * @param prismaEnabled prismaEnabled or {@code null} for none
+   */
+  public Advertiser setPrismaEnabled(java.lang.Boolean prismaEnabled) {
+    this.prismaEnabled = prismaEnabled;
     return this;
   }
 

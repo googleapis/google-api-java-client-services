@@ -157,6 +157,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Native content position details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NativeContentPositionTargetingOptionDetails nativeContentPositionDetails;
+
+  /**
    * On screen position details.
    * The value may be {@code null}.
    */
@@ -530,6 +537,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Native content position details.
+   * @return value or {@code null} for none
+   */
+  public NativeContentPositionTargetingOptionDetails getNativeContentPositionDetails() {
+    return nativeContentPositionDetails;
+  }
+
+  /**
+   * Native content position details.
+   * @param nativeContentPositionDetails nativeContentPositionDetails or {@code null} for none
+   */
+  public TargetingOption setNativeContentPositionDetails(NativeContentPositionTargetingOptionDetails nativeContentPositionDetails) {
+    this.nativeContentPositionDetails = nativeContentPositionDetails;
     return this;
   }
 

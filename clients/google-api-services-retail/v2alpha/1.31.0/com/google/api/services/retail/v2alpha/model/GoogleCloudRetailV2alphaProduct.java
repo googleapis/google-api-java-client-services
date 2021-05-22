@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
    * 128 characters.
    * The value may be {@code null}.
@@ -186,7 +186,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String title;
 
   /**
-   * Immutable. The type of the product. This field is output-only. Default to
+   * Immutable. The type of the product. Default to
    * Catalog.product_level_config.ingestion_product_type if unset.
    * The value may be {@code null}.
    */
@@ -214,7 +214,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
    * 128 characters.
    * @return value or {@code null} for none
@@ -232,7 +232,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 150 by
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
    * 128 characters.
    * @param attributes attributes or {@code null} for none
@@ -533,7 +533,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Immutable. The type of the product. This field is output-only. Default to
+   * Immutable. The type of the product. Default to
    * Catalog.product_level_config.ingestion_product_type if unset.
    * @return value or {@code null} for none
    */
@@ -542,7 +542,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Immutable. The type of the product. This field is output-only. Default to
+   * Immutable. The type of the product. Default to
    * Catalog.product_level_config.ingestion_product_type if unset.
    * @param type type or {@code null} for none
    */

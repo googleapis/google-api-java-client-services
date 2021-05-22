@@ -53,7 +53,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
    * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
    * into the volume as a file whose name is the key and content is the value. If specified, the
    * listed keys will be projected into the specified paths, and unlisted keys will not be present.
-   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * If a key is specified that is not present in the Secret, the volume setup will error unless it
    * is marked optional.
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
    * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
    * into the volume as a file whose name is the key and content is the value. If specified, the
    * listed keys will be projected into the specified paths, and unlisted keys will not be present.
-   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * If a key is specified that is not present in the Secret, the volume setup will error unless it
    * is marked optional.
    * @return value or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
    * unspecified, each key-value pair in the Data field of the referenced Secret will be projected
    * into the volume as a file whose name is the key and content is the value. If specified, the
    * listed keys will be projected into the specified paths, and unlisted keys will not be present.
-   * If a key is specified which is not present in the Secret, the volume setup will error unless it
+   * If a key is specified that is not present in the Secret, the volume setup will error unless it
    * is marked optional.
    * @param items items or {@code null} for none
    */

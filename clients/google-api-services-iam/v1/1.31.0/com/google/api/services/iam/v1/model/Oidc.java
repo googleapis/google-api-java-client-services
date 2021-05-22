@@ -44,7 +44,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedAudiences;
 
   /**
-   * Required. The OIDC issuer URL.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuerUri() {
@@ -88,7 +88,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint.
    * @param issuerUri issuerUri or {@code null} for none
    */
   public Oidc setIssuerUri(java.lang.String issuerUri) {

@@ -5286,6 +5286,222 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Request a specific scan with Database-specific data for Cloud Key Visualizer.
+         *
+         * Create a request for the method "databases.getScans".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link GetScans#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The unique name of the scan containing the requested information, specific to the Database
+         *        service implementing this interface.
+         * @return the request
+         */
+        public GetScans getScans(java.lang.String name) throws java.io.IOException {
+          GetScans result = new GetScans(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetScans extends SpannerRequest<com.google.api.services.spanner.v1.model.Scan> {
+
+          private static final String REST_PATH = "v1/{+name}/scans";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+          /**
+           * Request a specific scan with Database-specific data for Cloud Key Visualizer.
+           *
+           * Create a request for the method "databases.getScans".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link GetScans#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetScans#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The unique name of the scan containing the requested information, specific to the Database
+         *        service implementing this interface.
+           * @since 1.13
+           */
+          protected GetScans(java.lang.String name) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.Scan.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetScans set$Xgafv(java.lang.String $Xgafv) {
+            return (GetScans) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetScans setAccessToken(java.lang.String accessToken) {
+            return (GetScans) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetScans setAlt(java.lang.String alt) {
+            return (GetScans) super.setAlt(alt);
+          }
+
+          @Override
+          public GetScans setCallback(java.lang.String callback) {
+            return (GetScans) super.setCallback(callback);
+          }
+
+          @Override
+          public GetScans setFields(java.lang.String fields) {
+            return (GetScans) super.setFields(fields);
+          }
+
+          @Override
+          public GetScans setKey(java.lang.String key) {
+            return (GetScans) super.setKey(key);
+          }
+
+          @Override
+          public GetScans setOauthToken(java.lang.String oauthToken) {
+            return (GetScans) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetScans setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetScans) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetScans setQuotaUser(java.lang.String quotaUser) {
+            return (GetScans) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetScans setUploadType(java.lang.String uploadType) {
+            return (GetScans) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetScans setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetScans) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The unique name of the scan containing the requested information, specific to
+           * the Database service implementing this interface.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The unique name of the scan containing the requested information, specific to the
+         Database service implementing this interface.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The unique name of the scan containing the requested information, specific to
+           * the Database service implementing this interface.
+           */
+          public GetScans setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The upper bound for the time range to retrieve Scan data for. */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** The upper bound for the time range to retrieve Scan data for.
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /** The upper bound for the time range to retrieve Scan data for. */
+          public GetScans setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
+          /**
+           * These fields restrict the Database-specific information returned in the `Scan.data`
+           * field. If a `View` is provided that does not include the `Scan.data` field, these are
+           * ignored. This range of time must be entirely contained within the defined time range of
+           * the targeted scan. The lower bound for the time range to retrieve Scan data for.
+           */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** These fields restrict the Database-specific information returned in the `Scan.data` field. If a
+         `View` is provided that does not include the `Scan.data` field, these are ignored. This range of
+         time must be entirely contained within the defined time range of the targeted scan. The lower bound
+         for the time range to retrieve Scan data for.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /**
+           * These fields restrict the Database-specific information returned in the `Scan.data`
+           * field. If a `View` is provided that does not include the `Scan.data` field, these are
+           * ignored. This range of time must be entirely contained within the defined time range of
+           * the targeted scan. The lower bound for the time range to retrieve Scan data for.
+           */
+          public GetScans setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+          }
+
+          /**
+           * Specifies which parts of the Scan should be returned in the response. Note, if left
+           * unspecified, the FULL view is assumed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Specifies which parts of the Scan should be returned in the response. Note, if left unspecified,
+         the FULL view is assumed.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Specifies which parts of the Scan should be returned in the response. Note, if left
+           * unspecified, the FULL view is assumed.
+           */
+          public GetScans setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
+          @Override
+          public GetScans set(String parameterName, Object value) {
+            return (GetScans) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists Cloud Spanner databases.
          *
          * Create a request for the method "databases.list".
@@ -9533,6 +9749,256 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
       }
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Scans collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Spanner spanner = new Spanner(...);}
+   *   {@code Spanner.Scans.List request = spanner.scans().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Scans scans() {
+    return new Scans();
+  }
+
+  /**
+   * The "scans" collection of methods.
+   */
+  public class Scans {
+
+    /**
+     * Return available scans given a Database-specific resource name.
+     *
+     * Create a request for the method "scans.list".
+     *
+     * This request holds the parameters needed by the spanner server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The unique name of the parent resource, specific to the Database service implementing this
+     *        interface.
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListScansResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^scans$");
+
+      /**
+       * Return available scans given a Database-specific resource name.
+       *
+       * Create a request for the method "scans.list".
+       *
+       * This request holds the parameters needed by the the spanner server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The unique name of the parent resource, specific to the Database service implementing this
+     *        interface.
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListScansResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^scans$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The unique name of the parent resource, specific to the Database service
+       * implementing this interface.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The unique name of the parent resource, specific to the Database service implementing
+     this interface.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The unique name of the parent resource, specific to the Database service
+       * implementing this interface.
+       */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^scans$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * A filter expression to restrict the results based on information present in the available
+       * Scan collection. The filter applies to all fields within the Scan message except for
+       * `data`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression to restrict the results based on information present in the available Scan
+     collection. The filter applies to all fields within the Scan message except for `data`.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression to restrict the results based on information present in the available
+       * Scan collection. The filter applies to all fields within the Scan message except for
+       * `data`.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The maximum number of items to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of items to return.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The maximum number of items to return. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The next_page_token value returned from a previous List request, if any. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The next_page_token value returned from a previous List request, if any.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The next_page_token value returned from a previous List request, if any. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Specifies which parts of the Scan should be returned in the response. Note, only the
+       * SUMMARY view (the default) is currently supported for ListScans.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Specifies which parts of the Scan should be returned in the response. Note, only the SUMMARY view
+     (the default) is currently supported for ListScans.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Specifies which parts of the Scan should be returned in the response. Note, only the
+       * SUMMARY view (the default) is currently supported for ListScans.
+       */
+      public List setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

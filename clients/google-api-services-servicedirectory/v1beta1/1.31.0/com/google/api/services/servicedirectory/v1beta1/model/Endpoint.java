@@ -40,6 +40,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String address;
 
   /**
+   * Output only. The timestamp when the endpoint was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. Metadata for the endpoint. This data can be consumed by service clients.
    * Restrictions: * The entire metadata dictionary may contain up to 512 characters, spread accoss
    * all key-value pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys
@@ -84,6 +91,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
+   * Output only. The timestamp when the endpoint was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` *
    * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
    * @return value or {@code null} for none
@@ -99,6 +113,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setAddress(java.lang.String address) {
     this.address = address;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the endpoint was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp when the endpoint was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Endpoint setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -199,6 +230,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the endpoint was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp when the endpoint was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Endpoint setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

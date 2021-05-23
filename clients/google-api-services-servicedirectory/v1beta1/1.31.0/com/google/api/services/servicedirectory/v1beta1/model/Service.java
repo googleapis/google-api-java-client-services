@@ -32,6 +32,13 @@ package com.google.api.services.servicedirectory.v1beta1.model;
 public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp when the service was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. Endpoints associated with this service. Returned on LookupService.ResolveService.
    * Control plane clients should use RegistrationService.ListEndpoints.
    * The value may be {@code null}.
@@ -71,6 +78,32 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The timestamp when the service was last updated. Note: endpoints being
+   * created/deleted/updated within the service are not considered service updates for the purpose
+   * of this timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. The timestamp when the service was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp when the service was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Service setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Output only. Endpoints associated with this service. Returned on LookupService.ResolveService.
@@ -148,6 +181,27 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the service was last updated. Note: endpoints being
+   * created/deleted/updated within the service are not considered service updates for the purpose
+   * of this timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp when the service was last updated. Note: endpoints being
+   * created/deleted/updated within the service are not considered service updates for the purpose
+   * of this timestamp.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Service setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

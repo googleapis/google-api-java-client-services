@@ -32,6 +32,13 @@ package com.google.api.services.servicedirectory.v1beta1.model;
 public final class Namespace extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp when the namespace was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
    * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * The value may be {@code null}.
@@ -45,6 +52,30 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The timestamp when the namespace was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. The timestamp when the namespace was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp when the namespace was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Namespace setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
@@ -79,6 +110,23 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
    */
   public Namespace setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the namespace was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp when the namespace was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Namespace setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

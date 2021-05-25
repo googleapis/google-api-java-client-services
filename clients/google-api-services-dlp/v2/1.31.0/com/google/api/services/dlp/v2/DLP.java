@@ -5489,6 +5489,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+          public List setType(java.lang.String type) {
+            this.type = type;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -11964,6 +11980,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
+        /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+        @com.google.api.client.util.Key
+        private java.lang.String type;
+
+        /** The type of jobs. Will use `DlpJobType.INSPECT` if not set.
+         */
+        public java.lang.String getType() {
+          return type;
+        }
+
+        /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+        public List setType(java.lang.String type) {
+          this.type = type;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -17003,6 +17035,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /** The type of jobs. Will use `DlpJobType.INSPECT` if not set. */
+          public List setType(java.lang.String type) {
+            this.type = type;
             return this;
           }
 

@@ -38,7 +38,8 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   private java.lang.String unit;
 
   /**
-   * Required. The weight represented as a number.
+   * Required. The weight represented as a number. The weight can have a maximum precision of four
+   * decimal places.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The weight represented as a number.
+   * Required. The weight represented as a number. The weight can have a maximum precision of four
+   * decimal places.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +72,8 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The weight represented as a number.
+   * Required. The weight represented as a number. The weight can have a maximum precision of four
+   * decimal places.
    * @param value value or {@code null} for none
    */
   public Weight setValue(java.lang.String value) {

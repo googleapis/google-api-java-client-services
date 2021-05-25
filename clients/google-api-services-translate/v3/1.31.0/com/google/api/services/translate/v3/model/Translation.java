@@ -57,7 +57,8 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   private java.lang.String model;
 
   /**
-   * Text translated into the target language.
+   * Text translated into the target language. If an error occurs during translation, this field
+   * might be excluded from the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Text translated into the target language.
+   * Text translated into the target language. If an error occurs during translation, this field
+   * might be excluded from the response.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranslatedText() {
@@ -133,7 +135,8 @@ public final class Translation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Text translated into the target language.
+   * Text translated into the target language. If an error occurs during translation, this field
+   * might be excluded from the response.
    * @param translatedText translatedText or {@code null} for none
    */
   public Translation setTranslatedText(java.lang.String translatedText) {

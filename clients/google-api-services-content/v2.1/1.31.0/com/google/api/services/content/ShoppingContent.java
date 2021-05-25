@@ -16770,28 +16770,30 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The list of product attributes to be updated. Attributes specified in the update mask
-       * without a value specified in the body will be deleted from the product. Only top-level
-       * product attributes can be updated. If not defined, product attributes with set values will
-       * be updated and other attributes will stay unchanged.
+       * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
+       * Attributes specified in the update mask without a value specified in the body will be
+       * deleted from the product. Only top-level product attributes can be updated. If not defined,
+       * product attributes with set values will be updated and other attributes will stay
+       * unchanged.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of product attributes to be updated. Attributes specified in the update mask without a
-     value specified in the body will be deleted from the product. Only top-level product attributes can
-     be updated. If not defined, product attributes with set values will be updated and other attributes
-     will stay unchanged.
+      /** The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
+     Attributes specified in the update mask without a value specified in the body will be deleted from
+     the product. Only top-level product attributes can be updated. If not defined, product attributes
+     with set values will be updated and other attributes will stay unchanged.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The list of product attributes to be updated. Attributes specified in the update mask
-       * without a value specified in the body will be deleted from the product. Only top-level
-       * product attributes can be updated. If not defined, product attributes with set values will
-       * be updated and other attributes will stay unchanged.
+       * The comma-separated list of product attributes to be updated. Example: `"title,salePrice"`.
+       * Attributes specified in the update mask without a value specified in the body will be
+       * deleted from the product. Only top-level product attributes can be updated. If not defined,
+       * product attributes with set values will be updated and other attributes will stay
+       * unchanged.
        */
       public Update setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -18855,17 +18857,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Optional. The field mask indicating the fields to update. */
+      /**
+       * Optional. The comma-separated field mask indicating the fields to update. Example:
+       * `"displayName,postalCodeArea.regionCode"`.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. The field mask indicating the fields to update.
+      /** Optional. The comma-separated field mask indicating the fields to update. Example:
+     `"displayName,postalCodeArea.regionCode"`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. The field mask indicating the fields to update. */
+      /**
+       * Optional. The comma-separated field mask indicating the fields to update. Example:
+       * `"displayName,postalCodeArea.regionCode"`.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;

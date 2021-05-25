@@ -3580,7 +3580,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name The name of the tag, for example: "projects/p1/locations/us-
-             *        central1/repositories/repo1/packages/pkg1/tags/tag1".
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts
+             *        contain slashes, the slashes are escaped.
              * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Tag}
              * @return the request
              */
@@ -3609,7 +3610,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name The name of the tag, for example: "projects/p1/locations/us-
-             *        central1/repositories/repo1/packages/pkg1/tags/tag1".
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts
+             *        contain slashes, the slashes are escaped.
                * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Tag}
                * @since 1.13
                */
@@ -3680,13 +3682,15 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * The name of the tag, for example: "projects/p1/locations/us-
-               * central1/repositories/repo1/packages/pkg1/tags/tag1".
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID
+               * parts contain slashes, the slashes are escaped.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** The name of the tag, for example: "projects/p1/locations/us-
-             central1/repositories/repo1/packages/pkg1/tags/tag1".
+             central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts contain
+             slashes, the slashes are escaped.
                */
               public java.lang.String getName() {
                 return name;
@@ -3694,7 +3698,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * The name of the tag, for example: "projects/p1/locations/us-
-               * central1/repositories/repo1/packages/pkg1/tags/tag1".
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID
+               * parts contain slashes, the slashes are escaped.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

@@ -36,8 +36,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
    * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
-   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +98,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
    * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
-   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
    * @return value or {@code null} for none
    */
   public String getBuildTime() {
@@ -111,8 +109,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
    * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string. (ht
-   * tp://google3/cloud/containers/artifacts/metadata/v1beta2/builder/data.go?l=158-159=364878183).
+   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
    * @param buildTime buildTime or {@code null} for none
    */
   public DockerImage setBuildTime(String buildTime) {

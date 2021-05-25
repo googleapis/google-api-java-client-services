@@ -52,7 +52,7 @@ public final class GoogleCloudDocumentaiV1beta3SchemaEntityType extends com.goog
   private java.lang.String description;
 
   /**
-   * For some entity types there are only a few possible values. They can be specified here.
+   * If specified, lists all the possible values for this entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class GoogleCloudDocumentaiV1beta3SchemaEntityType extends com.goog
   }
 
   /**
-   * For some entity types there are only a few possible values. They can be specified here.
+   * If specified, lists all the possible values for this entity.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnumValues() {
@@ -142,7 +142,7 @@ public final class GoogleCloudDocumentaiV1beta3SchemaEntityType extends com.goog
   }
 
   /**
-   * For some entity types there are only a few possible values. They can be specified here.
+   * If specified, lists all the possible values for this entity.
    * @param enumValues enumValues or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3SchemaEntityType setEnumValues(java.util.List<java.lang.String> enumValues) {

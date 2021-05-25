@@ -32,7 +32,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the tag, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/tags/tag1".
+   * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts contain
+   * slashes, the slashes are escaped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the tag, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/tags/tag1".
+   * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts contain
+   * slashes, the slashes are escaped.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -57,7 +59,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the tag, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/tags/tag1".
+   * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts contain
+   * slashes, the slashes are escaped.
    * @param name name or {@code null} for none
    */
   public Tag setName(java.lang.String name) {

@@ -46,7 +46,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a/b/c.txt".
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * are escaped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a/b/c.txt".
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * are escaped.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -118,7 +120,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a/b/c.txt".
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * are escaped.
    * @param name name or {@code null} for none
    */
   public File setName(java.lang.String name) {

@@ -61,6 +61,13 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   private java.lang.Boolean logDeniesEnabled;
 
   /**
+   * Enable users to try out mutation for PolicyController.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mutationEnabled;
+
+  /**
    * Enables the ability to use Constraint Templates that reference to objects other than the object
    * currently being evaluated.
    * The value may be {@code null}.
@@ -146,6 +153,23 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
    */
   public ConfigManagementPolicyController setLogDeniesEnabled(java.lang.Boolean logDeniesEnabled) {
     this.logDeniesEnabled = logDeniesEnabled;
+    return this;
+  }
+
+  /**
+   * Enable users to try out mutation for PolicyController.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMutationEnabled() {
+    return mutationEnabled;
+  }
+
+  /**
+   * Enable users to try out mutation for PolicyController.
+   * @param mutationEnabled mutationEnabled or {@code null} for none
+   */
+  public ConfigManagementPolicyController setMutationEnabled(java.lang.Boolean mutationEnabled) {
+    this.mutationEnabled = mutationEnabled;
     return this;
   }
 

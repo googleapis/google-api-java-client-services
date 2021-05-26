@@ -353,8 +353,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified insight type.
+           * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+           * for the specified insight type.
            *
            * Create a request for the method "insights.list".
            *
@@ -385,8 +385,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
 
             /**
-             * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-             * specified insight type.
+             * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+             * for the specified insight type.
              *
              * Create a request for the method "insights.list".
              *
@@ -938,8 +938,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified recommender.
+           * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+           * permission for the specified recommender.
            *
            * Create a request for the method "recommendations.list".
            *
@@ -970,8 +970,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/recommenders/[^/]+$");
 
             /**
-             * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for
-             * the specified recommender.
+             * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+             * permission for the specified recommender.
              *
              * Create a request for the method "recommendations.list".
              *
@@ -1851,8 +1851,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified insight type.
+           * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+           * for the specified insight type.
            *
            * Create a request for the method "insights.list".
            *
@@ -1883,8 +1883,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
 
             /**
-             * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-             * specified insight type.
+             * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+             * for the specified insight type.
              *
              * Create a request for the method "insights.list".
              *
@@ -2436,8 +2436,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified recommender.
+           * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+           * permission for the specified recommender.
            *
            * Create a request for the method "recommendations.list".
            *
@@ -2468,8 +2468,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/recommenders/[^/]+$");
 
             /**
-             * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for
-             * the specified recommender.
+             * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+             * permission for the specified recommender.
              *
              * Create a request for the method "recommendations.list".
              *
@@ -3349,8 +3349,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified insight type.
+           * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+           * for the specified insight type.
            *
            * Create a request for the method "insights.list".
            *
@@ -3381,8 +3381,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
 
             /**
-             * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-             * specified insight type.
+             * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+             * for the specified insight type.
              *
              * Create a request for the method "insights.list".
              *
@@ -3934,8 +3934,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified recommender.
+           * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+           * permission for the specified recommender.
            *
            * Create a request for the method "recommendations.list".
            *
@@ -3966,8 +3966,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/recommenders/[^/]+$");
 
             /**
-             * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for
-             * the specified recommender.
+             * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+             * permission for the specified recommender.
              *
              * Create a request for the method "recommendations.list".
              *
@@ -4847,8 +4847,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified insight type.
+           * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+           * for the specified insight type.
            *
            * Create a request for the method "insights.list".
            *
@@ -4879,8 +4879,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightTypes/[^/]+$");
 
             /**
-             * Lists insights for a Cloud project. Requires the recommender.*.list IAM permission for the
-             * specified insight type.
+             * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission
+             * for the specified insight type.
              *
              * Create a request for the method "insights.list".
              *
@@ -5432,8 +5432,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for the
-           * specified recommender.
+           * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+           * permission for the specified recommender.
            *
            * Create a request for the method "recommendations.list".
            *
@@ -5464,8 +5464,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/recommenders/[^/]+$");
 
             /**
-             * Lists recommendations for a Cloud project. Requires the recommender.*.list IAM permission for
-             * the specified recommender.
+             * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM
+             * permission for the specified recommender.
              *
              * Create a request for the method "recommendations.list".
              *

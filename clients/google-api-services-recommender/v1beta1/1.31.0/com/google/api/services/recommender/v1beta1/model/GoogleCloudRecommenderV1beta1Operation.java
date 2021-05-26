@@ -34,7 +34,7 @@ package com.google.api.services.recommender.v1beta1.model;
 public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
+   * Type of this operation. Contains one of 'add', 'remove', 'replace', 'move', 'copy', 'test' and
    * 'custom' operations. This field is case-insensitive and always populated.
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   private GoogleCloudRecommenderV1beta1ValueMatcher valueMatcher;
 
   /**
-   * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
+   * Type of this operation. Contains one of 'add', 'remove', 'replace', 'move', 'copy', 'test' and
    * 'custom' operations. This field is case-insensitive and always populated.
    * @return value or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   }
 
   /**
-   * Type of this operation. Contains one of 'and', 'remove', 'replace', 'move', 'copy', 'test' and
+   * Type of this operation. Contains one of 'add', 'remove', 'replace', 'move', 'copy', 'test' and
    * 'custom' operations. This field is case-insensitive and always populated.
    * @param action action or {@code null} for none
    */

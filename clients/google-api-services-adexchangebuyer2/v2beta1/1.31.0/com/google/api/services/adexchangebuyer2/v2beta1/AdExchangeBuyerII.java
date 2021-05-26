@@ -3673,6 +3673,300 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Update given deals to pause serving. This method will set the
+       * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all listed deals in the
+       * request. Currently, this method only applies to PG and PD deals. For PA deals, please call
+       * accounts.proposals.pause endpoint. It is a no-op to pause already-paused deals. It is an error to
+       * call PauseProposalDeals for deals which are not part of the proposal of proposal_id or which are
+       * not finalized or renegotiating.
+       *
+       * Create a request for the method "finalizedProposals.pause".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The proposal_id of the proposal containing the deals.
+       * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.PauseProposalDealsRequest}
+       * @return the request
+       */
+      public Pause pause(java.lang.String accountId, java.lang.String proposalId, com.google.api.services.adexchangebuyer2.v2beta1.model.PauseProposalDealsRequest content) throws java.io.IOException {
+        Pause result = new Pause(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Pause extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:pause";
+
+        /**
+         * Update given deals to pause serving. This method will set the
+         * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all listed deals in the
+         * request. Currently, this method only applies to PG and PD deals. For PA deals, please call
+         * accounts.proposals.pause endpoint. It is a no-op to pause already-paused deals. It is an error
+         * to call PauseProposalDeals for deals which are not part of the proposal of proposal_id or which
+         * are not finalized or renegotiating.
+         *
+         * Create a request for the method "finalizedProposals.pause".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The proposal_id of the proposal containing the deals.
+         * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.PauseProposalDealsRequest}
+         * @since 1.13
+         */
+        protected Pause(java.lang.String accountId, java.lang.String proposalId, com.google.api.services.adexchangebuyer2.v2beta1.model.PauseProposalDealsRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.api.services.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Pause set$Xgafv(java.lang.String $Xgafv) {
+          return (Pause) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Pause setAccessToken(java.lang.String accessToken) {
+          return (Pause) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Pause setAlt(java.lang.String alt) {
+          return (Pause) super.setAlt(alt);
+        }
+
+        @Override
+        public Pause setCallback(java.lang.String callback) {
+          return (Pause) super.setCallback(callback);
+        }
+
+        @Override
+        public Pause setFields(java.lang.String fields) {
+          return (Pause) super.setFields(fields);
+        }
+
+        @Override
+        public Pause setKey(java.lang.String key) {
+          return (Pause) super.setKey(key);
+        }
+
+        @Override
+        public Pause setOauthToken(java.lang.String oauthToken) {
+          return (Pause) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Pause) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Pause setQuotaUser(java.lang.String quotaUser) {
+          return (Pause) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Pause setUploadType(java.lang.String uploadType) {
+          return (Pause) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Pause) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Pause setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The proposal_id of the proposal containing the deals. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The proposal_id of the proposal containing the deals.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The proposal_id of the proposal containing the deals. */
+        public Pause setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Pause set(String parameterName, Object value) {
+          return (Pause) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update given deals to resume serving. This method will set the
+       * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all listed deals in the
+       * request. Currently, this method only applies to PG and PD deals. For PA deals, please call
+       * accounts.proposals.resume endpoint. It is a no-op to resume already-running deals. It is an error
+       * to call ResumeProposalDeals for deals which are not part of the proposal of proposal_id or which
+       * are not finalized or renegotiating.
+       *
+       * Create a request for the method "finalizedProposals.resume".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The proposal_id of the proposal containing the deals.
+       * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ResumeProposalDealsRequest}
+       * @return the request
+       */
+      public Resume resume(java.lang.String accountId, java.lang.String proposalId, com.google.api.services.adexchangebuyer2.v2beta1.model.ResumeProposalDealsRequest content) throws java.io.IOException {
+        Resume result = new Resume(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Resume extends AdExchangeBuyerIIRequest<com.google.api.services.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:resume";
+
+        /**
+         * Update given deals to resume serving. This method will set the
+         * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all listed deals in the
+         * request. Currently, this method only applies to PG and PD deals. For PA deals, please call
+         * accounts.proposals.resume endpoint. It is a no-op to resume already-running deals. It is an
+         * error to call ResumeProposalDeals for deals which are not part of the proposal of proposal_id
+         * or which are not finalized or renegotiating.
+         *
+         * Create a request for the method "finalizedProposals.resume".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The proposal_id of the proposal containing the deals.
+         * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ResumeProposalDealsRequest}
+         * @since 1.13
+         */
+        protected Resume(java.lang.String accountId, java.lang.String proposalId, com.google.api.services.adexchangebuyer2.v2beta1.model.ResumeProposalDealsRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.api.services.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Resume set$Xgafv(java.lang.String $Xgafv) {
+          return (Resume) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Resume setAccessToken(java.lang.String accessToken) {
+          return (Resume) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Resume setAlt(java.lang.String alt) {
+          return (Resume) super.setAlt(alt);
+        }
+
+        @Override
+        public Resume setCallback(java.lang.String callback) {
+          return (Resume) super.setCallback(callback);
+        }
+
+        @Override
+        public Resume setFields(java.lang.String fields) {
+          return (Resume) super.setFields(fields);
+        }
+
+        @Override
+        public Resume setKey(java.lang.String key) {
+          return (Resume) super.setKey(key);
+        }
+
+        @Override
+        public Resume setOauthToken(java.lang.String oauthToken) {
+          return (Resume) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Resume) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Resume setQuotaUser(java.lang.String quotaUser) {
+          return (Resume) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Resume setUploadType(java.lang.String uploadType) {
+          return (Resume) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Resume) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Resume setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The proposal_id of the proposal containing the deals. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The proposal_id of the proposal containing the deals.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The proposal_id of the proposal containing the deals. */
+        public Resume setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Resume set(String parameterName, Object value) {
+          return (Resume) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

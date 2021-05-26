@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-osconfig",
+    "version": "v1alpha-rev20210430-1.31.0"
+  }
+}

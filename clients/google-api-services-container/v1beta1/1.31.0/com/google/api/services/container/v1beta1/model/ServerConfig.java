@@ -79,6 +79,13 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> validNodeVersions;
 
   /**
+   * Maps of Kubernetes version and supported Windows server versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, WindowsVersions> windowsVersionMaps;
+
+  /**
    * List of release channel configurations.
    * @return value or {@code null} for none
    */
@@ -177,6 +184,23 @@ public final class ServerConfig extends com.google.api.client.json.GenericJson {
    */
   public ServerConfig setValidNodeVersions(java.util.List<java.lang.String> validNodeVersions) {
     this.validNodeVersions = validNodeVersions;
+    return this;
+  }
+
+  /**
+   * Maps of Kubernetes version and supported Windows server versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, WindowsVersions> getWindowsVersionMaps() {
+    return windowsVersionMaps;
+  }
+
+  /**
+   * Maps of Kubernetes version and supported Windows server versions.
+   * @param windowsVersionMaps windowsVersionMaps or {@code null} for none
+   */
+  public ServerConfig setWindowsVersionMaps(java.util.Map<String, WindowsVersions> windowsVersionMaps) {
+    this.windowsVersionMaps = windowsVersionMaps;
     return this;
   }
 

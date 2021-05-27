@@ -30,6 +30,24 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
+   * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
+   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
+   * takes precedence on the container extracted from name when presents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String container;
+
+  /**
+   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
+   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The name of the resource referenced in the request.
    * The value may be {@code null}.
    */
@@ -50,6 +68,48 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
+   * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
+   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
+   * takes precedence on the container extracted from name when presents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContainer() {
+    return container;
+  }
+
+  /**
+   * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
+   * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
+   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
+   * takes precedence on the container extracted from name when presents.
+   * @param container container or {@code null} for none
+   */
+  public ResourceInfo setContainer(java.lang.String container) {
+    this.container = container;
+    return this;
+  }
+
+  /**
+   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
+   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
+   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * @param location location or {@code null} for none
+   */
+  public ResourceInfo setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
 
   /**
    * The name of the resource referenced in the request.

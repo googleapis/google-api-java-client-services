@@ -31,7 +31,7 @@ public final class OSPolicyResourcePackageResourceMSI extends com.google.api.cli
 
   /**
    * Additional properties to use during installation. This should be in the format of
-   * Property=Setting. Appended to the defaults of "ACTION=INSTALL REBOOT=ReallySuppress".
+   * Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class OSPolicyResourcePackageResourceMSI extends com.google.api.cli
 
   /**
    * Additional properties to use during installation. This should be in the format of
-   * Property=Setting. Appended to the defaults of "ACTION=INSTALL REBOOT=ReallySuppress".
+   * Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProperties() {
@@ -55,7 +55,7 @@ public final class OSPolicyResourcePackageResourceMSI extends com.google.api.cli
 
   /**
    * Additional properties to use during installation. This should be in the format of
-   * Property=Setting. Appended to the defaults of "ACTION=INSTALL REBOOT=ReallySuppress".
+   * Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
    * @param properties properties or {@code null} for none
    */
   public OSPolicyResourcePackageResourceMSI setProperties(java.util.List<java.lang.String> properties) {

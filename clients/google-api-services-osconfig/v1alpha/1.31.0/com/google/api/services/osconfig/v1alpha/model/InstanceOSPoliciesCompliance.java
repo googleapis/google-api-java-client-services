@@ -22,7 +22,8 @@ package com.google.api.services.osconfig.v1alpha.model;
  * assignments, and each assignment can have multiple OS policies. As a result, multiple OS policies
  * could be applied to a single VM. You can use this API resource to determine both the compliance
  * state of your VM as well as the compliance state of an individual OS policy. For more
- * information, see [View compliance](/compute/docs/os-configuration-management/view-compliance).
+ * information, see [View compliance](https://cloud.google.com/compute/docs/os-configuration-
+ * management/view-compliance).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

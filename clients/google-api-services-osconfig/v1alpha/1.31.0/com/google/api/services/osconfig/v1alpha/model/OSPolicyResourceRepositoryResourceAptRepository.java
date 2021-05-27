@@ -18,7 +18,7 @@ package com.google.api.services.osconfig.v1alpha.model;
 
 /**
  * Represents a single apt package repository. These will be added to a repo file that will be
- * managed at /etc/apt/sources.list.d/google_osconfig.list.
+ * managed at `/etc/apt/sources.list.d/google_osconfig.list`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
@@ -53,7 +53,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepository extends com.g
 
   /**
    * URI of the key file for this repository. The agent maintains a keyring at
-   * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg.
+   * `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepository extends com.g
 
   /**
    * URI of the key file for this repository. The agent maintains a keyring at
-   * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg.
+   * `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGpgKey() {
@@ -128,7 +128,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepository extends com.g
 
   /**
    * URI of the key file for this repository. The agent maintains a keyring at
-   * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg.
+   * `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
    * @param gpgKey gpgKey or {@code null} for none
    */
   public OSPolicyResourceRepositoryResourceAptRepository setGpgKey(java.lang.String gpgKey) {

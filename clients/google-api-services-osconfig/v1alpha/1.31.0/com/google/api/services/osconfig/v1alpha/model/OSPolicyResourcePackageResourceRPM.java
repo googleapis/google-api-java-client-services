@@ -30,8 +30,9 @@ package com.google.api.services.osconfig.v1alpha.model;
 public final class OSPolicyResourcePackageResourceRPM extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether dependencies should also be installed. install when false: `rpm --upgrade --replacepkgs
-   * package.rpm` install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+   * Whether dependencies should also be installed. - install when false: `rpm --upgrade
+   * --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y
+   * install package.rpm`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +46,9 @@ public final class OSPolicyResourcePackageResourceRPM extends com.google.api.cli
   private OSPolicyResourceFile source;
 
   /**
-   * Whether dependencies should also be installed. install when false: `rpm --upgrade --replacepkgs
-   * package.rpm` install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+   * Whether dependencies should also be installed. - install when false: `rpm --upgrade
+   * --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y
+   * install package.rpm`
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPullDeps() {
@@ -54,8 +56,9 @@ public final class OSPolicyResourcePackageResourceRPM extends com.google.api.cli
   }
 
   /**
-   * Whether dependencies should also be installed. install when false: `rpm --upgrade --replacepkgs
-   * package.rpm` install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+   * Whether dependencies should also be installed. - install when false: `rpm --upgrade
+   * --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y
+   * install package.rpm`
    * @param pullDeps pullDeps or {@code null} for none
    */
   public OSPolicyResourcePackageResourceRPM setPullDeps(java.lang.Boolean pullDeps) {

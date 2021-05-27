@@ -17,8 +17,8 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * A package managed by APT. install: `apt-get update && apt-get -y install [name]` remove: `apt-get
- * -y remove [name]`
+ * A package managed by APT. - install: `apt-get update && apt-get -y install [name]` - remove:
+ * `apt-get -y remove [name]`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

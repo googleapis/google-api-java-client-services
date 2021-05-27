@@ -1451,8 +1451,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * Create an OS policy assignment. This method also creates the first revision of the OS policy
          * assignment. This method returns a long running operation (LRO) that contains the rollout details.
          * The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.l
-         * ocations.osPolicyAssignments.operations.cancel](/compute/docs/osconfig/rest/v1alpha/projects.loca
-         * tions.osPolicyAssignments.operations/cancel).
+         * ocations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/re
+         * st/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
          *
          * Create a request for the method "osPolicyAssignments.create".
          *
@@ -1480,8 +1480,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * Create an OS policy assignment. This method also creates the first revision of the OS policy
            * assignment. This method returns a long running operation (LRO) that contains the rollout
            * details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method:
-           * projects.locations.osPolicyAssignments.operations.cancel](/compute/docs/osconfig/rest/v1alpha/p
-           * rojects.locations.osPolicyAssignments.operations/cancel).
+           * projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs
+           * /osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
            *
            * Create a request for the method "osPolicyAssignments.create".
            *
@@ -1624,8 +1624,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * This method returns a long running operation (LRO) that contains the rollout details. The rollout
          * can be cancelled by cancelling the LRO. If the LRO completes and is not cancelled, all revisions
          * associated with the OS policy assignment are deleted. For more information, see [Method: projects
-         * .locations.osPolicyAssignments.operations.cancel](/compute/docs/osconfig/rest/v1alpha/projects.lo
-         * cations.osPolicyAssignments.operations/cancel).
+         * .locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/
+         * rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
          *
          * Create a request for the method "osPolicyAssignments.delete".
          *
@@ -1653,8 +1653,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * assignment. This method returns a long running operation (LRO) that contains the rollout
            * details. The rollout can be cancelled by cancelling the LRO. If the LRO completes and is not
            * cancelled, all revisions associated with the OS policy assignment are deleted. For more
-           * information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](/compute/do
-           * cs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
+           * information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://clo
+           * ud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operati
+           * ons/cancel).
            *
            * Create a request for the method "osPolicyAssignments.delete".
            *
@@ -2272,8 +2273,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * Update an existing OS policy assignment. This method creates a new revision of the OS policy
          * assignment. This method returns a long running operation (LRO) that contains the rollout details.
          * The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.l
-         * ocations.osPolicyAssignments.operations.cancel](/compute/docs/osconfig/rest/v1alpha/projects.loca
-         * tions.osPolicyAssignments.operations/cancel).
+         * ocations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/re
+         * st/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
          *
          * Create a request for the method "osPolicyAssignments.patch".
          *
@@ -2303,8 +2304,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * Update an existing OS policy assignment. This method creates a new revision of the OS policy
            * assignment. This method returns a long running operation (LRO) that contains the rollout
            * details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method:
-           * projects.locations.osPolicyAssignments.operations.cancel](/compute/docs/osconfig/rest/v1alpha/p
-           * rojects.locations.osPolicyAssignments.operations/cancel).
+           * projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs
+           * /osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
            *
            * Create a request for the method "osPolicyAssignments.patch".
            *

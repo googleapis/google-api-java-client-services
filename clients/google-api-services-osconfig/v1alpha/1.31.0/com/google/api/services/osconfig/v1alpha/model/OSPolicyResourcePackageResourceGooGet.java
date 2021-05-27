@@ -17,7 +17,7 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * A package managed by GooGet. install: `googet -noconfirm install package` remove: `googet
+ * A package managed by GooGet. - install: `googet -noconfirm install package` - remove: `googet
  * -noconfirm remove package`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

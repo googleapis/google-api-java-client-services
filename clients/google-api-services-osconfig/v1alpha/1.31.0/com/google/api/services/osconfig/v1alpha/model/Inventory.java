@@ -20,7 +20,8 @@ package com.google.api.services.osconfig.v1alpha.model;
  * This API resource represents the available inventory data for a Compute Engine virtual machine
  * (VM) instance at a given point in time. You can use this API resource to determine the inventory
  * data of your VM. For more information, see [Information provided by OS inventory
- * management](/compute/docs/instances/os-inventory-management#data-collected).
+ * management](https://cloud.google.com/compute/docs/instances/os-inventory-management#data-
+ * collected).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

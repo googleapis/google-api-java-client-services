@@ -37,6 +37,13 @@ public final class OSPolicyResourceCompliance extends com.google.api.client.json
   private java.util.List<OSPolicyResourceConfigStep> configSteps;
 
   /**
+   * ExecResource specific output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OSPolicyResourceComplianceExecResourceOutput execResourceOutput;
+
+  /**
    * The id of the OS policy resource.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class OSPolicyResourceCompliance extends com.google.api.client.json
    */
   public OSPolicyResourceCompliance setConfigSteps(java.util.List<OSPolicyResourceConfigStep> configSteps) {
     this.configSteps = configSteps;
+    return this;
+  }
+
+  /**
+   * ExecResource specific output.
+   * @return value or {@code null} for none
+   */
+  public OSPolicyResourceComplianceExecResourceOutput getExecResourceOutput() {
+    return execResourceOutput;
+  }
+
+  /**
+   * ExecResource specific output.
+   * @param execResourceOutput execResourceOutput or {@code null} for none
+   */
+  public OSPolicyResourceCompliance setExecResourceOutput(OSPolicyResourceComplianceExecResourceOutput execResourceOutput) {
+    this.execResourceOutput = execResourceOutput;
     return this;
   }
 

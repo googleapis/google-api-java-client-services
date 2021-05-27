@@ -68,14 +68,6 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.String jwtAudience;
 
   /**
-   * Minimum deadline in seconds needed for this method. Calls having deadline value lower than this
-   * will be rejected.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double minDeadline;
-
-  /**
    * The number of seconds to wait for the completion of a long running operation. The default is no
    * deadline.
    * The value may be {@code null}.
@@ -192,25 +184,6 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setJwtAudience(java.lang.String jwtAudience) {
     this.jwtAudience = jwtAudience;
-    return this;
-  }
-
-  /**
-   * Minimum deadline in seconds needed for this method. Calls having deadline value lower than this
-   * will be rejected.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getMinDeadline() {
-    return minDeadline;
-  }
-
-  /**
-   * Minimum deadline in seconds needed for this method. Calls having deadline value lower than this
-   * will be rejected.
-   * @param minDeadline minDeadline or {@code null} for none
-   */
-  public BackendRule setMinDeadline(java.lang.Double minDeadline) {
-    this.minDeadline = minDeadline;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private BuildOccurrence build;
 
   /**
+   * Describes a compliance violation on a linked resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComplianceOccurrence compliance;
+
+  /**
    * Output only. The time this occurrence was created.
    * The value may be {@code null}.
    */
@@ -170,6 +177,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setBuild(BuildOccurrence build) {
     this.build = build;
+    return this;
+  }
+
+  /**
+   * Describes a compliance violation on a linked resource.
+   * @return value or {@code null} for none
+   */
+  public ComplianceOccurrence getCompliance() {
+    return compliance;
+  }
+
+  /**
+   * Describes a compliance violation on a linked resource.
+   * @param compliance compliance or {@code null} for none
+   */
+  public Occurrence setCompliance(ComplianceOccurrence compliance) {
+    this.compliance = compliance;
     return this;
   }
 

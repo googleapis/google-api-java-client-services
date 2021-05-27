@@ -131,6 +131,7 @@ packages on [Maven Central][maven-search].
 | Essential Contacts API | [v1](clients/google-api-services-essentialcontacts/v1) |
 | Eventarc API | [v1](clients/google-api-services-eventarc/v1), [v1beta1](clients/google-api-services-eventarc/v1beta1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
+| Firebase App Check API | [v1beta](clients/google-api-services-firebaseappcheck/v1beta) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
 | Firebase Hosting API | [v1](clients/google-api-services-firebasehosting/v1), [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |

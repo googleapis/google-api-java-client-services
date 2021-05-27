@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-firebaseml</artifactId>
-  <version>v1-rev20210322-1.31.0</version>
-  <name>Firebase ML API v1-rev20210322-1.31.0</name>
+  <artifactId>google-api-services-firebaseappcheck</artifactId>
+  <version>v1beta-rev20210524-1.31.0</version>
+  <name>Firebase App Check API v1beta-rev20210524-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -67,7 +67,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.api.services.firebaseml</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.api.services.firebaseappcheck</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Firebase ML API ${project.version}</doctitle>
-          <windowtitle>Firebase ML API ${project.version}</windowtitle>
+          <doctitle>Firebase App Check API ${project.version}</doctitle>
+          <windowtitle>Firebase App Check API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

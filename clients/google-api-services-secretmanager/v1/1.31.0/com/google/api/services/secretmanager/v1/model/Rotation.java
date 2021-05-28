@@ -32,8 +32,9 @@ package com.google.api.services.secretmanager.v1.model;
 public final class Rotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. next_rotation_time MUST
-   * be set if rotation_period is set.
+   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less
+   * than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be
+   * set if rotation_period is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +51,9 @@ public final class Rotation extends com.google.api.client.json.GenericJson {
   private String rotationPeriod;
 
   /**
-   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. next_rotation_time MUST
-   * be set if rotation_period is set.
+   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less
+   * than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be
+   * set if rotation_period is set.
    * @return value or {@code null} for none
    */
   public String getNextRotationTime() {
@@ -59,8 +61,9 @@ public final class Rotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. next_rotation_time MUST
-   * be set if rotation_period is set.
+   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less
+   * than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be
+   * set if rotation_period is set.
    * @param nextRotationTime nextRotationTime or {@code null} for none
    */
   public Rotation setNextRotationTime(String nextRotationTime) {

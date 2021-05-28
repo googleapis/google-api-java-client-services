@@ -132,6 +132,13 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * Share-settings for the node group
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShareSettings shareSettings;
+
+  /**
    * [Output Only] The total number of nodes in the node group.
    * The value may be {@code null}.
    */
@@ -409,6 +416,23 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Share-settings for the node group
+   * @return value or {@code null} for none
+   */
+  public ShareSettings getShareSettings() {
+    return shareSettings;
+  }
+
+  /**
+   * Share-settings for the node group
+   * @param shareSettings shareSettings or {@code null} for none
+   */
+  public NodeGroup setShareSettings(ShareSettings shareSettings) {
+    this.shareSettings = shareSettings;
     return this;
   }
 

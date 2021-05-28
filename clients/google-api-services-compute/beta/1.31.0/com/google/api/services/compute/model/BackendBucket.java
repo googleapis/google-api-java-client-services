@@ -47,6 +47,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private BackendBucketCdnPolicy cdnPolicy;
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String compressionMode;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -67,6 +75,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edgeSecurityPolicy;
 
   /**
    * If true, enable Cloud CDN for this BackendBucket.
@@ -142,6 +158,25 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompressionMode() {
+    return compressionMode;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * @param compressionMode compressionMode or {@code null} for none
+   */
+  public BackendBucket setCompressionMode(java.lang.String compressionMode) {
+    this.compressionMode = compressionMode;
+    return this;
+  }
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -191,6 +226,25 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdgeSecurityPolicy() {
+    return edgeSecurityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * @param edgeSecurityPolicy edgeSecurityPolicy or {@code null} for none
+   */
+  public BackendBucket setEdgeSecurityPolicy(java.lang.String edgeSecurityPolicy) {
+    this.edgeSecurityPolicy = edgeSecurityPolicy;
     return this;
   }
 

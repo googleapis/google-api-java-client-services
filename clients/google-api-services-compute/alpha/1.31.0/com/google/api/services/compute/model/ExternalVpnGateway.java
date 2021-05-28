@@ -62,6 +62,10 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
 
   /**
    * List of interfaces for this external VPN gateway.
+   *
+   * If your peer-side gateway is an on-premises gateway and non-AWS cloud providers? gateway, at
+   * most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS
+   * virtual private gateway, four interfaces should be provided for an external VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +177,10 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
 
   /**
    * List of interfaces for this external VPN gateway.
+   *
+   * If your peer-side gateway is an on-premises gateway and non-AWS cloud providers? gateway, at
+   * most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS
+   * virtual private gateway, four interfaces should be provided for an external VPN gateway.
    * @return value or {@code null} for none
    */
   public java.util.List<ExternalVpnGatewayInterface> getInterfaces() {
@@ -181,6 +189,10 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
 
   /**
    * List of interfaces for this external VPN gateway.
+   *
+   * If your peer-side gateway is an on-premises gateway and non-AWS cloud providers? gateway, at
+   * most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS
+   * virtual private gateway, four interfaces should be provided for an external VPN gateway.
    * @param interfaces interfaces or {@code null} for none
    */
   public ExternalVpnGateway setInterfaces(java.util.List<ExternalVpnGatewayInterface> interfaces) {

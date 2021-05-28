@@ -42,6 +42,15 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer hostErrorTimeoutSeconds;
+
+  /**
    * An opaque location hint used to place the instance close to other resources. This field is for
    * use by internal tools that use the public API.
    * The value may be {@code null}.
@@ -122,6 +131,27 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
     this.automaticRestart = automaticRestart;
+    return this;
+  }
+
+  /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHostErrorTimeoutSeconds() {
+    return hostErrorTimeoutSeconds;
+  }
+
+  /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * @param hostErrorTimeoutSeconds hostErrorTimeoutSeconds or {@code null} for none
+   */
+  public Scheduling setHostErrorTimeoutSeconds(java.lang.Integer hostErrorTimeoutSeconds) {
+    this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
     return this;
   }
 

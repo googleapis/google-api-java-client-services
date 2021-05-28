@@ -30,11 +30,18 @@ package com.google.api.services.compute.model;
 public final class NetworkInterfaceSubInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * An IPv4 internal IP address to assign to the instance for this subinterface.
+   * An IPv4 internal IP address to assign to the instance for this subinterface. If specified,
+   * ip_allocation_mode should be set to ALLOCATE_IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAllocationMode;
 
   /**
    * If specified, this subnetwork must belong to the same network as that of the network interface.
@@ -57,7 +64,8 @@ public final class NetworkInterfaceSubInterface extends com.google.api.client.js
   private java.lang.Integer vlan;
 
   /**
-   * An IPv4 internal IP address to assign to the instance for this subinterface.
+   * An IPv4 internal IP address to assign to the instance for this subinterface. If specified,
+   * ip_allocation_mode should be set to ALLOCATE_IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -65,11 +73,27 @@ public final class NetworkInterfaceSubInterface extends com.google.api.client.js
   }
 
   /**
-   * An IPv4 internal IP address to assign to the instance for this subinterface.
+   * An IPv4 internal IP address to assign to the instance for this subinterface. If specified,
+   * ip_allocation_mode should be set to ALLOCATE_IP.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public NetworkInterfaceSubInterface setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAllocationMode() {
+    return ipAllocationMode;
+  }
+
+  /**
+   * @param ipAllocationMode ipAllocationMode or {@code null} for none
+   */
+  public NetworkInterfaceSubInterface setIpAllocationMode(java.lang.String ipAllocationMode) {
+    this.ipAllocationMode = ipAllocationMode;
     return this;
   }
 

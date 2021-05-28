@@ -80,10 +80,9 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private RouterBgpPeerBfd bfd;
 
   /**
-   * The status of the BGP peer connection. Not currently available publicly. If set to FALSE, any
-   * active session with the peer is terminated and all associated routing information is removed.
-   * If set to TRUE, the peer connection can be established with routing information. The default is
-   * TRUE.
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,10 +273,9 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The status of the BGP peer connection. Not currently available publicly. If set to FALSE, any
-   * active session with the peer is terminated and all associated routing information is removed.
-   * If set to TRUE, the peer connection can be established with routing information. The default is
-   * TRUE.
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnable() {
@@ -285,10 +283,9 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The status of the BGP peer connection. Not currently available publicly. If set to FALSE, any
-   * active session with the peer is terminated and all associated routing information is removed.
-   * If set to TRUE, the peer connection can be established with routing information. The default is
-   * TRUE.
+   * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
+   * terminated and all associated routing information is removed. If set to TRUE, the peer
+   * connection can be established with routing information. The default is TRUE.
    * @param enable enable or {@code null} for none
    */
   public RouterBgpPeer setEnable(java.lang.String enable) {

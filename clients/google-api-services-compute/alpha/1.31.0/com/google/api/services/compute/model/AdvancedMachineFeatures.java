@@ -40,6 +40,13 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
+   * The number of vNUMA nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numaNodeCount;
+
+  /**
    * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
    * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
    * assumed.
@@ -72,6 +79,23 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
     this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * The number of vNUMA nodes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumaNodeCount() {
+    return numaNodeCount;
+  }
+
+  /**
+   * The number of vNUMA nodes.
+   * @param numaNodeCount numaNodeCount or {@code null} for none
+   */
+  public AdvancedMachineFeatures setNumaNodeCount(java.lang.Integer numaNodeCount) {
+    this.numaNodeCount = numaNodeCount;
     return this;
   }
 

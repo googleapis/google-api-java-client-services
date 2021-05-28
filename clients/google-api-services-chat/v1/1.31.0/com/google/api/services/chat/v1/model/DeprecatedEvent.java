@@ -31,8 +31,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/hangouts/chat/how-tos/cards-onclick)
-   * for more information.
+   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the bot should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/hangouts/chat/how-tos/auth-3p) for more information.
+   * guide](/chat/how-tos/auth-3p) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +101,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/hangouts/chat/how-tos/cards-onclick)
-   * for more information.
+   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
+   * information.
    * @return value or {@code null} for none
    */
   public FormAction getAction() {
@@ -111,8 +111,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/hangouts/chat/how-tos/cards-onclick)
-   * for more information.
+   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
+   * information.
    * @param action action or {@code null} for none
    */
   public DeprecatedEvent setAction(FormAction action) {
@@ -123,7 +123,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the bot should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/hangouts/chat/how-tos/auth-3p) for more information.
+   * guide](/chat/how-tos/auth-3p) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigCompleteRedirectUrl() {
@@ -133,7 +133,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the bot should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
-   * guide](/hangouts/chat/how-tos/auth-3p) for more information.
+   * guide](/chat/how-tos/auth-3p) for more information.
    * @param configCompleteRedirectUrl configCompleteRedirectUrl or {@code null} for none
    */
   public DeprecatedEvent setConfigCompleteRedirectUrl(java.lang.String configCompleteRedirectUrl) {

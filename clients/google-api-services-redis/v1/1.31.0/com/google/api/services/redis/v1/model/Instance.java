@@ -114,6 +114,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String locationId;
 
   /**
+   * Optional. The maintenance policy for the instance. If not provided, maintenance events can be
+   * performed at any time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenancePolicy maintenancePolicy;
+
+  /**
+   * Output only. Date and time of upcoming maintenance events which have been scheduled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceSchedule maintenanceSchedule;
+
+  /**
    * Required. Redis memory size in GiB.
    * The value may be {@code null}.
    */
@@ -409,6 +424,42 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLocationId(java.lang.String locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Optional. The maintenance policy for the instance. If not provided, maintenance events can be
+   * performed at any time.
+   * @return value or {@code null} for none
+   */
+  public MaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Optional. The maintenance policy for the instance. If not provided, maintenance events can be
+   * performed at any time.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public Instance setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Output only. Date and time of upcoming maintenance events which have been scheduled.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceSchedule getMaintenanceSchedule() {
+    return maintenanceSchedule;
+  }
+
+  /**
+   * Output only. Date and time of upcoming maintenance events which have been scheduled.
+   * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
+   */
+  public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
+    this.maintenanceSchedule = maintenanceSchedule;
     return this;
   }
 

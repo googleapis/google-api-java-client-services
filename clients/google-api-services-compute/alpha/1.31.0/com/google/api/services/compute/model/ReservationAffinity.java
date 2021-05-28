@@ -48,7 +48,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   private java.lang.String key;
 
   /**
-   * Corresponds to the label values of a reservation resource.
+   * Corresponds to the label values of a reservation resource. This can be either a name to a
+   * reservation in the same project or "projects/different-project/reservations/some-reservation-
+   * name" to target a shared reservation in the same zone but in a different project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +99,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Corresponds to the label values of a reservation resource.
+   * Corresponds to the label values of a reservation resource. This can be either a name to a
+   * reservation in the same project or "projects/different-project/reservations/some-reservation-
+   * name" to target a shared reservation in the same zone but in a different project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -105,7 +109,9 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
   }
 
   /**
-   * Corresponds to the label values of a reservation resource.
+   * Corresponds to the label values of a reservation resource. This can be either a name to a
+   * reservation in the same project or "projects/different-project/reservations/some-reservation-
+   * name" to target a shared reservation in the same zone but in a different project.
    * @param values values or {@code null} for none
    */
   public ReservationAffinity setValues(java.util.List<java.lang.String> values) {

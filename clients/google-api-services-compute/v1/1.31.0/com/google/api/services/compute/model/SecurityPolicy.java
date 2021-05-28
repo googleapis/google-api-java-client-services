@@ -34,6 +34,12 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -100,6 +106,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyAdvancedOptionsConfig getAdvancedOptionsConfig() {
+    return advancedOptionsConfig;
+  }
+
+  /**
+   * @param advancedOptionsConfig advancedOptionsConfig or {@code null} for none
+   */
+  public SecurityPolicy setAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig) {
+    this.advancedOptionsConfig = advancedOptionsConfig;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

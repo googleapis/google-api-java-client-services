@@ -87,6 +87,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private CircuitBreakers circuitBreakers;
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String compressionMode;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,6 +152,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edgeSecurityPolicy;
 
   /**
    * If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme
@@ -494,6 +510,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompressionMode() {
+    return compressionMode;
+  }
+
+  /**
+   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * header.
+   * @param compressionMode compressionMode or {@code null} for none
+   */
+  public BackendService setCompressionMode(java.lang.String compressionMode) {
+    this.compressionMode = compressionMode;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public ConnectionDraining getConnectionDraining() {
@@ -629,6 +664,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdgeSecurityPolicy() {
+    return edgeSecurityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @param edgeSecurityPolicy edgeSecurityPolicy or {@code null} for none
+   */
+  public BackendService setEdgeSecurityPolicy(java.lang.String edgeSecurityPolicy) {
+    this.edgeSecurityPolicy = edgeSecurityPolicy;
     return this;
   }
 

@@ -35,7 +35,7 @@ public final class FixedOrPercent extends com.google.api.client.json.GenericJson
    *   - If the value is fixed, then the calculated value is equal to the fixed value.  - If the
    * value is a percent, then the calculated value is percent/100 * targetSize. For example, the
    * calculated value of a 80% of a managed instance group with 150 instances would be (80/100 *
-   * 150) = 120 VM instances. If there is a remainder, the number is rounded up.
+   * 150) = 120 VM instances. If there is a remainder, the number is rounded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class FixedOrPercent extends com.google.api.client.json.GenericJson
    *   - If the value is fixed, then the calculated value is equal to the fixed value.  - If the
    * value is a percent, then the calculated value is percent/100 * targetSize. For example, the
    * calculated value of a 80% of a managed instance group with 150 instances would be (80/100 *
-   * 150) = 120 VM instances. If there is a remainder, the number is rounded up.
+   * 150) = 120 VM instances. If there is a remainder, the number is rounded.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCalculated() {
@@ -75,7 +75,7 @@ public final class FixedOrPercent extends com.google.api.client.json.GenericJson
    *   - If the value is fixed, then the calculated value is equal to the fixed value.  - If the
    * value is a percent, then the calculated value is percent/100 * targetSize. For example, the
    * calculated value of a 80% of a managed instance group with 150 instances would be (80/100 *
-   * 150) = 120 VM instances. If there is a remainder, the number is rounded up.
+   * 150) = 120 VM instances. If there is a remainder, the number is rounded.
    * @param calculated calculated or {@code null} for none
    */
   public FixedOrPercent setCalculated(java.lang.Integer calculated) {

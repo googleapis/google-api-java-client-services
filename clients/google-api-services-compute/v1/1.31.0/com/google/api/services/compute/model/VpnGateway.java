@@ -117,7 +117,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * A list of interfaces on this VPN gateway.
+   * The list of VPN interfaces associated with this VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -358,7 +358,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of interfaces on this VPN gateway.
+   * The list of VPN interfaces associated with this VPN gateway.
    * @return value or {@code null} for none
    */
   public java.util.List<VpnGatewayVpnGatewayInterface> getVpnInterfaces() {
@@ -366,7 +366,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of interfaces on this VPN gateway.
+   * The list of VPN interfaces associated with this VPN gateway.
    * @param vpnInterfaces vpnInterfaces or {@code null} for none
    */
   public VpnGateway setVpnInterfaces(java.util.List<VpnGatewayVpnGatewayInterface> vpnInterfaces) {

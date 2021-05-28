@@ -30,31 +30,38 @@ package com.google.api.services.compute.model;
 public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * The numeric ID of this VPN gateway interface.
+   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long id;
 
   /**
-   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
-   * currently available in all Interconnect locations.
+   * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface.
+   * When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud
+   * Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the
+   * specified VLAN attachment resource. Not currently available publicly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnectAttachment;
 
   /**
-   * [Output Only] The external IP address for this VPN gateway interface.
+   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
+   * could be either a regional external IP address or a regional internal IP address. The two IP
+   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
+   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
+   * IPsec-encrypted Cloud Interconnect, the IP addresses for both interfaces could either be
+   * regional internal IP addresses or regional external IP addresses. For regular (non IPsec-
+   * encrypted Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external IP
+   * address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * The numeric ID of this VPN gateway interface.
+   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -62,7 +69,7 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * The numeric ID of this VPN gateway interface.
+   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
    * @param id id or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setId(java.lang.Long id) {
@@ -71,10 +78,10 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
-   * currently available in all Interconnect locations.
+   * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface.
+   * When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud
+   * Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the
+   * specified VLAN attachment resource. Not currently available publicly.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectAttachment() {
@@ -82,10 +89,10 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
-   * this VPN Gateway interface will go through the specified interconnect attachment resource. Not
-   * currently available in all Interconnect locations.
+   * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface.
+   * When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud
+   * Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the
+   * specified VLAN attachment resource. Not currently available publicly.
    * @param interconnectAttachment interconnectAttachment or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setInterconnectAttachment(java.lang.String interconnectAttachment) {
@@ -94,7 +101,14 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The external IP address for this VPN gateway interface.
+   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
+   * could be either a regional external IP address or a regional internal IP address. The two IP
+   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
+   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
+   * IPsec-encrypted Cloud Interconnect, the IP addresses for both interfaces could either be
+   * regional internal IP addresses or regional external IP addresses. For regular (non IPsec-
+   * encrypted Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external IP
+   * address.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -102,7 +116,14 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The external IP address for this VPN gateway interface.
+   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
+   * could be either a regional external IP address or a regional internal IP address. The two IP
+   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
+   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
+   * IPsec-encrypted Cloud Interconnect, the IP addresses for both interfaces could either be
+   * regional internal IP addresses or regional external IP addresses. For regular (non IPsec-
+   * encrypted Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external IP
+   * address.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setIpAddress(java.lang.String ipAddress) {

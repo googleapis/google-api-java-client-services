@@ -40,6 +40,12 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig;
+
+  /**
    * A list of associations that belong to this policy.
    * The value may be {@code null}.
    */
@@ -209,6 +215,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig) {
     this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyAdvancedOptionsConfig getAdvancedOptionsConfig() {
+    return advancedOptionsConfig;
+  }
+
+  /**
+   * @param advancedOptionsConfig advancedOptionsConfig or {@code null} for none
+   */
+  public SecurityPolicy setAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig) {
+    this.advancedOptionsConfig = advancedOptionsConfig;
     return this;
   }
 

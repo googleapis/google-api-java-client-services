@@ -41,7 +41,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   /**
    * The maximum number of instances that can be created above the specified targetSize during the
    * update process. This value can be either a fixed number or, if the group has 10 or more
-   * instances, a percentage. If you set a percentage, the number of instances is rounded up if
+   * instances, a percentage. If you set a percentage, the number of instances is rounded if
    * necessary. The default value for maxSurge is a fixed value equal to the number of zones in
    * which the managed instance group operates.
    *
@@ -60,7 +60,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    * instance's health check status must be HEALTHY at least once. If there is no health check on
    * the group, then the instance only needs to have a status of RUNNING to be considered available.
    * This value can be either a fixed number or, if the group has 10 or more instances, a
-   * percentage. If you set a percentage, the number of instances is rounded up if necessary. The
+   * percentage. If you set a percentage, the number of instances is rounded if necessary. The
    * default value for maxUnavailable is a fixed value equal to the number of zones in which the
    * managed instance group operates.
    *
@@ -142,7 +142,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   /**
    * The maximum number of instances that can be created above the specified targetSize during the
    * update process. This value can be either a fixed number or, if the group has 10 or more
-   * instances, a percentage. If you set a percentage, the number of instances is rounded up if
+   * instances, a percentage. If you set a percentage, the number of instances is rounded if
    * necessary. The default value for maxSurge is a fixed value equal to the number of zones in
    * which the managed instance group operates.
    *
@@ -157,7 +157,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   /**
    * The maximum number of instances that can be created above the specified targetSize during the
    * update process. This value can be either a fixed number or, if the group has 10 or more
-   * instances, a percentage. If you set a percentage, the number of instances is rounded up if
+   * instances, a percentage. If you set a percentage, the number of instances is rounded if
    * necessary. The default value for maxSurge is a fixed value equal to the number of zones in
    * which the managed instance group operates.
    *
@@ -178,7 +178,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    * instance's health check status must be HEALTHY at least once. If there is no health check on
    * the group, then the instance only needs to have a status of RUNNING to be considered available.
    * This value can be either a fixed number or, if the group has 10 or more instances, a
-   * percentage. If you set a percentage, the number of instances is rounded up if necessary. The
+   * percentage. If you set a percentage, the number of instances is rounded if necessary. The
    * default value for maxUnavailable is a fixed value equal to the number of zones in which the
    * managed instance group operates.
    *
@@ -198,7 +198,7 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    * instance's health check status must be HEALTHY at least once. If there is no health check on
    * the group, then the instance only needs to have a status of RUNNING to be considered available.
    * This value can be either a fixed number or, if the group has 10 or more instances, a
-   * percentage. If you set a percentage, the number of instances is rounded up if necessary. The
+   * percentage. If you set a percentage, the number of instances is rounded if necessary. The
    * default value for maxUnavailable is a fixed value equal to the number of zones in which the
    * managed instance group operates.
    *

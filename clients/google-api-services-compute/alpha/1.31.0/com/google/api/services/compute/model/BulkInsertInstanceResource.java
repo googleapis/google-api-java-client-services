@@ -100,8 +100,9 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.util.List<java.lang.String> predefinedNames;
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 50.
+   * DEPRECATED: Please use instance_properties.secure_tag instead. Secure tags to apply to this
+   * instance. These can be later modified by the update method. Maximum number of secure tags
+   * allowed is 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,8 +285,9 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 50.
+   * DEPRECATED: Please use instance_properties.secure_tag instead. Secure tags to apply to this
+   * instance. These can be later modified by the update method. Maximum number of secure tags
+   * allowed is 50.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSecureTags() {
@@ -293,8 +295,9 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Secure tags to apply to this instance. These can be later modified by the update method.
-   * Maximum number of secure tags allowed is 50.
+   * DEPRECATED: Please use instance_properties.secure_tag instead. Secure tags to apply to this
+   * instance. These can be later modified by the update method. Maximum number of secure tags
+   * allowed is 50.
    * @param secureTags secureTags or {@code null} for none
    */
   public BulkInsertInstanceResource setSecureTags(java.util.List<java.lang.String> secureTags) {

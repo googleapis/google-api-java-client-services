@@ -52,6 +52,15 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer availabilityDomain;
 
   /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer hostErrorTimeoutSeconds;
+
+  /**
    * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
    * instance creation, or when the instance is not currently running. It must not be set if the
    * preemptible option is also set.
@@ -164,6 +173,27 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHostErrorTimeoutSeconds() {
+    return hostErrorTimeoutSeconds;
+  }
+
+  /**
+   * Specify the time in seconds for host error detection, the value must be within the range of
+   * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
+   * be used.
+   * @param hostErrorTimeoutSeconds hostErrorTimeoutSeconds or {@code null} for none
+   */
+  public Scheduling setHostErrorTimeoutSeconds(java.lang.Integer hostErrorTimeoutSeconds) {
+    this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
     return this;
   }
 

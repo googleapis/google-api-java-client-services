@@ -49,7 +49,7 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
 
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
-   * the value is rounded UP. The instance is considered available if all of the following
+   * the value is rounded if necessary. The instance is considered available if all of the following
    * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
    * (in particular its liveness health check result was observed to be HEALTHY at least once as it
    * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM.
@@ -107,7 +107,7 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
 
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
-   * the value is rounded UP. The instance is considered available if all of the following
+   * the value is rounded if necessary. The instance is considered available if all of the following
    * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
    * (in particular its liveness health check result was observed to be HEALTHY at least once as it
    * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM.
@@ -124,7 +124,7 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
 
   /**
    * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used,
-   * the value is rounded UP. The instance is considered available if all of the following
+   * the value is rounded if necessary. The instance is considered available if all of the following
    * conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE
    * (in particular its liveness health check result was observed to be HEALTHY at least once as it
    * passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM.

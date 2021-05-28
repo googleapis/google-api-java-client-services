@@ -370,7 +370,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ownerNames;
 
   /**
-   * The owner(s) of this file. Not populated for items in shared drives.
+   * The owner of this file. Only certain legacy files may have more than one owner. This field
+   * isn't populated for items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1369,7 +1370,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The owner(s) of this file. Not populated for items in shared drives.
+   * The owner of this file. Only certain legacy files may have more than one owner. This field
+   * isn't populated for items in shared drives.
    * @return value or {@code null} for none
    */
   public java.util.List<User> getOwners() {
@@ -1377,7 +1379,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The owner(s) of this file. Not populated for items in shared drives.
+   * The owner of this file. Only certain legacy files may have more than one owner. This field
+   * isn't populated for items in shared drives.
    * @param owners owners or {@code null} for none
    */
   public File setOwners(java.util.List<User> owners) {

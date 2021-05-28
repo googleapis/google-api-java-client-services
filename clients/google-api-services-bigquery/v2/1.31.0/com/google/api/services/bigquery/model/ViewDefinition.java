@@ -37,6 +37,15 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   private java.lang.String query;
 
   /**
+   * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
+   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
+   * https://cloud.google.com/bigquery/sql-reference/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useExplicitColumnNames;
+
+  /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
    * to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-
    * reference/ Queries and views that reference this view must use the same flag value.
@@ -72,6 +81,27 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
    */
   public ViewDefinition setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
+   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
+   * https://cloud.google.com/bigquery/sql-reference/
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseExplicitColumnNames() {
+    return useExplicitColumnNames;
+  }
+
+  /**
+   * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1,
+   * c2) AS ...' syntax. Can only be set using BigQuery's standard SQL:
+   * https://cloud.google.com/bigquery/sql-reference/
+   * @param useExplicitColumnNames useExplicitColumnNames or {@code null} for none
+   */
+  public ViewDefinition setUseExplicitColumnNames(java.lang.Boolean useExplicitColumnNames) {
+    this.useExplicitColumnNames = useExplicitColumnNames;
     return this;
   }
 

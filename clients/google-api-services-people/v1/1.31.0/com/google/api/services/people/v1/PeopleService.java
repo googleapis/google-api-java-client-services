@@ -305,17 +305,24 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /** Required. The resource names of the contact groups to get. */
+      /**
+       * Required. The resource names of the contact groups to get. There is a maximum of 200
+       * resource names.
+       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** Required. The resource names of the contact groups to get.
+      /** Required. The resource names of the contact groups to get. There is a maximum of 200 resource
+     names.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
       }
 
-      /** Required. The resource names of the contact groups to get. */
+      /**
+       * Required. The resource names of the contact groups to get. There is a maximum of 200
+       * resource names.
+       */
       public BatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
         return this;
@@ -3061,8 +3068,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * authenticated user, specify `people/me`. - To get information about a google account,
        * specify `people/{account_id}`. - To get information about a contact, specify the resource
        * name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
-       * up to 200 resource names in one request.
+       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
+       * maximum of 200 resource names.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
@@ -3071,8 +3078,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      query parameter should be resourceNames==&... - To get information about the authenticated user,
      specify `people/me`. - To get information about a google account, specify `people/{account_id}`. -
      To get information about a contact, specify the resource name that identifies the contact as
-     returned by [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can
-     include up to 200 resource names in one request.
+     returned by [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
+     maximum of 200 resource names.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
@@ -3084,8 +3091,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * authenticated user, specify `people/me`. - To get information about a google account,
        * specify `people/{account_id}`. - To get information about a contact, specify the resource
        * name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
-       * up to 200 resource names in one request.
+       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
+       * maximum of 200 resource names.
        */
       public GetBatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;

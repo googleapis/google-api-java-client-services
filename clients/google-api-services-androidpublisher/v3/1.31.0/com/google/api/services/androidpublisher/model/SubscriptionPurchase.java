@@ -192,9 +192,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.Integer paymentState;
 
   /**
-   * Price of the subscription, not including tax. Price is expressed in micro-units, where
-   * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * Price of the subscription, For tax exclusive countries, the price doesn't include tax. For tax
+   * inclusive countries, the price includes tax. Price is expressed in micro-units, where 1,000,000
+   * micro-units represents one unit of the currency. For example, if the subscription price is
+   * €1.99, price_amount_micros is 1990000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -654,9 +655,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * Price of the subscription, not including tax. Price is expressed in micro-units, where
-   * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * Price of the subscription, For tax exclusive countries, the price doesn't include tax. For tax
+   * inclusive countries, the price includes tax. Price is expressed in micro-units, where 1,000,000
+   * micro-units represents one unit of the currency. For example, if the subscription price is
+   * €1.99, price_amount_micros is 1990000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriceAmountMicros() {
@@ -664,9 +666,10 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * Price of the subscription, not including tax. Price is expressed in micro-units, where
-   * 1,000,000 micro-units represents one unit of the currency. For example, if the subscription
-   * price is €1.99, price_amount_micros is 1990000.
+   * Price of the subscription, For tax exclusive countries, the price doesn't include tax. For tax
+   * inclusive countries, the price includes tax. Price is expressed in micro-units, where 1,000,000
+   * micro-units represents one unit of the currency. For example, if the subscription price is
+   * €1.99, price_amount_micros is 1990000.
    * @param priceAmountMicros priceAmountMicros or {@code null} for none
    */
   public SubscriptionPurchase setPriceAmountMicros(java.lang.Long priceAmountMicros) {

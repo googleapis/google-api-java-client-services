@@ -2010,6 +2010,152 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Reschedule maintenance for a given instance in a given project and location.
+         *
+         * Create a request for the method "instances.rescheduleMaintenance".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+         * @param content the {@link com.google.api.services.redis.v1.model.RescheduleMaintenanceRequest}
+         * @return the request
+         */
+        public RescheduleMaintenance rescheduleMaintenance(java.lang.String name, com.google.api.services.redis.v1.model.RescheduleMaintenanceRequest content) throws java.io.IOException {
+          RescheduleMaintenance result = new RescheduleMaintenance(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RescheduleMaintenance extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:rescheduleMaintenance";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Reschedule maintenance for a given instance in a given project and location.
+           *
+           * Create a request for the method "instances.rescheduleMaintenance".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+           * operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.service
+           * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+           * @param content the {@link com.google.api.services.redis.v1.model.RescheduleMaintenanceRequest}
+           * @since 1.13
+           */
+          protected RescheduleMaintenance(java.lang.String name, com.google.api.services.redis.v1.model.RescheduleMaintenanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
+            return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
+            return (RescheduleMaintenance) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setAlt(java.lang.String alt) {
+            return (RescheduleMaintenance) super.setAlt(alt);
+          }
+
+          @Override
+          public RescheduleMaintenance setCallback(java.lang.String callback) {
+            return (RescheduleMaintenance) super.setCallback(callback);
+          }
+
+          @Override
+          public RescheduleMaintenance setFields(java.lang.String fields) {
+            return (RescheduleMaintenance) super.setFields(fields);
+          }
+
+          @Override
+          public RescheduleMaintenance setKey(java.lang.String key) {
+            return (RescheduleMaintenance) super.setKey(key);
+          }
+
+          @Override
+          public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
+            return (RescheduleMaintenance) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
+            return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
+            return (RescheduleMaintenance) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public RescheduleMaintenance setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RescheduleMaintenance set(String parameterName, Object value) {
+            return (RescheduleMaintenance) super.set(parameterName, value);
+          }
+        }
+        /**
          * Upgrades Redis instance to the newer Redis version specified in the request.
          *
          * Create a request for the method "instances.upgrade".

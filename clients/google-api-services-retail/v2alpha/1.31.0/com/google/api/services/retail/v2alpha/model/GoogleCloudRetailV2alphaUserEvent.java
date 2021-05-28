@@ -170,14 +170,6 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private java.lang.String searchQuery;
 
   /**
-   * Represents the user sessions to aggregate user behavior within a time period. If not set,
-   * heuristics will be used to autogenerate one.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sessionId;
-
-  /**
    * Complete URL (window.location.href) of the user's current page. When using the client side
    * event reporting with JavaScript pixel and Google Tag Manager, this value is filled in
    * automatically. Maximum length 5,000 characters.
@@ -494,25 +486,6 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   public GoogleCloudRetailV2alphaUserEvent setSearchQuery(java.lang.String searchQuery) {
     this.searchQuery = searchQuery;
-    return this;
-  }
-
-  /**
-   * Represents the user sessions to aggregate user behavior within a time period. If not set,
-   * heuristics will be used to autogenerate one.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSessionId() {
-    return sessionId;
-  }
-
-  /**
-   * Represents the user sessions to aggregate user behavior within a time period. If not set,
-   * heuristics will be used to autogenerate one.
-   * @param sessionId sessionId or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaUserEvent setSessionId(java.lang.String sessionId) {
-    this.sessionId = sessionId;
     return this;
   }
 

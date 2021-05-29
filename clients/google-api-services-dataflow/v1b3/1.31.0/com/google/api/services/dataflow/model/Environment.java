@@ -56,7 +56,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of experiments to enable. This field should be used for SDK related experiments and
    * not for service related experiments. The proper field for service related experiments is
-   * service_options. For more details see the rationale at go/user-specified-service-options.
+   * service_options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
-   * fields or become default (i.e. always on). For more details see the rationale at go/user-
-   * specified-service-options.
+   * fields or become default (i.e. always on).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +231,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of experiments to enable. This field should be used for SDK related experiments and
    * not for service related experiments. The proper field for service related experiments is
-   * service_options. For more details see the rationale at go/user-specified-service-options.
+   * service_options.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExperiments() {
@@ -242,7 +241,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of experiments to enable. This field should be used for SDK related experiments and
    * not for service related experiments. The proper field for service related experiments is
-   * service_options. For more details see the rationale at go/user-specified-service-options.
+   * service_options.
    * @param experiments experiments or {@code null} for none
    */
   public Environment setExperiments(java.util.List<java.lang.String> experiments) {
@@ -346,8 +345,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
-   * fields or become default (i.e. always on). For more details see the rationale at go/user-
-   * specified-service-options.
+   * fields or become default (i.e. always on).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServiceOptions() {
@@ -357,8 +355,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
-   * fields or become default (i.e. always on). For more details see the rationale at go/user-
-   * specified-service-options.
+   * fields or become default (i.e. always on).
    * @param serviceOptions serviceOptions or {@code null} for none
    */
   public Environment setServiceOptions(java.util.List<java.lang.String> serviceOptions) {

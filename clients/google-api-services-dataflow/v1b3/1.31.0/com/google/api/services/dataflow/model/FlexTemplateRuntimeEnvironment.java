@@ -106,6 +106,14 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.Integer numWorkers;
 
   /**
+   * Docker registry location of container image to use for the 'worker harness. Default is the
+   * container for the version of the SDK. Note this field is only valid for portable pipelines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sdkContainerImage;
+
+  /**
    * The email address of the service account to run the job as.
    * The value may be {@code null}.
    */
@@ -347,6 +355,25 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setNumWorkers(java.lang.Integer numWorkers) {
     this.numWorkers = numWorkers;
+    return this;
+  }
+
+  /**
+   * Docker registry location of container image to use for the 'worker harness. Default is the
+   * container for the version of the SDK. Note this field is only valid for portable pipelines.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSdkContainerImage() {
+    return sdkContainerImage;
+  }
+
+  /**
+   * Docker registry location of container image to use for the 'worker harness. Default is the
+   * container for the version of the SDK. Note this field is only valid for portable pipelines.
+   * @param sdkContainerImage sdkContainerImage or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setSdkContainerImage(java.lang.String sdkContainerImage) {
+    this.sdkContainerImage = sdkContainerImage;
     return this;
   }
 

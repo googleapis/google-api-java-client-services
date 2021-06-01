@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-ideahub",
+    "version": "v1alpha-rev20210528-1.31.0"
+  }
+}

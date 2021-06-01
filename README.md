@@ -174,6 +174,7 @@ packages on [Maven Central][maven-search].
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | HomeGraph API | [v1](clients/google-api-services-homegraph/v1) |
 | IAM Service Account Credentials API | [v1](clients/google-api-services-iamcredentials/v1) |
+| Idea Hub API | [v1alpha](clients/google-api-services-ideahub/v1alpha) |
 | Identity and Access Management (IAM) API | [v1](clients/google-api-services-iam/v1) |
 | Indexing API | [v3](clients/google-api-services-indexing/v3) |
 | Knowledge Graph Search API | [v1](clients/google-api-services-kgsearch/v1) |

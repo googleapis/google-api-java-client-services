@@ -358,6 +358,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String link;
 
   /**
+   * Link template for merchant hosted local storefront.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkTemplate;
+
+  /**
    * Loyalty points that users receive after purchasing the item. Japan only.
    * The value may be {@code null}.
    */
@@ -407,6 +414,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String mobileLink;
 
   /**
+   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mobileLinkTemplate;
+
+  /**
    * Manufacturer Part Number (MPN) of the item.
    * The value may be {@code null}.
    */
@@ -436,6 +450,22 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String pattern;
+
+  /**
+   * The pick up option for the item. Acceptable values are: - "`buy`" - "`reserve`" - "`ship to
+   * store`" - "`not supported`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pickupMethod;
+
+  /**
+   * Item store pickup timeline. Acceptable values are: - "`same day`" - "`next day`" - "`2-day`" -
+   * "`3-day`" - "`4-day`" - "`5-day`" - "`6-day`" - "`7-day`" - "`multi-week`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pickupSla;
 
   /**
    * Price of the item.
@@ -1401,6 +1431,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link template for merchant hosted local storefront.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkTemplate() {
+    return linkTemplate;
+  }
+
+  /**
+   * Link template for merchant hosted local storefront.
+   * @param linkTemplate linkTemplate or {@code null} for none
+   */
+  public Product setLinkTemplate(java.lang.String linkTemplate) {
+    this.linkTemplate = linkTemplate;
+    return this;
+  }
+
+  /**
    * Loyalty points that users receive after purchasing the item. Japan only.
    * @return value or {@code null} for none
    */
@@ -1520,6 +1567,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMobileLinkTemplate() {
+    return mobileLinkTemplate;
+  }
+
+  /**
+   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * @param mobileLinkTemplate mobileLinkTemplate or {@code null} for none
+   */
+  public Product setMobileLinkTemplate(java.lang.String mobileLinkTemplate) {
+    this.mobileLinkTemplate = mobileLinkTemplate;
+    return this;
+  }
+
+  /**
    * Manufacturer Part Number (MPN) of the item.
    * @return value or {@code null} for none
    */
@@ -1590,6 +1654,44 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setPattern(java.lang.String pattern) {
     this.pattern = pattern;
+    return this;
+  }
+
+  /**
+   * The pick up option for the item. Acceptable values are: - "`buy`" - "`reserve`" - "`ship to
+   * store`" - "`not supported`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPickupMethod() {
+    return pickupMethod;
+  }
+
+  /**
+   * The pick up option for the item. Acceptable values are: - "`buy`" - "`reserve`" - "`ship to
+   * store`" - "`not supported`"
+   * @param pickupMethod pickupMethod or {@code null} for none
+   */
+  public Product setPickupMethod(java.lang.String pickupMethod) {
+    this.pickupMethod = pickupMethod;
+    return this;
+  }
+
+  /**
+   * Item store pickup timeline. Acceptable values are: - "`same day`" - "`next day`" - "`2-day`" -
+   * "`3-day`" - "`4-day`" - "`5-day`" - "`6-day`" - "`7-day`" - "`multi-week`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPickupSla() {
+    return pickupSla;
+  }
+
+  /**
+   * Item store pickup timeline. Acceptable values are: - "`same day`" - "`next day`" - "`2-day`" -
+   * "`3-day`" - "`4-day`" - "`5-day`" - "`6-day`" - "`7-day`" - "`multi-week`"
+   * @param pickupSla pickupSla or {@code null} for none
+   */
+  public Product setPickupSla(java.lang.String pickupSla) {
+    this.pickupSla = pickupSla;
     return this;
   }
 

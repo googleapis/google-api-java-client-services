@@ -48,7 +48,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean agreedToTerms;
 
   /**
-   * Output only. List of the user's alias email addresses.
+   * Output only. A list of the user's alias email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,7 +429,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of the user's alias email addresses.
+   * Output only. A list of the user's alias email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAliases() {
@@ -437,7 +437,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. List of the user's alias email addresses.
+   * Output only. A list of the user's alias email addresses.
    * @param aliases aliases or {@code null} for none
    */
   public User setAliases(java.util.List<java.lang.String> aliases) {

@@ -115,6 +115,13 @@ public final class NativeContent extends com.google.api.client.json.GenericJson 
   private java.lang.String videoUrl;
 
   /**
+   * The contents of a VAST document for a native video ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoVastXml;
+
+  /**
    * The name of the advertiser or sponsor, to be displayed in the ad creative.
    * @return value or {@code null} for none
    */
@@ -315,6 +322,23 @@ public final class NativeContent extends com.google.api.client.json.GenericJson 
    */
   public NativeContent setVideoUrl(java.lang.String videoUrl) {
     this.videoUrl = videoUrl;
+    return this;
+  }
+
+  /**
+   * The contents of a VAST document for a native video ad.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoVastXml() {
+    return videoVastXml;
+  }
+
+  /**
+   * The contents of a VAST document for a native video ad.
+   * @param videoVastXml videoVastXml or {@code null} for none
+   */
+  public NativeContent setVideoVastXml(java.lang.String videoVastXml) {
+    this.videoVastXml = videoVastXml;
     return this;
   }
 

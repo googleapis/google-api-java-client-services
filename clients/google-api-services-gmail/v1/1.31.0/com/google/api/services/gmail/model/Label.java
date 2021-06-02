@@ -17,7 +17,8 @@
 package com.google.api.services.gmail.model;
 
 /**
- * Labels are used to categorize messages and threads within the user's mailbox.
+ * Labels are used to categorize messages and threads within the user's mailbox. The maximum number
+ * of labels supported for a user's mailbox is 10,000.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:

@@ -72,10 +72,11 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean italic;
 
   /**
-   * The link destination of the text, if any. Setting a link in a format run will clear an existing
-   * cell-level link. When a link is set, the text foreground color will be set to the default link
-   * color and the text will be underlined. If these fields are modified in the same request, those
-   * values will be used instead of the link defaults.
+   * The link destination of the text, if any. Setting the link field in a TextFormatRun will clear
+   * the cell's existing links or a cell-level link set in the same request. When a link is set, the
+   * text foreground color will be set to the default link color and the text will be underlined. If
+   * these fields are modified in the same request, those values will be used instead of the link
+   * defaults.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,10 +199,11 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The link destination of the text, if any. Setting a link in a format run will clear an existing
-   * cell-level link. When a link is set, the text foreground color will be set to the default link
-   * color and the text will be underlined. If these fields are modified in the same request, those
-   * values will be used instead of the link defaults.
+   * The link destination of the text, if any. Setting the link field in a TextFormatRun will clear
+   * the cell's existing links or a cell-level link set in the same request. When a link is set, the
+   * text foreground color will be set to the default link color and the text will be underlined. If
+   * these fields are modified in the same request, those values will be used instead of the link
+   * defaults.
    * @return value or {@code null} for none
    */
   public Link getLink() {
@@ -209,10 +211,11 @@ public final class TextFormat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The link destination of the text, if any. Setting a link in a format run will clear an existing
-   * cell-level link. When a link is set, the text foreground color will be set to the default link
-   * color and the text will be underlined. If these fields are modified in the same request, those
-   * values will be used instead of the link defaults.
+   * The link destination of the text, if any. Setting the link field in a TextFormatRun will clear
+   * the cell's existing links or a cell-level link set in the same request. When a link is set, the
+   * text foreground color will be set to the default link color and the text will be underlined. If
+   * these fields are modified in the same request, those values will be used instead of the link
+   * defaults.
    * @param link link or {@code null} for none
    */
   public TextFormat setLink(Link link) {

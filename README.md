@@ -53,7 +53,7 @@ packages on [Maven Central][maven-search].
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
 | Campaign Manager 360 API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4), [v3.5](clients/google-api-services-dfareporting/v3.5) |
-| Certificate Authority API | [v1beta1](clients/google-api-services-privateca/v1beta1) |
+| Certificate Authority API | [v1](clients/google-api-services-privateca/v1), [v1beta1](clients/google-api-services-privateca/v1beta1) |
 | Chrome Management API | [v1](clients/google-api-services-chromemanagement/v1) |
 | Chrome Policy API | [v1](clients/google-api-services-chromepolicy/v1) |
 | Chrome UX Report API | [v1](clients/google-api-services-chromeuxreport/v1) |

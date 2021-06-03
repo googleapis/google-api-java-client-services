@@ -58,6 +58,13 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String diskType;
 
   /**
+   * The image type to use for NAP created node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageType;
+
+  /**
    * Specifies the node management options for NAP created node-pools.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    */
   public AutoprovisioningNodePoolDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * The image type to use for NAP created node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageType() {
+    return imageType;
+  }
+
+  /**
+   * The image type to use for NAP created node.
+   * @param imageType imageType or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setImageType(java.lang.String imageType) {
+    this.imageType = imageType;
     return this;
   }
 

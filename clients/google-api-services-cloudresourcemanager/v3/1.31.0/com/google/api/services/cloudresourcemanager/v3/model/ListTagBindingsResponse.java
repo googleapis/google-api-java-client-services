@@ -42,7 +42,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
   private java.lang.String nextPageToken;
 
   /**
-   * A possibly paginated list of TagBindings for the specified TagValue or resource.
+   * A possibly paginated list of TagBindings for the specified resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A possibly paginated list of TagBindings for the specified TagValue or resource.
+   * A possibly paginated list of TagBindings for the specified resource.
    * @return value or {@code null} for none
    */
   public java.util.List<TagBinding> getTagBindings() {
@@ -82,7 +82,7 @@ public final class ListTagBindingsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A possibly paginated list of TagBindings for the specified TagValue or resource.
+   * A possibly paginated list of TagBindings for the specified resource.
    * @param tagBindings tagBindings or {@code null} for none
    */
   public ListTagBindingsResponse setTagBindings(java.util.List<TagBinding> tagBindings) {

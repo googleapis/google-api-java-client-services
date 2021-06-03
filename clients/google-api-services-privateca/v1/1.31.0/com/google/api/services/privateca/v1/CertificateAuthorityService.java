@@ -534,6 +534,663 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
       public class CaPools {
 
         /**
+         * Create a CaPool.
+         *
+         * Create a request for the method "caPools.create".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the CaPool, in the format
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.privateca.v1.model.CaPool content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/caPools";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a CaPool.
+           *
+           * Create a request for the method "caPools.create".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the CaPool, in the format
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.privateca.v1.model.CaPool content) {
+            super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CaPool, in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the CaPool, in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CaPool, in the format
+           * `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String caPoolId;
+
+          /** Required. It must be unique within a location and match the regular expression
+         `[a-zA-Z0-9_-]{1,63}`
+           */
+          public java.lang.String getCaPoolId() {
+            return caPoolId;
+          }
+
+          /**
+           * Required. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`
+           */
+          public Create setCaPoolId(java.lang.String caPoolId) {
+            this.caPoolId = caPoolId;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a CaPool.
+         *
+         * Create a request for the method "caPools.delete".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name for this CaPool in the format `projects/locations/caPools`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+          /**
+           * Delete a CaPool.
+           *
+           * Create a request for the method "caPools.delete".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name for this CaPool in the format `projects/locations/caPools`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CertificateAuthorityService.this, "DELETE", REST_PATH, null, com.google.api.services.privateca.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name for this CaPool in the format `projects/locations/caPools`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name for this CaPool in the format `projects/locations/caPools`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name for this CaPool in the format `projects/locations/caPools`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
+         * chains for all ACTIVE CertificateAuthority resources in the CaPool.
+         *
+         * Create a request for the method "caPools.fetchCaCerts".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link FetchCaCerts#execute()} method to invoke the remote operation.
+         *
+         * @param caPool Required. The resource name for the CaPool in the format `projects/locations/caPools`.
+         * @param content the {@link com.google.api.services.privateca.v1.model.FetchCaCertsRequest}
+         * @return the request
+         */
+        public FetchCaCerts fetchCaCerts(java.lang.String caPool, com.google.api.services.privateca.v1.model.FetchCaCertsRequest content) throws java.io.IOException {
+          FetchCaCerts result = new FetchCaCerts(caPool, content);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchCaCerts extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.FetchCaCertsResponse> {
+
+          private static final String REST_PATH = "v1/{+caPool}:fetchCaCerts";
+
+          private final java.util.regex.Pattern CA_POOL_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+          /**
+           * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
+           * chains for all ACTIVE CertificateAuthority resources in the CaPool.
+           *
+           * Create a request for the method "caPools.fetchCaCerts".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link FetchCaCerts#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * FetchCaCerts#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param caPool Required. The resource name for the CaPool in the format `projects/locations/caPools`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.FetchCaCertsRequest}
+           * @since 1.13
+           */
+          protected FetchCaCerts(java.lang.String caPool, com.google.api.services.privateca.v1.model.FetchCaCertsRequest content) {
+            super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.FetchCaCertsResponse.class);
+            this.caPool = com.google.api.client.util.Preconditions.checkNotNull(caPool, "Required parameter caPool must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CA_POOL_PATTERN.matcher(caPool).matches(),
+                  "Parameter caPool must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public FetchCaCerts set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchCaCerts) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchCaCerts setAccessToken(java.lang.String accessToken) {
+            return (FetchCaCerts) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchCaCerts setAlt(java.lang.String alt) {
+            return (FetchCaCerts) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchCaCerts setCallback(java.lang.String callback) {
+            return (FetchCaCerts) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchCaCerts setFields(java.lang.String fields) {
+            return (FetchCaCerts) super.setFields(fields);
+          }
+
+          @Override
+          public FetchCaCerts setKey(java.lang.String key) {
+            return (FetchCaCerts) super.setKey(key);
+          }
+
+          @Override
+          public FetchCaCerts setOauthToken(java.lang.String oauthToken) {
+            return (FetchCaCerts) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchCaCerts setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchCaCerts) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchCaCerts setQuotaUser(java.lang.String quotaUser) {
+            return (FetchCaCerts) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchCaCerts setUploadType(java.lang.String uploadType) {
+            return (FetchCaCerts) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchCaCerts setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchCaCerts) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name for the CaPool in the format `projects/locations/caPools`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String caPool;
+
+          /** Required. The resource name for the CaPool in the format `projects/locations/caPools`.
+           */
+          public java.lang.String getCaPool() {
+            return caPool;
+          }
+
+          /**
+           * Required. The resource name for the CaPool in the format `projects/locations/caPools`.
+           */
+          public FetchCaCerts setCaPool(java.lang.String caPool) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CA_POOL_PATTERN.matcher(caPool).matches(),
+                  "Parameter caPool must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+            this.caPool = caPool;
+            return this;
+          }
+
+          @Override
+          public FetchCaCerts set(String parameterName, Object value) {
+            return (FetchCaCerts) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a CaPool.
+         *
+         * Create a request for the method "caPools.get".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the CaPool to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.CaPool> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+          /**
+           * Returns a CaPool.
+           *
+           * Create a request for the method "caPools.get".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the CaPool to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.CaPool.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the CaPool to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the CaPool to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the CaPool to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -715,6 +1372,427 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists CaPools.
+         *
+         * Create a request for the method "caPools.list".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the CaPools, in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.ListCaPoolsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/caPools";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists CaPools.
+           *
+           * Create a request for the method "caPools.list".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the CaPools, in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.ListCaPoolsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CaPools, in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the CaPools, in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CaPools, in the format
+           * `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Only include resources that match the filter in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Only include resources that match the filter in the response.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Only include resources that match the filter in the response. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Specify how the results should be sorted. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Specify how the results should be sorted.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Specify how the results should be sorted. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Limit on the number of CaPools to include in the response. Further CaPools
+           * can subsequently be obtained by including the ListCaPoolsResponse.next_page_token in a
+           * subsequent request. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Limit on the number of CaPools to include in the response. Further CaPools can
+         subsequently be obtained by including the ListCaPoolsResponse.next_page_token in a subsequent
+         request. If unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Limit on the number of CaPools to include in the response. Further CaPools
+           * can subsequently be obtained by including the ListCaPoolsResponse.next_page_token in a
+           * subsequent request. If unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via ListCaPoolsResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Pagination token, returned earlier via ListCaPoolsResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via ListCaPoolsResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a CaPool.
+         *
+         * Create a request for the method "caPools.patch".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+         * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.privateca.v1.model.CaPool content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+          /**
+           * Update a CaPool.
+           *
+           * Create a request for the method "caPools.patch".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.privateca.v1.model.CaPool content) {
+            super(CertificateAuthorityService.this, "PATCH", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The resource name for this CaPool in the format
+           * `projects/locations/caPools`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The resource name for this CaPool in the format
+           * `projects/locations/caPools`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Required. A list of fields to be updated in this request. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A list of fields to be updated in this request.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. A list of fields to be updated in this request. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -1027,6 +2105,1703 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
         public class CertificateAuthorities {
 
           /**
+           * Activate a CertificateAuthority that is in state AWAITING_USER_ACTIVATION and is of type
+           * SUBORDINATE. After the parent Certificate Authority signs a certificate signing request from
+           * FetchCertificateAuthorityCsr, this method can complete the activation process.
+           *
+           * Create a request for the method "certificateAuthorities.activate".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.ActivateCertificateAuthorityRequest}
+           * @return the request
+           */
+          public Activate activate(java.lang.String name, com.google.api.services.privateca.v1.model.ActivateCertificateAuthorityRequest content) throws java.io.IOException {
+            Activate result = new Activate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Activate extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:activate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Activate a CertificateAuthority that is in state AWAITING_USER_ACTIVATION and is of type
+             * SUBORDINATE. After the parent Certificate Authority signs a certificate signing request from
+             * FetchCertificateAuthorityCsr, this method can complete the activation process.
+             *
+             * Create a request for the method "certificateAuthorities.activate".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.ActivateCertificateAuthorityRequest}
+             * @since 1.13
+             */
+            protected Activate(java.lang.String name, com.google.api.services.privateca.v1.model.ActivateCertificateAuthorityRequest content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Activate set$Xgafv(java.lang.String $Xgafv) {
+              return (Activate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Activate setAccessToken(java.lang.String accessToken) {
+              return (Activate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Activate setAlt(java.lang.String alt) {
+              return (Activate) super.setAlt(alt);
+            }
+
+            @Override
+            public Activate setCallback(java.lang.String callback) {
+              return (Activate) super.setCallback(callback);
+            }
+
+            @Override
+            public Activate setFields(java.lang.String fields) {
+              return (Activate) super.setFields(fields);
+            }
+
+            @Override
+            public Activate setKey(java.lang.String key) {
+              return (Activate) super.setKey(key);
+            }
+
+            @Override
+            public Activate setOauthToken(java.lang.String oauthToken) {
+              return (Activate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Activate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Activate setQuotaUser(java.lang.String quotaUser) {
+              return (Activate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Activate setUploadType(java.lang.String uploadType) {
+              return (Activate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Activate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Activate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Activate set(String parameterName, Object value) {
+              return (Activate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Create a new CertificateAuthority in a given Project and Location.
+           *
+           * Create a request for the method "certificateAuthorities.create".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           *        `projects/locations/caPools`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.privateca.v1.model.CertificateAuthority content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/certificateAuthorities";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+            /**
+             * Create a new CertificateAuthority in a given Project and Location.
+             *
+             * Create a request for the method "certificateAuthorities.create".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           *        `projects/locations/caPools`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.privateca.v1.model.CertificateAuthority content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the CertificateAuthorities,
+             * in the format `projects/locations/caPools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           `projects/locations/caPools`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the CertificateAuthorities,
+             * in the format `projects/locations/caPools`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String certificateAuthorityId;
+
+            /** Required. It must be unique within a location and match the regular expression
+           `[a-zA-Z0-9_-]{1,63}`
+             */
+            public java.lang.String getCertificateAuthorityId() {
+              return certificateAuthorityId;
+            }
+
+            /**
+             * Required. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`
+             */
+            public Create setCertificateAuthorityId(java.lang.String certificateAuthorityId) {
+              this.certificateAuthorityId = certificateAuthorityId;
+              return this;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+           request, the server will know to ignore the request if it has already been completed. The server
+           will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and t he request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Delete a CertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.delete".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Delete a CertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.delete".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CertificateAuthorityService.this, "DELETE", REST_PATH, null, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. This field allows the CA to be deleted even if the CA has active certs.
+             * Active certs include both unrevoked and unexpired certs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean ignoreActiveCertificates;
+
+            /** Optional. This field allows the CA to be deleted even if the CA has active certs. Active certs
+           include both unrevoked and unexpired certs.
+             */
+            public java.lang.Boolean getIgnoreActiveCertificates() {
+              return ignoreActiveCertificates;
+            }
+
+            /**
+             * Optional. This field allows the CA to be deleted even if the CA has active certs.
+             * Active certs include both unrevoked and unexpired certs.
+             */
+            public Delete setIgnoreActiveCertificates(java.lang.Boolean ignoreActiveCertificates) {
+              this.ignoreActiveCertificates = ignoreActiveCertificates;
+              return this;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+           request, the server will know to ignore the request if it has already been completed. The server
+           will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and t he request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Disable a CertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.disable".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.DisableCertificateAuthorityRequest}
+           * @return the request
+           */
+          public Disable disable(java.lang.String name, com.google.api.services.privateca.v1.model.DisableCertificateAuthorityRequest content) throws java.io.IOException {
+            Disable result = new Disable(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Disable extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:disable";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Disable a CertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.disable".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.DisableCertificateAuthorityRequest}
+             * @since 1.13
+             */
+            protected Disable(java.lang.String name, com.google.api.services.privateca.v1.model.DisableCertificateAuthorityRequest content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Disable set$Xgafv(java.lang.String $Xgafv) {
+              return (Disable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Disable setAccessToken(java.lang.String accessToken) {
+              return (Disable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Disable setAlt(java.lang.String alt) {
+              return (Disable) super.setAlt(alt);
+            }
+
+            @Override
+            public Disable setCallback(java.lang.String callback) {
+              return (Disable) super.setCallback(callback);
+            }
+
+            @Override
+            public Disable setFields(java.lang.String fields) {
+              return (Disable) super.setFields(fields);
+            }
+
+            @Override
+            public Disable setKey(java.lang.String key) {
+              return (Disable) super.setKey(key);
+            }
+
+            @Override
+            public Disable setOauthToken(java.lang.String oauthToken) {
+              return (Disable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Disable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Disable setQuotaUser(java.lang.String quotaUser) {
+              return (Disable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Disable setUploadType(java.lang.String uploadType) {
+              return (Disable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Disable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Disable setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Disable set(String parameterName, Object value) {
+              return (Disable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Enable a CertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.enable".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.EnableCertificateAuthorityRequest}
+           * @return the request
+           */
+          public Enable enable(java.lang.String name, com.google.api.services.privateca.v1.model.EnableCertificateAuthorityRequest content) throws java.io.IOException {
+            Enable result = new Enable(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Enable extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:enable";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Enable a CertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.enable".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.EnableCertificateAuthorityRequest}
+             * @since 1.13
+             */
+            protected Enable(java.lang.String name, com.google.api.services.privateca.v1.model.EnableCertificateAuthorityRequest content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Enable set$Xgafv(java.lang.String $Xgafv) {
+              return (Enable) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Enable setAccessToken(java.lang.String accessToken) {
+              return (Enable) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Enable setAlt(java.lang.String alt) {
+              return (Enable) super.setAlt(alt);
+            }
+
+            @Override
+            public Enable setCallback(java.lang.String callback) {
+              return (Enable) super.setCallback(callback);
+            }
+
+            @Override
+            public Enable setFields(java.lang.String fields) {
+              return (Enable) super.setFields(fields);
+            }
+
+            @Override
+            public Enable setKey(java.lang.String key) {
+              return (Enable) super.setKey(key);
+            }
+
+            @Override
+            public Enable setOauthToken(java.lang.String oauthToken) {
+              return (Enable) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Enable) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Enable setQuotaUser(java.lang.String quotaUser) {
+              return (Enable) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Enable setUploadType(java.lang.String uploadType) {
+              return (Enable) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Enable) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Enable setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Enable set(String parameterName, Object value) {
+              return (Enable) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch a certificate signing request (CSR) from a CertificateAuthority that is in state
+           * AWAITING_USER_ACTIVATION and is of type SUBORDINATE. The CSR must then be signed by the desired
+           * parent Certificate Authority, which could be another CertificateAuthority resource, or could be
+           * an on-prem certificate authority. See also ActivateCertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.fetch".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @return the request
+           */
+          public Fetch fetch(java.lang.String name) throws java.io.IOException {
+            Fetch result = new Fetch(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Fetch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.FetchCertificateAuthorityCsrResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetch";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Fetch a certificate signing request (CSR) from a CertificateAuthority that is in state
+             * AWAITING_USER_ACTIVATION and is of type SUBORDINATE. The CSR must then be signed by the desired
+             * parent Certificate Authority, which could be another CertificateAuthority resource, or could be
+             * an on-prem certificate authority. See also ActivateCertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.fetch".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @since 1.13
+             */
+            protected Fetch(java.lang.String name) {
+              super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.FetchCertificateAuthorityCsrResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Fetch set$Xgafv(java.lang.String $Xgafv) {
+              return (Fetch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Fetch setAccessToken(java.lang.String accessToken) {
+              return (Fetch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Fetch setAlt(java.lang.String alt) {
+              return (Fetch) super.setAlt(alt);
+            }
+
+            @Override
+            public Fetch setCallback(java.lang.String callback) {
+              return (Fetch) super.setCallback(callback);
+            }
+
+            @Override
+            public Fetch setFields(java.lang.String fields) {
+              return (Fetch) super.setFields(fields);
+            }
+
+            @Override
+            public Fetch setKey(java.lang.String key) {
+              return (Fetch) super.setKey(key);
+            }
+
+            @Override
+            public Fetch setOauthToken(java.lang.String oauthToken) {
+              return (Fetch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Fetch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Fetch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Fetch setQuotaUser(java.lang.String quotaUser) {
+              return (Fetch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Fetch setUploadType(java.lang.String uploadType) {
+              return (Fetch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Fetch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Fetch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Fetch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Fetch set(String parameterName, Object value) {
+              return (Fetch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns a CertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.get".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the CertificateAuthority to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.CertificateAuthority> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Returns a CertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.get".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the CertificateAuthority to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.CertificateAuthority.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the CertificateAuthority to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the CertificateAuthority to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the CertificateAuthority to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists CertificateAuthorities.
+           *
+           * Create a request for the method "certificateAuthorities.list".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           *        `projects/locations/caPools`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.ListCertificateAuthoritiesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/certificateAuthorities";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+            /**
+             * Lists CertificateAuthorities.
+             *
+             * Create a request for the method "certificateAuthorities.list".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           *        `projects/locations/caPools`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.ListCertificateAuthoritiesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the CertificateAuthorities,
+             * in the format `projects/locations/caPools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the CaPool associated with the CertificateAuthorities, in the format
+           `projects/locations/caPools`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the CertificateAuthorities,
+             * in the format `projects/locations/caPools`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Only include resources that match the filter in the response. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Only include resources that match the filter in the response.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Only include resources that match the filter in the response. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Specify how the results should be sorted. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specify how the results should be sorted.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Specify how the results should be sorted. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Limit on the number of CertificateAuthorities to include in the response.
+             * Further CertificateAuthorities can subsequently be obtained by including the
+             * ListCertificateAuthoritiesResponse.next_page_token in a subsequent request. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Limit on the number of CertificateAuthorities to include in the response. Further
+           CertificateAuthorities can subsequently be obtained by including the
+           ListCertificateAuthoritiesResponse.next_page_token in a subsequent request. If unspecified, the
+           server will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Limit on the number of CertificateAuthorities to include in the response.
+             * Further CertificateAuthorities can subsequently be obtained by including the
+             * ListCertificateAuthoritiesResponse.next_page_token in a subsequent request. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListCertificateAuthoritiesResponse.next_page_token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Pagination token, returned earlier via
+           ListCertificateAuthoritiesResponse.next_page_token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListCertificateAuthoritiesResponse.next_page_token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update a CertificateAuthority.
+           *
+           * Create a request for the method "certificateAuthorities.patch".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateAuthority content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Update a CertificateAuthority.
+             *
+             * Create a request for the method "certificateAuthorities.patch".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateAuthority content) {
+              super(CertificateAuthorityService.this, "PATCH", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+           request, the server will know to ignore the request if it has already been completed. The server
+           will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and t he request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /** Required. A list of fields to be updated in this request. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. A list of fields to be updated in this request.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. A list of fields to be updated in this request. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Undelete a CertificateAuthority that has been deleted.
+           *
+           * Create a request for the method "certificateAuthorities.undelete".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.UndeleteCertificateAuthorityRequest}
+           * @return the request
+           */
+          public Undelete undelete(java.lang.String name, com.google.api.services.privateca.v1.model.UndeleteCertificateAuthorityRequest content) throws java.io.IOException {
+            Undelete result = new Undelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Undelete extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:undelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+            /**
+             * Undelete a CertificateAuthority that has been deleted.
+             *
+             * Create a request for the method "certificateAuthorities.undelete".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this CertificateAuthority in the format
+           *        `projects/locations/caPools/certificateAuthorities`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.UndeleteCertificateAuthorityRequest}
+             * @since 1.13
+             */
+            protected Undelete(java.lang.String name, com.google.api.services.privateca.v1.model.UndeleteCertificateAuthorityRequest content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+            }
+
+            @Override
+            public Undelete set$Xgafv(java.lang.String $Xgafv) {
+              return (Undelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Undelete setAccessToken(java.lang.String accessToken) {
+              return (Undelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Undelete setAlt(java.lang.String alt) {
+              return (Undelete) super.setAlt(alt);
+            }
+
+            @Override
+            public Undelete setCallback(java.lang.String callback) {
+              return (Undelete) super.setCallback(callback);
+            }
+
+            @Override
+            public Undelete setFields(java.lang.String fields) {
+              return (Undelete) super.setFields(fields);
+            }
+
+            @Override
+            public Undelete setKey(java.lang.String key) {
+              return (Undelete) super.setKey(key);
+            }
+
+            @Override
+            public Undelete setOauthToken(java.lang.String oauthToken) {
+              return (Undelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Undelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Undelete setQuotaUser(java.lang.String quotaUser) {
+              return (Undelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Undelete setUploadType(java.lang.String uploadType) {
+              return (Undelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Undelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this CertificateAuthority in the format
+           `projects/locations/caPools/certificateAuthorities`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
+             */
+            public Undelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Undelete set(String parameterName, Object value) {
+              return (Undelete) super.set(parameterName, value);
+            }
+          }
+
+          /**
            * An accessor for creating requests from the CertificateRevocationLists collection.
            *
            * <p>The typical use is:</p>
@@ -1046,6 +3821,144 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            */
           public class CertificateRevocationLists {
 
+            /**
+             * Returns a CertificateRevocationList.
+             *
+             * Create a request for the method "certificateRevocationLists.get".
+             *
+             * This request holds the parameters needed by the privateca server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the CertificateRevocationList to get.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.CertificateRevocationList> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+
+              /**
+               * Returns a CertificateRevocationList.
+               *
+               * Create a request for the method "certificateRevocationLists.get".
+               *
+               * This request holds the parameters needed by the the privateca server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the CertificateRevocationList to get.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.CertificateRevocationList.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the CertificateRevocationList to get. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the CertificateRevocationList to get.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the CertificateRevocationList to get. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
             /**
              * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
              * does not have a policy set.
@@ -1228,6 +4141,440 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
               @Override
               public GetIamPolicy set(String parameterName, Object value) {
                 return (GetIamPolicy) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists CertificateRevocationLists.
+             *
+             * Create a request for the method "certificateRevocationLists.list".
+             *
+             * This request holds the parameters needed by the privateca server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the location associated with the CertificateRevocationLists, in the
+             *        format `projects/locations/caPools/certificateAuthorities`.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.ListCertificateRevocationListsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/certificateRevocationLists";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+
+              /**
+               * Lists CertificateRevocationLists.
+               *
+               * Create a request for the method "certificateRevocationLists.list".
+               *
+               * This request holds the parameters needed by the the privateca server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the location associated with the CertificateRevocationLists, in the
+             *        format `projects/locations/caPools/certificateAuthorities`.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.ListCertificateRevocationListsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the location associated with the
+               * CertificateRevocationLists, in the format
+               * `projects/locations/caPools/certificateAuthorities`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the location associated with the CertificateRevocationLists, in the
+             format `projects/locations/caPools/certificateAuthorities`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the location associated with the
+               * CertificateRevocationLists, in the format
+               * `projects/locations/caPools/certificateAuthorities`.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Optional. Only include resources that match the filter in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Only include resources that match the filter in the response.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Optional. Only include resources that match the filter in the response. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** Optional. Specify how the results should be sorted. */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Specify how the results should be sorted.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Optional. Specify how the results should be sorted. */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of CertificateRevocationLists to include in the
+               * response. Further CertificateRevocationLists can subsequently be obtained by
+               * including the ListCertificateRevocationListsResponse.next_page_token in a
+               * subsequent request. If unspecified, the server will pick an appropriate default.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of CertificateRevocationLists to include in the response. Further
+             CertificateRevocationLists can subsequently be obtained by including the
+             ListCertificateRevocationListsResponse.next_page_token in a subsequent request. If unspecified, the
+             server will pick an appropriate default.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of CertificateRevocationLists to include in the
+               * response. Further CertificateRevocationLists can subsequently be obtained by
+               * including the ListCertificateRevocationListsResponse.next_page_token in a
+               * subsequent request. If unspecified, the server will pick an appropriate default.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. Pagination token, returned earlier via
+               * ListCertificateRevocationListsResponse.next_page_token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. Pagination token, returned earlier via
+             ListCertificateRevocationListsResponse.next_page_token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. Pagination token, returned earlier via
+               * ListCertificateRevocationListsResponse.next_page_token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update a CertificateRevocationList.
+             *
+             * Create a request for the method "certificateRevocationLists.patch".
+             *
+             * This request holds the parameters needed by the privateca server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Output only. The resource name for this CertificateRevocationList in the format
+             *        `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.CertificateRevocationList}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateRevocationList content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+
+              /**
+               * Update a CertificateRevocationList.
+               *
+               * Create a request for the method "certificateRevocationLists.patch".
+               *
+               * This request holds the parameters needed by the the privateca server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Output only. The resource name for this CertificateRevocationList in the format
+             *        `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
+               * @param content the {@link com.google.api.services.privateca.v1.model.CertificateRevocationList}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateRevocationList content) {
+                super(CertificateAuthorityService.this, "PATCH", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Output only. The resource name for this CertificateRevocationList in the format
+               * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Output only. The resource name for this CertificateRevocationList in the format
+             `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Output only. The resource name for this CertificateRevocationList in the format
+               * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificateAuthorities/[^/]+/certificateRevocationLists/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. An ID to identify requests. Specify a unique request ID so that if you
+               * must retry your request, the server will know to ignore the request if it has
+               * already been completed. The server will guarantee that for at least 60 minutes
+               * since the first request. For example, consider a situation where you make an
+               * initial request and t he request times out. If you make the request again with the
+               * same request ID, the server can check if original operation with the same request
+               * ID was received, and if so, will ignore the second request. This prevents clients
+               * from accidentally creating duplicate commitments. The request ID must be a valid
+               * UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+             request, the server will know to ignore the request if it has already been completed. The server
+             will guarantee that for at least 60 minutes since the first request. For example, consider a
+             situation where you make an initial request and t he request times out. If you make the request
+             again with the same request ID, the server can check if original operation with the same request ID
+             was received, and if so, will ignore the second request. This prevents clients from accidentally
+             creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+             UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An ID to identify requests. Specify a unique request ID so that if you
+               * must retry your request, the server will know to ignore the request if it has
+               * already been completed. The server will guarantee that for at least 60 minutes
+               * since the first request. For example, consider a situation where you make an
+               * initial request and t he request times out. If you make the request again with the
+               * same request ID, the server can check if original operation with the same request
+               * ID was received, and if so, will ignore the second request. This prevents clients
+               * from accidentally creating duplicate commitments. The request ID must be a valid
+               * UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Patch setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              /** Required. A list of fields to be updated in this request. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. A list of fields to be updated in this request.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** Required. A list of fields to be updated in this request. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
               }
             }
             /**
@@ -1521,6 +4868,1035 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
           }
         }
+        /**
+         * An accessor for creating requests from the Certificates collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CertificateAuthorityService privateca = new CertificateAuthorityService(...);}
+         *   {@code CertificateAuthorityService.Certificates.List request = privateca.certificates().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Certificates certificates() {
+          return new Certificates();
+        }
+
+        /**
+         * The "certificates" collection of methods.
+         */
+        public class Certificates {
+
+          /**
+           * Create a new Certificate in a given Project, Location from a particular CaPool.
+           *
+           * Create a request for the method "certificates.create".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the CaPool associated with the Certificate, in the format
+           *        `projects/locations/caPools`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.privateca.v1.model.Certificate content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Certificate> {
+
+            private static final String REST_PATH = "v1/{+parent}/certificates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+            /**
+             * Create a new Certificate in a given Project, Location from a particular CaPool.
+             *
+             * Create a request for the method "certificates.create".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the CaPool associated with the Certificate, in the format
+           *        `projects/locations/caPools`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.privateca.v1.model.Certificate content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Certificate.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the Certificate, in the
+             * format `projects/locations/caPools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the CaPool associated with the Certificate, in the format
+           `projects/locations/caPools`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the CaPool associated with the Certificate, in the
+             * format `projects/locations/caPools`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in
+             * the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored
+             * otherwise.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String certificateId;
+
+            /** Optional. It must be unique within a location and match the regular expression
+           `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise
+           CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+             */
+            public java.lang.String getCertificateId() {
+              return certificateId;
+            }
+
+            /**
+             * Optional. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in
+             * the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored
+             * otherwise.
+             */
+            public Create setCertificateId(java.lang.String certificateId) {
+              this.certificateId = certificateId;
+              return this;
+            }
+
+            /**
+             * Optional. The resource ID of the CertificateAuthority that should issue the
+             * certificate. This optional field will ignore the load-balancing scheme of the Pool
+             * and directly issue the certificate from the CA with the specified ID, contained in
+             * the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a
+             * CertificateAuthority will be chosen from the CaPool by the service. For example, to
+             * issue a Certificate from a Certificate Authority with resource name "projects/my-
+             * project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca", you can
+             * set the parent to "projects/my-project/locations/us-central1/caPools/my-pool" and the
+             * issuing_certificate_authority_id to "my-ca".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String issuingCertificateAuthorityId;
+
+            /** Optional. The resource ID of the CertificateAuthority that should issue the certificate. This
+           optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate
+           from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA
+           quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the
+           service. For example, to issue a Certificate from a Certificate Authority with resource name
+           "projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca", you can
+           set the parent to "projects/my-project/locations/us-central1/caPools/my-pool" and the
+           issuing_certificate_authority_id to "my-ca".
+             */
+            public java.lang.String getIssuingCertificateAuthorityId() {
+              return issuingCertificateAuthorityId;
+            }
+
+            /**
+             * Optional. The resource ID of the CertificateAuthority that should issue the
+             * certificate. This optional field will ignore the load-balancing scheme of the Pool
+             * and directly issue the certificate from the CA with the specified ID, contained in
+             * the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a
+             * CertificateAuthority will be chosen from the CaPool by the service. For example, to
+             * issue a Certificate from a Certificate Authority with resource name "projects/my-
+             * project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca", you can
+             * set the parent to "projects/my-project/locations/us-central1/caPools/my-pool" and the
+             * issuing_certificate_authority_id to "my-ca".
+             */
+            public Create setIssuingCertificateAuthorityId(java.lang.String issuingCertificateAuthorityId) {
+              this.issuingCertificateAuthorityId = issuingCertificateAuthorityId;
+              return this;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+           request, the server will know to ignore the request if it has already been completed. The server
+           will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and t he request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. If this is true, no Certificate resource will be persisted regardless of
+             * the CaPool's tier, and the returned Certificate will not contain the pem_certificate
+             * field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool's
+           tier, and the returned Certificate will not contain the pem_certificate field.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If this is true, no Certificate resource will be persisted regardless of
+             * the CaPool's tier, and the returned Certificate will not contain the pem_certificate
+             * field.
+             */
+            public Create setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns a Certificate.
+           *
+           * Create a request for the method "certificates.get".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Certificate to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Certificate> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+
+            /**
+             * Returns a Certificate.
+             *
+             * Create a request for the method "certificates.get".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Certificate to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.Certificate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the Certificate to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Certificate to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the Certificate to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Certificates.
+           *
+           * Create a request for the method "certificates.list".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the location associated with the Certificates, in the format
+           *        `projects/locations/caPools`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.ListCertificatesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/certificates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+
+            /**
+             * Lists Certificates.
+             *
+             * Create a request for the method "certificates.list".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the location associated with the Certificates, in the format
+           *        `projects/locations/caPools`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.ListCertificatesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the location associated with the Certificates, in the
+             * format `projects/locations/caPools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the location associated with the Certificates, in the format
+           `projects/locations/caPools`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the location associated with the Certificates, in the
+             * format `projects/locations/caPools`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Only include resources that match the filter in the response. For details
+             * on supported filters and syntax, see [Certificates Filtering
+             * documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-
+             * filtering-certificates#filtering_support).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Only include resources that match the filter in the response. For details on supported
+           filters and syntax, see [Certificates Filtering documentation](https://cloud.google.com
+           /certificate-authority-service/docs/sorting-filtering-certificates#filtering_support).
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Only include resources that match the filter in the response. For details
+             * on supported filters and syntax, see [Certificates Filtering
+             * documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-
+             * filtering-certificates#filtering_support).
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specify how the results should be sorted. For details on supported fields
+             * and syntax, see [Certificates Sorting documentation](https://cloud.google.com
+             * /certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specify how the results should be sorted. For details on supported fields and syntax, see
+           [Certificates Sorting documentation](https://cloud.google.com/certificate-authority-service/docs
+           /sorting-filtering-certificates#sorting_support).
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specify how the results should be sorted. For details on supported fields
+             * and syntax, see [Certificates Sorting documentation](https://cloud.google.com
+             * /certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Limit on the number of Certificates to include in the response. Further
+             * Certificates can subsequently be obtained by including the
+             * ListCertificatesResponse.next_page_token in a subsequent request. If unspecified, the
+             * server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Limit on the number of Certificates to include in the response. Further Certificates can
+           subsequently be obtained by including the ListCertificatesResponse.next_page_token in a subsequent
+           request. If unspecified, the server will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Limit on the number of Certificates to include in the response. Further
+             * Certificates can subsequently be obtained by including the
+             * ListCertificatesResponse.next_page_token in a subsequent request. If unspecified, the
+             * server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListCertificatesResponse.next_page_token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Pagination token, returned earlier via ListCertificatesResponse.next_page_token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Pagination token, returned earlier via
+             * ListCertificatesResponse.next_page_token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update a Certificate. Currently, the only field you can update is the labels field.
+           *
+           * Create a request for the method "certificates.patch".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name for this Certificate in the format
+           *        `projects/locations/caPools/certificates`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.privateca.v1.model.Certificate content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Certificate> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+
+            /**
+             * Update a Certificate. Currently, the only field you can update is the labels field.
+             *
+             * Create a request for the method "certificates.patch".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name for this Certificate in the format
+           *        `projects/locations/caPools/certificates`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.privateca.v1.model.Certificate content) {
+              super(CertificateAuthorityService.this, "PATCH", REST_PATH, content, com.google.api.services.privateca.v1.model.Certificate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. The resource name for this Certificate in the format
+             * `projects/locations/caPools/certificates`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name for this Certificate in the format
+           `projects/locations/caPools/certificates`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. The resource name for this Certificate in the format
+             * `projects/locations/caPools/certificates`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+           request, the server will know to ignore the request if it has already been completed. The server
+           will guarantee that for at least 60 minutes since the first request. For example, consider a
+           situation where you make an initial request and t he request times out. If you make the request
+           again with the same request ID, the server can check if original operation with the same request ID
+           was received, and if so, will ignore the second request. This prevents clients from accidentally
+           creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+             * retry your request, the server will know to ignore the request if it has already been
+             * completed. The server will guarantee that for at least 60 minutes since the first
+             * request. For example, consider a situation where you make an initial request and t he
+             * request times out. If you make the request again with the same request ID, the server
+             * can check if original operation with the same request ID was received, and if so,
+             * will ignore the second request. This prevents clients from accidentally creating
+             * duplicate commitments. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /** Required. A list of fields to be updated in this request. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. A list of fields to be updated in this request.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. A list of fields to be updated in this request. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Revoke a Certificate.
+           *
+           * Create a request for the method "certificates.revoke".
+           *
+           * This request holds the parameters needed by the privateca server.  After setting any optional
+           * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name for this Certificate in the format
+           *        `projects/locations/caPools/certificates`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.RevokeCertificateRequest}
+           * @return the request
+           */
+          public Revoke revoke(java.lang.String name, com.google.api.services.privateca.v1.model.RevokeCertificateRequest content) throws java.io.IOException {
+            Revoke result = new Revoke(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Revoke extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Certificate> {
+
+            private static final String REST_PATH = "v1/{+name}:revoke";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+
+            /**
+             * Revoke a Certificate.
+             *
+             * Create a request for the method "certificates.revoke".
+             *
+             * This request holds the parameters needed by the the privateca server.  After setting any
+             * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name for this Certificate in the format
+           *        `projects/locations/caPools/certificates`.
+             * @param content the {@link com.google.api.services.privateca.v1.model.RevokeCertificateRequest}
+             * @since 1.13
+             */
+            protected Revoke(java.lang.String name, com.google.api.services.privateca.v1.model.RevokeCertificateRequest content) {
+              super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Certificate.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revoke set$Xgafv(java.lang.String $Xgafv) {
+              return (Revoke) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revoke setAccessToken(java.lang.String accessToken) {
+              return (Revoke) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Revoke setAlt(java.lang.String alt) {
+              return (Revoke) super.setAlt(alt);
+            }
+
+            @Override
+            public Revoke setCallback(java.lang.String callback) {
+              return (Revoke) super.setCallback(callback);
+            }
+
+            @Override
+            public Revoke setFields(java.lang.String fields) {
+              return (Revoke) super.setFields(fields);
+            }
+
+            @Override
+            public Revoke setKey(java.lang.String key) {
+              return (Revoke) super.setKey(key);
+            }
+
+            @Override
+            public Revoke setOauthToken(java.lang.String oauthToken) {
+              return (Revoke) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Revoke) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Revoke setQuotaUser(java.lang.String quotaUser) {
+              return (Revoke) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Revoke setUploadType(java.lang.String uploadType) {
+              return (Revoke) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revoke) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name for this Certificate in the format
+             * `projects/locations/caPools/certificates`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name for this Certificate in the format
+           `projects/locations/caPools/certificates`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name for this Certificate in the format
+             * `projects/locations/caPools/certificates`.
+             */
+            public Revoke setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/caPools/[^/]+/certificates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Revoke set(String parameterName, Object value) {
+              return (Revoke) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the CertificateTemplates collection.
@@ -1542,6 +5918,531 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
        */
       public class CertificateTemplates {
 
+        /**
+         * Create a new CertificateTemplate in a given Project and Location.
+         *
+         * Create a request for the method "certificateTemplates.create".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the CertificateTemplate, in the format
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.privateca.v1.model.CertificateTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/certificateTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new CertificateTemplate in a given Project and Location.
+           *
+           * Create a request for the method "certificateTemplates.create".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the CertificateTemplate, in the format
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.privateca.v1.model.CertificateTemplate content) {
+            super(CertificateAuthorityService.this, "POST", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CertificateTemplate, in
+           * the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the CertificateTemplate, in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CertificateTemplate, in
+           * the format `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String certificateTemplateId;
+
+          /** Required. It must be unique within a location and match the regular expression
+         `[a-zA-Z0-9_-]{1,63}`
+           */
+          public java.lang.String getCertificateTemplateId() {
+            return certificateTemplateId;
+          }
+
+          /**
+           * Required. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`
+           */
+          public Create setCertificateTemplateId(java.lang.String certificateTemplateId) {
+            this.certificateTemplateId = certificateTemplateId;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * DeleteCertificateTemplate deletes a CertificateTemplate.
+         *
+         * Create a request for the method "certificateTemplates.delete".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name for this CertificateTemplate in the format
+         *        `projects/locations/certificateTemplates`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+
+          /**
+           * DeleteCertificateTemplate deletes a CertificateTemplate.
+           *
+           * Create a request for the method "certificateTemplates.delete".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name for this CertificateTemplate in the format
+         *        `projects/locations/certificateTemplates`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CertificateAuthorityService.this, "DELETE", REST_PATH, null, com.google.api.services.privateca.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name for this CertificateTemplate in the format
+           * `projects/locations/certificateTemplates`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name for this CertificateTemplate in the format
+         `projects/locations/certificateTemplates`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name for this CertificateTemplate in the format
+           * `projects/locations/certificateTemplates`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a CertificateTemplate.
+         *
+         * Create a request for the method "certificateTemplates.get".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the CertificateTemplate to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.CertificateTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+
+          /**
+           * Returns a CertificateTemplate.
+           *
+           * Create a request for the method "certificateTemplates.get".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the CertificateTemplate to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.CertificateTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the CertificateTemplate to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the CertificateTemplate to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the CertificateTemplate to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
@@ -1724,6 +6625,435 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists CertificateTemplates.
+         *
+         * Create a request for the method "certificateTemplates.list".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the CertificateTemplates, in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.ListCertificateTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/certificateTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists CertificateTemplates.
+           *
+           * Create a request for the method "certificateTemplates.list".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the CertificateTemplates, in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CertificateAuthorityService.this, "GET", REST_PATH, null, com.google.api.services.privateca.v1.model.ListCertificateTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CertificateTemplates,
+           * in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the CertificateTemplates, in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the CertificateTemplates,
+           * in the format `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Only include resources that match the filter in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Only include resources that match the filter in the response.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Only include resources that match the filter in the response. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Specify how the results should be sorted. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Specify how the results should be sorted.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Specify how the results should be sorted. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Limit on the number of CertificateTemplates to include in the response.
+           * Further CertificateTemplates can subsequently be obtained by including the
+           * ListCertificateTemplatesResponse.next_page_token in a subsequent request. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Limit on the number of CertificateTemplates to include in the response. Further
+         CertificateTemplates can subsequently be obtained by including the
+         ListCertificateTemplatesResponse.next_page_token in a subsequent request. If unspecified, the
+         server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Limit on the number of CertificateTemplates to include in the response.
+           * Further CertificateTemplates can subsequently be obtained by including the
+           * ListCertificateTemplatesResponse.next_page_token in a subsequent request. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via
+           * ListCertificateTemplatesResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Pagination token, returned earlier via ListCertificateTemplatesResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Pagination token, returned earlier via
+           * ListCertificateTemplatesResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a CertificateTemplate.
+         *
+         * Create a request for the method "certificateTemplates.patch".
+         *
+         * This request holds the parameters needed by the privateca server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name for this CertificateTemplate in the format
+         *        `projects/locations/certificateTemplates`.
+         * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateTemplate content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CertificateAuthorityServiceRequest<com.google.api.services.privateca.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+
+          /**
+           * Update a CertificateTemplate.
+           *
+           * Create a request for the method "certificateTemplates.patch".
+           *
+           * This request holds the parameters needed by the the privateca server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name for this CertificateTemplate in the format
+         *        `projects/locations/certificateTemplates`.
+           * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.privateca.v1.model.CertificateTemplate content) {
+            super(CertificateAuthorityService.this, "PATCH", REST_PATH, content, com.google.api.services.privateca.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The resource name for this CertificateTemplate in the format
+           * `projects/locations/certificateTemplates`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name for this CertificateTemplate in the format
+         `projects/locations/certificateTemplates`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The resource name for this CertificateTemplate in the format
+           * `projects/locations/certificateTemplates`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your
+         request, the server will know to ignore the request if it has already been completed. The server
+         will guarantee that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and t he request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An ID to identify requests. Specify a unique request ID so that if you must
+           * retry your request, the server will know to ignore the request if it has already been
+           * completed. The server will guarantee that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and t he
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Required. A list of fields to be updated in this request. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A list of fields to be updated in this request.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. A list of fields to be updated in this request. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

@@ -32,6 +32,12 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean featuredPart;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long gaia;
 
@@ -46,6 +52,21 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TestItemTestItemSnippet snippet;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFeaturedPart() {
+    return featuredPart;
+  }
+
+  /**
+   * @param featuredPart featuredPart or {@code null} for none
+   */
+  public TestItem setFeaturedPart(java.lang.Boolean featuredPart) {
+    this.featuredPart = featuredPart;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

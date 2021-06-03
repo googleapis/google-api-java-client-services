@@ -33,9 +33,9 @@ public final class CommitStats extends com.google.api.client.json.GenericJson {
    * The total number of mutations for the transaction. Knowing the `mutation_count` value can help
    * you maximize the number of mutations in a transaction and minimize the number of API round
    * trips. You can also monitor this value to prevent transactions from exceeding the system [limit
-   * ](http://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_data
-   * ). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](http://c
-   * loud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
+   * ](https://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_dat
+   * a). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](https:/
+   * /cloud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,9 +45,9 @@ public final class CommitStats extends com.google.api.client.json.GenericJson {
    * The total number of mutations for the transaction. Knowing the `mutation_count` value can help
    * you maximize the number of mutations in a transaction and minimize the number of API round
    * trips. You can also monitor this value to prevent transactions from exceeding the system [limit
-   * ](http://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_data
-   * ). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](http://c
-   * loud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
+   * ](https://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_dat
+   * a). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](https:/
+   * /cloud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMutationCount() {
@@ -58,9 +58,9 @@ public final class CommitStats extends com.google.api.client.json.GenericJson {
    * The total number of mutations for the transaction. Knowing the `mutation_count` value can help
    * you maximize the number of mutations in a transaction and minimize the number of API round
    * trips. You can also monitor this value to prevent transactions from exceeding the system [limit
-   * ](http://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_data
-   * ). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](http://c
-   * loud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
+   * ](https://cloud.google.com/spanner/quotas#limits_for_creating_reading_updating_and_deleting_dat
+   * a). If the number of mutations exceeds the limit, the server returns [INVALID_ARGUMENT](https:/
+   * /cloud.google.com/spanner/docs/reference/rest/v1/Code#ENUM_VALUES.INVALID_ARGUMENT).
    * @param mutationCount mutationCount or {@code null} for none
    */
   public CommitStats setMutationCount(java.lang.Long mutationCount) {

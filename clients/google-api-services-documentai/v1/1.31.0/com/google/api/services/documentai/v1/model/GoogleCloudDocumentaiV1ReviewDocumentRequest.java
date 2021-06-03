@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Request message for review document method.
+ * Request message for review document method. Next Id: 5.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,11 +31,35 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ReviewDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the validation should be performed on the ad-hoc review request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSchemaValidation;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1Document inlineDocument;
+
+  /**
+   * Whether the validation should be performed on the ad-hoc review request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSchemaValidation() {
+    return enableSchemaValidation;
+  }
+
+  /**
+   * Whether the validation should be performed on the ad-hoc review request.
+   * @param enableSchemaValidation enableSchemaValidation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentRequest setEnableSchemaValidation(java.lang.Boolean enableSchemaValidation) {
+    this.enableSchemaValidation = enableSchemaValidation;
+    return this;
+  }
 
   /**
    * An inline document proto.

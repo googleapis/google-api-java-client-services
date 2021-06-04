@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Response message for InvoiceService.LookupInvoiceCurrency.
+ * Model definition for LookupInvoiceCurrencyResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v1.model;
 public final class LookupInvoiceCurrencyResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * Currency used by the advertiser in ISO 4217 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currencyCode;
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * Currency used by the advertiser in ISO 4217 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -46,7 +46,7 @@ public final class LookupInvoiceCurrencyResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * Currency used by the advertiser in ISO 4217 format.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public LookupInvoiceCurrencyResponse setCurrencyCode(java.lang.String currencyCode) {

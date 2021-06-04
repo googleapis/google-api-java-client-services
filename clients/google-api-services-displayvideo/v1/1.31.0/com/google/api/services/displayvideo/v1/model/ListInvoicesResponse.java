@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Response message for InvoiceService.ListInvoices.
+ * Model definition for ListInvoicesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -44,9 +44,9 @@ public final class ListInvoicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. Pass this value in the
-   * [ListInvoicesRequest.page_token] field in the subsequent call to `ListInvoices` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListInvoices` method to retrieve the next page of results. This token will
+   * be absent if there are no more invoices to return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class ListInvoicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. Pass this value in the
-   * [ListInvoicesRequest.page_token] field in the subsequent call to `ListInvoices` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListInvoices` method to retrieve the next page of results. This token will
+   * be absent if there are no more invoices to return.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -80,9 +80,9 @@ public final class ListInvoicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. Pass this value in the
-   * [ListInvoicesRequest.page_token] field in the subsequent call to `ListInvoices` method to
-   * retrieve the next page of results.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `ListInvoices` method to retrieve the next page of results. This token will
+   * be absent if there are no more invoices to return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListInvoicesResponse setNextPageToken(java.lang.String nextPageToken) {

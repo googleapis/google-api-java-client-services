@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * A single Invoice.
+ * A single invoice.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,15 +31,17 @@ package com.google.api.services.displayvideo.v1.model;
 public final class Invoice extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Budget invoice grouping ID associated with the budget segment in the insertion
-   * order.
+   * The budget grouping ID for this invoice. This field will only be set if the invoice level of
+   * the corresponding billing profile was set to "Budget invoice grouping ID".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String budgetInvoiceGroupingId;
 
   /**
-   * Output only. The list of summarized budget information associated with this invoice.
+   * The list of summarized information for each budget associated with this invoice. This field
+   * will only be set if the invoice detail level of the corresponding billing profile was set to
+   * "Budget level PO".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,151 +54,151 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The originally issued invoice that is being adjusted by this invoice, if
-   * applicable. If there is a corrected invoice, the replaced_invoice_ids field will be empty. May
-   * appear on invoice PDF as `Reference invoice number`.
+   * The ID of the original invoice being adjusted by this invoice, if applicable. May appear on the
+   * invoice PDF as `Reference invoice number`. If replaced_invoice_ids is set, this field will be
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String correctedInvoiceId;
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * The currency used in the invoice in ISO 4217 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currencyCode;
 
   /**
-   * Output only. Display name of the invoice.
+   * The display name of the invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The invoice due date.
+   * The date when the invoice is due.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date dueDate;
 
   /**
-   * Output only. The unique ID of the invoice.
+   * The unique ID of the invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invoiceId;
 
   /**
-   * Output only. The type of invoice document.
+   * The type of invoice document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invoiceType;
 
   /**
-   * Output only. The date when the invoice was issued.
+   * The date when the invoice was issued.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date issueDate;
 
   /**
-   * Output only. The resource name of the invoice.
+   * The resource name of the invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The total amount of costs or adjustments not tied to a particular budget, in
-   * micros of the invoice's currency. For example if currency_code is `USD`, then 1000000 micros is
-   * one US dollar.
+   * The total amount of costs or adjustments not tied to a particular budget, in micros of the
+   * invoice's currency. For example, if currency_code is `USD`, then 1000000 represents one US
+   * dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long nonBudgetMicros;
 
   /**
-   * Output only. The ID of the payments account the invoice belongs to. Appears on the invoice PDF
-   * as `Billing Account Number`.
+   * The ID of the payments account the invoice belongs to. Appears on the invoice PDF as `Billing
+   * Account Number`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String paymentsAccountId;
 
   /**
-   * Output only. The ID of the payments profile the invoice belongs to. Appears on the invoice PDF
-   * as `Billing ID`.
+   * The ID of the payments profile the invoice belongs to. Appears on the invoice PDF as `Billing
+   * ID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String paymentsProfileId;
 
   /**
-   * Output only. The URL to download a PDF copy of the invoice. Note that this URL is user specific
-   * and requires a valid OAuth 2.0 access token to access. The access token must be provided in an
-   * `Authorization: Bearer` HTTP header and be authorized for one of the following scopes: *
+   * The URL to download a PDF copy of the invoice. This URL is user specific and requires a valid
+   * OAuth 2.0 access token to access. The access token must be provided in an `Authorization:
+   * Bearer` HTTP header and be authorized for one of the following scopes: *
    * `https://www.googleapis.com/auth/display-video-mediaplanning` *
-   * `https://www.googleapis.com/auth/display-video` The URL will only be usable for 7 days from
-   * when the api is called.
+   * `https://www.googleapis.com/auth/display-video` The URL will be valid for 7 days after
+   * retrieval of this invoice object or until this invoice is retrieved again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pdfUrl;
 
   /**
-   * Output only. Purchase order number associated with the invoice.
+   * Purchase order number associated with the invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String purchaseOrderNumber;
 
   /**
-   * Output only. The originally issued invoice(s) that is being cancelled by this invoice, if
-   * applicable. If there are any replaced invoices, the corrected_invoice_id field will be empty.
-   * May appear on invoice PDF as `Replaced invoice numbers`. Note: There may be multiple replaced
-   * invoices due to consolidation of multiple invoices into a single invoice.
+   * The ID(s) of any originally issued invoice that is being cancelled by this invoice, if
+   * applicable. Multiple invoices may be listed if those invoices are being consolidated into a
+   * single invoice. May appear on invoice PDF as `Replaced invoice numbers`. If
+   * corrected_invoice_id is set, this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> replacedInvoiceIds;
 
   /**
-   * Output only. Service start and end dates which are covered by this invoice.
+   * The service start and end dates which are covered by this invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateRange serviceDateRange;
 
   /**
-   * Output only. The pre-tax subtotal amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The pre-tax subtotal amount, in micros of the invoice's currency. For example, if currency_code
+   * is `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long subtotalAmountMicros;
 
   /**
-   * Output only. The invoice total amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The invoice total amount, in micros of the invoice's currency. For example, if currency_code is
+   * `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalAmountMicros;
 
   /**
-   * Output only. The sum of all taxes in invoice, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of all taxes in invoice, in micros of the invoice's currency. For example, if
+   * currency_code is `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalTaxAmountMicros;
 
   /**
-   * Output only. Budget invoice grouping ID associated with the budget segment in the insertion
-   * order.
+   * The budget grouping ID for this invoice. This field will only be set if the invoice level of
+   * the corresponding billing profile was set to "Budget invoice grouping ID".
    * @return value or {@code null} for none
    */
   public java.lang.String getBudgetInvoiceGroupingId() {
@@ -204,8 +206,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Budget invoice grouping ID associated with the budget segment in the insertion
-   * order.
+   * The budget grouping ID for this invoice. This field will only be set if the invoice level of
+   * the corresponding billing profile was set to "Budget invoice grouping ID".
    * @param budgetInvoiceGroupingId budgetInvoiceGroupingId or {@code null} for none
    */
   public Invoice setBudgetInvoiceGroupingId(java.lang.String budgetInvoiceGroupingId) {
@@ -214,7 +216,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of summarized budget information associated with this invoice.
+   * The list of summarized information for each budget associated with this invoice. This field
+   * will only be set if the invoice detail level of the corresponding billing profile was set to
+   * "Budget level PO".
    * @return value or {@code null} for none
    */
   public java.util.List<BudgetSummary> getBudgetSummaries() {
@@ -222,7 +226,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of summarized budget information associated with this invoice.
+   * The list of summarized information for each budget associated with this invoice. This field
+   * will only be set if the invoice detail level of the corresponding billing profile was set to
+   * "Budget level PO".
    * @param budgetSummaries budgetSummaries or {@code null} for none
    */
   public Invoice setBudgetSummaries(java.util.List<BudgetSummary> budgetSummaries) {
@@ -231,9 +237,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The originally issued invoice that is being adjusted by this invoice, if
-   * applicable. If there is a corrected invoice, the replaced_invoice_ids field will be empty. May
-   * appear on invoice PDF as `Reference invoice number`.
+   * The ID of the original invoice being adjusted by this invoice, if applicable. May appear on the
+   * invoice PDF as `Reference invoice number`. If replaced_invoice_ids is set, this field will be
+   * empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorrectedInvoiceId() {
@@ -241,9 +247,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The originally issued invoice that is being adjusted by this invoice, if
-   * applicable. If there is a corrected invoice, the replaced_invoice_ids field will be empty. May
-   * appear on invoice PDF as `Reference invoice number`.
+   * The ID of the original invoice being adjusted by this invoice, if applicable. May appear on the
+   * invoice PDF as `Reference invoice number`. If replaced_invoice_ids is set, this field will be
+   * empty.
    * @param correctedInvoiceId correctedInvoiceId or {@code null} for none
    */
   public Invoice setCorrectedInvoiceId(java.lang.String correctedInvoiceId) {
@@ -252,7 +258,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * The currency used in the invoice in ISO 4217 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -260,7 +266,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Invoice currency code in ISO 4217 format.
+   * The currency used in the invoice in ISO 4217 format.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public Invoice setCurrencyCode(java.lang.String currencyCode) {
@@ -269,7 +275,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Display name of the invoice.
+   * The display name of the invoice.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -277,7 +283,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Display name of the invoice.
+   * The display name of the invoice.
    * @param displayName displayName or {@code null} for none
    */
   public Invoice setDisplayName(java.lang.String displayName) {
@@ -286,7 +292,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The invoice due date.
+   * The date when the invoice is due.
    * @return value or {@code null} for none
    */
   public Date getDueDate() {
@@ -294,7 +300,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The invoice due date.
+   * The date when the invoice is due.
    * @param dueDate dueDate or {@code null} for none
    */
   public Invoice setDueDate(Date dueDate) {
@@ -303,7 +309,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the invoice.
+   * The unique ID of the invoice.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceId() {
@@ -311,7 +317,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the invoice.
+   * The unique ID of the invoice.
    * @param invoiceId invoiceId or {@code null} for none
    */
   public Invoice setInvoiceId(java.lang.String invoiceId) {
@@ -320,7 +326,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of invoice document.
+   * The type of invoice document.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceType() {
@@ -328,7 +334,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of invoice document.
+   * The type of invoice document.
    * @param invoiceType invoiceType or {@code null} for none
    */
   public Invoice setInvoiceType(java.lang.String invoiceType) {
@@ -337,7 +343,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The date when the invoice was issued.
+   * The date when the invoice was issued.
    * @return value or {@code null} for none
    */
   public Date getIssueDate() {
@@ -345,7 +351,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The date when the invoice was issued.
+   * The date when the invoice was issued.
    * @param issueDate issueDate or {@code null} for none
    */
   public Invoice setIssueDate(Date issueDate) {
@@ -354,7 +360,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the invoice.
+   * The resource name of the invoice.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -362,7 +368,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the invoice.
+   * The resource name of the invoice.
    * @param name name or {@code null} for none
    */
   public Invoice setName(java.lang.String name) {
@@ -371,9 +377,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The total amount of costs or adjustments not tied to a particular budget, in
-   * micros of the invoice's currency. For example if currency_code is `USD`, then 1000000 micros is
-   * one US dollar.
+   * The total amount of costs or adjustments not tied to a particular budget, in micros of the
+   * invoice's currency. For example, if currency_code is `USD`, then 1000000 represents one US
+   * dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNonBudgetMicros() {
@@ -381,9 +387,9 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The total amount of costs or adjustments not tied to a particular budget, in
-   * micros of the invoice's currency. For example if currency_code is `USD`, then 1000000 micros is
-   * one US dollar.
+   * The total amount of costs or adjustments not tied to a particular budget, in micros of the
+   * invoice's currency. For example, if currency_code is `USD`, then 1000000 represents one US
+   * dollar.
    * @param nonBudgetMicros nonBudgetMicros or {@code null} for none
    */
   public Invoice setNonBudgetMicros(java.lang.Long nonBudgetMicros) {
@@ -392,8 +398,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the payments account the invoice belongs to. Appears on the invoice PDF
-   * as `Billing Account Number`.
+   * The ID of the payments account the invoice belongs to. Appears on the invoice PDF as `Billing
+   * Account Number`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentsAccountId() {
@@ -401,8 +407,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the payments account the invoice belongs to. Appears on the invoice PDF
-   * as `Billing Account Number`.
+   * The ID of the payments account the invoice belongs to. Appears on the invoice PDF as `Billing
+   * Account Number`.
    * @param paymentsAccountId paymentsAccountId or {@code null} for none
    */
   public Invoice setPaymentsAccountId(java.lang.String paymentsAccountId) {
@@ -411,8 +417,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the payments profile the invoice belongs to. Appears on the invoice PDF
-   * as `Billing ID`.
+   * The ID of the payments profile the invoice belongs to. Appears on the invoice PDF as `Billing
+   * ID`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentsProfileId() {
@@ -420,8 +426,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ID of the payments profile the invoice belongs to. Appears on the invoice PDF
-   * as `Billing ID`.
+   * The ID of the payments profile the invoice belongs to. Appears on the invoice PDF as `Billing
+   * ID`.
    * @param paymentsProfileId paymentsProfileId or {@code null} for none
    */
   public Invoice setPaymentsProfileId(java.lang.String paymentsProfileId) {
@@ -430,12 +436,12 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL to download a PDF copy of the invoice. Note that this URL is user specific
-   * and requires a valid OAuth 2.0 access token to access. The access token must be provided in an
-   * `Authorization: Bearer` HTTP header and be authorized for one of the following scopes: *
+   * The URL to download a PDF copy of the invoice. This URL is user specific and requires a valid
+   * OAuth 2.0 access token to access. The access token must be provided in an `Authorization:
+   * Bearer` HTTP header and be authorized for one of the following scopes: *
    * `https://www.googleapis.com/auth/display-video-mediaplanning` *
-   * `https://www.googleapis.com/auth/display-video` The URL will only be usable for 7 days from
-   * when the api is called.
+   * `https://www.googleapis.com/auth/display-video` The URL will be valid for 7 days after
+   * retrieval of this invoice object or until this invoice is retrieved again.
    * @return value or {@code null} for none
    */
   public java.lang.String getPdfUrl() {
@@ -443,12 +449,12 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL to download a PDF copy of the invoice. Note that this URL is user specific
-   * and requires a valid OAuth 2.0 access token to access. The access token must be provided in an
-   * `Authorization: Bearer` HTTP header and be authorized for one of the following scopes: *
+   * The URL to download a PDF copy of the invoice. This URL is user specific and requires a valid
+   * OAuth 2.0 access token to access. The access token must be provided in an `Authorization:
+   * Bearer` HTTP header and be authorized for one of the following scopes: *
    * `https://www.googleapis.com/auth/display-video-mediaplanning` *
-   * `https://www.googleapis.com/auth/display-video` The URL will only be usable for 7 days from
-   * when the api is called.
+   * `https://www.googleapis.com/auth/display-video` The URL will be valid for 7 days after
+   * retrieval of this invoice object or until this invoice is retrieved again.
    * @param pdfUrl pdfUrl or {@code null} for none
    */
   public Invoice setPdfUrl(java.lang.String pdfUrl) {
@@ -457,7 +463,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Purchase order number associated with the invoice.
+   * Purchase order number associated with the invoice.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurchaseOrderNumber() {
@@ -465,7 +471,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Purchase order number associated with the invoice.
+   * Purchase order number associated with the invoice.
    * @param purchaseOrderNumber purchaseOrderNumber or {@code null} for none
    */
   public Invoice setPurchaseOrderNumber(java.lang.String purchaseOrderNumber) {
@@ -474,10 +480,10 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The originally issued invoice(s) that is being cancelled by this invoice, if
-   * applicable. If there are any replaced invoices, the corrected_invoice_id field will be empty.
-   * May appear on invoice PDF as `Replaced invoice numbers`. Note: There may be multiple replaced
-   * invoices due to consolidation of multiple invoices into a single invoice.
+   * The ID(s) of any originally issued invoice that is being cancelled by this invoice, if
+   * applicable. Multiple invoices may be listed if those invoices are being consolidated into a
+   * single invoice. May appear on invoice PDF as `Replaced invoice numbers`. If
+   * corrected_invoice_id is set, this field will be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReplacedInvoiceIds() {
@@ -485,10 +491,10 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The originally issued invoice(s) that is being cancelled by this invoice, if
-   * applicable. If there are any replaced invoices, the corrected_invoice_id field will be empty.
-   * May appear on invoice PDF as `Replaced invoice numbers`. Note: There may be multiple replaced
-   * invoices due to consolidation of multiple invoices into a single invoice.
+   * The ID(s) of any originally issued invoice that is being cancelled by this invoice, if
+   * applicable. Multiple invoices may be listed if those invoices are being consolidated into a
+   * single invoice. May appear on invoice PDF as `Replaced invoice numbers`. If
+   * corrected_invoice_id is set, this field will be empty.
    * @param replacedInvoiceIds replacedInvoiceIds or {@code null} for none
    */
   public Invoice setReplacedInvoiceIds(java.util.List<java.lang.String> replacedInvoiceIds) {
@@ -497,7 +503,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Service start and end dates which are covered by this invoice.
+   * The service start and end dates which are covered by this invoice.
    * @return value or {@code null} for none
    */
   public DateRange getServiceDateRange() {
@@ -505,7 +511,7 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Service start and end dates which are covered by this invoice.
+   * The service start and end dates which are covered by this invoice.
    * @param serviceDateRange serviceDateRange or {@code null} for none
    */
   public Invoice setServiceDateRange(DateRange serviceDateRange) {
@@ -514,8 +520,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The pre-tax subtotal amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The pre-tax subtotal amount, in micros of the invoice's currency. For example, if currency_code
+   * is `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSubtotalAmountMicros() {
@@ -523,8 +529,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The pre-tax subtotal amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The pre-tax subtotal amount, in micros of the invoice's currency. For example, if currency_code
+   * is `USD`, then 1000000 represents one US dollar.
    * @param subtotalAmountMicros subtotalAmountMicros or {@code null} for none
    */
   public Invoice setSubtotalAmountMicros(java.lang.Long subtotalAmountMicros) {
@@ -533,8 +539,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The invoice total amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The invoice total amount, in micros of the invoice's currency. For example, if currency_code is
+   * `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalAmountMicros() {
@@ -542,8 +548,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The invoice total amount, in micros of the invoice's currency. For example if
-   * currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The invoice total amount, in micros of the invoice's currency. For example, if currency_code is
+   * `USD`, then 1000000 represents one US dollar.
    * @param totalAmountMicros totalAmountMicros or {@code null} for none
    */
   public Invoice setTotalAmountMicros(java.lang.Long totalAmountMicros) {
@@ -552,8 +558,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The sum of all taxes in invoice, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of all taxes in invoice, in micros of the invoice's currency. For example, if
+   * currency_code is `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalTaxAmountMicros() {
@@ -561,8 +567,8 @@ public final class Invoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The sum of all taxes in invoice, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of all taxes in invoice, in micros of the invoice's currency. For example, if
+   * currency_code is `USD`, then 1000000 represents one US dollar.
    * @param totalTaxAmountMicros totalTaxAmountMicros or {@code null} for none
    */
   public Invoice setTotalTaxAmountMicros(java.lang.Long totalTaxAmountMicros) {

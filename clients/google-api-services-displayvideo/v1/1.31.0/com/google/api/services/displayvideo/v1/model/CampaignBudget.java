@@ -31,32 +31,34 @@ package com.google.api.services.displayvideo.v1.model;
 public final class CampaignBudget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The budget amount the insertion order will spend for the given date_range. The amount
-   * is in micros. Must be greater than 0. For example, 500000000 represents 500 standard units of
-   * the currency.
+   * Required. The total amount the linked insertion order segments can budget. The amount is in
+   * micros. Must be greater than 0. For example, 500000000 represents 500 standard units of the
+   * currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long budgetAmountMicros;
 
   /**
-   * The unique ID of the campaign budget. If not included, budget is assumed to be new.
+   * The unique ID of the campaign budget. Assigned by the system. Do not set for new budgets. Must
+   * be included when updating or adding budgets to campaign_budgets. Otherwise, a new ID will be
+   * generated and assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long budgetId;
 
   /**
-   * Required. Immutable. The budget unit specifies whether the budget is currency based or
-   * impression based.
+   * Required. Immutable. Specifies whether the budget is measured in currency or impressions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String budgetUnit;
 
   /**
-   * Required. The flight start and end time settings of the segment. Both `start_date` and
-   * `end_date` must be before the year 2037.
+   * Required. The date range for the campaign budget. Linked budget segments may have a different
+   * date range. They are resolved relative to the parent advertiser's time zone. Both `start_date`
+   * and `end_date` must be before the year 2037.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,40 +73,44 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
-   * Immutable. Must be unique under the campaign. If set, all impressions served against this
-   * budget will include this ID on the invoice if the customer has opted into budget-segment-level
-   * billing.
+   * Immutable. The ID identifying this budget to the external source. If this field is set and the
+   * invoice detail level of the corresponding billing profile is set to "Budget level PO", all
+   * impressions served against this budget will include this ID on the invoice. Must be unique
+   * under the campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalBudgetId;
 
   /**
-   * Required. The external source of the budget segment.
+   * Required. The external source of the budget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalBudgetSource;
 
   /**
-   * Immutable. If set, all external_budget_id sharing the same invoice_grouping_id will include
-   * this ID on the invoice if the customer has opted into budget-segment-level billing.
+   * Immutable. The ID used to group budgets to be included the same invoice. If this field is set
+   * and the invoice level of the corresponding billing profile is set to "Budget invoice grouping
+   * ID", all external_budget_id sharing the same invoice_grouping_id will be grouped in the same
+   * invoice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invoiceGroupingId;
 
   /**
-   * Required for MediaOcean budgets. Additional metadata set by the MediaOcean Prisma tool.
+   * Additional metadata for use by the Mediaocean Prisma tool. Required for Mediaocean budgets.
+   * Only applicable to prisma_enabled advertisers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrismaConfig prismaConfig;
 
   /**
-   * Required. The budget amount the insertion order will spend for the given date_range. The amount
-   * is in micros. Must be greater than 0. For example, 500000000 represents 500 standard units of
-   * the currency.
+   * Required. The total amount the linked insertion order segments can budget. The amount is in
+   * micros. Must be greater than 0. For example, 500000000 represents 500 standard units of the
+   * currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBudgetAmountMicros() {
@@ -112,9 +118,9 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The budget amount the insertion order will spend for the given date_range. The amount
-   * is in micros. Must be greater than 0. For example, 500000000 represents 500 standard units of
-   * the currency.
+   * Required. The total amount the linked insertion order segments can budget. The amount is in
+   * micros. Must be greater than 0. For example, 500000000 represents 500 standard units of the
+   * currency.
    * @param budgetAmountMicros budgetAmountMicros or {@code null} for none
    */
   public CampaignBudget setBudgetAmountMicros(java.lang.Long budgetAmountMicros) {
@@ -123,7 +129,9 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The unique ID of the campaign budget. If not included, budget is assumed to be new.
+   * The unique ID of the campaign budget. Assigned by the system. Do not set for new budgets. Must
+   * be included when updating or adding budgets to campaign_budgets. Otherwise, a new ID will be
+   * generated and assigned.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBudgetId() {
@@ -131,7 +139,9 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The unique ID of the campaign budget. If not included, budget is assumed to be new.
+   * The unique ID of the campaign budget. Assigned by the system. Do not set for new budgets. Must
+   * be included when updating or adding budgets to campaign_budgets. Otherwise, a new ID will be
+   * generated and assigned.
    * @param budgetId budgetId or {@code null} for none
    */
   public CampaignBudget setBudgetId(java.lang.Long budgetId) {
@@ -140,8 +150,7 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Immutable. The budget unit specifies whether the budget is currency based or
-   * impression based.
+   * Required. Immutable. Specifies whether the budget is measured in currency or impressions.
    * @return value or {@code null} for none
    */
   public java.lang.String getBudgetUnit() {
@@ -149,8 +158,7 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Immutable. The budget unit specifies whether the budget is currency based or
-   * impression based.
+   * Required. Immutable. Specifies whether the budget is measured in currency or impressions.
    * @param budgetUnit budgetUnit or {@code null} for none
    */
   public CampaignBudget setBudgetUnit(java.lang.String budgetUnit) {
@@ -159,8 +167,9 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The flight start and end time settings of the segment. Both `start_date` and
-   * `end_date` must be before the year 2037.
+   * Required. The date range for the campaign budget. Linked budget segments may have a different
+   * date range. They are resolved relative to the parent advertiser's time zone. Both `start_date`
+   * and `end_date` must be before the year 2037.
    * @return value or {@code null} for none
    */
   public DateRange getDateRange() {
@@ -168,8 +177,9 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The flight start and end time settings of the segment. Both `start_date` and
-   * `end_date` must be before the year 2037.
+   * Required. The date range for the campaign budget. Linked budget segments may have a different
+   * date range. They are resolved relative to the parent advertiser's time zone. Both `start_date`
+   * and `end_date` must be before the year 2037.
    * @param dateRange dateRange or {@code null} for none
    */
   public CampaignBudget setDateRange(DateRange dateRange) {
@@ -197,9 +207,10 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. Must be unique under the campaign. If set, all impressions served against this
-   * budget will include this ID on the invoice if the customer has opted into budget-segment-level
-   * billing.
+   * Immutable. The ID identifying this budget to the external source. If this field is set and the
+   * invoice detail level of the corresponding billing profile is set to "Budget level PO", all
+   * impressions served against this budget will include this ID on the invoice. Must be unique
+   * under the campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalBudgetId() {
@@ -207,9 +218,10 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. Must be unique under the campaign. If set, all impressions served against this
-   * budget will include this ID on the invoice if the customer has opted into budget-segment-level
-   * billing.
+   * Immutable. The ID identifying this budget to the external source. If this field is set and the
+   * invoice detail level of the corresponding billing profile is set to "Budget level PO", all
+   * impressions served against this budget will include this ID on the invoice. Must be unique
+   * under the campaign.
    * @param externalBudgetId externalBudgetId or {@code null} for none
    */
   public CampaignBudget setExternalBudgetId(java.lang.String externalBudgetId) {
@@ -218,7 +230,7 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The external source of the budget segment.
+   * Required. The external source of the budget.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalBudgetSource() {
@@ -226,7 +238,7 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The external source of the budget segment.
+   * Required. The external source of the budget.
    * @param externalBudgetSource externalBudgetSource or {@code null} for none
    */
   public CampaignBudget setExternalBudgetSource(java.lang.String externalBudgetSource) {
@@ -235,8 +247,10 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. If set, all external_budget_id sharing the same invoice_grouping_id will include
-   * this ID on the invoice if the customer has opted into budget-segment-level billing.
+   * Immutable. The ID used to group budgets to be included the same invoice. If this field is set
+   * and the invoice level of the corresponding billing profile is set to "Budget invoice grouping
+   * ID", all external_budget_id sharing the same invoice_grouping_id will be grouped in the same
+   * invoice.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceGroupingId() {
@@ -244,8 +258,10 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. If set, all external_budget_id sharing the same invoice_grouping_id will include
-   * this ID on the invoice if the customer has opted into budget-segment-level billing.
+   * Immutable. The ID used to group budgets to be included the same invoice. If this field is set
+   * and the invoice level of the corresponding billing profile is set to "Budget invoice grouping
+   * ID", all external_budget_id sharing the same invoice_grouping_id will be grouped in the same
+   * invoice.
    * @param invoiceGroupingId invoiceGroupingId or {@code null} for none
    */
   public CampaignBudget setInvoiceGroupingId(java.lang.String invoiceGroupingId) {
@@ -254,7 +270,8 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required for MediaOcean budgets. Additional metadata set by the MediaOcean Prisma tool.
+   * Additional metadata for use by the Mediaocean Prisma tool. Required for Mediaocean budgets.
+   * Only applicable to prisma_enabled advertisers.
    * @return value or {@code null} for none
    */
   public PrismaConfig getPrismaConfig() {
@@ -262,7 +279,8 @@ public final class CampaignBudget extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required for MediaOcean budgets. Additional metadata set by the MediaOcean Prisma tool.
+   * Additional metadata for use by the Mediaocean Prisma tool. Required for Mediaocean budgets.
+   * Only applicable to prisma_enabled advertisers.
    * @param prismaConfig prismaConfig or {@code null} for none
    */
   public CampaignBudget setPrismaConfig(PrismaConfig prismaConfig) {

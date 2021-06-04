@@ -251,8 +251,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private SslCert serverCaCert;
 
   /**
-   * The service account email address assigned to the instance. This property is applicable only to
-   * Second Generation instances.
+   * The service account email address assigned to the instance. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -811,8 +810,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The service account email address assigned to the instance. This property is applicable only to
-   * Second Generation instances.
+   * The service account email address assigned to the instance. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmailAddress() {
@@ -820,8 +818,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The service account email address assigned to the instance. This property is applicable only to
-   * Second Generation instances.
+   * The service account email address assigned to the instance. This property is read-only.
    * @param serviceAccountEmailAddress serviceAccountEmailAddress or {@code null} for none
    */
   public DatabaseInstance setServiceAccountEmailAddress(java.lang.String serviceAccountEmailAddress) {

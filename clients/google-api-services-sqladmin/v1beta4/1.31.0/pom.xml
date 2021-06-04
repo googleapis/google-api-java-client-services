@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-sqladmin</artifactId>
-  <version>v1beta4-rev20210420-1.31.0</version>
-  <name>Cloud SQL Admin API v1beta4-rev20210420-1.31.0</name>
+  <version>v1beta4-rev20210521-1.31.0</version>
+  <name>Cloud SQL Admin API v1beta4-rev20210521-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

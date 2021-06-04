@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-tagmanager</artifactId>
-  <version>v2-rev20210217-1.31.0</version>
-  <name>Tag Manager API v2-rev20210217-1.31.0</name>
+  <version>v2-rev20210602-1.31.0</version>
+  <name>Tag Manager API v2-rev20210602-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

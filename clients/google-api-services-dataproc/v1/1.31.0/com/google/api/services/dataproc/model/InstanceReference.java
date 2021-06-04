@@ -44,7 +44,14 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
   private java.lang.String instanceName;
 
   /**
-   * The public key used for sharing data with this instance.
+   * The public ECIES key used for sharing data with this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicEciesKey;
+
+  /**
+   * The public RSA key used for sharing data with this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +92,24 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The public key used for sharing data with this instance.
+   * The public ECIES key used for sharing data with this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicEciesKey() {
+    return publicEciesKey;
+  }
+
+  /**
+   * The public ECIES key used for sharing data with this instance.
+   * @param publicEciesKey publicEciesKey or {@code null} for none
+   */
+  public InstanceReference setPublicEciesKey(java.lang.String publicEciesKey) {
+    this.publicEciesKey = publicEciesKey;
+    return this;
+  }
+
+  /**
+   * The public RSA key used for sharing data with this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicKey() {
@@ -93,7 +117,7 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The public key used for sharing data with this instance.
+   * The public RSA key used for sharing data with this instance.
    * @param publicKey publicKey or {@code null} for none
    */
   public InstanceReference setPublicKey(java.lang.String publicKey) {

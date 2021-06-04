@@ -38,8 +38,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private java.lang.Long advertiserId;
 
   /**
-   * The list of budgets available to this campaign. Setting no budget gives an unlimited campaign
-   * budget.
+   * The list of budgets available to this campaign. If this field is not set, the campaign uses an
+   * unlimited budget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of budgets available to this campaign. Setting no budget gives an unlimited campaign
-   * budget.
+   * The list of budgets available to this campaign. If this field is not set, the campaign uses an
+   * unlimited budget.
    * @return value or {@code null} for none
    */
   public java.util.List<CampaignBudget> getCampaignBudgets() {
@@ -132,8 +132,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of budgets available to this campaign. Setting no budget gives an unlimited campaign
-   * budget.
+   * The list of budgets available to this campaign. If this field is not set, the campaign uses an
+   * unlimited budget.
    * @param campaignBudgets campaignBudgets or {@code null} for none
    */
   public Campaign setCampaignBudgets(java.util.List<CampaignBudget> campaignBudgets) {

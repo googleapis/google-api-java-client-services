@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Represents a summarized budget information associated with this invoice.
+ * Summarized information of an individual campaign budget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,45 +31,48 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BudgetSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. External budget id.
+   * Corresponds to the external_budget_id of a campaign budget. If the value is not set in the
+   * campaign budget, this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalBudgetId;
 
   /**
-   * Output only. The pre-tax amount for this budget, in micros of the invoice's currency. For
-   * example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of charges made under this budget before taxes, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long preTaxAmountMicros;
 
   /**
-   * Output only. Codes specific to the MediaOcean Prisma tool.
+   * Relevant client, product, and estimate codes from the Mediaocean Prisma tool. Only applicable
+   * for campaign budgets with an external_budget_source of EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrismaCpeCode prismaCpeCode;
 
   /**
-   * Output only. The tax amount for this budget, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The amount of tax applied to charges under this budget, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long taxAmountMicros;
 
   /**
-   * Output only. The total amount of charges for this budget, in micros of the invoice's currency.
-   * For example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The total sum of charges made under this budget, including tax, in micros of the invoice's
+   * currency. For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalAmountMicros;
 
   /**
-   * Output only. External budget id.
+   * Corresponds to the external_budget_id of a campaign budget. If the value is not set in the
+   * campaign budget, this field will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalBudgetId() {
@@ -77,7 +80,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. External budget id.
+   * Corresponds to the external_budget_id of a campaign budget. If the value is not set in the
+   * campaign budget, this field will be empty.
    * @param externalBudgetId externalBudgetId or {@code null} for none
    */
   public BudgetSummary setExternalBudgetId(java.lang.String externalBudgetId) {
@@ -86,8 +90,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The pre-tax amount for this budget, in micros of the invoice's currency. For
-   * example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of charges made under this budget before taxes, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPreTaxAmountMicros() {
@@ -95,8 +99,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The pre-tax amount for this budget, in micros of the invoice's currency. For
-   * example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The sum of charges made under this budget before taxes, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @param preTaxAmountMicros preTaxAmountMicros or {@code null} for none
    */
   public BudgetSummary setPreTaxAmountMicros(java.lang.Long preTaxAmountMicros) {
@@ -105,7 +109,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Codes specific to the MediaOcean Prisma tool.
+   * Relevant client, product, and estimate codes from the Mediaocean Prisma tool. Only applicable
+   * for campaign budgets with an external_budget_source of EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN.
    * @return value or {@code null} for none
    */
   public PrismaCpeCode getPrismaCpeCode() {
@@ -113,7 +118,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Codes specific to the MediaOcean Prisma tool.
+   * Relevant client, product, and estimate codes from the Mediaocean Prisma tool. Only applicable
+   * for campaign budgets with an external_budget_source of EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN.
    * @param prismaCpeCode prismaCpeCode or {@code null} for none
    */
   public BudgetSummary setPrismaCpeCode(PrismaCpeCode prismaCpeCode) {
@@ -122,8 +128,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The tax amount for this budget, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The amount of tax applied to charges under this budget, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTaxAmountMicros() {
@@ -131,8 +137,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The tax amount for this budget, in micros of the invoice's currency. For example
-   * if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The amount of tax applied to charges under this budget, in micros of the invoice's currency.
+   * For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @param taxAmountMicros taxAmountMicros or {@code null} for none
    */
   public BudgetSummary setTaxAmountMicros(java.lang.Long taxAmountMicros) {
@@ -141,8 +147,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The total amount of charges for this budget, in micros of the invoice's currency.
-   * For example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The total sum of charges made under this budget, including tax, in micros of the invoice's
+   * currency. For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalAmountMicros() {
@@ -150,8 +156,8 @@ public final class BudgetSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The total amount of charges for this budget, in micros of the invoice's currency.
-   * For example if currency_code is `USD`, then 1000000 micros is one US dollar.
+   * The total sum of charges made under this budget, including tax, in micros of the invoice's
+   * currency. For example, if currency_code is `USD`, then 1000000 represents one US dollar.
    * @param totalAmountMicros totalAmountMicros or {@code null} for none
    */
   public BudgetSummary setTotalAmountMicros(java.lang.Long totalAmountMicros) {

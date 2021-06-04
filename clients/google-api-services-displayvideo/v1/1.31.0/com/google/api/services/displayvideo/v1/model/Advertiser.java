@@ -108,10 +108,11 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private java.lang.Long partnerId;
 
   /**
-   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
-   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
-   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
-   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this, you agree to the
+   * following: On behalf of my company, I authorize Mediaocean (Prisma) to send budget segment
+   * plans to Google, and I authorize Google to send corresponding reporting and invoices from DV360
+   * to Mediaocean for the purposes of budget planning, billing, and reconciliation for this
+   * advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,10 +317,11 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
-   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
-   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
-   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this, you agree to the
+   * following: On behalf of my company, I authorize Mediaocean (Prisma) to send budget segment
+   * plans to Google, and I authorize Google to send corresponding reporting and invoices from DV360
+   * to Mediaocean for the purposes of budget planning, billing, and reconciliation for this
+   * advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrismaEnabled() {
@@ -327,10 +329,11 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this: On behalf of my
-   * company, I authorize Mediaocean (Prisma) to send budget segment plans to Google, and I
-   * authorize Google to send corresponding reporting and invoices from DV360 to Mediaocean for the
-   * purposes of budget planning, billing, and reconciliation for this advertiser.
+   * Whether integration with Mediaocean (Prisma) is enabled. By enabling this, you agree to the
+   * following: On behalf of my company, I authorize Mediaocean (Prisma) to send budget segment
+   * plans to Google, and I authorize Google to send corresponding reporting and invoices from DV360
+   * to Mediaocean for the purposes of budget planning, billing, and reconciliation for this
+   * advertiser.
    * @param prismaEnabled prismaEnabled or {@code null} for none
    */
   public Advertiser setPrismaEnabled(java.lang.Boolean prismaEnabled) {

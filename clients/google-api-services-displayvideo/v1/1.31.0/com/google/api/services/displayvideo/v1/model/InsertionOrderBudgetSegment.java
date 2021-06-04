@@ -40,7 +40,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
   private java.lang.Long budgetAmountMicros;
 
   /**
-   * The ID of the campaign budget linked to this insertion order budget segment.
+   * The budget_id of the campaign budget that this insertion order budget segment is a part of.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -88,7 +88,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
   }
 
   /**
-   * The ID of the campaign budget linked to this insertion order budget segment.
+   * The budget_id of the campaign budget that this insertion order budget segment is a part of.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCampaignBudgetId() {
@@ -96,7 +96,7 @@ public final class InsertionOrderBudgetSegment extends com.google.api.client.jso
   }
 
   /**
-   * The ID of the campaign budget linked to this insertion order budget segment.
+   * The budget_id of the campaign budget that this insertion order budget segment is a part of.
    * @param campaignBudgetId campaignBudgetId or {@code null} for none
    */
   public InsertionOrderBudgetSegment setCampaignBudgetId(java.lang.Long campaignBudgetId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Settings specific to the MediaOcean Prisma tool.
+ * Settings specific to the Mediaocean Prisma tool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class PrismaConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Google Payments Center supports searching and filtering on this code.
+   * Required. Relevant client, product, and estimate codes from the Mediaocean Prisma tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class PrismaConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String supplier;
 
   /**
-   * Required. Google Payments Center supports searching and filtering on this code.
+   * Required. Relevant client, product, and estimate codes from the Mediaocean Prisma tool.
    * @return value or {@code null} for none
    */
   public PrismaCpeCode getPrismaCpeCode() {
@@ -60,7 +60,7 @@ public final class PrismaConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Google Payments Center supports searching and filtering on this code.
+   * Required. Relevant client, product, and estimate codes from the Mediaocean Prisma tool.
    * @param prismaCpeCode prismaCpeCode or {@code null} for none
    */
   public PrismaConfig setPrismaCpeCode(PrismaCpeCode prismaCpeCode) {

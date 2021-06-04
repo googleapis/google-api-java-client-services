@@ -37,6 +37,14 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean cacheHit;
 
   /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object dmlStats;
+
+  /**
    * [Output-only] The first errors or warnings encountered during the running of the job. The final
    * message includes the number of errors that caused the process to stop. Errors here do not
    * necessarily mean that the job has completed or was unsuccessful.
@@ -144,6 +152,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setCacheHit(java.lang.Boolean cacheHit) {
     this.cacheHit = cacheHit;
+    return this;
+  }
+
+  /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getDmlStats() {
+    return dmlStats;
+  }
+
+  /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * @param dmlStats dmlStats or {@code null} for none
+   */
+  public QueryResponse setDmlStats(java.lang.Object dmlStats) {
+    this.dmlStats = dmlStats;
     return this;
   }
 

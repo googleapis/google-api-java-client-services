@@ -68,6 +68,26 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private CsvOptions csvOptions;
 
   /**
+   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
+   * converted. This list and the precision and the scale parameters of the decimal field determine
+   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
+   * the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
+   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
+   * supported range). This field cannot contain duplicate types. The order of the types in this
+   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
+   * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> decimalTargetTypes;
+
+  /**
    * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
    * The value may be {@code null}.
    */
@@ -230,6 +250,49 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setCsvOptions(CsvOptions csvOptions) {
     this.csvOptions = csvOptions;
+    return this;
+  }
+
+  /**
+   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
+   * converted. This list and the precision and the scale parameters of the decimal field determine
+   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
+   * the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
+   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
+   * supported range). This field cannot contain duplicate types. The order of the types in this
+   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
+   * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDecimalTargetTypes() {
+    return decimalTargetTypes;
+  }
+
+  /**
+   * [Optional] Defines the list of possible SQL data types to which the source decimal values are
+   * converted. This list and the precision and the scale parameters of the decimal field determine
+   * the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in
+   * the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. Example: Suppose the value
+   * of this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: (38,9) -> NUMERIC; (39,9)
+   * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -> BIGNUMERIC (NUMERIC cannot
+   * hold 10 fractional digits); (76,38) -> BIGNUMERIC; (77,38) -> BIGNUMERIC (error if value exeeds
+   * supported range). This field cannot contain duplicate types. The order of the types in this
+   * field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
+   * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
+   * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
+   * @param decimalTargetTypes decimalTargetTypes or {@code null} for none
+   */
+  public ExternalDataConfiguration setDecimalTargetTypes(java.util.List<java.lang.String> decimalTargetTypes) {
+    this.decimalTargetTypes = decimalTargetTypes;
     return this;
   }
 

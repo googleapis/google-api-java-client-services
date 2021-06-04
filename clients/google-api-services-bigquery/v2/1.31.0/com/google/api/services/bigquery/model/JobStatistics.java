@@ -166,7 +166,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TransactionInfo transactionInfoTemplate;
+  private TransactionInfo transactionInfo;
 
   /**
    * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
@@ -474,17 +474,17 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    * one.
    * @return value or {@code null} for none
    */
-  public TransactionInfo getTransactionInfoTemplate() {
-    return transactionInfoTemplate;
+  public TransactionInfo getTransactionInfo() {
+    return transactionInfo;
   }
 
   /**
    * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
    * one.
-   * @param transactionInfoTemplate transactionInfoTemplate or {@code null} for none
+   * @param transactionInfo transactionInfo or {@code null} for none
    */
-  public JobStatistics setTransactionInfoTemplate(TransactionInfo transactionInfoTemplate) {
-    this.transactionInfoTemplate = transactionInfoTemplate;
+  public JobStatistics setTransactionInfo(TransactionInfo transactionInfo) {
+    this.transactionInfo = transactionInfo;
     return this;
   }
 

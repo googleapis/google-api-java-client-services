@@ -102,6 +102,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableReference ddlTargetTable;
 
   /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object dmlStats;
+
+  /**
    * [Output-only] The original estimate of bytes processed for the job.
    * The value may be {@code null}.
    */
@@ -428,6 +436,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setDdlTargetTable(TableReference ddlTargetTable) {
     this.ddlTargetTable = ddlTargetTable;
+    return this;
+  }
+
+  /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getDmlStats() {
+    return dmlStats;
+  }
+
+  /**
+   * [Output-only] Detailed statistics for DML statements Present only for DML statements INSERT,
+   * UPDATE, DELETE or TRUNCATE.
+   * @param dmlStats dmlStats or {@code null} for none
+   */
+  public JobStatistics2 setDmlStats(java.lang.Object dmlStats) {
+    this.dmlStats = dmlStats;
     return this;
   }
 

@@ -105,7 +105,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private StackdriverLoggingConfig stackdriverLoggingConfig;
 
   /**
-   * Output only. The state of the queue. `state` can only be changed by called PauseQueue,
+   * Output only. The state of the queue. `state` can only be changed by calling PauseQueue,
    * ResumeQueue, or uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue
    * cannot be used to change `state`.
@@ -281,7 +281,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the queue. `state` can only be changed by called PauseQueue,
+   * Output only. The state of the queue. `state` can only be changed by calling PauseQueue,
    * ResumeQueue, or uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue
    * cannot be used to change `state`.
@@ -292,7 +292,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the queue. `state` can only be changed by called PauseQueue,
+   * Output only. The state of the queue. `state` can only be changed by calling PauseQueue,
    * ResumeQueue, or uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref). UpdateQueue
    * cannot be used to change `state`.

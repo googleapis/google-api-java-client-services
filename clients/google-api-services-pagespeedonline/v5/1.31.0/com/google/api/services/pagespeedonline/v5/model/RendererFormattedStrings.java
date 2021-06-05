@@ -38,6 +38,14 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   private java.lang.String auditGroupExpandTooltip;
 
   /**
+   * Text link pointing to the Lighthouse scoring calculator. This link immediately follows a
+   * sentence stating the performance score is calculated from the perf metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String calculatorLink;
+
+  /**
    * The label for the initial request in a critical request chain.
    * The value may be {@code null}.
    */
@@ -50,6 +58,65 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String crcLongestDurationLabel;
+
+  /**
+   * Option in a dropdown menu that copies the Lighthouse JSON object to the system clipboard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownCopyJSON;
+
+  /**
+   * Option in a dropdown menu that toggles the themeing of the report between Light(default) and
+   * Dark themes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownDarkTheme;
+
+  /**
+   * Option in a dropdown menu that opens a full Lighthouse report in a print dialog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownPrintExpanded;
+
+  /**
+   * Option in a dropdown menu that opens a small, summary report in a print dialog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownPrintSummary;
+
+  /**
+   * Option in a dropdown menu that saves the current report as a new GitHub Gist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownSaveGist;
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse report HTML locally to the system as a
+   * '.html' file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownSaveHTML;
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse JSON object to the local system as a
+   * '.json' file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownSaveJSON;
+
+  /**
+   * Option in a dropdown menu that opens the current report in the Lighthouse Viewer Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dropdownViewer;
 
   /**
    * The label shown next to an audit or metric that has had an error.
@@ -66,6 +133,13 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   private java.lang.String errorMissingAuditInfo;
 
   /**
+   * Label for button to create an issue against the Lighthouse GitHub project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String footerIssue;
+
+  /**
    * The title of the lab data performance category.
    * The value may be {@code null}.
    */
@@ -73,7 +147,7 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   private java.lang.String labDataTitle;
 
   /**
-   * The disclaimer shown under performance explaning that the network can vary.
+   * The disclaimer shown under performance explaining that the network can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,11 +189,164 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   private java.lang.String passedAuditsGroupTitle;
 
   /**
+   * Descriptive explanation for emulation setting when emulating a generic desktop form factor, as
+   * opposed to a mobile-device like form factor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeDesktopEmulation;
+
+  /**
+   * Descriptive explanation for emulation setting when emulating a Nexus 5X mobile device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeMobileEmulation;
+
+  /**
+   * Descriptive explanation for emulation setting when no device emulation is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeNoEmulation;
+
+  /**
+   * Label for a row in a table that shows the version of the Axe library used
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsAxeVersion;
+
+  /**
+   * Label for a row in a table that shows the estimated CPU power of the machine running
+   * Lighthouse. Example row values: 532, 1492, 783.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsBenchmark;
+
+  /**
+   * Label for a row in a table that describes the CPU throttling conditions that were used during a
+   * Lighthouse run, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsCPUThrottling;
+
+  /**
+   * Label for a row in a table that shows in what tool Lighthouse is being run (e.g. The lighthouse
+   * CLI, Chrome DevTools, Lightrider, WebPageTest, etc).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsChannel;
+
+  /**
+   * Label for a row in a table that describes the kind of device that was emulated for the
+   * Lighthouse run. Example values for row elements: 'No Emulation', 'Emulated Desktop', etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsDevice;
+
+  /**
+   * Label for a row in a table that shows the time at which a Lighthouse run was conducted;
+   * formatted as a timestamp, e.g. Jan 1, 1970 12:00 AM UTC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsFetchTime;
+
+  /**
+   * Label for a row in a table that describes the network throttling conditions that were used
+   * during a Lighthouse run, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsNetworkThrottling;
+
+  /**
+   * Title of the Runtime settings table in a Lighthouse report. Runtime settings are the
+   * environment configurations that a specific report used at auditing time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsTitle;
+
+  /**
+   * Label for a row in a table that shows the User Agent that was detected on the Host machine that
+   * ran Lighthouse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsUA;
+
+  /**
+   * Label for a row in a table that shows the User Agent that was used to send out all network
+   * requests during the Lighthouse run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsUANetwork;
+
+  /**
+   * Label for a row in a table that shows the URL that was audited during a Lighthouse run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeSettingsUrl;
+
+  /**
+   * Descriptive explanation for a runtime setting that is set to an unknown value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeUnknown;
+
+  /**
    * The label that explains the score gauges scale (0-49, 50-89, 90-100).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scorescaleLabel;
+
+  /**
+   * Label preceding a radio control for filtering the list of audits. The radio choices are various
+   * performance metrics (FCP, LCP, TBT), and if chosen, the audits in the report are hidden if they
+   * are not relevant to the selected metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String showRelevantAudits;
+
+  /**
+   * The label for the button to show only a few lines of a snippet
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snippetCollapseButtonLabel;
+
+  /**
+   * The label for the button to show all lines of a snippet
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snippetExpandButtonLabel;
+
+  /**
+   * This label is for a filter checkbox above a table of items
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thirdPartyResourcesLabel;
+
+  /**
+   * Descriptive explanation for environment throttling that was provided by the runtime environment
+   * instead of provided by Lighthouse throttling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String throttlingProvided;
 
   /**
    * The label shown preceding important warnings that may have invalidated an entire report.
@@ -134,6 +361,20 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String varianceDisclaimer;
+
+  /**
+   * Label for a button that opens the Treemap App
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String viewTreemapLabel;
+
+  /**
+   * The heading that is shown above a list of audits that have warnings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String warningAuditsGroupTitle;
 
   /**
    * The label shown above a bulleted list of warnings.
@@ -156,6 +397,25 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
    */
   public RendererFormattedStrings setAuditGroupExpandTooltip(java.lang.String auditGroupExpandTooltip) {
     this.auditGroupExpandTooltip = auditGroupExpandTooltip;
+    return this;
+  }
+
+  /**
+   * Text link pointing to the Lighthouse scoring calculator. This link immediately follows a
+   * sentence stating the performance score is calculated from the perf metrics.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCalculatorLink() {
+    return calculatorLink;
+  }
+
+  /**
+   * Text link pointing to the Lighthouse scoring calculator. This link immediately follows a
+   * sentence stating the performance score is calculated from the perf metrics.
+   * @param calculatorLink calculatorLink or {@code null} for none
+   */
+  public RendererFormattedStrings setCalculatorLink(java.lang.String calculatorLink) {
+    this.calculatorLink = calculatorLink;
     return this;
   }
 
@@ -194,6 +454,148 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   }
 
   /**
+   * Option in a dropdown menu that copies the Lighthouse JSON object to the system clipboard.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownCopyJSON() {
+    return dropdownCopyJSON;
+  }
+
+  /**
+   * Option in a dropdown menu that copies the Lighthouse JSON object to the system clipboard.
+   * @param dropdownCopyJSON dropdownCopyJSON or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownCopyJSON(java.lang.String dropdownCopyJSON) {
+    this.dropdownCopyJSON = dropdownCopyJSON;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that toggles the themeing of the report between Light(default) and
+   * Dark themes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownDarkTheme() {
+    return dropdownDarkTheme;
+  }
+
+  /**
+   * Option in a dropdown menu that toggles the themeing of the report between Light(default) and
+   * Dark themes.
+   * @param dropdownDarkTheme dropdownDarkTheme or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownDarkTheme(java.lang.String dropdownDarkTheme) {
+    this.dropdownDarkTheme = dropdownDarkTheme;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that opens a full Lighthouse report in a print dialog.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownPrintExpanded() {
+    return dropdownPrintExpanded;
+  }
+
+  /**
+   * Option in a dropdown menu that opens a full Lighthouse report in a print dialog.
+   * @param dropdownPrintExpanded dropdownPrintExpanded or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownPrintExpanded(java.lang.String dropdownPrintExpanded) {
+    this.dropdownPrintExpanded = dropdownPrintExpanded;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that opens a small, summary report in a print dialog.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownPrintSummary() {
+    return dropdownPrintSummary;
+  }
+
+  /**
+   * Option in a dropdown menu that opens a small, summary report in a print dialog.
+   * @param dropdownPrintSummary dropdownPrintSummary or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownPrintSummary(java.lang.String dropdownPrintSummary) {
+    this.dropdownPrintSummary = dropdownPrintSummary;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the current report as a new GitHub Gist.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownSaveGist() {
+    return dropdownSaveGist;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the current report as a new GitHub Gist.
+   * @param dropdownSaveGist dropdownSaveGist or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownSaveGist(java.lang.String dropdownSaveGist) {
+    this.dropdownSaveGist = dropdownSaveGist;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse report HTML locally to the system as a
+   * '.html' file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownSaveHTML() {
+    return dropdownSaveHTML;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse report HTML locally to the system as a
+   * '.html' file.
+   * @param dropdownSaveHTML dropdownSaveHTML or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownSaveHTML(java.lang.String dropdownSaveHTML) {
+    this.dropdownSaveHTML = dropdownSaveHTML;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse JSON object to the local system as a
+   * '.json' file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownSaveJSON() {
+    return dropdownSaveJSON;
+  }
+
+  /**
+   * Option in a dropdown menu that saves the Lighthouse JSON object to the local system as a
+   * '.json' file.
+   * @param dropdownSaveJSON dropdownSaveJSON or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownSaveJSON(java.lang.String dropdownSaveJSON) {
+    this.dropdownSaveJSON = dropdownSaveJSON;
+    return this;
+  }
+
+  /**
+   * Option in a dropdown menu that opens the current report in the Lighthouse Viewer Application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDropdownViewer() {
+    return dropdownViewer;
+  }
+
+  /**
+   * Option in a dropdown menu that opens the current report in the Lighthouse Viewer Application.
+   * @param dropdownViewer dropdownViewer or {@code null} for none
+   */
+  public RendererFormattedStrings setDropdownViewer(java.lang.String dropdownViewer) {
+    this.dropdownViewer = dropdownViewer;
+    return this;
+  }
+
+  /**
    * The label shown next to an audit or metric that has had an error.
    * @return value or {@code null} for none
    */
@@ -228,6 +630,23 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   }
 
   /**
+   * Label for button to create an issue against the Lighthouse GitHub project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFooterIssue() {
+    return footerIssue;
+  }
+
+  /**
+   * Label for button to create an issue against the Lighthouse GitHub project.
+   * @param footerIssue footerIssue or {@code null} for none
+   */
+  public RendererFormattedStrings setFooterIssue(java.lang.String footerIssue) {
+    this.footerIssue = footerIssue;
+    return this;
+  }
+
+  /**
    * The title of the lab data performance category.
    * @return value or {@code null} for none
    */
@@ -245,7 +664,7 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   }
 
   /**
-   * The disclaimer shown under performance explaning that the network can vary.
+   * The disclaimer shown under performance explaining that the network can vary.
    * @return value or {@code null} for none
    */
   public java.lang.String getLsPerformanceCategoryDescription() {
@@ -253,7 +672,7 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   }
 
   /**
-   * The disclaimer shown under performance explaning that the network can vary.
+   * The disclaimer shown under performance explaining that the network can vary.
    * @param lsPerformanceCategoryDescription lsPerformanceCategoryDescription or {@code null} for none
    */
   public RendererFormattedStrings setLsPerformanceCategoryDescription(java.lang.String lsPerformanceCategoryDescription) {
@@ -347,6 +766,281 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
   }
 
   /**
+   * Descriptive explanation for emulation setting when emulating a generic desktop form factor, as
+   * opposed to a mobile-device like form factor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeDesktopEmulation() {
+    return runtimeDesktopEmulation;
+  }
+
+  /**
+   * Descriptive explanation for emulation setting when emulating a generic desktop form factor, as
+   * opposed to a mobile-device like form factor.
+   * @param runtimeDesktopEmulation runtimeDesktopEmulation or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeDesktopEmulation(java.lang.String runtimeDesktopEmulation) {
+    this.runtimeDesktopEmulation = runtimeDesktopEmulation;
+    return this;
+  }
+
+  /**
+   * Descriptive explanation for emulation setting when emulating a Nexus 5X mobile device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeMobileEmulation() {
+    return runtimeMobileEmulation;
+  }
+
+  /**
+   * Descriptive explanation for emulation setting when emulating a Nexus 5X mobile device.
+   * @param runtimeMobileEmulation runtimeMobileEmulation or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeMobileEmulation(java.lang.String runtimeMobileEmulation) {
+    this.runtimeMobileEmulation = runtimeMobileEmulation;
+    return this;
+  }
+
+  /**
+   * Descriptive explanation for emulation setting when no device emulation is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeNoEmulation() {
+    return runtimeNoEmulation;
+  }
+
+  /**
+   * Descriptive explanation for emulation setting when no device emulation is set.
+   * @param runtimeNoEmulation runtimeNoEmulation or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeNoEmulation(java.lang.String runtimeNoEmulation) {
+    this.runtimeNoEmulation = runtimeNoEmulation;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the version of the Axe library used
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsAxeVersion() {
+    return runtimeSettingsAxeVersion;
+  }
+
+  /**
+   * Label for a row in a table that shows the version of the Axe library used
+   * @param runtimeSettingsAxeVersion runtimeSettingsAxeVersion or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsAxeVersion(java.lang.String runtimeSettingsAxeVersion) {
+    this.runtimeSettingsAxeVersion = runtimeSettingsAxeVersion;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the estimated CPU power of the machine running
+   * Lighthouse. Example row values: 532, 1492, 783.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsBenchmark() {
+    return runtimeSettingsBenchmark;
+  }
+
+  /**
+   * Label for a row in a table that shows the estimated CPU power of the machine running
+   * Lighthouse. Example row values: 532, 1492, 783.
+   * @param runtimeSettingsBenchmark runtimeSettingsBenchmark or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsBenchmark(java.lang.String runtimeSettingsBenchmark) {
+    this.runtimeSettingsBenchmark = runtimeSettingsBenchmark;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that describes the CPU throttling conditions that were used during a
+   * Lighthouse run, if any.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsCPUThrottling() {
+    return runtimeSettingsCPUThrottling;
+  }
+
+  /**
+   * Label for a row in a table that describes the CPU throttling conditions that were used during a
+   * Lighthouse run, if any.
+   * @param runtimeSettingsCPUThrottling runtimeSettingsCPUThrottling or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsCPUThrottling(java.lang.String runtimeSettingsCPUThrottling) {
+    this.runtimeSettingsCPUThrottling = runtimeSettingsCPUThrottling;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows in what tool Lighthouse is being run (e.g. The lighthouse
+   * CLI, Chrome DevTools, Lightrider, WebPageTest, etc).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsChannel() {
+    return runtimeSettingsChannel;
+  }
+
+  /**
+   * Label for a row in a table that shows in what tool Lighthouse is being run (e.g. The lighthouse
+   * CLI, Chrome DevTools, Lightrider, WebPageTest, etc).
+   * @param runtimeSettingsChannel runtimeSettingsChannel or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsChannel(java.lang.String runtimeSettingsChannel) {
+    this.runtimeSettingsChannel = runtimeSettingsChannel;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that describes the kind of device that was emulated for the
+   * Lighthouse run. Example values for row elements: 'No Emulation', 'Emulated Desktop', etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsDevice() {
+    return runtimeSettingsDevice;
+  }
+
+  /**
+   * Label for a row in a table that describes the kind of device that was emulated for the
+   * Lighthouse run. Example values for row elements: 'No Emulation', 'Emulated Desktop', etc.
+   * @param runtimeSettingsDevice runtimeSettingsDevice or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsDevice(java.lang.String runtimeSettingsDevice) {
+    this.runtimeSettingsDevice = runtimeSettingsDevice;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the time at which a Lighthouse run was conducted;
+   * formatted as a timestamp, e.g. Jan 1, 1970 12:00 AM UTC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsFetchTime() {
+    return runtimeSettingsFetchTime;
+  }
+
+  /**
+   * Label for a row in a table that shows the time at which a Lighthouse run was conducted;
+   * formatted as a timestamp, e.g. Jan 1, 1970 12:00 AM UTC.
+   * @param runtimeSettingsFetchTime runtimeSettingsFetchTime or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsFetchTime(java.lang.String runtimeSettingsFetchTime) {
+    this.runtimeSettingsFetchTime = runtimeSettingsFetchTime;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that describes the network throttling conditions that were used
+   * during a Lighthouse run, if any.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsNetworkThrottling() {
+    return runtimeSettingsNetworkThrottling;
+  }
+
+  /**
+   * Label for a row in a table that describes the network throttling conditions that were used
+   * during a Lighthouse run, if any.
+   * @param runtimeSettingsNetworkThrottling runtimeSettingsNetworkThrottling or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsNetworkThrottling(java.lang.String runtimeSettingsNetworkThrottling) {
+    this.runtimeSettingsNetworkThrottling = runtimeSettingsNetworkThrottling;
+    return this;
+  }
+
+  /**
+   * Title of the Runtime settings table in a Lighthouse report. Runtime settings are the
+   * environment configurations that a specific report used at auditing time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsTitle() {
+    return runtimeSettingsTitle;
+  }
+
+  /**
+   * Title of the Runtime settings table in a Lighthouse report. Runtime settings are the
+   * environment configurations that a specific report used at auditing time.
+   * @param runtimeSettingsTitle runtimeSettingsTitle or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsTitle(java.lang.String runtimeSettingsTitle) {
+    this.runtimeSettingsTitle = runtimeSettingsTitle;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the User Agent that was detected on the Host machine that
+   * ran Lighthouse.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsUA() {
+    return runtimeSettingsUA;
+  }
+
+  /**
+   * Label for a row in a table that shows the User Agent that was detected on the Host machine that
+   * ran Lighthouse.
+   * @param runtimeSettingsUA runtimeSettingsUA or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsUA(java.lang.String runtimeSettingsUA) {
+    this.runtimeSettingsUA = runtimeSettingsUA;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the User Agent that was used to send out all network
+   * requests during the Lighthouse run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsUANetwork() {
+    return runtimeSettingsUANetwork;
+  }
+
+  /**
+   * Label for a row in a table that shows the User Agent that was used to send out all network
+   * requests during the Lighthouse run.
+   * @param runtimeSettingsUANetwork runtimeSettingsUANetwork or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsUANetwork(java.lang.String runtimeSettingsUANetwork) {
+    this.runtimeSettingsUANetwork = runtimeSettingsUANetwork;
+    return this;
+  }
+
+  /**
+   * Label for a row in a table that shows the URL that was audited during a Lighthouse run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeSettingsUrl() {
+    return runtimeSettingsUrl;
+  }
+
+  /**
+   * Label for a row in a table that shows the URL that was audited during a Lighthouse run.
+   * @param runtimeSettingsUrl runtimeSettingsUrl or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeSettingsUrl(java.lang.String runtimeSettingsUrl) {
+    this.runtimeSettingsUrl = runtimeSettingsUrl;
+    return this;
+  }
+
+  /**
+   * Descriptive explanation for a runtime setting that is set to an unknown value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeUnknown() {
+    return runtimeUnknown;
+  }
+
+  /**
+   * Descriptive explanation for a runtime setting that is set to an unknown value.
+   * @param runtimeUnknown runtimeUnknown or {@code null} for none
+   */
+  public RendererFormattedStrings setRuntimeUnknown(java.lang.String runtimeUnknown) {
+    this.runtimeUnknown = runtimeUnknown;
+    return this;
+  }
+
+  /**
    * The label that explains the score gauges scale (0-49, 50-89, 90-100).
    * @return value or {@code null} for none
    */
@@ -360,6 +1054,97 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
    */
   public RendererFormattedStrings setScorescaleLabel(java.lang.String scorescaleLabel) {
     this.scorescaleLabel = scorescaleLabel;
+    return this;
+  }
+
+  /**
+   * Label preceding a radio control for filtering the list of audits. The radio choices are various
+   * performance metrics (FCP, LCP, TBT), and if chosen, the audits in the report are hidden if they
+   * are not relevant to the selected metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShowRelevantAudits() {
+    return showRelevantAudits;
+  }
+
+  /**
+   * Label preceding a radio control for filtering the list of audits. The radio choices are various
+   * performance metrics (FCP, LCP, TBT), and if chosen, the audits in the report are hidden if they
+   * are not relevant to the selected metric.
+   * @param showRelevantAudits showRelevantAudits or {@code null} for none
+   */
+  public RendererFormattedStrings setShowRelevantAudits(java.lang.String showRelevantAudits) {
+    this.showRelevantAudits = showRelevantAudits;
+    return this;
+  }
+
+  /**
+   * The label for the button to show only a few lines of a snippet
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnippetCollapseButtonLabel() {
+    return snippetCollapseButtonLabel;
+  }
+
+  /**
+   * The label for the button to show only a few lines of a snippet
+   * @param snippetCollapseButtonLabel snippetCollapseButtonLabel or {@code null} for none
+   */
+  public RendererFormattedStrings setSnippetCollapseButtonLabel(java.lang.String snippetCollapseButtonLabel) {
+    this.snippetCollapseButtonLabel = snippetCollapseButtonLabel;
+    return this;
+  }
+
+  /**
+   * The label for the button to show all lines of a snippet
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnippetExpandButtonLabel() {
+    return snippetExpandButtonLabel;
+  }
+
+  /**
+   * The label for the button to show all lines of a snippet
+   * @param snippetExpandButtonLabel snippetExpandButtonLabel or {@code null} for none
+   */
+  public RendererFormattedStrings setSnippetExpandButtonLabel(java.lang.String snippetExpandButtonLabel) {
+    this.snippetExpandButtonLabel = snippetExpandButtonLabel;
+    return this;
+  }
+
+  /**
+   * This label is for a filter checkbox above a table of items
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThirdPartyResourcesLabel() {
+    return thirdPartyResourcesLabel;
+  }
+
+  /**
+   * This label is for a filter checkbox above a table of items
+   * @param thirdPartyResourcesLabel thirdPartyResourcesLabel or {@code null} for none
+   */
+  public RendererFormattedStrings setThirdPartyResourcesLabel(java.lang.String thirdPartyResourcesLabel) {
+    this.thirdPartyResourcesLabel = thirdPartyResourcesLabel;
+    return this;
+  }
+
+  /**
+   * Descriptive explanation for environment throttling that was provided by the runtime environment
+   * instead of provided by Lighthouse throttling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThrottlingProvided() {
+    return throttlingProvided;
+  }
+
+  /**
+   * Descriptive explanation for environment throttling that was provided by the runtime environment
+   * instead of provided by Lighthouse throttling.
+   * @param throttlingProvided throttlingProvided or {@code null} for none
+   */
+  public RendererFormattedStrings setThrottlingProvided(java.lang.String throttlingProvided) {
+    this.throttlingProvided = throttlingProvided;
     return this;
   }
 
@@ -394,6 +1179,40 @@ public final class RendererFormattedStrings extends com.google.api.client.json.G
    */
   public RendererFormattedStrings setVarianceDisclaimer(java.lang.String varianceDisclaimer) {
     this.varianceDisclaimer = varianceDisclaimer;
+    return this;
+  }
+
+  /**
+   * Label for a button that opens the Treemap App
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getViewTreemapLabel() {
+    return viewTreemapLabel;
+  }
+
+  /**
+   * Label for a button that opens the Treemap App
+   * @param viewTreemapLabel viewTreemapLabel or {@code null} for none
+   */
+  public RendererFormattedStrings setViewTreemapLabel(java.lang.String viewTreemapLabel) {
+    this.viewTreemapLabel = viewTreemapLabel;
+    return this;
+  }
+
+  /**
+   * The heading that is shown above a list of audits that have warnings
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWarningAuditsGroupTitle() {
+    return warningAuditsGroupTitle;
+  }
+
+  /**
+   * The heading that is shown above a list of audits that have warnings
+   * @param warningAuditsGroupTitle warningAuditsGroupTitle or {@code null} for none
+   */
+  public RendererFormattedStrings setWarningAuditsGroupTitle(java.lang.String warningAuditsGroupTitle) {
+    this.warningAuditsGroupTitle = warningAuditsGroupTitle;
     return this;
   }
 

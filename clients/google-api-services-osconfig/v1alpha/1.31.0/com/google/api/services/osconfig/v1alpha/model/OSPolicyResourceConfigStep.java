@@ -30,6 +30,14 @@ package com.google.api.services.osconfig.v1alpha.model;
 public final class OSPolicyResourceConfigStep extends com.google.api.client.json.GenericJson {
 
   /**
+   * An error message recorded during the execution of this step. Only populated when outcome is
+   * FAILED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorMessage;
+
+  /**
    * Outcome of the configuration step.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class OSPolicyResourceConfigStep extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * An error message recorded during the execution of this step. Only populated when outcome is
+   * FAILED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
+  }
+
+  /**
+   * An error message recorded during the execution of this step. Only populated when outcome is
+   * FAILED.
+   * @param errorMessage errorMessage or {@code null} for none
+   */
+  public OSPolicyResourceConfigStep setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
+    return this;
+  }
 
   /**
    * Outcome of the configuration step.

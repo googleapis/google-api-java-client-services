@@ -31,6 +31,13 @@ package com.google.api.services.pagespeedonline.v5.model;
 public final class AuditRefs extends com.google.api.client.json.GenericJson {
 
   /**
+   * The conventional acronym for the audit/metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acronym;
+
+  /**
    * The category group that the audit belongs to (optional).
    * The value may be {@code null}.
    */
@@ -45,11 +52,35 @@ public final class AuditRefs extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Any audit IDs closely relevant to this one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> relevantAudits;
+
+  /**
    * The weight this audit's score has on the overall category score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double weight;
+
+  /**
+   * The conventional acronym for the audit/metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcronym() {
+    return acronym;
+  }
+
+  /**
+   * The conventional acronym for the audit/metric.
+   * @param acronym acronym or {@code null} for none
+   */
+  public AuditRefs setAcronym(java.lang.String acronym) {
+    this.acronym = acronym;
+    return this;
+  }
 
   /**
    * The category group that the audit belongs to (optional).
@@ -82,6 +113,23 @@ public final class AuditRefs extends com.google.api.client.json.GenericJson {
    */
   public AuditRefs setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Any audit IDs closely relevant to this one.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRelevantAudits() {
+    return relevantAudits;
+  }
+
+  /**
+   * Any audit IDs closely relevant to this one.
+   * @param relevantAudits relevantAudits or {@code null} for none
+   */
+  public AuditRefs setRelevantAudits(java.util.List<java.lang.String> relevantAudits) {
+    this.relevantAudits = relevantAudits;
     return this;
   }
 

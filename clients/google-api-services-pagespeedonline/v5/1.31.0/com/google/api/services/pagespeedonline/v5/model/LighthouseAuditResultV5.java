@@ -73,6 +73,13 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
   private java.lang.String id;
 
   /**
+   * The unit of the numeric_value field. Used to format the numeric value for display.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String numericUnit;
+
+  /**
    * A numeric value that has a meaning specific to the audit, e.g. the number of nodes in the DOM
    * or the timestamp of a specific load event. More information can be found in the audit details,
    * if present.
@@ -208,6 +215,23 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
    */
   public LighthouseAuditResultV5 setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The unit of the numeric_value field. Used to format the numeric value for display.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNumericUnit() {
+    return numericUnit;
+  }
+
+  /**
+   * The unit of the numeric_value field. Used to format the numeric value for display.
+   * @param numericUnit numericUnit or {@code null} for none
+   */
+  public LighthouseAuditResultV5 setNumericUnit(java.lang.String numericUnit) {
+    this.numericUnit = numericUnit;
     return this;
   }
 

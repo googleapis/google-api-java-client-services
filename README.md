@@ -156,6 +156,7 @@ packages on [Maven Central][maven-search].
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |
 | Google Identity Toolkit API | [v3](clients/google-api-services-identitytoolkit/v3) |
+| Google Keep API | [v1](clients/google-api-services-keep/v1) |
 | Google OAuth2 API | [v2](clients/google-api-services-oauth2/v2) |
 | Google Play Android Developer API | [v3](clients/google-api-services-androidpublisher/v3) |
 | Google Play Custom App Publishing API | [v1](clients/google-api-services-playcustomapp/v1) |

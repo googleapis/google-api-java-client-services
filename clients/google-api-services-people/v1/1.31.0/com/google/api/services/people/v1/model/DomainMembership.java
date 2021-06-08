@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A G Suite Domain membership.
+ * A Google Workspace Domain membership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.people.v1.model;
 public final class DomainMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the person is in the viewer's G Suite domain.
+   * True if the person is in the viewer's Google Workspace domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inViewerDomain;
 
   /**
-   * True if the person is in the viewer's G Suite domain.
+   * True if the person is in the viewer's Google Workspace domain.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInViewerDomain() {
@@ -45,7 +45,7 @@ public final class DomainMembership extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * True if the person is in the viewer's G Suite domain.
+   * True if the person is in the viewer's Google Workspace domain.
    * @param inViewerDomain inViewerDomain or {@code null} for none
    */
   public DomainMembership setInViewerDomain(java.lang.Boolean inViewerDomain) {

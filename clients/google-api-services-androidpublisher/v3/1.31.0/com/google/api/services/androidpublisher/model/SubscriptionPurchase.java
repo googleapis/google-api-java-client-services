@@ -176,7 +176,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String obfuscatedExternalProfileId;
 
   /**
-   * The order id of the latest recurring order associated with the purchase of the subscription.
+   * The order id of the latest recurring order associated with the purchase of the subscription. If
+   * the subscription was canceled because payment was declined, this will be the order id from the
+   * payment declined order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -617,7 +619,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The order id of the latest recurring order associated with the purchase of the subscription.
+   * The order id of the latest recurring order associated with the purchase of the subscription. If
+   * the subscription was canceled because payment was declined, this will be the order id from the
+   * payment declined order.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderId() {
@@ -625,7 +629,9 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The order id of the latest recurring order associated with the purchase of the subscription.
+   * The order id of the latest recurring order associated with the purchase of the subscription. If
+   * the subscription was canceled because payment was declined, this will be the order id from the
+   * payment declined order.
    * @param orderId orderId or {@code null} for none
    */
   public SubscriptionPurchase setOrderId(java.lang.String orderId) {

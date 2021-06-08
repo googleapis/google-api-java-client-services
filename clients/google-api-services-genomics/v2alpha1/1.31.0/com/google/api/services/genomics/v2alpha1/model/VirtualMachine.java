@@ -157,6 +157,14 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private java.lang.Boolean preemptible;
 
   /**
+   * If specified, the VM will only be allocated inside the matching reservation. It will fail if
+   * the VM parameters don't match the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservation;
+
+  /**
    * The service account to install on the VM. This account does not need any permissions other than
    * those required by the pipeline.
    * The value may be {@code null}.
@@ -435,6 +443,25 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    */
   public VirtualMachine setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * If specified, the VM will only be allocated inside the matching reservation. It will fail if
+   * the VM parameters don't match the reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservation() {
+    return reservation;
+  }
+
+  /**
+   * If specified, the VM will only be allocated inside the matching reservation. It will fail if
+   * the VM parameters don't match the reservation.
+   * @param reservation reservation or {@code null} for none
+   */
+  public VirtualMachine setReservation(java.lang.String reservation) {
+    this.reservation = reservation;
     return this;
   }
 

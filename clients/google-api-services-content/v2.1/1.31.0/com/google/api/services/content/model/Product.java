@@ -358,7 +358,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String link;
 
   /**
-   * Link template for merchant hosted local storefront.
+   * URL template for merchant hosted local storefront.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -414,7 +414,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String mobileLink;
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * URL template for merchant hosted local storefront optimized for mobile devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1431,7 +1431,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront.
+   * URL template for merchant hosted local storefront.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkTemplate() {
@@ -1439,7 +1439,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront.
+   * URL template for merchant hosted local storefront.
    * @param linkTemplate linkTemplate or {@code null} for none
    */
   public Product setLinkTemplate(java.lang.String linkTemplate) {
@@ -1567,7 +1567,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * URL template for merchant hosted local storefront optimized for mobile devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileLinkTemplate() {
@@ -1575,7 +1575,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * URL template for merchant hosted local storefront optimized for mobile devices.
    * @param mobileLinkTemplate mobileLinkTemplate or {@code null} for none
    */
   public Product setMobileLinkTemplate(java.lang.String mobileLinkTemplate) {

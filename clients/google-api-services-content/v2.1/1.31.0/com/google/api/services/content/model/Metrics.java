@@ -32,6 +32,25 @@ package com.google.api.services.content.model;
 public final class Metrics extends com.google.api.client.json.GenericJson {
 
   /**
+   * Average order size - the average number of items in an order. **This metric cannot be segmented
+   * by product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double aos;
+
+  /**
+   * Average order value - the average value (total price of items) of all placed orders. The
+   * currency of the returned value is stored in the currency_code segment. If this metric is
+   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
+   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
+   * in the response. **This metric cannot be segmented by product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double aovMicros;
+
+  /**
    * Number of clicks.
    * The value may be {@code null}.
    */
@@ -47,11 +66,187 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   private java.lang.Double ctr;
 
   /**
+   * Average number of days between an order being placed and the order being fully shipped,
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double daysToShip;
+
+  /**
    * Number of times merchant's products are shown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long impressions;
+
+  /**
+   * Average number of days between an item being ordered and the item being
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double itemDaysToShip;
+
+  /**
+   * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
+   * merchant; unshipped items are not taken into account), reported on the order date. Item fill
+   * rate is lowered by merchant rejections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double itemFillRate;
+
+  /**
+   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
+   * that happened within 30 minutes of placing the order. The currency of the returned value is
+   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long orderedItemSalesMicros;
+
+  /**
+   * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long orderedItems;
+
+  /**
+   * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long orders;
+
+  /**
+   * Number of ordered items canceled by the merchant, reported on the order date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long rejectedItems;
+
+  /**
+   * Total price of returned items divided by the total price of shipped items, reported on the
+   * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double returnRate;
+
+  /**
+   * Number of ordered items sent back for return, reported on the date when the merchant accepted
+   * the return.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long returnedItems;
+
+  /**
+   * Total price of ordered items sent back for return, reported on the date when the merchant
+   * accepted the return. The currency of the returned value is stored in the currency_code segment.
+   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
+   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
+   * segment is populated in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long returnsMicros;
+
+  /**
+   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
+   * only). The currency of the returned value is stored in the currency_code segment. If this
+   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
+   * search query (unless it is explicitly selected by the user) and the currency_code segment is
+   * populated in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long shippedItemSalesMicros;
+
+  /**
+   * Number of shipped items, reported on the shipment date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long shippedItems;
+
+  /**
+   * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
+   * segmented by product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long shippedOrders;
+
+  /**
+   * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
+   * is specified in the search query, the returned value is the average number of unshipped items
+   * over the days in the queried period.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double unshippedItems;
+
+  /**
+   * Number of orders not shipped or partially shipped up until the end of the queried day. If a
+   * multi-day period is specified in the search query, the returned value is the average number of
+   * unshipped orders over the days in the queried period. **This metric cannot be segmented by
+   * product dimensions.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double unshippedOrders;
+
+  /**
+   * Average order size - the average number of items in an order. **This metric cannot be segmented
+   * by product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAos() {
+    return aos;
+  }
+
+  /**
+   * Average order size - the average number of items in an order. **This metric cannot be segmented
+   * by product dimensions.**
+   * @param aos aos or {@code null} for none
+   */
+  public Metrics setAos(java.lang.Double aos) {
+    this.aos = aos;
+    return this;
+  }
+
+  /**
+   * Average order value - the average value (total price of items) of all placed orders. The
+   * currency of the returned value is stored in the currency_code segment. If this metric is
+   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
+   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
+   * in the response. **This metric cannot be segmented by product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAovMicros() {
+    return aovMicros;
+  }
+
+  /**
+   * Average order value - the average value (total price of items) of all placed orders. The
+   * currency of the returned value is stored in the currency_code segment. If this metric is
+   * selected, 'segments.currency_code' is automatically added to the SELECT clause in the search
+   * query (unless it is explicitly selected by the user) and the currency_code segment is populated
+   * in the response. **This metric cannot be segmented by product dimensions.**
+   * @param aovMicros aovMicros or {@code null} for none
+   */
+  public Metrics setAovMicros(java.lang.Double aovMicros) {
+    this.aovMicros = aovMicros;
+    return this;
+  }
 
   /**
    * Number of clicks.
@@ -90,6 +285,25 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Average number of days between an order being placed and the order being fully shipped,
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDaysToShip() {
+    return daysToShip;
+  }
+
+  /**
+   * Average number of days between an order being placed and the order being fully shipped,
+   * reported on the last shipment date. **This metric cannot be segmented by product dimensions.**
+   * @param daysToShip daysToShip or {@code null} for none
+   */
+  public Metrics setDaysToShip(java.lang.Double daysToShip) {
+    this.daysToShip = daysToShip;
+    return this;
+  }
+
+  /**
    * Number of times merchant's products are shown.
    * @return value or {@code null} for none
    */
@@ -103,6 +317,296 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
    */
   public Metrics setImpressions(java.lang.Long impressions) {
     this.impressions = impressions;
+    return this;
+  }
+
+  /**
+   * Average number of days between an item being ordered and the item being
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getItemDaysToShip() {
+    return itemDaysToShip;
+  }
+
+  /**
+   * Average number of days between an item being ordered and the item being
+   * @param itemDaysToShip itemDaysToShip or {@code null} for none
+   */
+  public Metrics setItemDaysToShip(java.lang.Double itemDaysToShip) {
+    this.itemDaysToShip = itemDaysToShip;
+    return this;
+  }
+
+  /**
+   * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
+   * merchant; unshipped items are not taken into account), reported on the order date. Item fill
+   * rate is lowered by merchant rejections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getItemFillRate() {
+    return itemFillRate;
+  }
+
+  /**
+   * Percentage of shipped items in relation to all finalized items (shipped or rejected by the
+   * merchant; unshipped items are not taken into account), reported on the order date. Item fill
+   * rate is lowered by merchant rejections.
+   * @param itemFillRate itemFillRate or {@code null} for none
+   */
+  public Metrics setItemFillRate(java.lang.Double itemFillRate) {
+    this.itemFillRate = itemFillRate;
+    return this;
+  }
+
+  /**
+   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
+   * that happened within 30 minutes of placing the order. The currency of the returned value is
+   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrderedItemSalesMicros() {
+    return orderedItemSalesMicros;
+  }
+
+  /**
+   * Total price of ordered items. Excludes shipping, taxes (US only), and customer cancellations
+   * that happened within 30 minutes of placing the order. The currency of the returned value is
+   * stored in the currency_code segment. If this metric is selected, 'segments.currency_code' is
+   * automatically added to the SELECT clause in the search query (unless it is explicitly selected
+   * by the user) and the currency_code segment is populated in the response.
+   * @param orderedItemSalesMicros orderedItemSalesMicros or {@code null} for none
+   */
+  public Metrics setOrderedItemSalesMicros(java.lang.Long orderedItemSalesMicros) {
+    this.orderedItemSalesMicros = orderedItemSalesMicros;
+    return this;
+  }
+
+  /**
+   * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrderedItems() {
+    return orderedItems;
+  }
+
+  /**
+   * Number of ordered items. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order.
+   * @param orderedItems orderedItems or {@code null} for none
+   */
+  public Metrics setOrderedItems(java.lang.Long orderedItems) {
+    this.orderedItems = orderedItems;
+    return this;
+  }
+
+  /**
+   * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrders() {
+    return orders;
+  }
+
+  /**
+   * Number of placed orders. Excludes customer cancellations that happened within 30 minutes of
+   * placing the order. **This metric cannot be segmented by product dimensions.**
+   * @param orders orders or {@code null} for none
+   */
+  public Metrics setOrders(java.lang.Long orders) {
+    this.orders = orders;
+    return this;
+  }
+
+  /**
+   * Number of ordered items canceled by the merchant, reported on the order date.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRejectedItems() {
+    return rejectedItems;
+  }
+
+  /**
+   * Number of ordered items canceled by the merchant, reported on the order date.
+   * @param rejectedItems rejectedItems or {@code null} for none
+   */
+  public Metrics setRejectedItems(java.lang.Long rejectedItems) {
+    this.rejectedItems = rejectedItems;
+    return this;
+  }
+
+  /**
+   * Total price of returned items divided by the total price of shipped items, reported on the
+   * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getReturnRate() {
+    return returnRate;
+  }
+
+  /**
+   * Total price of returned items divided by the total price of shipped items, reported on the
+   * order date. If this metric is selected, 'segments.currency_code' is automatically added to the
+   * SELECT clause in the search query (unless it is explicitly selected by the user) and the
+   * currency_code segment is populated in the response.
+   * @param returnRate returnRate or {@code null} for none
+   */
+  public Metrics setReturnRate(java.lang.Double returnRate) {
+    this.returnRate = returnRate;
+    return this;
+  }
+
+  /**
+   * Number of ordered items sent back for return, reported on the date when the merchant accepted
+   * the return.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getReturnedItems() {
+    return returnedItems;
+  }
+
+  /**
+   * Number of ordered items sent back for return, reported on the date when the merchant accepted
+   * the return.
+   * @param returnedItems returnedItems or {@code null} for none
+   */
+  public Metrics setReturnedItems(java.lang.Long returnedItems) {
+    this.returnedItems = returnedItems;
+    return this;
+  }
+
+  /**
+   * Total price of ordered items sent back for return, reported on the date when the merchant
+   * accepted the return. The currency of the returned value is stored in the currency_code segment.
+   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
+   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
+   * segment is populated in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getReturnsMicros() {
+    return returnsMicros;
+  }
+
+  /**
+   * Total price of ordered items sent back for return, reported on the date when the merchant
+   * accepted the return. The currency of the returned value is stored in the currency_code segment.
+   * If this metric is selected, 'segments.currency_code' is automatically added to the SELECT
+   * clause in the search query (unless it is explicitly selected by the user) and the currency_code
+   * segment is populated in the response.
+   * @param returnsMicros returnsMicros or {@code null} for none
+   */
+  public Metrics setReturnsMicros(java.lang.Long returnsMicros) {
+    this.returnsMicros = returnsMicros;
+    return this;
+  }
+
+  /**
+   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
+   * only). The currency of the returned value is stored in the currency_code segment. If this
+   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
+   * search query (unless it is explicitly selected by the user) and the currency_code segment is
+   * populated in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getShippedItemSalesMicros() {
+    return shippedItemSalesMicros;
+  }
+
+  /**
+   * Total price of shipped items, reported on the order date. Excludes shipping and taxes (US
+   * only). The currency of the returned value is stored in the currency_code segment. If this
+   * metric is selected, 'segments.currency_code' is automatically added to the SELECT clause in the
+   * search query (unless it is explicitly selected by the user) and the currency_code segment is
+   * populated in the response.
+   * @param shippedItemSalesMicros shippedItemSalesMicros or {@code null} for none
+   */
+  public Metrics setShippedItemSalesMicros(java.lang.Long shippedItemSalesMicros) {
+    this.shippedItemSalesMicros = shippedItemSalesMicros;
+    return this;
+  }
+
+  /**
+   * Number of shipped items, reported on the shipment date.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getShippedItems() {
+    return shippedItems;
+  }
+
+  /**
+   * Number of shipped items, reported on the shipment date.
+   * @param shippedItems shippedItems or {@code null} for none
+   */
+  public Metrics setShippedItems(java.lang.Long shippedItems) {
+    this.shippedItems = shippedItems;
+    return this;
+  }
+
+  /**
+   * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
+   * segmented by product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getShippedOrders() {
+    return shippedOrders;
+  }
+
+  /**
+   * Number of fully shipped orders, reported on the last shipment date. **This metric cannot be
+   * segmented by product dimensions.**
+   * @param shippedOrders shippedOrders or {@code null} for none
+   */
+  public Metrics setShippedOrders(java.lang.Long shippedOrders) {
+    this.shippedOrders = shippedOrders;
+    return this;
+  }
+
+  /**
+   * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
+   * is specified in the search query, the returned value is the average number of unshipped items
+   * over the days in the queried period.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUnshippedItems() {
+    return unshippedItems;
+  }
+
+  /**
+   * Number of ordered items not shipped up until the end of the queried day. If a multi-day period
+   * is specified in the search query, the returned value is the average number of unshipped items
+   * over the days in the queried period.
+   * @param unshippedItems unshippedItems or {@code null} for none
+   */
+  public Metrics setUnshippedItems(java.lang.Double unshippedItems) {
+    this.unshippedItems = unshippedItems;
+    return this;
+  }
+
+  /**
+   * Number of orders not shipped or partially shipped up until the end of the queried day. If a
+   * multi-day period is specified in the search query, the returned value is the average number of
+   * unshipped orders over the days in the queried period. **This metric cannot be segmented by
+   * product dimensions.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUnshippedOrders() {
+    return unshippedOrders;
+  }
+
+  /**
+   * Number of orders not shipped or partially shipped up until the end of the queried day. If a
+   * multi-day period is specified in the search query, the returned value is the average number of
+   * unshipped orders over the days in the queried period. **This metric cannot be segmented by
+   * product dimensions.**
+   * @param unshippedOrders unshippedOrders or {@code null} for none
+   */
+  public Metrics setUnshippedOrders(java.lang.Double unshippedOrders) {
+    this.unshippedOrders = unshippedOrders;
     return this;
   }
 

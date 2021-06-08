@@ -32,7 +32,7 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class Timepoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timepoint name as received from the client within tag.
+   * Timepoint name as received from the client within `` tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class Timepoint extends com.google.api.client.json.GenericJson {
   private java.lang.Double timeSeconds;
 
   /**
-   * Timepoint name as received from the client within tag.
+   * Timepoint name as received from the client within `` tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getMarkName() {
@@ -54,7 +54,7 @@ public final class Timepoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timepoint name as received from the client within tag.
+   * Timepoint name as received from the client within `` tag.
    * @param markName markName or {@code null} for none
    */
   public Timepoint setMarkName(java.lang.String markName) {

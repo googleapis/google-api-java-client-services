@@ -49,7 +49,7 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
 
   /**
    * A link between a position in the original request input and a corresponding time in the output
-   * audio. It's only supported via of SSML input.
+   * audio. It's only supported via `` of SSML input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
 
   /**
    * A link between a position in the original request input and a corresponding time in the output
-   * audio. It's only supported via of SSML input.
+   * audio. It's only supported via `` of SSML input.
    * @return value or {@code null} for none
    */
   public java.util.List<Timepoint> getTimepoints() {
@@ -140,7 +140,7 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
 
   /**
    * A link between a position in the original request input and a corresponding time in the output
-   * audio. It's only supported via of SSML input.
+   * audio. It's only supported via `` of SSML input.
    * @param timepoints timepoints or {@code null} for none
    */
   public SynthesizeSpeechResponse setTimepoints(java.util.List<Timepoint> timepoints) {

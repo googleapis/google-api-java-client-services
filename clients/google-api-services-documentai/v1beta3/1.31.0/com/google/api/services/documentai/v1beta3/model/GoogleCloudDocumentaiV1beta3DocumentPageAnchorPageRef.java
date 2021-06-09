@@ -60,7 +60,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef extends
 
   /**
    * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element.
+   * related page element. This field is skipped when its value is the default 0. See
+   * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -136,7 +137,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef extends
 
   /**
    * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element.
+   * related page element. This field is skipped when its value is the default 0. See
+   * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPage() {
@@ -145,7 +147,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef extends
 
   /**
    * Required. Index into the Document.pages element, for example using Document.pages to locate the
-   * related page element.
+   * related page element. This field is skipped when its value is the default 0. See
+   * https://developers.google.com/protocol-buffers/docs/proto3#json.
    * @param page page or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef setPage(java.lang.Long page) {

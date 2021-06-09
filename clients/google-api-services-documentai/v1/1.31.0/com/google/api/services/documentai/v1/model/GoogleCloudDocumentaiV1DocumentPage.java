@@ -99,6 +99,13 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   private java.util.List<GoogleCloudDocumentaiV1DocumentPageParagraph> paragraphs;
 
   /**
+   * The history of this page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentProvenance provenance;
+
+  /**
    * A list of visually detected tables on the page.
    * The value may be {@code null}.
    */
@@ -286,6 +293,23 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
    */
   public GoogleCloudDocumentaiV1DocumentPage setParagraphs(java.util.List<GoogleCloudDocumentaiV1DocumentPageParagraph> paragraphs) {
     this.paragraphs = paragraphs;
+    return this;
+  }
+
+  /**
+   * The history of this page.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * The history of this page.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentPage setProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

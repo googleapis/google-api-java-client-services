@@ -38,13 +38,6 @@ public final class GoogleAnalyticsAdminV1alphaFirebaseLink extends com.google.ap
   private String createTime;
 
   /**
-   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String maximumUserAccess;
-
-  /**
    * Output only. Example format: properties/1234/firebaseLinks/5678
    * The value may be {@code null}.
    */
@@ -75,23 +68,6 @@ public final class GoogleAnalyticsAdminV1alphaFirebaseLink extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaFirebaseLink setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMaximumUserAccess() {
-    return maximumUserAccess;
-  }
-
-  /**
-   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
-   * @param maximumUserAccess maximumUserAccess or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaFirebaseLink setMaximumUserAccess(java.lang.String maximumUserAccess) {
-    this.maximumUserAccess = maximumUserAccess;
     return this;
   }
 

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-notebooks</artifactId>
-      <version>v1-rev20210422-1.31.0</version>
+      <version>v1-rev20210603-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-notebooks:v1-rev20210422-1.31.0'
+  compile 'com.google.apis:google-api-services-notebooks:v1-rev20210603-1.31.0'
 }
 ```
 

@@ -17,9 +17,10 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128/192/256
- * bit key. Authorization requires the following IAM permissions when sending a request to perform a
- * crypto transformation using a kms-wrapped crypto key: dlp.kms.encrypt
+ * Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-,
+ * or 256-bit key. Authorization requires the following IAM permissions when sending a request to
+ * perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more
+ * information, see [Creating a wrapped key] (https://cloud.google.com/dlp/docs/create-wrapped-key).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

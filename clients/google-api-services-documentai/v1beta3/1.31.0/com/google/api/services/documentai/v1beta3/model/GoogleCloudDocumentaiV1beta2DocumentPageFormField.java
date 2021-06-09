@@ -58,6 +58,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageFormField extends com
   }
 
   /**
+   * The history of this annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta2DocumentProvenance provenance;
+
+  /**
    * A list of detected languages for value together with confidence.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageFormField extends com
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageFormField setNameDetectedLanguages(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage> nameDetectedLanguages) {
     this.nameDetectedLanguages = nameDetectedLanguages;
+    return this;
+  }
+
+  /**
+   * The history of this annotation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * The history of this annotation.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPageFormField setProvenance(GoogleCloudDocumentaiV1beta2DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

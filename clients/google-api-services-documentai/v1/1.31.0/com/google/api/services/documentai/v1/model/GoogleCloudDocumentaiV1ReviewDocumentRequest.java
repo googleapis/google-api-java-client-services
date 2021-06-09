@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Request message for review document method. Next Id: 5.
+ * Request message for review document method. Next Id: 6.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -43,6 +43,13 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentRequest extends com.goog
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1Document inlineDocument;
+
+  /**
+   * The priority of the human review task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priority;
 
   /**
    * Whether the validation should be performed on the ad-hoc review request.
@@ -75,6 +82,23 @@ public final class GoogleCloudDocumentaiV1ReviewDocumentRequest extends com.goog
    */
   public GoogleCloudDocumentaiV1ReviewDocumentRequest setInlineDocument(GoogleCloudDocumentaiV1Document inlineDocument) {
     this.inlineDocument = inlineDocument;
+    return this;
+  }
+
+  /**
+   * The priority of the human review task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriority() {
+    return priority;
+  }
+
+  /**
+   * The priority of the human review task.
+   * @param priority priority or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ReviewDocumentRequest setPriority(java.lang.String priority) {
+    this.priority = priority;
     return this;
   }
 

@@ -37,8 +37,10 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   private FirstPartyPrincipal firstPartyPrincipal;
 
   /**
-   * A string representing the principal_subject associated with the identity. See go/3pical for
-   * more info on how principal_subject is formatted.
+   * A string representing the principal_subject associated with the identity. For most identities,
+   * the format will be `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
+   * except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the
+   * legacy format `serviceAccount:{identity pool name}[{subject}]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +71,10 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. See go/3pical for
-   * more info on how principal_subject is formatted.
+   * A string representing the principal_subject associated with the identity. For most identities,
+   * the format will be `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
+   * except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the
+   * legacy format `serviceAccount:{identity pool name}[{subject}]`
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalSubject() {
@@ -78,8 +82,10 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. See go/3pical for
-   * more info on how principal_subject is formatted.
+   * A string representing the principal_subject associated with the identity. For most identities,
+   * the format will be `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
+   * except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the
+   * legacy format `serviceAccount:{identity pool name}[{subject}]`
    * @param principalSubject principalSubject or {@code null} for none
    */
   public ServiceAccountDelegationInfo setPrincipalSubject(java.lang.String principalSubject) {

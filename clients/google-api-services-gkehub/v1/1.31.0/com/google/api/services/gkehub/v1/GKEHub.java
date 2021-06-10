@@ -534,6 +534,539 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class Features {
 
         /**
+         * Adds a new Feature.
+         *
+         * Create a request for the method "features.create".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent (project and location) where the Feature will be created. Specified in the format
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.gkehub.v1.model.Feature content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/features";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Adds a new Feature.
+           *
+           * Create a request for the method "features.create".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent (project and location) where the Feature will be created. Specified in the format
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.gkehub.v1.model.Feature content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent (project and location) where the Feature will be created. Specified in the
+           * format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent (project and location) where the Feature will be created. Specified in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent (project and location) where the Feature will be created. Specified in the
+           * format `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The ID of the feature to create. */
+          @com.google.api.client.util.Key
+          private java.lang.String featureId;
+
+          /** The ID of the feature to create.
+           */
+          public java.lang.String getFeatureId() {
+            return featureId;
+          }
+
+          /** The ID of the feature to create. */
+          public Create setFeatureId(java.lang.String featureId) {
+            this.featureId = featureId;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes a Feature.
+         *
+         * Create a request for the method "features.delete".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The Feature resource name in the format `projects/locations/features`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+
+          /**
+           * Removes a Feature.
+           *
+           * Create a request for the method "features.delete".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The Feature resource name in the format `projects/locations/features`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The Feature resource name in the format `projects/locations/features`. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The Feature resource name in the format `projects/locations/features`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The Feature resource name in the format `projects/locations/features`. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set to true, the delete will ignore any outstanding resources for this Feature (that
+           * is, `FeatureState.has_resources` is set to true). These resources will NOT be cleaned
+           * up or modified in any way.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, the delete will ignore any outstanding resources for this Feature (that is,
+         `FeatureState.has_resources` is set to true). These resources will NOT be cleaned up or modified in
+         any way.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, the delete will ignore any outstanding resources for this Feature (that
+           * is, `FeatureState.has_resources` is set to true). These resources will NOT be cleaned
+           * up or modified in any way.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single Feature.
+         *
+         * Create a request for the method "features.get".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The Feature resource name in the format `projects/locations/features`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Feature> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+
+          /**
+           * Gets details of a single Feature.
+           *
+           * Create a request for the method "features.get".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The Feature resource name in the format `projects/locations/features`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1.model.Feature.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The Feature resource name in the format `projects/locations/features` */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The Feature resource name in the format `projects/locations/features`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The Feature resource name in the format `projects/locations/features` */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -715,6 +1248,442 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Features in a given project and location.
+         *
+         * Create a request for the method "features.list".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent (project and location) where the Features will be listed. Specified in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends GKEHubRequest<com.google.api.services.gkehub.v1.model.ListFeaturesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/features";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Features in a given project and location.
+           *
+           * Create a request for the method "features.list".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent (project and location) where the Features will be listed. Specified in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1.model.ListFeaturesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent (project and location) where the Features will be listed. Specified in the
+           * format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent (project and location) where the Features will be listed. Specified in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent (project and location) where the Features will be listed. Specified in the
+           * format `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Lists Features that match the filter expression, following the syntax outlined in
+           * https://google.aip.dev/160. Examples: - Feature with the name "servicemesh" in project
+           * "foo-proj": name = "projects/foo-proj/locations/global/features/servicemesh" - Features
+           * that have a label called `foo`: labels.foo:* - Features that have a label called `foo`
+           * whose value is `bar`: labels.foo = bar
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Lists Features that match the filter expression, following the syntax outlined in
+         https://google.aip.dev/160. Examples: - Feature with the name "servicemesh" in project "foo-proj":
+         name = "projects/foo-proj/locations/global/features/servicemesh" - Features that have a label
+         called `foo`: labels.foo:* - Features that have a label called `foo` whose value is `bar`:
+         labels.foo = bar
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Lists Features that match the filter expression, following the syntax outlined in
+           * https://google.aip.dev/160. Examples: - Feature with the name "servicemesh" in project
+           * "foo-proj": name = "projects/foo-proj/locations/global/features/servicemesh" - Features
+           * that have a label called `foo`: labels.foo:* - Features that have a label called `foo`
+           * whose value is `bar`: labels.foo = bar
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * One or more fields to compare and use to sort the output. See
+           * https://google.aip.dev/132#ordering.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** One or more fields to compare and use to sort the output. See https://google.aip.dev/132#ordering.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * One or more fields to compare and use to sort the output. See
+           * https://google.aip.dev/132#ordering.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * When requesting a 'page' of resources, `page_size` specifies number of resources to
+           * return. If unspecified or set to 0, all resources will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** When requesting a 'page' of resources, `page_size` specifies number of resources to return. If
+         unspecified or set to 0, all resources will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * When requesting a 'page' of resources, `page_size` specifies number of resources to
+           * return. If unspecified or set to 0, all resources will be returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Token returned by previous call to `ListFeatures` which specifies the position in the
+           * list from where to continue listing the resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token returned by previous call to `ListFeatures` which specifies the position in the list from
+         where to continue listing the resources.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Token returned by previous call to `ListFeatures` which specifies the position in the
+           * list from where to continue listing the resources.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing Feature.
+         *
+         * Create a request for the method "features.patch".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The Feature resource name in the format `projects/locations/features`.
+         * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.gkehub.v1.model.Feature content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+
+          /**
+           * Updates an existing Feature.
+           *
+           * Create a request for the method "features.patch".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The Feature resource name in the format `projects/locations/features`.
+           * @param content the {@link com.google.api.services.gkehub.v1.model.Feature}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.gkehub.v1.model.Feature content) {
+            super(GKEHub.this, "PATCH", REST_PATH, content, com.google.api.services.gkehub.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The Feature resource name in the format `projects/locations/features`. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The Feature resource name in the format `projects/locations/features`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The Feature resource name in the format `projects/locations/features`. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/features/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Mask of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Mask of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Mask of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

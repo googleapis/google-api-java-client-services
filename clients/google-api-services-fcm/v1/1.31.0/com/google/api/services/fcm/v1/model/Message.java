@@ -53,8 +53,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String condition;
 
   /**
-   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
-   * "message_type", or any word starting with "google" or "gcm").
+   * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
+   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
+   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
+   * priority": "5"`) is allowed in
+   * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +161,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
-   * "message_type", or any word starting with "google" or "gcm").
+   * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
+   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
+   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
+   * priority": "5"`) is allowed in
+   * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getData() {
@@ -167,8 +173,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Arbitrary key/value payload. The key should not be a reserved word ("from",
-   * "message_type", or any word starting with "google" or "gcm").
+   * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
+   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
+   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
+   * priority": "5"`) is allowed in
+   * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * @param data data or {@code null} for none
    */
   public Message setData(java.util.Map<String, java.lang.String> data) {

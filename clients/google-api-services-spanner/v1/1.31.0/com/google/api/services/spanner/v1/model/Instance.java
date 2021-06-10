@@ -91,6 +91,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nodeCount;
 
   /**
+   * The number of processing units allocated to this instance. At most one of processing_units or
+   * node_count should be present in the message. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer processingUnits;
+
+  /**
    * Output only. The current instance state. For CreateInstance, the state must be either omitted
    * or set to `CREATING`. For UpdateInstance, the state must be either omitted or set to `READY`.
    * The value may be {@code null}.
@@ -235,6 +244,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {
     this.nodeCount = nodeCount;
+    return this;
+  }
+
+  /**
+   * The number of processing units allocated to this instance. At most one of processing_units or
+   * node_count should be present in the message. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getProcessingUnits() {
+    return processingUnits;
+  }
+
+  /**
+   * The number of processing units allocated to this instance. At most one of processing_units or
+   * node_count should be present in the message. This may be zero in API responses for instances
+   * that are not yet in state `READY`.
+   * @param processingUnits processingUnits or {@code null} for none
+   */
+  public Instance setProcessingUnits(java.lang.Integer processingUnits) {
+    this.processingUnits = processingUnits;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Subsetting configuration for this BackendService. Currently this is applicable only for Internal
- * TCP/UDP load balancing and Internal HTTP(S) load balancing.
+ * TCP/UDP load balancing, Internal HTTP(S) load balancing and Traffic Director.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

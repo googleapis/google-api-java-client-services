@@ -42,8 +42,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * to backend service failure. As part of fault injection, when clients send requests to a backend
    * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
    * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients
-   * that are configured with a fault_injection_policy.
+   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy will be ignored by clients that are configured with a
+   * fault_injection_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +139,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * to backend service failure. As part of fault injection, when clients send requests to a backend
    * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
    * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients
-   * that are configured with a fault_injection_policy.
+   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy will be ignored by clients that are configured with a
+   * fault_injection_policy.
    * @return value or {@code null} for none
    */
   public HttpFaultInjection getFaultInjectionPolicy() {
@@ -151,8 +153,9 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    * to backend service failure. As part of fault injection, when clients send requests to a backend
    * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
    * those request to the backend service. Similarly requests from clients can be aborted by the
-   * Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients
-   * that are configured with a fault_injection_policy.
+   * Loadbalancer for a percentage of requests. For the requests impacted by fault injection,
+   * timeout and retry_policy will be ignored by clients that are configured with a
+   * fault_injection_policy.
    * @param faultInjectionPolicy faultInjectionPolicy or {@code null} for none
    */
   public HttpRouteAction setFaultInjectionPolicy(HttpFaultInjection faultInjectionPolicy) {

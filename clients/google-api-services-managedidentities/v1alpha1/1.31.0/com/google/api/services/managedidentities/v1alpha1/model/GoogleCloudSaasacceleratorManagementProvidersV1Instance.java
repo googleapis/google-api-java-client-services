@@ -82,7 +82,9 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
+   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
+   * RescheduleUpdate)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,7 +273,9 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
+   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
+   * RescheduleUpdate)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -280,7 +284,9 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
 
   /**
    * Unique name of the resource. It uses the form:
-   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+   * `projects/{project_id|project_number}/locations/{location_id}/instances/{instance_id}` Note:
+   * Either project_id or project_number can be used, but keep it consistent with other APIs (e.g.
+   * RescheduleUpdate)
    * @param name name or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setName(java.lang.String name) {

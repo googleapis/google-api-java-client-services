@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-managedidentities</artifactId>
-      <version>v1alpha1-rev20210324-1.31.0</version>
+      <version>v1alpha1-rev20210601-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-managedidentities:v1alpha1-rev20210324-1.31.0'
+  compile 'com.google.apis:google-api-services-managedidentities:v1alpha1-rev20210601-1.31.0'
 }
 ```
 

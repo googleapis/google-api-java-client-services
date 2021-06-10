@@ -52,6 +52,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private BuildType buildType;
 
   /**
+   * A note describing a compliance check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComplianceNote compliance;
+
+  /**
    * Output only. The time this note was created. This field can be used as a filter in list
    * requests.
    * The value may be {@code null}.
@@ -193,6 +200,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setBuildType(BuildType buildType) {
     this.buildType = buildType;
+    return this;
+  }
+
+  /**
+   * A note describing a compliance check.
+   * @return value or {@code null} for none
+   */
+  public ComplianceNote getCompliance() {
+    return compliance;
+  }
+
+  /**
+   * A note describing a compliance check.
+   * @param compliance compliance or {@code null} for none
+   */
+  public Note setCompliance(ComplianceNote compliance) {
+    this.compliance = compliance;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private BuildDetails buildDetails;
 
   /**
+   * Describes whether or not a resource passes compliance checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComplianceOccurrence compliance;
+
+  /**
    * Output only. The time this `Occurrence` was created.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setBuildDetails(BuildDetails buildDetails) {
     this.buildDetails = buildDetails;
+    return this;
+  }
+
+  /**
+   * Describes whether or not a resource passes compliance checks.
+   * @return value or {@code null} for none
+   */
+  public ComplianceOccurrence getCompliance() {
+    return compliance;
+  }
+
+  /**
+   * Describes whether or not a resource passes compliance checks.
+   * @param compliance compliance or {@code null} for none
+   */
+  public Occurrence setCompliance(ComplianceOccurrence compliance) {
+    this.compliance = compliance;
     return this;
   }
 

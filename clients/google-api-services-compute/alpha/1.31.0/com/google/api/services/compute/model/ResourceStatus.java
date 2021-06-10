@@ -37,6 +37,12 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private ResourceStatusScheduling scheduling;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusUpcomingMaintenance upcomingMaintenance;
+
+  /**
    * @return value or {@code null} for none
    */
   public ResourceStatusScheduling getScheduling() {
@@ -48,6 +54,21 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setScheduling(ResourceStatusScheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusUpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public ResourceStatus setUpcomingMaintenance(ResourceStatusUpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

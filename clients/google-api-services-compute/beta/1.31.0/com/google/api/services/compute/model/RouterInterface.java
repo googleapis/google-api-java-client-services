@@ -102,7 +102,7 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   private java.lang.String redundantInterface;
 
   /**
-   * The URL of the subnetwork resource that this interface belongs to, which must be in the same
+   * The URI of the subnetwork resource that this interface belongs to, which must be in the same
    * region as the Cloud Router. When you establish a BGP session to a VM instance using this
    * interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.
    * The value may be {@code null}.
@@ -276,7 +276,7 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The URL of the subnetwork resource that this interface belongs to, which must be in the same
+   * The URI of the subnetwork resource that this interface belongs to, which must be in the same
    * region as the Cloud Router. When you establish a BGP session to a VM instance using this
    * interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.
    * @return value or {@code null} for none
@@ -286,7 +286,7 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The URL of the subnetwork resource that this interface belongs to, which must be in the same
+   * The URI of the subnetwork resource that this interface belongs to, which must be in the same
    * region as the Cloud Router. When you establish a BGP session to a VM instance using this
    * interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.
    * @param subnetwork subnetwork or {@code null} for none

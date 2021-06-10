@@ -40,8 +40,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   /**
    * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
    * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
-   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
-   * "10".
+   * server/sending_notification_requests_to_apns) for supported headers such as `apns-expiration`
+   * and `apns-priority`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,9 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
    * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
    * notification_server/generating_a_remote_notification). If present, it overrides
-   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
+   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body. The
+   * backend sets a default value for `apns-expiration` of 30 days and a default value for `apns-
+   * priority` of 10 if not explicitly set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +79,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   /**
    * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
    * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
-   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
-   * "10".
+   * server/sending_notification_requests_to_apns) for supported headers such as `apns-expiration`
+   * and `apns-priority`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -88,8 +90,8 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   /**
    * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request headers
    * ](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_
-   * server/sending_notification_requests_to_apns) for supported headers, e.g. "apns-priority":
-   * "10".
+   * server/sending_notification_requests_to_apns) for supported headers such as `apns-expiration`
+   * and `apns-priority`.
    * @param headers headers or {@code null} for none
    */
   public ApnsConfig setHeaders(java.util.Map<String, java.lang.String> headers) {
@@ -101,7 +103,9 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
    * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
    * notification_server/generating_a_remote_notification). If present, it overrides
-   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
+   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body. The
+   * backend sets a default value for `apns-expiration` of 30 days and a default value for `apns-
+   * priority` of 10 if not explicitly set.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -112,7 +116,9 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
    * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
    * notification_server/generating_a_remote_notification). If present, it overrides
-   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.
+   * google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body. The
+   * backend sets a default value for `apns-expiration` of 30 days and a default value for `apns-
+   * priority` of 10 if not explicitly set.
    * @param payload payload or {@code null} for none
    */
   public ApnsConfig setPayload(java.util.Map<String, java.lang.Object> payload) {

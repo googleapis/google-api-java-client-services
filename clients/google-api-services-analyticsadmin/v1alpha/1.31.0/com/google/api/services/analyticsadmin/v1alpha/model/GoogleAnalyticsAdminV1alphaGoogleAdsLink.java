@@ -54,19 +54,19 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   private String createTime;
 
   /**
-   * Immutable. Google Ads customer ID.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String customerId;
-
-  /**
    * Output only. Email address of the user that created the link. An empty string will be returned
    * if the email address can't be retrieved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String emailAddress;
+  private java.lang.String creatorEmailAddress;
+
+  /**
+   * Immutable. Google Ads customer ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerId;
 
   /**
    * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
@@ -139,6 +139,25 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   }
 
   /**
+   * Output only. Email address of the user that created the link. An empty string will be returned
+   * if the email address can't be retrieved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreatorEmailAddress() {
+    return creatorEmailAddress;
+  }
+
+  /**
+   * Output only. Email address of the user that created the link. An empty string will be returned
+   * if the email address can't be retrieved.
+   * @param creatorEmailAddress creatorEmailAddress or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaGoogleAdsLink setCreatorEmailAddress(java.lang.String creatorEmailAddress) {
+    this.creatorEmailAddress = creatorEmailAddress;
+    return this;
+  }
+
+  /**
    * Immutable. Google Ads customer ID.
    * @return value or {@code null} for none
    */
@@ -152,25 +171,6 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
    */
   public GoogleAnalyticsAdminV1alphaGoogleAdsLink setCustomerId(java.lang.String customerId) {
     this.customerId = customerId;
-    return this;
-  }
-
-  /**
-   * Output only. Email address of the user that created the link. An empty string will be returned
-   * if the email address can't be retrieved.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEmailAddress() {
-    return emailAddress;
-  }
-
-  /**
-   * Output only. Email address of the user that created the link. An empty string will be returned
-   * if the email address can't be retrieved.
-   * @param emailAddress emailAddress or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaGoogleAdsLink setEmailAddress(java.lang.String emailAddress) {
-    this.emailAddress = emailAddress;
     return this;
   }
 

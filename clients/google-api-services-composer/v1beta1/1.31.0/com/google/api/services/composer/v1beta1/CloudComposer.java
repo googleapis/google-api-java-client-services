@@ -193,6 +193,148 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
       public class Environments {
 
         /**
+         * Check if an upgrade operation on the environment will succeed. In case of problems detailed info
+         * can be found in the returned Operation.
+         *
+         * Create a request for the method "environments.checkUpgrade".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link CheckUpgrade#execute()} method to invoke the remote operation.
+         *
+         * @param environment The resource name of the environment to check upgrade for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.CheckUpgradeRequest}
+         * @return the request
+         */
+        public CheckUpgrade checkUpgrade(java.lang.String environment, com.google.api.services.composer.v1beta1.model.CheckUpgradeRequest content) throws java.io.IOException {
+          CheckUpgrade result = new CheckUpgrade(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckUpgrade extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:checkUpgrade";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Check if an upgrade operation on the environment will succeed. In case of problems detailed
+           * info can be found in the returned Operation.
+           *
+           * Create a request for the method "environments.checkUpgrade".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link CheckUpgrade#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CheckUpgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param environment The resource name of the environment to check upgrade for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.CheckUpgradeRequest}
+           * @since 1.13
+           */
+          protected CheckUpgrade(java.lang.String environment, com.google.api.services.composer.v1beta1.model.CheckUpgradeRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckUpgrade setAccessToken(java.lang.String accessToken) {
+            return (CheckUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckUpgrade setAlt(java.lang.String alt) {
+            return (CheckUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckUpgrade setCallback(java.lang.String callback) {
+            return (CheckUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckUpgrade setFields(java.lang.String fields) {
+            return (CheckUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public CheckUpgrade setKey(java.lang.String key) {
+            return (CheckUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public CheckUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (CheckUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (CheckUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckUpgrade setUploadType(java.lang.String uploadType) {
+            return (CheckUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the environment to check upgrade for, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the environment to check upgrade for, in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the environment to check upgrade for, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public CheckUpgrade setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public CheckUpgrade set(String parameterName, Object value) {
+            return (CheckUpgrade) super.set(parameterName, value);
+          }
+        }
+        /**
          * Create a new environment.
          *
          * Create a request for the method "environments.create".

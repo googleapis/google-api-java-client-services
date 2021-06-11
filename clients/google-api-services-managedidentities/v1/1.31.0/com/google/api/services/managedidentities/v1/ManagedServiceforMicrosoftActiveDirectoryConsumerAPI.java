@@ -470,21 +470,17 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2614,6 +2610,421 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
 
+          /**
+           * An accessor for creating requests from the SqlIntegrations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedServiceforMicrosoftActiveDirectoryConsumerAPI managedidentities = new ManagedServiceforMicrosoftActiveDirectoryConsumerAPI(...);}
+           *   {@code ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.SqlIntegrations.List request = managedidentities.sqlIntegrations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public SqlIntegrations sqlIntegrations() {
+            return new SqlIntegrations();
+          }
+
+          /**
+           * The "sqlIntegrations" collection of methods.
+           */
+          public class SqlIntegrations {
+
+            /**
+             * Gets details of a single sqlIntegration.
+             *
+             * Create a request for the method "sqlIntegrations.get".
+             *
+             * This request holds the parameters needed by the managedidentities server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. SQLIntegration resource name using the form:
+             *        `projects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.SqlIntegration> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+
+              /**
+               * Gets details of a single sqlIntegration.
+               *
+               * Create a request for the method "sqlIntegrations.get".
+               *
+               * This request holds the parameters needed by the the managedidentities server.  After setting
+               * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. SQLIntegration resource name using the form:
+             *        `projects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1.model.SqlIntegration.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. SQLIntegration resource name using the form:
+               * `projects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. SQLIntegration resource name using the form:
+             `projects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. SQLIntegration resource name using the form:
+               * `projects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists SqlIntegrations in a given domain.
+             *
+             * Create a request for the method "sqlIntegrations.list".
+             *
+             * This request holds the parameters needed by the managedidentities server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the SqlIntegrations using the form:
+             *        `projects/{project_id}/locations/global/domains`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.ListSqlIntegrationsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/sqlIntegrations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+              /**
+               * Lists SqlIntegrations in a given domain.
+               *
+               * Create a request for the method "sqlIntegrations.list".
+               *
+               * This request holds the parameters needed by the the managedidentities server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the SqlIntegrations using the form:
+             *        `projects/{project_id}/locations/global/domains`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1.model.ListSqlIntegrationsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the SqlIntegrations using the form:
+               * `projects/{project_id}/locations/global/domains`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the SqlIntegrations using the form:
+             `projects/{project_id}/locations/global/domains`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the SqlIntegrations using the form:
+               * `projects/{project_id}/locations/global/domains`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Filter specifying constraints of a list operation. For example,
+               * `SqlIntegration.name="sql"`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Filter specifying constraints of a list operation. For example,
+             `SqlIntegration.name="sql"`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Filter specifying constraints of a list operation. For example,
+               * `SqlIntegration.name="sql"`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results following syntax at
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Specifies the ordering of results following syntax at
+             https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results following syntax at
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 1000 will be used by the service. Regardless of the page_size value, the
+               * response may include a partial list and a caller should only rely on
+               * response'ANIZATIONs next_page_token to determine if there are more instances left
+               * to be queried.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return. If not specified, a default value of 1000 will be
+             used by the service. Regardless of the page_size value, the response may include a partial list and
+             a caller should only rely on response'ANIZATIONs next_page_token to determine if there are more
+             instances left to be queried.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 1000 will be used by the service. Regardless of the page_size value, the
+               * response may include a partial list and a caller should only rely on
+               * response'ANIZATIONs next_page_token to determine if there are more instances left
+               * to be queried.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the Operations collection.

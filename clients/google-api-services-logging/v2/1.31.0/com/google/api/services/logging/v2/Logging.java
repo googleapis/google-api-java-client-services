@@ -14271,12 +14271,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     *        "organizations/ORGANIZATION_ID/cmekSettings"
-     *        "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-     *        "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-     *        configured for GCP organizations. Once configured, it applies to all projects and folders
-     *        in the GCP organization.
+     * @param name Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
      * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
      * @return the request
      */
@@ -14310,12 +14310,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     *        "organizations/ORGANIZATION_ID/cmekSettings"
-     *        "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-     *        "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-     *        configured for GCP organizations. Once configured, it applies to all projects and folders
-     *        in the GCP organization.
+       * @param name Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
        * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
        * @since 1.13
        */
@@ -14385,33 +14385,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. The resource name for the CMEK settings to update. <
-       * "projects/PROJECT_ID/cmekSettings" "organizations/ORGANIZATION_ID/cmekSettings"
-       * "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-       * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-       * configured for GCP organizations. Once configured, it applies to all projects and folders
-       * in the GCP organization.
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     "organizations/ORGANIZATION_ID/cmekSettings" "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings"
-     "folders/FOLDER_ID/cmekSettings"Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs
-     Router can currently only be configured for GCP organizations. Once configured, it applies to all
-     projects and folders in the GCP organization.
+      /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The resource name for the CMEK settings to update. <
-       * "projects/PROJECT_ID/cmekSettings" "organizations/ORGANIZATION_ID/cmekSettings"
-       * "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-       * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-       * configured for GCP organizations. Once configured, it applies to all projects and folders
-       * in the GCP organization.
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
        */
       public UpdateCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -26105,12 +26105,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link UpdateCmekSettings#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     *        "organizations/ORGANIZATION_ID/cmekSettings"
-     *        "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-     *        "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-     *        configured for GCP organizations. Once configured, it applies to all projects and folders
-     *        in the GCP organization.
+     * @param name Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
      * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
      * @return the request
      */
@@ -26144,12 +26144,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     *        "organizations/ORGANIZATION_ID/cmekSettings"
-     *        "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-     *        "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-     *        configured for GCP organizations. Once configured, it applies to all projects and folders
-     *        in the GCP organization.
+       * @param name Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     *        "organizations/[ORGANIZATION_ID]/cmekSettings"
+     *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+     *        Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+     *        only be configured for GCP organizations. Once configured, it applies to all projects and
+     *        folders in the GCP organization.
        * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
        * @since 1.13
        */
@@ -26219,33 +26219,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. The resource name for the CMEK settings to update. <
-       * "projects/PROJECT_ID/cmekSettings" "organizations/ORGANIZATION_ID/cmekSettings"
-       * "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-       * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-       * configured for GCP organizations. Once configured, it applies to all projects and folders
-       * in the GCP organization.
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name for the CMEK settings to update. < "projects/PROJECT_ID/cmekSettings"
-     "organizations/ORGANIZATION_ID/cmekSettings" "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings"
-     "folders/FOLDER_ID/cmekSettings"Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs
-     Router can currently only be configured for GCP organizations. Once configured, it applies to all
-     projects and folders in the GCP organization.
+      /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
+     "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
+     "folders/[FOLDER_ID]/cmekSettings" Example: "organizations/12345/cmekSettings".Note: CMEK for the
+     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
+     all projects and folders in the GCP organization.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The resource name for the CMEK settings to update. <
-       * "projects/PROJECT_ID/cmekSettings" "organizations/ORGANIZATION_ID/cmekSettings"
-       * "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings" "folders/FOLDER_ID/cmekSettings"Example:
-       * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently only be
-       * configured for GCP organizations. Once configured, it applies to all projects and folders
-       * in the GCP organization.
+       * Required. The resource name for the CMEK settings to update.
+       * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
+       * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings"
+       * Example: "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can currently
+       * only be configured for GCP organizations. Once configured, it applies to all projects and
+       * folders in the GCP organization.
        */
       public UpdateCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

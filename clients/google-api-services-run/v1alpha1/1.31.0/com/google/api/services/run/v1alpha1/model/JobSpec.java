@@ -30,9 +30,10 @@ package com.google.api.services.run.v1alpha1.model;
 public final class JobSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the duration in seconds relative to the startTime that the job may be
-   * active before the system tries to terminate it. If set to zero, the system will never attempt
-   * to terminate the job based on time. Otherwise, the value must be positive integer. +optional
+   * Optional. Not supported. Specifies the duration in seconds relative to the startTime that the
+   * job may be active before the system tries to terminate it. If set to zero, the system will
+   * never attempt to terminate the job based on time. Otherwise, the value must be positive
+   * integer. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -75,9 +76,9 @@ public final class JobSpec extends com.google.api.client.json.GenericJson {
   private InstanceTemplateSpec template;
 
   /**
-   * Optional. ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
-   * (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job
-   * finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
+   * Optional. Not supported. ttlSecondsAfterFinished limits the lifetime of a Job that has finished
+   * execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the
+   * Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
    * lifecycle guarantees (e.g. finalizers) will be honored. If this field is set to zero, the Job
    * won't be automatically deleted. +optional
    * The value may be {@code null}.
@@ -86,9 +87,10 @@ public final class JobSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ttlSecondsAfterFinished;
 
   /**
-   * Optional. Specifies the duration in seconds relative to the startTime that the job may be
-   * active before the system tries to terminate it. If set to zero, the system will never attempt
-   * to terminate the job based on time. Otherwise, the value must be positive integer. +optional
+   * Optional. Not supported. Specifies the duration in seconds relative to the startTime that the
+   * job may be active before the system tries to terminate it. If set to zero, the system will
+   * never attempt to terminate the job based on time. Otherwise, the value must be positive
+   * integer. +optional
    * @return value or {@code null} for none
    */
   public java.lang.Long getActiveDeadlineSeconds() {
@@ -96,9 +98,10 @@ public final class JobSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the duration in seconds relative to the startTime that the job may be
-   * active before the system tries to terminate it. If set to zero, the system will never attempt
-   * to terminate the job based on time. Otherwise, the value must be positive integer. +optional
+   * Optional. Not supported. Specifies the duration in seconds relative to the startTime that the
+   * job may be active before the system tries to terminate it. If set to zero, the system will
+   * never attempt to terminate the job based on time. Otherwise, the value must be positive
+   * integer. +optional
    * @param activeDeadlineSeconds activeDeadlineSeconds or {@code null} for none
    */
   public JobSpec setActiveDeadlineSeconds(java.lang.Long activeDeadlineSeconds) {
@@ -191,9 +194,9 @@ public final class JobSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
-   * (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job
-   * finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
+   * Optional. Not supported. ttlSecondsAfterFinished limits the lifetime of a Job that has finished
+   * execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the
+   * Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
    * lifecycle guarantees (e.g. finalizers) will be honored. If this field is set to zero, the Job
    * won't be automatically deleted. +optional
    * @return value or {@code null} for none
@@ -203,9 +206,9 @@ public final class JobSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
-   * (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job
-   * finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
+   * Optional. Not supported. ttlSecondsAfterFinished limits the lifetime of a Job that has finished
+   * execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the
+   * Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its
    * lifecycle guarantees (e.g. finalizers) will be honored. If this field is set to zero, the Job
    * won't be automatically deleted. +optional
    * @param ttlSecondsAfterFinished ttlSecondsAfterFinished or {@code null} for none

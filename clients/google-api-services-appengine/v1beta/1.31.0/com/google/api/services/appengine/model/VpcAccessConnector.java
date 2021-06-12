@@ -30,12 +30,36 @@ package com.google.api.services.appengine.model;
 public final class VpcAccessConnector extends com.google.api.client.json.GenericJson {
 
   /**
+   * The egress setting for the connector, controlling what traffic is diverted through it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String egressSetting;
+
+  /**
    * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-
    * central1/connectors/c1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The egress setting for the connector, controlling what traffic is diverted through it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEgressSetting() {
+    return egressSetting;
+  }
+
+  /**
+   * The egress setting for the connector, controlling what traffic is diverted through it.
+   * @param egressSetting egressSetting or {@code null} for none
+   */
+  public VpcAccessConnector setEgressSetting(java.lang.String egressSetting) {
+    this.egressSetting = egressSetting;
+    return this;
+  }
 
   /**
    * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-

@@ -31,25 +31,14 @@ package com.google.api.services.firebaserules.v1.model;
 public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time the release was created. Output only.
+   * Output only. Time the release was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Resource name for the `Release`. `Release` names may be structured `app1/prod/v2` or flat
-   * `app1_prod_v2` which affords developers a great deal of flexibility in mapping the name to the
-   * style that best fits their existing development practices. For example, a name could refer to
-   * an environment, an app, a version, or some combination of three. In the table below, for the
-   * project name `projects/foo`, the following relative release paths show how flat and structured
-   * names might be chosen to match a desired development / deployment strategy. Use Case | Flat
-   * Name | Structured Name -------------|---------------------|---------------- Environments |
-   * releases/qa | releases/qa Apps | releases/app1_qa | releases/app1/qa Versions |
-   * releases/app1_v2_qa | releases/app1/v2/qa The delimiter between the release name path elements
-   * can be almost anything and it should work equally well with the release name list filter, but
-   * in many ways the structured paths provide a clearer picture of the relationship between
-   * `Release` instances. Format: `projects/{project_id}/releases/{release_id}`
+   * Format: `projects/{project_id}/releases/{release_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +53,14 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String rulesetName;
 
   /**
-   * Time the release was updated. Output only.
+   * Output only. Time the release was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Time the release was created. Output only.
+   * Output only. Time the release was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -79,7 +68,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time the release was created. Output only.
+   * Output only. Time the release was created.
    * @param createTime createTime or {@code null} for none
    */
   public Release setCreateTime(String createTime) {
@@ -88,18 +77,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the `Release`. `Release` names may be structured `app1/prod/v2` or flat
-   * `app1_prod_v2` which affords developers a great deal of flexibility in mapping the name to the
-   * style that best fits their existing development practices. For example, a name could refer to
-   * an environment, an app, a version, or some combination of three. In the table below, for the
-   * project name `projects/foo`, the following relative release paths show how flat and structured
-   * names might be chosen to match a desired development / deployment strategy. Use Case | Flat
-   * Name | Structured Name -------------|---------------------|---------------- Environments |
-   * releases/qa | releases/qa Apps | releases/app1_qa | releases/app1/qa Versions |
-   * releases/app1_v2_qa | releases/app1/v2/qa The delimiter between the release name path elements
-   * can be almost anything and it should work equally well with the release name list filter, but
-   * in many ways the structured paths provide a clearer picture of the relationship between
-   * `Release` instances. Format: `projects/{project_id}/releases/{release_id}`
+   * Format: `projects/{project_id}/releases/{release_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,18 +85,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the `Release`. `Release` names may be structured `app1/prod/v2` or flat
-   * `app1_prod_v2` which affords developers a great deal of flexibility in mapping the name to the
-   * style that best fits their existing development practices. For example, a name could refer to
-   * an environment, an app, a version, or some combination of three. In the table below, for the
-   * project name `projects/foo`, the following relative release paths show how flat and structured
-   * names might be chosen to match a desired development / deployment strategy. Use Case | Flat
-   * Name | Structured Name -------------|---------------------|---------------- Environments |
-   * releases/qa | releases/qa Apps | releases/app1_qa | releases/app1/qa Versions |
-   * releases/app1_v2_qa | releases/app1/v2/qa The delimiter between the release name path elements
-   * can be almost anything and it should work equally well with the release name list filter, but
-   * in many ways the structured paths provide a clearer picture of the relationship between
-   * `Release` instances. Format: `projects/{project_id}/releases/{release_id}`
+   * Format: `projects/{project_id}/releases/{release_id}`
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {
@@ -146,7 +113,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time the release was updated. Output only.
+   * Output only. Time the release was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -154,7 +121,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time the release was updated. Output only.
+   * Output only. Time the release was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Release setUpdateTime(String updateTime) {

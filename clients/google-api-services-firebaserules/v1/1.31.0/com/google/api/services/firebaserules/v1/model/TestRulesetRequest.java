@@ -38,7 +38,9 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   private Source source;
 
   /**
-   * Inline `TestSuite` to run.
+   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
+   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
+   * run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,9 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Inline `TestSuite` to run.
+   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
+   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
+   * run.
    * @return value or {@code null} for none
    */
   public TestSuite getTestSuite() {
@@ -72,7 +76,9 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Inline `TestSuite` to run.
+   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
+   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
+   * run.
    * @param testSuite testSuite or {@code null} for none
    */
   public TestRulesetRequest setTestSuite(TestSuite testSuite) {

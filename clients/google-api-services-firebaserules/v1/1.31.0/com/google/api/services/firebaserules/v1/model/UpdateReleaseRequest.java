@@ -17,7 +17,7 @@
 package com.google.api.services.firebaserules.v1.model;
 
 /**
- * The request for FirebaseRulesService.UpdateReleasePatch.
+ * The request for FirebaseRulesService.UpdateRelease.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Rules API. For a detailed explanation see:

@@ -4403,6 +4403,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Update Notebook Instance configurations.
+         *
+         * Create a request for the method "instances.updateConfig".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.UpdateInstanceConfigRequest}
+         * @return the request
+         */
+        public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.notebooks.v1.model.UpdateInstanceConfigRequest content) throws java.io.IOException {
+          UpdateConfig result = new UpdateConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateConfig extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:updateConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Update Notebook Instance configurations.
+           *
+           * Create a request for the method "instances.updateConfig".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.UpdateInstanceConfigRequest}
+           * @since 1.13
+           */
+          protected UpdateConfig(java.lang.String name, com.google.api.services.notebooks.v1.model.UpdateInstanceConfigRequest content) {
+            super(AIPlatformNotebooks.this, "PATCH", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateConfig setAlt(java.lang.String alt) {
+            return (UpdateConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateConfig setCallback(java.lang.String callback) {
+            return (UpdateConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateConfig setFields(java.lang.String fields) {
+            return (UpdateConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateConfig setKey(java.lang.String key) {
+            return (UpdateConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public UpdateConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public UpdateConfig set(String parameterName, Object value) {
+            return (UpdateConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the Shielded instance configuration of a single Instance.
          *
          * Create a request for the method "instances.updateShieldedInstanceConfig".

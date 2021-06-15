@@ -78,7 +78,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> androidDevicePolicyTracks;
 
   /**
-   * The app auto update policy, which controls when automatic app updates can be applied.
+   * Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls
+   * when automatic app updates can be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -817,7 +819,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The app auto update policy, which controls when automatic app updates can be applied.
+   * Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls
+   * when automatic app updates can be applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppAutoUpdatePolicy() {
@@ -825,7 +829,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The app auto update policy, which controls when automatic app updates can be applied.
+   * Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls
+   * when automatic app updates can be applied.
    * @param appAutoUpdatePolicy appAutoUpdatePolicy or {@code null} for none
    */
   public Policy setAppAutoUpdatePolicy(java.lang.String appAutoUpdatePolicy) {

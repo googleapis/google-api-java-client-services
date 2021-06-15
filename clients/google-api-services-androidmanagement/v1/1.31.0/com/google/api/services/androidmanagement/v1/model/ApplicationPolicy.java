@@ -41,7 +41,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> accessibleTrackIds;
 
   /**
-   * This feature is not generally available yet.
+   * Controls the auto-update mode for the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This feature is not generally available yet.
+   * Controls the auto-update mode for the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoUpdateMode() {
@@ -170,7 +170,7 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This feature is not generally available yet.
+   * Controls the auto-update mode for the app.
    * @param autoUpdateMode autoUpdateMode or {@code null} for none
    */
   public ApplicationPolicy setAutoUpdateMode(java.lang.String autoUpdateMode) {

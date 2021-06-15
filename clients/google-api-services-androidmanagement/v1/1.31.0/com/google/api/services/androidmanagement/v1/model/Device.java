@@ -53,6 +53,15 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The password requirements currently applied to the device. The applied requirements may be
+   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
+   * based on passwordPolicies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PasswordRequirements> appliedPasswordPolicies;
+
+  /**
    * The name of the policy currently applied to the device.
    * The value may be {@code null}.
    */
@@ -333,6 +342,27 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setApplicationReports(java.util.List<ApplicationReport> applicationReports) {
     this.applicationReports = applicationReports;
+    return this;
+  }
+
+  /**
+   * The password requirements currently applied to the device. The applied requirements may be
+   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
+   * based on passwordPolicies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PasswordRequirements> getAppliedPasswordPolicies() {
+    return appliedPasswordPolicies;
+  }
+
+  /**
+   * The password requirements currently applied to the device. The applied requirements may be
+   * slightly different from those specified in passwordPolicies in some cases. fieldPath is set
+   * based on passwordPolicies.
+   * @param appliedPasswordPolicies appliedPasswordPolicies or {@code null} for none
+   */
+  public Device setAppliedPasswordPolicies(java.util.List<PasswordRequirements> appliedPasswordPolicies) {
+    this.appliedPasswordPolicies = appliedPasswordPolicies;
     return this;
   }
 

@@ -40,6 +40,13 @@ public final class AccessDeniedPageSettings extends com.google.api.client.json.G
   private java.lang.String accessDeniedPageUri;
 
   /**
+   * Whether to generate a troubleshooting URL on access denied events to this application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean generateTroubleshootingUri;
+
+  /**
    * The URI to be redirected to when access is denied.
    * @return value or {@code null} for none
    */
@@ -53,6 +60,23 @@ public final class AccessDeniedPageSettings extends com.google.api.client.json.G
    */
   public AccessDeniedPageSettings setAccessDeniedPageUri(java.lang.String accessDeniedPageUri) {
     this.accessDeniedPageUri = accessDeniedPageUri;
+    return this;
+  }
+
+  /**
+   * Whether to generate a troubleshooting URL on access denied events to this application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGenerateTroubleshootingUri() {
+    return generateTroubleshootingUri;
+  }
+
+  /**
+   * Whether to generate a troubleshooting URL on access denied events to this application.
+   * @param generateTroubleshootingUri generateTroubleshootingUri or {@code null} for none
+   */
+  public AccessDeniedPageSettings setGenerateTroubleshootingUri(java.lang.Boolean generateTroubleshootingUri) {
+    this.generateTroubleshootingUri = generateTroubleshootingUri;
     return this;
   }
 

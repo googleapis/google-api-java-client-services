@@ -38,8 +38,8 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
 
   /**
    * The name of the dataset resource to create and write the redacted data to. * The destination
-   * dataset must not exist. * The destination dataset must be in the same project and location as
-   * the source dataset. De-identifying data across multiple projects or locations is not supported.
+   * dataset must not exist. * The destination dataset must be in the same location as the source
+   * dataset. De-identifying data across multiple locations is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
 
   /**
    * The name of the dataset resource to create and write the redacted data to. * The destination
-   * dataset must not exist. * The destination dataset must be in the same project and location as
-   * the source dataset. De-identifying data across multiple projects or locations is not supported.
+   * dataset must not exist. * The destination dataset must be in the same location as the source
+   * dataset. De-identifying data across multiple locations is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationDataset() {
@@ -74,8 +74,8 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
 
   /**
    * The name of the dataset resource to create and write the redacted data to. * The destination
-   * dataset must not exist. * The destination dataset must be in the same project and location as
-   * the source dataset. De-identifying data across multiple projects or locations is not supported.
+   * dataset must not exist. * The destination dataset must be in the same location as the source
+   * dataset. De-identifying data across multiple locations is not supported.
    * @param destinationDataset destinationDataset or {@code null} for none
    */
   public DeidentifyDatasetRequest setDestinationDataset(java.lang.String destinationDataset) {

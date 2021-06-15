@@ -38,6 +38,17 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   private String createTime;
 
   /**
+   * Output only. If set to true, this conversion event refers to a custom event. If set to false,
+   * this conversion event refers to a default event in GA. Default events typically have special
+   * meaning in GA. Default events are usually created for you by the GA system, but in some cases
+   * can be created by property admins. Custom events count towards the maximum number of custom
+   * conversion events that may be created per property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean custom;
+
+  /**
    * Immutable. The event name for this conversion event. Examples: 'click', 'purchase'
    * The value may be {@code null}.
    */
@@ -73,6 +84,31 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
    */
   public GoogleAnalyticsAdminV1alphaConversionEvent setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. If set to true, this conversion event refers to a custom event. If set to false,
+   * this conversion event refers to a default event in GA. Default events typically have special
+   * meaning in GA. Default events are usually created for you by the GA system, but in some cases
+   * can be created by property admins. Custom events count towards the maximum number of custom
+   * conversion events that may be created per property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustom() {
+    return custom;
+  }
+
+  /**
+   * Output only. If set to true, this conversion event refers to a custom event. If set to false,
+   * this conversion event refers to a default event in GA. Default events typically have special
+   * meaning in GA. Default events are usually created for you by the GA system, but in some cases
+   * can be created by property admins. Custom events count towards the maximum number of custom
+   * conversion events that may be created per property.
+   * @param custom custom or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaConversionEvent setCustom(java.lang.Boolean custom) {
+    this.custom = custom;
     return this;
   }
 

@@ -35,9 +35,9 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Derived from the source and destination endpoints definition, and validated by the data plane
-   * model. If there are multiple traces starting from different source locations, then the
-   * endpoint_info may be different between traces.
+   * Derived from the source and destination endpoints definition specified by user request, and
+   * validated by the data plane model. If there are multiple traces starting from different source
+   * locations, then the endpoint_info may be different between traces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +60,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Derived from the source and destination endpoints definition, and validated by the data plane
-   * model. If there are multiple traces starting from different source locations, then the
-   * endpoint_info may be different between traces.
+   * Derived from the source and destination endpoints definition specified by user request, and
+   * validated by the data plane model. If there are multiple traces starting from different source
+   * locations, then the endpoint_info may be different between traces.
    * @return value or {@code null} for none
    */
   public EndpointInfo getEndpointInfo() {
@@ -70,9 +70,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Derived from the source and destination endpoints definition, and validated by the data plane
-   * model. If there are multiple traces starting from different source locations, then the
-   * endpoint_info may be different between traces.
+   * Derived from the source and destination endpoints definition specified by user request, and
+   * validated by the data plane model. If there are multiple traces starting from different source
+   * locations, then the endpoint_info may be different between traces.
    * @param endpointInfo endpointInfo or {@code null} for none
    */
   public Trace setEndpointInfo(EndpointInfo endpointInfo) {

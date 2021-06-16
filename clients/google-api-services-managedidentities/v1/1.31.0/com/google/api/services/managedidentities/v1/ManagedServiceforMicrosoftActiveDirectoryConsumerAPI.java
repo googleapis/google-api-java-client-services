@@ -1483,6 +1483,155 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * Gets the domain ldaps settings.
+           *
+           * Create a request for the method "domains.getLdapssettings".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link GetLdapssettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @return the request
+           */
+          public GetLdapssettings getLdapssettings(java.lang.String name) throws java.io.IOException {
+            GetLdapssettings result = new GetLdapssettings(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetLdapssettings extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.LDAPSSettings> {
+
+            private static final String REST_PATH = "v1/{+name}/ldapssettings";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Gets the domain ldaps settings.
+             *
+             * Create a request for the method "domains.getLdapssettings".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link GetLdapssettings#execute()} method to invoke the
+             * remote operation. <p> {@link GetLdapssettings#initialize(com.google.api.client.googleapis.servi
+             * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @since 1.13
+             */
+            protected GetLdapssettings(java.lang.String name) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1.model.LDAPSSettings.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetLdapssettings set$Xgafv(java.lang.String $Xgafv) {
+              return (GetLdapssettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetLdapssettings setAccessToken(java.lang.String accessToken) {
+              return (GetLdapssettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetLdapssettings setAlt(java.lang.String alt) {
+              return (GetLdapssettings) super.setAlt(alt);
+            }
+
+            @Override
+            public GetLdapssettings setCallback(java.lang.String callback) {
+              return (GetLdapssettings) super.setCallback(callback);
+            }
+
+            @Override
+            public GetLdapssettings setFields(java.lang.String fields) {
+              return (GetLdapssettings) super.setFields(fields);
+            }
+
+            @Override
+            public GetLdapssettings setKey(java.lang.String key) {
+              return (GetLdapssettings) super.setKey(key);
+            }
+
+            @Override
+            public GetLdapssettings setOauthToken(java.lang.String oauthToken) {
+              return (GetLdapssettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetLdapssettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetLdapssettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetLdapssettings setQuotaUser(java.lang.String quotaUser) {
+              return (GetLdapssettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetLdapssettings setUploadType(java.lang.String uploadType) {
+              return (GetLdapssettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetLdapssettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetLdapssettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public GetLdapssettings setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetLdapssettings set(String parameterName, Object value) {
+              return (GetLdapssettings) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists domains in a project.
            *
            * Create a request for the method "domains.list".
@@ -1866,14 +2015,14 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
              * The elements of the repeated paths field may only include fields from Domain: *
-             * `labels` * `locations` * `authorized_networks`
+             * `labels` * `locations` * `authorized_networks` * `audit_logs_enabled`
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
            of the repeated paths field may only include fields from Domain: * `labels` * `locations` *
-           `authorized_networks`
+           `authorized_networks` * `audit_logs_enabled`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -1882,7 +2031,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
              * The elements of the repeated paths field may only include fields from Domain: *
-             * `labels` * `locations` * `authorized_networks`
+             * `labels` * `locations` * `authorized_networks` * `audit_logs_enabled`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -2464,6 +2613,173 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             @Override
             public TestIamPermissions set(String parameterName, Object value) {
               return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Patches a single ldaps settings.
+           *
+           * Create a request for the method "domains.updateLdapssettings".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link UpdateLdapssettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The resource name of the LDAPS settings. Uses the form:
+           *        `projects/{project}/locations/{location}/domains/{domain}`.
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.LDAPSSettings}
+           * @return the request
+           */
+          public UpdateLdapssettings updateLdapssettings(java.lang.String name, com.google.api.services.managedidentities.v1.model.LDAPSSettings content) throws java.io.IOException {
+            UpdateLdapssettings result = new UpdateLdapssettings(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateLdapssettings extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}/ldapssettings";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Patches a single ldaps settings.
+             *
+             * Create a request for the method "domains.updateLdapssettings".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link UpdateLdapssettings#execute()} method to invoke the
+             * remote operation. <p> {@link UpdateLdapssettings#initialize(com.google.api.client.googleapis.se
+             * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The resource name of the LDAPS settings. Uses the form:
+           *        `projects/{project}/locations/{location}/domains/{domain}`.
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.LDAPSSettings}
+             * @since 1.13
+             */
+            protected UpdateLdapssettings(java.lang.String name, com.google.api.services.managedidentities.v1.model.LDAPSSettings content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "PATCH", REST_PATH, content, com.google.api.services.managedidentities.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public UpdateLdapssettings set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateLdapssettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateLdapssettings setAccessToken(java.lang.String accessToken) {
+              return (UpdateLdapssettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateLdapssettings setAlt(java.lang.String alt) {
+              return (UpdateLdapssettings) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateLdapssettings setCallback(java.lang.String callback) {
+              return (UpdateLdapssettings) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateLdapssettings setFields(java.lang.String fields) {
+              return (UpdateLdapssettings) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateLdapssettings setKey(java.lang.String key) {
+              return (UpdateLdapssettings) super.setKey(key);
+            }
+
+            @Override
+            public UpdateLdapssettings setOauthToken(java.lang.String oauthToken) {
+              return (UpdateLdapssettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateLdapssettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateLdapssettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateLdapssettings setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateLdapssettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateLdapssettings setUploadType(java.lang.String uploadType) {
+              return (UpdateLdapssettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateLdapssettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateLdapssettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the LDAPS settings. Uses the form:
+             * `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the LDAPS settings. Uses the form:
+           `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the LDAPS settings. Uses the form:
+             * `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            public UpdateLdapssettings setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
+           `FieldMask` definition, see https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public UpdateLdapssettings setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateLdapssettings set(String parameterName, Object value) {
+              return (UpdateLdapssettings) super.set(parameterName, value);
             }
           }
           /**

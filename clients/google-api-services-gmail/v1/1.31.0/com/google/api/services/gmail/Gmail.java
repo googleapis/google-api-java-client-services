@@ -1219,17 +1219,24 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return includeSpamTrash;
         }
 
-        /** Maximum number of drafts to return. */
+        /**
+         * Maximum number of drafts to return. This field defaults to 100. The maximum allowed value
+         * for this field is 500.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long maxResults;
 
-        /** Maximum number of drafts to return. [default: 100]
+        /** Maximum number of drafts to return. This field defaults to 100. The maximum allowed value for this
+       field is 500. [default: 100]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
         }
 
-        /** Maximum number of drafts to return. */
+        /**
+         * Maximum number of drafts to return. This field defaults to 100. The maximum allowed value
+         * for this field is 500.
+         */
         public List setMaxResults(java.lang.Long maxResults) {
           this.maxResults = maxResults;
           return this;
@@ -1840,17 +1847,24 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** The maximum number of history records to return. */
+        /**
+         * Maximum number of history records to return. This field defaults to 100. The maximum
+         * allowed value for this field is 500.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long maxResults;
 
-        /** The maximum number of history records to return. [default: 100]
+        /** Maximum number of history records to return. This field defaults to 100. The maximum allowed value
+       for this field is 500. [default: 100]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
         }
 
-        /** The maximum number of history records to return. */
+        /**
+         * Maximum number of history records to return. This field defaults to 100. The maximum
+         * allowed value for this field is 500.
+         */
         public List setMaxResults(java.lang.Long maxResults) {
           this.maxResults = maxResults;
           return this;
@@ -4219,17 +4233,24 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Maximum number of messages to return. */
+        /**
+         * Maximum number of messages to return. This field defaults to 100. The maximum allowed
+         * value for this field is 500.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long maxResults;
 
-        /** Maximum number of messages to return. [default: 100]
+        /** Maximum number of messages to return. This field defaults to 100. The maximum allowed value for
+       this field is 500. [default: 100]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
         }
 
-        /** Maximum number of messages to return. */
+        /**
+         * Maximum number of messages to return. This field defaults to 100. The maximum allowed
+         * value for this field is 500.
+         */
         public List setMaxResults(java.lang.Long maxResults) {
           this.maxResults = maxResults;
           return this;
@@ -10619,17 +10640,24 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Maximum number of threads to return. */
+        /**
+         * Maximum number of threads to return. This field defaults to 100. The maximum allowed
+         * value for this field is 500.
+         */
         @com.google.api.client.util.Key
         private java.lang.Long maxResults;
 
-        /** Maximum number of threads to return. [default: 100]
+        /** Maximum number of threads to return. This field defaults to 100. The maximum allowed value for this
+       field is 500. [default: 100]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
         }
 
-        /** Maximum number of threads to return. */
+        /**
+         * Maximum number of threads to return. This field defaults to 100. The maximum allowed
+         * value for this field is 500.
+         */
         public List setMaxResults(java.lang.Long maxResults) {
           this.maxResults = maxResults;
           return this;

@@ -361,10 +361,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -395,10 +396,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -482,9 +484,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -493,10 +496,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
            supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
@@ -507,9 +511,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -946,10 +951,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -980,10 +986,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -1067,9 +1074,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -1078,10 +1086,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID refers to
            supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
@@ -1092,9 +1101,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -1861,10 +1871,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -1895,10 +1906,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -1982,9 +1994,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -1993,10 +2006,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
            supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
@@ -2007,9 +2021,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -2446,10 +2461,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -2480,10 +2496,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -2567,9 +2584,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -2578,10 +2596,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID refers to
            supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
@@ -2592,9 +2611,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -3361,10 +3381,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -3395,10 +3416,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -3482,9 +3504,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -3493,10 +3516,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
            supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
@@ -3507,9 +3531,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -3946,10 +3971,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -3980,10 +4006,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -4067,9 +4094,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -4078,10 +4106,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID refers to
            supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
@@ -4092,9 +4121,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -4861,10 +4891,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -4895,10 +4926,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        INSIGHT_TYPE_ID refers to supported insight types:
@@ -4982,9 +5014,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -4993,10 +5026,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
            supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.
@@ -5007,9 +5041,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE
-             * _ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `billin
+             * gAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * INSIGHT_TYPE_ID refers to supported insight types:
@@ -5446,10 +5481,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the recommender server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -5480,10 +5516,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
-           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats: *
+           *        `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           *        `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
-           *        3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+           *        * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            *        `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
            *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
            *        RECOMMENDER_ID refers to supported recommenders:
@@ -5567,9 +5604,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:
@@ -5578,10 +5616,11 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The container resource on which to execute the request. Acceptable formats: 1.
-           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 3.
-           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+            /** Required. The container resource on which to execute the request. Acceptable formats: *
+           `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+           `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
            `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` LOCATION here
            refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID refers to
            supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
@@ -5592,9 +5631,10 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
-             * 1. `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 2.
-             * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_
-             * ID]` 3. `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` 4.
+             * * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` * `billing
+             * Accounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
+             * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]` *
              * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
              * RECOMMENDER_ID refers to supported recommenders:

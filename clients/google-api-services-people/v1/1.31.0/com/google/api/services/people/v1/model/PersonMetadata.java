@@ -31,7 +31,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
+   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
    * token.
    * The value may be {@code null}.
    */
@@ -72,7 +73,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
+   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
    * token.
    * @return value or {@code null} for none
    */
@@ -82,7 +84,8 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
+   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
    * token.
    * @param deleted deleted or {@code null} for none
    */

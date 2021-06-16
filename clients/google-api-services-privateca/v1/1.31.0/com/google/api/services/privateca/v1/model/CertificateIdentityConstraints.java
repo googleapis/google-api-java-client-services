@@ -50,7 +50,7 @@ public final class CertificateIdentityConstraints extends com.google.api.client.
   /**
    * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or
    * Subject Alternative Name before a certificate is signed. To see the full allowed syntax and
-   * some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+   * some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class CertificateIdentityConstraints extends com.google.api.client.
   /**
    * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or
    * Subject Alternative Name before a certificate is signed. To see the full allowed syntax and
-   * some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+   * some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
    * @return value or {@code null} for none
    */
   public Expr getCelExpression() {
@@ -109,7 +109,7 @@ public final class CertificateIdentityConstraints extends com.google.api.client.
   /**
    * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or
    * Subject Alternative Name before a certificate is signed. To see the full allowed syntax and
-   * some examples, see https://cloud.google.com/certificate-authority-service/docs/cel-guide
+   * some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
    * @param celExpression celExpression or {@code null} for none
    */
   public CertificateIdentityConstraints setCelExpression(Expr celExpression) {

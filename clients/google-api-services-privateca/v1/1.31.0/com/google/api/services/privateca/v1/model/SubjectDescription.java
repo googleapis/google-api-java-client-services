@@ -39,15 +39,16 @@ public final class SubjectDescription extends com.google.api.client.json.Generic
   private java.lang.String hexSerialNumber;
 
   /**
-   * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time'
-   * - 'not_before_time'.
+   * For convenience, the actual lifetime of an issued certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lifetime;
 
   /**
-   * The time at which the certificate expires.
+   * The time after which the certificate is expired. Per RFC 5280, the validity period for a
+   * certificate is the period of time from not_before_time through not_after_time, inclusive.
+   * Corresponds to 'not_before_time' + 'lifetime' - 1 second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +93,7 @@ public final class SubjectDescription extends com.google.api.client.json.Generic
   }
 
   /**
-   * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time'
-   * - 'not_before_time'.
+   * For convenience, the actual lifetime of an issued certificate.
    * @return value or {@code null} for none
    */
   public String getLifetime() {
@@ -101,8 +101,7 @@ public final class SubjectDescription extends com.google.api.client.json.Generic
   }
 
   /**
-   * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time'
-   * - 'not_before_time'.
+   * For convenience, the actual lifetime of an issued certificate.
    * @param lifetime lifetime or {@code null} for none
    */
   public SubjectDescription setLifetime(String lifetime) {
@@ -111,7 +110,9 @@ public final class SubjectDescription extends com.google.api.client.json.Generic
   }
 
   /**
-   * The time at which the certificate expires.
+   * The time after which the certificate is expired. Per RFC 5280, the validity period for a
+   * certificate is the period of time from not_before_time through not_after_time, inclusive.
+   * Corresponds to 'not_before_time' + 'lifetime' - 1 second.
    * @return value or {@code null} for none
    */
   public String getNotAfterTime() {
@@ -119,7 +120,9 @@ public final class SubjectDescription extends com.google.api.client.json.Generic
   }
 
   /**
-   * The time at which the certificate expires.
+   * The time after which the certificate is expired. Per RFC 5280, the validity period for a
+   * certificate is the period of time from not_before_time through not_after_time, inclusive.
+   * Corresponds to 'not_before_time' + 'lifetime' - 1 second.
    * @param notAfterTime notAfterTime or {@code null} for none
    */
   public SubjectDescription setNotAfterTime(String notAfterTime) {

@@ -95,6 +95,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
 
   /**
+   * The desired L4 Internal Load Balancer Subsetting configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ILBSubsettingConfig desiredL4ilbSubsettingConfig;
+
+  /**
    * The desired list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
    * should be located. This list must always include the cluster's primary zone. Warning: changing
@@ -383,6 +390,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig) {
     this.desiredIntraNodeVisibilityConfig = desiredIntraNodeVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * The desired L4 Internal Load Balancer Subsetting configuration.
+   * @return value or {@code null} for none
+   */
+  public ILBSubsettingConfig getDesiredL4ilbSubsettingConfig() {
+    return desiredL4ilbSubsettingConfig;
+  }
+
+  /**
+   * The desired L4 Internal Load Balancer Subsetting configuration.
+   * @param desiredL4ilbSubsettingConfig desiredL4ilbSubsettingConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredL4ilbSubsettingConfig(ILBSubsettingConfig desiredL4ilbSubsettingConfig) {
+    this.desiredL4ilbSubsettingConfig = desiredL4ilbSubsettingConfig;
     return this;
   }
 

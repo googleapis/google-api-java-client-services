@@ -56,6 +56,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableIntraNodeVisibility;
 
   /**
+   * Whether L4ILB Subsetting is enabled for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableL4ilbSubsetting;
+
+  /**
    * Output only. The relative name of the Google Compute Engine
    * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
@@ -137,6 +144,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setEnableIntraNodeVisibility(java.lang.Boolean enableIntraNodeVisibility) {
     this.enableIntraNodeVisibility = enableIntraNodeVisibility;
+    return this;
+  }
+
+  /**
+   * Whether L4ILB Subsetting is enabled for this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableL4ilbSubsetting() {
+    return enableL4ilbSubsetting;
+  }
+
+  /**
+   * Whether L4ILB Subsetting is enabled for this cluster.
+   * @param enableL4ilbSubsetting enableL4ilbSubsetting or {@code null} for none
+   */
+  public NetworkConfig setEnableL4ilbSubsetting(java.lang.Boolean enableL4ilbSubsetting) {
+    this.enableL4ilbSubsetting = enableL4ilbSubsetting;
     return this;
   }
 

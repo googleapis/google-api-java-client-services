@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1p1beta1.model;
 
 /**
- * IAM permissions
+ * IAM permissions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class Permissions extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of permissions. A sample permission string: "compute.disk.get".
+   * A list of permissions. Example permission string: "compute.disk.get".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> permissions;
 
   /**
-   * A list of permissions. A sample permission string: "compute.disk.get".
+   * A list of permissions. Example permission string: "compute.disk.get".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermissions() {
@@ -45,7 +45,7 @@ public final class Permissions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of permissions. A sample permission string: "compute.disk.get".
+   * A list of permissions. Example permission string: "compute.disk.get".
    * @param permissions permissions or {@code null} for none
    */
   public Permissions setPermissions(java.util.List<java.lang.String> permissions) {

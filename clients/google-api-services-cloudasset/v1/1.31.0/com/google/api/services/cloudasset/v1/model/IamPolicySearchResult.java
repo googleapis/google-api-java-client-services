@@ -30,12 +30,42 @@ package com.google.api.services.cloudasset.v1.model;
 public final class IamPolicySearchResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The type of the resource associated with this IAM policy. Example:
+   * `compute.googleapis.com/Disk`. To search against the `asset_type`: * specify the `asset_types`
+   * field in your search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
    * Explanation about the IAM policy search result. It contains additional information to explain
    * why the search result matches the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Explanation explanation;
+
+  /**
+   * The folder(s) that the IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * use a free text query.
+   * Example: `123` * specify the `scope` field as this folder in your search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> folders;
+
+  /**
+   * The organization that the IAM policy belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs to an
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
 
   /**
    * The IAM policy directly set on the given resource. Note that the original IAM policy can
@@ -73,6 +103,27 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
+   * The type of the resource associated with this IAM policy. Example:
+   * `compute.googleapis.com/Disk`. To search against the `asset_type`: * specify the `asset_types`
+   * field in your search request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * The type of the resource associated with this IAM policy. Example:
+   * `compute.googleapis.com/Disk`. To search against the `asset_type`: * specify the `asset_types`
+   * field in your search request.
+   * @param assetType assetType or {@code null} for none
+   */
+  public IamPolicySearchResult setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
+
+  /**
    * Explanation about the IAM policy search result. It contains additional information to explain
    * why the search result matches the query.
    * @return value or {@code null} for none
@@ -88,6 +139,54 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
    */
   public IamPolicySearchResult setExplanation(Explanation explanation) {
     this.explanation = explanation;
+    return this;
+  }
+
+  /**
+   * The folder(s) that the IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * use a free text query.
+   * Example: `123` * specify the `scope` field as this folder in your search request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFolders() {
+    return folders;
+  }
+
+  /**
+   * The folder(s) that the IAM policy belongs to, in the form of folders/{FOLDER_NUMBER}. This
+   * field is available when the IAM policy belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * use a free text query.
+   * Example: `123` * specify the `scope` field as this folder in your search request.
+   * @param folders folders or {@code null} for none
+   */
+  public IamPolicySearchResult setFolders(java.util.List<java.lang.String> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  /**
+   * The organization that the IAM policy belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs to an
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * The organization that the IAM policy belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the IAM policy belongs to an
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
+   * @param organization organization or {@code null} for none
+   */
+  public IamPolicySearchResult setOrganization(java.lang.String organization) {
+    this.organization = organization;
     return this;
   }
 

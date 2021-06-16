@@ -1629,7 +1629,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
        * retrieve only the resources changed since the last request. Sync requests that specify
-       * `sync_token` have an additional rate limit. When syncing, all other parameters provided to
+       * `sync_token` have an additional rate limit. When the `syncToken` is specified, resources
+       * deleted since the last sync will be returned as a person with
+       * [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted)
+       * set to true. When the `syncToken` is specified, all other parameters provided to
        * `ListOtherContacts` must match the call that provided the sync token.
        */
       @com.google.api.client.util.Key
@@ -1637,7 +1640,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /** Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve
      only the resources changed since the last request. Sync requests that specify `sync_token` have an
-     additional rate limit. When syncing, all other parameters provided to `ListOtherContacts` must
+     additional rate limit. When the `syncToken` is specified, resources deleted since the last sync
+     will be returned as a person with
+     [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
+     true. When the `syncToken` is specified, all other parameters provided to `ListOtherContacts` must
      match the call that provided the sync token.
        */
       public java.lang.String getSyncToken() {
@@ -1647,7 +1653,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
        * retrieve only the resources changed since the last request. Sync requests that specify
-       * `sync_token` have an additional rate limit. When syncing, all other parameters provided to
+       * `sync_token` have an additional rate limit. When the `syncToken` is specified, resources
+       * deleted since the last sync will be returned as a person with
+       * [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted)
+       * set to true. When the `syncToken` is specified, all other parameters provided to
        * `ListOtherContacts` must match the call that provided the sync token.
        */
       public List setSyncToken(java.lang.String syncToken) {
@@ -4637,19 +4646,24 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. When syncing, all other
-         * parameters provided to `ListConnections` except `page_size` and `page_token` must match
-         * the initial call that provided the sync token. Sync tokens expire after seven days, after
-         * which a full sync request without a `sync_token` should be made.
+         * retrieve only the resources changed since the last request. When the `syncToken` is
+         * specified, resources deleted since the last sync will be returned as a person with [`Pers
+         * onMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set
+         * to true. When the `syncToken` is specified, all other parameters provided to
+         * `ListConnections` except `page_size` and `page_token` must match the initial call that
+         * provided the sync token. Sync tokens expire after seven days, after which a full sync
+         * request without a `sync_token` should be made.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
         /** Optional. A sync token, received from a previous `ListConnections` call. Provide this to retrieve
-       only the resources changed since the last request. When syncing, all other parameters provided to
-       `ListConnections` except `page_size` and `page_token` must match the initial call that provided the
-       sync token. Sync tokens expire after seven days, after which a full sync request without a
-       `sync_token` should be made.
+       only the resources changed since the last request. When the `syncToken` is specified, resources
+       deleted since the last sync will be returned as a person with
+       [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
+       true. When the `syncToken` is specified, all other parameters provided to `ListConnections` except
+       `page_size` and `page_token` must match the initial call that provided the sync token. Sync tokens
+       expire after seven days, after which a full sync request without a `sync_token` should be made.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
@@ -4657,10 +4671,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. When syncing, all other
-         * parameters provided to `ListConnections` except `page_size` and `page_token` must match
-         * the initial call that provided the sync token. Sync tokens expire after seven days, after
-         * which a full sync request without a `sync_token` should be made.
+         * retrieve only the resources changed since the last request. When the `syncToken` is
+         * specified, resources deleted since the last sync will be returned as a person with [`Pers
+         * onMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set
+         * to true. When the `syncToken` is specified, all other parameters provided to
+         * `ListConnections` except `page_size` and `page_token` must match the initial call that
+         * provided the sync token. Sync tokens expire after seven days, after which a full sync
+         * request without a `sync_token` should be made.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

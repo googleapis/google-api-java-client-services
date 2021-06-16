@@ -31,7 +31,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
 
   /**
    * The map from roles to their included permission matching the permission query (e.g. containing
-   * `policy.role.permissions:`). A sample role string: "roles/compute.instanceAdmin". The roles can
+   * `policy.role.permissions:`). Example role string: "roles/compute.instanceAdmin". The roles can
    * also be found in the returned `policy` bindings. Note that the map is populated only if
    * requesting with a permission query.
    * The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
 
   /**
    * The map from roles to their included permission matching the permission query (e.g. containing
-   * `policy.role.permissions:`). A sample role string: "roles/compute.instanceAdmin". The roles can
+   * `policy.role.permissions:`). Example role string: "roles/compute.instanceAdmin". The roles can
    * also be found in the returned `policy` bindings. Note that the map is populated only if
    * requesting with a permission query.
    * @return value or {@code null} for none
@@ -52,7 +52,7 @@ public final class Explanation extends com.google.api.client.json.GenericJson {
 
   /**
    * The map from roles to their included permission matching the permission query (e.g. containing
-   * `policy.role.permissions:`). A sample role string: "roles/compute.instanceAdmin". The roles can
+   * `policy.role.permissions:`). Example role string: "roles/compute.instanceAdmin". The roles can
    * also be found in the returned `policy` bindings. Note that the map is populated only if
    * requesting with a permission query.
    * @param matchedPermissions matchedPermissions or {@code null} for none

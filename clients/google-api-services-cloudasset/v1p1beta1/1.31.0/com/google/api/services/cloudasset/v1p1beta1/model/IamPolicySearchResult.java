@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1p1beta1.model;
 
 /**
- * The result for a IAM Policy search.
+ * The result for an IAM policy search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,28 +30,29 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class IamPolicySearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Explanation about the IAM policy search result. It contains additional information that
+   * explains why the search result matches the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Explanation explanation;
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * The IAM policy attached to the specified resource. Note that the original IAM policy can
    * contain multiple bindings. This only contains the bindings that match the given query. For
-   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
-   * bindings.
+   * queries that don't contain a constraint on policies (e.g. an empty query), this contains all
+   * the bindings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Policy policy;
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
-   * `projects/{project_number}`. If an IAM policy is set on a resource (like VM instance, Cloud
-   * Storage bucket), the project field will indicate the project that contains the resource. If an
-   * IAM policy is set on a folder or orgnization, the project field will be empty.
+   * The project that the associated Google Cloud resource belongs to, in the form of
+   * `projects/{project_number}`. If an IAM policy is set on a resource -- such as a Compute Engine
+   * instance or a Cloud Storage bucket -- the project field will indicate the project that contains
+   * the resource. If an IAM policy is set on a folder or orgnization, the project field will be
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +68,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Explanation about the IAM policy search result. It contains additional information that
+   * explains why the search result matches the query.
    * @return value or {@code null} for none
    */
   public Explanation getExplanation() {
@@ -76,8 +77,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Explanation about the IAM policy search result. It contains additional information that
+   * explains why the search result matches the query.
    * @param explanation explanation or {@code null} for none
    */
   public IamPolicySearchResult setExplanation(Explanation explanation) {
@@ -86,10 +87,10 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * The IAM policy attached to the specified resource. Note that the original IAM policy can
    * contain multiple bindings. This only contains the bindings that match the given query. For
-   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
-   * bindings.
+   * queries that don't contain a constraint on policies (e.g. an empty query), this contains all
+   * the bindings.
    * @return value or {@code null} for none
    */
   public Policy getPolicy() {
@@ -97,10 +98,10 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
+   * The IAM policy attached to the specified resource. Note that the original IAM policy can
    * contain multiple bindings. This only contains the bindings that match the given query. For
-   * queries that don't contain a constrain on policies (e.g. an empty query), this contains all the
-   * bindings.
+   * queries that don't contain a constraint on policies (e.g. an empty query), this contains all
+   * the bindings.
    * @param policy policy or {@code null} for none
    */
   public IamPolicySearchResult setPolicy(Policy policy) {
@@ -109,10 +110,11 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
-   * `projects/{project_number}`. If an IAM policy is set on a resource (like VM instance, Cloud
-   * Storage bucket), the project field will indicate the project that contains the resource. If an
-   * IAM policy is set on a folder or orgnization, the project field will be empty.
+   * The project that the associated Google Cloud resource belongs to, in the form of
+   * `projects/{project_number}`. If an IAM policy is set on a resource -- such as a Compute Engine
+   * instance or a Cloud Storage bucket -- the project field will indicate the project that contains
+   * the resource. If an IAM policy is set on a folder or orgnization, the project field will be
+   * empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -120,10 +122,11 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
-   * `projects/{project_number}`. If an IAM policy is set on a resource (like VM instance, Cloud
-   * Storage bucket), the project field will indicate the project that contains the resource. If an
-   * IAM policy is set on a folder or orgnization, the project field will be empty.
+   * The project that the associated Google Cloud resource belongs to, in the form of
+   * `projects/{project_number}`. If an IAM policy is set on a resource -- such as a Compute Engine
+   * instance or a Cloud Storage bucket -- the project field will indicate the project that contains
+   * the resource. If an IAM policy is set on a folder or orgnization, the project field will be
+   * empty.
    * @param project project or {@code null} for none
    */
   public IamPolicySearchResult setProject(java.lang.String project) {

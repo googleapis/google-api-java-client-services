@@ -136,6 +136,15 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private String updateTime;
 
   /**
+   * Optional. Details about the previous subscription that this new subscription
+   * upgrades/downgrades from. Only populated if this subscription is an upgrade/downgrade from
+   * another subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails upgradeDowngradeDetails;
+
+  /**
    * Output only. Describes the details of a cancelled subscription. Only applicable to subscription
    * of state `STATE_CANCELLED`.
    * @return value or {@code null} for none
@@ -381,6 +390,27 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Details about the previous subscription that this new subscription
+   * upgrades/downgrades from. Only populated if this subscription is an upgrade/downgrade from
+   * another subscription.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails getUpgradeDowngradeDetails() {
+    return upgradeDowngradeDetails;
+  }
+
+  /**
+   * Optional. Details about the previous subscription that this new subscription
+   * upgrades/downgrades from. Only populated if this subscription is an upgrade/downgrade from
+   * another subscription.
+   * @param upgradeDowngradeDetails upgradeDowngradeDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setUpgradeDowngradeDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails upgradeDowngradeDetails) {
+    this.upgradeDowngradeDetails = upgradeDowngradeDetails;
     return this;
   }
 

@@ -78,7 +78,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * insensitive match and `EMPTY([field_name])` to filter on the existence of a key. Boolean
    * expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND B AND
    * C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the expression.
-   * The expression must be < 6000 bytes in length. Sample Query: `(LOWER(driving_license)="class
+   * The expression must be < 10000 bytes in length. Sample Query: `(LOWER(driving_license)="class
    * \"a\"" OR EMPTY(driving_license)) AND driving_years > 10`
    * The value may be {@code null}.
    */
@@ -267,7 +267,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * insensitive match and `EMPTY([field_name])` to filter on the existence of a key. Boolean
    * expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND B AND
    * C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the expression.
-   * The expression must be < 6000 bytes in length. Sample Query: `(LOWER(driving_license)="class
+   * The expression must be < 10000 bytes in length. Sample Query: `(LOWER(driving_license)="class
    * \"a\"" OR EMPTY(driving_license)) AND driving_years > 10`
    * @return value or {@code null} for none
    */
@@ -284,7 +284,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * insensitive match and `EMPTY([field_name])` to filter on the existence of a key. Boolean
    * expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND B AND
    * C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the expression.
-   * The expression must be < 6000 bytes in length. Sample Query: `(LOWER(driving_license)="class
+   * The expression must be < 10000 bytes in length. Sample Query: `(LOWER(driving_license)="class
    * \"a\"" OR EMPTY(driving_license)) AND driving_years > 10`
    * @param customAttributeFilter customAttributeFilter or {@code null} for none
    */

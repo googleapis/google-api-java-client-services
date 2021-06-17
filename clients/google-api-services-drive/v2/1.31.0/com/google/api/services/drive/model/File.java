@@ -300,6 +300,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime lastViewedByMeDate;
 
   /**
+   * Contains details about the link URLs that clients are using to refer to this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinkShareMetadata linkShareMetadata;
+
+  /**
    * Deprecated.
    * The value may be {@code null}.
    */
@@ -416,6 +423,13 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quotaBytesUsed;
+
+  /**
+   * A key needed to access the item via a shared link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceKey;
 
   /**
    * A link back to this file.
@@ -1203,6 +1217,23 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Contains details about the link URLs that clients are using to refer to this item.
+   * @return value or {@code null} for none
+   */
+  public LinkShareMetadata getLinkShareMetadata() {
+    return linkShareMetadata;
+  }
+
+  /**
+   * Contains details about the link URLs that clients are using to refer to this item.
+   * @param linkShareMetadata linkShareMetadata or {@code null} for none
+   */
+  public File setLinkShareMetadata(LinkShareMetadata linkShareMetadata) {
+    this.linkShareMetadata = linkShareMetadata;
+    return this;
+  }
+
+  /**
    * Deprecated.
    * @return value or {@code null} for none
    */
@@ -1480,6 +1511,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setQuotaBytesUsed(java.lang.Long quotaBytesUsed) {
     this.quotaBytesUsed = quotaBytesUsed;
+    return this;
+  }
+
+  /**
+   * A key needed to access the item via a shared link.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceKey() {
+    return resourceKey;
+  }
+
+  /**
+   * A key needed to access the item via a shared link.
+   * @param resourceKey resourceKey or {@code null} for none
+   */
+  public File setResourceKey(java.lang.String resourceKey) {
+    this.resourceKey = resourceKey;
     return this;
   }
 
@@ -1903,6 +1951,13 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeRestrictedDownload;
 
     /**
+     * Whether the current user can change the securityUpdateEnabled field on link share metadata.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canChangeSecurityUpdateEnabled;
+
+    /**
      * Whether the current user can comment on this file.
      * The value may be {@code null}.
      */
@@ -2213,6 +2268,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanChangeRestrictedDownload(java.lang.Boolean canChangeRestrictedDownload) {
       this.canChangeRestrictedDownload = canChangeRestrictedDownload;
+      return this;
+    }
+
+    /**
+     * Whether the current user can change the securityUpdateEnabled field on link share metadata.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanChangeSecurityUpdateEnabled() {
+      return canChangeSecurityUpdateEnabled;
+    }
+
+    /**
+     * Whether the current user can change the securityUpdateEnabled field on link share metadata.
+     * @param canChangeSecurityUpdateEnabled canChangeSecurityUpdateEnabled or {@code null} for none
+     */
+    public Capabilities setCanChangeSecurityUpdateEnabled(java.lang.Boolean canChangeSecurityUpdateEnabled) {
+      this.canChangeSecurityUpdateEnabled = canChangeSecurityUpdateEnabled;
       return this;
     }
 
@@ -3582,6 +3654,71 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Contains details about the link URLs that clients are using to refer to this item.
+   */
+  public static final class LinkShareMetadata extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Whether the file is eligible for security update.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean securityUpdateEligible;
+
+    /**
+     * Whether the security update is enabled for this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean securityUpdateEnabled;
+
+    /**
+     * Whether the file is eligible for security update.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getSecurityUpdateEligible() {
+      return securityUpdateEligible;
+    }
+
+    /**
+     * Whether the file is eligible for security update.
+     * @param securityUpdateEligible securityUpdateEligible or {@code null} for none
+     */
+    public LinkShareMetadata setSecurityUpdateEligible(java.lang.Boolean securityUpdateEligible) {
+      this.securityUpdateEligible = securityUpdateEligible;
+      return this;
+    }
+
+    /**
+     * Whether the security update is enabled for this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getSecurityUpdateEnabled() {
+      return securityUpdateEnabled;
+    }
+
+    /**
+     * Whether the security update is enabled for this file.
+     * @param securityUpdateEnabled securityUpdateEnabled or {@code null} for none
+     */
+    public LinkShareMetadata setSecurityUpdateEnabled(java.lang.Boolean securityUpdateEnabled) {
+      this.securityUpdateEnabled = securityUpdateEnabled;
+      return this;
+    }
+
+    @Override
+    public LinkShareMetadata set(String fieldName, Object value) {
+      return (LinkShareMetadata) super.set(fieldName, value);
+    }
+
+    @Override
+    public LinkShareMetadata clone() {
+      return (LinkShareMetadata) super.clone();
+    }
+
+  }
+
+  /**
    * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
    * application/vnd.google-apps.shortcut.
    */
@@ -3601,6 +3738,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.String targetMimeType;
+
+    /**
+     * The ResourceKey for the target file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String targetResourceKey;
 
     /**
      * The ID of the file that this shortcut points to.
@@ -3635,6 +3779,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public ShortcutDetails setTargetMimeType(java.lang.String targetMimeType) {
       this.targetMimeType = targetMimeType;
+      return this;
+    }
+
+    /**
+     * The ResourceKey for the target file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTargetResourceKey() {
+      return targetResourceKey;
+    }
+
+    /**
+     * The ResourceKey for the target file.
+     * @param targetResourceKey targetResourceKey or {@code null} for none
+     */
+    public ShortcutDetails setTargetResourceKey(java.lang.String targetResourceKey) {
+      this.targetResourceKey = targetResourceKey;
       return this;
     }
 

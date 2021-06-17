@@ -664,7 +664,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Lists the field configuration and metadata for this database. Currently,
            * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
            * issue this query, call FirestoreAdmin.ListFields with the filter set to
-           * `indexConfig.usesAncestorConfig:false`.
+           * `indexConfig.usesAncestorConfig:false` .
            *
            * Create a request for the method "fields.list".
            *
@@ -692,7 +692,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Lists the field configuration and metadata for this database. Currently,
              * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
              * issue this query, call FirestoreAdmin.ListFields with the filter set to
-             * `indexConfig.usesAncestorConfig:false`.
+             * `indexConfig.usesAncestorConfig:false` .
              *
              * Create a request for the method "fields.list".
              *
@@ -811,15 +811,15 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             /**
              * The filter to apply to list results. Currently, FirestoreAdmin.ListFields only
              * supports listing fields that have been explicitly overridden. To issue this query,
-             * call FirestoreAdmin.ListFields with the filter set to
-             * `indexConfig.usesAncestorConfig:false`.
+             * call FirestoreAdmin.ListFields with a filter that includes
+             * `indexConfig.usesAncestorConfig:false` .
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** The filter to apply to list results. Currently, FirestoreAdmin.ListFields only supports listing
            fields that have been explicitly overridden. To issue this query, call FirestoreAdmin.ListFields
-           with the filter set to `indexConfig.usesAncestorConfig:false`.
+           with a filter that includes `indexConfig.usesAncestorConfig:false` .
              */
             public java.lang.String getFilter() {
               return filter;
@@ -828,8 +828,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             /**
              * The filter to apply to list results. Currently, FirestoreAdmin.ListFields only
              * supports listing fields that have been explicitly overridden. To issue this query,
-             * call FirestoreAdmin.ListFields with the filter set to
-             * `indexConfig.usesAncestorConfig:false`.
+             * call FirestoreAdmin.ListFields with a filter that includes
+             * `indexConfig.usesAncestorConfig:false` .
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

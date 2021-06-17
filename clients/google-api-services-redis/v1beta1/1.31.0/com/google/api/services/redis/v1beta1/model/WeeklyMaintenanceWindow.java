@@ -39,7 +39,7 @@ public final class WeeklyMaintenanceWindow extends com.google.api.client.json.Ge
   private java.lang.String day;
 
   /**
-   * Output only. Duration of the maintenance window. The current window is fixed at 3 hours.
+   * Output only. Duration of the maintenance window. The current window is fixed at 1 hour.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class WeeklyMaintenanceWindow extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Duration of the maintenance window. The current window is fixed at 3 hours.
+   * Output only. Duration of the maintenance window. The current window is fixed at 1 hour.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -78,7 +78,7 @@ public final class WeeklyMaintenanceWindow extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Duration of the maintenance window. The current window is fixed at 3 hours.
+   * Output only. Duration of the maintenance window. The current window is fixed at 1 hour.
    * @param duration duration or {@code null} for none
    */
   public WeeklyMaintenanceWindow setDuration(String duration) {

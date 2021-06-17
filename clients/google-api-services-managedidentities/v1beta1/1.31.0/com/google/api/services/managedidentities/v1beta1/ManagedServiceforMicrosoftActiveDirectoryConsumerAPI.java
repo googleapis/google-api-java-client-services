@@ -1483,6 +1483,155 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * Gets the domain ldaps settings.
+           *
+           * Create a request for the method "domains.getLdapssettings".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link GetLdapssettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @return the request
+           */
+          public GetLdapssettings getLdapssettings(java.lang.String name) throws java.io.IOException {
+            GetLdapssettings result = new GetLdapssettings(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetLdapssettings extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings> {
+
+            private static final String REST_PATH = "v1beta1/{+name}/ldapssettings";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Gets the domain ldaps settings.
+             *
+             * Create a request for the method "domains.getLdapssettings".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link GetLdapssettings#execute()} method to invoke the
+             * remote operation. <p> {@link GetLdapssettings#initialize(com.google.api.client.googleapis.servi
+             * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @since 1.13
+             */
+            protected GetLdapssettings(java.lang.String name) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetLdapssettings set$Xgafv(java.lang.String $Xgafv) {
+              return (GetLdapssettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetLdapssettings setAccessToken(java.lang.String accessToken) {
+              return (GetLdapssettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetLdapssettings setAlt(java.lang.String alt) {
+              return (GetLdapssettings) super.setAlt(alt);
+            }
+
+            @Override
+            public GetLdapssettings setCallback(java.lang.String callback) {
+              return (GetLdapssettings) super.setCallback(callback);
+            }
+
+            @Override
+            public GetLdapssettings setFields(java.lang.String fields) {
+              return (GetLdapssettings) super.setFields(fields);
+            }
+
+            @Override
+            public GetLdapssettings setKey(java.lang.String key) {
+              return (GetLdapssettings) super.setKey(key);
+            }
+
+            @Override
+            public GetLdapssettings setOauthToken(java.lang.String oauthToken) {
+              return (GetLdapssettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetLdapssettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetLdapssettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetLdapssettings setQuotaUser(java.lang.String quotaUser) {
+              return (GetLdapssettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetLdapssettings setUploadType(java.lang.String uploadType) {
+              return (GetLdapssettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetLdapssettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetLdapssettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public GetLdapssettings setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetLdapssettings set(String parameterName, Object value) {
+              return (GetLdapssettings) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists domains in a project.
            *
            * Create a request for the method "domains.list".
@@ -2464,6 +2613,173 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             @Override
             public TestIamPermissions set(String parameterName, Object value) {
               return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Patches a single ldaps settings.
+           *
+           * Create a request for the method "domains.updateLdapssettings".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link UpdateLdapssettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The resource name of the LDAPS settings. Uses the form:
+           *        `projects/{project}/locations/{location}/domains/{domain}`.
+           * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings}
+           * @return the request
+           */
+          public UpdateLdapssettings updateLdapssettings(java.lang.String name, com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings content) throws java.io.IOException {
+            UpdateLdapssettings result = new UpdateLdapssettings(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateLdapssettings extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}/ldapssettings";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Patches a single ldaps settings.
+             *
+             * Create a request for the method "domains.updateLdapssettings".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link UpdateLdapssettings#execute()} method to invoke the
+             * remote operation. <p> {@link UpdateLdapssettings#initialize(com.google.api.client.googleapis.se
+             * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The resource name of the LDAPS settings. Uses the form:
+           *        `projects/{project}/locations/{location}/domains/{domain}`.
+             * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings}
+             * @since 1.13
+             */
+            protected UpdateLdapssettings(java.lang.String name, com.google.api.services.managedidentities.v1beta1.model.LDAPSSettings content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "PATCH", REST_PATH, content, com.google.api.services.managedidentities.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public UpdateLdapssettings set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateLdapssettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateLdapssettings setAccessToken(java.lang.String accessToken) {
+              return (UpdateLdapssettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateLdapssettings setAlt(java.lang.String alt) {
+              return (UpdateLdapssettings) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateLdapssettings setCallback(java.lang.String callback) {
+              return (UpdateLdapssettings) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateLdapssettings setFields(java.lang.String fields) {
+              return (UpdateLdapssettings) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateLdapssettings setKey(java.lang.String key) {
+              return (UpdateLdapssettings) super.setKey(key);
+            }
+
+            @Override
+            public UpdateLdapssettings setOauthToken(java.lang.String oauthToken) {
+              return (UpdateLdapssettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateLdapssettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateLdapssettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateLdapssettings setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateLdapssettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateLdapssettings setUploadType(java.lang.String uploadType) {
+              return (UpdateLdapssettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateLdapssettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateLdapssettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the LDAPS settings. Uses the form:
+             * `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the LDAPS settings. Uses the form:
+           `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the LDAPS settings. Uses the form:
+             * `projects/{project}/locations/{location}/domains/{domain}`.
+             */
+            public UpdateLdapssettings setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
+           `FieldMask` definition, see https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public UpdateLdapssettings setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateLdapssettings set(String parameterName, Object value) {
+              return (UpdateLdapssettings) super.set(parameterName, value);
             }
           }
           /**
@@ -3685,6 +4001,448 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
         public class Peerings {
 
           /**
+           * Creates a Peering for Managed AD instance.
+           *
+           * Create a request for the method "peerings.create".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource project name and location using the form:
+           *        `projects/{project_id}/locations/global`
+           * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.Peering}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.managedidentities.v1beta1.model.Peering content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/peerings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
+
+            /**
+             * Creates a Peering for Managed AD instance.
+             *
+             * Create a request for the method "peerings.create".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource project name and location using the form:
+           *        `projects/{project_id}/locations/global`
+             * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.Peering}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.managedidentities.v1beta1.model.Peering content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource project name and location using the form:
+             * `projects/{project_id}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource project name and location using the form:
+           `projects/{project_id}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Resource project name and location using the form:
+             * `projects/{project_id}/locations/global`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Peering Id, unique name to identify peering. */
+            @com.google.api.client.util.Key
+            private java.lang.String peeringId;
+
+            /** Required. Peering Id, unique name to identify peering.
+             */
+            public java.lang.String getPeeringId() {
+              return peeringId;
+            }
+
+            /** Required. Peering Id, unique name to identify peering. */
+            public Create setPeeringId(java.lang.String peeringId) {
+              this.peeringId = peeringId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes identified Peering.
+           *
+           * Create a request for the method "peerings.delete".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Peering resource name using the form:
+           *        `projects/{project_id}/locations/global/peerings/{peering_id}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/peerings/[^/]+$");
+
+            /**
+             * Deletes identified Peering.
+             *
+             * Create a request for the method "peerings.delete".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Peering resource name using the form:
+           *        `projects/{project_id}/locations/global/peerings/{peering_id}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "DELETE", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Peering resource name using the form:
+             * `projects/{project_id}/locations/global/peerings/{peering_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Peering resource name using the form:
+           `projects/{project_id}/locations/global/peerings/{peering_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Peering resource name using the form:
+             * `projects/{project_id}/locations/global/peerings/{peering_id}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single Peering.
+           *
+           * Create a request for the method "peerings.get".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Peering resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{peering_id}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.Peering> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/peerings/[^/]+$");
+
+            /**
+             * Gets details of a single Peering.
+             *
+             * Create a request for the method "peerings.get".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Peering resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{peering_id}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.Peering.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Peering resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{peering_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Peering resource name using the form:
+           `projects/{project_id}/locations/global/domains/{peering_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Peering resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{peering_id}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -3867,6 +4625,414 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Peerings in a given project.
+           *
+           * Create a request for the method "peerings.list".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the domain location using the form:
+           *        `projects/{project_id}/locations/global`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.ListPeeringsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/peerings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
+
+            /**
+             * Lists Peerings in a given project.
+             *
+             * Create a request for the method "peerings.list".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the domain location using the form:
+           *        `projects/{project_id}/locations/global`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.ListPeeringsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the domain location using the form:
+             * `projects/{project_id}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the domain location using the form:
+           `projects/{project_id}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the domain location using the form:
+             * `projects/{project_id}/locations/global`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter specifying constraints of a list operation. For example,
+             * `peering.authoized_network ="/projects/myprojectid"`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter specifying constraints of a list operation. For example,
+           `peering.authoized_network ="/projects/myprojectid"`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter specifying constraints of a list operation. For example,
+             * `peering.authoized_network ="/projects/myprojectid"`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specifies the ordering of results following syntax at
+             * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specifies the ordering of results following syntax at
+           https://cloud.google.com/apis/design/design_patterns#sorting_order.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specifies the ordering of results following syntax at
+             * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 1000 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's next_page_token to
+             * determine if there are more instances left to be queried.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. If not specified, a default value of 1000 will be
+           used by the service. Regardless of the page_size value, the response may include a partial list and
+           a caller should only rely on response's next_page_token to determine if there are more instances
+           left to be queried.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 1000 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's next_page_token to
+             * determine if there are more instances left to be queried.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous List request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the labels for specified Peering.
+           *
+           * Create a request for the method "peerings.patch".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Unique name of the peering in this scope including projects and location using the
+           *        form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
+           * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.Peering}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.managedidentities.v1beta1.model.Peering content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/peerings/[^/]+$");
+
+            /**
+             * Updates the labels for specified Peering.
+             *
+             * Create a request for the method "peerings.patch".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Unique name of the peering in this scope including projects and location using the
+           *        form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
+             * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.Peering}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.managedidentities.v1beta1.model.Peering content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "PATCH", REST_PATH, content, com.google.api.services.managedidentities.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Unique name of the peering in this scope including projects and location
+             * using the form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Unique name of the peering in this scope including projects and location using the
+           form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Unique name of the peering in this scope including projects and location
+             * using the form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/peerings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * The elements of the repeated paths field may only include these fields from Peering:
+             * * `labels`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
+           of the repeated paths field may only include these fields from Peering: * `labels`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             * The elements of the repeated paths field may only include these fields from Peering:
+             * * `labels`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
           /**

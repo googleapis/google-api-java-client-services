@@ -4405,17 +4405,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * insensitive. If multiple fields are included in a filter query, the query will return
        * results that match any of the fields. Some eligible fields for filtering are: + `name` +
        * `id` + `labels.` (where *key* is the name of a label) + `parent.type` + `parent.id` +
-       * `lifecycleState` Some examples of filter strings: | Filter | Description |
+       * `lifecycleState` Some examples of filter queries: | Query | Description |
        * |------------------|-----------------------------------------------------| | name:how* |
        * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` | : : has the value `red` and its : : : label`size` has the value : : :
-       * `big`. : | lifecycleState:DELETE_REQUESTED | Only show projects that are | : : pending
-       * deletion. : If no filter is specified, the call will return projects for which the user has
-       * the `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg.,
-       * what projects are directly in a Folder), the caller must have the
+       * label `color` has the value `red` and its label `size` has the value `big`.| |
+       * lifecycleState:DELETE_REQUESTED | Only show projects that are pending deletion.| If no
+       * filter is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
+       * projects are directly in a Folder), the caller must have the
        * `resourcemanager.projects.list` permission on the parent and the filter must contain both a
        * `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123").
        * In this case an alternate search index is used which provides more consistent results.
@@ -4427,19 +4427,19 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      insensitive. If multiple fields are included in a filter query, the query will return results that
      match any of the fields. Some eligible fields for filtering are: + `name` + `id` + `labels.` (where
      *key* is the name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some examples of
-     filter strings: | Filter | Description |
+     filter queries: | Query | Description |
      |------------------|-----------------------------------------------------| | name:how* | The
      project's name starts with "how". | | name:Howl | The project's name is `Howl` or `howl`. | |
      name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | | labels.color:* | The
      project has the label `color`. | | labels.color:red | The project's label `color` has the value
-     `red`. | | labels.color:red labels.size:big | The project's label `color` | : : has the value `red`
-     and its : : : label`size` has the value : : : `big`. : | lifecycleState:DELETE_REQUESTED | Only
-     show projects that are | : : pending deletion. : If no filter is specified, the call will return
-     projects for which the user has the `resourcemanager.projects.get` permission. NOTE: To perform a
-     by-parent query (eg., what projects are directly in a Folder), the caller must have the
-     `resourcemanager.projects.list` permission on the parent and the filter must contain both a
-     `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123"). In this
-     case an alternate search index is used which provides more consistent results.
+     `red`. | | labels.color:red labels.size:big | The project's label `color` has the value `red` and
+     its label `size` has the value `big`.| | lifecycleState:DELETE_REQUESTED | Only show projects that
+     are pending deletion.| If no filter is specified, the call will return projects for which the user
+     has the `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
+     projects are directly in a Folder), the caller must have the `resourcemanager.projects.list`
+     permission on the parent and the filter must contain both a `parent.type` and a `parent.id`
+     restriction (example: "parent.type:folder parent.id:123"). In this case an alternate search index
+     is used which provides more consistent results.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -4450,17 +4450,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * insensitive. If multiple fields are included in a filter query, the query will return
        * results that match any of the fields. Some eligible fields for filtering are: + `name` +
        * `id` + `labels.` (where *key* is the name of a label) + `parent.type` + `parent.id` +
-       * `lifecycleState` Some examples of filter strings: | Filter | Description |
+       * `lifecycleState` Some examples of filter queries: | Query | Description |
        * |------------------|-----------------------------------------------------| | name:how* |
        * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
        * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
        * label `color` has the value `red`. | | labels.color:red labels.size:big | The project's
-       * label `color` | : : has the value `red` and its : : : label`size` has the value : : :
-       * `big`. : | lifecycleState:DELETE_REQUESTED | Only show projects that are | : : pending
-       * deletion. : If no filter is specified, the call will return projects for which the user has
-       * the `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg.,
-       * what projects are directly in a Folder), the caller must have the
+       * label `color` has the value `red` and its label `size` has the value `big`.| |
+       * lifecycleState:DELETE_REQUESTED | Only show projects that are pending deletion.| If no
+       * filter is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
+       * projects are directly in a Folder), the caller must have the
        * `resourcemanager.projects.list` permission on the parent and the filter must contain both a
        * `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123").
        * In this case an alternate search index is used which provides more consistent results.

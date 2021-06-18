@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-transcoder</artifactId>
-  <version>v1beta1-rev20210405-1.31.0</version>
-  <name>Transcoder API v1beta1-rev20210405-1.31.0</name>
+  <version>v1beta1-rev20210405-1.31.5</version>
+  <name>Transcoder API v1beta1-rev20210405-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

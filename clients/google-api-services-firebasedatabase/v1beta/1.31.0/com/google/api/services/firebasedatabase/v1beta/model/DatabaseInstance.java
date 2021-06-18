@@ -40,8 +40,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified resource name of the database instance, in the form: `projects/{project-
-   * number}/locations/{location-id}/instances/{database-id}`. Currently the only supported location
-   * is 'us-central1'.
+   * number}/locations/{location-id}/instances/{database-id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +88,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified resource name of the database instance, in the form: `projects/{project-
-   * number}/locations/{location-id}/instances/{database-id}`. Currently the only supported location
-   * is 'us-central1'.
+   * number}/locations/{location-id}/instances/{database-id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -99,8 +97,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The fully qualified resource name of the database instance, in the form: `projects/{project-
-   * number}/locations/{location-id}/instances/{database-id}`. Currently the only supported location
-   * is 'us-central1'.
+   * number}/locations/{location-id}/instances/{database-id}`.
    * @param name name or {@code null} for none
    */
   public DatabaseInstance setName(java.lang.String name) {

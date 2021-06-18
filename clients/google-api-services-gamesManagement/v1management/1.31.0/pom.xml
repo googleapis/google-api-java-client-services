@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gamesManagement</artifactId>
-  <version>v1management-rev20200811-1.31.0</version>
-  <name>Google Play Game Management v1management-rev20200811-1.31.0</name>
+  <version>v1management-rev20200811-1.31.5</version>
+  <name>Google Play Game Management v1management-rev20200811-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

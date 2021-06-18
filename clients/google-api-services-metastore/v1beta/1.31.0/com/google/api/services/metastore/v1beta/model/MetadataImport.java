@@ -52,6 +52,13 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Output only. The time when the metadata import finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Immutable. The relative resource name of the metadata import, of the form:projects/{project_num
    * ber}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
    * The value may be {@code null}.
@@ -121,6 +128,23 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
    */
   public MetadataImport setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the metadata import finished.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The time when the metadata import finished.
+   * @param endTime endTime or {@code null} for none
+   */
+  public MetadataImport setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 

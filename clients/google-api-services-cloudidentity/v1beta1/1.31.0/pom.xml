@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudidentity</artifactId>
-  <version>v1beta1-rev20210428-1.31.0</version>
-  <name>Cloud Identity API v1beta1-rev20210428-1.31.0</name>
+  <version>v1beta1-rev20210614-1.31.5</version>
+  <name>Cloud Identity API v1beta1-rev20210614-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

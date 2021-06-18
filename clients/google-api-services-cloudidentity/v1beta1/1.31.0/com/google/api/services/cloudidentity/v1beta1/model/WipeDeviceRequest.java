@@ -29,6 +29,39 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class WipeDeviceRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean removeResetLock;
+
+  /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemoveResetLock() {
+    return removeResetLock;
+  }
+
+  /**
+   * Optional. Specifies if a user is able to factory reset a device after a Device Wipe. On iOS,
+   * this is called "Activation Lock", while on Android, this is known as "Factory Reset
+   * Protection". If true, this protection will be removed from the device, so that a user can
+   * successfully factory reset. If false, the setting is untouched on the device.
+   * @param removeResetLock removeResetLock or {@code null} for none
+   */
+  public WipeDeviceRequest setRemoveResetLock(java.lang.Boolean removeResetLock) {
+    this.removeResetLock = removeResetLock;
+    return this;
+  }
+
   @Override
   public WipeDeviceRequest set(String fieldName, Object value) {
     return (WipeDeviceRequest) super.set(fieldName, value);

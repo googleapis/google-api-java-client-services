@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudasset</artifactId>
-      <version>v1p5beta1-rev20210518-1.31.0</version>
+      <version>v1p5beta1-rev20210518-1.31.5</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudasset:v1p5beta1-rev20210518-1.31.0'
+  compile 'com.google.apis:google-api-services-cloudasset:v1p5beta1-rev20210518-1.31.5'
 }
 ```
 

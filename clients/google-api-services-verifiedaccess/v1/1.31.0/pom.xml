@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-verifiedaccess</artifactId>
-  <version>v1-rev20200828-1.31.0</version>
-  <name>Chrome Verified Access API v1-rev20200828-1.31.0</name>
+  <version>v1-rev20200828-1.31.5</version>
+  <name>Chrome Verified Access API v1-rev20200828-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

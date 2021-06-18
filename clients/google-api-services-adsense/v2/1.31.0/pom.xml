@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-adsense</artifactId>
-  <version>v2-rev20210414-1.31.0</version>
-  <name>AdSense Management API v2-rev20210414-1.31.0</name>
+  <version>v2-rev20210414-1.31.5</version>
+  <name>AdSense Management API v2-rev20210414-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

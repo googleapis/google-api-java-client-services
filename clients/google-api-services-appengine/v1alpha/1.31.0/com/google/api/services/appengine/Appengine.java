@@ -48,7 +48,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.0 of the App Engine Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.31.5 of the App Engine Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1939,17 +1939,17 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Standard field mask for the set of fields to be updated. */
+        /** Required. Standard field mask for the set of fields to be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Standard field mask for the set of fields to be updated.
+        /** Required. Standard field mask for the set of fields to be updated.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Standard field mask for the set of fields to be updated. */
+        /** Required. Standard field mask for the set of fields to be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

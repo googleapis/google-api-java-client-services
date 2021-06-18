@@ -81,6 +81,17 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   private ServiceLevelIndicator serviceLevelIndicator;
 
   /**
+   * Labels which have been used to annotate the service-level objective. Label keys must start with
+   * a letter. Label keys and values may contain lowercase letters, numbers, underscores, and
+   * dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128
+   * bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic
+   * value, the empty string may be supplied for the label value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> userLabels;
+
+  /**
    * A calendar period, semantically "since the start of the current ". At this time, only DAY,
    * WEEK, FORTNIGHT, and MONTH are supported.
    * @return value or {@code null} for none
@@ -189,6 +200,31 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
    */
   public ServiceLevelObjective setServiceLevelIndicator(ServiceLevelIndicator serviceLevelIndicator) {
     this.serviceLevelIndicator = serviceLevelIndicator;
+    return this;
+  }
+
+  /**
+   * Labels which have been used to annotate the service-level objective. Label keys must start with
+   * a letter. Label keys and values may contain lowercase letters, numbers, underscores, and
+   * dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128
+   * bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic
+   * value, the empty string may be supplied for the label value.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getUserLabels() {
+    return userLabels;
+  }
+
+  /**
+   * Labels which have been used to annotate the service-level objective. Label keys must start with
+   * a letter. Label keys and values may contain lowercase letters, numbers, underscores, and
+   * dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128
+   * bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic
+   * value, the empty string may be supplied for the label value.
+   * @param userLabels userLabels or {@code null} for none
+   */
+  public ServiceLevelObjective setUserLabels(java.util.Map<String, java.lang.String> userLabels) {
+    this.userLabels = userLabels;
     return this;
   }
 

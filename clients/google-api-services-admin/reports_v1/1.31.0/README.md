@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-admin-reports</artifactId>
-      <version>reports_v1-rev20210413-1.31.0</version>
+      <version>reports_v1-rev20210413-1.31.5</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-admin-reports:reports_v1-rev20210413-1.31.0'
+  compile 'com.google.apis:google-api-services-admin-reports:reports_v1-rev20210413-1.31.5'
 }
 ```
 

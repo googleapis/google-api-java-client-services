@@ -48,7 +48,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.0 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.31.5 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1576,13 +1576,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * names * phoneNumbers
+       * * metadata * names * phoneNumbers
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
-     specified by separating them with commas. Valid values are: * emailAddresses * names * phoneNumbers
+     specified by separating them with commas. Valid values are: * emailAddresses * metadata * names *
+     phoneNumbers
        */
       public String getReadMask() {
         return readMask;
@@ -1591,7 +1592,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * names * phoneNumbers
+       * * metadata * names * phoneNumbers
        */
       public List setReadMask(String readMask) {
         this.readMask = readMask;
@@ -1830,13 +1831,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * names * phoneNumbers
+       * * metadata * names * phoneNumbers
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
-     specified by separating them with commas. Valid values are: * emailAddresses * names * phoneNumbers
+     specified by separating them with commas. Valid values are: * emailAddresses * metadata * names *
+     phoneNumbers
        */
       public String getReadMask() {
         return readMask;
@@ -1845,7 +1847,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * names * phoneNumbers
+       * * metadata * names * phoneNumbers
        */
       public Search setReadMask(String readMask) {
         this.readMask = readMask;

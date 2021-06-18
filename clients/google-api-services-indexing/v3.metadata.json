@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-indexing",
-    "version": "v3-rev20200804-1.31.0"
+    "version": "v3-rev20200804-1.31.5"
   }
 }

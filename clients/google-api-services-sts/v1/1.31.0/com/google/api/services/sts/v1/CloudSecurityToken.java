@@ -153,6 +153,107 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
   public class V1 {
 
     /**
+     * Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security Token
+     * Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
+     *
+     * Create a request for the method "v1.introspect".
+     *
+     * This request holds the parameters needed by the sts server.  After setting any optional
+     * parameters, call the {@link Introspect#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenRequest}
+     * @return the request
+     */
+    public Introspect introspect(com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenRequest content) throws java.io.IOException {
+      Introspect result = new Introspect(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Introspect extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenResponse> {
+
+      private static final String REST_PATH = "v1/introspect";
+
+      /**
+       * Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security
+       * Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
+       *
+       * Create a request for the method "v1.introspect".
+       *
+       * This request holds the parameters needed by the the sts server.  After setting any optional
+       * parameters, call the {@link Introspect#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Introspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenRequest}
+       * @since 1.13
+       */
+      protected Introspect(com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenRequest content) {
+        super(CloudSecurityToken.this, "POST", REST_PATH, content, com.google.api.services.sts.v1.model.GoogleIdentityStsV1IntrospectTokenResponse.class);
+      }
+
+      @Override
+      public Introspect set$Xgafv(java.lang.String $Xgafv) {
+        return (Introspect) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Introspect setAccessToken(java.lang.String accessToken) {
+        return (Introspect) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Introspect setAlt(java.lang.String alt) {
+        return (Introspect) super.setAlt(alt);
+      }
+
+      @Override
+      public Introspect setCallback(java.lang.String callback) {
+        return (Introspect) super.setCallback(callback);
+      }
+
+      @Override
+      public Introspect setFields(java.lang.String fields) {
+        return (Introspect) super.setFields(fields);
+      }
+
+      @Override
+      public Introspect setKey(java.lang.String key) {
+        return (Introspect) super.setKey(key);
+      }
+
+      @Override
+      public Introspect setOauthToken(java.lang.String oauthToken) {
+        return (Introspect) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Introspect setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Introspect) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Introspect setQuotaUser(java.lang.String quotaUser) {
+        return (Introspect) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Introspect setUploadType(java.lang.String uploadType) {
+        return (Introspect) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Introspect setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Introspect) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Introspect set(String parameterName, Object value) {
+        return (Introspect) super.set(parameterName, value);
+      }
+    }
+    /**
      * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
      * identity within a workload identity pool, or it applies a Credential Access Boundary to a Google
      * access token. When you call this method, do not send the `Authorization` HTTP header in the

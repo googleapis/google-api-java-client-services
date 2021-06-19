@@ -60,6 +60,13 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String package__;
 
   /**
+   * The type of package: os, maven, go, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageType;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,6 +146,23 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setPackage(java.lang.String package__) {
     this.package__ = package__;
+    return this;
+  }
+
+  /**
+   * The type of package: os, maven, go, etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageType() {
+    return packageType;
+  }
+
+  /**
+   * The type of package: os, maven, go, etc.
+   * @param packageType packageType or {@code null} for none
+   */
+  public PackageData setPackageType(java.lang.String packageType) {
+    this.packageType = packageType;
     return this;
   }
 

@@ -144,7 +144,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's email addresses.
+   * The person's email addresses. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * email addresses is limited to 100. If a Person has more email addresses the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +359,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's phone numbers.
+   * The person's phone numbers. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * phone numbers is limited to 100. If a Person has more phone numbers the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -592,7 +602,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's email addresses.
+   * The person's email addresses. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * email addresses is limited to 100. If a Person has more email addresses the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * @return value or {@code null} for none
    */
   public java.util.List<EmailAddress> getEmailAddresses() {
@@ -600,7 +615,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's email addresses.
+   * The person's email addresses. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * email addresses is limited to 100. If a Person has more email addresses the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * @param emailAddresses emailAddresses or {@code null} for none
    */
   public Person setEmailAddresses(java.util.List<EmailAddress> emailAddresses) {
@@ -883,7 +903,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's phone numbers.
+   * The person's phone numbers. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * phone numbers is limited to 100. If a Person has more phone numbers the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * @return value or {@code null} for none
    */
   public java.util.List<PhoneNumber> getPhoneNumbers() {
@@ -891,7 +916,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's phone numbers.
+   * The person's phone numbers. For
+   * [`connections.list`](/people/api/rest/v1/people.connections/list),
+   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list), and
+   * [`people.listDirectoryPeople`](/people/api/rest/v1/people/listDirectoryPeople) the number of
+   * phone numbers is limited to 100. If a Person has more phone numbers the entire set can be
+   * obtained by calling ['people.get'](/people/api/rest/v1/people/get).
    * @param phoneNumbers phoneNumbers or {@code null} for none
    */
   public Person setPhoneNumbers(java.util.List<PhoneNumber> phoneNumbers) {

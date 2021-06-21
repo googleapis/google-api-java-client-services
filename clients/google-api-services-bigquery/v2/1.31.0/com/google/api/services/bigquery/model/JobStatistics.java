@@ -136,7 +136,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SessionInfo sessionInfoTemplate;
+  private SessionInfo sessionInfo;
 
   /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
@@ -403,16 +403,16 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    * [Output-only] [Preview] Information of the session if this job is part of one.
    * @return value or {@code null} for none
    */
-  public SessionInfo getSessionInfoTemplate() {
-    return sessionInfoTemplate;
+  public SessionInfo getSessionInfo() {
+    return sessionInfo;
   }
 
   /**
    * [Output-only] [Preview] Information of the session if this job is part of one.
-   * @param sessionInfoTemplate sessionInfoTemplate or {@code null} for none
+   * @param sessionInfo sessionInfo or {@code null} for none
    */
-  public JobStatistics setSessionInfoTemplate(SessionInfo sessionInfoTemplate) {
-    this.sessionInfoTemplate = sessionInfoTemplate;
+  public JobStatistics setSessionInfo(SessionInfo sessionInfo) {
+    this.sessionInfo = sessionInfo;
     return this;
   }
 

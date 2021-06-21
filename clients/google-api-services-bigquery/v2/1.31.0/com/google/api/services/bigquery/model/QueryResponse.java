@@ -42,7 +42,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object dmlStats;
+  private DmlStatistics dmlStats;
 
   /**
    * [Output-only] The first errors or warnings encountered during the running of the job. The final
@@ -160,7 +160,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * UPDATE, DELETE or TRUNCATE.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getDmlStats() {
+  public DmlStatistics getDmlStats() {
     return dmlStats;
   }
 
@@ -169,7 +169,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * UPDATE, DELETE or TRUNCATE.
    * @param dmlStats dmlStats or {@code null} for none
    */
-  public QueryResponse setDmlStats(java.lang.Object dmlStats) {
+  public QueryResponse setDmlStats(DmlStatistics dmlStats) {
     this.dmlStats = dmlStats;
     return this;
   }

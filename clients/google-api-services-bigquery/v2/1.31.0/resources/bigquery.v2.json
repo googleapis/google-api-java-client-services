@@ -1683,7 +1683,7 @@
    }
   }
  },
- "revision": "20210529",
+ "revision": "20210611",
  "rootUrl": "https://bigquery.googleapis.com/",
  "schemas": {
   "AggregateClassificationMetrics": {
@@ -2856,6 +2856,27 @@
      },
      "description": "[Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.",
      "type": "object"
+    }
+   },
+   "type": "object"
+  },
+  "DmlStatistics": {
+   "id": "DmlStatistics",
+   "properties": {
+    "deletedRowCount": {
+     "description": "Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.",
+     "format": "int64",
+     "type": "string"
+    },
+    "insertedRowCount": {
+     "description": "Number of inserted Rows. Populated by DML INSERT and MERGE statements.",
+     "format": "int64",
+     "type": "string"
+    },
+    "updatedRowCount": {
+     "description": "Number of updated Rows. Populated by DML UPDATE and MERGE statements.",
+     "format": "int64",
+     "type": "string"
     }
    },
    "type": "object"
@@ -4060,7 +4081,7 @@
      "$ref": "ScriptStatistics",
      "description": "[Output-only] Statistics for a child job of a script."
     },
-    "sessionInfoTemplate": {
+    "sessionInfo": {
      "$ref": "SessionInfo",
      "description": "[Output-only] [Preview] Information of the session if this job is part of one."
     },
@@ -4128,8 +4149,8 @@
      "description": "[Output-only] The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries."
     },
     "dmlStats": {
-     "description": "[Output-only] Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.",
-     "type": "any"
+     "$ref": "DmlStatistics",
+     "description": "[Output-only] Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE."
     },
     "estimatedBytesProcessed": {
      "description": "[Output-only] The original estimate of bytes processed for the job.",
@@ -4891,8 +4912,8 @@
      "type": "boolean"
     },
     "dmlStats": {
-     "description": "[Output-only] Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.",
-     "type": "any"
+     "$ref": "DmlStatistics",
+     "description": "[Output-only] Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE."
     },
     "errors": {
      "description": "[Output-only] The first errors or warnings encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.",

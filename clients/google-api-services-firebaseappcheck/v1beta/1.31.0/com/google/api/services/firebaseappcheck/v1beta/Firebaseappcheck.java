@@ -347,6 +347,290 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
     public class Apps {
 
       /**
+       * Accepts a AppAttest Artifact and Assertion, and uses the developer's preconfigured auth token to
+       * verify the token with Apple. Returns an AttestationToken with the App ID as specified by the
+       * `app` field included as attested claims.
+       *
+       * Create a request for the method "apps.exchangeAppAttestAssertion".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeAppAttestAssertion#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
+       * @return the request
+       */
+      public ExchangeAppAttestAssertion exchangeAppAttestAssertion(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest content) throws java.io.IOException {
+        ExchangeAppAttestAssertion result = new ExchangeAppAttestAssertion(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExchangeAppAttestAssertion extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse> {
+
+        private static final String REST_PATH = "v1beta/{+app}:exchangeAppAttestAssertion";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Accepts a AppAttest Artifact and Assertion, and uses the developer's preconfigured auth token
+         * to verify the token with Apple. Returns an AttestationToken with the App ID as specified by the
+         * `app` field included as attested claims.
+         *
+         * Create a request for the method "apps.exchangeAppAttestAssertion".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link ExchangeAppAttestAssertion#execute()} method to invoke the
+         * remote operation. <p> {@link ExchangeAppAttestAssertion#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
+         * @since 1.13
+         */
+        protected ExchangeAppAttestAssertion(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAttestationTokenResponse.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion set$Xgafv(java.lang.String $Xgafv) {
+          return (ExchangeAppAttestAssertion) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setAccessToken(java.lang.String accessToken) {
+          return (ExchangeAppAttestAssertion) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setAlt(java.lang.String alt) {
+          return (ExchangeAppAttestAssertion) super.setAlt(alt);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setCallback(java.lang.String callback) {
+          return (ExchangeAppAttestAssertion) super.setCallback(callback);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setFields(java.lang.String fields) {
+          return (ExchangeAppAttestAssertion) super.setFields(fields);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setKey(java.lang.String key) {
+          return (ExchangeAppAttestAssertion) super.setKey(key);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setOauthToken(java.lang.String oauthToken) {
+          return (ExchangeAppAttestAssertion) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExchangeAppAttestAssertion) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setQuotaUser(java.lang.String quotaUser) {
+          return (ExchangeAppAttestAssertion) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setUploadType(java.lang.String uploadType) {
+          return (ExchangeAppAttestAssertion) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExchangeAppAttestAssertion) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        public ExchangeAppAttestAssertion setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public ExchangeAppAttestAssertion set(String parameterName, Object value) {
+          return (ExchangeAppAttestAssertion) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Accepts a AppAttest CBOR Attestation, and uses the developer's preconfigured team and bundle IDs
+       * to verify the token with Apple. Returns an Attestation Artifact that can later be exchanged for
+       * an AttestationToken in ExchangeAppAttestAssertion.
+       *
+       * Create a request for the method "apps.exchangeAppAttestAttestation".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeAppAttestAttestation#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
+       * @return the request
+       */
+      public ExchangeAppAttestAttestation exchangeAppAttestAttestation(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest content) throws java.io.IOException {
+        ExchangeAppAttestAttestation result = new ExchangeAppAttestAttestation(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExchangeAppAttestAttestation extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse> {
+
+        private static final String REST_PATH = "v1beta/{+app}:exchangeAppAttestAttestation";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Accepts a AppAttest CBOR Attestation, and uses the developer's preconfigured team and bundle
+         * IDs to verify the token with Apple. Returns an Attestation Artifact that can later be exchanged
+         * for an AttestationToken in ExchangeAppAttestAssertion.
+         *
+         * Create a request for the method "apps.exchangeAppAttestAttestation".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link ExchangeAppAttestAttestation#execute()} method to invoke
+         * the remote operation. <p> {@link ExchangeAppAttestAttestation#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
+         * @since 1.13
+         */
+        protected ExchangeAppAttestAttestation(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation set$Xgafv(java.lang.String $Xgafv) {
+          return (ExchangeAppAttestAttestation) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setAccessToken(java.lang.String accessToken) {
+          return (ExchangeAppAttestAttestation) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setAlt(java.lang.String alt) {
+          return (ExchangeAppAttestAttestation) super.setAlt(alt);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setCallback(java.lang.String callback) {
+          return (ExchangeAppAttestAttestation) super.setCallback(callback);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setFields(java.lang.String fields) {
+          return (ExchangeAppAttestAttestation) super.setFields(fields);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setKey(java.lang.String key) {
+          return (ExchangeAppAttestAttestation) super.setKey(key);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setOauthToken(java.lang.String oauthToken) {
+          return (ExchangeAppAttestAttestation) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExchangeAppAttestAttestation) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setQuotaUser(java.lang.String quotaUser) {
+          return (ExchangeAppAttestAttestation) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setUploadType(java.lang.String uploadType) {
+          return (ExchangeAppAttestAttestation) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExchangeAppAttestAttestation) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        public ExchangeAppAttestAttestation setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public ExchangeAppAttestAttestation set(String parameterName, Object value) {
+          return (ExchangeAppAttestAttestation) super.set(parameterName, value);
+        }
+      }
+      /**
        * Validates a custom token signed using your project's Admin SDK service account credentials. If
        * valid, returns an App Check token encapsulated in an AttestationTokenResponse.
        *
@@ -1116,6 +1400,146 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         @Override
         public ExchangeSafetyNetToken set(String parameterName, Object value) {
           return (ExchangeSafetyNetToken) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Initiates the App Attest flow by generating a challenge which will be used as a type of nonce for
+       * this attestation.
+       *
+       * Create a request for the method "apps.generateAppAttestChallenge".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link GenerateAppAttestChallenge#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
+       * @return the request
+       */
+      public GenerateAppAttestChallenge generateAppAttestChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest content) throws java.io.IOException {
+        GenerateAppAttestChallenge result = new GenerateAppAttestChallenge(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateAppAttestChallenge extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse> {
+
+        private static final String REST_PATH = "v1beta/{+app}:generateAppAttestChallenge";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Initiates the App Attest flow by generating a challenge which will be used as a type of nonce
+         * for this attestation.
+         *
+         * Create a request for the method "apps.generateAppAttestChallenge".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link GenerateAppAttestChallenge#execute()} method to invoke the
+         * remote operation. <p> {@link GenerateAppAttestChallenge#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
+         * @since 1.13
+         */
+        protected GenerateAppAttestChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateAppAttestChallenge set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateAppAttestChallenge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setAccessToken(java.lang.String accessToken) {
+          return (GenerateAppAttestChallenge) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setAlt(java.lang.String alt) {
+          return (GenerateAppAttestChallenge) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setCallback(java.lang.String callback) {
+          return (GenerateAppAttestChallenge) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setFields(java.lang.String fields) {
+          return (GenerateAppAttestChallenge) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setKey(java.lang.String key) {
+          return (GenerateAppAttestChallenge) super.setKey(key);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setOauthToken(java.lang.String oauthToken) {
+          return (GenerateAppAttestChallenge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateAppAttestChallenge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateAppAttestChallenge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setUploadType(java.lang.String uploadType) {
+          return (GenerateAppAttestChallenge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateAppAttestChallenge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateAppAttestChallenge) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The full resource name to the iOS App. Format:
+         * "projects/{project_id}/apps/{app_id}"
+         */
+        public GenerateAppAttestChallenge setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public GenerateAppAttestChallenge set(String parameterName, Object value) {
+          return (GenerateAppAttestChallenge) super.set(parameterName, value);
         }
       }
 

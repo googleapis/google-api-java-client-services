@@ -73,13 +73,6 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
   private java.lang.String name;
 
   /**
-   * The schema of the default version of this processor type.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3Schema schema;
-
-  /**
    * The type of the processor, e.g, "invoice_parsing".
    * The value may be {@code null}.
    */
@@ -155,23 +148,6 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The schema of the default version of this processor type.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3Schema getSchema() {
-    return schema;
-  }
-
-  /**
-   * The schema of the default version of this processor type.
-   * @param schema schema or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3ProcessorType setSchema(GoogleCloudDocumentaiV1beta3Schema schema) {
-    this.schema = schema;
     return this;
   }
 

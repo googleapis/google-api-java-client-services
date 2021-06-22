@@ -38,9 +38,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deleted;
 
   /**
-   * The email associated with the member. If set on create, the email field in the User or Group
-   * message must either be empty or match this field. On read, may be unset if the member does not
-   * have an associated email.
+   * The email associated with the member. If set on create, the `email` field in the `User` or
+   * `Group` message must either be empty or match this field. On read, may be unset if the member
+   * does not have an associated email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +102,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email associated with the member. If set on create, the email field in the User or Group
-   * message must either be empty or match this field. On read, may be unset if the member does not
-   * have an associated email.
+   * The email associated with the member. If set on create, the `email` field in the `User` or
+   * `Group` message must either be empty or match this field. On read, may be unset if the member
+   * does not have an associated email.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -112,9 +112,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email associated with the member. If set on create, the email field in the User or Group
-   * message must either be empty or match this field. On read, may be unset if the member does not
-   * have an associated email.
+   * The email associated with the member. If set on create, the `email` field in the `User` or
+   * `Group` message must either be empty or match this field. On read, may be unset if the member
+   * does not have an associated email.
    * @param email email or {@code null} for none
    */
   public Permission setEmail(java.lang.String email) {

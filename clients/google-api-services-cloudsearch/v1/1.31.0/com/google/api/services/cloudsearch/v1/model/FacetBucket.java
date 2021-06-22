@@ -33,7 +33,10 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of results that match the bucket value. Counts are only returned for searches when count
-   * accuracy is ensured. Can be empty.
+   * accuracy is ensured. Cloud Search does not guarantee facet counts for any query and facet
+   * counts might be present only intermittently, even for identical queries. Do not build
+   * dependencies on facet count existence; instead use facet ount percentages which are always
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +61,10 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of results that match the bucket value. Counts are only returned for searches when count
-   * accuracy is ensured. Can be empty.
+   * accuracy is ensured. Cloud Search does not guarantee facet counts for any query and facet
+   * counts might be present only intermittently, even for identical queries. Do not build
+   * dependencies on facet count existence; instead use facet ount percentages which are always
+   * returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -67,7 +73,10 @@ public final class FacetBucket extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of results that match the bucket value. Counts are only returned for searches when count
-   * accuracy is ensured. Can be empty.
+   * accuracy is ensured. Cloud Search does not guarantee facet counts for any query and facet
+   * counts might be present only intermittently, even for identical queries. Do not build
+   * dependencies on facet count existence; instead use facet ount percentages which are always
+   * returned.
    * @param count count or {@code null} for none
    */
   public FacetBucket setCount(java.lang.Integer count) {

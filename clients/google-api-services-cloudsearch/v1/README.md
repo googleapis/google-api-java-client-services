@@ -1,6 +1,6 @@
 # Cloud Search API Client Library for Java
 
-Cloud Search provides cloud-based search capabilities over G Suite data. The Cloud Search API allows indexing of non-G Suite data into Cloud Search.
+Cloud Search provides cloud-based search capabilities over Google Workspace data. The Cloud Search API allows indexing of non-Google Workspace data into Cloud Search.
 
 This page contains information about getting started with the Cloud Search API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudsearch</artifactId>
-      <version>v1-rev20210608-1.31.5</version>
+      <version>v1-rev20210614-1.31.5</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudsearch:v1-rev20210608-1.31.5'
+  compile 'com.google.apis:google-api-services-cloudsearch:v1-rev20210614-1.31.5'
 }
 ```
 

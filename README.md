@@ -151,7 +151,7 @@ packages on [Maven Central][maven-search].
 | Google Chat API | [v1](clients/google-api-services-chat/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
-| Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
+| Google Cloud Data Catalog API | [v1](clients/google-api-services-datacatalog/v1), [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
 | Google Cloud Memorystore for Redis API | [v1](clients/google-api-services-redis/v1), [v1beta1](clients/google-api-services-redis/v1beta1) |
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |

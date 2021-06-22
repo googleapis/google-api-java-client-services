@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-ideahub</artifactId>
-  <version>v1alpha-rev20210528-1.31.5</version>
-  <name>Idea Hub API v1alpha-rev20210528-1.31.5</name>
+  <version>v1alpha-rev20210618-1.31.5</version>
+  <name>Idea Hub API v1alpha-rev20210618-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -79,17 +79,15 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Output only. If this note has been trashed, when that happened. If trashed, the note will
-   * eventually be deleted. If the note is not trashed, this is not set (and the trashed field is
-   * false).
+   * Output only. When this note was trashed. If `trashed`, the note is eventually deleted. If the
+   * note is not trashed, this field is not set (and the trashed field is `false`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String trashTime;
 
   /**
-   * Output only. True if this note has been trashed. If trashed, the note will eventually be
-   * deleted.
+   * Output only. `true` if this note has been trashed. If trashed, the note is eventually deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,9 +205,8 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If this note has been trashed, when that happened. If trashed, the note will
-   * eventually be deleted. If the note is not trashed, this is not set (and the trashed field is
-   * false).
+   * Output only. When this note was trashed. If `trashed`, the note is eventually deleted. If the
+   * note is not trashed, this field is not set (and the trashed field is `false`).
    * @return value or {@code null} for none
    */
   public String getTrashTime() {
@@ -217,9 +214,8 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If this note has been trashed, when that happened. If trashed, the note will
-   * eventually be deleted. If the note is not trashed, this is not set (and the trashed field is
-   * false).
+   * Output only. When this note was trashed. If `trashed`, the note is eventually deleted. If the
+   * note is not trashed, this field is not set (and the trashed field is `false`).
    * @param trashTime trashTime or {@code null} for none
    */
   public Note setTrashTime(String trashTime) {
@@ -228,8 +224,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. True if this note has been trashed. If trashed, the note will eventually be
-   * deleted.
+   * Output only. `true` if this note has been trashed. If trashed, the note is eventually deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrashed() {
@@ -237,8 +232,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. True if this note has been trashed. If trashed, the note will eventually be
-   * deleted.
+   * Output only. `true` if this note has been trashed. If trashed, the note is eventually deleted.
    * @param trashed trashed or {@code null} for none
    */
   public Note setTrashed(java.lang.Boolean trashed) {

@@ -30,8 +30,9 @@ package com.google.api.services.androidenterprise.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The auto-update policy for apps installed on the device. "choiceToTheUser" allows the device's
-   * user to configure the app update policy. "always" enables auto updates. "never" disables auto
+   * Deprecated. Use autoUpdateMode instead. When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect. "choiceToTheUser" allows the device's user
+   * to configure the app update policy. "always" enables auto updates. "never" disables auto
    * updates. "wifiOnly" enables auto updates only when the device is connected to wifi.
    * The value may be {@code null}.
    */
@@ -73,8 +74,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<ProductPolicy> productPolicy;
 
   /**
-   * The auto-update policy for apps installed on the device. "choiceToTheUser" allows the device's
-   * user to configure the app update policy. "always" enables auto updates. "never" disables auto
+   * Deprecated. Use autoUpdateMode instead. When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect. "choiceToTheUser" allows the device's user
+   * to configure the app update policy. "always" enables auto updates. "never" disables auto
    * updates. "wifiOnly" enables auto updates only when the device is connected to wifi.
    * @return value or {@code null} for none
    */
@@ -83,8 +85,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The auto-update policy for apps installed on the device. "choiceToTheUser" allows the device's
-   * user to configure the app update policy. "always" enables auto updates. "never" disables auto
+   * Deprecated. Use autoUpdateMode instead. When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or
+   * AUTO_UPDATE_HIGH_PRIORITY, this field has no effect. "choiceToTheUser" allows the device's user
+   * to configure the app update policy. "always" enables auto updates. "never" disables auto
    * updates. "wifiOnly" enables auto updates only when the device is connected to wifi.
    * @param autoUpdatePolicy autoUpdatePolicy or {@code null} for none
    */

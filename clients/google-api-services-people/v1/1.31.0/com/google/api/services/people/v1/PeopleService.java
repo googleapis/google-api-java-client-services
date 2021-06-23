@@ -334,7 +334,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Create a new contact group owned by the authenticated user.
+     * Create a new contact group owned by the authenticated user. Created contact group names must be
+     * unique to the users contact groups. Attempting to create a group with a duplicate name will
+     * return a HTTP 409 error.
      *
      * Create a request for the method "contactGroups.create".
      *
@@ -355,7 +357,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/contactGroups";
 
       /**
-       * Create a new contact group owned by the authenticated user.
+       * Create a new contact group owned by the authenticated user. Created contact group names must be
+       * unique to the users contact groups. Attempting to create a group with a duplicate name will
+       * return a HTTP 409 error.
        *
        * Create a request for the method "contactGroups.create".
        *
@@ -972,7 +976,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Update the name of an existing contact group owned by the authenticated user.
+     * Update the name of an existing contact group owned by the authenticated user. Updated contact
+     * group names must be unique to the users contact groups. Attempting to create a group with a
+     * duplicate name will return a HTTP 409 error.
      *
      * Create a request for the method "contactGroups.update".
      *
@@ -998,7 +1004,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^contactGroups/[^/]+$");
 
       /**
-       * Update the name of an existing contact group owned by the authenticated user.
+       * Update the name of an existing contact group owned by the authenticated user. Updated contact
+       * group names must be unique to the users contact groups. Attempting to create a group with a
+       * duplicate name will return a HTTP 409 error.
        *
        * Create a request for the method "contactGroups.update".
        *

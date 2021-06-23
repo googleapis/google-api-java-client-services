@@ -85,7 +85,11 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   private ContactGroupMetadata metadata;
 
   /**
-   * The contact group name set by the group owner or a system provided name for system groups.
+   * The contact group name set by the group owner or a system provided name for system groups. For
+   * [`contactGroups.create`](/people/api/rest/v1/contactGroups/create) or
+   * [`contactGroups.update`](/people/api/rest/v1/contactGroups/update) the name must be unique to
+   * the users contact groups. Attempting to create a group with a duplicate name will return a HTTP
+   * 409 error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +235,11 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contact group name set by the group owner or a system provided name for system groups.
+   * The contact group name set by the group owner or a system provided name for system groups. For
+   * [`contactGroups.create`](/people/api/rest/v1/contactGroups/create) or
+   * [`contactGroups.update`](/people/api/rest/v1/contactGroups/update) the name must be unique to
+   * the users contact groups. Attempting to create a group with a duplicate name will return a HTTP
+   * 409 error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -239,7 +247,11 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contact group name set by the group owner or a system provided name for system groups.
+   * The contact group name set by the group owner or a system provided name for system groups. For
+   * [`contactGroups.create`](/people/api/rest/v1/contactGroups/create) or
+   * [`contactGroups.update`](/people/api/rest/v1/contactGroups/update) the name must be unique to
+   * the users contact groups. Attempting to create a group with a duplicate name will return a HTTP
+   * 409 error.
    * @param name name or {@code null} for none
    */
   public ContactGroup setName(java.lang.String name) {

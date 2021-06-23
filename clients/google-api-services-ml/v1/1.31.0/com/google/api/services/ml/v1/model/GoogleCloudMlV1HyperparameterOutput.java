@@ -104,6 +104,14 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   private java.lang.String trialId;
 
   /**
+   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
+   * in-progress hyperparameter tuning trials with web access enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> webAccessUris;
+
+  /**
    * All recorded object metrics for this trial. This field is not currently populated.
    * @return value or {@code null} for none
    */
@@ -255,6 +263,25 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
    */
   public GoogleCloudMlV1HyperparameterOutput setTrialId(java.lang.String trialId) {
     this.trialId = trialId;
+    return this;
+  }
+
+  /**
+   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
+   * in-progress hyperparameter tuning trials with web access enabled.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getWebAccessUris() {
+    return webAccessUris;
+  }
+
+  /**
+   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
+   * in-progress hyperparameter tuning trials with web access enabled.
+   * @param webAccessUris webAccessUris or {@code null} for none
+   */
+  public GoogleCloudMlV1HyperparameterOutput setWebAccessUris(java.util.Map<String, java.lang.String> webAccessUris) {
+    this.webAccessUris = webAccessUris;
     return this;
   }
 

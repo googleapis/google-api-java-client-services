@@ -137,6 +137,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String name;
 
   /**
+   * Specification that applies to a user-defined function or procedure. Valid only for entries with
+   * the `ROUTINE` type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1RoutineSpec routineSpec;
+
+  /**
    * Schema of the entry. An entry might not have any schema attached to it.
    * The value may be {@code null}.
    */
@@ -424,6 +432,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specification that applies to a user-defined function or procedure. Valid only for entries with
+   * the `ROUTINE` type.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1RoutineSpec getRoutineSpec() {
+    return routineSpec;
+  }
+
+  /**
+   * Specification that applies to a user-defined function or procedure. Valid only for entries with
+   * the `ROUTINE` type.
+   * @param routineSpec routineSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setRoutineSpec(GoogleCloudDatacatalogV1RoutineSpec routineSpec) {
+    this.routineSpec = routineSpec;
     return this;
   }
 

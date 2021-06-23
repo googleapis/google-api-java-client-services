@@ -289,11 +289,11 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
        * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
        * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was always
        * used. The `OR` operator is currently unsupported. * Supported functions: - `saved(bool)`:
-       * If set to true, fetches only saved ideas. Can't be simultaneously used with
-       * `dismissed(bool)`. The `false` value is currently unsupported. - `dismissed(bool)`: If set
-       * to true, fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The
-       * `false` value is currently unsupported. Examples: * `saved(true)` * `dismissed(true)` The
-       * length of this field should be no more than 500 characters.
+       * If set to true, fetches only saved ideas. If set to false, fetches all except saved ideas.
+       * Can't be simultaneously used with `dismissed(bool)`. - `dismissed(bool)`: If set to true,
+       * fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The `false`
+       * value is currently unsupported. Examples: * `saved(true)` * `saved(false)` *
+       * `dismissed(true)` The length of this field should be no more than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -301,10 +301,11 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
       /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
      Restrictions are implicitly combined, as if the `AND` operator was always used. The `OR` operator
      is currently unsupported. * Supported functions: - `saved(bool)`: If set to true, fetches only
-     saved ideas. Can't be simultaneously used with `dismissed(bool)`. The `false` value is currently
-     unsupported. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+     saved ideas. If set to false, fetches all except saved ideas. Can't be simultaneously used with
+     `dismissed(bool)`. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
      simultaneously used with `saved(bool)`. The `false` value is currently unsupported. Examples: *
-     `saved(true)` * `dismissed(true)` The length of this field should be no more than 500 characters.
+     `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field should be no more than
+     500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -314,11 +315,11 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
        * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
        * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was always
        * used. The `OR` operator is currently unsupported. * Supported functions: - `saved(bool)`:
-       * If set to true, fetches only saved ideas. Can't be simultaneously used with
-       * `dismissed(bool)`. The `false` value is currently unsupported. - `dismissed(bool)`: If set
-       * to true, fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The
-       * `false` value is currently unsupported. Examples: * `saved(true)` * `dismissed(true)` The
-       * length of this field should be no more than 500 characters.
+       * If set to true, fetches only saved ideas. If set to false, fetches all except saved ideas.
+       * Can't be simultaneously used with `dismissed(bool)`. - `dismissed(bool)`: If set to true,
+       * fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The `false`
+       * value is currently unsupported. Examples: * `saved(true)` * `saved(false)` *
+       * `dismissed(true)` The length of this field should be no more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -826,12 +827,12 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was
            * always used. The `OR` operator is currently unsupported. * Supported functions: -
-           * `saved(bool)`: If set to true, fetches only saved ideas. Can't be simultaneously used
-           * with `dismissed(bool)`. The `false` value is currently unsupported. -
+           * `saved(bool)`: If set to true, fetches only saved ideas. If set to false, fetches all
+           * except saved ideas. Can't be simultaneously used with `dismissed(bool)`. -
            * `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
            * simultaneously used with `saved(bool)`. The `false` value is currently unsupported.
-           * Examples: * `saved(true)` * `dismissed(true)` The length of this field should be no
-           * more than 500 characters.
+           * Examples: * `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field
+           * should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -839,10 +840,11 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
           /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
          Restrictions are implicitly combined, as if the `AND` operator was always used. The `OR` operator
          is currently unsupported. * Supported functions: - `saved(bool)`: If set to true, fetches only
-         saved ideas. Can't be simultaneously used with `dismissed(bool)`. The `false` value is currently
-         unsupported. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+         saved ideas. If set to false, fetches all except saved ideas. Can't be simultaneously used with
+         `dismissed(bool)`. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
          simultaneously used with `saved(bool)`. The `false` value is currently unsupported. Examples: *
-         `saved(true)` * `dismissed(true)` The length of this field should be no more than 500 characters.
+         `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field should be no more than
+         500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -852,12 +854,12 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was
            * always used. The `OR` operator is currently unsupported. * Supported functions: -
-           * `saved(bool)`: If set to true, fetches only saved ideas. Can't be simultaneously used
-           * with `dismissed(bool)`. The `false` value is currently unsupported. -
+           * `saved(bool)`: If set to true, fetches only saved ideas. If set to false, fetches all
+           * except saved ideas. Can't be simultaneously used with `dismissed(bool)`. -
            * `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
            * simultaneously used with `saved(bool)`. The `false` value is currently unsupported.
-           * Examples: * `saved(true)` * `dismissed(true)` The length of this field should be no
-           * more than 500 characters.
+           * Examples: * `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field
+           * should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

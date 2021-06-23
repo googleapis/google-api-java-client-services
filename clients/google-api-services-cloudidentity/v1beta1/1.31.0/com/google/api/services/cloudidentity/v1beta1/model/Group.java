@@ -112,6 +112,13 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
+   * Optional. The POSIX groups associated with the `Group`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PosixGroup> posixGroups;
+
+  /**
    * Output only. The time when the `Group` was last updated.
    * The value may be {@code null}.
    */
@@ -292,6 +299,23 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Optional. The POSIX groups associated with the `Group`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PosixGroup> getPosixGroups() {
+    return posixGroups;
+  }
+
+  /**
+   * Optional. The POSIX groups associated with the `Group`.
+   * @param posixGroups posixGroups or {@code null} for none
+   */
+  public Group setPosixGroups(java.util.List<PosixGroup> posixGroups) {
+    this.posixGroups = posixGroups;
     return this;
   }
 

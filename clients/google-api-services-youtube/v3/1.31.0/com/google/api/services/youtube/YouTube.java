@@ -12970,7 +12970,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param part The *part* parameter specifies the superChatEvent resource parts that the API response will include.
-     *        Supported values are id and snippet.
+     *        This parameter is currently not supported.
      * @return the request
      */
     public List list(java.util.List<java.lang.String> part) throws java.io.IOException {
@@ -12994,7 +12994,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param part The *part* parameter specifies the superChatEvent resource parts that the API response will include.
-     *        Supported values are id and snippet.
+     *        This parameter is currently not supported.
        * @since 1.13
        */
       protected List(java.util.List<java.lang.String> part) {
@@ -13069,13 +13069,13 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The *part* parameter specifies the superChatEvent resource parts that the API response will
-       * include. Supported values are id and snippet.
+       * include. This parameter is currently not supported.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
 
       /** The *part* parameter specifies the superChatEvent resource parts that the API response will
-     include. Supported values are id and snippet.
+     include. This parameter is currently not supported.
        */
       public java.util.List<java.lang.String> getPart() {
         return part;
@@ -13083,7 +13083,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The *part* parameter specifies the superChatEvent resource parts that the API response will
-       * include. Supported values are id and snippet.
+       * include. This parameter is currently not supported.
        */
       public List setPart(java.util.List<java.lang.String> part) {
         this.part = part;

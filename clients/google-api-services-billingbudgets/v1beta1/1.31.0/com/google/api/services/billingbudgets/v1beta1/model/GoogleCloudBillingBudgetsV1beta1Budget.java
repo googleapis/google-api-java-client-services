@@ -81,7 +81,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
 
   /**
    * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
-   * exceeds the specified percentages of the budget.
+   * exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications.
+   * Required if using email notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +200,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
 
   /**
    * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
-   * exceeds the specified percentages of the budget.
+   * exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications.
+   * Required if using email notifications.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudBillingBudgetsV1beta1ThresholdRule> getThresholdRules() {
@@ -208,7 +210,8 @@ public final class GoogleCloudBillingBudgetsV1beta1Budget extends com.google.api
 
   /**
    * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend
-   * exceeds the specified percentages of the budget.
+   * exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications.
+   * Required if using email notifications.
    * @param thresholdRules thresholdRules or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1Budget setThresholdRules(java.util.List<GoogleCloudBillingBudgetsV1beta1ThresholdRule> thresholdRules) {

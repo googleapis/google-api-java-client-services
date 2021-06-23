@@ -42,6 +42,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.util.List<java.lang.String> args;
 
   /**
+   * Optional. Whether to enable web access for the training job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWebAccess;
+
+  /**
    * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
    * created by a training job, instead of using Google's default encryption. If this is set, then
    * all resources created by the training job will be encrypted with the customer-managed
@@ -314,6 +321,23 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable web access for the training job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWebAccess() {
+    return enableWebAccess;
+  }
+
+  /**
+   * Optional. Whether to enable web access for the training job.
+   * @param enableWebAccess enableWebAccess or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setEnableWebAccess(java.lang.Boolean enableWebAccess) {
+    this.enableWebAccess = enableWebAccess;
     return this;
   }
 

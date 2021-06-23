@@ -89,6 +89,13 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
+   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> webAccessUris;
+
+  /**
    * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
    * @return value or {@code null} for none
    */
@@ -210,6 +217,23 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
    */
   public GoogleCloudMlV1TrainingOutput setTrials(java.util.List<GoogleCloudMlV1HyperparameterOutput> trials) {
     this.trials = trials;
+    return this;
+  }
+
+  /**
+   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getWebAccessUris() {
+    return webAccessUris;
+  }
+
+  /**
+   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * @param webAccessUris webAccessUris or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingOutput setWebAccessUris(java.util.Map<String, java.lang.String> webAccessUris) {
+    this.webAccessUris = webAccessUris;
     return this;
   }
 

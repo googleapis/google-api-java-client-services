@@ -31,10 +31,10 @@ package com.google.api.services.storagetransfer.v1.model;
  * fetched, the object will not be transferred. * If the specified MD5 does not match the MD5
  * computed from the transferred bytes, the object transfer will fail. * Ensure that each URL you
  * specify is publicly accessible. For example, in Cloud Storage you can [share an object publicly]
- * (https://cloud.google.com/storage/docs/cloud-console#_sharingdata) and get a link to it. *
- * Storage Transfer Service obeys `robots.txt` rules and requires the source HTTP server to support
- * `Range` requests and to return a `Content-Length` header in each response. * ObjectConditions
- * have no effect when filtering objects to transfer.
+ * (/storage/docs/cloud-console#_sharingdata) and get a link to it. * Storage Transfer Service obeys
+ * `robots.txt` rules and requires the source HTTP server to support `Range` requests and to return
+ * a `Content-Length` header in each response. * ObjectConditions have no effect when filtering
+ * objects to transfer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

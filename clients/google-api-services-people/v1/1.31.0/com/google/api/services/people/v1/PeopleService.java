@@ -1584,14 +1584,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers
+       * * metadata * names * phoneNumbers * photos
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * emailAddresses * metadata * names *
-     phoneNumbers
+     phoneNumbers * photos
        */
       public String getReadMask() {
         return readMask;
@@ -1600,7 +1600,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers
+       * * metadata * names * phoneNumbers * photos
        */
       public List setReadMask(String readMask) {
         this.readMask = readMask;
@@ -1789,13 +1789,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
-     greater than 10 will be capped to 10.
+     greater than 30 will be capped to 30.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -1803,7 +1803,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -3549,13 +3549,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
-     greater than 10 will be capped to 10.
+     greater than 30 will be capped to 30.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -3563,7 +3563,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       public SearchContacts setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

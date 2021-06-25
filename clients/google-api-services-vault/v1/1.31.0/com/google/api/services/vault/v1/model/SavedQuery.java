@@ -17,10 +17,10 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Definition of the saved query. To work with Vault resources, the account must have the [required
- * Vault privileges] (https://support.google.com/vault/answer/2799699) and access to the matter. To
- * access a matter, the account must have created the matter, have the matter shared with them, or
- * have the **View All Matters** privilege.
+ * The definition of a saved query. To work with Vault resources, the account must have the
+ * [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the
+ * matter. To access a matter, the account must have created the matter, have the matter shared with
+ * them, or have the **View All Matters** privilege.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -33,29 +33,29 @@ package com.google.api.services.vault.v1.model;
 public final class SavedQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The server generated timestamp at which saved query was created.
+   * Output only. The server-generated timestamp when the saved query was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Name of the saved query.
+   * The name of the saved query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The matter ID of the associated matter. The server does not look at this field
-   * during create and always uses matter id in the URL.
+   * Output only. The matter ID of the matter the saved query is saved in. The server does not use
+   * this field during create and always uses matter ID in the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matterId;
 
   /**
-   * The underlying Query object which contains all the information of the saved query.
+   * The search parameters of the saved query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   private java.lang.String savedQueryId;
 
   /**
-   * Output only. The server generated timestamp at which saved query was created.
+   * Output only. The server-generated timestamp when the saved query was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -77,7 +77,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The server generated timestamp at which saved query was created.
+   * Output only. The server-generated timestamp when the saved query was created.
    * @param createTime createTime or {@code null} for none
    */
   public SavedQuery setCreateTime(String createTime) {
@@ -86,7 +86,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the saved query.
+   * The name of the saved query.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -94,7 +94,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the saved query.
+   * The name of the saved query.
    * @param displayName displayName or {@code null} for none
    */
   public SavedQuery setDisplayName(java.lang.String displayName) {
@@ -103,8 +103,8 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The matter ID of the associated matter. The server does not look at this field
-   * during create and always uses matter id in the URL.
+   * Output only. The matter ID of the matter the saved query is saved in. The server does not use
+   * this field during create and always uses matter ID in the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatterId() {
@@ -112,8 +112,8 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The matter ID of the associated matter. The server does not look at this field
-   * during create and always uses matter id in the URL.
+   * Output only. The matter ID of the matter the saved query is saved in. The server does not use
+   * this field during create and always uses matter ID in the URL.
    * @param matterId matterId or {@code null} for none
    */
   public SavedQuery setMatterId(java.lang.String matterId) {
@@ -122,7 +122,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The underlying Query object which contains all the information of the saved query.
+   * The search parameters of the saved query.
    * @return value or {@code null} for none
    */
   public Query getQuery() {
@@ -130,7 +130,7 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The underlying Query object which contains all the information of the saved query.
+   * The search parameters of the saved query.
    * @param query query or {@code null} for none
    */
   public SavedQuery setQuery(Query query) {

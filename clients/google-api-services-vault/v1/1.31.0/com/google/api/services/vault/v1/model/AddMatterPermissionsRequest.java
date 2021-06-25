@@ -18,7 +18,7 @@ package com.google.api.services.vault.v1.model;
 
 /**
  * Add an account with the permission specified. The role cannot be owner. If an account already has
- * a role in the matter, it will be overwritten.
+ * a role in the matter, the existing role is overwritten.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -31,30 +31,31 @@ package com.google.api.services.vault.v1.model;
 public final class AddMatterPermissionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only relevant if send_emails is true. True to CC requestor in the email message. False to not
-   * CC requestor.
+   * Only relevant if **sendEmails** is **true**. To CC the requestor in the email message, set to
+   * **true**. To not CC requestor, set to **false**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ccMe;
 
   /**
-   * The MatterPermission to add.
+   * The account and its role to add.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MatterPermission matterPermission;
 
   /**
-   * True to send notification email to the added account. False to not send notification email.
+   * To send a notification email to the added account, set to **true**. To not send a notification
+   * email, set to **false**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sendEmails;
 
   /**
-   * Only relevant if send_emails is true. True to CC requestor in the email message. False to not
-   * CC requestor.
+   * Only relevant if **sendEmails** is **true**. To CC the requestor in the email message, set to
+   * **true**. To not CC requestor, set to **false**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCcMe() {
@@ -62,8 +63,8 @@ public final class AddMatterPermissionsRequest extends com.google.api.client.jso
   }
 
   /**
-   * Only relevant if send_emails is true. True to CC requestor in the email message. False to not
-   * CC requestor.
+   * Only relevant if **sendEmails** is **true**. To CC the requestor in the email message, set to
+   * **true**. To not CC requestor, set to **false**.
    * @param ccMe ccMe or {@code null} for none
    */
   public AddMatterPermissionsRequest setCcMe(java.lang.Boolean ccMe) {
@@ -72,7 +73,7 @@ public final class AddMatterPermissionsRequest extends com.google.api.client.jso
   }
 
   /**
-   * The MatterPermission to add.
+   * The account and its role to add.
    * @return value or {@code null} for none
    */
   public MatterPermission getMatterPermission() {
@@ -80,7 +81,7 @@ public final class AddMatterPermissionsRequest extends com.google.api.client.jso
   }
 
   /**
-   * The MatterPermission to add.
+   * The account and its role to add.
    * @param matterPermission matterPermission or {@code null} for none
    */
   public AddMatterPermissionsRequest setMatterPermission(MatterPermission matterPermission) {
@@ -89,7 +90,8 @@ public final class AddMatterPermissionsRequest extends com.google.api.client.jso
   }
 
   /**
-   * True to send notification email to the added account. False to not send notification email.
+   * To send a notification email to the added account, set to **true**. To not send a notification
+   * email, set to **false**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSendEmails() {
@@ -97,7 +99,8 @@ public final class AddMatterPermissionsRequest extends com.google.api.client.jso
   }
 
   /**
-   * True to send notification email to the added account. False to not send notification email.
+   * To send a notification email to the added account, set to **true**. To not send a notification
+   * email, set to **false**.
    * @param sendEmails sendEmails or {@code null} for none
    */
   public AddMatterPermissionsRequest setSendEmails(java.lang.Boolean sendEmails) {

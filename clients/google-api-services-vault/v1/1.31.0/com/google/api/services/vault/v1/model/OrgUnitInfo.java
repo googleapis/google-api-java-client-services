@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Org Unit to search
+ * The organizational unit to search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.vault.v1.model;
 public final class OrgUnitInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Org unit to search, as provided by the Admin SDK Directory API.
+   * The name of the organizational unit to search, as provided by the [Admin SDK Directory
+   * API](https://developers.google.com/admin-sdk/directory/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orgUnitId;
 
   /**
-   * Org unit to search, as provided by the Admin SDK Directory API.
+   * The name of the organizational unit to search, as provided by the [Admin SDK Directory
+   * API](https://developers.google.com/admin-sdk/directory/).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -45,7 +47,8 @@ public final class OrgUnitInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Org unit to search, as provided by the Admin SDK Directory API.
+   * The name of the organizational unit to search, as provided by the [Admin SDK Directory
+   * API](https://developers.google.com/admin-sdk/directory/).
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public OrgUnitInfo setOrgUnitId(java.lang.String orgUnitId) {

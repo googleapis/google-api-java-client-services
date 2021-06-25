@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * A status detailing the status of each account creation, and the HeldAccount, if successful.
+ * The status of each account creation, and the **HeldAccount**, if successful.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.vault.v1.model;
 public final class AddHeldAccountResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * If present, this account was successfully created.
+   * Returned when the account was successfully created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldAccount account;
 
   /**
-   * This represents the success status. If failed, check message.
+   * Reports the request status. If it failed, returns an error message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status status;
 
   /**
-   * If present, this account was successfully created.
+   * Returned when the account was successfully created.
    * @return value or {@code null} for none
    */
   public HeldAccount getAccount() {
@@ -52,7 +52,7 @@ public final class AddHeldAccountResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * If present, this account was successfully created.
+   * Returned when the account was successfully created.
    * @param account account or {@code null} for none
    */
   public AddHeldAccountResult setAccount(HeldAccount account) {
@@ -61,7 +61,7 @@ public final class AddHeldAccountResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This represents the success status. If failed, check message.
+   * Reports the request status. If it failed, returns an error message.
    * @return value or {@code null} for none
    */
   public Status getStatus() {
@@ -69,7 +69,7 @@ public final class AddHeldAccountResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * This represents the success status. If failed, check message.
+   * Reports the request status. If it failed, returns an error message.
    * @param status status or {@code null} for none
    */
   public AddHeldAccountResult setStatus(Status status) {

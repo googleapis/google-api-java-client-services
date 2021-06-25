@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * A organizational unit being held in a particular hold. This structure is immutable.
+ * The organizational unit covered by a hold. This structure is immutable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,21 +30,22 @@ package com.google.api.services.vault.v1.model;
 public final class HeldOrgUnit extends com.google.api.client.json.GenericJson {
 
   /**
-   * When the org unit was put on hold. This property is immutable.
+   * When the organizational unit was put on hold. This property is immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String holdTime;
 
   /**
-   * The org unit's immutable ID as provided by the Admin SDK.
+   * The organizational unit's immutable ID as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orgUnitId;
 
   /**
-   * When the org unit was put on hold. This property is immutable.
+   * When the organizational unit was put on hold. This property is immutable.
    * @return value or {@code null} for none
    */
   public String getHoldTime() {
@@ -52,7 +53,7 @@ public final class HeldOrgUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the org unit was put on hold. This property is immutable.
+   * When the organizational unit was put on hold. This property is immutable.
    * @param holdTime holdTime or {@code null} for none
    */
   public HeldOrgUnit setHoldTime(String holdTime) {
@@ -61,7 +62,8 @@ public final class HeldOrgUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The org unit's immutable ID as provided by the Admin SDK.
+   * The organizational unit's immutable ID as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -69,7 +71,8 @@ public final class HeldOrgUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The org unit's immutable ID as provided by the Admin SDK.
+   * The organizational unit's immutable ID as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public HeldOrgUnit setOrgUnitId(java.lang.String orgUnitId) {

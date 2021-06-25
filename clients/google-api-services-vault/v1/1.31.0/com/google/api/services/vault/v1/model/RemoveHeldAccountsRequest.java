@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class RemoveHeldAccountsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Account IDs to identify HeldAccounts to remove.
+   * The account IDs of the accounts to remove from the hold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> accountIds;
 
   /**
-   * Account IDs to identify HeldAccounts to remove.
+   * The account IDs of the accounts to remove from the hold.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccountIds() {
@@ -45,7 +45,7 @@ public final class RemoveHeldAccountsRequest extends com.google.api.client.json.
   }
 
   /**
-   * Account IDs to identify HeldAccounts to remove.
+   * The account IDs of the accounts to remove from the hold.
    * @param accountIds accountIds or {@code null} for none
    */
   public RemoveHeldAccountsRequest setAccountIds(java.util.List<java.lang.String> accountIds) {

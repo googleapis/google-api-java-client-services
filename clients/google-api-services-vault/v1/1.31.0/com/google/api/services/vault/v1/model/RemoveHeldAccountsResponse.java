@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class RemoveHeldAccountsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of statuses for deleted accounts. Results have the same order as the request.
+   * A list of statuses for the deleted accounts. Results have the same order as the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Status> statuses;
 
   /**
-   * A list of statuses for deleted accounts. Results have the same order as the request.
+   * A list of statuses for the deleted accounts. Results have the same order as the request.
    * @return value or {@code null} for none
    */
   public java.util.List<Status> getStatuses() {
@@ -45,7 +45,7 @@ public final class RemoveHeldAccountsResponse extends com.google.api.client.json
   }
 
   /**
-   * A list of statuses for deleted accounts. Results have the same order as the request.
+   * A list of statuses for the deleted accounts. Results have the same order as the request.
    * @param statuses statuses or {@code null} for none
    */
   public RemoveHeldAccountsResponse setStatuses(java.util.List<Status> statuses) {

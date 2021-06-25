@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class CloseMatterResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The updated matter, with state CLOSED.
+   * The updated matter, with state **CLOSED**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Matter matter;
 
   /**
-   * The updated matter, with state CLOSED.
+   * The updated matter, with state **CLOSED**.
    * @return value or {@code null} for none
    */
   public Matter getMatter() {
@@ -45,7 +45,7 @@ public final class CloseMatterResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The updated matter, with state CLOSED.
+   * The updated matter, with state **CLOSED**.
    * @param matter matter or {@code null} for none
    */
   public CloseMatterResponse setMatter(Matter matter) {

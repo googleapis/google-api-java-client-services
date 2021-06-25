@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Mail search advanced options
+ * Additional options for Gmail search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class MailOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to exclude drafts.
+   * Set to **true** to exclude drafts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean excludeDrafts;
 
   /**
-   * Set to true to exclude drafts.
+   * Set to **true** to exclude drafts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeDrafts() {
@@ -45,7 +45,7 @@ public final class MailOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true to exclude drafts.
+   * Set to **true** to exclude drafts.
    * @param excludeDrafts excludeDrafts or {@code null} for none
    */
   public MailOptions setExcludeDrafts(java.lang.Boolean excludeDrafts) {

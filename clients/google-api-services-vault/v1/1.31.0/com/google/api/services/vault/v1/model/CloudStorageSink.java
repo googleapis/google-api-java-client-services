@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Export sink for cloud storage files.
+ * Export sink for Cloud Storage files.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.vault.v1.model;
 public final class CloudStorageSink extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The exported files on cloud storage.
+   * Output only. The exported files in Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class CloudStorageSink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The exported files on cloud storage.
+   * Output only. The exported files in Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.util.List<CloudStorageFile> getFiles() {
@@ -51,7 +51,7 @@ public final class CloudStorageSink extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The exported files on cloud storage.
+   * Output only. The exported files in Cloud Storage.
    * @param files files or {@code null} for none
    */
   public CloudStorageSink setFiles(java.util.List<CloudStorageFile> files) {

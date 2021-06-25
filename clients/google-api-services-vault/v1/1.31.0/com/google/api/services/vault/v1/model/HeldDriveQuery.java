@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Query options for Drive holds.
+ * Options for Drive holds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.vault.v1.model;
 public final class HeldDriveQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, include files in shared drives in the hold.
+   * To include files in shared drives in the hold, set to **true**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeSharedDriveFiles;
 
   /**
-   * If true, include files in Team Drives in the hold.
+   * To include files in Team Drives in the hold, set to **true**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeTeamDriveFiles;
 
   /**
-   * If true, include files in shared drives in the hold.
+   * To include files in shared drives in the hold, set to **true**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeSharedDriveFiles() {
@@ -52,7 +52,7 @@ public final class HeldDriveQuery extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, include files in shared drives in the hold.
+   * To include files in shared drives in the hold, set to **true**.
    * @param includeSharedDriveFiles includeSharedDriveFiles or {@code null} for none
    */
   public HeldDriveQuery setIncludeSharedDriveFiles(java.lang.Boolean includeSharedDriveFiles) {
@@ -61,7 +61,7 @@ public final class HeldDriveQuery extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, include files in Team Drives in the hold.
+   * To include files in Team Drives in the hold, set to **true**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeTeamDriveFiles() {
@@ -69,7 +69,7 @@ public final class HeldDriveQuery extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, include files in Team Drives in the hold.
+   * To include files in Team Drives in the hold, set to **true**.
    * @param includeTeamDriveFiles includeTeamDriveFiles or {@code null} for none
    */
   public HeldDriveQuery setIncludeTeamDriveFiles(java.lang.Boolean includeTeamDriveFiles) {

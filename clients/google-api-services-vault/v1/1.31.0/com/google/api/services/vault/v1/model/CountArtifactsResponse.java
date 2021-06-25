@@ -30,28 +30,28 @@ package com.google.api.services.vault.v1.model;
 public final class CountArtifactsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count metrics of Groups.
+   * Count metrics for Groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GroupsCountResult groupsCountResult;
 
   /**
-   * Count metrics of Mail.
+   * Count metrics for Gmail and classic Hangouts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MailCountResult mailCountResult;
 
   /**
-   * Total count of artifacts. For mail and groups, artifacts refers to messages.
+   * Total count of messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalCount;
 
   /**
-   * Count metrics of Groups.
+   * Count metrics for Groups.
    * @return value or {@code null} for none
    */
   public GroupsCountResult getGroupsCountResult() {
@@ -59,7 +59,7 @@ public final class CountArtifactsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Count metrics of Groups.
+   * Count metrics for Groups.
    * @param groupsCountResult groupsCountResult or {@code null} for none
    */
   public CountArtifactsResponse setGroupsCountResult(GroupsCountResult groupsCountResult) {
@@ -68,7 +68,7 @@ public final class CountArtifactsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Count metrics of Mail.
+   * Count metrics for Gmail and classic Hangouts.
    * @return value or {@code null} for none
    */
   public MailCountResult getMailCountResult() {
@@ -76,7 +76,7 @@ public final class CountArtifactsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Count metrics of Mail.
+   * Count metrics for Gmail and classic Hangouts.
    * @param mailCountResult mailCountResult or {@code null} for none
    */
   public CountArtifactsResponse setMailCountResult(MailCountResult mailCountResult) {
@@ -85,7 +85,7 @@ public final class CountArtifactsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Total count of artifacts. For mail and groups, artifacts refers to messages.
+   * Total count of messages.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalCount() {
@@ -93,7 +93,7 @@ public final class CountArtifactsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Total count of artifacts. For mail and groups, artifacts refers to messages.
+   * Total count of messages.
    * @param totalCount totalCount or {@code null} for none
    */
   public CountArtifactsResponse setTotalCount(java.lang.Long totalCount) {

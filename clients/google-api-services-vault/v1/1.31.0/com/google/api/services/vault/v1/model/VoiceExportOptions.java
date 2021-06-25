@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * The options for voice export.
+ * The options for Voice exports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class VoiceExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The export format for voice export.
+   * The file format for exported text messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exportFormat;
 
   /**
-   * The export format for voice export.
+   * The file format for exported text messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getExportFormat() {
@@ -45,7 +45,7 @@ public final class VoiceExportOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * The export format for voice export.
+   * The file format for exported text messages.
    * @param exportFormat exportFormat or {@code null} for none
    */
   public VoiceExportOptions setExportFormat(java.lang.String exportFormat) {

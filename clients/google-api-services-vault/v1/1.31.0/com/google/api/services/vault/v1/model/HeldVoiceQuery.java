@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Query options for Voice holds.
+ * Options for Voice holds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,16 +30,16 @@ package com.google.api.services.vault.v1.model;
 public final class HeldVoiceQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data covered by this rule. Should be non-empty. Order does not matter and duplicates will be
-   * ignored.
+   * A list of data types covered by the hold. Should be non-empty. Order does not matter and
+   * duplicates are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> coveredData;
 
   /**
-   * Data covered by this rule. Should be non-empty. Order does not matter and duplicates will be
-   * ignored.
+   * A list of data types covered by the hold. Should be non-empty. Order does not matter and
+   * duplicates are ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCoveredData() {
@@ -47,8 +47,8 @@ public final class HeldVoiceQuery extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data covered by this rule. Should be non-empty. Order does not matter and duplicates will be
-   * ignored.
+   * A list of data types covered by the hold. Should be non-empty. Order does not matter and
+   * duplicates are ignored.
    * @param coveredData coveredData or {@code null} for none
    */
   public HeldVoiceQuery setCoveredData(java.util.List<java.lang.String> coveredData) {

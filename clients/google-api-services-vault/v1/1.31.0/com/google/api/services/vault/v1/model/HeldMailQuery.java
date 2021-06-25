@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Query options for mail holds.
+ * Query options for Gmail holds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,31 +30,32 @@ package com.google.api.services.vault.v1.model;
 public final class HeldMailQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terms;
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -62,8 +63,8 @@ public final class HeldMailQuery extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @param endTime endTime or {@code null} for none
    */
   public HeldMailQuery setEndTime(String endTime) {
@@ -72,8 +73,8 @@ public final class HeldMailQuery extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -81,8 +82,8 @@ public final class HeldMailQuery extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @param startTime startTime or {@code null} for none
    */
   public HeldMailQuery setStartTime(String startTime) {
@@ -91,7 +92,8 @@ public final class HeldMailQuery extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerms() {
@@ -99,7 +101,8 @@ public final class HeldMailQuery extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * @param terms terms or {@code null} for none
    */
   public HeldMailQuery setTerms(java.lang.String terms) {

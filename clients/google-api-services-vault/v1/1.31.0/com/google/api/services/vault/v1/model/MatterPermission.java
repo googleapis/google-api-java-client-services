@@ -17,8 +17,9 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Currently each matter only has one owner, and all others are collaborators. When an account is
- * purged, its corresponding MatterPermission resources cease to exist.
+ * Users can be matter owners or collaborators. Each matter has only one owner. All others users who
+ * can access the matter are collaborators. When an account is purged, its corresponding
+ * MatterPermission resources cease to exist.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -31,21 +32,21 @@ package com.google.api.services.vault.v1.model;
 public final class MatterPermission extends com.google.api.client.json.GenericJson {
 
   /**
-   * The account ID, as provided by Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountId;
 
   /**
-   * The user's role in this matter.
+   * The user's role for the matter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * The account ID, as provided by Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -53,7 +54,7 @@ public final class MatterPermission extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The account ID, as provided by Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * @param accountId accountId or {@code null} for none
    */
   public MatterPermission setAccountId(java.lang.String accountId) {
@@ -62,7 +63,7 @@ public final class MatterPermission extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user's role in this matter.
+   * The user's role for the matter.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -70,7 +71,7 @@ public final class MatterPermission extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user's role in this matter.
+   * The user's role for the matter.
    * @param role role or {@code null} for none
    */
   public MatterPermission setRole(java.lang.String role) {

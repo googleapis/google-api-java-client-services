@@ -17,13 +17,11 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Represents a hold within Vault. A hold restricts purging of artifacts based on the combination of
- * the query and accounts restrictions. A hold can be configured to either apply to an explicitly
- * configured set of accounts, or can be applied to all members of an organizational unit. To work
- * with Vault resources, the account must have the [required Vault privileges]
- * (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter,
- * the account must have created the matter, have the matter shared with them, or have the **View
- * All Matters** privilege.
+ * A hold. A hold prevents the specified Google Workspace service from purging data for specific
+ * accounts or all members of an organizational unit. To work with Vault resources, the account must
+ * have the [required Vault privileges] (https://support.google.com/vault/answer/2799699) and access
+ * to the matter. To access a matter, the account must have created the matter, have the matter
+ * shared with them, or have the **View All Matters** privilege.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -36,7 +34,7 @@ package com.google.api.services.vault.v1.model;
 public final class Hold extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the hold applies to the enumerated accounts and org_unit must be empty.
+   * If set, the hold applies to the specified accounts and **orgUnit** must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +47,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus to be searched.
+   * The service to be searched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,15 +68,15 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * If set, the hold applies to all members of the organizational unit and accounts must be empty.
-   * This property is mutable. For groups holds, set the accounts field.
+   * If set, the hold applies to all members of the organizational unit and **accounts** must be
+   * empty. This property is mutable. For Groups holds, set **accounts**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldOrgUnit orgUnit;
 
   /**
-   * The corpus-specific query. If set, the corpusQuery must match corpus type.
+   * Service-specific options. If set, **CorpusQuery** must match **CorpusType**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +90,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * If set, the hold applies to the enumerated accounts and org_unit must be empty.
+   * If set, the hold applies to the specified accounts and **orgUnit** must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<HeldAccount> getAccounts() {
@@ -100,7 +98,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the hold applies to the enumerated accounts and org_unit must be empty.
+   * If set, the hold applies to the specified accounts and **orgUnit** must be empty.
    * @param accounts accounts or {@code null} for none
    */
   public Hold setAccounts(java.util.List<HeldAccount> accounts) {
@@ -109,7 +107,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus to be searched.
+   * The service to be searched.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorpus() {
@@ -117,7 +115,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus to be searched.
+   * The service to be searched.
    * @param corpus corpus or {@code null} for none
    */
   public Hold setCorpus(java.lang.String corpus) {
@@ -160,8 +158,8 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the hold applies to all members of the organizational unit and accounts must be empty.
-   * This property is mutable. For groups holds, set the accounts field.
+   * If set, the hold applies to all members of the organizational unit and **accounts** must be
+   * empty. This property is mutable. For Groups holds, set **accounts**.
    * @return value or {@code null} for none
    */
   public HeldOrgUnit getOrgUnit() {
@@ -169,8 +167,8 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the hold applies to all members of the organizational unit and accounts must be empty.
-   * This property is mutable. For groups holds, set the accounts field.
+   * If set, the hold applies to all members of the organizational unit and **accounts** must be
+   * empty. This property is mutable. For Groups holds, set **accounts**.
    * @param orgUnit orgUnit or {@code null} for none
    */
   public Hold setOrgUnit(HeldOrgUnit orgUnit) {
@@ -179,7 +177,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus-specific query. If set, the corpusQuery must match corpus type.
+   * Service-specific options. If set, **CorpusQuery** must match **CorpusType**.
    * @return value or {@code null} for none
    */
   public CorpusQuery getQuery() {
@@ -187,7 +185,7 @@ public final class Hold extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus-specific query. If set, the corpusQuery must match corpus type.
+   * Service-specific options. If set, **CorpusQuery** must match **CorpusType**.
    * @param query query or {@code null} for none
    */
   public Hold setQuery(CorpusQuery query) {

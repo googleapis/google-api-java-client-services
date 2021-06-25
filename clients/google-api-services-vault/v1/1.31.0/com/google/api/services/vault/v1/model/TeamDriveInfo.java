@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class TeamDriveInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Team Drive IDs, as provided by Drive API.
+   * List of Team Drive IDs, as provided by the [Drive API](https://developers.google.com/drive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> teamDriveIds;
 
   /**
-   * List of Team Drive IDs, as provided by Drive API.
+   * List of Team Drive IDs, as provided by the [Drive API](https://developers.google.com/drive).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTeamDriveIds() {
@@ -45,7 +45,7 @@ public final class TeamDriveInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of Team Drive IDs, as provided by Drive API.
+   * List of Team Drive IDs, as provided by the [Drive API](https://developers.google.com/drive).
    * @param teamDriveIds teamDriveIds or {@code null} for none
    */
   public TeamDriveInfo setTeamDriveIds(java.util.List<java.lang.String> teamDriveIds) {

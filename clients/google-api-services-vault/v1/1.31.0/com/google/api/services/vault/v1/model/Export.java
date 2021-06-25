@@ -17,10 +17,10 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * An export To work with Vault resources, the account must have the [required Vault privileges]
- * (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter,
- * the account must have created the matter, have the matter shared with them, or have the **View
- * All Matters** privilege.
+ * An export. To work with Vault resources, the account must have the [required Vault
+ * privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access
+ * a matter, the account must have created the matter, have the matter shared with them, or have the
+ * **View All Matters** privilege.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -33,7 +33,7 @@ package com.google.api.services.vault.v1.model;
 public final class Export extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Export sink for cloud storage files.
+   * Output only. The sink for export files in Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Advanced options of the export.
+   * Additional export options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The search query being exported.
+   * The query parameters used to create the export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,21 +89,21 @@ public final class Export extends com.google.api.client.json.GenericJson {
   private UserInfo requester;
 
   /**
-   * Output only. Export statistics.
+   * Output only. Details about the export progress and size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExportStats stats;
 
   /**
-   * Output only. The export status.
+   * Output only. The status of the export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. Export sink for cloud storage files.
+   * Output only. The sink for export files in Cloud Storage.
    * @return value or {@code null} for none
    */
   public CloudStorageSink getCloudStorageSink() {
@@ -111,7 +111,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Export sink for cloud storage files.
+   * Output only. The sink for export files in Cloud Storage.
    * @param cloudStorageSink cloudStorageSink or {@code null} for none
    */
   public Export setCloudStorageSink(CloudStorageSink cloudStorageSink) {
@@ -137,7 +137,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advanced options of the export.
+   * Additional export options.
    * @return value or {@code null} for none
    */
   public ExportOptions getExportOptions() {
@@ -145,7 +145,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advanced options of the export.
+   * Additional export options.
    * @param exportOptions exportOptions or {@code null} for none
    */
   public Export setExportOptions(ExportOptions exportOptions) {
@@ -205,7 +205,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The search query being exported.
+   * The query parameters used to create the export.
    * @return value or {@code null} for none
    */
   public Query getQuery() {
@@ -213,7 +213,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The search query being exported.
+   * The query parameters used to create the export.
    * @param query query or {@code null} for none
    */
   public Export setQuery(Query query) {
@@ -239,7 +239,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Export statistics.
+   * Output only. Details about the export progress and size.
    * @return value or {@code null} for none
    */
   public ExportStats getStats() {
@@ -247,7 +247,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Export statistics.
+   * Output only. Details about the export progress and size.
    * @param stats stats or {@code null} for none
    */
   public Export setStats(ExportStats stats) {
@@ -256,7 +256,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The export status.
+   * Output only. The status of the export.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -264,7 +264,7 @@ public final class Export extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The export status.
+   * Output only. The status of the export.
    * @param status status or {@code null} for none
    */
   public Export setStatus(java.lang.String status) {

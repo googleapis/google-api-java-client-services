@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Shared drives to search
+ * The shared drives to search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.vault.v1.model;
 public final class SharedDriveInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Shared drive IDs, as provided by Drive API.
+   * A list of shared drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sharedDriveIds;
 
   /**
-   * List of Shared drive IDs, as provided by Drive API.
+   * A list of shared drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSharedDriveIds() {
@@ -45,7 +47,8 @@ public final class SharedDriveInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * List of Shared drive IDs, as provided by Drive API.
+   * A list of shared drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
    * @param sharedDriveIds sharedDriveIds or {@code null} for none
    */
   public SharedDriveInfo setSharedDriveIds(java.util.List<java.lang.String> sharedDriveIds) {

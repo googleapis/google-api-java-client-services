@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Query options for hangouts chat holds.
+ * Options for Chat holds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class HeldHangoutsChatQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, include rooms the user has participated in.
+   * To include messages in Chat spaces the user was a member of, set to **true**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeRooms;
 
   /**
-   * If true, include rooms the user has participated in.
+   * To include messages in Chat spaces the user was a member of, set to **true**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeRooms() {
@@ -45,7 +45,7 @@ public final class HeldHangoutsChatQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * If true, include rooms the user has participated in.
+   * To include messages in Chat spaces the user was a member of, set to **true**.
    * @param includeRooms includeRooms or {@code null} for none
    */
   public HeldHangoutsChatQuery setIncludeRooms(java.lang.Boolean includeRooms) {

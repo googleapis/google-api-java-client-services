@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Accounts to search
+ * The Chat spaces to search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.vault.v1.model;
 public final class HangoutsChatInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of rooms to search.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/hangouts/chat).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> roomId;
 
   /**
-   * A set of rooms to search.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/hangouts/chat).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRoomId() {
@@ -45,7 +47,8 @@ public final class HangoutsChatInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A set of rooms to search.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/hangouts/chat).
    * @param roomId roomId or {@code null} for none
    */
   public HangoutsChatInfo setRoomId(java.util.List<java.lang.String> roomId) {

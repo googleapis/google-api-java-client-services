@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Corpus specific queries.
+ * Service-specific options for holds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,42 +30,42 @@ package com.google.api.services.vault.v1.model;
 public final class CorpusQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details pertaining to Drive holds. If set, corpus must be Drive.
+   * Service-specific options for Drive holds. If set, **CorpusType** must be **DRIVE**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldDriveQuery driveQuery;
 
   /**
-   * Details pertaining to Groups holds. If set, corpus must be Groups.
+   * Service-specific options for Groups holds. If set, **CorpusType** must be **GROUPS**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldGroupsQuery groupsQuery;
 
   /**
-   * Details pertaining to Hangouts Chat holds. If set, corpus must be Hangouts Chat.
+   * Service-specific options for Chat holds. If set, **CorpusType** must be **HANGOUTS_CHAT**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldHangoutsChatQuery hangoutsChatQuery;
 
   /**
-   * Details pertaining to mail holds. If set, corpus must be mail.
+   * Service-specific options for Gmail holds. If set, **CorpusType** must be **MAIL**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldMailQuery mailQuery;
 
   /**
-   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * Service-specific options for Voice holds. If set, **CorpusType** must be **VOICE**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HeldVoiceQuery voiceQuery;
 
   /**
-   * Details pertaining to Drive holds. If set, corpus must be Drive.
+   * Service-specific options for Drive holds. If set, **CorpusType** must be **DRIVE**.
    * @return value or {@code null} for none
    */
   public HeldDriveQuery getDriveQuery() {
@@ -73,7 +73,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Drive holds. If set, corpus must be Drive.
+   * Service-specific options for Drive holds. If set, **CorpusType** must be **DRIVE**.
    * @param driveQuery driveQuery or {@code null} for none
    */
   public CorpusQuery setDriveQuery(HeldDriveQuery driveQuery) {
@@ -82,7 +82,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Groups holds. If set, corpus must be Groups.
+   * Service-specific options for Groups holds. If set, **CorpusType** must be **GROUPS**.
    * @return value or {@code null} for none
    */
   public HeldGroupsQuery getGroupsQuery() {
@@ -90,7 +90,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Groups holds. If set, corpus must be Groups.
+   * Service-specific options for Groups holds. If set, **CorpusType** must be **GROUPS**.
    * @param groupsQuery groupsQuery or {@code null} for none
    */
   public CorpusQuery setGroupsQuery(HeldGroupsQuery groupsQuery) {
@@ -99,7 +99,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Hangouts Chat holds. If set, corpus must be Hangouts Chat.
+   * Service-specific options for Chat holds. If set, **CorpusType** must be **HANGOUTS_CHAT**.
    * @return value or {@code null} for none
    */
   public HeldHangoutsChatQuery getHangoutsChatQuery() {
@@ -107,7 +107,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Hangouts Chat holds. If set, corpus must be Hangouts Chat.
+   * Service-specific options for Chat holds. If set, **CorpusType** must be **HANGOUTS_CHAT**.
    * @param hangoutsChatQuery hangoutsChatQuery or {@code null} for none
    */
   public CorpusQuery setHangoutsChatQuery(HeldHangoutsChatQuery hangoutsChatQuery) {
@@ -116,7 +116,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to mail holds. If set, corpus must be mail.
+   * Service-specific options for Gmail holds. If set, **CorpusType** must be **MAIL**.
    * @return value or {@code null} for none
    */
   public HeldMailQuery getMailQuery() {
@@ -124,7 +124,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to mail holds. If set, corpus must be mail.
+   * Service-specific options for Gmail holds. If set, **CorpusType** must be **MAIL**.
    * @param mailQuery mailQuery or {@code null} for none
    */
   public CorpusQuery setMailQuery(HeldMailQuery mailQuery) {
@@ -133,7 +133,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * Service-specific options for Voice holds. If set, **CorpusType** must be **VOICE**.
    * @return value or {@code null} for none
    */
   public HeldVoiceQuery getVoiceQuery() {
@@ -141,7 +141,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * Service-specific options for Voice holds. If set, **CorpusType** must be **VOICE**.
    * @param voiceQuery voiceQuery or {@code null} for none
    */
   public CorpusQuery setVoiceQuery(HeldVoiceQuery voiceQuery) {

@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Stats of an export.
+ * Progress information for an export.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.vault.v1.model;
 public final class ExportStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of documents already processed by the export.
+   * The number of messages or files already processed for export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,14 +44,14 @@ public final class ExportStats extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeInBytes;
 
   /**
-   * The number of documents to be exported.
+   * The number of messages or files to be exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalArtifactCount;
 
   /**
-   * The number of documents already processed by the export.
+   * The number of messages or files already processed for export.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExportedArtifactCount() {
@@ -59,7 +59,7 @@ public final class ExportStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of documents already processed by the export.
+   * The number of messages or files already processed for export.
    * @param exportedArtifactCount exportedArtifactCount or {@code null} for none
    */
   public ExportStats setExportedArtifactCount(java.lang.Long exportedArtifactCount) {
@@ -85,7 +85,7 @@ public final class ExportStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of documents to be exported.
+   * The number of messages or files to be exported.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalArtifactCount() {
@@ -93,7 +93,7 @@ public final class ExportStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of documents to be exported.
+   * The number of messages or files to be exported.
    * @param totalArtifactCount totalArtifactCount or {@code null} for none
    */
   public ExportStats setTotalArtifactCount(java.lang.Long totalArtifactCount) {

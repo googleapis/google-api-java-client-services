@@ -17,11 +17,11 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * An account being held in a particular hold. This structure is immutable. This can be either a
- * single user or a google group, depending on the corpus. To work with Vault resources, the account
- * must have the [required Vault privileges] (https://support.google.com/vault/answer/2799699) and
- * access to the matter. To access a matter, the account must have created the matter, have the
- * matter shared with them, or have the **View All Matters** privilege.
+ * An account covered by a hold. This structure is immutable. It can be an individual account or a
+ * Google Group, depending on the service. To work with Vault resources, the account must have the
+ * [required Vault privileges] (https://support.google.com/vault/answer/2799699) and access to the
+ * matter. To access a matter, the account must have created the matter, have the matter shared with
+ * them, or have the **View All Matters** privilege.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -34,7 +34,7 @@ package com.google.api.services.vault.v1.model;
 public final class HeldAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The account's ID as provided by the Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +42,7 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
 
   /**
    * The primary email address of the account. If used as an input, this takes precedence over
-   * account ID.
+   * **accountId**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
   private java.lang.String lastName;
 
   /**
-   * The account's ID as provided by the Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -78,7 +78,7 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The account's ID as provided by the Admin SDK.
+   * The account ID, as provided by the [Admin SDK](https://developers.google.com/admin-sdk/).
    * @param accountId accountId or {@code null} for none
    */
   public HeldAccount setAccountId(java.lang.String accountId) {
@@ -88,7 +88,7 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
 
   /**
    * The primary email address of the account. If used as an input, this takes precedence over
-   * account ID.
+   * **accountId**.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -97,7 +97,7 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
 
   /**
    * The primary email address of the account. If used as an input, this takes precedence over
-   * account ID.
+   * **accountId**.
    * @param email email or {@code null} for none
    */
   public HeldAccount setEmail(java.lang.String email) {

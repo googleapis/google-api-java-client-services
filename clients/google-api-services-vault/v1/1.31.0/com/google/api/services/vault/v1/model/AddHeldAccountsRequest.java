@@ -30,24 +30,24 @@ package com.google.api.services.vault.v1.model;
 public final class AddHeldAccountsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
-   * specified, but not both.
+   * A comma-separated list of the account IDs of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> accountIds;
 
   /**
-   * Emails to identify which accounts to add. Only emails or only account_ids should be specified,
-   * but not both.
+   * A comma-separated list of the emails of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> emails;
 
   /**
-   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
-   * specified, but not both.
+   * A comma-separated list of the account IDs of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccountIds() {
@@ -55,8 +55,8 @@ public final class AddHeldAccountsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Account IDs to identify which accounts to add. Only account_ids or only emails should be
-   * specified, but not both.
+   * A comma-separated list of the account IDs of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * @param accountIds accountIds or {@code null} for none
    */
   public AddHeldAccountsRequest setAccountIds(java.util.List<java.lang.String> accountIds) {
@@ -65,8 +65,8 @@ public final class AddHeldAccountsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Emails to identify which accounts to add. Only emails or only account_ids should be specified,
-   * but not both.
+   * A comma-separated list of the emails of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmails() {
@@ -74,8 +74,8 @@ public final class AddHeldAccountsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Emails to identify which accounts to add. Only emails or only account_ids should be specified,
-   * but not both.
+   * A comma-separated list of the emails of the accounts to add to the hold. Specify either
+   * **emails** or **account_ids**, but not both.
    * @param emails emails or {@code null} for none
    */
   public AddHeldAccountsRequest setEmails(java.util.List<java.lang.String> emails) {

@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Drive search advanced options
+ * Additional options for Drive search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.vault.v1.model;
 public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to include shared drive.
+   * Set to **true** to include shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +44,15 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeTeamDrives;
 
   /**
-   * Search the versions of the Drive file as of the reference date. These timestamps are in GMT and
-   * rounded down to the given date.
+   * Search the current version of the Drive file, but export the contents of the last version saved
+   * before 12:00 AM UTC on the specified date. Enter the date in UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String versionDate;
 
   /**
-   * Set to true to include shared drive.
+   * Set to **true** to include shared drives.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeSharedDrives() {
@@ -60,7 +60,7 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true to include shared drive.
+   * Set to **true** to include shared drives.
    * @param includeSharedDrives includeSharedDrives or {@code null} for none
    */
   public DriveOptions setIncludeSharedDrives(java.lang.Boolean includeSharedDrives) {
@@ -86,8 +86,8 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Search the versions of the Drive file as of the reference date. These timestamps are in GMT and
-   * rounded down to the given date.
+   * Search the current version of the Drive file, but export the contents of the last version saved
+   * before 12:00 AM UTC on the specified date. Enter the date in UTC.
    * @return value or {@code null} for none
    */
   public String getVersionDate() {
@@ -95,8 +95,8 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Search the versions of the Drive file as of the reference date. These timestamps are in GMT and
-   * rounded down to the given date.
+   * Search the current version of the Drive file, but export the contents of the last version saved
+   * before 12:00 AM UTC on the specified date. Enter the date in UTC.
    * @param versionDate versionDate or {@code null} for none
    */
   public DriveOptions setVersionDate(String versionDate) {

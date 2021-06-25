@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Hangouts chat search advanced options
+ * Additional options for Google Chat search
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.vault.v1.model;
 public final class HangoutsChatOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to include rooms.
+   * For searches by account or organizational unit, set to **true** to include rooms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeRooms;
 
   /**
-   * Set to true to include rooms.
+   * For searches by account or organizational unit, set to **true** to include rooms.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeRooms() {
@@ -45,7 +45,7 @@ public final class HangoutsChatOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Set to true to include rooms.
+   * For searches by account or organizational unit, set to **true** to include rooms.
    * @param includeRooms includeRooms or {@code null} for none
    */
   public HangoutsChatOptions setIncludeRooms(java.lang.Boolean includeRooms) {

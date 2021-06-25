@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Export advanced options
+ * Additional options for exports
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,49 +30,49 @@ package com.google.api.services.vault.v1.model;
 public final class ExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Option available for Drive export.
+   * Options for Drive exports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveExportOptions driveOptions;
 
   /**
-   * Option available for groups export.
+   * Options for Groups exports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GroupsExportOptions groupsOptions;
 
   /**
-   * Option available for hangouts chat export.
+   * Options for Chat exports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HangoutsChatExportOptions hangoutsChatOptions;
 
   /**
-   * Option available for mail export.
+   * Options for Gmail exports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MailExportOptions mailOptions;
 
   /**
-   * The requested export location.
+   * The requested data region for the export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Option available for voice export.
+   * Options for Voice exports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VoiceExportOptions voiceOptions;
 
   /**
-   * Option available for Drive export.
+   * Options for Drive exports.
    * @return value or {@code null} for none
    */
   public DriveExportOptions getDriveOptions() {
@@ -80,7 +80,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for Drive export.
+   * Options for Drive exports.
    * @param driveOptions driveOptions or {@code null} for none
    */
   public ExportOptions setDriveOptions(DriveExportOptions driveOptions) {
@@ -89,7 +89,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for groups export.
+   * Options for Groups exports.
    * @return value or {@code null} for none
    */
   public GroupsExportOptions getGroupsOptions() {
@@ -97,7 +97,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for groups export.
+   * Options for Groups exports.
    * @param groupsOptions groupsOptions or {@code null} for none
    */
   public ExportOptions setGroupsOptions(GroupsExportOptions groupsOptions) {
@@ -106,7 +106,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for hangouts chat export.
+   * Options for Chat exports.
    * @return value or {@code null} for none
    */
   public HangoutsChatExportOptions getHangoutsChatOptions() {
@@ -114,7 +114,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for hangouts chat export.
+   * Options for Chat exports.
    * @param hangoutsChatOptions hangoutsChatOptions or {@code null} for none
    */
   public ExportOptions setHangoutsChatOptions(HangoutsChatExportOptions hangoutsChatOptions) {
@@ -123,7 +123,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for mail export.
+   * Options for Gmail exports.
    * @return value or {@code null} for none
    */
   public MailExportOptions getMailOptions() {
@@ -131,7 +131,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for mail export.
+   * Options for Gmail exports.
    * @param mailOptions mailOptions or {@code null} for none
    */
   public ExportOptions setMailOptions(MailExportOptions mailOptions) {
@@ -140,7 +140,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The requested export location.
+   * The requested data region for the export.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -148,7 +148,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The requested export location.
+   * The requested data region for the export.
    * @param region region or {@code null} for none
    */
   public ExportOptions setRegion(java.lang.String region) {
@@ -157,7 +157,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for voice export.
+   * Options for Voice exports.
    * @return value or {@code null} for none
    */
   public VoiceExportOptions getVoiceOptions() {
@@ -165,7 +165,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for voice export.
+   * Options for Voice exports.
    * @param voiceOptions voiceOptions or {@code null} for none
    */
   public ExportOptions setVoiceOptions(VoiceExportOptions voiceOptions) {

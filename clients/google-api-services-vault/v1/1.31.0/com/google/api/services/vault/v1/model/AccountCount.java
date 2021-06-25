@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Count number for each account.
+ * The results count for each account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class AccountCount extends com.google.api.client.json.GenericJson {
   private UserInfo account;
 
   /**
-   * The number of artifacts found for this account.
+   * The number of results (messages or files) found for this account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,7 +61,7 @@ public final class AccountCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of artifacts found for this account.
+   * The number of results (messages or files) found for this account.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -69,7 +69,7 @@ public final class AccountCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of artifacts found for this account.
+   * The number of results (messages or files) found for this account.
    * @param count count or {@code null} for none
    */
   public AccountCount setCount(java.lang.Long count) {

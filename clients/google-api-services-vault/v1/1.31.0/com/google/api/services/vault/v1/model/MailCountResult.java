@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Mail specific count metrics.
+ * Gmail and classic Hangouts-specific count metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.vault.v1.model;
 public final class MailCountResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Error occurred when querying these accounts.
+   * Errors occurred when querying these accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   private java.lang.Long matchingAccountsCount;
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
+   * because they are not on hold. For other data scopes, this field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   private java.lang.Long queriedAccountsCount;
 
   /**
-   * Error occurred when querying these accounts.
+   * Errors occurred when querying these accounts.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountCountError> getAccountCountErrors() {
@@ -86,7 +86,7 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Error occurred when querying these accounts.
+   * Errors occurred when querying these accounts.
    * @param accountCountErrors accountCountErrors or {@code null} for none
    */
   public MailCountResult setAccountCountErrors(java.util.List<AccountCountError> accountCountErrors) {
@@ -129,8 +129,8 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
+   * because they are not on hold. For other data scopes, this field is not set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNonQueryableAccounts() {
@@ -138,8 +138,8 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
+   * because they are not on hold. For other data scopes, this field is not set.
    * @param nonQueryableAccounts nonQueryableAccounts or {@code null} for none
    */
   public MailCountResult setNonQueryableAccounts(java.util.List<java.lang.String> nonQueryableAccounts) {

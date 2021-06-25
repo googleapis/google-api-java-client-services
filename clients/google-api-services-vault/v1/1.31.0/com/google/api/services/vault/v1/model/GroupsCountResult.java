@@ -63,8 +63,8 @@ public final class GroupsCountResult extends com.google.api.client.json.GenericJ
   private java.lang.Long matchingAccountsCount;
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, these accounts in the request are not queried because they
+   * are not on hold. For other data scope, this field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class GroupsCountResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, these accounts in the request are not queried because they
+   * are not on hold. For other data scope, this field is not set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNonQueryableAccounts() {
@@ -138,8 +138,8 @@ public final class GroupsCountResult extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * When data scope is HELD_DATA in the request Query, these accounts in the request are not
-   * queried because they are not on hold. For other data scope, this field is not set.
+   * When **DataScope** is **HELD_DATA**, these accounts in the request are not queried because they
+   * are not on hold. For other data scope, this field is not set.
    * @param nonQueryableAccounts nonQueryableAccounts or {@code null} for none
    */
   public GroupsCountResult setNonQueryableAccounts(java.util.List<java.lang.String> nonQueryableAccounts) {

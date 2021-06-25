@@ -30,31 +30,32 @@ package com.google.api.services.vault.v1.model;
 public final class HeldGroupsQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terms;
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -62,8 +63,8 @@ public final class HeldGroupsQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @param endTime endTime or {@code null} for none
    */
   public HeldGroupsQuery setEndTime(String endTime) {
@@ -72,8 +73,8 @@ public final class HeldGroupsQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -81,8 +82,8 @@ public final class HeldGroupsQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the query. Specify in GMT. The value is rounded to 12 AM on the specified
+   * date.
    * @param startTime startTime or {@code null} for none
    */
   public HeldGroupsQuery setStartTime(String startTime) {
@@ -91,7 +92,8 @@ public final class HeldGroupsQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerms() {
@@ -99,7 +101,8 @@ public final class HeldGroupsQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The search terms for the hold.
+   * The [search operators](https://support.google.com/vault/answer/2474474) used to refine the
+   * messages covered by the hold.
    * @param terms terms or {@code null} for none
    */
   public HeldGroupsQuery setTerms(java.lang.String terms) {

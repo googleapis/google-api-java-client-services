@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * A query definition relevant for search & export.
+ * The query definition used for search and export.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,73 +30,72 @@ package com.google.api.services.vault.v1.model;
 public final class Query extends com.google.api.client.json.GenericJson {
 
   /**
-   * When 'ACCOUNT' is chosen as search method, account_info needs to be specified.
+   * Required when **SearchMethod** is **ACCOUNT**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccountInfo accountInfo;
 
   /**
-   * The corpus to search.
+   * The Google Workspace service to search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String corpus;
 
   /**
-   * The data source to search from.
+   * The data source to search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataScope;
 
   /**
-   * For Drive search, specify more options in this field.
+   * Set Drive search-specific options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveOptions driveOptions;
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * When 'ROOM' is chosen as search method, hangout_chats_info needs to be specified. (read-only)
+   * Required when **SearchMethod** is **ROOM**. (read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HangoutsChatInfo hangoutsChatInfo;
 
   /**
-   * For hangouts chat search, specify more options in this field. (read-only)
+   * Set Chat search-specific options. (read-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HangoutsChatOptions hangoutsChatOptions;
 
   /**
-   * For mail search, specify more options in this field.
+   * Set Gmail search-specific options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MailOptions mailOptions;
 
   /**
-   * The search method to use. This field is similar to the search_method field but is introduced to
-   * support shared drives. It supports all search method types. In case the search_method is
-   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * The entity to search. This field replaces **searchMethod** to support shared drives. When
+   * **searchMethod** is **TEAM_DRIVE**, the response of this field is **SHARED_DRIVE**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * When 'ORG_UNIT' is chosen as as search method, org_unit_info needs to be specified.
+   * Required when **SearchMethod** is **ORG_UNIT**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,51 +109,54 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private java.lang.String searchMethod;
 
   /**
-   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * Required when **SearchMethod** is **SHARED_DRIVE**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SharedDriveInfo sharedDriveInfo;
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * When 'TEAM_DRIVE' is chosen as search method, team_drive_info needs to be specified.
+   * Required when **SearchMethod** is **TEAM_DRIVE**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TeamDriveInfo teamDriveInfo;
 
   /**
-   * The corpus-specific search operators used to generate search results.
+   * Service-specific [search operators](https://support.google.com/vault/answer/2474474) to filter
+   * search results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terms;
 
   /**
-   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For more
-   * information, see Time Zone.
+   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For a list of
+   * time zone names, see [Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+   * For more information about how Vault uses time zones, see [the Vault help
+   * center](https://support.google.com/vault/answer/6092995#time).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * For voice search, specify more options in this field.
+   * Set Voice search-specific options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VoiceOptions voiceOptions;
 
   /**
-   * When 'ACCOUNT' is chosen as search method, account_info needs to be specified.
+   * Required when **SearchMethod** is **ACCOUNT**.
    * @return value or {@code null} for none
    */
   public AccountInfo getAccountInfo() {
@@ -162,7 +164,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'ACCOUNT' is chosen as search method, account_info needs to be specified.
+   * Required when **SearchMethod** is **ACCOUNT**.
    * @param accountInfo accountInfo or {@code null} for none
    */
   public Query setAccountInfo(AccountInfo accountInfo) {
@@ -171,7 +173,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus to search.
+   * The Google Workspace service to search.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorpus() {
@@ -179,7 +181,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus to search.
+   * The Google Workspace service to search.
    * @param corpus corpus or {@code null} for none
    */
   public Query setCorpus(java.lang.String corpus) {
@@ -188,7 +190,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data source to search from.
+   * The data source to search.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataScope() {
@@ -196,7 +198,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data source to search from.
+   * The data source to search.
    * @param dataScope dataScope or {@code null} for none
    */
   public Query setDataScope(java.lang.String dataScope) {
@@ -205,7 +207,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Drive search, specify more options in this field.
+   * Set Drive search-specific options.
    * @return value or {@code null} for none
    */
   public DriveOptions getDriveOptions() {
@@ -213,7 +215,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Drive search, specify more options in this field.
+   * Set Drive search-specific options.
    * @param driveOptions driveOptions or {@code null} for none
    */
   public Query setDriveOptions(DriveOptions driveOptions) {
@@ -222,8 +224,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -231,8 +233,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The end time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * @param endTime endTime or {@code null} for none
    */
   public Query setEndTime(String endTime) {
@@ -241,7 +243,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'ROOM' is chosen as search method, hangout_chats_info needs to be specified. (read-only)
+   * Required when **SearchMethod** is **ROOM**. (read-only)
    * @return value or {@code null} for none
    */
   public HangoutsChatInfo getHangoutsChatInfo() {
@@ -249,7 +251,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'ROOM' is chosen as search method, hangout_chats_info needs to be specified. (read-only)
+   * Required when **SearchMethod** is **ROOM**. (read-only)
    * @param hangoutsChatInfo hangoutsChatInfo or {@code null} for none
    */
   public Query setHangoutsChatInfo(HangoutsChatInfo hangoutsChatInfo) {
@@ -258,7 +260,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For hangouts chat search, specify more options in this field. (read-only)
+   * Set Chat search-specific options. (read-only)
    * @return value or {@code null} for none
    */
   public HangoutsChatOptions getHangoutsChatOptions() {
@@ -266,7 +268,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For hangouts chat search, specify more options in this field. (read-only)
+   * Set Chat search-specific options. (read-only)
    * @param hangoutsChatOptions hangoutsChatOptions or {@code null} for none
    */
   public Query setHangoutsChatOptions(HangoutsChatOptions hangoutsChatOptions) {
@@ -275,7 +277,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For mail search, specify more options in this field.
+   * Set Gmail search-specific options.
    * @return value or {@code null} for none
    */
   public MailOptions getMailOptions() {
@@ -283,7 +285,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For mail search, specify more options in this field.
+   * Set Gmail search-specific options.
    * @param mailOptions mailOptions or {@code null} for none
    */
   public Query setMailOptions(MailOptions mailOptions) {
@@ -292,9 +294,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The search method to use. This field is similar to the search_method field but is introduced to
-   * support shared drives. It supports all search method types. In case the search_method is
-   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * The entity to search. This field replaces **searchMethod** to support shared drives. When
+   * **searchMethod** is **TEAM_DRIVE**, the response of this field is **SHARED_DRIVE**.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -302,9 +303,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The search method to use. This field is similar to the search_method field but is introduced to
-   * support shared drives. It supports all search method types. In case the search_method is
-   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * The entity to search. This field replaces **searchMethod** to support shared drives. When
+   * **searchMethod** is **TEAM_DRIVE**, the response of this field is **SHARED_DRIVE**.
    * @param method method or {@code null} for none
    */
   public Query setMethod(java.lang.String method) {
@@ -313,7 +313,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'ORG_UNIT' is chosen as as search method, org_unit_info needs to be specified.
+   * Required when **SearchMethod** is **ORG_UNIT**.
    * @return value or {@code null} for none
    */
   public OrgUnitInfo getOrgUnitInfo() {
@@ -321,7 +321,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'ORG_UNIT' is chosen as as search method, org_unit_info needs to be specified.
+   * Required when **SearchMethod** is **ORG_UNIT**.
    * @param orgUnitInfo orgUnitInfo or {@code null} for none
    */
   public Query setOrgUnitInfo(OrgUnitInfo orgUnitInfo) {
@@ -347,7 +347,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * Required when **SearchMethod** is **SHARED_DRIVE**.
    * @return value or {@code null} for none
    */
   public SharedDriveInfo getSharedDriveInfo() {
@@ -355,7 +355,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * Required when **SearchMethod** is **SHARED_DRIVE**.
    * @param sharedDriveInfo sharedDriveInfo or {@code null} for none
    */
   public Query setSharedDriveInfo(SharedDriveInfo sharedDriveInfo) {
@@ -364,8 +364,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -373,8 +373,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time range for the search query. These timestamps are in GMT and rounded down to the
-   * start of the given date.
+   * The start time for the search query. Specify in GMT. The value is rounded to 12 AM on the
+   * specified date.
    * @param startTime startTime or {@code null} for none
    */
   public Query setStartTime(String startTime) {
@@ -383,7 +383,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'TEAM_DRIVE' is chosen as search method, team_drive_info needs to be specified.
+   * Required when **SearchMethod** is **TEAM_DRIVE**.
    * @return value or {@code null} for none
    */
   public TeamDriveInfo getTeamDriveInfo() {
@@ -391,7 +391,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When 'TEAM_DRIVE' is chosen as search method, team_drive_info needs to be specified.
+   * Required when **SearchMethod** is **TEAM_DRIVE**.
    * @param teamDriveInfo teamDriveInfo or {@code null} for none
    */
   public Query setTeamDriveInfo(TeamDriveInfo teamDriveInfo) {
@@ -400,7 +400,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus-specific search operators used to generate search results.
+   * Service-specific [search operators](https://support.google.com/vault/answer/2474474) to filter
+   * search results.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerms() {
@@ -408,7 +409,8 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The corpus-specific search operators used to generate search results.
+   * Service-specific [search operators](https://support.google.com/vault/answer/2474474) to filter
+   * search results.
    * @param terms terms or {@code null} for none
    */
   public Query setTerms(java.lang.String terms) {
@@ -417,8 +419,10 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For more
-   * information, see Time Zone.
+   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For a list of
+   * time zone names, see [Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+   * For more information about how Vault uses time zones, see [the Vault help
+   * center](https://support.google.com/vault/answer/6092995#time).
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -426,8 +430,10 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For more
-   * information, see Time Zone.
+   * The time zone name. It should be an IANA TZ name, such as "America/Los_Angeles". For a list of
+   * time zone names, see [Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+   * For more information about how Vault uses time zones, see [the Vault help
+   * center](https://support.google.com/vault/answer/6092995#time).
    * @param timeZone timeZone or {@code null} for none
    */
   public Query setTimeZone(java.lang.String timeZone) {
@@ -436,7 +442,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For voice search, specify more options in this field.
+   * Set Voice search-specific options.
    * @return value or {@code null} for none
    */
   public VoiceOptions getVoiceOptions() {
@@ -444,7 +450,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For voice search, specify more options in this field.
+   * Set Voice search-specific options.
    * @param voiceOptions voiceOptions or {@code null} for none
    */
   public Query setVoiceOptions(VoiceOptions voiceOptions) {

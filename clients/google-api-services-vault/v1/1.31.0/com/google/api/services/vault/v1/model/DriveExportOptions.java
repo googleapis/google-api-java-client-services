@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * The options for Drive export.
+ * Options for Drive exports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.vault.v1.model;
 public final class DriveExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to include access level information for users with indirect access to files.
+   * To include access level information for users with [indirect
+   * access](https://support.google.com/vault/answer/6099459#metadata) to files, set to **true**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeAccessInfo;
 
   /**
-   * Set to true to include access level information for users with indirect access to files.
+   * To include access level information for users with [indirect
+   * access](https://support.google.com/vault/answer/6099459#metadata) to files, set to **true**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeAccessInfo() {
@@ -45,7 +47,8 @@ public final class DriveExportOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * Set to true to include access level information for users with indirect access to files.
+   * To include access level information for users with [indirect
+   * access](https://support.google.com/vault/answer/6099459#metadata) to files, set to **true**.
    * @param includeAccessInfo includeAccessInfo or {@code null} for none
    */
   public DriveExportOptions setIncludeAccessInfo(java.lang.Boolean includeAccessInfo) {

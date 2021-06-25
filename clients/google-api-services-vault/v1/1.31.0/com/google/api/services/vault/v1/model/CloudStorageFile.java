@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * An export file on cloud storage
+ * The export file in Cloud Storage
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,9 +30,10 @@ package com.google.api.services.vault.v1.model;
 public final class CloudStorageFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can get individual export files by object
-   * name.
+   * The name of the Cloud Storage bucket for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis), but not to list the
+   * bucket contents. Instead, you can [get individual export
+   * files](https://cloud.google.com/storage/docs/json_api/v1/objects/get) by object name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,23 +47,25 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   private java.lang.String md5Hash;
 
   /**
-   * The cloud storage object name of this export file. Can be used in cloud storage JSON/XML API.
+   * The name of the Cloud Storage object for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectName;
 
   /**
-   * The size of the export file.
+   * The export file size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long size;
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can get individual export files by object
-   * name.
+   * The name of the Cloud Storage bucket for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis), but not to list the
+   * bucket contents. Instead, you can [get individual export
+   * files](https://cloud.google.com/storage/docs/json_api/v1/objects/get) by object name.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketName() {
@@ -70,9 +73,10 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can get individual export files by object
-   * name.
+   * The name of the Cloud Storage bucket for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis), but not to list the
+   * bucket contents. Instead, you can [get individual export
+   * files](https://cloud.google.com/storage/docs/json_api/v1/objects/get) by object name.
    * @param bucketName bucketName or {@code null} for none
    */
   public CloudStorageFile setBucketName(java.lang.String bucketName) {
@@ -98,7 +102,8 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud storage object name of this export file. Can be used in cloud storage JSON/XML API.
+   * The name of the Cloud Storage object for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis).
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectName() {
@@ -106,7 +111,8 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The cloud storage object name of this export file. Can be used in cloud storage JSON/XML API.
+   * The name of the Cloud Storage object for the export file. You can use this value in the [Cloud
+   * Storage JSON or XML APIs](https://cloud.google.com/storage/docs/apis).
    * @param objectName objectName or {@code null} for none
    */
   public CloudStorageFile setObjectName(java.lang.String objectName) {
@@ -115,7 +121,7 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The size of the export file.
+   * The export file size.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -123,7 +129,7 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The size of the export file.
+   * The export file size.
    * @param size size or {@code null} for none
    */
   public CloudStorageFile setSize(java.lang.Long size) {

@@ -3990,139 +3990,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.set(parameterName, value);
       }
     }
-    /**
-     * Updates an existing resource.
-     *
-     * Create a request for the method "commentThreads.update".
-     *
-     * This request holds the parameters needed by the youtube server.  After setting any optional
-     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
-     *
-     * @param part The *part* parameter specifies a comma-separated list of commentThread resource properties that the
-     *        API response will include. You must at least include the snippet part in the parameter
-     *        value since that part contains all of the properties that the API request can update.
-     * @param content the {@link com.google.api.services.youtube.model.CommentThread}
-     * @return the request
-     */
-    public Update update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.CommentThread content) throws java.io.IOException {
-      Update result = new Update(part, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Update extends YouTubeRequest<com.google.api.services.youtube.model.CommentThread> {
-
-      private static final String REST_PATH = "youtube/v3/commentThreads";
-
-      /**
-       * Updates an existing resource.
-       *
-       * Create a request for the method "commentThreads.update".
-       *
-       * This request holds the parameters needed by the the youtube server.  After setting any optional
-       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
-       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param part The *part* parameter specifies a comma-separated list of commentThread resource properties that the
-     *        API response will include. You must at least include the snippet part in the parameter
-     *        value since that part contains all of the properties that the API request can update.
-       * @param content the {@link com.google.api.services.youtube.model.CommentThread}
-       * @since 1.13
-       */
-      protected Update(java.util.List<java.lang.String> part, com.google.api.services.youtube.model.CommentThread content) {
-        super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.CommentThread.class);
-        this.part = com.google.api.client.util.Preconditions.checkNotNull(part, "Required parameter part must be specified.");
-      }
-
-      @Override
-      public Update set$Xgafv(java.lang.String $Xgafv) {
-        return (Update) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Update setAccessToken(java.lang.String accessToken) {
-        return (Update) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Update setAlt(java.lang.String alt) {
-        return (Update) super.setAlt(alt);
-      }
-
-      @Override
-      public Update setCallback(java.lang.String callback) {
-        return (Update) super.setCallback(callback);
-      }
-
-      @Override
-      public Update setFields(java.lang.String fields) {
-        return (Update) super.setFields(fields);
-      }
-
-      @Override
-      public Update setKey(java.lang.String key) {
-        return (Update) super.setKey(key);
-      }
-
-      @Override
-      public Update setOauthToken(java.lang.String oauthToken) {
-        return (Update) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Update) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Update setQuotaUser(java.lang.String quotaUser) {
-        return (Update) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Update setUploadType(java.lang.String uploadType) {
-        return (Update) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Update setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Update) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * The *part* parameter specifies a comma-separated list of commentThread resource properties
-       * that the API response will include. You must at least include the snippet part in the
-       * parameter value since that part contains all of the properties that the API request can
-       * update.
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> part;
-
-      /** The *part* parameter specifies a comma-separated list of commentThread resource properties that the
-     API response will include. You must at least include the snippet part in the parameter value since
-     that part contains all of the properties that the API request can update.
-       */
-      public java.util.List<java.lang.String> getPart() {
-        return part;
-      }
-
-      /**
-       * The *part* parameter specifies a comma-separated list of commentThread resource properties
-       * that the API response will include. You must at least include the snippet part in the
-       * parameter value since that part contains all of the properties that the API request can
-       * update.
-       */
-      public Update setPart(java.util.List<java.lang.String> part) {
-        this.part = part;
-        return this;
-      }
-
-      @Override
-      public Update set(String parameterName, Object value) {
-        return (Update) super.set(parameterName, value);
-      }
-    }
 
   }
 
@@ -16552,6 +16419,178 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
     }
 
+  }
+
+  /**
+   * An accessor for creating requests from the Youtube collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.Youtube.List request = youtube.youtube().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Youtube youtube() {
+    return new Youtube();
+  }
+
+  /**
+   * The "youtube" collection of methods.
+   */
+  public class Youtube {
+
+    /**
+     * An accessor for creating requests from the V3 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code YouTube youtube = new YouTube(...);}
+     *   {@code YouTube.V3.List request = youtube.v3().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public V3 v3() {
+      return new V3();
+    }
+
+    /**
+     * The "v3" collection of methods.
+     */
+    public class V3 {
+
+      /**
+       * Updates an existing resource.
+       *
+       * Create a request for the method "v3.updateCommentThreads".
+       *
+       * This request holds the parameters needed by the youtube server.  After setting any optional
+       * parameters, call the {@link UpdateCommentThreads#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param content the {@link com.google.api.services.youtube.model.CommentThread}
+       * @return the request
+       */
+      public UpdateCommentThreads updateCommentThreads(com.google.api.services.youtube.model.CommentThread content) throws java.io.IOException {
+        UpdateCommentThreads result = new UpdateCommentThreads(content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateCommentThreads extends YouTubeRequest<com.google.api.services.youtube.model.CommentThread> {
+
+        private static final String REST_PATH = "youtube/v3/commentThreads";
+
+        /**
+         * Updates an existing resource.
+         *
+         * Create a request for the method "v3.updateCommentThreads".
+         *
+         * This request holds the parameters needed by the the youtube server.  After setting any optional
+         * parameters, call the {@link UpdateCommentThreads#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateCommentThreads#initialize(com.google.api.client.googleapis.services
+         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param content the {@link com.google.api.services.youtube.model.CommentThread}
+         * @since 1.13
+         */
+        protected UpdateCommentThreads(com.google.api.services.youtube.model.CommentThread content) {
+          super(YouTube.this, "PUT", REST_PATH, content, com.google.api.services.youtube.model.CommentThread.class);
+        }
+
+        @Override
+        public UpdateCommentThreads set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateCommentThreads) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateCommentThreads setAccessToken(java.lang.String accessToken) {
+          return (UpdateCommentThreads) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateCommentThreads setAlt(java.lang.String alt) {
+          return (UpdateCommentThreads) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateCommentThreads setCallback(java.lang.String callback) {
+          return (UpdateCommentThreads) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateCommentThreads setFields(java.lang.String fields) {
+          return (UpdateCommentThreads) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateCommentThreads setKey(java.lang.String key) {
+          return (UpdateCommentThreads) super.setKey(key);
+        }
+
+        @Override
+        public UpdateCommentThreads setOauthToken(java.lang.String oauthToken) {
+          return (UpdateCommentThreads) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateCommentThreads setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateCommentThreads) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateCommentThreads setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateCommentThreads) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateCommentThreads setUploadType(java.lang.String uploadType) {
+          return (UpdateCommentThreads) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateCommentThreads setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateCommentThreads) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The *part* parameter specifies a comma-separated list of commentThread resource
+         * properties that the API response will include. You must at least include the snippet part
+         * in the parameter value since that part contains all of the properties that the API
+         * request can update.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> part;
+
+        /** The *part* parameter specifies a comma-separated list of commentThread resource properties that the
+       API response will include. You must at least include the snippet part in the parameter value since
+       that part contains all of the properties that the API request can update.
+         */
+        public java.util.List<java.lang.String> getPart() {
+          return part;
+        }
+
+        /**
+         * The *part* parameter specifies a comma-separated list of commentThread resource
+         * properties that the API response will include. You must at least include the snippet part
+         * in the parameter value since that part contains all of the properties that the API
+         * request can update.
+         */
+        public UpdateCommentThreads setPart(java.util.List<java.lang.String> part) {
+          this.part = part;
+          return this;
+        }
+
+        @Override
+        public UpdateCommentThreads set(String parameterName, Object value) {
+          return (UpdateCommentThreads) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

@@ -6097,7 +6097,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
          * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#clusteroperat
-         * ionmetadata).
+         * ionmetadata). The cluster must be in a RUNNING state or an error is returned.
          *
          * Create a request for the method "clusters.patch".
          *
@@ -6123,7 +6123,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
            * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
-           * aproc.v1beta2#clusteroperationmetadata).
+           * aproc.v1beta2#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is
+           * returned.
            *
            * Create a request for the method "clusters.patch".
            *

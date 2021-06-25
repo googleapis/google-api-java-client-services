@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-realtimebidding</artifactId>
-  <version>v1alpha-rev20210525-1.31.5</version>
-  <name>Real-time Bidding API v1alpha-rev20210525-1.31.5</name>
+  <version>v1alpha-rev20210624-1.31.5</version>
+  <name>Real-time Bidding API v1alpha-rev20210624-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

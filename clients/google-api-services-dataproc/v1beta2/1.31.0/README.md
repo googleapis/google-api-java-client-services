@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dataproc</artifactId>
-      <version>v1beta2-rev20210604-1.31.5</version>
+      <version>v1beta2-rev20210622-1.31.5</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dataproc:v1beta2-rev20210604-1.31.5'
+  compile 'com.google.apis:google-api-services-dataproc:v1beta2-rev20210622-1.31.5'
 }
 ```
 

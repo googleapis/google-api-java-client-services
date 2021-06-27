@@ -44,20 +44,6 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   private EvaluationMetrics evaluationMetrics;
 
   /**
-   * Global explanations for important features of the model. For multi-class models, there is one
-   * entry for each label class. For other models, there is only one entry in the list.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GlobalExplanation> globalExplanations;
-
-  static {
-    // hack to force ProGuard to consider GlobalExplanation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GlobalExplanation.class);
-  }
-
-  /**
    * Output of each iteration run, results.size() <= max_iterations.
    * The value may be {@code null}.
    */
@@ -116,25 +102,6 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
    */
   public TrainingRun setEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
     this.evaluationMetrics = evaluationMetrics;
-    return this;
-  }
-
-  /**
-   * Global explanations for important features of the model. For multi-class models, there is one
-   * entry for each label class. For other models, there is only one entry in the list.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GlobalExplanation> getGlobalExplanations() {
-    return globalExplanations;
-  }
-
-  /**
-   * Global explanations for important features of the model. For multi-class models, there is one
-   * entry for each label class. For other models, there is only one entry in the list.
-   * @param globalExplanations globalExplanations or {@code null} for none
-   */
-  public TrainingRun setGlobalExplanations(java.util.List<GlobalExplanation> globalExplanations) {
-    this.globalExplanations = globalExplanations;
     return this;
   }
 

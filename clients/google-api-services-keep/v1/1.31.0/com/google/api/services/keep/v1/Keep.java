@@ -25,7 +25,7 @@ package com.google.api.services.keep.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://support.google.com/keep" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/keep/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

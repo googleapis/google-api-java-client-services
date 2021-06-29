@@ -45,7 +45,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview.
+   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
+   * builders/tree/master/gcs-fetcher).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview.
+   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
+   * builders/tree/master/gcs-fetcher).
    * @return value or {@code null} for none
    */
   public StorageSourceManifest getStorageSourceManifest() {
@@ -96,7 +98,8 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview.
+   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
+   * builders/tree/master/gcs-fetcher).
    * @param storageSourceManifest storageSourceManifest or {@code null} for none
    */
   public Source setStorageSourceManifest(StorageSourceManifest storageSourceManifest) {

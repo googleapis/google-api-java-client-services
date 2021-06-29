@@ -30,6 +30,15 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
+   * Autodetect build configuration. The following precedence is used (case insensitive): 1.
+   * cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for
+   * GitHub App Triggers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autodetect;
+
+  /**
    * Contents of the build template.
    * The value may be {@code null}.
    */
@@ -165,6 +174,27 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WebhookConfig webhookConfig;
+
+  /**
+   * Autodetect build configuration. The following precedence is used (case insensitive): 1.
+   * cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for
+   * GitHub App Triggers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutodetect() {
+    return autodetect;
+  }
+
+  /**
+   * Autodetect build configuration. The following precedence is used (case insensitive): 1.
+   * cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for
+   * GitHub App Triggers.
+   * @param autodetect autodetect or {@code null} for none
+   */
+  public BuildTrigger setAutodetect(java.lang.Boolean autodetect) {
+    this.autodetect = autodetect;
+    return this;
+  }
 
   /**
    * Contents of the build template.

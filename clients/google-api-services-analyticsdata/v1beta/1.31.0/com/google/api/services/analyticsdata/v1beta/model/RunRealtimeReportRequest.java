@@ -93,6 +93,22 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
+   * The minute ranges of event data to read. If unspecified, one minute range for the last 30
+   * minutes will be used. If multiple minute ranges are requested, each response row will contain a
+   * zero based minute range index. If two minute ranges overlap, the event data for the overlapping
+   * minutes is included in the response rows for both minute ranges.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MinuteRange> minuteRanges;
+
+  static {
+    // hack to force ProGuard to consider MinuteRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MinuteRange.class);
+  }
+
+  /**
    * Specifies how rows are ordered in the response.
    * The value may be {@code null}.
    */
@@ -228,6 +244,29 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
    */
   public RunRealtimeReportRequest setMetrics(java.util.List<Metric> metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * The minute ranges of event data to read. If unspecified, one minute range for the last 30
+   * minutes will be used. If multiple minute ranges are requested, each response row will contain a
+   * zero based minute range index. If two minute ranges overlap, the event data for the overlapping
+   * minutes is included in the response rows for both minute ranges.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MinuteRange> getMinuteRanges() {
+    return minuteRanges;
+  }
+
+  /**
+   * The minute ranges of event data to read. If unspecified, one minute range for the last 30
+   * minutes will be used. If multiple minute ranges are requested, each response row will contain a
+   * zero based minute range index. If two minute ranges overlap, the event data for the overlapping
+   * minutes is included in the response rows for both minute ranges.
+   * @param minuteRanges minuteRanges or {@code null} for none
+   */
+  public RunRealtimeReportRequest setMinuteRanges(java.util.List<MinuteRange> minuteRanges) {
+    this.minuteRanges = minuteRanges;
     return this;
   }
 

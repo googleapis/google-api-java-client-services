@@ -16644,6 +16644,156 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class FhirStores {
 
           /**
+           * Configure the search parameters for the FHIR store and reindex resources in the FHIR store
+           * according to the defined search parameters. The search parameters provided in this request will
+           * replace any previous search configuration. The target SearchParameter resources need to exist in
+           * the store before calling ConfigureSearch, otherwise an error will occur. This method returns an
+           * Operation that can be used to track the progress of the reindexing by calling GetOperation.
+           *
+           * Create a request for the method "fhirStores.configureSearch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ConfigureSearch#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the FHIR store to configure, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest}
+           * @return the request
+           */
+          public ConfigureSearch configureSearch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest content) throws java.io.IOException {
+            ConfigureSearch result = new ConfigureSearch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ConfigureSearch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:configureSearch";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Configure the search parameters for the FHIR store and reindex resources in the FHIR store
+             * according to the defined search parameters. The search parameters provided in this request will
+             * replace any previous search configuration. The target SearchParameter resources need to exist
+             * in the store before calling ConfigureSearch, otherwise an error will occur. This method returns
+             * an Operation that can be used to track the progress of the reindexing by calling GetOperation.
+             *
+             * Create a request for the method "fhirStores.configureSearch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ConfigureSearch#execute()} method to invoke the remote
+             * operation. <p> {@link ConfigureSearch#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name The name of the FHIR store to configure, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest}
+             * @since 1.13
+             */
+            protected ConfigureSearch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ConfigureSearch set$Xgafv(java.lang.String $Xgafv) {
+              return (ConfigureSearch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ConfigureSearch setAccessToken(java.lang.String accessToken) {
+              return (ConfigureSearch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ConfigureSearch setAlt(java.lang.String alt) {
+              return (ConfigureSearch) super.setAlt(alt);
+            }
+
+            @Override
+            public ConfigureSearch setCallback(java.lang.String callback) {
+              return (ConfigureSearch) super.setCallback(callback);
+            }
+
+            @Override
+            public ConfigureSearch setFields(java.lang.String fields) {
+              return (ConfigureSearch) super.setFields(fields);
+            }
+
+            @Override
+            public ConfigureSearch setKey(java.lang.String key) {
+              return (ConfigureSearch) super.setKey(key);
+            }
+
+            @Override
+            public ConfigureSearch setOauthToken(java.lang.String oauthToken) {
+              return (ConfigureSearch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ConfigureSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ConfigureSearch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ConfigureSearch setQuotaUser(java.lang.String quotaUser) {
+              return (ConfigureSearch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ConfigureSearch setUploadType(java.lang.String uploadType) {
+              return (ConfigureSearch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ConfigureSearch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ConfigureSearch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the FHIR store to configure, in the format `projects/{project_id}/locatio
+             * ns/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the FHIR store to configure, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the FHIR store to configure, in the format `projects/{project_id}/locatio
+             * ns/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ConfigureSearch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ConfigureSearch set(String parameterName, Object value) {
+              return (ConfigureSearch) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new FHIR store within the parent dataset.
            *
            * Create a request for the method "fhirStores.create".

@@ -108,6 +108,13 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * Configuration for how FHIR resource can be searched.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SearchConfig searchConfig;
+
+  /**
    * A list of streaming configs that configure the destinations of streaming export for every
    * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
    * After a new config is added, the next resource mutation is streamed to the new location in
@@ -312,6 +319,23 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for how FHIR resource can be searched.
+   * @return value or {@code null} for none
+   */
+  public SearchConfig getSearchConfig() {
+    return searchConfig;
+  }
+
+  /**
+   * Configuration for how FHIR resource can be searched.
+   * @param searchConfig searchConfig or {@code null} for none
+   */
+  public FhirStore setSearchConfig(SearchConfig searchConfig) {
+    this.searchConfig = searchConfig;
     return this;
   }
 

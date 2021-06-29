@@ -61,9 +61,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * model name. Value can be a built-in general model, or an AutoML Translation model. The value
    * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
    * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
-   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
-   * requested for a language pair, then default google model (nmt) is used.
+   * number-or-id}/locations/{location-id}/models/general/nmt`, If the map is empty or a specific
+   * model is not requested for a language pair, then default google model (nmt) is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,9 +156,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * model name. Value can be a built-in general model, or an AutoML Translation model. The value
    * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
    * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
-   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
-   * requested for a language pair, then default google model (nmt) is used.
+   * number-or-id}/locations/{location-id}/models/general/nmt`, If the map is empty or a specific
+   * model is not requested for a language pair, then default google model (nmt) is used.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getModels() {
@@ -171,9 +169,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
    * model name. Value can be a built-in general model, or an AutoML Translation model. The value
    * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
    * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
-   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
-   * requested for a language pair, then default google model (nmt) is used.
+   * number-or-id}/locations/{location-id}/models/general/nmt`, If the map is empty or a specific
+   * model is not requested for a language pair, then default google model (nmt) is used.
    * @param models models or {@code null} for none
    */
   public BatchTranslateTextRequest setModels(java.util.Map<String, java.lang.String> models) {

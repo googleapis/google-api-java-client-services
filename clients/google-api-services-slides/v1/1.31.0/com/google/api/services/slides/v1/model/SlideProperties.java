@@ -30,6 +30,13 @@ package com.google.api.services.slides.v1.model;
 public final class SlideProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the slide is skipped in the presentation mode. Defaults to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSkipped;
+
+  /**
    * The object ID of the layout that this slide is based on. This property is read-only.
    * The value may be {@code null}.
    */
@@ -54,6 +61,23 @@ public final class SlideProperties extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private Page notesPage;
+
+  /**
+   * Whether the slide is skipped in the presentation mode. Defaults to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSkipped() {
+    return isSkipped;
+  }
+
+  /**
+   * Whether the slide is skipped in the presentation mode. Defaults to false.
+   * @param isSkipped isSkipped or {@code null} for none
+   */
+  public SlideProperties setIsSkipped(java.lang.Boolean isSkipped) {
+    this.isSkipped = isSkipped;
+    return this;
+  }
 
   /**
    * The object ID of the layout that this slide is based on. This property is read-only.

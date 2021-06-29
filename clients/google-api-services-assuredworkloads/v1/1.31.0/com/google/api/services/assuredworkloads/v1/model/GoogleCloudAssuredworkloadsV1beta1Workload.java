@@ -31,11 +31,11 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. The billing account used for the resources which are direct children of
-   * workload. This billing account is initially associated with the resources created as part of
-   * Workload creation. After the initial creation of these resources, the customer can change the
-   * assigned billing account. The resource name has the form
-   * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
+   * Input only. The billing account used for the resources which are direct children of workload.
+   * This billing account is initially associated with the resources created as part of Workload
+   * creation. After the initial creation of these resources, the customer can change the assigned
+   * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
+   * example, `billingAccounts/012345-567890-ABCDEF`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,11 +152,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo> resources;
 
   /**
-   * Required. Input only. The billing account used for the resources which are direct children of
-   * workload. This billing account is initially associated with the resources created as part of
-   * Workload creation. After the initial creation of these resources, the customer can change the
-   * assigned billing account. The resource name has the form
-   * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
+   * Input only. The billing account used for the resources which are direct children of workload.
+   * This billing account is initially associated with the resources created as part of Workload
+   * creation. After the initial creation of these resources, the customer can change the assigned
+   * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
+   * example, `billingAccounts/012345-567890-ABCDEF`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillingAccount() {
@@ -164,11 +164,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   }
 
   /**
-   * Required. Input only. The billing account used for the resources which are direct children of
-   * workload. This billing account is initially associated with the resources created as part of
-   * Workload creation. After the initial creation of these resources, the customer can change the
-   * assigned billing account. The resource name has the form
-   * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
+   * Input only. The billing account used for the resources which are direct children of workload.
+   * This billing account is initially associated with the resources created as part of Workload
+   * creation. After the initial creation of these resources, the customer can change the assigned
+   * billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For
+   * example, `billingAccounts/012345-567890-ABCDEF`.
    * @param billingAccount billingAccount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setBillingAccount(java.lang.String billingAccount) {

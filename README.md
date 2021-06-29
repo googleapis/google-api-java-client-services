@@ -188,6 +188,7 @@ packages on [Maven Central][maven-search].
 | My Business Place Actions API | [v1](clients/google-api-services-mybusinessplaceactions/v1) |
 | Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
+| Network Security API | [v1beta1](clients/google-api-services-networksecurity/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
 | OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1alpha](clients/google-api-services-osconfig/v1alpha), [v1beta](clients/google-api-services-osconfig/v1beta) |
 | On-Demand Scanning API | [v1](clients/google-api-services-ondemandscanning/v1), [v1beta1](clients/google-api-services-ondemandscanning/v1beta1) |

@@ -17,7 +17,9 @@
 package com.google.api.services.cloudbuild.v1alpha1.model;
 
 /**
- * Location of the source manifest in Google Cloud Storage. This feature is in Preview.
+ * Location of the source manifest in Google Cloud Storage. This feature is in Preview; see
+ * description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+ * fetcher).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

@@ -91,7 +91,7 @@ packages on [Maven Central][maven-search].
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1), [v3](clients/google-api-services-cloudresourcemanager/v3) |
 | Cloud Run Admin API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
-| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
+| Cloud SQL Admin API | [v1](clients/google-api-services-sqladmin/v1), [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1) |

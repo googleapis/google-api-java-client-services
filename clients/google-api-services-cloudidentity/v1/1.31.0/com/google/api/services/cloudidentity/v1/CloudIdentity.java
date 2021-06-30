@@ -4383,22 +4383,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The fully-qualified names of fields to update. May only contain the following
-       * fields: `display_name`, `description`, `labels`.
+       * Required. The names of fields to update. May only contain the following fields:
+       * `display_name`, `description`, `labels`.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. The fully-qualified names of fields to update. May only contain the following fields:
-     `display_name`, `description`, `labels`.
+      /** Required. The names of fields to update. May only contain the following fields: `display_name`,
+     `description`, `labels`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * Required. The fully-qualified names of fields to update. May only contain the following
-       * fields: `display_name`, `description`, `labels`.
+       * Required. The names of fields to update. May only contain the following fields:
+       * `display_name`, `description`, `labels`.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

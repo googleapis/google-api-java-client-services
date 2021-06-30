@@ -221,6 +221,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private String updateTime;
 
   /**
+   * Versioned resource representations of this resource. This is repeated because there could be
+   * multiple versions of resource representations during version migration. This
+   * `versioned_resources` field is not searchable. Some attributes of the resource representations
+   * are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VersionedResource> versionedResources;
+
+  /**
    * The additional searchable attributes of this resource. The attributes may vary from one
    * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
@@ -650,6 +660,29 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Versioned resource representations of this resource. This is repeated because there could be
+   * multiple versions of resource representations during version migration. This
+   * `versioned_resources` field is not searchable. Some attributes of the resource representations
+   * are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VersionedResource> getVersionedResources() {
+    return versionedResources;
+  }
+
+  /**
+   * Versioned resource representations of this resource. This is repeated because there could be
+   * multiple versions of resource representations during version migration. This
+   * `versioned_resources` field is not searchable. Some attributes of the resource representations
+   * are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * @param versionedResources versionedResources or {@code null} for none
+   */
+  public ResourceSearchResult setVersionedResources(java.util.List<VersionedResource> versionedResources) {
+    this.versionedResources = versionedResources;
     return this;
   }
 

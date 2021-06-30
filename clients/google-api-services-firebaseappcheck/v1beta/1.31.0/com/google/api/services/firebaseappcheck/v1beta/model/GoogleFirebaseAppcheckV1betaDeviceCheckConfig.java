@@ -18,7 +18,11 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
  * An app's DeviceCheck configuration object. This configuration is used by ExchangeDeviceCheckToken
- * to validate device tokens issued to apps by DeviceCheck.
+ * to validate device tokens issued to apps by DeviceCheck. It also controls certain properties of
+ * the returned App Check token, such as its ttl. Note that the Team ID registered with your app is
+ * used as part of the validation process. Please register it via the Firebase Console or
+ * programmatically via the [Firebase Management Service](https://firebase.google.com/docs/projects/
+ * api/reference/rest/v1beta1/projects.iosApps/patch).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation

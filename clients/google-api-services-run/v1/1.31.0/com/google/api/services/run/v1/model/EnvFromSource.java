@@ -17,8 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported EnvFromSource represents
- * the source of a set of ConfigMaps
+ * Not supported by Cloud Run EnvFromSource represents the source of a set of ConfigMaps
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,32 +30,29 @@ package com.google.api.services.run.v1.model;
 public final class EnvFromSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap
-   * to select from
+   * (Optional) The ConfigMap to select from
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigMapEnvSource configMapRef;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional
-   * identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+   * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a
+   * C_IDENTIFIER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String prefix;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to
-   * select from
+   * (Optional) The Secret to select from
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretEnvSource secretRef;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap
-   * to select from
+   * (Optional) The ConfigMap to select from
    * @return value or {@code null} for none
    */
   public ConfigMapEnvSource getConfigMapRef() {
@@ -64,8 +60,7 @@ public final class EnvFromSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap
-   * to select from
+   * (Optional) The ConfigMap to select from
    * @param configMapRef configMapRef or {@code null} for none
    */
   public EnvFromSource setConfigMapRef(ConfigMapEnvSource configMapRef) {
@@ -74,8 +69,8 @@ public final class EnvFromSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional
-   * identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+   * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a
+   * C_IDENTIFIER.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefix() {
@@ -83,8 +78,8 @@ public final class EnvFromSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported An optional
-   * identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+   * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a
+   * C_IDENTIFIER.
    * @param prefix prefix or {@code null} for none
    */
   public EnvFromSource setPrefix(java.lang.String prefix) {
@@ -93,8 +88,7 @@ public final class EnvFromSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to
-   * select from
+   * (Optional) The Secret to select from
    * @return value or {@code null} for none
    */
   public SecretEnvSource getSecretRef() {
@@ -102,8 +96,7 @@ public final class EnvFromSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to
-   * select from
+   * (Optional) The Secret to select from
    * @param secretRef secretRef or {@code null} for none
    */
   public EnvFromSource setSecretRef(SecretEnvSource secretRef) {

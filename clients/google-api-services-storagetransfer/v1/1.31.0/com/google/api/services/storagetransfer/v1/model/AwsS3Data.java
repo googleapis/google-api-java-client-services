@@ -58,6 +58,16 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
+   * Input only. Role arn to support temporary credentials via AssumeRoleWithWebIdentity. When role
+   * arn is provided, transfer service will fetch temporary credentials for the session using
+   * AssumeRoleWithWebIdentity call for the provided role using the [GoogleServiceAccount] for this
+   * project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String roleArn;
+
+  /**
    * Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on
    * the bucket must be granted to the access ID of the AWS access key. This field is required. For
    * information on our data retention policy for user credentials, see [User credentials](/storage-
@@ -117,6 +127,29 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * Input only. Role arn to support temporary credentials via AssumeRoleWithWebIdentity. When role
+   * arn is provided, transfer service will fetch temporary credentials for the session using
+   * AssumeRoleWithWebIdentity call for the provided role using the [GoogleServiceAccount] for this
+   * project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRoleArn() {
+    return roleArn;
+  }
+
+  /**
+   * Input only. Role arn to support temporary credentials via AssumeRoleWithWebIdentity. When role
+   * arn is provided, transfer service will fetch temporary credentials for the session using
+   * AssumeRoleWithWebIdentity call for the provided role using the [GoogleServiceAccount] for this
+   * project.
+   * @param roleArn roleArn or {@code null} for none
+   */
+  public AwsS3Data setRoleArn(java.lang.String roleArn) {
+    this.roleArn = roleArn;
     return this;
   }
 

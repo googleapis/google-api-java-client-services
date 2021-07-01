@@ -37,6 +37,13 @@ public final class GoogleServiceAccount extends com.google.api.client.json.Gener
   private java.lang.String accountEmail;
 
   /**
+   * Unique identifier for the service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subjectId;
+
+  /**
    * Email address of the service account.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleServiceAccount extends com.google.api.client.json.Gener
    */
   public GoogleServiceAccount setAccountEmail(java.lang.String accountEmail) {
     this.accountEmail = accountEmail;
+    return this;
+  }
+
+  /**
+   * Unique identifier for the service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubjectId() {
+    return subjectId;
+  }
+
+  /**
+   * Unique identifier for the service account.
+   * @param subjectId subjectId or {@code null} for none
+   */
+  public GoogleServiceAccount setSubjectId(java.lang.String subjectId) {
+    this.subjectId = subjectId;
     return this;
   }
 

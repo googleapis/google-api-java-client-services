@@ -31,18 +31,22 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class AzureCredentials extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources
-   * using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common
-   * /storage-sas-overview)).
+   * Required. Azure shared access signature (SAS). *Note:*Copying data from Azure Data Lake Storage
+   * (ADLS) Gen 2 is in [Preview](/products/#product-launch-stages). During Preview, if you are
+   * copying data from ADLS Gen 2, you must use an account SAS. For more information about SAS, see
+   * [Grant limited access to Azure Storage resources using shared access signatures
+   * (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sasToken;
 
   /**
-   * Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources
-   * using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common
-   * /storage-sas-overview)).
+   * Required. Azure shared access signature (SAS). *Note:*Copying data from Azure Data Lake Storage
+   * (ADLS) Gen 2 is in [Preview](/products/#product-launch-stages). During Preview, if you are
+   * copying data from ADLS Gen 2, you must use an account SAS. For more information about SAS, see
+   * [Grant limited access to Azure Storage resources using shared access signatures
+   * (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
    * @return value or {@code null} for none
    */
   public java.lang.String getSasToken() {
@@ -50,9 +54,11 @@ public final class AzureCredentials extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Azure shared access signature. (see [Grant limited access to Azure Storage resources
-   * using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common
-   * /storage-sas-overview)).
+   * Required. Azure shared access signature (SAS). *Note:*Copying data from Azure Data Lake Storage
+   * (ADLS) Gen 2 is in [Preview](/products/#product-launch-stages). During Preview, if you are
+   * copying data from ADLS Gen 2, you must use an account SAS. For more information about SAS, see
+   * [Grant limited access to Azure Storage resources using shared access signatures
+   * (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
    * @param sasToken sasToken or {@code null} for none
    */
   public AzureCredentials setSasToken(java.lang.String sasToken) {

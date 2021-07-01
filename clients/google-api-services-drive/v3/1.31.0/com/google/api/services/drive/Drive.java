@@ -2979,17 +2979,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUserIp(userIp);
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of shared drives to return. [default: 10] [minimum: 1] [maximum: 100]
+      /** Maximum number of shared drives to return per page. [default: 10] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

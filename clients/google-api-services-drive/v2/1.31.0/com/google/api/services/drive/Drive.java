@@ -4461,17 +4461,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUserIp(userIp);
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of shared drives to return. [default: 10] [minimum: 1] [maximum: 100]
+      /** Maximum number of shared drives to return per page. [default: 10] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;

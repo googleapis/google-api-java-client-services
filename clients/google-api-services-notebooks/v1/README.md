@@ -1,6 +1,6 @@
 # Notebooks API Client Library for Java
 
-AI Platform Notebooks API is used to manage notebook resources in Google Cloud.
+Notebooks API is used to manage notebook resources in Google Cloud.
 
 This page contains information about getting started with the Notebooks API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-notebooks</artifactId>
-      <version>v1-rev20210610-1.31.5</version>
+      <version>v1-rev20210626-1.31.5</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-notebooks:v1-rev20210610-1.31.5'
+  compile 'com.google.apis:google-api-services-notebooks:v1-rev20210626-1.31.5'
 }
 ```
 

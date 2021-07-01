@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-storagetransfer</artifactId>
-  <version>v1-rev20210617-1.31.5</version>
-  <name>Storage Transfer API v1-rev20210617-1.31.5</name>
+  <version>v1-rev20210624-1.31.5</version>
+  <name>Storage Transfer API v1-rev20210624-1.31.5</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

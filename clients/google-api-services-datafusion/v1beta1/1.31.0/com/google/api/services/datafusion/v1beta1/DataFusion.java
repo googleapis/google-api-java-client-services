@@ -484,21 +484,17 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2276,6 +2272,465 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * An accessor for creating requests from the DnsPeerings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataFusion datafusion = new DataFusion(...);}
+         *   {@code DataFusion.DnsPeerings.List request = datafusion.dnsPeerings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DnsPeerings dnsPeerings() {
+          return new DnsPeerings();
+        }
+
+        /**
+         * The "dnsPeerings" collection of methods.
+         */
+        public class DnsPeerings {
+
+          /**
+           * Add DNS peering on the given resource.
+           *
+           * Create a request for the method "dnsPeerings.add".
+           *
+           * This request holds the parameters needed by the datafusion server.  After setting any optional
+           * parameters, call the {@link Add#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource on which DNS peering will be created.
+           * @param content the {@link com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest}
+           * @return the request
+           */
+          public Add add(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest content) throws java.io.IOException {
+            Add result = new Add(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Add extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:add";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * Add DNS peering on the given resource.
+             *
+             * Create a request for the method "dnsPeerings.add".
+             *
+             * This request holds the parameters needed by the the datafusion server.  After setting any
+             * optional parameters, call the {@link Add#execute()} method to invoke the remote operation. <p>
+             * {@link Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource on which DNS peering will be created.
+             * @param content the {@link com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest}
+             * @since 1.13
+             */
+            protected Add(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringRequest content) {
+              super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.AddDnsPeeringResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public Add set$Xgafv(java.lang.String $Xgafv) {
+              return (Add) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Add setAccessToken(java.lang.String accessToken) {
+              return (Add) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Add setAlt(java.lang.String alt) {
+              return (Add) super.setAlt(alt);
+            }
+
+            @Override
+            public Add setCallback(java.lang.String callback) {
+              return (Add) super.setCallback(callback);
+            }
+
+            @Override
+            public Add setFields(java.lang.String fields) {
+              return (Add) super.setFields(fields);
+            }
+
+            @Override
+            public Add setKey(java.lang.String key) {
+              return (Add) super.setKey(key);
+            }
+
+            @Override
+            public Add setOauthToken(java.lang.String oauthToken) {
+              return (Add) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Add) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Add setQuotaUser(java.lang.String quotaUser) {
+              return (Add) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Add setUploadType(java.lang.String uploadType) {
+              return (Add) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Add setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Add) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource on which DNS peering will be created. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource on which DNS peering will be created.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The resource on which DNS peering will be created. */
+            public Add setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Add set(String parameterName, Object value) {
+              return (Add) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List DNS peering for a given resource.
+           *
+           * Create a request for the method "dnsPeerings.list".
+           *
+           * This request holds the parameters needed by the datafusion server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource on which dns peering will be listed.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.ListDnsPeeringsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:list";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * List DNS peering for a given resource.
+             *
+             * Create a request for the method "dnsPeerings.list".
+             *
+             * This request holds the parameters needed by the the datafusion server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource on which dns peering will be listed.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataFusion.this, "GET", REST_PATH, null, com.google.api.services.datafusion.v1beta1.model.ListDnsPeeringsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource on which dns peering will be listed. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource on which dns peering will be listed.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The resource on which dns peering will be listed. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The maximum number of items to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of items to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The next_page_token value to use if there are additional results to retrieve for this
+             * list request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value to use if there are additional results to retrieve for this list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The next_page_token value to use if there are additional results to retrieve for this
+             * list request.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Remove DNS peering on the given resource.
+           *
+           * Create a request for the method "dnsPeerings.remove".
+           *
+           * This request holds the parameters needed by the datafusion server.  After setting any optional
+           * parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource on which DNS peering will be removed.
+           * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest}
+           * @return the request
+           */
+          public Remove remove(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest content) throws java.io.IOException {
+            Remove result = new Remove(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Remove extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/dnsPeerings:remove";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * Remove DNS peering on the given resource.
+             *
+             * Create a request for the method "dnsPeerings.remove".
+             *
+             * This request holds the parameters needed by the the datafusion server.  After setting any
+             * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource on which DNS peering will be removed.
+             * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest}
+             * @since 1.13
+             */
+            protected Remove(java.lang.String parent, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringRequest content) {
+              super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.RemoveDnsPeeringResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public Remove set$Xgafv(java.lang.String $Xgafv) {
+              return (Remove) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Remove setAccessToken(java.lang.String accessToken) {
+              return (Remove) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Remove setAlt(java.lang.String alt) {
+              return (Remove) super.setAlt(alt);
+            }
+
+            @Override
+            public Remove setCallback(java.lang.String callback) {
+              return (Remove) super.setCallback(callback);
+            }
+
+            @Override
+            public Remove setFields(java.lang.String fields) {
+              return (Remove) super.setFields(fields);
+            }
+
+            @Override
+            public Remove setKey(java.lang.String key) {
+              return (Remove) super.setKey(key);
+            }
+
+            @Override
+            public Remove setOauthToken(java.lang.String oauthToken) {
+              return (Remove) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Remove) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Remove setQuotaUser(java.lang.String quotaUser) {
+              return (Remove) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Remove setUploadType(java.lang.String uploadType) {
+              return (Remove) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Remove setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Remove) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource on which DNS peering will be removed. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource on which DNS peering will be removed.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The resource on which DNS peering will be removed. */
+            public Remove setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Remove set(String parameterName, Object value) {
+              return (Remove) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Namespaces collection.
          *
          * <p>The typical use is:</p>
@@ -2477,6 +2932,208 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List namespaces in a given instance
+           *
+           * Create a request for the method "namespaces.list".
+           *
+           * This request holds the parameters needed by the datafusion server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The instance to list its namespaces.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.ListNamespacesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/namespaces";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * List namespaces in a given instance
+             *
+             * Create a request for the method "namespaces.list".
+             *
+             * This request holds the parameters needed by the the datafusion server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The instance to list its namespaces.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataFusion.this, "GET", REST_PATH, null, com.google.api.services.datafusion.v1beta1.model.ListNamespacesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The instance to list its namespaces. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The instance to list its namespaces.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The instance to list its namespaces. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The maximum number of items to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of items to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The next_page_token value to use if there are additional results to retrieve for this
+             * list request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value to use if there are additional results to retrieve for this list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The next_page_token value to use if there are additional results to retrieve for this
+             * list request.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * By default, only basic information about a namespace is returned (e.g. name). When
+             * `NAMESPACE_VIEW_FULL` is specified, additional information associated with a
+             * namespace gets returned (e.g. IAM policy set on the namespace)
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** By default, only basic information about a namespace is returned (e.g. name). When
+           `NAMESPACE_VIEW_FULL` is specified, additional information associated with a namespace gets
+           returned (e.g. IAM policy set on the namespace)
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * By default, only basic information about a namespace is returned (e.g. name). When
+             * `NAMESPACE_VIEW_FULL` is specified, additional information associated with a
+             * namespace gets returned (e.g. IAM policy set on the namespace)
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
           /**

@@ -32,10 +32,10 @@ public class Area120TablesScopes {
   /** See and download all your Google Drive files. */
   public static final String DRIVE_READONLY = "https://www.googleapis.com/auth/drive.readonly";
 
-  /** See, edit, create, and delete your spreadsheets in Google Drive. */
+  /** See, edit, create, and delete all your Google Sheets spreadsheets. */
   public static final String SPREADSHEETS = "https://www.googleapis.com/auth/spreadsheets";
 
-  /** View your Google Spreadsheets. */
+  /** See all your Google Sheets spreadsheets. */
   public static final String SPREADSHEETS_READONLY = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
   /** See, edit, create, and delete your tables in Tables by Area 120. */

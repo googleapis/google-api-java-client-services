@@ -106,6 +106,15 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultMessageDenyNotificationText;
 
   /**
+   * Default sender for members who can post messages as the group. Possible values are: -
+   * `DEFAULT_SELF`: By default messages will be sent from the user - `GROUP`: By default messages
+   * will be sent from the group
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("default_sender")
+  private java.lang.String defaultSender;
+
+  /**
    * Description of the group. This property value may be an empty string if no group description
    * has been entered. If entered, the maximum group description is no more than 300 characters.
    * The value may be {@code null}.
@@ -777,6 +786,27 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setDefaultMessageDenyNotificationText(java.lang.String defaultMessageDenyNotificationText) {
     this.defaultMessageDenyNotificationText = defaultMessageDenyNotificationText;
+    return this;
+  }
+
+  /**
+   * Default sender for members who can post messages as the group. Possible values are: -
+   * `DEFAULT_SELF`: By default messages will be sent from the user - `GROUP`: By default messages
+   * will be sent from the group
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultSender() {
+    return defaultSender;
+  }
+
+  /**
+   * Default sender for members who can post messages as the group. Possible values are: -
+   * `DEFAULT_SELF`: By default messages will be sent from the user - `GROUP`: By default messages
+   * will be sent from the group
+   * @param defaultSender defaultSender or {@code null} for none
+   */
+  public Groups setDefaultSender(java.lang.String defaultSender) {
+    this.defaultSender = defaultSender;
     return this;
   }
 

@@ -12,9 +12,9 @@
  "baseUrl": "https://notebooks.googleapis.com/",
  "batchPath": "batch",
  "canonicalName": "AI Platform Notebooks",
- "description": "AI Platform Notebooks API is used to manage notebook resources in Google Cloud.",
+ "description": "Notebooks API is used to manage notebook resources in Google Cloud.",
  "discoveryVersion": "v1",
- "documentationLink": "https://cloud.google.com/ai-platform/notebooks/docs/",
+ "documentationLink": "https://cloud.google.com/notebooks/docs/",
  "fullyEncodeReservedExpansion": true,
  "icons": {
   "x16": "http://www.google.com/images/icons/product/search-16.gif",
@@ -1581,7 +1581,7 @@
    }
   }
  },
- "revision": "20210610",
+ "revision": "20210626",
  "rootUrl": "https://notebooks.googleapis.com/",
  "schemas": {
   "AcceleratorConfig": {
@@ -1812,6 +1812,11 @@
      "$ref": "ExecutionTemplate",
      "description": "execute metadata including name, hardware spec, region, labels, etc."
     },
+    "jobUri": {
+     "description": "Output only. The URI of the external job used to execute the notebook.",
+     "readOnly": true,
+     "type": "string"
+    },
     "name": {
      "description": "Output only. The resource name of the execute. Format: `projects/{project_id}/locations/{location}/execution/{execution_id}",
      "readOnly": true,
@@ -1832,7 +1837,8 @@
       "FAILED",
       "CANCELLING",
       "CANCELLED",
-      "EXPIRED"
+      "EXPIRED",
+      "INITIALIZING"
      ],
      "enumDescriptions": [
       "The job state is unspecified.",
@@ -1843,7 +1849,8 @@
       "The job failed. `error_message` should contain the details of the failure.",
       "The job is being cancelled. `error_message` should describe the reason for the cancellation.",
       "The job has been cancelled. `error_message` should describe the reason for the cancellation.",
-      "The jobs has become expired (added for uCAIP jobs) https://cloud.google.com/vertex-ai/docs/reference/rest/v1/JobState"
+      "The jobs has become expired (added for uCAIP jobs) https://cloud.google.com/vertex-ai/docs/reference/rest/v1/JobState",
+      "The Execution is being created."
      ],
      "readOnly": true,
      "type": "string"
@@ -3010,14 +3017,16 @@
       "ENABLED",
       "PAUSED",
       "DISABLED",
-      "UPDATE_FAILED"
+      "UPDATE_FAILED",
+      "INITIALIZING"
      ],
      "enumDescriptions": [
       "Unspecified state.",
       "The job is executing normally.",
       "The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.",
       "The job is disabled by the system due to error. The user cannot directly set a job to be disabled.",
-      "The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received."
+      "The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.",
+      "The schedule resource is being created."
      ],
      "type": "string"
     },

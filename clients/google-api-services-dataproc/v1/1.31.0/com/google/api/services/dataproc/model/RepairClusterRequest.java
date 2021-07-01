@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A request to start a cluster.
+ * A request to repair a cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.dataproc.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StartClusterRequest extends com.google.api.client.json.GenericJson {
+public final class RepairClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a
@@ -39,13 +39,11 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
 
   /**
    * Optional. A unique ID used to identify the request. If the server receives two
-   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
-   * .v1#google.cloud.dataproc.v1.StartClusterRequest)s with the same id, then the second request
-   * will be ignored and the first google.longrunning.Operation created and stored in the backend is
-   * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
-   * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
-   * characters.
+   * RepairClusterRequests with the same ID, the second request is ignored, and the first
+   * google.longrunning.Operation created and stored in the backend is returned.Recommendation: Set
+   * this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+   * length is 40 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,20 +63,18 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
    * cluster with the specified UUID does not exist.
    * @param clusterUuid clusterUuid or {@code null} for none
    */
-  public StartClusterRequest setClusterUuid(java.lang.String clusterUuid) {
+  public RepairClusterRequest setClusterUuid(java.lang.String clusterUuid) {
     this.clusterUuid = clusterUuid;
     return this;
   }
 
   /**
    * Optional. A unique ID used to identify the request. If the server receives two
-   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
-   * .v1#google.cloud.dataproc.v1.StartClusterRequest)s with the same id, then the second request
-   * will be ignored and the first google.longrunning.Operation created and stored in the backend is
-   * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
-   * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
-   * characters.
+   * RepairClusterRequests with the same ID, the second request is ignored, and the first
+   * google.longrunning.Operation created and stored in the backend is returned.Recommendation: Set
+   * this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+   * length is 40 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -87,28 +83,26 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
 
   /**
    * Optional. A unique ID used to identify the request. If the server receives two
-   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
-   * .v1#google.cloud.dataproc.v1.StartClusterRequest)s with the same id, then the second request
-   * will be ignored and the first google.longrunning.Operation created and stored in the backend is
-   * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
-   * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
-   * characters.
+   * RepairClusterRequests with the same ID, the second request is ignored, and the first
+   * google.longrunning.Operation created and stored in the backend is returned.Recommendation: Set
+   * this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+   * length is 40 characters.
    * @param requestId requestId or {@code null} for none
    */
-  public StartClusterRequest setRequestId(java.lang.String requestId) {
+  public RepairClusterRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
     return this;
   }
 
   @Override
-  public StartClusterRequest set(String fieldName, Object value) {
-    return (StartClusterRequest) super.set(fieldName, value);
+  public RepairClusterRequest set(String fieldName, Object value) {
+    return (RepairClusterRequest) super.set(fieldName, value);
   }
 
   @Override
-  public StartClusterRequest clone() {
-    return (StartClusterRequest) super.clone();
+  public RepairClusterRequest clone() {
+    return (RepairClusterRequest) super.clone();
   }
 
 }

@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported LocalObjectReference
- * contains enough information to let you locate the referenced object inside the same namespace.
+ * Not supported by Cloud Run LocalObjectReference contains enough information to let you locate the
+ * referenced object inside the same namespace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,18 +31,16 @@ package com.google.api.services.run.v1.model;
 public final class LocalObjectReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the
-   * referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/names/#names
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the
-   * referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/names/#names
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -50,9 +48,8 @@ public final class LocalObjectReference extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Name of the
-   * referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/names/#names
    * @param name name or {@code null} for none
    */
   public LocalObjectReference setName(java.lang.String name) {

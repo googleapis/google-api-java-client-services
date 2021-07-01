@@ -30,34 +30,34 @@ package com.google.api.services.run.v1.model;
 public final class ResourceRequirements extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run
-   * for Anthos: supported Limits describes the maximum amount of compute resources allowed. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> limits;
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum
-   * amount of compute resources required. If Requests is omitted for a container, it defaults to
-   * Limits if that is explicitly specified, otherwise to an implementation-defined value. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
+   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
+   * source/quantity.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> requests;
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run
-   * for Anthos: supported Limits describes the maximum amount of compute resources allowed. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -65,11 +65,11 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Cloud Run
-   * for Anthos: supported Limits describes the maximum amount of compute resources allowed. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @param limits limits or {@code null} for none
    */
   public ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {
@@ -78,12 +78,12 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum
-   * amount of compute resources required. If Requests is omitted for a container, it defaults to
-   * Limits if that is explicitly specified, otherwise to an implementation-defined value. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
+   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
+   * source/quantity.go
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getRequests() {
@@ -91,12 +91,12 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Cloud Run fully managed: Only memory and CPU are supported. Note: The only supported
-   * values for CPU are '1' and '2'. Cloud Run for Anthos: supported Requests describes the minimum
-   * amount of compute resources required. If Requests is omitted for a container, it defaults to
-   * Limits if that is explicitly specified, otherwise to an implementation-defined value. The
-   * values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kube
-   * rnetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
+   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
+   * source/quantity.go
    * @param requests requests or {@code null} for none
    */
   public ResourceRequirements setRequests(java.util.Map<String, java.lang.String> requests) {

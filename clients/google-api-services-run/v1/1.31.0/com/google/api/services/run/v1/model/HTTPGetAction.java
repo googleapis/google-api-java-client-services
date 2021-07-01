@@ -17,8 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGetAction describes an
- * action based on HTTP Get requests.
+ * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,40 +30,37 @@ package com.google.api.services.run.v1.model;
 public final class HTTPGetAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to
-   * connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom
-   * headers to set in the request. HTTP allows repeated headers.
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HTTPHeader> httpHeaders;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to
-   * access on the HTTP server.
+   * (Optional) Path to access on the HTTP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use
-   * for connecting to the host. Defaults to HTTP.
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scheme;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to
-   * connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -72,8 +68,8 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Host name to
-   * connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * @param host host or {@code null} for none
    */
   public HTTPGetAction setHost(java.lang.String host) {
@@ -82,8 +78,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom
-   * headers to set in the request. HTTP allows repeated headers.
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * @return value or {@code null} for none
    */
   public java.util.List<HTTPHeader> getHttpHeaders() {
@@ -91,8 +86,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Custom
-   * headers to set in the request. HTTP allows repeated headers.
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * @param httpHeaders httpHeaders or {@code null} for none
    */
   public HTTPGetAction setHttpHeaders(java.util.List<HTTPHeader> httpHeaders) {
@@ -101,8 +95,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to
-   * access on the HTTP server.
+   * (Optional) Path to access on the HTTP server.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -110,8 +103,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Path to
-   * access on the HTTP server.
+   * (Optional) Path to access on the HTTP server.
    * @param path path or {@code null} for none
    */
   public HTTPGetAction setPath(java.lang.String path) {
@@ -120,8 +112,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use
-   * for connecting to the host. Defaults to HTTP.
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * @return value or {@code null} for none
    */
   public java.lang.String getScheme() {
@@ -129,8 +120,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Scheme to use
-   * for connecting to the host. Defaults to HTTP.
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * @param scheme scheme or {@code null} for none
    */
   public HTTPGetAction setScheme(java.lang.String scheme) {

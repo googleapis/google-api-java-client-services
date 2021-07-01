@@ -17,8 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPHeader describes a
- * custom header to be used in HTTP probes
+ * Not supported by Cloud Run HTTPHeader describes a custom header to be used in HTTP probes
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,21 +30,21 @@ package com.google.api.services.run.v1.model;
 public final class HTTPHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name
+   * The header field name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value
+   * The header field value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name
+   * The header field name
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,7 +52,7 @@ public final class HTTPHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field name
+   * The header field name
    * @param name name or {@code null} for none
    */
   public HTTPHeader setName(java.lang.String name) {
@@ -62,7 +61,7 @@ public final class HTTPHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value
+   * The header field value
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +69,7 @@ public final class HTTPHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported The header field value
+   * The header field value
    * @param value value or {@code null} for none
    */
   public HTTPHeader setValue(java.lang.String value) {

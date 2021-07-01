@@ -17,9 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Probe describes a health
- * check to be performed against a container to determine whether it is alive or ready to receive
- * traffic.
+ * Not supported by Cloud Run Probe describes a health check to be performed against a container to
+ * determine whether it is alive or ready to receive traffic.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -32,79 +31,74 @@ package com.google.api.services.run.v1.model;
 public final class Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only
-   * one of the following should be specified. Exec specifies the action to take. A field inlined
-   * from the Handler message.
+   * (Optional) One and only one of the following should be specified. Exec specifies the action to
+   * take. A field inlined from the Handler message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecAction exec;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive failures for the probe to be considered failed after having succeeded. Defaults to
-   * 3. Minimum value is 1.
+   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer failureThreshold;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet
-   * specifies the http request to perform. A field inlined from the Handler message.
+   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
+   * message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HTTPGetAction httpGet;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after the container has started before liveness probes are initiated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after the container has started before liveness probes are
+   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer initialDelaySeconds;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in
-   * seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodSeconds;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive successes for the probe to be considered successful after having failed. Defaults
-   * to 1. Must be 1 for liveness. Minimum value is 1.
+   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
+   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer successThreshold;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket
-   * specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the
-   * Handler message.
+   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
+   * field inlined from the Handler message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TCPSocketAction tcpSocket;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only
-   * one of the following should be specified. Exec specifies the action to take. A field inlined
-   * from the Handler message.
+   * (Optional) One and only one of the following should be specified. Exec specifies the action to
+   * take. A field inlined from the Handler message.
    * @return value or {@code null} for none
    */
   public ExecAction getExec() {
@@ -112,9 +106,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported One and only
-   * one of the following should be specified. Exec specifies the action to take. A field inlined
-   * from the Handler message.
+   * (Optional) One and only one of the following should be specified. Exec specifies the action to
+   * take. A field inlined from the Handler message.
    * @param exec exec or {@code null} for none
    */
   public Probe setExec(ExecAction exec) {
@@ -123,9 +116,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive failures for the probe to be considered failed after having succeeded. Defaults to
-   * 3. Minimum value is 1.
+   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFailureThreshold() {
@@ -133,9 +125,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive failures for the probe to be considered failed after having succeeded. Defaults to
-   * 3. Minimum value is 1.
+   * (Optional) Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * @param failureThreshold failureThreshold or {@code null} for none
    */
   public Probe setFailureThreshold(java.lang.Integer failureThreshold) {
@@ -144,8 +135,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet
-   * specifies the http request to perform. A field inlined from the Handler message.
+   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
+   * message.
    * @return value or {@code null} for none
    */
   public HTTPGetAction getHttpGet() {
@@ -153,8 +144,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported HTTPGet
-   * specifies the http request to perform. A field inlined from the Handler message.
+   * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler
+   * message.
    * @param httpGet httpGet or {@code null} for none
    */
   public Probe setHttpGet(HTTPGetAction httpGet) {
@@ -163,9 +154,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after the container has started before liveness probes are initiated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after the container has started before liveness probes are
+   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySeconds() {
@@ -173,9 +164,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after the container has started before liveness probes are initiated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after the container has started before liveness probes are
+   * initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
    */
   public Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
@@ -184,8 +175,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in
-   * seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -193,8 +184,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported How often (in
-   * seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
+   * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
@@ -203,9 +194,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive successes for the probe to be considered successful after having failed. Defaults
-   * to 1. Must be 1 for liveness. Minimum value is 1.
+   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
+   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuccessThreshold() {
@@ -213,9 +203,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Minimum
-   * consecutive successes for the probe to be considered successful after having failed. Defaults
-   * to 1. Must be 1 for liveness. Minimum value is 1.
+   * (Optional) Minimum consecutive successes for the probe to be considered successful after having
+   * failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
    * @param successThreshold successThreshold or {@code null} for none
    */
   public Probe setSuccessThreshold(java.lang.Integer successThreshold) {
@@ -224,9 +213,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket
-   * specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the
-   * Handler message.
+   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
+   * field inlined from the Handler message.
    * @return value or {@code null} for none
    */
   public TCPSocketAction getTcpSocket() {
@@ -234,9 +222,8 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocket
-   * specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the
-   * Handler message.
+   * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A
+   * field inlined from the Handler message.
    * @param tcpSocket tcpSocket or {@code null} for none
    */
   public Probe setTcpSocket(TCPSocketAction tcpSocket) {
@@ -245,9 +232,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -255,9 +242,9 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number of
-   * seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
+   * #container-probes
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public Probe setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

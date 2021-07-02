@@ -48,7 +48,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the YouTube Data API v3 library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the YouTube Data API v3 library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

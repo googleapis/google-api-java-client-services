@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-books",
-    "version": "v1-rev20201021-1.31.5"
+    "version": "v1-rev20201021-1.32.1"
   }
 }

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-kgsearch</artifactId>
-      <version>v1-rev20200809-1.31.5</version>
+      <version>v1-rev20200809-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-kgsearch:v1-rev20200809-1.31.5'
+  compile 'com.google.apis:google-api-services-kgsearch:v1-rev20200809-1.32.1'
 }
 ```
 

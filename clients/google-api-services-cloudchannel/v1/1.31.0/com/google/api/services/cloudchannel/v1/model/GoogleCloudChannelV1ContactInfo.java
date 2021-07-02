@@ -39,21 +39,22 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
 
   /**
    * The customer account's contact email. Required for entitlements that create admin.google.com
-   * accounts, and serves as the customer's username for those accounts.
+   * accounts, and serves as the customer's username for those accounts. Use this email to invite
+   * Team customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * The customer account contact's first name.
+   * The customer account contact's first name. Optional for Team customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firstName;
 
   /**
-   * The customer account contact's last name.
+   * The customer account contact's last name. Optional for Team customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
 
   /**
    * The customer account's contact email. Required for entitlements that create admin.google.com
-   * accounts, and serves as the customer's username for those accounts.
+   * accounts, and serves as the customer's username for those accounts. Use this email to invite
+   * Team customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -103,7 +105,8 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
 
   /**
    * The customer account's contact email. Required for entitlements that create admin.google.com
-   * accounts, and serves as the customer's username for those accounts.
+   * accounts, and serves as the customer's username for those accounts. Use this email to invite
+   * Team customers.
    * @param email email or {@code null} for none
    */
   public GoogleCloudChannelV1ContactInfo setEmail(java.lang.String email) {
@@ -112,7 +115,7 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
   }
 
   /**
-   * The customer account contact's first name.
+   * The customer account contact's first name. Optional for Team customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstName() {
@@ -120,7 +123,7 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
   }
 
   /**
-   * The customer account contact's first name.
+   * The customer account contact's first name. Optional for Team customers.
    * @param firstName firstName or {@code null} for none
    */
   public GoogleCloudChannelV1ContactInfo setFirstName(java.lang.String firstName) {
@@ -129,7 +132,7 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
   }
 
   /**
-   * The customer account contact's last name.
+   * The customer account contact's last name. Optional for Team customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastName() {
@@ -137,7 +140,7 @@ public final class GoogleCloudChannelV1ContactInfo extends com.google.api.client
   }
 
   /**
-   * The customer account contact's last name.
+   * The customer account contact's last name. Optional for Team customers.
    * @param lastName lastName or {@code null} for none
    */
   public GoogleCloudChannelV1ContactInfo setLastName(java.lang.String lastName) {

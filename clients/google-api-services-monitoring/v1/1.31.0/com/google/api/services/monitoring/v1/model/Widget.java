@@ -31,6 +31,13 @@ package com.google.api.services.monitoring.v1.model;
 public final class Widget extends com.google.api.client.json.GenericJson {
 
   /**
+   * A chart of alert policy data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlertChart alertChart;
+
+  /**
    * A blank space.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private XyChart xyChart;
+
+  /**
+   * A chart of alert policy data.
+   * @return value or {@code null} for none
+   */
+  public AlertChart getAlertChart() {
+    return alertChart;
+  }
+
+  /**
+   * A chart of alert policy data.
+   * @param alertChart alertChart or {@code null} for none
+   */
+  public Widget setAlertChart(AlertChart alertChart) {
+    this.alertChart = alertChart;
+    return this;
+  }
 
   /**
    * A blank space.

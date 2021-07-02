@@ -33,6 +33,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
    * Secondary contact email. You need to provide an alternate email to create different domains if
    * a primary contact email already exists. Users will receive a notification with credentials when
    * you create an admin.google.com account. Secondary emails are also recovery email addresses.
+   * Alternate emails are optional when you create Team customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,6 +126,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
    * Secondary contact email. You need to provide an alternate email to create different domains if
    * a primary contact email already exists. Users will receive a notification with credentials when
    * you create an admin.google.com account. Secondary emails are also recovery email addresses.
+   * Alternate emails are optional when you create Team customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateEmail() {
@@ -135,6 +137,7 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
    * Secondary contact email. You need to provide an alternate email to create different domains if
    * a primary contact email already exists. Users will receive a notification with credentials when
    * you create an admin.google.com account. Secondary emails are also recovery email addresses.
+   * Alternate emails are optional when you create Team customers.
    * @param alternateEmail alternateEmail or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setAlternateEmail(java.lang.String alternateEmail) {

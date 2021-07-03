@@ -3419,6 +3419,368 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         }
       }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * Code.CANCELLED.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * Code.CANCELLED.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+         * binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v2/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+           * the binding to use different resource name schemes, such as users/operations. To override the
+           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -3841,6 +4203,168 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Operations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Operations operations() {
+      return new Operations();
+    }
+
+    /**
+     * The "operations" collection of methods.
+     */
+    public class Operations {
+
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/operations/[^/]+$");
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
         }
       }
 
@@ -5061,6 +5585,104 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
    */
   public class Entries {
 
+    /**
+     * Copies a set of log entries from a logging bucket to a Cloud Storage bucket.
+     *
+     * Create a request for the method "entries.copy".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link Copy#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.logging.v2.model.CopyLogEntriesRequest}
+     * @return the request
+     */
+    public Copy copy(com.google.api.services.logging.v2.model.CopyLogEntriesRequest content) throws java.io.IOException {
+      Copy result = new Copy(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Copy extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+      private static final String REST_PATH = "v2/entries:copy";
+
+      /**
+       * Copies a set of log entries from a logging bucket to a Cloud Storage bucket.
+       *
+       * Create a request for the method "entries.copy".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link Copy#execute()} method to invoke the remote operation. <p> {@link
+       * Copy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.logging.v2.model.CopyLogEntriesRequest}
+       * @since 1.13
+       */
+      protected Copy(com.google.api.services.logging.v2.model.CopyLogEntriesRequest content) {
+        super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Operation.class);
+      }
+
+      @Override
+      public Copy set$Xgafv(java.lang.String $Xgafv) {
+        return (Copy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Copy setAccessToken(java.lang.String accessToken) {
+        return (Copy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Copy setAlt(java.lang.String alt) {
+        return (Copy) super.setAlt(alt);
+      }
+
+      @Override
+      public Copy setCallback(java.lang.String callback) {
+        return (Copy) super.setCallback(callback);
+      }
+
+      @Override
+      public Copy setFields(java.lang.String fields) {
+        return (Copy) super.setFields(fields);
+      }
+
+      @Override
+      public Copy setKey(java.lang.String key) {
+        return (Copy) super.setKey(key);
+      }
+
+      @Override
+      public Copy setOauthToken(java.lang.String oauthToken) {
+        return (Copy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Copy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Copy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Copy setQuotaUser(java.lang.String quotaUser) {
+        return (Copy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Copy setUploadType(java.lang.String uploadType) {
+        return (Copy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Copy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Copy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Copy set(String parameterName, Object value) {
+        return (Copy) super.set(parameterName, value);
+      }
+    }
     /**
      * Lists log entries. Use this method to retrieve log entries that originated from a
      * project/folder/organization/billing account. For ways to export log entries, see Exporting Logs
@@ -9499,6 +10121,508 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         }
       }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * Code.CANCELLED.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * Code.CANCELLED.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+         * binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v2/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+           * the binding to use different resource name schemes, such as users/operations. To override the
+           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Logs collection.
@@ -13456,6 +14580,508 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the Operations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Logging logging = new Logging(...);}
+     *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Operations operations() {
+      return new Operations();
+    }
+
+    /**
+     * The "operations" collection of methods.
+     */
+    public class Operations {
+
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * Code.CANCELLED.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+        private static final String REST_PATH = "v2/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * Code.CANCELLED.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) {
+          super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to be cancelled.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+       * binding to use different resource name schemes, such as users/operations. To override the
+       * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+       * configuration. For backwards compatibility, the default name includes the operations collection
+       * id, however overriding users must ensure the name binding is the parent resource, without the
+       * operations collection id.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the logging server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation's parent resource.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListOperationsResponse> {
+
+        private static final String REST_PATH = "v2/{+name}/operations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+$");
+
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+         * the binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation's parent resource.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListOperationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation's parent resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation's parent resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation's parent resource. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^[^/]+/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 
@@ -17677,6 +19303,508 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * Code.CANCELLED.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * Code.CANCELLED.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+         * binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v2/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+           * the binding to use different resource name schemes, such as users/operations. To override the
+           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
     /**
@@ -22542,6 +24670,508 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Logging logging = new Logging(...);}
+       *   {@code Logging.Operations.List request = logging.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * Code.CANCELLED.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends LoggingRequest<com.google.api.services.logging.v2.model.Empty> {
+
+          private static final String REST_PATH = "v2/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * Code.CANCELLED.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.logging.v2.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.logging.v2.model.CancelOperationRequest content) {
+            super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the
+         * binding to use different resource name schemes, such as users/operations. To override the
+         * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends LoggingRequest<com.google.api.services.logging.v2.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v2/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override
+           * the binding to use different resource name schemes, such as users/operations. To override the
+           * binding, API services can add a binding such as "/v1/{name=users}/operations" to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
     /**

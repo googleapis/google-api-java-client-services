@@ -76,24 +76,24 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * Required. The input token. This token is either an external credential issued by a workload
    * identity pool provider, or a short-lived access token issued by Google. If the token is an OIDC
    * JWT, it must use the JWT format defined in [RFC 7523](https://tools.ietf.org/html/rfc7523), and
-   * the `subject_token_type` must be `urn:ietf:params:oauth:token-type:jwt`. The following headers
-   * are required: - `kid`: The identifier of the signing key securing the JWT. - `alg`: The
-   * cryptographic algorithm securing the JWT. Must be `RS256` or `ES256`. The following payload
-   * fields are required. For more information, see [RFC 7523, Section
-   * 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`: The issuer of the token. The issuer
-   * must provide a discovery document at the URL `/.well-known/openid-configuration`, where `` is
-   * the value of this field. The document must be formatted according to section 4.2 of the [OIDC
-   * 1.0 Discovery specification](https://openid.net/specs/openid-connect-discovery-
-   * 1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since the Unix
-   * epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix epoch.
-   * Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If possible,
-   * we recommend setting an expiration time less than 6 hours. - `sub`: The identity asserted in
-   * the JWT. - `aud`: For workload identity pools, this must be a value specified in the allowed
-   * audiences for the workload identity pool provider, or one of the audiences allowed by default
-   * if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest/v1/project
-   * s.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg": "RS256", "kid":
-   * "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com", "iat":
-   * 1517963104, "exp": 1517966704, "aud":
+   * the `subject_token_type` must be either `urn:ietf:params:oauth:token-type:jwt` or
+   * `urn:ietf:params:oauth:token-type:id_token`. The following headers are required: - `kid`: The
+   * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
+   * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
+   * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
+   * /openid-configuration`, where `` is the value of this field. The document must be formatted
+   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
+   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
+   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
+   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
+   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
+   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
+   * specified in the allowed audiences for the workload identity pool provider, or one of the
+   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
+   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`
@@ -136,8 +136,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
-   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
+   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, and
+   * `urn:ietf:params:oauth:token-type:access_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,24 +247,24 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * Required. The input token. This token is either an external credential issued by a workload
    * identity pool provider, or a short-lived access token issued by Google. If the token is an OIDC
    * JWT, it must use the JWT format defined in [RFC 7523](https://tools.ietf.org/html/rfc7523), and
-   * the `subject_token_type` must be `urn:ietf:params:oauth:token-type:jwt`. The following headers
-   * are required: - `kid`: The identifier of the signing key securing the JWT. - `alg`: The
-   * cryptographic algorithm securing the JWT. Must be `RS256` or `ES256`. The following payload
-   * fields are required. For more information, see [RFC 7523, Section
-   * 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`: The issuer of the token. The issuer
-   * must provide a discovery document at the URL `/.well-known/openid-configuration`, where `` is
-   * the value of this field. The document must be formatted according to section 4.2 of the [OIDC
-   * 1.0 Discovery specification](https://openid.net/specs/openid-connect-discovery-
-   * 1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since the Unix
-   * epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix epoch.
-   * Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If possible,
-   * we recommend setting an expiration time less than 6 hours. - `sub`: The identity asserted in
-   * the JWT. - `aud`: For workload identity pools, this must be a value specified in the allowed
-   * audiences for the workload identity pool provider, or one of the audiences allowed by default
-   * if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest/v1/project
-   * s.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg": "RS256", "kid":
-   * "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com", "iat":
-   * 1517963104, "exp": 1517966704, "aud":
+   * the `subject_token_type` must be either `urn:ietf:params:oauth:token-type:jwt` or
+   * `urn:ietf:params:oauth:token-type:id_token`. The following headers are required: - `kid`: The
+   * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
+   * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
+   * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
+   * /openid-configuration`, where `` is the value of this field. The document must be formatted
+   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
+   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
+   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
+   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
+   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
+   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
+   * specified in the allowed audiences for the workload identity pool provider, or one of the
+   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
+   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`
@@ -309,24 +310,24 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * Required. The input token. This token is either an external credential issued by a workload
    * identity pool provider, or a short-lived access token issued by Google. If the token is an OIDC
    * JWT, it must use the JWT format defined in [RFC 7523](https://tools.ietf.org/html/rfc7523), and
-   * the `subject_token_type` must be `urn:ietf:params:oauth:token-type:jwt`. The following headers
-   * are required: - `kid`: The identifier of the signing key securing the JWT. - `alg`: The
-   * cryptographic algorithm securing the JWT. Must be `RS256` or `ES256`. The following payload
-   * fields are required. For more information, see [RFC 7523, Section
-   * 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`: The issuer of the token. The issuer
-   * must provide a discovery document at the URL `/.well-known/openid-configuration`, where `` is
-   * the value of this field. The document must be formatted according to section 4.2 of the [OIDC
-   * 1.0 Discovery specification](https://openid.net/specs/openid-connect-discovery-
-   * 1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since the Unix
-   * epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix epoch.
-   * Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If possible,
-   * we recommend setting an expiration time less than 6 hours. - `sub`: The identity asserted in
-   * the JWT. - `aud`: For workload identity pools, this must be a value specified in the allowed
-   * audiences for the workload identity pool provider, or one of the audiences allowed by default
-   * if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest/v1/project
-   * s.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg": "RS256", "kid":
-   * "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com", "iat":
-   * 1517963104, "exp": 1517966704, "aud":
+   * the `subject_token_type` must be either `urn:ietf:params:oauth:token-type:jwt` or
+   * `urn:ietf:params:oauth:token-type:id_token`. The following headers are required: - `kid`: The
+   * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
+   * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
+   * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
+   * /openid-configuration`, where `` is the value of this field. The document must be formatted
+   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
+   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
+   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
+   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
+   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
+   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
+   * specified in the allowed audiences for the workload identity pool provider, or one of the
+   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
+   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc Example header:
+   * ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`
@@ -371,8 +372,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
-   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
+   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, and
+   * `urn:ietf:params:oauth:token-type:access_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubjectTokenType() {
@@ -381,8 +383,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
-   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
+   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, and
+   * `urn:ietf:params:oauth:token-type:access_token`.
    * @param subjectTokenType subjectTokenType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setSubjectTokenType(java.lang.String subjectTokenType) {

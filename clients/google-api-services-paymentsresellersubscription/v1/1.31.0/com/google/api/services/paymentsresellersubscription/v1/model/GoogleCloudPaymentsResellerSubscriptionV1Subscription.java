@@ -86,6 +86,16 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String partnerUserToken;
 
   /**
+   * Output only. Describes the processing state of the subscription. See more details at [the
+   * lifecycle of a
+   * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
+   * subscription-lifecycle).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String processingState;
+
+  /**
    * Required. Resource name that identifies one or more subscription products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
@@ -119,7 +129,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private GoogleCloudPaymentsResellerSubscriptionV1Location serviceLocation;
 
   /**
-   * Output only. Descibes the state of the subscription. See more details at [the lifecycle of a
+   * Output only. Describes the state of the subscription. See more details at [the lifecycle of a
    * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
    * subscription-lifecycle).
    * The value may be {@code null}.
@@ -276,6 +286,29 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
+   * Output only. Describes the processing state of the subscription. See more details at [the
+   * lifecycle of a
+   * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
+   * subscription-lifecycle).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcessingState() {
+    return processingState;
+  }
+
+  /**
+   * Output only. Describes the processing state of the subscription. See more details at [the
+   * lifecycle of a
+   * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
+   * subscription-lifecycle).
+   * @param processingState processingState or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setProcessingState(java.lang.String processingState) {
+    this.processingState = processingState;
+    return this;
+  }
+
+  /**
    * Required. Resource name that identifies one or more subscription products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
@@ -354,7 +387,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Output only. Descibes the state of the subscription. See more details at [the lifecycle of a
+   * Output only. Describes the state of the subscription. See more details at [the lifecycle of a
    * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
    * subscription-lifecycle).
    * @return value or {@code null} for none
@@ -364,7 +397,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Output only. Descibes the state of the subscription. See more details at [the lifecycle of a
+   * Output only. Describes the state of the subscription. See more details at [the lifecycle of a
    * subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-
    * subscription-lifecycle).
    * @param state state or {@code null} for none

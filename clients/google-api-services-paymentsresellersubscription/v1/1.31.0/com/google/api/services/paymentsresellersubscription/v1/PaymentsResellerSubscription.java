@@ -633,8 +633,9 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
     public class Subscriptions {
 
       /**
-       * Used by partners to cancel a subscription service by the end of the current billing cycle for
-       * their customers. It should be called directly by the partner using service accounts.
+       * Used by partners to cancel a subscription service either immediately or by the end of the current
+       * billing cycle for their customers. It should be called directly by the partner using service
+       * accounts.
        *
        * Create a request for the method "subscriptions.cancel".
        *
@@ -661,8 +662,9 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Used by partners to cancel a subscription service by the end of the current billing cycle for
-         * their customers. It should be called directly by the partner using service accounts.
+         * Used by partners to cancel a subscription service either immediately or by the end of the
+         * current billing cycle for their customers. It should be called directly by the partner using
+         * service accounts.
          *
          * Create a request for the method "subscriptions.cancel".
          *

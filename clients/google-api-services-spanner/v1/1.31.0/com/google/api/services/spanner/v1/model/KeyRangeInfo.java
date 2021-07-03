@@ -78,6 +78,13 @@ public final class KeyRangeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Integer startKeyIndex;
 
   /**
+   * The time offset. This is the time since the start of the time interval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timeOffset;
+
+  /**
    * The unit of the metric. This is an unstructured field and will be mapped as is to the user.
    * The value may be {@code null}.
    */
@@ -190,6 +197,23 @@ public final class KeyRangeInfo extends com.google.api.client.json.GenericJson {
    */
   public KeyRangeInfo setStartKeyIndex(java.lang.Integer startKeyIndex) {
     this.startKeyIndex = startKeyIndex;
+    return this;
+  }
+
+  /**
+   * The time offset. This is the time since the start of the time interval.
+   * @return value or {@code null} for none
+   */
+  public String getTimeOffset() {
+    return timeOffset;
+  }
+
+  /**
+   * The time offset. This is the time since the start of the time interval.
+   * @param timeOffset timeOffset or {@code null} for none
+   */
+  public KeyRangeInfo setTimeOffset(String timeOffset) {
+    this.timeOffset = timeOffset;
     return this;
   }
 

@@ -41,20 +41,22 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   private java.lang.Boolean directUserRequest;
 
   /**
-   * The end user's IP address. This field is used to extract location information for
-   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
-   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
-   * is returned. This should not be set when using the JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * The end user's IP address. Required for getting SearchRespons.sponsored_results. This field is
+   * used to extract location information for personalization. This field must be either an IPv4
+   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
+   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
+   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
+   * direct_user_request is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
-   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
-   * not be set when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. Required for getting
+   * SearchRespons.sponsored_results. The field must be a UTF-8 encoded string with a length limit
+   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
+   * when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * The value may be {@code null}.
    */
@@ -96,11 +98,12 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * The end user's IP address. This field is used to extract location information for
-   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
-   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
-   * is returned. This should not be set when using the JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * The end user's IP address. Required for getting SearchRespons.sponsored_results. This field is
+   * used to extract location information for personalization. This field must be either an IPv4
+   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
+   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
+   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
+   * direct_user_request is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -108,11 +111,12 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * The end user's IP address. This field is used to extract location information for
-   * personalization. This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
-   * address (e.g. "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error
-   * is returned. This should not be set when using the JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * The end user's IP address. Required for getting SearchRespons.sponsored_results. This field is
+   * used to extract location information for personalization. This field must be either an IPv4
+   * address (e.g. "104.133.9.80") or an IPv6 address (e.g.
+   * "2001:0db8:85a3:0000:0000:8a2e:0370:7334"). Otherwise, an INVALID_ARGUMENT error is returned.
+   * This should not be set when using the JavaScript tag in UserEventService.CollectUserEvent or if
+   * direct_user_request is set.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public GoogleCloudRetailV2alphaUserInfo setIpAddress(java.lang.String ipAddress) {
@@ -121,9 +125,10 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
-   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
-   * not be set when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. Required for getting
+   * SearchRespons.sponsored_results. The field must be a UTF-8 encoded string with a length limit
+   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
+   * when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * @return value or {@code null} for none
    */
@@ -132,9 +137,10 @@ public final class GoogleCloudRetailV2alphaUserInfo extends com.google.api.clien
   }
 
   /**
-   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
-   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
-   * not be set when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. Required for getting
+   * SearchRespons.sponsored_results. The field must be a UTF-8 encoded string with a length limit
+   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
+   * when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * @param userAgent userAgent or {@code null} for none
    */

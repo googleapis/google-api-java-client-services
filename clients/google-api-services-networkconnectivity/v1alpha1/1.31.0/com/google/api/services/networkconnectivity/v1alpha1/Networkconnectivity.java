@@ -20,7 +20,7 @@ package com.google.api.services.networkconnectivity.v1alpha1;
  * Service definition for Networkconnectivity (v1alpha1).
  *
  * <p>
- * The Network Connectivity API will be home to various services which provide information pertaining to network connectivity.
+ * The Network Connectivity API provides access to Network Connectivity Center.
  * </p>
  *
  * <p>

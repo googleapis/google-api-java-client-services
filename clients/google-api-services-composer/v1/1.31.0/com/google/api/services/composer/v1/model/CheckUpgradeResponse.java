@@ -44,12 +44,27 @@ public final class CheckUpgradeResponse extends com.google.api.client.json.Gener
   private java.lang.String containsPypiModulesConflict;
 
   /**
+   * Composer image for which the build was happening.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageVersion;
+
+  /**
    * Output only. Extract from a docker image build log containing information about pypi modules
    * conflicts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pypiConflictBuildLogExtract;
+
+  /**
+   * Pypi dependencies specified in the environment configuration, at the time when the build was
+   * triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> pypiDependencies;
 
   /**
    * Output only. Url for a docker build log of an upgraded image.
@@ -86,6 +101,23 @@ public final class CheckUpgradeResponse extends com.google.api.client.json.Gener
   }
 
   /**
+   * Composer image for which the build was happening.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageVersion() {
+    return imageVersion;
+  }
+
+  /**
+   * Composer image for which the build was happening.
+   * @param imageVersion imageVersion or {@code null} for none
+   */
+  public CheckUpgradeResponse setImageVersion(java.lang.String imageVersion) {
+    this.imageVersion = imageVersion;
+    return this;
+  }
+
+  /**
    * Output only. Extract from a docker image build log containing information about pypi modules
    * conflicts.
    * @return value or {@code null} for none
@@ -101,6 +133,25 @@ public final class CheckUpgradeResponse extends com.google.api.client.json.Gener
    */
   public CheckUpgradeResponse setPypiConflictBuildLogExtract(java.lang.String pypiConflictBuildLogExtract) {
     this.pypiConflictBuildLogExtract = pypiConflictBuildLogExtract;
+    return this;
+  }
+
+  /**
+   * Pypi dependencies specified in the environment configuration, at the time when the build was
+   * triggered.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getPypiDependencies() {
+    return pypiDependencies;
+  }
+
+  /**
+   * Pypi dependencies specified in the environment configuration, at the time when the build was
+   * triggered.
+   * @param pypiDependencies pypiDependencies or {@code null} for none
+   */
+  public CheckUpgradeResponse setPypiDependencies(java.util.Map<String, java.lang.String> pypiDependencies) {
+    this.pypiDependencies = pypiDependencies;
     return this;
   }
 

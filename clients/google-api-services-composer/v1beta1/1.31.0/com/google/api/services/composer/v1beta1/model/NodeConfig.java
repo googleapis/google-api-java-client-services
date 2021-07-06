@@ -117,7 +117,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Cloud Platform Service Account to be used by the workloads. If a service
    * account is not specified, the "default" Compute Engine service account is used. Cannot be
-   * updated .
+   * updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,7 +335,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Cloud Platform Service Account to be used by the workloads. If a service
    * account is not specified, the "default" Compute Engine service account is used. Cannot be
-   * updated .
+   * updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -345,7 +345,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Cloud Platform Service Account to be used by the workloads. If a service
    * account is not specified, the "default" Compute Engine service account is used. Cannot be
-   * updated .
+   * updated.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public NodeConfig setServiceAccount(java.lang.String serviceAccount) {

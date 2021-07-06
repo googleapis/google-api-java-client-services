@@ -48,7 +48,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Real-time Bidding API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Real-time Bidding API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -172,6 +172,290 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
      */
     public class BiddingFunctions {
 
+      /**
+       * Activates an existing bidding function. An activated function is available for invocation for the
+       * server-side TURTLEDOVE simulations.
+       *
+       * Create a request for the method "biddingFunctions.activate".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the bidding function to activate. Format:
+       *        `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+       * @param content the {@link com.google.api.services.realtimebidding.v1alpha.model.ActivateBiddingFunctionRequest}
+       * @return the request
+       */
+      public Activate activate(java.lang.String name, com.google.api.services.realtimebidding.v1alpha.model.ActivateBiddingFunctionRequest content) throws java.io.IOException {
+        Activate result = new Activate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Activate extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1alpha.model.BiddingFunction> {
+
+        private static final String REST_PATH = "v1alpha/{+name}:activate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/biddingFunctions/[^/]+$");
+
+        /**
+         * Activates an existing bidding function. An activated function is available for invocation for
+         * the server-side TURTLEDOVE simulations.
+         *
+         * Create a request for the method "biddingFunctions.activate".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the bidding function to activate. Format:
+       *        `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         * @param content the {@link com.google.api.services.realtimebidding.v1alpha.model.ActivateBiddingFunctionRequest}
+         * @since 1.13
+         */
+        protected Activate(java.lang.String name, com.google.api.services.realtimebidding.v1alpha.model.ActivateBiddingFunctionRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1alpha.model.BiddingFunction.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/biddingFunctions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Activate set$Xgafv(java.lang.String $Xgafv) {
+          return (Activate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Activate setAccessToken(java.lang.String accessToken) {
+          return (Activate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Activate setAlt(java.lang.String alt) {
+          return (Activate) super.setAlt(alt);
+        }
+
+        @Override
+        public Activate setCallback(java.lang.String callback) {
+          return (Activate) super.setCallback(callback);
+        }
+
+        @Override
+        public Activate setFields(java.lang.String fields) {
+          return (Activate) super.setFields(fields);
+        }
+
+        @Override
+        public Activate setKey(java.lang.String key) {
+          return (Activate) super.setKey(key);
+        }
+
+        @Override
+        public Activate setOauthToken(java.lang.String oauthToken) {
+          return (Activate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Activate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Activate setQuotaUser(java.lang.String quotaUser) {
+          return (Activate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Activate setUploadType(java.lang.String uploadType) {
+          return (Activate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Activate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the bidding function to activate. Format:
+         * `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the bidding function to activate. Format:
+       `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the bidding function to activate. Format:
+         * `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        public Activate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/biddingFunctions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Activate set(String parameterName, Object value) {
+          return (Activate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Archives an existing bidding function. An archived function will not be available for function
+       * invocation for the server-side TURTLEDOVE simulations unless it is activated.
+       *
+       * Create a request for the method "biddingFunctions.archive".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the bidding function to archive. Format:
+       *        `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+       * @param content the {@link com.google.api.services.realtimebidding.v1alpha.model.ArchiveBiddingFunctionRequest}
+       * @return the request
+       */
+      public Archive archive(java.lang.String name, com.google.api.services.realtimebidding.v1alpha.model.ArchiveBiddingFunctionRequest content) throws java.io.IOException {
+        Archive result = new Archive(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Archive extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1alpha.model.BiddingFunction> {
+
+        private static final String REST_PATH = "v1alpha/{+name}:archive";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/biddingFunctions/[^/]+$");
+
+        /**
+         * Archives an existing bidding function. An archived function will not be available for function
+         * invocation for the server-side TURTLEDOVE simulations unless it is activated.
+         *
+         * Create a request for the method "biddingFunctions.archive".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the bidding function to archive. Format:
+       *        `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         * @param content the {@link com.google.api.services.realtimebidding.v1alpha.model.ArchiveBiddingFunctionRequest}
+         * @since 1.13
+         */
+        protected Archive(java.lang.String name, com.google.api.services.realtimebidding.v1alpha.model.ArchiveBiddingFunctionRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1alpha.model.BiddingFunction.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/biddingFunctions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Archive set$Xgafv(java.lang.String $Xgafv) {
+          return (Archive) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Archive setAccessToken(java.lang.String accessToken) {
+          return (Archive) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Archive setAlt(java.lang.String alt) {
+          return (Archive) super.setAlt(alt);
+        }
+
+        @Override
+        public Archive setCallback(java.lang.String callback) {
+          return (Archive) super.setCallback(callback);
+        }
+
+        @Override
+        public Archive setFields(java.lang.String fields) {
+          return (Archive) super.setFields(fields);
+        }
+
+        @Override
+        public Archive setKey(java.lang.String key) {
+          return (Archive) super.setKey(key);
+        }
+
+        @Override
+        public Archive setOauthToken(java.lang.String oauthToken) {
+          return (Archive) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Archive) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Archive setQuotaUser(java.lang.String quotaUser) {
+          return (Archive) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Archive setUploadType(java.lang.String uploadType) {
+          return (Archive) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Archive setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Archive) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the bidding function to archive. Format:
+         * `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the bidding function to archive. Format:
+       `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the bidding function to archive. Format:
+         * `bidders/{bidder_account_id}/biddingFunction/{bidding_function_name}`
+         */
+        public Archive setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/biddingFunctions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Archive set(String parameterName, Object value) {
+          return (Archive) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a new bidding function.
        *

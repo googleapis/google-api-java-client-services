@@ -48,7 +48,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Drive API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Drive API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -4461,17 +4461,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUserIp(userIp);
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of shared drives to return. [default: 10] [minimum: 1] [maximum: 100]
+      /** Maximum number of shared drives to return per page. [default: 10] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of shared drives to return. */
+      /** Maximum number of shared drives to return per page. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;

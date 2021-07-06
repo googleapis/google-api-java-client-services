@@ -38,12 +38,12 @@ public final class StopClusterRequest extends com.google.api.client.json.Generic
   private java.lang.String clusterUuid;
 
   /**
-   * Optional. A unique id used to identify the request. If the server receives two
+   * Optional. A unique ID used to identify the request. If the server receives two
    * StopClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.
    * v1#google.cloud.dataproc.v1.StopClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in the backend is
    * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.
    * The value may be {@code null}.
@@ -71,12 +71,12 @@ public final class StopClusterRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. A unique id used to identify the request. If the server receives two
+   * Optional. A unique ID used to identify the request. If the server receives two
    * StopClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.
    * v1#google.cloud.dataproc.v1.StopClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in the backend is
    * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.
    * @return value or {@code null} for none
@@ -86,12 +86,12 @@ public final class StopClusterRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. A unique id used to identify the request. If the server receives two
+   * Optional. A unique ID used to identify the request. If the server receives two
    * StopClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.
    * v1#google.cloud.dataproc.v1.StopClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in the backend is
    * returned.Recommendation: Set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.
    * @param requestId requestId or {@code null} for none

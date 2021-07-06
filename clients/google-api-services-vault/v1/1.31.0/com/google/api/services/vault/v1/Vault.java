@@ -20,7 +20,7 @@ package com.google.api.services.vault.v1;
  * Service definition for Vault (v1).
  *
  * <p>
- * Retention and eDiscovery for Google Workspace. To work with Vault resources, the account must have the [required Vault privileges] (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege. For example, to download an export, an account needs the **Manage Exports** privilege and the matter shared with them. 
+ * Retention and eDiscovery for Google Workspace. To work with Vault resources, the account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege. For example, to download an export, an account needs the **Manage Exports** privilege and the matter shared with them. 
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the G Suite Vault API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the G Suite Vault API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -271,7 +271,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Closes the specified matter. Returns matter with updated state.
+     * Closes the specified matter. Returns the matter with updated state.
      *
      * Create a request for the method "matters.close".
      *
@@ -293,7 +293,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters/{matterId}:close";
 
       /**
-       * Closes the specified matter. Returns matter with updated state.
+       * Closes the specified matter. Returns the matter with updated state.
        *
        * Create a request for the method "matters.close".
        *
@@ -388,7 +388,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Counts the artifacts within the context of a matter and returns a detailed breakdown of metrics.
+     * Counts the accounts processed by the specified query.
      *
      * Create a request for the method "matters.count".
      *
@@ -410,8 +410,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters/{matterId}:count";
 
       /**
-       * Counts the artifacts within the context of a matter and returns a detailed breakdown of
-       * metrics.
+       * Counts the accounts processed by the specified query.
        *
        * Create a request for the method "matters.count".
        *
@@ -506,8 +505,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new matter with the given name and description. The initial state is open, and the
-     * owner is the method caller. Returns the created matter with default view.
+     * Creates a matter with the given name and description. The initial state is open, and the owner is
+     * the method caller. Returns the created matter with default view.
      *
      * Create a request for the method "matters.create".
      *
@@ -528,8 +527,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters";
 
       /**
-       * Creates a new matter with the given name and description. The initial state is open, and the
-       * owner is the method caller. Returns the created matter with default view.
+       * Creates a matter with the given name and description. The initial state is open, and the owner
+       * is the method caller. Returns the created matter with default view.
        *
        * Create a request for the method "matters.create".
        *
@@ -606,7 +605,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deletes the specified matter. Returns matter with updated state.
+     * Deletes the specified matter. Returns the matter with updated state.
      *
      * Create a request for the method "matters.delete".
      *
@@ -627,7 +626,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters/{matterId}";
 
       /**
-       * Deletes the specified matter. Returns matter with updated state.
+       * Deletes the specified matter. Returns the matter with updated state.
        *
        * Create a request for the method "matters.delete".
        *
@@ -840,17 +839,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Specifies which parts of the Matter to return in the response. */
+      /** Specifies how much information about the matter to return in the response. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies which parts of the Matter to return in the response.
+      /** Specifies how much information about the matter to return in the response.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** Specifies which parts of the Matter to return in the response. */
+      /** Specifies how much information about the matter to return in the response. */
       public Get setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -862,7 +861,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists matters the user has access to.
+     * Lists matters the requestor has access to.
      *
      * Create a request for the method "matters.list".
      *
@@ -882,7 +881,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters";
 
       /**
-       * Lists matters the user has access to.
+       * Lists matters the requestor has access to.
        *
        * Create a request for the method "matters.list".
        *
@@ -995,20 +994,20 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * If set, list only matters with that specific state. The default is listing matters of all
+       * If set, lists only matters with the specified state. The default lists matters of all
        * states.
        */
       @com.google.api.client.util.Key
       private java.lang.String state;
 
-      /** If set, list only matters with that specific state. The default is listing matters of all states.
+      /** If set, lists only matters with the specified state. The default lists matters of all states.
        */
       public java.lang.String getState() {
         return state;
       }
 
       /**
-       * If set, list only matters with that specific state. The default is listing matters of all
+       * If set, lists only matters with the specified state. The default lists matters of all
        * states.
        */
       public List setState(java.lang.String state) {
@@ -1016,17 +1015,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Specifies which parts of the matter to return in response. */
+      /** Specifies how much information about the matter to return in response. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Specifies which parts of the matter to return in response.
+      /** Specifies how much information about the matter to return in response.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** Specifies which parts of the matter to return in response. */
+      /** Specifies how much information about the matter to return in response. */
       public List setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -1156,7 +1155,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Reopens the specified matter. Returns matter with updated state.
+     * Reopens the specified matter. Returns the matter with updated state.
      *
      * Create a request for the method "matters.reopen".
      *
@@ -1178,7 +1177,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters/{matterId}:reopen";
 
       /**
-       * Reopens the specified matter. Returns matter with updated state.
+       * Reopens the specified matter. Returns the matter with updated state.
        *
        * Create a request for the method "matters.reopen".
        *
@@ -1273,7 +1272,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Undeletes the specified matter. Returns matter with updated state.
+     * Undeletes the specified matter. Returns the matter with updated state.
      *
      * Create a request for the method "matters.undelete".
      *
@@ -1295,7 +1294,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/matters/{matterId}:undelete";
 
       /**
-       * Undeletes the specified matter. Returns matter with updated state.
+       * Undeletes the specified matter. Returns the matter with updated state.
        *
        * Create a request for the method "matters.undelete".
        *
@@ -1533,7 +1532,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
     public class Exports {
 
       /**
-       * Creates an Export.
+       * Creates an export.
        *
        * Create a request for the method "exports.create".
        *
@@ -1555,7 +1554,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/exports";
 
         /**
-         * Creates an Export.
+         * Creates an export.
          *
          * Create a request for the method "exports.create".
          *
@@ -1650,7 +1649,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Deletes an Export.
+       * Deletes an export.
        *
        * Create a request for the method "exports.delete".
        *
@@ -1672,7 +1671,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/exports/{exportId}";
 
         /**
-         * Deletes an Export.
+         * Deletes an export.
          *
          * Create a request for the method "exports.delete".
          *
@@ -1784,7 +1783,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets an Export.
+       * Gets an export.
        *
        * Create a request for the method "exports.get".
        *
@@ -1806,7 +1805,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/exports/{exportId}";
 
         /**
-         * Gets an Export.
+         * Gets an export.
          *
          * Create a request for the method "exports.get".
          *
@@ -1928,7 +1927,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists Exports.
+       * Lists details about the exports in the specified matter.
        *
        * Create a request for the method "exports.list".
        *
@@ -1949,7 +1948,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/exports";
 
         /**
-         * Lists Exports.
+         * Lists details about the exports in the specified matter.
          *
          * Create a request for the method "exports.list".
          *
@@ -2107,8 +2106,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
     public class Holds {
 
       /**
-       * Adds HeldAccounts to a hold. Returns a list of accounts that have been successfully added.
-       * Accounts can only be added to an existing account-based hold.
+       * Adds accounts to a hold. Returns a list of accounts that have been successfully added. Accounts
+       * can be added only to an existing account-based hold.
        *
        * Create a request for the method "holds.addHeldAccounts".
        *
@@ -2131,8 +2130,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}:addHeldAccounts";
 
         /**
-         * Adds HeldAccounts to a hold. Returns a list of accounts that have been successfully added.
-         * Accounts can only be added to an existing account-based hold.
+         * Adds accounts to a hold. Returns a list of accounts that have been successfully added. Accounts
+         * can be added only to an existing account-based hold.
          *
          * Create a request for the method "holds.addHeldAccounts".
          *
@@ -2246,7 +2245,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Creates a hold in the given matter.
+       * Creates a hold in the specified matter.
        *
        * Create a request for the method "holds.create".
        *
@@ -2268,7 +2267,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds";
 
         /**
-         * Creates a hold in the given matter.
+         * Creates a hold in the specified matter.
          *
          * Create a request for the method "holds.create".
          *
@@ -2363,7 +2362,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Removes a hold by ID. This will release any HeldAccounts on this Hold.
+       * Removes the specified hold and releases the accounts or organizational unit covered by the hold.
+       * If the data is not preserved by another hold or retention rule, it might be purged.
        *
        * Create a request for the method "holds.delete".
        *
@@ -2385,7 +2385,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}";
 
         /**
-         * Removes a hold by ID. This will release any HeldAccounts on this Hold.
+         * Removes the specified hold and releases the accounts or organizational unit covered by the
+         * hold. If the data is not preserved by another hold or retention rule, it might be purged.
          *
          * Create a request for the method "holds.delete".
          *
@@ -2497,7 +2498,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets a hold by ID.
+       * Gets the specified hold.
        *
        * Create a request for the method "holds.get".
        *
@@ -2519,7 +2520,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}";
 
         /**
-         * Gets a hold by ID.
+         * Gets the specified hold.
          *
          * Create a request for the method "holds.get".
          *
@@ -2635,17 +2636,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Specifies which parts of the Hold to return. */
+        /** The amount of detail to return for a hold. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Specifies which parts of the Hold to return.
+        /** The amount of detail to return for a hold.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Specifies which parts of the Hold to return. */
+        /** The amount of detail to return for a hold. */
         public Get setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -2657,8 +2658,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists holds within a matter. An empty page token in ListHoldsResponse denotes no more holds to
-       * list.
+       * Lists the holds in a matter.
        *
        * Create a request for the method "holds.list".
        *
@@ -2679,8 +2679,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds";
 
         /**
-         * Lists holds within a matter. An empty page token in ListHoldsResponse denotes no more holds to
-         * list.
+         * Lists the holds in a matter.
          *
          * Create a request for the method "holds.list".
          *
@@ -2780,13 +2779,13 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * The number of holds to return in the response, between 0 and 100 inclusive. Leaving this
-         * empty, or as 0, is the same as page_size = 100.
+         * empty, or as 0, is the same as **page_size** = 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The number of holds to return in the response, between 0 and 100 inclusive. Leaving this empty, or
-       as 0, is the same as page_size = 100.
+       as 0, is the same as **page_size** = 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2794,7 +2793,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * The number of holds to return in the response, between 0 and 100 inclusive. Leaving this
-         * empty, or as 0, is the same as page_size = 100.
+         * empty, or as 0, is the same as **page_size** = 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2823,17 +2822,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Specifies which parts of the Hold to return. */
+        /** The amount of detail to return for a hold. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Specifies which parts of the Hold to return.
+        /** The amount of detail to return for a hold.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Specifies which parts of the Hold to return. */
+        /** The amount of detail to return for a hold. */
         public List setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -2845,8 +2844,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Removes HeldAccounts from a hold. Returns a list of statuses in the same order as the request. If
-       * this request leaves the hold with no held accounts, the hold will not apply to any accounts.
+       * Removes the specified accounts from a hold. Returns a list of statuses in the same order as the
+       * request.
        *
        * Create a request for the method "holds.removeHeldAccounts".
        *
@@ -2869,8 +2868,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}:removeHeldAccounts";
 
         /**
-         * Removes HeldAccounts from a hold. Returns a list of statuses in the same order as the request.
-         * If this request leaves the hold with no held accounts, the hold will not apply to any accounts.
+         * Removes the specified accounts from a hold. Returns a list of statuses in the same order as the
+         * request.
          *
          * Create a request for the method "holds.removeHeldAccounts".
          *
@@ -2984,9 +2983,9 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates the OU and/or query parameters of a hold. You cannot add accounts to a hold that covers
-       * an OU, nor can you add OUs to a hold that covers individual accounts. Accounts listed in the hold
-       * will be ignored.
+       * Updates the scope (organizational unit or accounts) and query parameters of a hold. You cannot
+       * add accounts to a hold that covers an organizational unit, nor can you add organizational units
+       * to a hold that covers individual accounts. If you try, the unsupported values are ignored.
        *
        * Create a request for the method "holds.update".
        *
@@ -3009,9 +3008,9 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}";
 
         /**
-         * Updates the OU and/or query parameters of a hold. You cannot add accounts to a hold that covers
-         * an OU, nor can you add OUs to a hold that covers individual accounts. Accounts listed in the
-         * hold will be ignored.
+         * Updates the scope (organizational unit or accounts) and query parameters of a hold. You cannot
+         * add accounts to a hold that covers an organizational unit, nor can you add organizational units
+         * to a hold that covers individual accounts. If you try, the unsupported values are ignored.
          *
          * Create a request for the method "holds.update".
          *
@@ -3145,8 +3144,9 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       public class Accounts {
 
         /**
-         * Adds a HeldAccount to a hold. Accounts can only be added to a hold that has no held_org_unit set.
-         * Attempting to add an account to an OU-based hold will result in an error.
+         * Adds an account to a hold. Accounts can be added only to a hold that does not have an
+         * organizational unit set. If you try to add an account to an organizational unit-based hold, an
+         * error is returned.
          *
          * Create a request for the method "accounts.create".
          *
@@ -3169,8 +3169,9 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}/accounts";
 
           /**
-           * Adds a HeldAccount to a hold. Accounts can only be added to a hold that has no held_org_unit
-           * set. Attempting to add an account to an OU-based hold will result in an error.
+           * Adds an account to a hold. Accounts can be added only to a hold that does not have an
+           * organizational unit set. If you try to add an account to an organizational unit-based hold, an
+           * error is returned.
            *
            * Create a request for the method "accounts.create".
            *
@@ -3283,8 +3284,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Removes a HeldAccount from a hold. If this request leaves the hold with no held accounts, the
-         * hold will not apply to any accounts.
+         * Removes an account from a hold.
          *
          * Create a request for the method "accounts.delete".
          *
@@ -3307,8 +3307,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}/accounts/{accountId}";
 
           /**
-           * Removes a HeldAccount from a hold. If this request leaves the hold with no held accounts, the
-           * hold will not apply to any accounts.
+           * Removes an account from a hold.
            *
            * Create a request for the method "accounts.delete".
            *
@@ -3438,8 +3437,10 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Lists HeldAccounts for a hold. This will only list individually specified held accounts. If the
-         * hold is on an OU, then use Admin SDK to enumerate its members.
+         * Lists the accounts covered by a hold. This can list only individually-specified accounts covered
+         * by the hold. If the hold covers an organizational unit, use the [Admin
+         * SDK](https://developers.google.com/admin-sdk/). to list the members of the organizational unit on
+         * hold.
          *
          * Create a request for the method "accounts.list".
          *
@@ -3461,8 +3462,10 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "v1/matters/{matterId}/holds/{holdId}/accounts";
 
           /**
-           * Lists HeldAccounts for a hold. This will only list individually specified held accounts. If the
-           * hold is on an OU, then use Admin SDK to enumerate its members.
+           * Lists the accounts covered by a hold. This can list only individually-specified accounts
+           * covered by the hold. If the hold covers an organizational unit, use the [Admin
+           * SDK](https://developers.google.com/admin-sdk/). to list the members of the organizational unit
+           * on hold.
            *
            * Create a request for the method "accounts.list".
            *
@@ -3614,7 +3617,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be created.
+       * @param matterId The ID of the matter to create the saved query in.
        * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
        * @return the request
        */
@@ -3638,7 +3641,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be created.
+         * @param matterId The ID of the matter to create the saved query in.
          * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
          * @since 1.13
          */
@@ -3702,17 +3705,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be created. */
+        /** The ID of the matter to create the saved query in. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter ID of the parent matter for which the saved query is to be created.
+        /** The ID of the matter to create the saved query in.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be created. */
+        /** The ID of the matter to create the saved query in. */
         public Create setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -3724,15 +3727,15 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Deletes a saved query by Id.
+       * Deletes the specified saved query.
        *
        * Create a request for the method "savedQueries.delete".
        *
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
-       * @param savedQueryId ID of the saved query to be deleted.
+       * @param matterId The ID of the matter to delete the saved query from.
+       * @param savedQueryId ID of the saved query to delete.
        * @return the request
        */
       public Delete delete(java.lang.String matterId, java.lang.String savedQueryId) throws java.io.IOException {
@@ -3746,7 +3749,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/savedQueries/{savedQueryId}";
 
         /**
-         * Deletes a saved query by Id.
+         * Deletes the specified saved query.
          *
          * Create a request for the method "savedQueries.delete".
          *
@@ -3755,8 +3758,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
-         * @param savedQueryId ID of the saved query to be deleted.
+         * @param matterId The ID of the matter to delete the saved query from.
+         * @param savedQueryId ID of the saved query to delete.
          * @since 1.13
          */
         protected Delete(java.lang.String matterId, java.lang.String savedQueryId) {
@@ -3820,33 +3823,33 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be deleted. */
+        /** The ID of the matter to delete the saved query from. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter ID of the parent matter for which the saved query is to be deleted.
+        /** The ID of the matter to delete the saved query from.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be deleted. */
+        /** The ID of the matter to delete the saved query from. */
         public Delete setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
         }
 
-        /** ID of the saved query to be deleted. */
+        /** ID of the saved query to delete. */
         @com.google.api.client.util.Key
         private java.lang.String savedQueryId;
 
-        /** ID of the saved query to be deleted.
+        /** ID of the saved query to delete.
          */
         public java.lang.String getSavedQueryId() {
           return savedQueryId;
         }
 
-        /** ID of the saved query to be deleted. */
+        /** ID of the saved query to delete. */
         public Delete setSavedQueryId(java.lang.String savedQueryId) {
           this.savedQueryId = savedQueryId;
           return this;
@@ -3858,15 +3861,15 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Retrieves a saved query by Id.
+       * Retrieves the specified saved query.
        *
        * Create a request for the method "savedQueries.get".
        *
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
-       * @param savedQueryId ID of the saved query to be retrieved.
+       * @param matterId The ID of the matter to get the saved query from.
+       * @param savedQueryId ID of the saved query to retrieve.
        * @return the request
        */
       public Get get(java.lang.String matterId, java.lang.String savedQueryId) throws java.io.IOException {
@@ -3880,7 +3883,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/savedQueries/{savedQueryId}";
 
         /**
-         * Retrieves a saved query by Id.
+         * Retrieves the specified saved query.
          *
          * Create a request for the method "savedQueries.get".
          *
@@ -3889,8 +3892,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
-         * @param savedQueryId ID of the saved query to be retrieved.
+         * @param matterId The ID of the matter to get the saved query from.
+         * @param savedQueryId ID of the saved query to retrieve.
          * @since 1.13
          */
         protected Get(java.lang.String matterId, java.lang.String savedQueryId) {
@@ -3964,33 +3967,33 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
+        /** The ID of the matter to get the saved query from. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter ID of the parent matter for which the saved query is to be retrieved.
+        /** The ID of the matter to get the saved query from.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
+        /** The ID of the matter to get the saved query from. */
         public Get setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
         }
 
-        /** ID of the saved query to be retrieved. */
+        /** ID of the saved query to retrieve. */
         @com.google.api.client.util.Key
         private java.lang.String savedQueryId;
 
-        /** ID of the saved query to be retrieved.
+        /** ID of the saved query to retrieve.
          */
         public java.lang.String getSavedQueryId() {
           return savedQueryId;
         }
 
-        /** ID of the saved query to be retrieved. */
+        /** ID of the saved query to retrieve. */
         public Get setSavedQueryId(java.lang.String savedQueryId) {
           this.savedQueryId = savedQueryId;
           return this;
@@ -4002,15 +4005,14 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists saved queries within a matter. An empty page token in ListSavedQueriesResponse denotes no
-       * more saved queries to list.
+       * Lists the saved queries in a matter.
        *
        * Create a request for the method "savedQueries.list".
        *
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
+       * @param matterId The ID of the matter to get the saved queries for.
        * @return the request
        */
       public List list(java.lang.String matterId) throws java.io.IOException {
@@ -4024,8 +4026,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "v1/matters/{matterId}/savedQueries";
 
         /**
-         * Lists saved queries within a matter. An empty page token in ListSavedQueriesResponse denotes no
-         * more saved queries to list.
+         * Lists the saved queries in a matter.
          *
          * Create a request for the method "savedQueries.list".
          *
@@ -4034,7 +4035,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
+         * @param matterId The ID of the matter to get the saved queries for.
          * @since 1.13
          */
         protected List(java.lang.String matterId) {
@@ -4107,17 +4108,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
+        /** The ID of the matter to get the saved queries for. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter ID of the parent matter for which the saved queries are to be retrieved.
+        /** The ID of the matter to get the saved queries for.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
+        /** The ID of the matter to get the saved queries for. */
         public List setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;

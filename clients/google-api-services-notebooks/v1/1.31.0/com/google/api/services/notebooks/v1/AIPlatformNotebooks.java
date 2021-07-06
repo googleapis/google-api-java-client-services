@@ -20,12 +20,12 @@ package com.google.api.services.notebooks.v1;
  * Service definition for AIPlatformNotebooks (v1).
  *
  * <p>
- * AI Platform Notebooks API is used to manage notebook resources in Google Cloud.
+ * Notebooks API is used to manage notebook resources in Google Cloud.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/ai-platform/notebooks/docs/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/notebooks/docs/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Notebooks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Notebooks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

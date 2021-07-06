@@ -20,12 +20,12 @@ package com.google.api.services.keep.v1;
  * Service definition for Keep (v1).
  *
  * <p>
- * Allows clients to create, read, and write their Google Keep Notes.
+ * This API is an enterprise-only API used to create and manage the Keep notes within your domain, including resolving issues identified by CASB software.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://support.google.com/keep" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/keep/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class Keep extends com.google.api.client.googleapis.services.json.Abstrac
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Google Keep API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Google Keep API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -845,25 +845,25 @@ public class Keep extends com.google.api.client.googleapis.services.json.Abstrac
       }
 
       /**
-       * Filter for list results. If no filter is supplied, the "-trashed" filter is applied by
-       * default. Valid fields to filter by are: - `create_time` - `update_time` - `trash_time` -
-       * `trashed` Filter syntax follows the Google AIP filtering spec: https://aip.dev/160
+       * Filter for list results. If no filter is supplied, the `trashed` filter is applied by
+       * default. Valid fields to filter by are: `create_time`, `update_time`, `trash_time`, and
+       * `trashed`. Filter syntax follows the [Google AIP filtering spec](https://aip.dev/160).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Filter for list results. If no filter is supplied, the "-trashed" filter is applied by default.
-     Valid fields to filter by are: - `create_time` - `update_time` - `trash_time` - `trashed` Filter
-     syntax follows the Google AIP filtering spec: https://aip.dev/160
+      /** Filter for list results. If no filter is supplied, the `trashed` filter is applied by default.
+     Valid fields to filter by are: `create_time`, `update_time`, `trash_time`, and `trashed`. Filter
+     syntax follows the [Google AIP filtering spec](https://aip.dev/160).
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Filter for list results. If no filter is supplied, the "-trashed" filter is applied by
-       * default. Valid fields to filter by are: - `create_time` - `update_time` - `trash_time` -
-       * `trashed` Filter syntax follows the Google AIP filtering spec: https://aip.dev/160
+       * Filter for list results. If no filter is supplied, the `trashed` filter is applied by
+       * default. Valid fields to filter by are: `create_time`, `update_time`, `trash_time`, and
+       * `trashed`. Filter syntax follows the [Google AIP filtering spec](https://aip.dev/160).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -929,7 +929,7 @@ public class Keep extends com.google.api.client.googleapis.services.json.Abstrac
     public class Permissions {
 
       /**
-       * Creates one or more permission on the note. Only permissions with the `WRITER` role may be
+       * Creates one or more permissions on the note. Only permissions with the `WRITER` role may be
        * created. If adding any permission fails, then the entire request fails and no changes are made.
        *
        * Create a request for the method "permissions.batchCreate".
@@ -957,7 +957,7 @@ public class Keep extends com.google.api.client.googleapis.services.json.Abstrac
             java.util.regex.Pattern.compile("^notes/[^/]+$");
 
         /**
-         * Creates one or more permission on the note. Only permissions with the `WRITER` role may be
+         * Creates one or more permissions on the note. Only permissions with the `WRITER` role may be
          * created. If adding any permission fails, then the entire request fails and no changes are made.
          *
          * Create a request for the method "permissions.batchCreate".

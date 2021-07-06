@@ -37,7 +37,7 @@ public final class CountArtifactsRequest extends com.google.api.client.json.Gene
   private Query query;
 
   /**
-   * Specifies the granularity of the count result returned in response.
+   * Sets the granularity of the count results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class CountArtifactsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies the granularity of the count result returned in response.
+   * Sets the granularity of the count results.
    * @return value or {@code null} for none
    */
   public java.lang.String getView() {
@@ -69,7 +69,7 @@ public final class CountArtifactsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies the granularity of the count result returned in response.
+   * Sets the granularity of the count results.
    * @param view view or {@code null} for none
    */
   public CountArtifactsRequest setView(java.lang.String view) {

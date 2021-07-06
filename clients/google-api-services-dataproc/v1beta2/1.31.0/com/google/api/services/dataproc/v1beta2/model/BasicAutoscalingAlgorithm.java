@@ -38,7 +38,7 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   private String cooldownPeriod;
 
   /**
-   * Required. YARN autoscaling configuration.
+   * Optional. YARN autoscaling configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   }
 
   /**
-   * Required. YARN autoscaling configuration.
+   * Optional. YARN autoscaling configuration.
    * @return value or {@code null} for none
    */
   public BasicYarnAutoscalingConfig getYarnConfig() {
@@ -72,7 +72,7 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   }
 
   /**
-   * Required. YARN autoscaling configuration.
+   * Optional. YARN autoscaling configuration.
    * @param yarnConfig yarnConfig or {@code null} for none
    */
   public BasicAutoscalingAlgorithm setYarnConfig(BasicYarnAutoscalingConfig yarnConfig) {

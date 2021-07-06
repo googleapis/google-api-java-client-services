@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * The options for mail export.
+ * Options for Gmail exports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.vault.v1.model;
 public final class MailExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The export file format.
+   * The file format for exported messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exportFormat;
 
   /**
-   * Set to true to export confidential mode content.
+   * To export confidential mode content, set to **true**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean showConfidentialModeContent;
 
   /**
-   * The export file format.
+   * The file format for exported messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getExportFormat() {
@@ -52,7 +52,7 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The export file format.
+   * The file format for exported messages.
    * @param exportFormat exportFormat or {@code null} for none
    */
   public MailExportOptions setExportFormat(java.lang.String exportFormat) {
@@ -61,7 +61,7 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Set to true to export confidential mode content.
+   * To export confidential mode content, set to **true**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShowConfidentialModeContent() {
@@ -69,7 +69,7 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Set to true to export confidential mode content.
+   * To export confidential mode content, set to **true**.
    * @param showConfidentialModeContent showConfidentialModeContent or {@code null} for none
    */
   public MailExportOptions setShowConfidentialModeContent(java.lang.Boolean showConfidentialModeContent) {

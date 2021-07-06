@@ -64,6 +64,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private EncryptionConfig encryptionConfig;
 
   /**
+   * Optional. The size of the Cloud Composer environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String environmentSize;
+
+  /**
    * Output only. The Kubernetes Engine cluster used to run this environment.
    * The value may be {@code null}.
    */
@@ -125,6 +133,16 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private WebServerNetworkAccessControl webServerNetworkAccessControl;
+
+  /**
+   * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud
+   * Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadsConfig workloadsConfig;
 
   /**
    * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
@@ -203,6 +221,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setEncryptionConfig(EncryptionConfig encryptionConfig) {
     this.encryptionConfig = encryptionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The size of the Cloud Composer environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironmentSize() {
+    return environmentSize;
+  }
+
+  /**
+   * Optional. The size of the Cloud Composer environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+   * @param environmentSize environmentSize or {@code null} for none
+   */
+  public EnvironmentConfig setEnvironmentSize(java.lang.String environmentSize) {
+    this.environmentSize = environmentSize;
     return this;
   }
 
@@ -353,6 +390,29 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setWebServerNetworkAccessControl(WebServerNetworkAccessControl webServerNetworkAccessControl) {
     this.webServerNetworkAccessControl = webServerNetworkAccessControl;
+    return this;
+  }
+
+  /**
+   * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud
+   * Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public WorkloadsConfig getWorkloadsConfig() {
+    return workloadsConfig;
+  }
+
+  /**
+   * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud
+   * Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * @param workloadsConfig workloadsConfig or {@code null} for none
+   */
+  public EnvironmentConfig setWorkloadsConfig(WorkloadsConfig workloadsConfig) {
+    this.workloadsConfig = workloadsConfig;
     return this;
   }
 

@@ -48,7 +48,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Data Fusion API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Data Fusion API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -484,21 +484,17 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service will select a default.
+        /** The maximum number of results to return. If not set, the service selects a default.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If not set, the service will select a default.
-         */
+        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

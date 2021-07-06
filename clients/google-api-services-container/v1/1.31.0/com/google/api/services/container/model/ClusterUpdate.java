@@ -39,6 +39,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AddonsConfig desiredAddonsConfig;
 
   /**
+   * The desired authenticator groups config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
+
+  /**
    * The desired Autopilot configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -254,6 +261,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAddonsConfig(AddonsConfig desiredAddonsConfig) {
     this.desiredAddonsConfig = desiredAddonsConfig;
+    return this;
+  }
+
+  /**
+   * The desired authenticator groups config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public AuthenticatorGroupsConfig getDesiredAuthenticatorGroupsConfig() {
+    return desiredAuthenticatorGroupsConfig;
+  }
+
+  /**
+   * The desired authenticator groups config for the cluster.
+   * @param desiredAuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig) {
+    this.desiredAuthenticatorGroupsConfig = desiredAuthenticatorGroupsConfig;
     return this;
   }
 

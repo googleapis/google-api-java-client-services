@@ -17,8 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Cloud Run fully managed: not supported Cloud Run for Anthos: supported TCPSocketAction describes
- * an action based on opening a socket
+ * Not supported by Cloud Run TCPSocketAction describes an action based on opening a socket
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,26 +30,23 @@ package com.google.api.services.run.v1.model;
 public final class TCPSocketAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional:
-   * Host name to connect to, defaults to the pod IP.
+   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the
-   * port to access on the container. Number must be in the range 1 to 65535. Name must be an
-   * IANA_SVC_NAME. This field is currently limited to integer types only because of proto's
-   * inability to properly support the IntOrString golang type.
+   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
+   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
+   * proto's inability to properly support the IntOrString golang type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional:
-   * Host name to connect to, defaults to the pod IP.
+   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -58,8 +54,7 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Optional:
-   * Host name to connect to, defaults to the pod IP.
+   * (Optional) Optional: Host name to connect to, defaults to the pod IP.
    * @param host host or {@code null} for none
    */
   public TCPSocketAction setHost(java.lang.String host) {
@@ -68,10 +63,9 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the
-   * port to access on the container. Number must be in the range 1 to 65535. Name must be an
-   * IANA_SVC_NAME. This field is currently limited to integer types only because of proto's
-   * inability to properly support the IntOrString golang type.
+   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
+   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
+   * proto's inability to properly support the IntOrString golang type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -79,10 +73,9 @@ public final class TCPSocketAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Cloud Run fully managed: not supported Cloud Run for Anthos: supported Number or name of the
-   * port to access on the container. Number must be in the range 1 to 65535. Name must be an
-   * IANA_SVC_NAME. This field is currently limited to integer types only because of proto's
-   * inability to properly support the IntOrString golang type.
+   * Number or name of the port to access on the container. Number must be in the range 1 to 65535.
+   * Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of
+   * proto's inability to properly support the IntOrString golang type.
    * @param port port or {@code null} for none
    */
   public TCPSocketAction setPort(java.lang.Integer port) {

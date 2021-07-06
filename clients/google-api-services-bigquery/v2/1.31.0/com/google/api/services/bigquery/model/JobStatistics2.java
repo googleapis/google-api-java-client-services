@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class JobStatistics2 extends com.google.api.client.json.GenericJson {
 
   /**
+   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BiEngineStatistics biEngineStatistics;
+
+  /**
    * [Output-only] Billing tier for the job.
    * The value may be {@code null}.
    */
@@ -267,6 +274,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryParameter> undeclaredQueryParameters;
+
+  /**
+   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * @return value or {@code null} for none
+   */
+  public BiEngineStatistics getBiEngineStatistics() {
+    return biEngineStatistics;
+  }
+
+  /**
+   * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+   * @param biEngineStatistics biEngineStatistics or {@code null} for none
+   */
+  public JobStatistics2 setBiEngineStatistics(BiEngineStatistics biEngineStatistics) {
+    this.biEngineStatistics = biEngineStatistics;
+    return this;
+  }
 
   /**
    * [Output-only] Billing tier for the job.

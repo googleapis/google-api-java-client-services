@@ -48,7 +48,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -4759,24 +4759,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two CreateClusterRequest
+          /** Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest
          (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datapro
          c.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first
          google.longrunning.Operation created and stored in the backend is returned.It is recommended to
          always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
          maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
@@ -4784,12 +4784,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
@@ -4980,24 +4980,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * DeleteClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.DeleteClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two DeleteClusterRequest
+          /** Optional. A unique ID used to identify the request. If the server receives two DeleteClusterRequest
          (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datapro
          c.v1.DeleteClusterRequest)s with the same id, then the second request will be ignored and the first
          google.longrunning.Operation created and stored in the backend is returned.It is recommended to
          always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
          maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
@@ -5005,12 +5005,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * DeleteClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.DeleteClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
@@ -5922,7 +5922,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
          * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationme
-         * tadata).
+         * tadata). The cluster must be in a RUNNING state or an error is returned.
          *
          * Create a request for the method "clusters.patch".
          *
@@ -5948,7 +5948,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
            * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
-           * aproc.v1#clusteroperationmetadata).
+           * aproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is
+           * returned.
            *
            * Create a request for the method "clusters.patch".
            *
@@ -6112,24 +6113,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * UpdateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.UpdateClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique id used to identify the request. If the server receives two UpdateClusterRequest
+          /** Optional. A unique ID used to identify the request. If the server receives two UpdateClusterRequest
          (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datapro
          c.v1.UpdateClusterRequest)s with the same id, then the second request will be ignored and the first
          google.longrunning.Operation created and stored in the backend is returned.It is recommended to
          always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
          maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
@@ -6137,12 +6138,12 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. A unique id used to identify the request. If the server receives two
+           * Optional. A unique ID used to identify the request. If the server receives two
            * UpdateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.UpdateClusterRequest)s with the same id, then the
            * second request will be ignored and the first google.longrunning.Operation created and
            * stored in the backend is returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
@@ -6205,6 +6206,162 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Repairs a cluster.
+         *
+         * Create a request for the method "clusters.repair".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+         * @param region Required. The Dataproc region in which to handle the request.
+         * @param clusterName Required. The cluster name.
+         * @param content the {@link com.google.api.services.dataproc.model.RepairClusterRequest}
+         * @return the request
+         */
+        public Repair repair(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.model.RepairClusterRequest content) throws java.io.IOException {
+          Repair result = new Repair(projectId, region, clusterName, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Repair extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair";
+
+          /**
+           * Repairs a cluster.
+           *
+           * Create a request for the method "clusters.repair".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Repair#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           * @param region Required. The Dataproc region in which to handle the request.
+           * @param clusterName Required. The cluster name.
+           * @param content the {@link com.google.api.services.dataproc.model.RepairClusterRequest}
+           * @since 1.13
+           */
+          protected Repair(java.lang.String projectId, java.lang.String region, java.lang.String clusterName, com.google.api.services.dataproc.model.RepairClusterRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            this.clusterName = com.google.api.client.util.Preconditions.checkNotNull(clusterName, "Required parameter clusterName must be specified.");
+          }
+
+          @Override
+          public Repair set$Xgafv(java.lang.String $Xgafv) {
+            return (Repair) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Repair setAccessToken(java.lang.String accessToken) {
+            return (Repair) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Repair setAlt(java.lang.String alt) {
+            return (Repair) super.setAlt(alt);
+          }
+
+          @Override
+          public Repair setCallback(java.lang.String callback) {
+            return (Repair) super.setCallback(callback);
+          }
+
+          @Override
+          public Repair setFields(java.lang.String fields) {
+            return (Repair) super.setFields(fields);
+          }
+
+          @Override
+          public Repair setKey(java.lang.String key) {
+            return (Repair) super.setKey(key);
+          }
+
+          @Override
+          public Repair setOauthToken(java.lang.String oauthToken) {
+            return (Repair) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Repair setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Repair) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Repair setQuotaUser(java.lang.String quotaUser) {
+            return (Repair) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Repair setUploadType(java.lang.String uploadType) {
+            return (Repair) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Repair setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Repair) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to. */
+          public Repair setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The Dataproc region in which to handle the request.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The Dataproc region in which to handle the request. */
+          public Repair setRegion(java.lang.String region) {
+            this.region = region;
+            return this;
+          }
+
+          /** Required. The cluster name. */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterName;
+
+          /** Required. The cluster name.
+           */
+          public java.lang.String getClusterName() {
+            return clusterName;
+          }
+
+          /** Required. The cluster name. */
+          public Repair setClusterName(java.lang.String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+          }
+
+          @Override
+          public Repair set(String parameterName, Object value) {
+            return (Repair) super.set(parameterName, value);
           }
         }
         /**

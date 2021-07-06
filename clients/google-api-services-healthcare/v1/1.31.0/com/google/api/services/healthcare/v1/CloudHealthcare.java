@@ -48,7 +48,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -3247,15 +3247,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Queries all data_ids that are consented for a specified use in the given consent store and writes
            * them to a specified destination. The returned Operation includes a progress counter for the
-           * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing error
-           * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For example,
-           * the following sample log entry shows a `failed to evaluate consent policy` error that occurred
-           * during a QueryAccessibleData call to consent store `projects/{project_id}/locations/{location_id}
-           * /datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type:
-           * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: { code:
-           * 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locations/{
-           * location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}" }
-           * logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+           * number of User data mappings processed. If the request is successful, a detailed response is
+           * returned of type QueryAccessibleDataResponse, contained in the response field when the operation
+           * finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud Logging (see
+           * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+           * For example, the following sample log entry shows a `failed to evaluate consent policy` error
+           * that occurred during a QueryAccessibleData call to consent store `projects/{project_id}/locations
+           * /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: {
+           * @type: "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+           * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locat
+           * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}"
+           * } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
            * operation: { id:
            * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
            * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
@@ -3288,15 +3290,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Queries all data_ids that are consented for a specified use in the given consent store and
              * writes them to a specified destination. The returned Operation includes a progress counter for
-             * the number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing
-             * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For
-             * example, the following sample log entry shows a `failed to evaluate consent policy` error that
-             * occurred during a QueryAccessibleData call to consent store `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: {
-             * @type: "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error:
-             * { code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/l
-             * ocations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent
-             * _id}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+             * the number of User data mappings processed. If the request is successful, a detailed response
+             * is returned of type QueryAccessibleDataResponse, contained in the response field when the
+             * operation finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud
+             * Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+             * /how-tos/logging)). For example, the following sample log entry shows a `failed to evaluate
+             * consent policy` error that occurred during a QueryAccessibleData call to consent store `project
+             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * ```json jsonPayload: { @type:
+             * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+             * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
+             * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
+             * d}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
              * operation: { id:
              * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
              * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"

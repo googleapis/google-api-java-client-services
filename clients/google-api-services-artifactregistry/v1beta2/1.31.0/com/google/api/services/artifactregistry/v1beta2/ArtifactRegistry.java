@@ -48,7 +48,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Artifact Registry API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Artifact Registry API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -2109,6 +2109,164 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
         }
 
+        /**
+         * An accessor for creating requests from the AptArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.AptArtifacts.List request = artifactregistry.aptArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AptArtifacts aptArtifacts() {
+          return new AptArtifacts();
+        }
+
+        /**
+         * The "aptArtifacts" collection of methods.
+         */
+        public class AptArtifacts {
+
+          /**
+           * Imports Apt artifacts. The returned Operation will complete once the resources are imported.
+           * Package, Version, and File resources are created based on the imported artifacts. Imported
+           * artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "aptArtifacts.import".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be imported.
+           * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ImportAptArtifactsRequest}
+           * @return the request
+           */
+          public ArtifactRegistryImport artifactregistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.ImportAptArtifactsRequest content) throws java.io.IOException {
+            ArtifactRegistryImport result = new ArtifactRegistryImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactRegistryImport extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.Operation> {
+
+            private static final String REST_PATH = "v1beta2/{+parent}/aptArtifacts:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Imports Apt artifacts. The returned Operation will complete once the resources are imported.
+             * Package, Version, and File resources are created based on the imported artifacts. Imported
+             * artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "aptArtifacts.import".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+             * remote operation. <p> {@link ArtifactRegistryImport#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be imported.
+             * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ImportAptArtifactsRequest}
+             * @since 1.13
+             */
+            protected ArtifactRegistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.ImportAptArtifactsRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1beta2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactRegistryImport set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactRegistryImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAccessToken(java.lang.String accessToken) {
+              return (ArtifactRegistryImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAlt(java.lang.String alt) {
+              return (ArtifactRegistryImport) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactRegistryImport setCallback(java.lang.String callback) {
+              return (ArtifactRegistryImport) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactRegistryImport setFields(java.lang.String fields) {
+              return (ArtifactRegistryImport) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactRegistryImport setKey(java.lang.String key) {
+              return (ArtifactRegistryImport) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactRegistryImport setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactRegistryImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactRegistryImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactRegistryImport setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactRegistryImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadType(java.lang.String uploadType) {
+              return (ArtifactRegistryImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactRegistryImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be imported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            public ArtifactRegistryImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ArtifactRegistryImport set(String parameterName, Object value) {
+              return (ArtifactRegistryImport) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the Files collection.
          *
@@ -4275,6 +4433,164 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the YumArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.YumArtifacts.List request = artifactregistry.yumArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public YumArtifacts yumArtifacts() {
+          return new YumArtifacts();
+        }
+
+        /**
+         * The "yumArtifacts" collection of methods.
+         */
+        public class YumArtifacts {
+
+          /**
+           * Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are
+           * imported. Package, Version, and File resources are created based on the imported artifacts.
+           * Imported artifacts that conflict with existing resources are ignored.
+           *
+           * Create a request for the method "yumArtifacts.import".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent The name of the parent resource where the artifacts will be imported.
+           * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ImportYumArtifactsRequest}
+           * @return the request
+           */
+          public ArtifactRegistryImport artifactregistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.ImportYumArtifactsRequest content) throws java.io.IOException {
+            ArtifactRegistryImport result = new ArtifactRegistryImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ArtifactRegistryImport extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.Operation> {
+
+            private static final String REST_PATH = "v1beta2/{+parent}/yumArtifacts:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are
+             * imported. Package, Version, and File resources are created based on the imported artifacts.
+             * Imported artifacts that conflict with existing resources are ignored.
+             *
+             * Create a request for the method "yumArtifacts.import".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link ArtifactRegistryImport#execute()} method to invoke the
+             * remote operation. <p> {@link ArtifactRegistryImport#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the parent resource where the artifacts will be imported.
+             * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ImportYumArtifactsRequest}
+             * @since 1.13
+             */
+            protected ArtifactRegistryImport(java.lang.String parent, com.google.api.services.artifactregistry.v1beta2.model.ImportYumArtifactsRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1beta2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public ArtifactRegistryImport set$Xgafv(java.lang.String $Xgafv) {
+              return (ArtifactRegistryImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAccessToken(java.lang.String accessToken) {
+              return (ArtifactRegistryImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setAlt(java.lang.String alt) {
+              return (ArtifactRegistryImport) super.setAlt(alt);
+            }
+
+            @Override
+            public ArtifactRegistryImport setCallback(java.lang.String callback) {
+              return (ArtifactRegistryImport) super.setCallback(callback);
+            }
+
+            @Override
+            public ArtifactRegistryImport setFields(java.lang.String fields) {
+              return (ArtifactRegistryImport) super.setFields(fields);
+            }
+
+            @Override
+            public ArtifactRegistryImport setKey(java.lang.String key) {
+              return (ArtifactRegistryImport) super.setKey(key);
+            }
+
+            @Override
+            public ArtifactRegistryImport setOauthToken(java.lang.String oauthToken) {
+              return (ArtifactRegistryImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ArtifactRegistryImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ArtifactRegistryImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ArtifactRegistryImport setQuotaUser(java.lang.String quotaUser) {
+              return (ArtifactRegistryImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadType(java.lang.String uploadType) {
+              return (ArtifactRegistryImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ArtifactRegistryImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ArtifactRegistryImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the parent resource where the artifacts will be imported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the parent resource where the artifacts will be imported. */
+            public ArtifactRegistryImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ArtifactRegistryImport set(String parameterName, Object value) {
+              return (ArtifactRegistryImport) super.set(parameterName, value);
+            }
+          }
+
         }
       }
     }

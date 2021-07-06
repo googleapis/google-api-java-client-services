@@ -32,6 +32,13 @@ package com.google.api.services.monitoring.v3.model;
 public final class AlertPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Control over how this alert policy's notification channels are notified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlertStrategy alertStrategy;
+
+  /**
    * How to combine the results of multiple conditions to determine if an incident should be opened.
    * If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.
    * The value may be {@code null}.
@@ -132,6 +139,23 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Status validity;
+
+  /**
+   * Control over how this alert policy's notification channels are notified.
+   * @return value or {@code null} for none
+   */
+  public AlertStrategy getAlertStrategy() {
+    return alertStrategy;
+  }
+
+  /**
+   * Control over how this alert policy's notification channels are notified.
+   * @param alertStrategy alertStrategy or {@code null} for none
+   */
+  public AlertPolicy setAlertStrategy(AlertStrategy alertStrategy) {
+    this.alertStrategy = alertStrategy;
+    return this;
+  }
 
   /**
    * How to combine the results of multiple conditions to determine if an incident should be opened.

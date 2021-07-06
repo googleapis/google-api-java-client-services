@@ -20,7 +20,7 @@ package com.google.api.services.run.v1alpha1;
  * Service definition for CloudRun (v1alpha1).
  *
  * <p>
- * Deploy and manage user provided container images that scale automatically based on HTTP traffic.
+ * Deploy and manage user provided container images that scale automatically based on incoming requets. The Cloud Run Admin API follows the Knative Serving API specification.
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Run Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Run Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

@@ -46,7 +46,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the instance should be assigned an IPv4 address or not.
+   * Whether the instance is assigned a public IP address or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the instance should be assigned an IPv4 address or not.
+   * Whether the instance is assigned a public IP address or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIpv4() {
@@ -98,7 +98,7 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the instance should be assigned an IPv4 address or not.
+   * Whether the instance is assigned a public IP address or not.
    * @param enableIpv4 enableIpv4 or {@code null} for none
    */
   public SqlIpConfig setEnableIpv4(java.lang.Boolean enableIpv4) {

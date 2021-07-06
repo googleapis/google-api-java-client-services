@@ -38,7 +38,7 @@ public final class ListSavedQueriesResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * List of output saved queries.
+   * List of saved queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ListSavedQueriesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * List of output saved queries.
+   * List of saved queries.
    * @return value or {@code null} for none
    */
   public java.util.List<SavedQuery> getSavedQueries() {
@@ -72,7 +72,7 @@ public final class ListSavedQueriesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * List of output saved queries.
+   * List of saved queries.
    * @param savedQueries savedQueries or {@code null} for none
    */
   public ListSavedQueriesResponse setSavedQueries(java.util.List<SavedQuery> savedQueries) {

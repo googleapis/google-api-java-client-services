@@ -1,6 +1,6 @@
 # Network Connectivity API Client Library for Java
 
-The Network Connectivity API will be home to various services which provide information pertaining to network connectivity.
+The Network Connectivity API provides access to Network Connectivity Center.
 
 This page contains information about getting started with the Network Connectivity API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-networkconnectivity</artifactId>
-      <version>v1alpha1-rev20210430-1.31.5</version>
+      <version>v1alpha1-rev20210701-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-networkconnectivity:v1alpha1-rev20210430-1.31.5'
+  compile 'com.google.apis:google-api-services-networkconnectivity:v1alpha1-rev20210701-1.32.1'
 }
 ```
 

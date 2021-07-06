@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * Response message for ExchangeAppAttestAttestation
+ * Response message for ExchangeAppAttestAttestation and ExchangeAppAttestDebugAttestation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation

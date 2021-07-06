@@ -66,8 +66,7 @@ public final class AutoscalingEvent extends com.google.api.client.json.GenericJs
   private String time;
 
   /**
-   * A short and friendly name for the worker pool this event refers to, populated from the value of
-   * PoolStageRelation::user_pool_name.
+   * A short and friendly name for the worker pool this event refers to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +160,7 @@ public final class AutoscalingEvent extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A short and friendly name for the worker pool this event refers to, populated from the value of
-   * PoolStageRelation::user_pool_name.
+   * A short and friendly name for the worker pool this event refers to.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -170,8 +168,7 @@ public final class AutoscalingEvent extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A short and friendly name for the worker pool this event refers to, populated from the value of
-   * PoolStageRelation::user_pool_name.
+   * A short and friendly name for the worker pool this event refers to.
    * @param workerPool workerPool or {@code null} for none
    */
   public AutoscalingEvent setWorkerPool(java.lang.String workerPool) {

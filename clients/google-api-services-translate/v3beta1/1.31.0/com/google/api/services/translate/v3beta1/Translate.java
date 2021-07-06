@@ -48,7 +48,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Translation API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Translation API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -497,9 +497,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * Optional. Get supported languages of this model. The format depends on model type: - AutoML
        * Translation models: `projects/{project-number-or-id}/locations/{location-id}/models/{model-
        * id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-       * id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
-       * id}/models/general/base` Returns languages supported by the specified model. If missing, we
-       * get supported languages of Google general base (PBMT) model.
+       * id}/models/general/nmt`, Returns languages supported by the specified model. If missing, we
+       * get supported languages of Google general NMT model.
        */
       @com.google.api.client.util.Key
       private java.lang.String model;
@@ -507,9 +506,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /** Optional. Get supported languages of this model. The format depends on model type: - AutoML
      Translation models: `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}` -
      General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-     id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
-     id}/models/general/base` Returns languages supported by the specified model. If missing, we get
-     supported languages of Google general base (PBMT) model.
+     id}/models/general/nmt`, Returns languages supported by the specified model. If missing, we get
+     supported languages of Google general NMT model.
        */
       public java.lang.String getModel() {
         return model;
@@ -519,9 +517,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * Optional. Get supported languages of this model. The format depends on model type: - AutoML
        * Translation models: `projects/{project-number-or-id}/locations/{location-id}/models/{model-
        * id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-       * id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
-       * id}/models/general/base` Returns languages supported by the specified model. If missing, we
-       * get supported languages of Google general base (PBMT) model.
+       * id}/models/general/nmt`, Returns languages supported by the specified model. If missing, we
+       * get supported languages of Google general NMT model.
        */
       public GetSupportedLanguages setModel(java.lang.String model) {
         this.model = model;
@@ -1516,10 +1513,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * Optional. Get supported languages of this model. The format depends on model type: -
          * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
          * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
-         * id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
-         * id}/locations/{location-id}/models/general/base` Returns languages supported by the
-         * specified model. If missing, we get supported languages of Google general base (PBMT)
-         * model.
+         * id}/locations/{location-id}/models/general/nmt`, Returns languages supported by the
+         * specified model. If missing, we get supported languages of Google general NMT model.
          */
         @com.google.api.client.util.Key
         private java.lang.String model;
@@ -1527,9 +1522,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         /** Optional. Get supported languages of this model. The format depends on model type: - AutoML
        Translation models: `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}` -
        General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-       id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
-       id}/models/general/base` Returns languages supported by the specified model. If missing, we get
-       supported languages of Google general base (PBMT) model.
+       id}/models/general/nmt`, Returns languages supported by the specified model. If missing, we get
+       supported languages of Google general NMT model.
          */
         public java.lang.String getModel() {
           return model;
@@ -1539,10 +1533,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * Optional. Get supported languages of this model. The format depends on model type: -
          * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
          * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
-         * id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
-         * id}/locations/{location-id}/models/general/base` Returns languages supported by the
-         * specified model. If missing, we get supported languages of Google general base (PBMT)
-         * model.
+         * id}/locations/{location-id}/models/general/nmt`, Returns languages supported by the
+         * specified model. If missing, we get supported languages of Google general NMT model.
          */
         public GetSupportedLanguages setModel(java.lang.String model) {
           this.model = model;

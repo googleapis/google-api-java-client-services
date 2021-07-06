@@ -2225,7 +2225,7 @@
    }
   }
  },
- "revision": "20210522",
+ "revision": "20210618",
  "rootUrl": "https://dataflow.googleapis.com/",
  "schemas": {
   "ApproximateProgress": {
@@ -2336,7 +2336,7 @@
      "type": "string"
     },
     "workerPool": {
-     "description": "A short and friendly name for the worker pool this event refers to, populated from the value of PoolStageRelation::user_pool_name.",
+     "description": "A short and friendly name for the worker pool this event refers to.",
      "type": "string"
     }
    },
@@ -5185,7 +5185,7 @@
       "Cloud Dataflow is unaware of this version.",
       "This is a known version of an SDK, and is supported.",
       "A newer version of the SDK family exists, and an update is recommended.",
-      "This version of the SDK is deprecated and will eventually be no longer supported.",
+      "This version of the SDK is deprecated and will eventually be unsupported.",
       "Support for this SDK version has ended and it should no longer be used."
      ],
      "type": "string"

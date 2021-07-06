@@ -59,6 +59,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private ExecutionTemplate executionTemplate;
 
   /**
+   * Output only. The URI of the external job used to execute the notebook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobUri;
+
+  /**
    * Output only. The resource name of the execute. Format:
    * `projects/{project_id}/locations/{location}/execution/{execution_id}
    * The value may be {@code null}.
@@ -154,6 +161,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setExecutionTemplate(ExecutionTemplate executionTemplate) {
     this.executionTemplate = executionTemplate;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the external job used to execute the notebook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobUri() {
+    return jobUri;
+  }
+
+  /**
+   * Output only. The URI of the external job used to execute the notebook.
+   * @param jobUri jobUri or {@code null} for none
+   */
+  public Execution setJobUri(java.lang.String jobUri) {
+    this.jobUri = jobUri;
     return this;
   }
 

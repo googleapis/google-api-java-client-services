@@ -43,6 +43,7 @@ packages on [Maven Central][maven-search].
 | Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
+| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1), [v1alpha1](clients/google-api-services-baremetalsolution/v1alpha1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -91,7 +92,7 @@ packages on [Maven Central][maven-search].
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1), [v3](clients/google-api-services-cloudresourcemanager/v3) |
 | Cloud Run Admin API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
-| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
+| Cloud SQL Admin API | [v1](clients/google-api-services-sqladmin/v1), [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1) |
@@ -151,7 +152,7 @@ packages on [Maven Central][maven-search].
 | Google Chat API | [v1](clients/google-api-services-chat/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
-| Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
+| Google Cloud Data Catalog API | [v1](clients/google-api-services-datacatalog/v1), [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
 | Google Cloud Memorystore for Redis API | [v1](clients/google-api-services-redis/v1), [v1beta1](clients/google-api-services-redis/v1beta1) |
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |
@@ -188,6 +189,7 @@ packages on [Maven Central][maven-search].
 | My Business Place Actions API | [v1](clients/google-api-services-mybusinessplaceactions/v1) |
 | Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
+| Network Security API | [v1beta1](clients/google-api-services-networksecurity/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
 | OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1alpha](clients/google-api-services-osconfig/v1alpha), [v1beta](clients/google-api-services-osconfig/v1beta) |
 | On-Demand Scanning API | [v1](clients/google-api-services-ondemandscanning/v1), [v1beta1](clients/google-api-services-ondemandscanning/v1beta1) |

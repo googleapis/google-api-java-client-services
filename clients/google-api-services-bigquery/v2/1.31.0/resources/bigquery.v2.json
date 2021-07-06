@@ -1683,7 +1683,7 @@
    }
   }
  },
- "revision": "20210611",
+ "revision": "20210617",
  "rootUrl": "https://bigquery.googleapis.com/",
  "schemas": {
   "AggregateClassificationMetrics": {
@@ -2133,6 +2133,40 @@
       "Data reads. Example: CloudSQL Users list"
      ],
      "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "BiEngineReason": {
+   "id": "BiEngineReason",
+   "properties": {
+    "code": {
+     "default": "$(reason.code)",
+     "description": "[Output-only] High-level BI Engine reason for partial or disabled acceleration.",
+     "type": "string"
+    },
+    "message": {
+     "default": "$(reason.message)",
+     "description": "[Output-only] Free form human-readable reason for partial or disabled acceleration.",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "BiEngineStatistics": {
+   "id": "BiEngineStatistics",
+   "properties": {
+    "biEngineMode": {
+     "default": "$(stats.bi_engine_mode)",
+     "description": "[Output-only] Specifies which mode of BI Engine acceleration was performed (if any).",
+     "type": "string"
+    },
+    "biEngineReasons": {
+     "description": "In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.",
+     "items": {
+      "$ref": "BiEngineReason"
+     },
+     "type": "array"
     }
    },
    "type": "object"
@@ -3136,22 +3170,6 @@
    },
    "type": "object"
   },
-  "Explanation": {
-   "description": "Explanation for a single feature.",
-   "id": "Explanation",
-   "properties": {
-    "attribution": {
-     "description": "Attribution of feature.",
-     "format": "double",
-     "type": "number"
-    },
-    "featureName": {
-     "description": "Full name of the feature. For non-numerical features, will be formatted like .. Overall size of feature name will always be truncated to first 120 characters.",
-     "type": "string"
-    }
-   },
-   "type": "object"
-  },
   "Expr": {
    "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() < 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
    "id": "Expr",
@@ -3362,24 +3380,6 @@
      "default": "bigquery#getServiceAccountResponse",
      "description": "The resource type of the response.",
      "type": "string"
-    }
-   },
-   "type": "object"
-  },
-  "GlobalExplanation": {
-   "description": "Global explanations containing the top most important features after training.",
-   "id": "GlobalExplanation",
-   "properties": {
-    "classLabel": {
-     "description": "Class label for this set of global explanations. Will be empty/null for binary logistic and linear regression models. Sorted alphabetically in descending order.",
-     "type": "string"
-    },
-    "explanations": {
-     "description": "A list of the top global explanations. Sorted by absolute value of attribution in descending order.",
-     "items": {
-      "$ref": "Explanation"
-     },
-     "type": "array"
     }
    },
    "type": "object"
@@ -4110,6 +4110,10 @@
   "JobStatistics2": {
    "id": "JobStatistics2",
    "properties": {
+    "biEngineStatistics": {
+     "$ref": "BiEngineStatistics",
+     "description": "BI Engine specific Statistics. [Output-only] BI Engine specific Statistics."
+    },
     "billingTier": {
      "description": "[Output-only] Billing tier for the job.",
      "format": "int32",
@@ -6502,13 +6506,6 @@
     "evaluationMetrics": {
      "$ref": "EvaluationMetrics",
      "description": "The evaluation metrics over training/eval data that were computed at the end of training."
-    },
-    "globalExplanations": {
-     "description": "Global explanations for important features of the model. For multi-class models, there is one entry for each label class. For other models, there is only one entry in the list.",
-     "items": {
-      "$ref": "GlobalExplanation"
-     },
-     "type": "array"
     },
     "results": {
      "description": "Output of each iteration run, results.size() <= max_iterations.",

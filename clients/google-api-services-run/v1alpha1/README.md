@@ -1,6 +1,6 @@
 # Cloud Run Admin API Client Library for Java
 
-Deploy and manage user provided container images that scale automatically based on HTTP traffic.
+Deploy and manage user provided container images that scale automatically based on incoming requets. The Cloud Run Admin API follows the Knative Serving API specification.
 
 This page contains information about getting started with the Cloud Run Admin API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-run</artifactId>
-      <version>v1alpha1-rev20210604-1.31.5</version>
+      <version>v1alpha1-rev20210611-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-run:v1alpha1-rev20210604-1.31.5'
+  compile 'com.google.apis:google-api-services-run:v1alpha1-rev20210611-1.32.1'
 }
 ```
 

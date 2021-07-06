@@ -17,7 +17,7 @@
 package com.google.api.services.keep.v1.model;
 
 /**
- * The response when listing a page of notes (see KeepService documentation).
+ * The response when listing a page of notes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Keep API. For a detailed explanation see:

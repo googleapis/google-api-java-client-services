@@ -81,6 +81,15 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
+   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
+   * more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PoolOption pool;
+
+  /**
    * Requested verifiability options.
    * The value may be {@code null}.
    */
@@ -124,9 +133,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.util.List<Volume> volumes;
 
   /**
-   * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is
-   * available only to restricted users.
+   * This field deprecated; please use `pool.name` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,6 +260,27 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
+   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
+   * more information.
+   * @return value or {@code null} for none
+   */
+  public PoolOption getPool() {
+    return pool;
+  }
+
+  /**
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
+   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
+   * more information.
+   * @param pool pool or {@code null} for none
+   */
+  public BuildOptions setPool(PoolOption pool) {
+    this.pool = pool;
+    return this;
+  }
+
+  /**
    * Requested verifiability options.
    * @return value or {@code null} for none
    */
@@ -354,9 +382,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is
-   * available only to restricted users.
+   * This field deprecated; please use `pool.name` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -364,9 +390,7 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Option to specify a `WorkerPool` for the build. Format:
-   * projects/{project}/locations/{location}/workerPools/{workerPool} This field is in beta and is
-   * available only to restricted users.
+   * This field deprecated; please use `pool.name` instead.
    * @param workerPool workerPool or {@code null} for none
    */
   public BuildOptions setWorkerPool(java.lang.String workerPool) {

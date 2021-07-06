@@ -48,7 +48,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -6097,7 +6097,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata
          * (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#clusteroperat
-         * ionmetadata).
+         * ionmetadata). The cluster must be in a RUNNING state or an error is returned.
          *
          * Create a request for the method "clusters.patch".
          *
@@ -6123,7 +6123,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Updates a cluster in a project. The returned Operation.metadata will be
            * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dat
-           * aproc.v1beta2#clusteroperationmetadata).
+           * aproc.v1beta2#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is
+           * returned.
            *
            * Create a request for the method "clusters.patch".
            *

@@ -65,6 +65,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK)
+   * feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CryptoKeyConfig cryptoKeyConfig;
+
+  /**
    * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run
    * data processing pipelines. This allows users to have fine-grained access control on Dataproc's
    * accesses to cloud resources.
@@ -291,6 +299,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK)
+   * feature.
+   * @return value or {@code null} for none
+   */
+  public CryptoKeyConfig getCryptoKeyConfig() {
+    return cryptoKeyConfig;
+  }
+
+  /**
+   * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK)
+   * feature.
+   * @param cryptoKeyConfig cryptoKeyConfig or {@code null} for none
+   */
+  public Instance setCryptoKeyConfig(CryptoKeyConfig cryptoKeyConfig) {
+    this.cryptoKeyConfig = cryptoKeyConfig;
     return this;
   }
 

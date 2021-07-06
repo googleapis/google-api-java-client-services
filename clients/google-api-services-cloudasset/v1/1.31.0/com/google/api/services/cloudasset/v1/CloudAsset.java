@@ -48,7 +48,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -3542,6 +3542,56 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;
+        return this;
+      }
+
+      /**
+       * Optional. A comma-separated list of fields specifying which fields to be returned in
+       * ResourceSearchResult. Only '*' or combination of top level fields can be specified. Field
+       * names of both snake_case and camelCase are supported. Examples: `"*"`, `"name,location"`,
+       * `"name,versionedResources"`. The read_mask paths must be valid field paths listed but not
+       * limited to (both snake_case and camelCase are supported): * name * asset_type or assetType
+       * * project * display_name or displayName * description * location * labels * network_tags or
+       * networkTags * kms_key or kmsKey * create_time or createTime * update_time or updateTime *
+       * state * additional_attributes or additionalAttributes * versioned_resources or
+       * versionedResources If read_mask is not specified, all fields except versionedResources will
+       * be returned. If only '*' is specified, all fields including versionedResources will be
+       * returned. Any invalid field path will trigger INVALID_ARGUMENT error.
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Optional. A comma-separated list of fields specifying which fields to be returned in
+     ResourceSearchResult. Only '*' or combination of top level fields can be specified. Field names of
+     both snake_case and camelCase are supported. Examples: `"*"`, `"name,location"`,
+     `"name,versionedResources"`. The read_mask paths must be valid field paths listed but not limited
+     to (both snake_case and camelCase are supported): * name * asset_type or assetType * project *
+     display_name or displayName * description * location * labels * network_tags or networkTags *
+     kms_key or kmsKey * create_time or createTime * update_time or updateTime * state *
+     additional_attributes or additionalAttributes * versioned_resources or versionedResources If
+     read_mask is not specified, all fields except versionedResources will be returned. If only '*' is
+     specified, all fields including versionedResources will be returned. Any invalid field path will
+     trigger INVALID_ARGUMENT error.
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Optional. A comma-separated list of fields specifying which fields to be returned in
+       * ResourceSearchResult. Only '*' or combination of top level fields can be specified. Field
+       * names of both snake_case and camelCase are supported. Examples: `"*"`, `"name,location"`,
+       * `"name,versionedResources"`. The read_mask paths must be valid field paths listed but not
+       * limited to (both snake_case and camelCase are supported): * name * asset_type or assetType
+       * * project * display_name or displayName * description * location * labels * network_tags or
+       * networkTags * kms_key or kmsKey * create_time or createTime * update_time or updateTime *
+       * state * additional_attributes or additionalAttributes * versioned_resources or
+       * versionedResources If read_mask is not specified, all fields except versionedResources will
+       * be returned. If only '*' is specified, all fields including versionedResources will be
+       * returned. Any invalid field path will trigger INVALID_ARGUMENT error.
+       */
+      public SearchAllResources setReadMask(String readMask) {
+        this.readMask = readMask;
         return this;
       }
 

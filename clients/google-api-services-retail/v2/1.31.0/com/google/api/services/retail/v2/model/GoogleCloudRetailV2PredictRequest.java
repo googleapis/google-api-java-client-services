@@ -87,7 +87,14 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. The given 'score' indicates the
    * probability of an product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
-   * (unfiltered) popular products instead of empty if your filter blocks all prediction results.
+   * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
+   * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of
+   * {'no-price-reranking', 'low-price-reranking', 'medium-price-reranking', 'high-price-
+   * reranking'}. This gives request-level control and adjusts prediction results based on product
+   * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
+   * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
+   * diversity'}. This gives request-level control and adjusts prediction results based on product
+   * category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +238,14 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. The given 'score' indicates the
    * probability of an product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
-   * (unfiltered) popular products instead of empty if your filter blocks all prediction results.
+   * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
+   * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of
+   * {'no-price-reranking', 'low-price-reranking', 'medium-price-reranking', 'high-price-
+   * reranking'}. This gives request-level control and adjusts prediction results based on product
+   * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
+   * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
+   * diversity'}. This gives request-level control and adjusts prediction results based on product
+   * category.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -246,7 +260,14 @@ public final class GoogleCloudRetailV2PredictRequest extends com.google.api.clie
    * `results.metadata` field in the prediction response. The given 'score' indicates the
    * probability of an product being clicked/purchased given the user's context and history. *
    * `strictFiltering`: Boolean. True by default. If set to false, the service will return generic
-   * (unfiltered) popular products instead of empty if your filter blocks all prediction results.
+   * (unfiltered) popular products instead of empty if your filter blocks all prediction results. *
+   * `priceRerankLevel`: String. Default empty. If set to be non-empty, then it needs to be one of
+   * {'no-price-reranking', 'low-price-reranking', 'medium-price-reranking', 'high-price-
+   * reranking'}. This gives request-level control and adjusts prediction results based on product
+   * price. * `diversityLevel`: String. Default empty. If set to be non-empty, then it needs to be
+   * one of {'no-diversity', 'low-diversity', 'medium-diversity', 'high-diversity', 'auto-
+   * diversity'}. This gives request-level control and adjusts prediction results based on product
+   * category.
    * @param params params or {@code null} for none
    */
   public GoogleCloudRetailV2PredictRequest setParams(java.util.Map<String, java.lang.Object> params) {

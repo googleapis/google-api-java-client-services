@@ -48,7 +48,7 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Idea Hub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Idea Hub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -285,17 +285,42 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Filter semantics described below. */
+      /**
+       * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+       * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was always
+       * used. The `OR` operator is currently unsupported. * Supported functions: - `saved(bool)`:
+       * If set to true, fetches only saved ideas. If set to false, fetches all except saved ideas.
+       * Can't be simultaneously used with `dismissed(bool)`. - `dismissed(bool)`: If set to true,
+       * fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The `false`
+       * value is currently unsupported. Examples: * `saved(true)` * `saved(false)` *
+       * `dismissed(true)` The length of this field should be no more than 500 characters.
+       */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Filter semantics described below.
+      /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+     Restrictions are implicitly combined, as if the `AND` operator was always used. The `OR` operator
+     is currently unsupported. * Supported functions: - `saved(bool)`: If set to true, fetches only
+     saved ideas. If set to false, fetches all except saved ideas. Can't be simultaneously used with
+     `dismissed(bool)`. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+     simultaneously used with `saved(bool)`. The `false` value is currently unsupported. Examples: *
+     `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field should be no more than
+     500 characters.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
-      /** Filter semantics described below. */
+      /**
+       * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+       * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was always
+       * used. The `OR` operator is currently unsupported. * Supported functions: - `saved(bool)`:
+       * If set to true, fetches only saved ideas. If set to false, fetches all except saved ideas.
+       * Can't be simultaneously used with `dismissed(bool)`. - `dismissed(bool)`: If set to true,
+       * fetches only dismissed ideas. Can't be simultaneously used with `saved(bool)`. The `false`
+       * value is currently unsupported. Examples: * `saved(true)` * `saved(false)` *
+       * `dismissed(true)` The length of this field should be no more than 500 characters.
+       */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
@@ -798,17 +823,44 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /** Filter semantics described below. */
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was
+           * always used. The `OR` operator is currently unsupported. * Supported functions: -
+           * `saved(bool)`: If set to true, fetches only saved ideas. If set to false, fetches all
+           * except saved ideas. Can't be simultaneously used with `dismissed(bool)`. -
+           * `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+           * simultaneously used with `saved(bool)`. The `false` value is currently unsupported.
+           * Examples: * `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field
+           * should be no more than 500 characters.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter semantics described below.
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions are implicitly combined, as if the `AND` operator was always used. The `OR` operator
+         is currently unsupported. * Supported functions: - `saved(bool)`: If set to true, fetches only
+         saved ideas. If set to false, fetches all except saved ideas. Can't be simultaneously used with
+         `dismissed(bool)`. - `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+         simultaneously used with `saved(bool)`. The `false` value is currently unsupported. Examples: *
+         `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field should be no more than
+         500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter semantics described below. */
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was
+           * always used. The `OR` operator is currently unsupported. * Supported functions: -
+           * `saved(bool)`: If set to true, fetches only saved ideas. If set to false, fetches all
+           * except saved ideas. Can't be simultaneously used with `dismissed(bool)`. -
+           * `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+           * simultaneously used with `saved(bool)`. The `false` value is currently unsupported.
+           * Examples: * `saved(true)` * `saved(false)` * `dismissed(true)` The length of this field
+           * should be no more than 500 characters.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1093,6 +1145,183 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the TopicStates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Ideahub ideahub = new Ideahub(...);}
+       *   {@code Ideahub.TopicStates.List request = ideahub.topicStates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TopicStates topicStates() {
+        return new TopicStates();
+      }
+
+      /**
+       * The "topicStates" collection of methods.
+       */
+      public class TopicStates {
+
+        /**
+         * Update a topic state resource.
+         *
+         * Create a request for the method "topicStates.patch".
+         *
+         * This request holds the parameters needed by the ideahub server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Unique identifier for the topic state. Format:
+         *        platforms/{platform}/properties/{property}/topicStates/{topic_state}
+         * @param content the {@link com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IdeahubRequest<com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^platforms/[^/]+/properties/[^/]+/topicStates/[^/]+$");
+
+          /**
+           * Update a topic state resource.
+           *
+           * Create a request for the method "topicStates.patch".
+           *
+           * This request holds the parameters needed by the the ideahub server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Unique identifier for the topic state. Format:
+         *        platforms/{platform}/properties/{property}/topicStates/{topic_state}
+           * @param content the {@link com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState content) {
+            super(Ideahub.this, "PATCH", REST_PATH, content, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaTopicState.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^platforms/[^/]+/properties/[^/]+/topicStates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Unique identifier for the topic state. Format:
+           * platforms/{platform}/properties/{property}/topicStates/{topic_state}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Unique identifier for the topic state. Format:
+         platforms/{platform}/properties/{property}/topicStates/{topic_state}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Unique identifier for the topic state. Format:
+           * platforms/{platform}/properties/{property}/topicStates/{topic_state}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^platforms/[^/]+/properties/[^/]+/topicStates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

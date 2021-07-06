@@ -48,7 +48,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -5916,15 +5916,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Queries all data_ids that are consented for a specified use in the given consent store and writes
            * them to a specified destination. The returned Operation includes a progress counter for the
-           * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing error
-           * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For example,
-           * the following sample log entry shows a `failed to evaluate consent policy` error that occurred
-           * during a QueryAccessibleData call to consent store `projects/{project_id}/locations/{location_id}
-           * /datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type:
-           * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: { code:
-           * 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locations/{
-           * location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}" }
-           * logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+           * number of User data mappings processed. If the request is successful, a detailed response is
+           * returned of type QueryAccessibleDataResponse, contained in the response field when the operation
+           * finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud Logging (see
+           * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+           * For example, the following sample log entry shows a `failed to evaluate consent policy` error
+           * that occurred during a QueryAccessibleData call to consent store `projects/{project_id}/locations
+           * /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: {
+           * @type: "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+           * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locat
+           * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}"
+           * } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
            * operation: { id:
            * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
            * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
@@ -5957,15 +5959,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Queries all data_ids that are consented for a specified use in the given consent store and
              * writes them to a specified destination. The returned Operation includes a progress counter for
-             * the number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing
-             * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For
-             * example, the following sample log entry shows a `failed to evaluate consent policy` error that
-             * occurred during a QueryAccessibleData call to consent store `projects/{project_id}/locations/{l
-             * ocation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: {
-             * @type: "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error:
-             * { code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/l
-             * ocations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent
-             * _id}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+             * the number of User data mappings processed. If the request is successful, a detailed response
+             * is returned of type QueryAccessibleDataResponse, contained in the response field when the
+             * operation finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud
+             * Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+             * /how-tos/logging)). For example, the following sample log entry shows a `failed to evaluate
+             * consent policy` error that occurred during a QueryAccessibleData call to consent store `project
+             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * ```json jsonPayload: { @type:
+             * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+             * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
+             * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
+             * d}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
              * operation: { id:
              * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
              * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
@@ -16638,6 +16643,156 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          */
         public class FhirStores {
 
+          /**
+           * Configure the search parameters for the FHIR store and reindex resources in the FHIR store
+           * according to the defined search parameters. The search parameters provided in this request will
+           * replace any previous search configuration. The target SearchParameter resources need to exist in
+           * the store before calling ConfigureSearch, otherwise an error will occur. This method returns an
+           * Operation that can be used to track the progress of the reindexing by calling GetOperation.
+           *
+           * Create a request for the method "fhirStores.configureSearch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ConfigureSearch#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the FHIR store to configure, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest}
+           * @return the request
+           */
+          public ConfigureSearch configureSearch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest content) throws java.io.IOException {
+            ConfigureSearch result = new ConfigureSearch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ConfigureSearch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:configureSearch";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Configure the search parameters for the FHIR store and reindex resources in the FHIR store
+             * according to the defined search parameters. The search parameters provided in this request will
+             * replace any previous search configuration. The target SearchParameter resources need to exist
+             * in the store before calling ConfigureSearch, otherwise an error will occur. This method returns
+             * an Operation that can be used to track the progress of the reindexing by calling GetOperation.
+             *
+             * Create a request for the method "fhirStores.configureSearch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ConfigureSearch#execute()} method to invoke the remote
+             * operation. <p> {@link ConfigureSearch#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name The name of the FHIR store to configure, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest}
+             * @since 1.13
+             */
+            protected ConfigureSearch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConfigureSearchRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ConfigureSearch set$Xgafv(java.lang.String $Xgafv) {
+              return (ConfigureSearch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ConfigureSearch setAccessToken(java.lang.String accessToken) {
+              return (ConfigureSearch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ConfigureSearch setAlt(java.lang.String alt) {
+              return (ConfigureSearch) super.setAlt(alt);
+            }
+
+            @Override
+            public ConfigureSearch setCallback(java.lang.String callback) {
+              return (ConfigureSearch) super.setCallback(callback);
+            }
+
+            @Override
+            public ConfigureSearch setFields(java.lang.String fields) {
+              return (ConfigureSearch) super.setFields(fields);
+            }
+
+            @Override
+            public ConfigureSearch setKey(java.lang.String key) {
+              return (ConfigureSearch) super.setKey(key);
+            }
+
+            @Override
+            public ConfigureSearch setOauthToken(java.lang.String oauthToken) {
+              return (ConfigureSearch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ConfigureSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ConfigureSearch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ConfigureSearch setQuotaUser(java.lang.String quotaUser) {
+              return (ConfigureSearch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ConfigureSearch setUploadType(java.lang.String uploadType) {
+              return (ConfigureSearch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ConfigureSearch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ConfigureSearch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the FHIR store to configure, in the format `projects/{project_id}/locatio
+             * ns/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the FHIR store to configure, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the FHIR store to configure, in the format `projects/{project_id}/locatio
+             * ns/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ConfigureSearch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ConfigureSearch set(String parameterName, Object value) {
+              return (ConfigureSearch) super.set(parameterName, value);
+            }
+          }
           /**
            * Creates a new FHIR store within the parent dataset.
            *

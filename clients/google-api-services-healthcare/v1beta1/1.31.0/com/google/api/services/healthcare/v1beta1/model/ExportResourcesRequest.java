@@ -49,7 +49,9 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
    * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type.
+   * one BigQuery table per resource type. Note that unlike in
+   * FhirStore.StreamConfig.BigQueryDestination, BigQuery views will not be created by
+   * ExportResources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +110,9 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
    * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type.
+   * one BigQuery table per resource type. Note that unlike in
+   * FhirStore.StreamConfig.BigQueryDestination, BigQuery views will not be created by
+   * ExportResources.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination getBigqueryDestination() {
@@ -118,7 +122,9 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
    * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type.
+   * one BigQuery table per resource type. Note that unlike in
+   * FhirStore.StreamConfig.BigQueryDestination, BigQuery views will not be created by
+   * ExportResources.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public ExportResourcesRequest setBigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestination bigqueryDestination) {

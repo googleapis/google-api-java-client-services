@@ -46,6 +46,13 @@ public final class BiddingFunction extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Output only. The state of the bidding function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The type of the bidding function to be created.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class BiddingFunction extends com.google.api.client.json.GenericJso
    */
   public BiddingFunction setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the bidding function.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state of the bidding function.
+   * @param state state or {@code null} for none
+   */
+  public BiddingFunction setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -48,7 +48,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.5 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.32.1 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -334,7 +334,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Create a new contact group owned by the authenticated user.
+     * Create a new contact group owned by the authenticated user. Created contact group names must be
+     * unique to the users contact groups. Attempting to create a group with a duplicate name will
+     * return a HTTP 409 error.
      *
      * Create a request for the method "contactGroups.create".
      *
@@ -355,7 +357,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/contactGroups";
 
       /**
-       * Create a new contact group owned by the authenticated user.
+       * Create a new contact group owned by the authenticated user. Created contact group names must be
+       * unique to the users contact groups. Attempting to create a group with a duplicate name will
+       * return a HTTP 409 error.
        *
        * Create a request for the method "contactGroups.create".
        *
@@ -972,7 +976,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Update the name of an existing contact group owned by the authenticated user.
+     * Update the name of an existing contact group owned by the authenticated user. Updated contact
+     * group names must be unique to the users contact groups. Attempting to create a group with a
+     * duplicate name will return a HTTP 409 error.
      *
      * Create a request for the method "contactGroups.update".
      *
@@ -998,7 +1004,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^contactGroups/[^/]+$");
 
       /**
-       * Update the name of an existing contact group owned by the authenticated user.
+       * Update the name of an existing contact group owned by the authenticated user. Updated contact
+       * group names must be unique to the users contact groups. Attempting to create a group with a
+       * duplicate name will return a HTTP 409 error.
        *
        * Create a request for the method "contactGroups.update".
        *
@@ -1576,14 +1584,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers
+       * * metadata * names * phoneNumbers * photos
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
      specified by separating them with commas. Valid values are: * emailAddresses * metadata * names *
-     phoneNumbers
+     phoneNumbers * photos
        */
       public String getReadMask() {
         return readMask;
@@ -1592,7 +1600,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
        * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers
+       * * metadata * names * phoneNumbers * photos
        */
       public List setReadMask(String readMask) {
         this.readMask = readMask;
@@ -1781,13 +1789,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
-     greater than 10 will be capped to 10.
+     greater than 30 will be capped to 30.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -1795,7 +1803,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -3541,13 +3549,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0. Values
-     greater than 10 will be capped to 10.
+     greater than 30 will be capped to 30.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -3555,7 +3563,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
-       * Values greater than 10 will be capped to 10.
+       * Values greater than 30 will be capped to 30.
        */
       public SearchContacts setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

@@ -30,6 +30,33 @@ package com.google.api.services.healthcare.v1.model;
 @SuppressWarnings("javadoc")
 public final class QueryAccessibleDataResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * List of files, each of which contains a list of data_id(s) that are consented for a specified
+   * use in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> gcsUris;
+
+  /**
+   * List of files, each of which contains a list of data_id(s) that are consented for a specified
+   * use in the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGcsUris() {
+    return gcsUris;
+  }
+
+  /**
+   * List of files, each of which contains a list of data_id(s) that are consented for a specified
+   * use in the request.
+   * @param gcsUris gcsUris or {@code null} for none
+   */
+  public QueryAccessibleDataResponse setGcsUris(java.util.List<java.lang.String> gcsUris) {
+    this.gcsUris = gcsUris;
+    return this;
+  }
+
   @Override
   public QueryAccessibleDataResponse set(String fieldName, Object value) {
     return (QueryAccessibleDataResponse) super.set(fieldName, value);

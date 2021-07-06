@@ -1124,12 +1124,15 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * version. Additionally, the new image version cannot effect a version downgrade and must
            * match the current image version's Composer major version and Airflow major and minor
            * versions. Consult the Cloud Composer Version List for valid values. *
-           * config.databaseConfig.machineType * Cloud SQL machine type used by Airflow database. It
-           * has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or
-           * db-n1-standard-16. * config.webServerConfig.machineType * Machine type on which Airflow
-           * web server is running. It has to be one of: composer-n1-webserver-2,
-           * composer-n1-webserver-4 or composer-n1-webserver-8. * config.maintenanceWindow *
-           * Maintenance window during which Cloud Composer components may be under maintenance.
+           * config.softwareConfig.schedulerCount * Horizontally scale the number of schedulers in
+           * Airflow. A positive integer not greater than the number of nodes must be provided in
+           * the `config.softwareConfig.schedulerCount` field. * config.databaseConfig.machineType *
+           * Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2,
+           * db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. *
+           * config.webServerConfig.machineType * Machine type on which Airflow web server is
+           * running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or
+           * composer-n1-webserver-8. * config.maintenanceWindow * Maintenance window during which
+           * Cloud Composer components may be under maintenance.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -1184,12 +1187,15 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          environment in-place. Refer to `SoftwareConfig.image_version` for information on how to format the
          new image version. Additionally, the new image version cannot effect a version downgrade and must
          match the current image version's Composer major version and Airflow major and minor versions.
-         Consult the Cloud Composer Version List for valid values. * config.databaseConfig.machineType *
-         Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2,
-         db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. * config.webServerConfig.machineType *
-         Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
-         composer-n1-webserver-4 or composer-n1-webserver-8. * config.maintenanceWindow * Maintenance window
-         during which Cloud Composer components may be under maintenance.
+         Consult the Cloud Composer Version List for valid values. * config.softwareConfig.schedulerCount *
+         Horizontally scale the number of schedulers in Airflow. A positive integer not greater than the
+         number of nodes must be provided in the `config.softwareConfig.schedulerCount` field. *
+         config.databaseConfig.machineType * Cloud SQL machine type used by Airflow database. It has to be
+         one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. *
+         config.webServerConfig.machineType * Machine type on which Airflow web server is running. It has to
+         be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. *
+         config.maintenanceWindow * Maintenance window during which Cloud Composer components may be under
+         maintenance.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1255,12 +1261,15 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * version. Additionally, the new image version cannot effect a version downgrade and must
            * match the current image version's Composer major version and Airflow major and minor
            * versions. Consult the Cloud Composer Version List for valid values. *
-           * config.databaseConfig.machineType * Cloud SQL machine type used by Airflow database. It
-           * has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or
-           * db-n1-standard-16. * config.webServerConfig.machineType * Machine type on which Airflow
-           * web server is running. It has to be one of: composer-n1-webserver-2,
-           * composer-n1-webserver-4 or composer-n1-webserver-8. * config.maintenanceWindow *
-           * Maintenance window during which Cloud Composer components may be under maintenance.
+           * config.softwareConfig.schedulerCount * Horizontally scale the number of schedulers in
+           * Airflow. A positive integer not greater than the number of nodes must be provided in
+           * the `config.softwareConfig.schedulerCount` field. * config.databaseConfig.machineType *
+           * Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2,
+           * db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. *
+           * config.webServerConfig.machineType * Machine type on which Airflow web server is
+           * running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or
+           * composer-n1-webserver-8. * config.maintenanceWindow * Maintenance window during which
+           * Cloud Composer components may be under maintenance.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

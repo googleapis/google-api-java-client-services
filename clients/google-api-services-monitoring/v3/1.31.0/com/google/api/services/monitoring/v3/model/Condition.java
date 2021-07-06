@@ -38,6 +38,14 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private MetricAbsence conditionAbsent;
 
   /**
+   * A condition that checks for log messages matching given constraints. If set, no other
+   * conditions can be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogMatch conditionMatchedLog;
+
+  /**
    * A condition that uses the Monitoring Query Language to define alerts.
    * The value may be {@code null}.
    */
@@ -92,6 +100,25 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setConditionAbsent(MetricAbsence conditionAbsent) {
     this.conditionAbsent = conditionAbsent;
+    return this;
+  }
+
+  /**
+   * A condition that checks for log messages matching given constraints. If set, no other
+   * conditions can be present.
+   * @return value or {@code null} for none
+   */
+  public LogMatch getConditionMatchedLog() {
+    return conditionMatchedLog;
+  }
+
+  /**
+   * A condition that checks for log messages matching given constraints. If set, no other
+   * conditions can be present.
+   * @param conditionMatchedLog conditionMatchedLog or {@code null} for none
+   */
+  public Condition setConditionMatchedLog(LogMatch conditionMatchedLog) {
+    this.conditionMatchedLog = conditionMatchedLog;
     return this;
   }
 

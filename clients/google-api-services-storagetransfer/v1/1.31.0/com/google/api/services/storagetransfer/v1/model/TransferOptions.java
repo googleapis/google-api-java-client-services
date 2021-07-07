@@ -48,7 +48,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   /**
    * When to overwrite objects that already exist in the sink. The default is that only objects that
    * are different from the source are ovewritten. If true, all objects in the sink whose name
-   * matches an object in the source will be overwritten with the source object.
+   * matches an object in the source are overwritten with the source object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   /**
    * When to overwrite objects that already exist in the sink. The default is that only objects that
    * are different from the source are ovewritten. If true, all objects in the sink whose name
-   * matches an object in the source will be overwritten with the source object.
+   * matches an object in the source are overwritten with the source object.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOverwriteObjectsAlreadyExistingInSink() {
@@ -105,7 +105,7 @@ public final class TransferOptions extends com.google.api.client.json.GenericJso
   /**
    * When to overwrite objects that already exist in the sink. The default is that only objects that
    * are different from the source are ovewritten. If true, all objects in the sink whose name
-   * matches an object in the source will be overwritten with the source object.
+   * matches an object in the source are overwritten with the source object.
    * @param overwriteObjectsAlreadyExistingInSink overwriteObjectsAlreadyExistingInSink or {@code null} for none
    */
   public TransferOptions setOverwriteObjectsAlreadyExistingInSink(java.lang.Boolean overwriteObjectsAlreadyExistingInSink) {

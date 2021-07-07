@@ -17,13 +17,13 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specification to configure notifications published to Cloud Pub/Sub. Notifications will be
- * published to the customer-provided topic using the following `PubsubMessage.attributes`: *
- * `"eventType"`: one of the EventType values * `"payloadFormat"`: one of the PayloadFormat values *
- * `"projectId"`: the project_id of the `TransferOperation` * `"transferJobName"`: the
- * transfer_job_name of the `TransferOperation` * `"transferOperationName"`: the name of the
- * `TransferOperation` The `PubsubMessage.data` will contain a TransferOperation resource formatted
- * according to the specified `PayloadFormat`.
+ * Specification to configure notifications published to Pub/Sub. Notifications are published to the
+ * customer-provided topic using the following `PubsubMessage.attributes`: * `"eventType"`: one of
+ * the EventType values * `"payloadFormat"`: one of the PayloadFormat values * `"projectId"`: the
+ * project_id of the `TransferOperation` * `"transferJobName"`: the transfer_job_name of the
+ * `TransferOperation` * `"transferOperationName"`: the name of the `TransferOperation` The
+ * `PubsubMessage.data` contains a TransferOperation resource formatted according to the specified
+ * `PayloadFormat`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -51,9 +51,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   private java.lang.String payloadFormat;
 
   /**
-   * Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must
-   * be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in
-   * an INVALID_ARGUMENT error.
+   * Required. The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of
+   * the format: `projects/{project}/topics/{topic}`. Not matching this format results in an
+   * INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +96,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must
-   * be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in
-   * an INVALID_ARGUMENT error.
+   * Required. The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of
+   * the format: `projects/{project}/topics/{topic}`. Not matching this format results in an
+   * INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -106,9 +106,9 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The `Topic.name` of the Cloud Pub/Sub topic to which to publish notifications. Must
-   * be of the format: `projects/{project}/topics/{topic}`. Not matching this format will result in
-   * an INVALID_ARGUMENT error.
+   * Required. The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of
+   * the format: `projects/{project}/topics/{topic}`. Not matching this format results in an
+   * INVALID_ARGUMENT error.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

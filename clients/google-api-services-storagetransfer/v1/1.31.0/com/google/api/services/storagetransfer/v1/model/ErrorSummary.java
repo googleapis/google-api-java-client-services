@@ -44,7 +44,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   private java.lang.Long errorCount;
 
   /**
-   * Error samples. At most 5 error log entries will be recorded for a given error code for a single
+   * Error samples. At most 5 error log entries are recorded for a given error code for a single
    * transfer operation.
    * The value may be {@code null}.
    */
@@ -92,7 +92,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error samples. At most 5 error log entries will be recorded for a given error code for a single
+   * Error samples. At most 5 error log entries are recorded for a given error code for a single
    * transfer operation.
    * @return value or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error samples. At most 5 error log entries will be recorded for a given error code for a single
+   * Error samples. At most 5 error log entries are recorded for a given error code for a single
    * transfer operation.
    * @param errorLogEntries errorLogEntries or {@code null} for none
    */

@@ -51,11 +51,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private String repeatInterval;
 
   /**
-   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will
-   * run once per 24 hours within the following guidelines: * If `schedule_end_date` and
+   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job runs
+   * once per 24 hours within the following guidelines: * If `schedule_end_date` and
    * schedule_start_date are the same and in the future relative to UTC, the transfer is executed
    * only one time. * If `schedule_end_date` is later than `schedule_start_date` and
-   * `schedule_end_date` is in the future relative to UTC, the job will run each day at
+   * `schedule_end_date` is in the future relative to UTC, the job runs each day at
    * start_time_of_day through `schedule_end_date`.
    * The value may be {@code null}.
    */
@@ -66,11 +66,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If
    * `schedule_start_date` and start_time_of_day are in the past relative to the job's creation
    * time, the transfer starts the day after you schedule the transfer request. **Note:** When
-   * starting jobs at or near midnight UTC it is possible that a job will start later than expected.
-   * For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC
-   * and the Storage Transfer Service server receives the request on June 2, then it will create a
+   * starting jobs at or near midnight UTC it is possible that a job starts later than expected. For
+   * example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and
+   * the Storage Transfer Service server receives the request on June 2, then it creates a
    * TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight
-   * UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.
+   * UTC. The first scheduled TransferOperation takes place on June 3 at midnight UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,11 +136,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will
-   * run once per 24 hours within the following guidelines: * If `schedule_end_date` and
+   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job runs
+   * once per 24 hours within the following guidelines: * If `schedule_end_date` and
    * schedule_start_date are the same and in the future relative to UTC, the transfer is executed
    * only one time. * If `schedule_end_date` is later than `schedule_start_date` and
-   * `schedule_end_date` is in the future relative to UTC, the job will run each day at
+   * `schedule_end_date` is in the future relative to UTC, the job runs each day at
    * start_time_of_day through `schedule_end_date`.
    * @return value or {@code null} for none
    */
@@ -149,11 +149,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will
-   * run once per 24 hours within the following guidelines: * If `schedule_end_date` and
+   * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job runs
+   * once per 24 hours within the following guidelines: * If `schedule_end_date` and
    * schedule_start_date are the same and in the future relative to UTC, the transfer is executed
    * only one time. * If `schedule_end_date` is later than `schedule_start_date` and
-   * `schedule_end_date` is in the future relative to UTC, the job will run each day at
+   * `schedule_end_date` is in the future relative to UTC, the job runs each day at
    * start_time_of_day through `schedule_end_date`.
    * @param scheduleEndDate scheduleEndDate or {@code null} for none
    */
@@ -166,11 +166,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If
    * `schedule_start_date` and start_time_of_day are in the past relative to the job's creation
    * time, the transfer starts the day after you schedule the transfer request. **Note:** When
-   * starting jobs at or near midnight UTC it is possible that a job will start later than expected.
-   * For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC
-   * and the Storage Transfer Service server receives the request on June 2, then it will create a
+   * starting jobs at or near midnight UTC it is possible that a job starts later than expected. For
+   * example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and
+   * the Storage Transfer Service server receives the request on June 2, then it creates a
    * TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight
-   * UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.
+   * UTC. The first scheduled TransferOperation takes place on June 3 at midnight UTC.
    * @return value or {@code null} for none
    */
   public Date getScheduleStartDate() {
@@ -181,11 +181,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * Required. The start date of a transfer. Date boundaries are determined relative to UTC time. If
    * `schedule_start_date` and start_time_of_day are in the past relative to the job's creation
    * time, the transfer starts the day after you schedule the transfer request. **Note:** When
-   * starting jobs at or near midnight UTC it is possible that a job will start later than expected.
-   * For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC
-   * and the Storage Transfer Service server receives the request on June 2, then it will create a
+   * starting jobs at or near midnight UTC it is possible that a job starts later than expected. For
+   * example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and
+   * the Storage Transfer Service server receives the request on June 2, then it creates a
    * TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight
-   * UTC. The first scheduled TransferOperation will take place on June 3 at midnight UTC.
+   * UTC. The first scheduled TransferOperation takes place on June 3 at midnight UTC.
    * @param scheduleStartDate scheduleStartDate or {@code null} for none
    */
   public Schedule setScheduleStartDate(Date scheduleStartDate) {

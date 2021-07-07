@@ -59,8 +59,7 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
   private java.lang.String email;
 
   /**
-   * The attendee's Profile ID, if available. It corresponds to the id field in the People
-   * collection of the Google+ API
+   * The attendee's Profile ID, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +176,7 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The attendee's Profile ID, if available. It corresponds to the id field in the People
-   * collection of the Google+ API
+   * The attendee's Profile ID, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -186,8 +184,7 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The attendee's Profile ID, if available. It corresponds to the id field in the People
-   * collection of the Google+ API
+   * The attendee's Profile ID, if available.
    * @param id id or {@code null} for none
    */
   public EventAttendee setId(java.lang.String id) {

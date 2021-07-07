@@ -30,8 +30,7 @@ package com.google.api.services.calendar.model;
 public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether anyone can invite themselves to the event (currently works for Google+ events only).
-   * Optional. The default is False.
+   * Whether anyone can invite themselves to the event (deprecated). Optional. The default is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +173,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean guestsCanSeeOtherGuests;
 
   /**
-   * An absolute link to the Google+ hangout associated with this event. Read-only.
+   * An absolute link to the Google Hangout associated with this event. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,8 +374,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String visibility;
 
   /**
-   * Whether anyone can invite themselves to the event (currently works for Google+ events only).
-   * Optional. The default is False.
+   * Whether anyone can invite themselves to the event (deprecated). Optional. The default is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnyoneCanAddSelf() {
@@ -384,8 +382,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether anyone can invite themselves to the event (currently works for Google+ events only).
-   * Optional. The default is False.
+   * Whether anyone can invite themselves to the event (deprecated). Optional. The default is False.
    * @param anyoneCanAddSelf anyoneCanAddSelf or {@code null} for none
    */
   public Event setAnyoneCanAddSelf(java.lang.Boolean anyoneCanAddSelf) {
@@ -410,8 +407,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   * Whether anyone can invite themselves to the event (currently works for Google+ events only).
- Optional. The default is False.
+   * Whether anyone can invite themselves to the event (deprecated). Optional. The default is False.
    * </p>
    */
   public boolean isAnyoneCanAddSelf() {
@@ -885,7 +881,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An absolute link to the Google+ hangout associated with this event. Read-only.
+   * An absolute link to the Google Hangout associated with this event. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getHangoutLink() {
@@ -893,7 +889,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An absolute link to the Google+ hangout associated with this event. Read-only.
+   * An absolute link to the Google Hangout associated with this event. Read-only.
    * @param hangoutLink hangoutLink or {@code null} for none
    */
   public Event setHangoutLink(java.lang.String hangoutLink) {
@@ -1436,8 +1432,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     private java.lang.String email;
 
     /**
-     * The creator's Profile ID, if available. It corresponds to the id field in the People collection
-     * of the Google+ API
+     * The creator's Profile ID, if available.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1486,8 +1481,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The creator's Profile ID, if available. It corresponds to the id field in the People collection
-     * of the Google+ API
+     * The creator's Profile ID, if available.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -1495,8 +1489,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The creator's Profile ID, if available. It corresponds to the id field in the People collection
-     * of the Google+ API
+     * The creator's Profile ID, if available.
      * @param id id or {@code null} for none
      */
     public Creator setId(java.lang.String id) {
@@ -1872,8 +1865,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     private java.lang.String email;
 
     /**
-     * The organizer's Profile ID, if available. It corresponds to the id field in the People
-     * collection of the Google+ API
+     * The organizer's Profile ID, if available.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1922,8 +1914,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The organizer's Profile ID, if available. It corresponds to the id field in the People
-     * collection of the Google+ API
+     * The organizer's Profile ID, if available.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -1931,8 +1922,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The organizer's Profile ID, if available. It corresponds to the id field in the People
-     * collection of the Google+ API
+     * The organizer's Profile ID, if available.
      * @param id id or {@code null} for none
      */
     public Organizer setId(java.lang.String id) {

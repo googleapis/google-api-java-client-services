@@ -28,9 +28,9 @@ package com.google.api.services.storagetransfer.v1.model;
  * based on a URL list, keep the following in mind: * When an object located at
  * `http(s)://hostname:port/` is transferred to a data sink, the name of the object at the data sink
  * is `/`. * If the specified size of an object does not match the actual size of the object
- * fetched, the object will not be transferred. * If the specified MD5 does not match the MD5
- * computed from the transferred bytes, the object transfer will fail. * Ensure that each URL you
- * specify is publicly accessible. For example, in Cloud Storage you can [share an object publicly]
+ * fetched, the object is not transferred. * If the specified MD5 does not match the MD5 computed
+ * from the transferred bytes, the object transfer fails. * Ensure that each URL you specify is
+ * publicly accessible. For example, in Cloud Storage you can [share an object publicly]
  * (/storage/docs/cloud-console#_sharingdata) and get a link to it. * Storage Transfer Service obeys
  * `robots.txt` rules and requires the source HTTP server to support `Range` requests and to return
  * a `Content-Length` header in each response. * ObjectConditions have no effect when filtering

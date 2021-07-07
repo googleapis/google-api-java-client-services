@@ -68,13 +68,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
-   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
-   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise,
+   * the specified name is used as the unique name for this job. If the specified name is in use by
+   * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
+   * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
-   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
-   * fail with an INVALID_ARGUMENT error.
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail
+   * with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
-   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
-   * have a non-empty schedule.
+   * the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a
+   * non-empty schedule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,13 +211,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
-   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
-   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise,
+   * the specified name is used as the unique name for this job. If the specified name is in use by
+   * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
+   * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
-   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
-   * fail with an INVALID_ARGUMENT error.
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail
+   * with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -226,13 +226,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * A unique name (within the transfer project) assigned when the job is created. If this field is
-   * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
-   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
-   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise,
+   * the specified name is used as the unique name for this job. If the specified name is in use by
+   * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
+   * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved
-   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will
-   * fail with an INVALID_ARGUMENT error.
+   * prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail
+   * with an INVALID_ARGUMENT error.
    * @param name name or {@code null} for none
    */
   public TransferJob setName(java.lang.String name) {
@@ -276,8 +276,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
-   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
-   * have a non-empty schedule.
+   * the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a
+   * non-empty schedule.
    * @return value or {@code null} for none
    */
   public Schedule getSchedule() {
@@ -286,8 +286,8 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
-   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
-   * have a non-empty schedule.
+   * the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a
+   * non-empty schedule.
    * @param schedule schedule or {@code null} for none
    */
   public TransferJob setSchedule(Schedule schedule) {

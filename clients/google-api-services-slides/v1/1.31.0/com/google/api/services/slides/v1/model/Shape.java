@@ -31,7 +31,7 @@ package com.google.api.services.slides.v1.model;
 public final class Shape extends com.google.api.client.json.GenericJson {
 
   /**
-   * Placeholders are shapes that are inherit from corresponding placeholders on layouts and
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
    * masters. If set, the shape is a placeholder shape and any inherited properties can be resolved
    * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
    * The value may be {@code null}.
@@ -61,7 +61,7 @@ public final class Shape extends com.google.api.client.json.GenericJson {
   private TextContent text;
 
   /**
-   * Placeholders are shapes that are inherit from corresponding placeholders on layouts and
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
    * masters. If set, the shape is a placeholder shape and any inherited properties can be resolved
    * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
    * @return value or {@code null} for none
@@ -71,7 +71,7 @@ public final class Shape extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Placeholders are shapes that are inherit from corresponding placeholders on layouts and
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
    * masters. If set, the shape is a placeholder shape and any inherited properties can be resolved
    * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
    * @param placeholder placeholder or {@code null} for none

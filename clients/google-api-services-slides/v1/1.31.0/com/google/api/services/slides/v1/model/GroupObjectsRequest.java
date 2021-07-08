@@ -33,7 +33,7 @@ public final class GroupObjectsRequest extends com.google.api.client.json.Generi
   /**
    * The object IDs of the objects to group. Only page elements can be grouped. There should be at
    * least two page elements on the same page that are not already in another group. Some page
-   * elements, such as videos, tables and placeholder shapes cannot be grouped.
+   * elements, such as videos, tables and placeholders cannot be grouped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GroupObjectsRequest extends com.google.api.client.json.Generi
   /**
    * The object IDs of the objects to group. Only page elements can be grouped. There should be at
    * least two page elements on the same page that are not already in another group. Some page
-   * elements, such as videos, tables and placeholder shapes cannot be grouped.
+   * elements, such as videos, tables and placeholders cannot be grouped.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getChildrenObjectIds() {
@@ -63,7 +63,7 @@ public final class GroupObjectsRequest extends com.google.api.client.json.Generi
   /**
    * The object IDs of the objects to group. Only page elements can be grouped. There should be at
    * least two page elements on the same page that are not already in another group. Some page
-   * elements, such as videos, tables and placeholder shapes cannot be grouped.
+   * elements, such as videos, tables and placeholders cannot be grouped.
    * @param childrenObjectIds childrenObjectIds or {@code null} for none
    */
   public GroupObjectsRequest setChildrenObjectIds(java.util.List<java.lang.String> childrenObjectIds) {

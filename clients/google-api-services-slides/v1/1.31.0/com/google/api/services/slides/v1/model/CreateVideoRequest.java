@@ -45,7 +45,10 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
    * The video source's unique identifier for this video. e.g. For YouTube video
    * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
    * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
-   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q. To access a Google Drive video file, you might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +101,10 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
    * The video source's unique identifier for this video. e.g. For YouTube video
    * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
    * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
-   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q. To access a Google Drive video file, you might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -109,7 +115,10 @@ public final class CreateVideoRequest extends com.google.api.client.json.Generic
    * The video source's unique identifier for this video. e.g. For YouTube video
    * https://www.youtube.com/watch?v=7U3axjORYZ0, the ID is 7U3axjORYZ0. For a Google Drive video
    * https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q the ID is
-   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
+   * 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q. To access a Google Drive video file, you might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * @param id id or {@code null} for none
    */
   public CreateVideoRequest setId(java.lang.String id) {

@@ -11959,8 +11959,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> type;
 
-      /** Restrict results to a particular set of resource types from One Platform. [default:
-     video,channel,playlist]
+      /** Restrict results to a particular set of resource types from One Platform.
        */
       public java.util.List<java.lang.String> getType() {
         return type;

@@ -26,6 +26,9 @@ public class KeepScopes {
   /** See, edit, create and permanently delete all your Google Keep data. */
   public static final String KEEP = "https://www.googleapis.com/auth/keep";
 
+  /** View all your Google Keep data. */
+  public static final String KEEP_READONLY = "https://www.googleapis.com/auth/keep.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class KeepScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(KEEP);
+    set.add(KEEP_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

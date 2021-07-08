@@ -46,6 +46,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer
+   * data at rest. Cannot be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
    * Output only. The URI of the endpoint used to access the metastore service.
    * The value may be {@code null}.
    */
@@ -188,6 +196,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer
+   * data at rest. Cannot be updated.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer
+   * data at rest. Cannot be updated.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public Service setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

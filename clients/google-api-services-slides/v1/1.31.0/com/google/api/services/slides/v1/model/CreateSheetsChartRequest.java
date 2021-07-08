@@ -65,7 +65,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   private java.lang.String objectId;
 
   /**
-   * The ID of the Google Sheets spreadsheet that contains the chart.
+   * The ID of the Google Sheets spreadsheet that contains the chart. You might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +155,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The ID of the Google Sheets spreadsheet that contains the chart.
+   * The ID of the Google Sheets spreadsheet that contains the chart. You might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * @return value or {@code null} for none
    */
   public java.lang.String getSpreadsheetId() {
@@ -160,7 +166,10 @@ public final class CreateSheetsChartRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The ID of the Google Sheets spreadsheet that contains the chart.
+   * The ID of the Google Sheets spreadsheet that contains the chart. You might need to add a
+   * resource key to the HTTP header for a subset of old files. For more information, see [Access
+   * link-shared files using resource keys](https://developers.google.com/drive/api/v3/resource-
+   * keys).
    * @param spreadsheetId spreadsheetId or {@code null} for none
    */
   public CreateSheetsChartRequest setSpreadsheetId(java.lang.String spreadsheetId) {

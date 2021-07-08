@@ -23,10 +23,10 @@ package com.google.api.services.docs.v1;
  */
 public class DocsScopes {
 
-  /** See, create, and edit all Google Docs documents you have access to. */
+  /** See, edit, create, and delete all your Google Docs documents. */
   public static final String DOCUMENTS = "https://www.googleapis.com/auth/documents";
 
-  /** View your Google Docs documents. */
+  /** See all your Google Docs documents. */
   public static final String DOCUMENTS_READONLY = "https://www.googleapis.com/auth/documents.readonly";
 
   /** See, edit, create, and delete all of your Google Drive files. */

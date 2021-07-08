@@ -93,6 +93,14 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private Person person;
 
   /**
+   * A paragraph element that links to a Google resource (such as a file in Drive, a Youtube video,
+   * a Calendar event, etc.)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RichLink richLink;
+
+  /**
    * The zero-based start index of this paragraph element, in UTF-16 code units.
    * The value may be {@code null}.
    */
@@ -256,6 +264,25 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
    */
   public ParagraphElement setPerson(Person person) {
     this.person = person;
+    return this;
+  }
+
+  /**
+   * A paragraph element that links to a Google resource (such as a file in Drive, a Youtube video,
+   * a Calendar event, etc.)
+   * @return value or {@code null} for none
+   */
+  public RichLink getRichLink() {
+    return richLink;
+  }
+
+  /**
+   * A paragraph element that links to a Google resource (such as a file in Drive, a Youtube video,
+   * a Calendar event, etc.)
+   * @param richLink richLink or {@code null} for none
+   */
+  public ParagraphElement setRichLink(RichLink richLink) {
+    this.richLink = richLink;
     return this;
   }
 

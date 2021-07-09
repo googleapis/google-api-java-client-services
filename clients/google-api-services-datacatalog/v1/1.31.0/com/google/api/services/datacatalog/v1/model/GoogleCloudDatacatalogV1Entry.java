@@ -58,6 +58,14 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1DataSource dataSource;
 
   /**
+   * Specification that applies to a data source connection. Valid only for entries with the
+   * `DATA_SOURCE_CONNECTION` type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1DataSourceConnectionSpec dataSourceConnectionSpec;
+
+  /**
    * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
    * The value may be {@code null}.
    */
@@ -111,6 +119,15 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String integratedSystem;
+
+  /**
+   * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached
+   * only to custom entries. Synced entries have unmodifiable labels that come from the source
+   * system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * The resource this metadata entry refers to. For Google Cloud Platform resources,
@@ -254,6 +271,25 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
+   * Specification that applies to a data source connection. Valid only for entries with the
+   * `DATA_SOURCE_CONNECTION` type.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DataSourceConnectionSpec getDataSourceConnectionSpec() {
+    return dataSourceConnectionSpec;
+  }
+
+  /**
+   * Specification that applies to a data source connection. Valid only for entries with the
+   * `DATA_SOURCE_CONNECTION` type.
+   * @param dataSourceConnectionSpec dataSourceConnectionSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setDataSourceConnectionSpec(GoogleCloudDatacatalogV1DataSourceConnectionSpec dataSourceConnectionSpec) {
+    this.dataSourceConnectionSpec = dataSourceConnectionSpec;
+    return this;
+  }
+
+  /**
    * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
    * @return value or {@code null} for none
    */
@@ -378,6 +414,27 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setIntegratedSystem(java.lang.String integratedSystem) {
     this.integratedSystem = integratedSystem;
+    return this;
+  }
+
+  /**
+   * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached
+   * only to custom entries. Synced entries have unmodifiable labels that come from the source
+   * system.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached
+   * only to custom entries. Synced entries have unmodifiable labels that come from the source
+   * system.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

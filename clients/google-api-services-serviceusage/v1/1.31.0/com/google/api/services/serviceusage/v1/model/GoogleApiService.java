@@ -129,7 +129,8 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * A list of all enum types included in this API service. Enums referenced directly or indirectly
    * by the `apis` are automatically included. Enums which are not referenced but shall be included
-   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
+   * should be listed here by name by the configuration author. Example: enums: - name:
+   * google.someapi.v1.SomeEnum
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +242,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   private java.util.List<Type> systemTypes;
 
   /**
-   * The product title for this service.
+   * The product title for this service, it is the name displayed in Google Cloud Console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +252,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    * A list of all proto message types included in this API service. Types referenced directly or
    * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example: types: - name: google.protobuf.Int32
+   * by name by the configuration author. Example: types: - name: google.protobuf.Int32
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -447,7 +448,8 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * A list of all enum types included in this API service. Enums referenced directly or indirectly
    * by the `apis` are automatically included. Enums which are not referenced but shall be included
-   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
+   * should be listed here by name by the configuration author. Example: enums: - name:
+   * google.someapi.v1.SomeEnum
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceUsageEnum> getEnums() {
@@ -457,7 +459,8 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   /**
    * A list of all enum types included in this API service. Enums referenced directly or indirectly
    * by the `apis` are automatically included. Enums which are not referenced but shall be included
-   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
+   * should be listed here by name by the configuration author. Example: enums: - name:
+   * google.someapi.v1.SomeEnum
    * @param enums enums or {@code null} for none
    */
   public GoogleApiService setEnums(java.util.List<ServiceUsageEnum> enums) {
@@ -703,7 +706,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The product title for this service.
+   * The product title for this service, it is the name displayed in Google Cloud Console.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -711,7 +714,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The product title for this service.
+   * The product title for this service, it is the name displayed in Google Cloud Console.
    * @param title title or {@code null} for none
    */
   public GoogleApiService setTitle(java.lang.String title) {
@@ -723,7 +726,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    * A list of all proto message types included in this API service. Types referenced directly or
    * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example: types: - name: google.protobuf.Int32
+   * by name by the configuration author. Example: types: - name: google.protobuf.Int32
    * @return value or {@code null} for none
    */
   public java.util.List<Type> getTypes() {
@@ -734,7 +737,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    * A list of all proto message types included in this API service. Types referenced directly or
    * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example: types: - name: google.protobuf.Int32
+   * by name by the configuration author. Example: types: - name: google.protobuf.Int32
    * @param types types or {@code null} for none
    */
   public GoogleApiService setTypes(java.util.List<Type> types) {

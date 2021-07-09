@@ -56,6 +56,16 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   private java.util.List<java.lang.String> includeProjectIds;
 
   /**
+   * Optional. If `true`, include public tag templates in the search results. By default, they are
+   * included only if you have explicit permissions on them to view them. For example, if you are
+   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * public tag templates and at least one of them is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includePublicTagTemplates;
+
+  /**
    * Optional. The list of locations to search within. If empty, all locations are searched. Returns
    * an error if any location in the list isn't one of the [Supported
    * regions](https://cloud.google.com/data-catalog/docs/concepts/regions#supported_regions). If a
@@ -123,6 +133,29 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
    */
   public GoogleCloudDatacatalogV1SearchCatalogRequestScope setIncludeProjectIds(java.util.List<java.lang.String> includeProjectIds) {
     this.includeProjectIds = includeProjectIds;
+    return this;
+  }
+
+  /**
+   * Optional. If `true`, include public tag templates in the search results. By default, they are
+   * included only if you have explicit permissions on them to view them. For example, if you are
+   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * public tag templates and at least one of them is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludePublicTagTemplates() {
+    return includePublicTagTemplates;
+  }
+
+  /**
+   * Optional. If `true`, include public tag templates in the search results. By default, they are
+   * included only if you have explicit permissions on them to view them. For example, if you are
+   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * public tag templates and at least one of them is required.
+   * @param includePublicTagTemplates includePublicTagTemplates or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SearchCatalogRequestScope setIncludePublicTagTemplates(java.lang.Boolean includePublicTagTemplates) {
+    this.includePublicTagTemplates = includePublicTagTemplates;
     return this;
   }
 

@@ -31,8 +31,7 @@ package com.google.api.services.managedidentities.v1beta1.model;
 public final class SqlIntegration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,16 +60,14 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -78,8 +75,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was created.
    * @param createTime createTime or {@code null} for none
    */
   public SqlIntegration setCreateTime(String createTime) {
@@ -141,8 +137,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -150,8 +145,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time sql integration was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SqlIntegration setUpdateTime(String updateTime) {

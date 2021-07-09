@@ -453,6 +453,167 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
     public class Properties {
 
       /**
+       * An accessor for creating requests from the IdeaActivities collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Ideahub ideahub = new Ideahub(...);}
+       *   {@code Ideahub.IdeaActivities.List request = ideahub.ideaActivities().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public IdeaActivities ideaActivities() {
+        return new IdeaActivities();
+      }
+
+      /**
+       * The "ideaActivities" collection of methods.
+       */
+      public class IdeaActivities {
+
+        /**
+         * Creates an idea activity entry.
+         *
+         * Create a request for the method "ideaActivities.create".
+         *
+         * This request holds the parameters needed by the ideahub server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this idea activity will be created. Format:
+         *        platforms/{platform}/property/{property}
+         * @param content the {@link com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends IdeahubRequest<com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/ideaActivities";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^platforms/[^/]+/properties/[^/]+$");
+
+          /**
+           * Creates an idea activity entry.
+           *
+           * Create a request for the method "ideaActivities.create".
+           *
+           * This request holds the parameters needed by the the ideahub server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this idea activity will be created. Format:
+         *        platforms/{platform}/property/{property}
+           * @param content the {@link com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity content) {
+            super(Ideahub.this, "POST", REST_PATH, content, com.google.api.services.ideahub.v1alpha.model.GoogleSearchIdeahubV1alphaIdeaActivity.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^platforms/[^/]+/properties/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this idea activity will be created. Format:
+           * platforms/{platform}/property/{property}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this idea activity will be created. Format:
+         platforms/{platform}/property/{property}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this idea activity will be created. Format:
+           * platforms/{platform}/property/{property}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^platforms/[^/]+/properties/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the IdeaStates collection.
        *
        * <p>The typical use is:</p>

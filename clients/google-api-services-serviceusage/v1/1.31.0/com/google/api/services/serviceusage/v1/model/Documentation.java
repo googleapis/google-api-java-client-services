@@ -91,7 +91,9 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   private java.lang.String serviceRootUrl;
 
   /**
-   * A short summary of what the service does. Can only be provided by plain text.
+   * A short description of what the service does. The summary must be plain text. It becomes the
+   * overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to
+   * the standard field `description`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +197,9 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A short summary of what the service does. Can only be provided by plain text.
+   * A short description of what the service does. The summary must be plain text. It becomes the
+   * overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to
+   * the standard field `description`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSummary() {
@@ -203,7 +207,9 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A short summary of what the service does. Can only be provided by plain text.
+   * A short description of what the service does. The summary must be plain text. It becomes the
+   * overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to
+   * the standard field `description`.
    * @param summary summary or {@code null} for none
    */
   public Documentation setSummary(java.lang.String summary) {

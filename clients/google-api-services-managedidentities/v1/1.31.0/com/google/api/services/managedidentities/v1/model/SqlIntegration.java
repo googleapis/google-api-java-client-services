@@ -17,7 +17,7 @@
 package com.google.api.services.managedidentities.v1.model;
 
 /**
- * Represents the Sql instance integrated with AD.
+ * Represents the SQL instance integrated with Managed AD.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Microsoft Active Directory API.
@@ -31,15 +31,14 @@ package com.google.api.services.managedidentities.v1.model;
 public final class SqlIntegration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The unique name of the sql integration in the form of `projects/{project_id}/locations/global/d
+   * The unique name of the SQL integration in the form of `projects/{project_id}/locations/global/d
    * omains/{domain_name}/sqlIntegrations/{sql_integration}`
    * The value may be {@code null}.
    */
@@ -47,30 +46,28 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The full resource name of an integrated sql instance
+   * The full resource name of an integrated SQL instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlInstance;
 
   /**
-   * Output only. The current state of the sql integration.
+   * Output only. The current state of the SQL integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -78,8 +75,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was created. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was created.
    * @param createTime createTime or {@code null} for none
    */
   public SqlIntegration setCreateTime(String createTime) {
@@ -88,7 +84,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The unique name of the sql integration in the form of `projects/{project_id}/locations/global/d
+   * The unique name of the SQL integration in the form of `projects/{project_id}/locations/global/d
    * omains/{domain_name}/sqlIntegrations/{sql_integration}`
    * @return value or {@code null} for none
    */
@@ -97,7 +93,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The unique name of the sql integration in the form of `projects/{project_id}/locations/global/d
+   * The unique name of the SQL integration in the form of `projects/{project_id}/locations/global/d
    * omains/{domain_name}/sqlIntegrations/{sql_integration}`
    * @param name name or {@code null} for none
    */
@@ -107,7 +103,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The full resource name of an integrated sql instance
+   * The full resource name of an integrated SQL instance
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlInstance() {
@@ -115,7 +111,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The full resource name of an integrated sql instance
+   * The full resource name of an integrated SQL instance
    * @param sqlInstance sqlInstance or {@code null} for none
    */
   public SqlIntegration setSqlInstance(java.lang.String sqlInstance) {
@@ -124,7 +120,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the sql integration.
+   * Output only. The current state of the SQL integration.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -132,7 +128,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the sql integration.
+   * Output only. The current state of the SQL integration.
    * @param state state or {@code null} for none
    */
   public SqlIntegration setState(java.lang.String state) {
@@ -141,8 +137,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -150,8 +145,7 @@ public final class SqlIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time sql integration was updated. Synthetic field is populated automatically
-   * by CCFE.
+   * Output only. The time the SQL integration was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SqlIntegration setUpdateTime(String updateTime) {

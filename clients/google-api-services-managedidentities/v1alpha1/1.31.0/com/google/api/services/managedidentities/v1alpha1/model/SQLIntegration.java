@@ -31,8 +31,7 @@ package com.google.api.services.managedidentities.v1alpha1.model;
 public final class SQLIntegration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time the instance was created. Synthetic field is populated automatically by
-   * CCFE. go/ccfe-synthetic-field-user-guide
+   * Output only. The time the instance was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,15 +60,14 @@ public final class SQLIntegration extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * Output only. Last update time. Synthetic field is populated automatically by CCFE.
+   * Output only. Last update time for this SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time the instance was created. Synthetic field is populated automatically by
-   * CCFE. go/ccfe-synthetic-field-user-guide
+   * Output only. The time the instance was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -77,8 +75,7 @@ public final class SQLIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The time the instance was created. Synthetic field is populated automatically by
-   * CCFE. go/ccfe-synthetic-field-user-guide
+   * Output only. The time the instance was created.
    * @param createTime createTime or {@code null} for none
    */
   public SQLIntegration setCreateTime(String createTime) {
@@ -140,7 +137,7 @@ public final class SQLIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Last update time. Synthetic field is populated automatically by CCFE.
+   * Output only. Last update time for this SQL instance.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -148,7 +145,7 @@ public final class SQLIntegration extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Last update time. Synthetic field is populated automatically by CCFE.
+   * Output only. Last update time for this SQL instance.
    * @param updateTime updateTime or {@code null} for none
    */
   public SQLIntegration setUpdateTime(String updateTime) {

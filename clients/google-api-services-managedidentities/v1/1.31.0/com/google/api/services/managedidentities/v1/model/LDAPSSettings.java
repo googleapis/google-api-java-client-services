@@ -43,7 +43,7 @@ public final class LDAPSSettings extends com.google.api.client.json.GenericJson 
   private Certificate certificate;
 
   /**
-   * Input only. The password used to encrypt the uploaded pfx certificate.
+   * Input only. The password used to encrypt the uploaded PFX certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class LDAPSSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Input only. The password used to encrypt the uploaded pfx certificate.
+   * Input only. The password used to encrypt the uploaded PFX certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificatePassword() {
@@ -118,7 +118,7 @@ public final class LDAPSSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Input only. The password used to encrypt the uploaded pfx certificate.
+   * Input only. The password used to encrypt the uploaded PFX certificate.
    * @param certificatePassword certificatePassword or {@code null} for none
    */
   public LDAPSSettings setCertificatePassword(java.lang.String certificatePassword) {

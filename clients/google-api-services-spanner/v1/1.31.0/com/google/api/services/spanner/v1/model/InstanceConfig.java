@@ -38,6 +38,14 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
+   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * instance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> leaderOptions;
+
+  /**
    * A unique identifier for the instance configuration. Values are of the form
    * `projects//instanceConfigs/a-z*`
    * The value may be {@code null}.
@@ -67,6 +75,25 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * instance configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLeaderOptions() {
+    return leaderOptions;
+  }
+
+  /**
+   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * instance configuration.
+   * @param leaderOptions leaderOptions or {@code null} for none
+   */
+  public InstanceConfig setLeaderOptions(java.util.List<java.lang.String> leaderOptions) {
+    this.leaderOptions = leaderOptions;
     return this;
   }
 

@@ -37,6 +37,15 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The read-write region which contains the database's leader replicas. This is the
+   * same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or
+   * DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultLeader;
+
+  /**
    * Output only. Earliest timestamp at which older versions of the data can be read. This value is
    * continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are
    * using this value to recover data, make sure to account for the time from the moment when the
@@ -113,6 +122,27 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The read-write region which contains the database's leader replicas. This is the
+   * same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or
+   * DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultLeader() {
+    return defaultLeader;
+  }
+
+  /**
+   * Output only. The read-write region which contains the database's leader replicas. This is the
+   * same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or
+   * DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
+   * @param defaultLeader defaultLeader or {@code null} for none
+   */
+  public Database setDefaultLeader(java.lang.String defaultLeader) {
+    this.defaultLeader = defaultLeader;
     return this;
   }
 

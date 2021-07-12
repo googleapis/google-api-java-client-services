@@ -42,7 +42,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
    * Legal characters for `request_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a request_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * this request doesn’t belong to any transaction, transaction_tag will be ignored. Legal
    * characters for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a transaction_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
    * Legal characters for `request_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a request_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestTag() {
@@ -97,7 +97,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * transaction. This field is ignored for requests where it's not applicable (e.g. CommitRequest).
    * Legal characters for `request_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a request_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * @param requestTag requestTag or {@code null} for none
    */
   public RequestOptions setRequestTag(java.lang.String requestTag) {
@@ -112,7 +112,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * this request doesn’t belong to any transaction, transaction_tag will be ignored. Legal
    * characters for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a transaction_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionTag() {
@@ -126,7 +126,7 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * this request doesn’t belong to any transaction, transaction_tag will be ignored. Legal
    * characters for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the
    * length of a transaction_tag is limited to 50 characters. Values that exceed this limit are
-   * truncated.
+   * truncated. Any leading underscore (_) characters will be removed from the string.
    * @param transactionTag transactionTag or {@code null} for none
    */
   public RequestOptions setTransactionTag(java.lang.String transactionTag) {

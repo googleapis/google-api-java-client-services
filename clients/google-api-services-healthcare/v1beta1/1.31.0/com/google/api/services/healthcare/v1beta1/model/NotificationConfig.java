@@ -49,6 +49,14 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   private java.lang.String pubsubTopic;
 
   /**
+   * Indicates whether or not to send Pub/Sub notifications on bulk import. Only supported for DICOM
+   * imports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sendForBulkImport;
+
+  /**
    * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
    * published on. Supplied by the client. PubsubMessage.Data contains the resource name.
    * PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the
@@ -86,6 +94,25 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    */
   public NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {
     this.pubsubTopic = pubsubTopic;
+    return this;
+  }
+
+  /**
+   * Indicates whether or not to send Pub/Sub notifications on bulk import. Only supported for DICOM
+   * imports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSendForBulkImport() {
+    return sendForBulkImport;
+  }
+
+  /**
+   * Indicates whether or not to send Pub/Sub notifications on bulk import. Only supported for DICOM
+   * imports.
+   * @param sendForBulkImport sendForBulkImport or {@code null} for none
+   */
+  public NotificationConfig setSendForBulkImport(java.lang.Boolean sendForBulkImport) {
+    this.sendForBulkImport = sendForBulkImport;
     return this;
   }
 

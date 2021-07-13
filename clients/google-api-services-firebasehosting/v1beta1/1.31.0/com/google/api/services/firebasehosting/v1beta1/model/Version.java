@@ -105,13 +105,6 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Deprecated in favor of [site channels](sites.channels).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PreviewConfig preview;
-
-  /**
    * The deploy status of the version. For a successful deploy, call
    * [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all
    * desired files](sites.versions/populateFiles) to the version, then
@@ -307,23 +300,6 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Deprecated in favor of [site channels](sites.channels).
-   * @return value or {@code null} for none
-   */
-  public PreviewConfig getPreview() {
-    return preview;
-  }
-
-  /**
-   * Deprecated in favor of [site channels](sites.channels).
-   * @param preview preview or {@code null} for none
-   */
-  public Version setPreview(PreviewConfig preview) {
-    this.preview = preview;
     return this;
   }
 

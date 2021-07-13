@@ -93,6 +93,13 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   private java.lang.String parent;
 
   /**
+   * Output only. The Google Analytics service level that applies to this property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceLevel;
+
+  /**
    * Required. Reporting Time Zone, used as the day boundary for reports, regardless of where the
    * data originates. If the time zone honors DST, Analytics will automatically adjust for the
    * changes. NOTE: Changing the time zone only affects data going forward, and is not applied
@@ -254,6 +261,23 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
    */
   public GoogleAnalyticsAdminV1alphaProperty setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Output only. The Google Analytics service level that applies to this property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceLevel() {
+    return serviceLevel;
+  }
+
+  /**
+   * Output only. The Google Analytics service level that applies to this property.
+   * @param serviceLevel serviceLevel or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaProperty setServiceLevel(java.lang.String serviceLevel) {
+    this.serviceLevel = serviceLevel;
     return this;
   }
 

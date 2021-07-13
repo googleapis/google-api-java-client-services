@@ -30,6 +30,14 @@ package com.google.api.services.file.v1beta1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The network connect mode of the Filestore instance. If not provided, the connect mode defaults
+   * to DIRECT_PEERING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectMode;
+
+  /**
    * Output only. IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6
    * addresses in the format {block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block
    * 7}:{block 8}.
@@ -64,6 +72,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String reservedIpRange;
+
+  /**
+   * The network connect mode of the Filestore instance. If not provided, the connect mode defaults
+   * to DIRECT_PEERING.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectMode() {
+    return connectMode;
+  }
+
+  /**
+   * The network connect mode of the Filestore instance. If not provided, the connect mode defaults
+   * to DIRECT_PEERING.
+   * @param connectMode connectMode or {@code null} for none
+   */
+  public NetworkConfig setConnectMode(java.lang.String connectMode) {
+    this.connectMode = connectMode;
+    return this;
+  }
 
   /**
    * Output only. IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6

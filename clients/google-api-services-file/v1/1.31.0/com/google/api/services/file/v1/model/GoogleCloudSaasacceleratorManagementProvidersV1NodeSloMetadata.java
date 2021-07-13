@@ -56,6 +56,14 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadat
   private java.lang.String nodeId;
 
   /**
+   * If present, this will override eligibility for the node coming from instance or exclusions for
+   * specified SLIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility perSliEligibility;
+
+  /**
    * By default node is eligible if instance is eligible. But individual node might be excluded from
    * SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node
    * level exclusions are present for time period, the node level's reason will be reported by
@@ -109,6 +117,25 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadat
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata setNodeId(java.lang.String nodeId) {
     this.nodeId = nodeId;
+    return this;
+  }
+
+  /**
+   * If present, this will override eligibility for the node coming from instance or exclusions for
+   * specified SLIs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility getPerSliEligibility() {
+    return perSliEligibility;
+  }
+
+  /**
+   * If present, this will override eligibility for the node coming from instance or exclusions for
+   * specified SLIs.
+   * @param perSliEligibility perSliEligibility or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata setPerSliEligibility(GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility perSliEligibility) {
+    this.perSliEligibility = perSliEligibility;
     return this;
   }
 

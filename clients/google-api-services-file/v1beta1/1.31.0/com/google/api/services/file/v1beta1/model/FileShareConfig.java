@@ -37,7 +37,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.Long capacityGb;
 
   /**
-   * The name of the file share (must be 16 characters or less).
+   * The name of the file share (must be 32 characters or less for High Scale SSD tier, 16
+   * characters or less for all other tiers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the file share (must be 16 characters or less).
+   * The name of the file share (must be 32 characters or less for High Scale SSD tier, 16
+   * characters or less for all other tiers).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -85,7 +87,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the file share (must be 16 characters or less).
+   * The name of the file share (must be 32 characters or less for High Scale SSD tier, 16
+   * characters or less for all other tiers).
    * @param name name or {@code null} for none
    */
   public FileShareConfig setName(java.lang.String name) {

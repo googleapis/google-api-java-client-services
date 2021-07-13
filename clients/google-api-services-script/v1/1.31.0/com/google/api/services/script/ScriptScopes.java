@@ -38,7 +38,7 @@ public class ScriptScopes {
   /** View and manage the provisioning of users on your domain. */
   public static final String ADMIN_DIRECTORY_USER = "https://www.googleapis.com/auth/admin.directory.user";
 
-  /** See, create, and edit all Google Docs documents you have access to. */
+  /** See, edit, create, and delete all your Google Docs documents. */
   public static final String DOCUMENTS = "https://www.googleapis.com/auth/documents";
 
   /** See, edit, create, and delete all of your Google Drive files. */
@@ -71,7 +71,7 @@ public class ScriptScopes {
   /** View Google Apps Script projects. */
   public static final String SCRIPT_PROJECTS_READONLY = "https://www.googleapis.com/auth/script.projects.readonly";
 
-  /** See, edit, create, and delete your spreadsheets in Google Drive. */
+  /** See, edit, create, and delete all your Google Sheets spreadsheets. */
   public static final String SPREADSHEETS = "https://www.googleapis.com/auth/spreadsheets";
 
   /** See your primary Google Account email address. */

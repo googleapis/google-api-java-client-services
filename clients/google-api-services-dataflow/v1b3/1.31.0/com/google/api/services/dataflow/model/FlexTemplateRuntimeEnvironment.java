@@ -47,6 +47,13 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.util.Map<String, java.lang.String> additionalUserLabels;
 
   /**
+   * Worker disk size, in gigabytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer diskSizeGb;
+
+  /**
    * Whether to enable Streaming Engine for the job.
    * The value may be {@code null}.
    */
@@ -81,6 +88,13 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
+
+  /**
+   * The maximum number of workers to cap scaling at.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxNumWorkers;
 
   /**
    * The maximum number of Google Compute Engine instances to be made available to your pipeline
@@ -217,6 +231,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
+   * Worker disk size, in gigabytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * Worker disk size, in gigabytes.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setDiskSizeGb(java.lang.Integer diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
    * Whether to enable Streaming Engine for the job.
    * @return value or {@code null} for none
    */
@@ -300,6 +331,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * The maximum number of workers to cap scaling at.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxNumWorkers() {
+    return maxNumWorkers;
+  }
+
+  /**
+   * The maximum number of workers to cap scaling at.
+   * @param maxNumWorkers maxNumWorkers or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setMaxNumWorkers(java.lang.Integer maxNumWorkers) {
+    this.maxNumWorkers = maxNumWorkers;
     return this;
   }
 

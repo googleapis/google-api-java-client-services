@@ -31,7 +31,9 @@ package com.google.api.services.content.model;
 public final class UnitInvoiceAdditionalCharge extends com.google.api.client.json.GenericJson {
 
   /**
-   * [required] Amount of the additional charge.
+   * [required] Amount of the additional charge per unit. *Note:* Invoicing works on a per unit
+   * bases. The `additionalChargeAmount` is the amount charged per unit, and will be multiplied by
+   * the number of entries in `shipmentUnitID`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +47,9 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   private java.lang.String type;
 
   /**
-   * [required] Amount of the additional charge.
+   * [required] Amount of the additional charge per unit. *Note:* Invoicing works on a per unit
+   * bases. The `additionalChargeAmount` is the amount charged per unit, and will be multiplied by
+   * the number of entries in `shipmentUnitID`.
    * @return value or {@code null} for none
    */
   public Amount getAdditionalChargeAmount() {
@@ -53,7 +57,9 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * [required] Amount of the additional charge.
+   * [required] Amount of the additional charge per unit. *Note:* Invoicing works on a per unit
+   * bases. The `additionalChargeAmount` is the amount charged per unit, and will be multiplied by
+   * the number of entries in `shipmentUnitID`.
    * @param additionalChargeAmount additionalChargeAmount or {@code null} for none
    */
   public UnitInvoiceAdditionalCharge setAdditionalChargeAmount(Amount additionalChargeAmount) {

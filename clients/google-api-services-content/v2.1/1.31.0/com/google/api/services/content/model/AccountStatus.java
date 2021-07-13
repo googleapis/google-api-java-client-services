@@ -46,6 +46,13 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   private java.util.List<AccountStatusAccountLevelIssue> accountLevelIssues;
 
   /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountManagement;
+
+  /**
    * Identifies what kind of resource this is. Value: the fixed string "`content#accountStatus`"
    * The value may be {@code null}.
    */
@@ -98,6 +105,23 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
    */
   public AccountStatus setAccountLevelIssues(java.util.List<AccountStatusAccountLevelIssue> accountLevelIssues) {
     this.accountLevelIssues = accountLevelIssues;
+    return this;
+  }
+
+  /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountManagement() {
+    return accountManagement;
+  }
+
+  /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * @param accountManagement accountManagement or {@code null} for none
+   */
+  public AccountStatus setAccountManagement(java.lang.String accountManagement) {
+    this.accountManagement = accountManagement;
     return this;
   }
 

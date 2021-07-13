@@ -12414,22 +12414,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing
-       * if the specified role is not 'owner'.
+       * Whether to transfer ownership to the specified user and downgrade the current owner to a
+       * writer. This parameter is required as an acknowledgement of the side effect. File owners
+       * can only transfer ownership of files existing on My Drive. Files existing in a shared drive
+       * are owned by the organization that owns that shared drive. Ownership transfers are not
+       * supported for files and folders in shared drives. Organizers of a shared drive can move
+       * items from that shared drive into their My Drive which transfers the ownership to them.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean transferOwnership;
 
-      /** Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing if the
-     specified role is not 'owner'. [default: false]
+      /** Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
+     This parameter is required as an acknowledgement of the side effect. File owners can only transfer
+     ownership of files existing on My Drive. Files existing in a shared drive are owned by the
+     organization that owns that shared drive. Ownership transfers are not supported for files and
+     folders in shared drives. Organizers of a shared drive can move items from that shared drive into
+     their My Drive which transfers the ownership to them. [default: false]
        */
       public java.lang.Boolean getTransferOwnership() {
         return transferOwnership;
       }
 
       /**
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing
-       * if the specified role is not 'owner'.
+       * Whether to transfer ownership to the specified user and downgrade the current owner to a
+       * writer. This parameter is required as an acknowledgement of the side effect. File owners
+       * can only transfer ownership of files existing on My Drive. Files existing in a shared drive
+       * are owned by the organization that owns that shared drive. Ownership transfers are not
+       * supported for files and folders in shared drives. Organizers of a shared drive can move
+       * items from that shared drive into their My Drive which transfers the ownership to them.
        */
       public Update setTransferOwnership(java.lang.Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
@@ -12453,8 +12465,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing if the
-     specified role is not 'owner'.
+       * Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
+     This parameter is required as an acknowledgement of the side effect. File owners can only transfer
+     ownership of files existing on My Drive. Files existing in a shared drive are owned by the
+     organization that owns that shared drive. Ownership transfers are not supported for files and
+     folders in shared drives. Organizers of a shared drive can move items from that shared drive into
+     their My Drive which transfers the ownership to them.
        * </p>
        */
       public boolean isTransferOwnership() {

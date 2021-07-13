@@ -81,9 +81,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
-   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
-   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
-   * more information.
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a private
+   * pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,9 +260,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
-   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
-   * more information.
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a private
+   * pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more
+   * information.
    * @return value or {@code null} for none
    */
   public PoolOption getPool() {
@@ -270,9 +270,9 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker
-   * pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for
-   * more information.
+   * Optional. Specification for execution on a `WorkerPool`. See [running builds in a private
+   * pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more
+   * information.
    * @param pool pool or {@code null} for none
    */
   public BuildOptions setPool(PoolOption pool) {

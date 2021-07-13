@@ -17,9 +17,9 @@
 package com.google.api.services.cloudbuild.v1alpha2.model;
 
 /**
- * Details about how a build should be executed on a `WorkerPool`. See [running builds in a custom
- * worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool)
- * for more information.
+ * Details about how a build should be executed on a `WorkerPool`. See [running builds in a private
+ * pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more
+ * information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

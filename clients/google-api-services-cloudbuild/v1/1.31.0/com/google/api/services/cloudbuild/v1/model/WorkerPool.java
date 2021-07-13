@@ -22,8 +22,8 @@ package com.google.api.services.cloudbuild.v1.model;
  * Build will use a worker from this pool. If your build needs access to resources on a private
  * network, create and use a `WorkerPool` to run your builds. Private `WorkerPool`s give your builds
  * access to any single VPC network that you administer, including any on-prem resources connected
- * to that VPC network. For an overview of custom worker pools, see [Custom workers
- * overview](https://cloud.google.com/cloud-build/docs/custom-workers/custom-workers-overview).
+ * to that VPC network. For an overview of private pools, see [Private pools
+ * overview](https://cloud.google.com/build/docs/private-pools/private-pools-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

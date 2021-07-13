@@ -1319,6 +1319,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /** If set, only the accounts with the given name (case sensitive) will be returned. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** If set, only the accounts with the given name (case sensitive) will be returned.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** If set, only the accounts with the given name (case sensitive) will be returned. */
+      public List setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
       /** The token returned by the previous request. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
@@ -3588,6 +3604,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** The maximum number of account statuses to return in the response, used for paging. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
+        return this;
+      }
+
+      /** If set, only the accounts with the given name (case sensitive) will be returned. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** If set, only the accounts with the given name (case sensitive) will be returned.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** If set, only the accounts with the given name (case sensitive) will be returned. */
+      public List setName(java.lang.String name) {
+        this.name = name;
         return this;
       }
 

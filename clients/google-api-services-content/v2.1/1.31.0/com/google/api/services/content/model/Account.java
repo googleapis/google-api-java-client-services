@@ -32,6 +32,13 @@ package com.google.api.services.content.model;
 public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountManagement;
+
+  /**
    * Linked Ads accounts that are active or pending approval. To create a new link request, add a
    * new link with status `active` to the list. It will remain in a `pending` state until approved
    * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
@@ -136,6 +143,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<AccountYouTubeChannelLink> youtubeChannelLinks;
+
+  /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountManagement() {
+    return accountManagement;
+  }
+
+  /**
+   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * @param accountManagement accountManagement or {@code null} for none
+   */
+  public Account setAccountManagement(java.lang.String accountManagement) {
+    this.accountManagement = accountManagement;
+    return this;
+  }
 
   /**
    * Linked Ads accounts that are active or pending approval. To create a new link request, add a

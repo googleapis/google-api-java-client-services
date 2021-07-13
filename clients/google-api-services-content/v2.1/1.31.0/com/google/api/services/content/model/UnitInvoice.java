@@ -38,7 +38,9 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitInvoiceAdditionalCharge> additionalCharges;
 
   /**
-   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
+   * [required] Pre-tax or post-tax price of one unit depending on the locality of the order.
+   * *Note:* Invoicing works on a per unit basis. The `unitPrice` is the price of a single unit, and
+   * will be multiplied by the number of entries in `shipmentUnitId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +71,9 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
+   * [required] Pre-tax or post-tax price of one unit depending on the locality of the order.
+   * *Note:* Invoicing works on a per unit basis. The `unitPrice` is the price of a single unit, and
+   * will be multiplied by the number of entries in `shipmentUnitId`.
    * @return value or {@code null} for none
    */
   public Price getUnitPrice() {
@@ -77,7 +81,9 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
+   * [required] Pre-tax or post-tax price of one unit depending on the locality of the order.
+   * *Note:* Invoicing works on a per unit basis. The `unitPrice` is the price of a single unit, and
+   * will be multiplied by the number of entries in `shipmentUnitId`.
    * @param unitPrice unitPrice or {@code null} for none
    */
   public UnitInvoice setUnitPrice(Price unitPrice) {

@@ -41,9 +41,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * left empty, the workers will be peered to `WorkerPool.project_id` on the service producer
    * network. Must be in the format `projects/{project}/global/networks/{network}`, where
    * `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network
-   * in the project. See [Understanding network configuration options](https://cloud.google.com
-   * /cloud-build/docs/custom-workers/set-up-custom-worker-pool-
-   * environment#understanding_the_network_configuration_options)
+   * in the project. See [Understanding network configuration
+   * options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +70,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * left empty, the workers will be peered to `WorkerPool.project_id` on the service producer
    * network. Must be in the format `projects/{project}/global/networks/{network}`, where
    * `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network
-   * in the project. See [Understanding network configuration options](https://cloud.google.com
-   * /cloud-build/docs/custom-workers/set-up-custom-worker-pool-
-   * environment#understanding_the_network_configuration_options)
+   * in the project. See [Understanding network configuration
+   * options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
    * @return value or {@code null} for none
    */
   public java.lang.String getPeeredNetwork() {
@@ -85,9 +83,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    * left empty, the workers will be peered to `WorkerPool.project_id` on the service producer
    * network. Must be in the format `projects/{project}/global/networks/{network}`, where
    * `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network
-   * in the project. See [Understanding network configuration options](https://cloud.google.com
-   * /cloud-build/docs/custom-workers/set-up-custom-worker-pool-
-   * environment#understanding_the_network_configuration_options)
+   * in the project. See [Understanding network configuration
+   * options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
    * @param peeredNetwork peeredNetwork or {@code null} for none
    */
   public NetworkConfig setPeeredNetwork(java.lang.String peeredNetwork) {

@@ -30,6 +30,30 @@ package com.google.api.services.documentai.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The Cloud Storage URI containing the output artifacts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcsUri;
+
+  /**
+   * The Cloud Storage URI containing the output artifacts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcsUri() {
+    return gcsUri;
+  }
+
+  /**
+   * The Cloud Storage URI containing the output artifacts.
+   * @param gcsUri gcsUri or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse setGcsUri(java.lang.String gcsUri) {
+    this.gcsUri = gcsUri;
+    return this;
+  }
+
   @Override
   public GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse set(String fieldName, Object value) {
     return (GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse) super.set(fieldName, value);

@@ -283,6 +283,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateShapePropertiesRequest updateShapeProperties;
 
   /**
+   * Updates the properties of a Slide
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateSlidePropertiesRequest updateSlideProperties;
+
+  /**
    * Updates the position of a set of slides in the presentation.
    * The value may be {@code null}.
    */
@@ -942,6 +949,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateShapeProperties(UpdateShapePropertiesRequest updateShapeProperties) {
     this.updateShapeProperties = updateShapeProperties;
+    return this;
+  }
+
+  /**
+   * Updates the properties of a Slide
+   * @return value or {@code null} for none
+   */
+  public UpdateSlidePropertiesRequest getUpdateSlideProperties() {
+    return updateSlideProperties;
+  }
+
+  /**
+   * Updates the properties of a Slide
+   * @param updateSlideProperties updateSlideProperties or {@code null} for none
+   */
+  public Request setUpdateSlideProperties(UpdateSlidePropertiesRequest updateSlideProperties) {
+    this.updateSlideProperties = updateSlideProperties;
     return this;
   }
 

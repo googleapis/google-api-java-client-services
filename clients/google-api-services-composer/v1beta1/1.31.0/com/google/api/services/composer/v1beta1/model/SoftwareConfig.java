@@ -96,6 +96,13 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.lang.String pythonVersion;
 
   /**
+   * Optional. The number of schedulers for Airflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer schedulerCount;
+
+  /**
    * Optional. Apache Airflow configuration properties to override. Property keys contain the
    * section and property names, separated by a hyphen, for example "core-
    * dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square
@@ -239,6 +246,23 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setPythonVersion(java.lang.String pythonVersion) {
     this.pythonVersion = pythonVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The number of schedulers for Airflow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSchedulerCount() {
+    return schedulerCount;
+  }
+
+  /**
+   * Optional. The number of schedulers for Airflow.
+   * @param schedulerCount schedulerCount or {@code null} for none
+   */
+  public SoftwareConfig setSchedulerCount(java.lang.Integer schedulerCount) {
+    this.schedulerCount = schedulerCount;
     return this;
   }
 

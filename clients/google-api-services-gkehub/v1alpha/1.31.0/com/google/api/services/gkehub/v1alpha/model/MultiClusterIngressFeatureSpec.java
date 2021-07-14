@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class MultiClusterIngressFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Customer's billing structure
+   * Deprecated: This field will be ignored and should not be set. Customer's billing structure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class MultiClusterIngressFeatureSpec extends com.google.api.client.
   private java.lang.String configMembership;
 
   /**
-   * Customer's billing structure
+   * Deprecated: This field will be ignored and should not be set. Customer's billing structure.
    * @return value or {@code null} for none
    */
   public java.lang.String getBilling() {
@@ -53,7 +53,7 @@ public final class MultiClusterIngressFeatureSpec extends com.google.api.client.
   }
 
   /**
-   * Customer's billing structure
+   * Deprecated: This field will be ignored and should not be set. Customer's billing structure.
    * @param billing billing or {@code null} for none
    */
   public MultiClusterIngressFeatureSpec setBilling(java.lang.String billing) {

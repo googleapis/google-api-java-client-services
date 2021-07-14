@@ -83,6 +83,14 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   private java.util.List<RoboDirective> roboDirectives;
 
   /**
+   * The mode in which Robo should run. Most clients should allow the server to populate this field
+   * automatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String roboMode;
+
+  /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
    * The value may be {@code null}.
    */
@@ -220,6 +228,25 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
    */
   public AndroidRoboTest setRoboDirectives(java.util.List<RoboDirective> roboDirectives) {
     this.roboDirectives = roboDirectives;
+    return this;
+  }
+
+  /**
+   * The mode in which Robo should run. Most clients should allow the server to populate this field
+   * automatically.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRoboMode() {
+    return roboMode;
+  }
+
+  /**
+   * The mode in which Robo should run. Most clients should allow the server to populate this field
+   * automatically.
+   * @param roboMode roboMode or {@code null} for none
+   */
+  public AndroidRoboTest setRoboMode(java.lang.String roboMode) {
+    this.roboMode = roboMode;
     return this;
   }
 

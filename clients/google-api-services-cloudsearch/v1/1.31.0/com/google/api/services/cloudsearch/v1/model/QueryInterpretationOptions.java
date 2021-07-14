@@ -39,6 +39,14 @@ public final class QueryInterpretationOptions extends com.google.api.client.json
   private java.lang.Boolean disableNlInterpretation;
 
   /**
+   * Use this flag to disable supplemental results for a query. Supplemental results setting chosen
+   * at SearchApplication level will take precedence if set to True.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableSupplementalResults;
+
+  /**
    * Enable this flag to turn off all internal optimizations like natural language (NL)
    * interpretation of queries, supplemental result retrieval, and usage of synonyms including
    * custom ones. Nl interpretation will be disabled if either one of the two flags is true.
@@ -65,6 +73,25 @@ public final class QueryInterpretationOptions extends com.google.api.client.json
    */
   public QueryInterpretationOptions setDisableNlInterpretation(java.lang.Boolean disableNlInterpretation) {
     this.disableNlInterpretation = disableNlInterpretation;
+    return this;
+  }
+
+  /**
+   * Use this flag to disable supplemental results for a query. Supplemental results setting chosen
+   * at SearchApplication level will take precedence if set to True.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableSupplementalResults() {
+    return disableSupplementalResults;
+  }
+
+  /**
+   * Use this flag to disable supplemental results for a query. Supplemental results setting chosen
+   * at SearchApplication level will take precedence if set to True.
+   * @param disableSupplementalResults disableSupplementalResults or {@code null} for none
+   */
+  public QueryInterpretationOptions setDisableSupplementalResults(java.lang.Boolean disableSupplementalResults) {
+    this.disableSupplementalResults = disableSupplementalResults;
     return this;
   }
 

@@ -94,6 +94,13 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> operationIds;
 
   /**
+   * The default options for query interpretation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryInterpretationConfig queryInterpretationConfig;
+
+  /**
    * Configuration for ranking results.
    * The value may be {@code null}.
    */
@@ -229,6 +236,23 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
    */
   public SearchApplication setOperationIds(java.util.List<java.lang.String> operationIds) {
     this.operationIds = operationIds;
+    return this;
+  }
+
+  /**
+   * The default options for query interpretation
+   * @return value or {@code null} for none
+   */
+  public QueryInterpretationConfig getQueryInterpretationConfig() {
+    return queryInterpretationConfig;
+  }
+
+  /**
+   * The default options for query interpretation
+   * @param queryInterpretationConfig queryInterpretationConfig or {@code null} for none
+   */
+  public SearchApplication setQueryInterpretationConfig(QueryInterpretationConfig queryInterpretationConfig) {
+    this.queryInterpretationConfig = queryInterpretationConfig;
     return this;
   }
 

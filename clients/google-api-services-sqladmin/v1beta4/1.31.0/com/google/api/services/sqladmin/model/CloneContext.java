@@ -60,7 +60,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private java.lang.Long pitrTimestampMs;
 
   /**
-   * Reserved for future use.
+   * Timestamp, if specified, identifies the time to which the source instance is cloned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use.
+   * Timestamp, if specified, identifies the time to which the source instance is cloned.
    * @return value or {@code null} for none
    */
   public String getPointInTime() {
@@ -147,7 +147,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use.
+   * Timestamp, if specified, identifies the time to which the source instance is cloned.
    * @param pointInTime pointInTime or {@code null} for none
    */
   public CloneContext setPointInTime(String pointInTime) {

@@ -1636,6 +1636,28 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
+       * not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
+       * not set.
+       */
+      public List setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
+      /**
        * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
        * retrieve only the resources changed since the last request. Sync requests that specify
        * `sync_token` have an additional rate limit. When the `syncToken` is specified, resources

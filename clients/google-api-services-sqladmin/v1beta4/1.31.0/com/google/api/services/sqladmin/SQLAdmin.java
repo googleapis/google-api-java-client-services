@@ -609,8 +609,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists all backup runs associated with a given instance and configuration in the reverse
-     * chronological order of the backup initiation time.
+     * Lists all backup runs associated with the project or a given instance and configuration in the
+     * reverse chronological order of the backup initiation time.
      *
      * Create a request for the method "backupRuns.list".
      *
@@ -618,7 +618,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Project ID of the project that contains the instance.
-     * @param instance Cloud SQL instance ID. This does not include the project ID.
+     * @param instance Cloud SQL instance ID, or "-" for all instances. This does not include the project ID.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String instance) throws java.io.IOException {
@@ -632,8 +632,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns";
 
       /**
-       * Lists all backup runs associated with a given instance and configuration in the reverse
-       * chronological order of the backup initiation time.
+       * Lists all backup runs associated with the project or a given instance and configuration in the
+       * reverse chronological order of the backup initiation time.
        *
        * Create a request for the method "backupRuns.list".
        *
@@ -643,7 +643,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Project ID of the project that contains the instance.
-       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param instance Cloud SQL instance ID, or "-" for all instances. This does not include the project ID.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String instance) {
@@ -733,17 +733,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Cloud SQL instance ID. This does not include the project ID. */
+      /** Cloud SQL instance ID, or "-" for all instances. This does not include the project ID. */
       @com.google.api.client.util.Key
       private java.lang.String instance;
 
-      /** Cloud SQL instance ID. This does not include the project ID.
+      /** Cloud SQL instance ID, or "-" for all instances. This does not include the project ID.
        */
       public java.lang.String getInstance() {
         return instance;
       }
 
-      /** Cloud SQL instance ID. This does not include the project ID. */
+      /** Cloud SQL instance ID, or "-" for all instances. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
         return this;
@@ -788,6 +788,331 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Connect collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SQLAdmin sqladmin = new SQLAdmin(...);}
+   *   {@code SQLAdmin.Connect.List request = sqladmin.connect().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Connect connect() {
+    return new Connect();
+  }
+
+  /**
+   * The "connect" collection of methods.
+   */
+  public class Connect {
+
+    /**
+     * Generates a short-lived X509 certificate containing the provided public key and signed by a
+     * private key specific to the target instance. Users may use the certificate to authenticate as
+     * themselves when connecting to the database.
+     *
+     * Create a request for the method "connect.generateEphemeralCert".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link GenerateEphemeralCert#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID of the project that contains the instance.
+     * @param instance Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.GenerateEphemeralCertRequest}
+     * @return the request
+     */
+    public GenerateEphemeralCert generateEphemeralCert(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.GenerateEphemeralCertRequest content) throws java.io.IOException {
+      GenerateEphemeralCert result = new GenerateEphemeralCert(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateEphemeralCert extends SQLAdminRequest<com.google.api.services.sqladmin.model.GenerateEphemeralCertResponse> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}:generateEphemeralCert";
+
+      /**
+       * Generates a short-lived X509 certificate containing the provided public key and signed by a
+       * private key specific to the target instance. Users may use the certificate to authenticate as
+       * themselves when connecting to the database.
+       *
+       * Create a request for the method "connect.generateEphemeralCert".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link GenerateEphemeralCert#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateEphemeralCert#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.GenerateEphemeralCertRequest}
+       * @since 1.13
+       */
+      protected GenerateEphemeralCert(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.GenerateEphemeralCertRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.GenerateEphemeralCertResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public GenerateEphemeralCert set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateEphemeralCert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateEphemeralCert setAccessToken(java.lang.String accessToken) {
+        return (GenerateEphemeralCert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateEphemeralCert setAlt(java.lang.String alt) {
+        return (GenerateEphemeralCert) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateEphemeralCert setCallback(java.lang.String callback) {
+        return (GenerateEphemeralCert) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateEphemeralCert setFields(java.lang.String fields) {
+        return (GenerateEphemeralCert) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateEphemeralCert setKey(java.lang.String key) {
+        return (GenerateEphemeralCert) super.setKey(key);
+      }
+
+      @Override
+      public GenerateEphemeralCert setOauthToken(java.lang.String oauthToken) {
+        return (GenerateEphemeralCert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateEphemeralCert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateEphemeralCert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateEphemeralCert setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateEphemeralCert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateEphemeralCert setUploadType(java.lang.String uploadType) {
+        return (GenerateEphemeralCert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateEphemeralCert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateEphemeralCert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID of the project that contains the instance. */
+      public GenerateEphemeralCert setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      public GenerateEphemeralCert setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public GenerateEphemeralCert set(String parameterName, Object value) {
+        return (GenerateEphemeralCert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves connect settings about a Cloud SQL instance.
+     *
+     * Create a request for the method "connect.get".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID of the project that contains the instance.
+     * @param instance Cloud SQL instance ID. This does not include the project ID.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      Get result = new Get(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.ConnectSettings> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/connectSettings";
+
+      /**
+       * Retrieves connect settings about a Cloud SQL instance.
+       *
+       * Create a request for the method "connect.get".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.ConnectSettings.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID of the project that contains the instance. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      public Get setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Optional snapshot read timestamp to trade freshness for performance. */
+      @com.google.api.client.util.Key
+      private String readTime;
+
+      /** Optional. Optional snapshot read timestamp to trade freshness for performance.
+       */
+      public String getReadTime() {
+        return readTime;
+      }
+
+      /** Optional. Optional snapshot read timestamp to trade freshness for performance. */
+      public Get setReadTime(String readTime) {
+        this.readTime = readTime;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
       }
     }
 

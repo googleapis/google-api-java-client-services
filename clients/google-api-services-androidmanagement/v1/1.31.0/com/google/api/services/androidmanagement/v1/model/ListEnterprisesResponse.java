@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * This feature is not generally available yet. Response to a request to list enterprises.
+ * Response to a request to list enterprises.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class ListEnterprisesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * This feature is not generally available yet. The list of enterprises.
+   * The list of enterprises.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +44,14 @@ public final class ListEnterprisesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * This feature is not generally available yet. If there are more results, a token to retrieve
-   * next page of results.
+   * If there are more results, a token to retrieve next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * This feature is not generally available yet. The list of enterprises.
+   * The list of enterprises.
    * @return value or {@code null} for none
    */
   public java.util.List<Enterprise> getEnterprises() {
@@ -60,7 +59,7 @@ public final class ListEnterprisesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * This feature is not generally available yet. The list of enterprises.
+   * The list of enterprises.
    * @param enterprises enterprises or {@code null} for none
    */
   public ListEnterprisesResponse setEnterprises(java.util.List<Enterprise> enterprises) {
@@ -69,8 +68,7 @@ public final class ListEnterprisesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * This feature is not generally available yet. If there are more results, a token to retrieve
-   * next page of results.
+   * If there are more results, a token to retrieve next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,8 +76,7 @@ public final class ListEnterprisesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * This feature is not generally available yet. If there are more results, a token to retrieve
-   * next page of results.
+   * If there are more results, a token to retrieve next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListEnterprisesResponse setNextPageToken(java.lang.String nextPageToken) {

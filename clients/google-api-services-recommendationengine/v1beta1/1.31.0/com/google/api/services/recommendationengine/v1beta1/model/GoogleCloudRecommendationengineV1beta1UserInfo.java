@@ -70,9 +70,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
-   * example, this could be implemented with a http cookie, which should be able to uniquely
+   * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * log in/out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,9 +168,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
-   * example, this could be implemented with a http cookie, which should be able to uniquely
+   * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * log in/out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisitorId() {
@@ -179,9 +179,9 @@ public final class GoogleCloudRecommendationengineV1beta1UserInfo extends com.go
 
   /**
    * Required. A unique identifier for tracking visitors with a length limit of 128 bytes. For
-   * example, this could be implemented with a http cookie, which should be able to uniquely
+   * example, this could be implemented with an HTTP cookie, which should be able to uniquely
    * identify a visitor on a single device. This unique identifier should not change if the visitor
-   * log in/out of the website. Maximum length 128 bytes. Cannot be empty.
+   * logs in or out of the website. Maximum length 128 bytes. Cannot be empty.
    * @param visitorId visitorId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1UserInfo setVisitorId(java.lang.String visitorId) {

@@ -66,6 +66,20 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaCustomMetric customMetric;
 
   /**
+   * A snapshot of a DisplayVideo360AdvertiserLink resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink;
+
+  /**
+   * A snapshot of a DisplayVideo360AdvertiserLinkProposal resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal;
+
+  /**
    * A snapshot of a FirebaseLink resource in change history.
    * The value may be {@code null}.
    */
@@ -196,6 +210,40 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setCustomMetric(GoogleAnalyticsAdminV1alphaCustomMetric customMetric) {
     this.customMetric = customMetric;
+    return this;
+  }
+
+  /**
+   * A snapshot of a DisplayVideo360AdvertiserLink resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink getDisplayVideo360AdvertiserLink() {
+    return displayVideo360AdvertiserLink;
+  }
+
+  /**
+   * A snapshot of a DisplayVideo360AdvertiserLink resource in change history.
+   * @param displayVideo360AdvertiserLink displayVideo360AdvertiserLink or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDisplayVideo360AdvertiserLink(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink) {
+    this.displayVideo360AdvertiserLink = displayVideo360AdvertiserLink;
+    return this;
+  }
+
+  /**
+   * A snapshot of a DisplayVideo360AdvertiserLinkProposal resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal getDisplayVideo360AdvertiserLinkProposal() {
+    return displayVideo360AdvertiserLinkProposal;
+  }
+
+  /**
+   * A snapshot of a DisplayVideo360AdvertiserLinkProposal resource in change history.
+   * @param displayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDisplayVideo360AdvertiserLinkProposal(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal) {
+    this.displayVideo360AdvertiserLinkProposal = displayVideo360AdvertiserLinkProposal;
     return this;
   }
 

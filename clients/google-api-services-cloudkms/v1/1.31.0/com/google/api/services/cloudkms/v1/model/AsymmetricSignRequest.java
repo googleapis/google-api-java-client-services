@@ -48,7 +48,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -83,7 +83,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDigestCrc32c() {
@@ -100,7 +100,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @param digestCrc32c digestCrc32c or {@code null} for none
    */
   public AsymmetricSignRequest setDigestCrc32c(java.lang.Long digestCrc32c) {

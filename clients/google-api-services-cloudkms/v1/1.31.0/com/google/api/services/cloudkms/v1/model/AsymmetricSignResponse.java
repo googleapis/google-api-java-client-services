@@ -32,7 +32,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
-   * intended resource was used for signing. NOTE: This field is in Beta.
+   * intended resource was used for signing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -73,7 +73,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
    * that it was not delivered to KeyManagementService. If you've set
    * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
-   * perform a limited number of retries. NOTE: This field is in Beta.
+   * perform a limited number of retries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
-   * intended resource was used for signing. NOTE: This field is in Beta.
+   * intended resource was used for signing.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -90,7 +90,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
-   * intended resource was used for signing. NOTE: This field is in Beta.
+   * intended resource was used for signing.
    * @param name name or {@code null} for none
    */
   public AsymmetricSignResponse setName(java.lang.String name) {
@@ -169,7 +169,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSignatureCrc32c() {
@@ -185,7 +185,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed 2^32-1, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @param signatureCrc32c signatureCrc32c or {@code null} for none
    */
   public AsymmetricSignResponse setSignatureCrc32c(java.lang.Long signatureCrc32c) {
@@ -199,7 +199,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
    * that it was not delivered to KeyManagementService. If you've set
    * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
-   * perform a limited number of retries. NOTE: This field is in Beta.
+   * perform a limited number of retries.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerifiedDigestCrc32c() {
@@ -212,7 +212,7 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
    * that it was not delivered to KeyManagementService. If you've set
    * AsymmetricSignRequest.digest_crc32c but this field is still false, discard the response and
-   * perform a limited number of retries. NOTE: This field is in Beta.
+   * perform a limited number of retries.
    * @param verifiedDigestCrc32c verifiedDigestCrc32c or {@code null} for none
    */
   public AsymmetricSignResponse setVerifiedDigestCrc32c(java.lang.Boolean verifiedDigestCrc32c) {

@@ -69,6 +69,15 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
   private java.lang.Boolean privateKeySet;
 
   /**
+   * Specifies the duration for which App Check tokens exchanged from DeviceCheck tokens will be
+   * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String tokenTtl;
+
+  /**
    * Required. The key identifier of a private key enabled with DeviceCheck, created in your Apple
    * Developer account.
    * @return value or {@code null} for none
@@ -143,6 +152,27 @@ public final class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends com.goo
    */
   public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setPrivateKeySet(java.lang.Boolean privateKeySet) {
     this.privateKeySet = privateKeySet;
+    return this;
+  }
+
+  /**
+   * Specifies the duration for which App Check tokens exchanged from DeviceCheck tokens will be
+   * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * @return value or {@code null} for none
+   */
+  public String getTokenTtl() {
+    return tokenTtl;
+  }
+
+  /**
+   * Specifies the duration for which App Check tokens exchanged from DeviceCheck tokens will be
+   * valid. If unset, a default value of 1 hour is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * @param tokenTtl tokenTtl or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaDeviceCheckConfig setTokenTtl(String tokenTtl) {
+    this.tokenTtl = tokenTtl;
     return this;
   }
 

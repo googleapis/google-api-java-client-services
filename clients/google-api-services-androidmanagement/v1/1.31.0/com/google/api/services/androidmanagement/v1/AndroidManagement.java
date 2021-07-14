@@ -247,39 +247,51 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * This feature is not generally available yet. Whether the managed Google Play Agreement is
-       * presented and agreed.
+       * Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
+       * (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-
+       * managed enterprise. Do not create the enterprise until the admin has viewed and accepted
+       * the agreement.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean agreementAccepted;
 
-      /** This feature is not generally available yet. Whether the managed Google Play Agreement is presented
-     and agreed.
+      /** Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
+     (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-managed
+     enterprise. Do not create the enterprise until the admin has viewed and accepted the agreement.
        */
       public java.lang.Boolean getAgreementAccepted() {
         return agreementAccepted;
       }
 
       /**
-       * This feature is not generally available yet. Whether the managed Google Play Agreement is
-       * presented and agreed.
+       * Whether the enterprise admin has seen and agreed to the managed Google Play Agreement
+       * (https://www.android.com/enterprise/terms/). Always set this to true when creating an EMM-
+       * managed enterprise. Do not create the enterprise until the admin has viewed and accepted
+       * the agreement.
        */
       public Create setAgreementAccepted(java.lang.Boolean agreementAccepted) {
         this.agreementAccepted = agreementAccepted;
         return this;
       }
 
-      /** The enterprise token appended to the callback URL. */
+      /**
+       * The enterprise token appended to the callback URL. Only set this when creating a customer-
+       * managed enterprise.
+       */
       @com.google.api.client.util.Key
       private java.lang.String enterpriseToken;
 
-      /** The enterprise token appended to the callback URL.
+      /** The enterprise token appended to the callback URL. Only set this when creating a customer-managed
+     enterprise.
        */
       public java.lang.String getEnterpriseToken() {
         return enterpriseToken;
       }
 
-      /** The enterprise token appended to the callback URL. */
+      /**
+       * The enterprise token appended to the callback URL. Only set this when creating a customer-
+       * managed enterprise.
+       */
       public Create setEnterpriseToken(java.lang.String enterpriseToken) {
         this.enterpriseToken = enterpriseToken;
         return this;
@@ -301,17 +313,24 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The name of the SignupUrl used to sign up for the enterprise. */
+      /**
+       * The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
+       * customer-managed enterprise.
+       */
       @com.google.api.client.util.Key
       private java.lang.String signupUrlName;
 
-      /** The name of the SignupUrl used to sign up for the enterprise.
+      /** The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
+     customer-managed enterprise.
        */
       public java.lang.String getSignupUrlName() {
         return signupUrlName;
       }
 
-      /** The name of the SignupUrl used to sign up for the enterprise. */
+      /**
+       * The name of the SignupUrl used to sign up for the enterprise. Only set this when creating a
+       * customer-managed enterprise.
+       */
       public Create setSignupUrlName(java.lang.String signupUrlName) {
         this.signupUrlName = signupUrlName;
         return this;
@@ -323,15 +342,14 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * This feature is not generally available yet. Deletes an enterprise.
+     * Deletes an enterprise. Only available for EMM-managed enterprises.
      *
      * Create a request for the method "enterprises.delete".
      *
      * This request holds the parameters needed by the androidmanagement server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name This feature is not generally available yet. The name of the enterprise in the form
-     *        enterprises/{enterpriseId}.
+     * @param name The name of the enterprise in the form enterprises/{enterpriseId}.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -348,7 +366,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^enterprises/[^/]+$");
 
       /**
-       * This feature is not generally available yet. Deletes an enterprise.
+       * Deletes an enterprise. Only available for EMM-managed enterprises.
        *
        * Create a request for the method "enterprises.delete".
        *
@@ -358,8 +376,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name This feature is not generally available yet. The name of the enterprise in the form
-     *        enterprises/{enterpriseId}.
+       * @param name The name of the enterprise in the form enterprises/{enterpriseId}.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -427,24 +444,17 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * This feature is not generally available yet. The name of the enterprise in the form
-       * enterprises/{enterpriseId}.
-       */
+      /** The name of the enterprise in the form enterprises/{enterpriseId}. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** This feature is not generally available yet. The name of the enterprise in the form
-     enterprises/{enterpriseId}.
+      /** The name of the enterprise in the form enterprises/{enterpriseId}.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * This feature is not generally available yet. The name of the enterprise in the form
-       * enterprises/{enterpriseId}.
-       */
+      /** The name of the enterprise in the form enterprises/{enterpriseId}. */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -600,8 +610,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * This feature is not generally available yet. Lists enterprises that are managed by an EMM. Only
-     * partial views are returned.
+     * Lists EMM-managed enterprises. Only BASIC fields are returned.
      *
      * Create a request for the method "enterprises.list".
      *
@@ -621,8 +630,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/enterprises";
 
       /**
-       * This feature is not generally available yet. Lists enterprises that are managed by an EMM. Only
-       * partial views are returned.
+       * Lists EMM-managed enterprises. Only BASIC fields are returned.
        *
        * Create a request for the method "enterprises.list".
        *
@@ -703,93 +711,65 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * This feature is not generally available yet. The requested page size. The actual page size
-       * may be fixed to a min or max value.
-       */
+      /** The requested page size. The actual page size may be fixed to a min or max value. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** This feature is not generally available yet. The requested page size. The actual page size may be
-     fixed to a min or max value.
+      /** The requested page size. The actual page size may be fixed to a min or max value.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /**
-       * This feature is not generally available yet. The requested page size. The actual page size
-       * may be fixed to a min or max value.
-       */
+      /** The requested page size. The actual page size may be fixed to a min or max value. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /**
-       * This feature is not generally available yet. A token identifying a page of results returned
-       * by the server.
-       */
+      /** A token identifying a page of results returned by the server. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** This feature is not generally available yet. A token identifying a page of results returned by the
-     server.
+      /** A token identifying a page of results returned by the server.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /**
-       * This feature is not generally available yet. A token identifying a page of results returned
-       * by the server.
-       */
+      /** A token identifying a page of results returned by the server. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /**
-       * Required. This feature is not generally available yet. The ID of the Cloud project of the
-       * EMM the enterprises belongs to.
-       */
+      /** Required. The Cloud project ID of the EMM managing the enterprises. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Required. This feature is not generally available yet. The ID of the Cloud project of the EMM the
-     enterprises belongs to.
+      /** Required. The Cloud project ID of the EMM managing the enterprises.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * Required. This feature is not generally available yet. The ID of the Cloud project of the
-       * EMM the enterprises belongs to.
-       */
+      /** Required. The Cloud project ID of the EMM managing the enterprises. */
       public List setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
       }
 
-      /**
-       * This feature is not generally available yet. View that specify that partial response should
-       * be returned.
-       */
+      /** Specifies which Enterprise fields to return. This method only supports BASIC. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** This feature is not generally available yet. View that specify that partial response should be
-     returned.
+      /** Specifies which Enterprise fields to return. This method only supports BASIC.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /**
-       * This feature is not generally available yet. View that specify that partial response should
-       * be returned.
-       */
+      /** Specifies which Enterprise fields to return. This method only supports BASIC. */
       public List setView(java.lang.String view) {
         this.view = view;
         return this;

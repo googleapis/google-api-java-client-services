@@ -57,6 +57,15 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
   private java.lang.Boolean siteSecretSet;
 
   /**
+   * Specifies the duration for which App Check tokens exchanged from reCAPTCHA tokens will be
+   * valid. If unset, a default value of 1 day is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String tokenTtl;
+
+  /**
    * Required. The relative resource name of the reCAPTCHA v3 configuration object, in the format:
    * ``` projects/{project_number}/apps/{app_id}/recaptchaConfig ```
    * @return value or {@code null} for none
@@ -110,6 +119,27 @@ public final class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends com.googl
    */
   public GoogleFirebaseAppcheckV1betaRecaptchaConfig setSiteSecretSet(java.lang.Boolean siteSecretSet) {
     this.siteSecretSet = siteSecretSet;
+    return this;
+  }
+
+  /**
+   * Specifies the duration for which App Check tokens exchanged from reCAPTCHA tokens will be
+   * valid. If unset, a default value of 1 day is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * @return value or {@code null} for none
+   */
+  public String getTokenTtl() {
+    return tokenTtl;
+  }
+
+  /**
+   * Specifies the duration for which App Check tokens exchanged from reCAPTCHA tokens will be
+   * valid. If unset, a default value of 1 day is assumed. Must be between 30 minutes and 7 days,
+   * inclusive.
+   * @param tokenTtl tokenTtl or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaRecaptchaConfig setTokenTtl(String tokenTtl) {
+    this.tokenTtl = tokenTtl;
     return this;
   }
 

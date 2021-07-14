@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-firebaseappcheck",
-    "version": "v1beta-rev20210625-1.32.1"
+    "version": "v1beta-rev20210712-1.32.1"
   }
 }

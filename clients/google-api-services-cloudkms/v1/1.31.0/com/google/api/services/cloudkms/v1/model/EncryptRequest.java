@@ -51,8 +51,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
-   * Beta.
+   * safely downconverted to uint32 in languages that support this type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -77,7 +76,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -154,8 +153,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
-   * Beta.
+   * safely downconverted to uint32 in languages that support this type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdditionalAuthenticatedDataCrc32c() {
@@ -172,8 +170,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * retries. A persistent mismatch may indicate an issue in your computation of the CRC32C
    * checksum. Note: This field is defined as int64 for reasons of compatibility across different
    * languages. However, it is a non-negative integer, which will never exceed 2^32-1, and can be
-   * safely downconverted to uint32 in languages that support this type. NOTE: This field is in
-   * Beta.
+   * safely downconverted to uint32 in languages that support this type.
    * @param additionalAuthenticatedDataCrc32c additionalAuthenticatedDataCrc32c or {@code null} for none
    */
   public EncryptRequest setAdditionalAuthenticatedDataCrc32c(java.lang.Long additionalAuthenticatedDataCrc32c) {
@@ -247,7 +244,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPlaintextCrc32c() {
@@ -263,7 +260,7 @@ public final class EncryptRequest extends com.google.api.client.json.GenericJson
    * persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
    * This field is defined as int64 for reasons of compatibility across different languages.
    * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
-   * downconverted to uint32 in languages that support this type. NOTE: This field is in Beta.
+   * downconverted to uint32 in languages that support this type.
    * @param plaintextCrc32c plaintextCrc32c or {@code null} for none
    */
   public EncryptRequest setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {

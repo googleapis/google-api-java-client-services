@@ -55,6 +55,22 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String assetType;
 
   /**
+   * Attached resources of this resource. For example, an OSConfig Inventory is an attached resource
+   * of a Compute Instance. This field is repeated because a resource could have multiple attached
+   * resources. This `attached_resources` field is not searchable. Some attributes of the attached
+   * resources are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AttachedResource> attachedResources;
+
+  static {
+    // hack to force ProGuard to consider AttachedResource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AttachedResource.class);
+  }
+
+  /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
    * proto contains it. To search against `create_time`: * use a field query. - value in seconds
@@ -283,6 +299,29 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setAssetType(java.lang.String assetType) {
     this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * Attached resources of this resource. For example, an OSConfig Inventory is an attached resource
+   * of a Compute Instance. This field is repeated because a resource could have multiple attached
+   * resources. This `attached_resources` field is not searchable. Some attributes of the attached
+   * resources are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AttachedResource> getAttachedResources() {
+    return attachedResources;
+  }
+
+  /**
+   * Attached resources of this resource. For example, an OSConfig Inventory is an attached resource
+   * of a Compute Instance. This field is repeated because a resource could have multiple attached
+   * resources. This `attached_resources` field is not searchable. Some attributes of the attached
+   * resources are exposed in `additional_attributes` field, so as to allow users to search on them.
+   * @param attachedResources attachedResources or {@code null} for none
+   */
+  public ResourceSearchResult setAttachedResources(java.util.List<AttachedResource> attachedResources) {
+    this.attachedResources = attachedResources;
     return this;
   }
 

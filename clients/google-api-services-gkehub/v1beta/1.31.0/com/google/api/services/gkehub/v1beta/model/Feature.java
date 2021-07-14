@@ -53,8 +53,8 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Membership-specific configuration for this Feature. If this Feature does not support
    * any per-Membership configuration, this field may be unused. The keys indicate which Membership
-   * the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is
-   * the project, {l} is a valid location and {m} is a valid Membership in this project at that
+   * the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p}
+   * is the project, {l} is a valid location and {m} is a valid Membership in this project at that
    * location. {p} WILL match the Feature's project. {p} will always be returned as the project
    * number, but the project ID is also accepted during input. If the same Membership is specified
    * in the map twice (using the project ID form, and the project number form), exactly ONE of the
@@ -68,7 +68,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Membership-specific Feature status. If this Feature does report any per-Membership
    * status, this field may be unused. The keys indicate which Membership the state is for, in the
-   * form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a
+   * form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a
    * valid location and {m} is a valid Membership in this project at that location. {p} MUST match
    * the Feature's project number.
    * The value may be {@code null}.
@@ -167,8 +167,8 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Membership-specific configuration for this Feature. If this Feature does not support
    * any per-Membership configuration, this field may be unused. The keys indicate which Membership
-   * the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is
-   * the project, {l} is a valid location and {m} is a valid Membership in this project at that
+   * the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p}
+   * is the project, {l} is a valid location and {m} is a valid Membership in this project at that
    * location. {p} WILL match the Feature's project. {p} will always be returned as the project
    * number, but the project ID is also accepted during input. If the same Membership is specified
    * in the map twice (using the project ID form, and the project number form), exactly ONE of the
@@ -183,8 +183,8 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Membership-specific configuration for this Feature. If this Feature does not support
    * any per-Membership configuration, this field may be unused. The keys indicate which Membership
-   * the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is
-   * the project, {l} is a valid location and {m} is a valid Membership in this project at that
+   * the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p}
+   * is the project, {l} is a valid location and {m} is a valid Membership in this project at that
    * location. {p} WILL match the Feature's project. {p} will always be returned as the project
    * number, but the project ID is also accepted during input. If the same Membership is specified
    * in the map twice (using the project ID form, and the project number form), exactly ONE of the
@@ -200,7 +200,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Membership-specific Feature status. If this Feature does report any per-Membership
    * status, this field may be unused. The keys indicate which Membership the state is for, in the
-   * form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a
+   * form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a
    * valid location and {m} is a valid Membership in this project at that location. {p} MUST match
    * the Feature's project number.
    * @return value or {@code null} for none
@@ -212,7 +212,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Membership-specific Feature status. If this Feature does report any per-Membership
    * status, this field may be unused. The keys indicate which Membership the state is for, in the
-   * form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a
+   * form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a
    * valid location and {m} is a valid Membership in this project at that location. {p} MUST match
    * the Feature's project number.
    * @param membershipStates membershipStates or {@code null} for none

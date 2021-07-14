@@ -30,6 +30,14 @@ package com.google.api.services.gkehub.v1beta1.model;
 public final class GkeCluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If cluster_missing is set then it denotes that the GKE cluster no longer exists in
+   * the GKE Control Plane.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean clusterMissing;
+
+  /**
    * Immutable. Self-link of the GCP resource for the GKE cluster. For example:
    * //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal
    * clusters are also supported.
@@ -37,6 +45,25 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceLink;
+
+  /**
+   * Output only. If cluster_missing is set then it denotes that the GKE cluster no longer exists in
+   * the GKE Control Plane.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClusterMissing() {
+    return clusterMissing;
+  }
+
+  /**
+   * Output only. If cluster_missing is set then it denotes that the GKE cluster no longer exists in
+   * the GKE Control Plane.
+   * @param clusterMissing clusterMissing or {@code null} for none
+   */
+  public GkeCluster setClusterMissing(java.lang.Boolean clusterMissing) {
+    this.clusterMissing = clusterMissing;
+    return this;
+  }
 
   /**
    * Immutable. Self-link of the GCP resource for the GKE cluster. For example:

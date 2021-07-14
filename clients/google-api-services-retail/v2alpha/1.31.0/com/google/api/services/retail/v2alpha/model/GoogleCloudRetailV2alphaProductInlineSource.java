@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2alphaProductInlineSource extends com.googl
 
   /**
    * Required. A list of products to update/create. Each product must have a valid Product.id.
-   * Recommended max of 10k items.
+   * Recommended max of 100 items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaProductInlineSource extends com.googl
 
   /**
    * Required. A list of products to update/create. Each product must have a valid Product.id.
-   * Recommended max of 10k items.
+   * Recommended max of 100 items.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaProduct> getProducts() {
@@ -54,7 +54,7 @@ public final class GoogleCloudRetailV2alphaProductInlineSource extends com.googl
 
   /**
    * Required. A list of products to update/create. Each product must have a valid Product.id.
-   * Recommended max of 10k items.
+   * Recommended max of 100 items.
    * @param products products or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProductInlineSource setProducts(java.util.List<GoogleCloudRetailV2alphaProduct> products) {

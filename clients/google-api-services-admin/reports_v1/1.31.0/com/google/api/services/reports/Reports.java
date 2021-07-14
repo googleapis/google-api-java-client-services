@@ -165,7 +165,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
      * @param applicationName Application name for which the events are to be retrieved.
      * @return the request
      */
@@ -215,7 +216,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        * @param applicationName Application name for which the events are to be retrieved.
        * @since 1.13
        */
@@ -298,14 +300,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
       /** Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      all information, or `userKey` for a user's unique Google Workspace profile ID or their primary
-     email address.
+     email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API
+     with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        */
       public java.lang.String getUserKey() {
         return userKey;
@@ -314,7 +319,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       public List setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
@@ -582,14 +589,14 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */
       @com.google.api.client.util.Key
       private java.lang.String groupIdFilter;
 
-      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the response
+      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the response
      will contain activities for only those users that are a part of at least one of the group ids
      mentioned here. Format: "id:abc123,id:xyz456"
        */
@@ -598,7 +605,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */
@@ -748,7 +755,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
      * @param applicationName Application name for which the events are to be retrieved.
      * @param content the {@link com.google.api.services.reports.model.Channel}
      * @return the request
@@ -797,7 +805,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        * @param applicationName Application name for which the events are to be retrieved.
        * @param content the {@link com.google.api.services.reports.model.Channel}
        * @since 1.13
@@ -871,14 +880,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
       /** Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      all information, or `userKey` for a user's unique Google Workspace profile ID or their primary
-     email address.
+     email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API
+     with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        */
       public java.lang.String getUserKey() {
         return userKey;
@@ -887,7 +899,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       public Watch setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
@@ -1155,14 +1169,14 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */
       @com.google.api.client.util.Key
       private java.lang.String groupIdFilter;
 
-      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the response
+      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the response
      will contain activities for only those users that are a part of at least one of the group ids
      mentioned here. Format: "id:abc123,id:xyz456"
        */
@@ -1171,7 +1185,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */
@@ -2174,7 +2188,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
      * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
      *        recommend you use your account's time zone for this.
      * @return the request
@@ -2221,7 +2236,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param userKey Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      *        all information, or `userKey` for a user's unique Google Workspace profile ID or their
-     *        primary email address.
+     *        primary email address. Must not be a deleted user. For a deleted user, call `users.list`
+     *        in Directory API with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        * @param date Represents the date the usage occurred. The timestamp is in the ISO 8601 format, yyyy-mm-dd. We
      *        recommend you use your account's time zone for this.
        * @since 1.13
@@ -2305,14 +2321,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
       /** Represents the profile ID or the user email for which the data should be filtered. Can be `all` for
      all information, or `userKey` for a user's unique Google Workspace profile ID or their primary
-     email address.
+     email address. Must not be a deleted user. For a deleted user, call `users.list` in Directory API
+     with `showDeleted=true`, then use the returned `ID` as the `userKey`.
        */
       public java.lang.String getUserKey() {
         return userKey;
@@ -2321,7 +2340,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Represents the profile ID or the user email for which the data should be filtered. Can be
        * `all` for all information, or `userKey` for a user's unique Google Workspace profile ID or
-       * their primary email address.
+       * their primary email address. Must not be a deleted user. For a deleted user, call
+       * `users.list` in Directory API with `showDeleted=true`, then use the returned `ID` as the
+       * `userKey`.
        */
       public Get setUserKey(java.lang.String userKey) {
         this.userKey = userKey;
@@ -2438,14 +2459,14 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */
       @com.google.api.client.util.Key
       private java.lang.String groupIdFilter;
 
-      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the response
+      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the response
      will contain activities for only those users that are a part of at least one of the group ids
      mentioned here. Format: "id:abc123,id:xyz456"
        */
@@ -2454,7 +2475,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e, the
+       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
        * response will contain activities for only those users that are a part of at least one of
        * the group ids mentioned here. Format: "id:abc123,id:xyz456"
        */

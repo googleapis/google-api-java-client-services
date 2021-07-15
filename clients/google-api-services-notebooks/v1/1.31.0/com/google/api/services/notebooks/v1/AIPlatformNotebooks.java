@@ -6202,6 +6202,141 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Report and process a runtime event.
+         *
+         * Create a request for the method "runtimes.reportEvent".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link ReportEvent#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.ReportRuntimeEventRequest}
+         * @return the request
+         */
+        public ReportEvent reportEvent(java.lang.String name, com.google.api.services.notebooks.v1.model.ReportRuntimeEventRequest content) throws java.io.IOException {
+          ReportEvent result = new ReportEvent(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReportEvent extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:reportEvent";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+
+          /**
+           * Report and process a runtime event.
+           *
+           * Create a request for the method "runtimes.reportEvent".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link ReportEvent#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ReportEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.ReportRuntimeEventRequest}
+           * @since 1.13
+           */
+          protected ReportEvent(java.lang.String name, com.google.api.services.notebooks.v1.model.ReportRuntimeEventRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReportEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (ReportEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReportEvent setAccessToken(java.lang.String accessToken) {
+            return (ReportEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReportEvent setAlt(java.lang.String alt) {
+            return (ReportEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public ReportEvent setCallback(java.lang.String callback) {
+            return (ReportEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public ReportEvent setFields(java.lang.String fields) {
+            return (ReportEvent) super.setFields(fields);
+          }
+
+          @Override
+          public ReportEvent setKey(java.lang.String key) {
+            return (ReportEvent) super.setKey(key);
+          }
+
+          @Override
+          public ReportEvent setOauthToken(java.lang.String oauthToken) {
+            return (ReportEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReportEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReportEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReportEvent setQuotaUser(java.lang.String quotaUser) {
+            return (ReportEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReportEvent setUploadType(java.lang.String uploadType) {
+            return (ReportEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReportEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReportEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+           */
+          public ReportEvent setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReportEvent set(String parameterName, Object value) {
+            return (ReportEvent) super.set(parameterName, value);
+          }
+        }
+        /**
          * Resets a Managed Notebook Runtime.
          *
          * Create a request for the method "runtimes.reset".

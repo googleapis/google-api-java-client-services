@@ -31,6 +31,13 @@ package com.google.api.services.firebasestorage.v1beta.model;
 public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Location of the storage bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Resource name of the bucket.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * Output only. Location of the storage bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. Location of the storage bucket.
+   * @param location location or {@code null} for none
+   */
+  public Bucket setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
 
   /**
    * Resource name of the bucket.

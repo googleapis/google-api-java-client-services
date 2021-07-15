@@ -181,9 +181,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link AddFirebase#execute()} method to invoke the remote
        * operation.
        *
-       * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+       * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
        * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.AddFirebaseRequest}
        * @return the request
        */
@@ -211,9 +210,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
          * AddFirebase#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+         * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
          * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.AddFirebaseRequest}
          * @since 1.13
          */
@@ -284,15 +282,13 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String bucket;
 
         /** Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage
-       bucket. Because bucket resource names are unique across projects, you may omit the project number,
-       `projects/-/buckets/{bucket_id}`.
+       bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public java.lang.String getBucket() {
           return bucket;
@@ -300,8 +296,7 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public AddFirebase setBucket(java.lang.String bucket) {
           if (!getSuppressPatternChecks()) {
@@ -326,9 +321,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasestorage server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+       * @param name Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -354,9 +348,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+         * @param name Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -436,15 +429,13 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage
-       bucket. Because bucket resource names are unique across projects, you may omit the project number,
-       `projects/-/buckets/{bucket_id}`.
+       bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -452,8 +443,7 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -665,9 +655,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link RemoveFirebase#execute()} method to invoke the remote
        * operation.
        *
-       * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+       * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
        * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.RemoveFirebaseRequest}
        * @return the request
        */
@@ -695,9 +684,8 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
          * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket.
-       *        Because bucket resource names are unique across projects, you may omit the project number,
-       *        `projects/-/buckets/{bucket_id}`.
+         * @param bucket Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage bucket,
+       *        `projects/{project_number}/buckets/{bucket_id}`.
          * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.RemoveFirebaseRequest}
          * @since 1.13
          */
@@ -768,15 +756,13 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String bucket;
 
         /** Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud Storage
-       bucket. Because bucket resource names are unique across projects, you may omit the project number,
-       `projects/-/buckets/{bucket_id}`.
+       bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public java.lang.String getBucket() {
           return bucket;
@@ -784,8 +770,7 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Resource name of the bucket, mirrors the ID of the underlying Google Cloud
-         * Storage bucket. Because bucket resource names are unique across projects, you may omit
-         * the project number, `projects/-/buckets/{bucket_id}`.
+         * Storage bucket, `projects/{project_number}/buckets/{bucket_id}`.
          */
         public RemoveFirebase setBucket(java.lang.String bucket) {
           if (!getSuppressPatternChecks()) {

@@ -107,7 +107,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   private java.lang.String paramsYamlFile;
 
   /**
-   * Required. Scale tier of the hardware used for notebook execution.
+   * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be
+   * discontinued. As right now only CUSTOM is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +301,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Scale tier of the hardware used for notebook execution.
+   * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be
+   * discontinued. As right now only CUSTOM is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getScaleTier() {
@@ -308,7 +310,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Scale tier of the hardware used for notebook execution.
+   * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be
+   * discontinued. As right now only CUSTOM is supported.
    * @param scaleTier scaleTier or {@code null} for none
    */
   public ExecutionTemplate setScaleTier(java.lang.String scaleTier) {

@@ -221,6 +221,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String proxyUri;
 
   /**
+   * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal
+   * Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+   * to this notebook instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
+
+  /**
    * The service account on this instance, giving access to other Google Cloud services. You can use
    * any service account within the same project, but you must have the service account user
    * permission to use the instance. If not specified, the [Compute Engine default service
@@ -733,6 +742,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
+    return this;
+  }
+
+  /**
+   * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal
+   * Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+   * to this notebook instance.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal
+   * Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+   * to this notebook instance.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public Instance setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

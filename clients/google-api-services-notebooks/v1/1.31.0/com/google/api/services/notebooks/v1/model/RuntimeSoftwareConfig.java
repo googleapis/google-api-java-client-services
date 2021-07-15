@@ -48,14 +48,14 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.Boolean enableHealthMonitoring;
 
   /**
-   * Runtime will automatically shutdown after idle_shutdown_time. Default: False
+   * Runtime will automatically shutdown after idle_shutdown_time. Default: True
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean idleShutdown;
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 90 minutes
+   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Runtime will automatically shutdown after idle_shutdown_time. Default: False
+   * Runtime will automatically shutdown after idle_shutdown_time. Default: True
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIdleShutdown() {
@@ -129,7 +129,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Runtime will automatically shutdown after idle_shutdown_time. Default: False
+   * Runtime will automatically shutdown after idle_shutdown_time. Default: True
    * @param idleShutdown idleShutdown or {@code null} for none
    */
   public RuntimeSoftwareConfig setIdleShutdown(java.lang.Boolean idleShutdown) {
@@ -138,7 +138,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 90 minutes
+   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleShutdownTimeout() {
@@ -146,7 +146,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 90 minutes
+   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
    * @param idleShutdownTimeout idleShutdownTimeout or {@code null} for none
    */
   public RuntimeSoftwareConfig setIdleShutdownTimeout(java.lang.Integer idleShutdownTimeout) {

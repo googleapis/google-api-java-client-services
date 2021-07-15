@@ -160,6 +160,20 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String runtime;
 
   /**
+   * Secret environment variables configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecretEnvVar> secretEnvironmentVariables;
+
+  /**
+   * Secret volumes configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecretVolume> secretVolumes;
+
+  /**
    * The email of the function's service account. If empty, defaults to
    * `{project_id}@appspot.gserviceaccount.com`.
    * The value may be {@code null}.
@@ -546,6 +560,40 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setRuntime(java.lang.String runtime) {
     this.runtime = runtime;
+    return this;
+  }
+
+  /**
+   * Secret environment variables configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecretEnvVar> getSecretEnvironmentVariables() {
+    return secretEnvironmentVariables;
+  }
+
+  /**
+   * Secret environment variables configuration.
+   * @param secretEnvironmentVariables secretEnvironmentVariables or {@code null} for none
+   */
+  public CloudFunction setSecretEnvironmentVariables(java.util.List<SecretEnvVar> secretEnvironmentVariables) {
+    this.secretEnvironmentVariables = secretEnvironmentVariables;
+    return this;
+  }
+
+  /**
+   * Secret volumes configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecretVolume> getSecretVolumes() {
+    return secretVolumes;
+  }
+
+  /**
+   * Secret volumes configuration.
+   * @param secretVolumes secretVolumes or {@code null} for none
+   */
+  public CloudFunction setSecretVolumes(java.util.List<SecretVolume> secretVolumes) {
+    this.secretVolumes = secretVolumes;
     return this;
   }
 

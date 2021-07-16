@@ -1455,6 +1455,32 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. Filter string, adhering to the rules in [List-operation
+         * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets
+         * matching the filter. If filter is empty, all secrets are listed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filter string, adhering to the rules in [List-operation
+       filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets matching the
+       filter. If filter is empty, all secrets are listed.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filter string, adhering to the rules in [List-operation
+         * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secrets
+         * matching the filter. If filter is empty, all secrets are listed.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of results to be returned in a single page. If set to 0, the
          * server decides the number of results to return. If the number is greater than 25000, it
          * is capped at 25000.
@@ -2826,6 +2852,32 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
                   "^projects/[^/]+/secrets/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter string, adhering to the rules in [List-operation
+           * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret
+           * versions matching the filter. If filter is empty, all secret versions are listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter string, adhering to the rules in [List-operation
+         filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret versions
+         matching the filter. If filter is empty, all secret versions are listed.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter string, adhering to the rules in [List-operation
+           * filtering](https://cloud.google.com/secret-manager/docs/filtering). List only secret
+           * versions matching the filter. If filter is empty, all secret versions are listed.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 

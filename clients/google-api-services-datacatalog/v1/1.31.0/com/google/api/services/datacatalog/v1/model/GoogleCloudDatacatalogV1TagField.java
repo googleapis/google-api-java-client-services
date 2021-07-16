@@ -70,6 +70,15 @@ public final class GoogleCloudDatacatalogV1TagField extends com.google.api.clien
   private java.lang.Integer order;
 
   /**
+   * The value of a tag field with a rich text type. The maximum length is 10 MiB as this value
+   * holds HTML descriptions including encoded images. The maximum length of the text without images
+   * is 100 KiB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String richtextValue;
+
+  /**
    * The value of a tag field with a string type. The maximum length is 2000 UTF-8 characters.
    * The value may be {@code null}.
    */
@@ -173,6 +182,27 @@ public final class GoogleCloudDatacatalogV1TagField extends com.google.api.clien
    */
   public GoogleCloudDatacatalogV1TagField setOrder(java.lang.Integer order) {
     this.order = order;
+    return this;
+  }
+
+  /**
+   * The value of a tag field with a rich text type. The maximum length is 10 MiB as this value
+   * holds HTML descriptions including encoded images. The maximum length of the text without images
+   * is 100 KiB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRichtextValue() {
+    return richtextValue;
+  }
+
+  /**
+   * The value of a tag field with a rich text type. The maximum length is 10 MiB as this value
+   * holds HTML descriptions including encoded images. The maximum length of the text without images
+   * is 100 KiB.
+   * @param richtextValue richtextValue or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1TagField setRichtextValue(java.lang.String richtextValue) {
+    this.richtextValue = richtextValue;
     return this;
   }
 

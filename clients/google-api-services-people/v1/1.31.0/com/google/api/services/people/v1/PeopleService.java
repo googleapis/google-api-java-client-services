@@ -1431,7 +1431,15 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are
-     * typically auto created contacts from interactions.
+     * typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync.
+     * A request with an expired sync token will result in a 410 error. In the case of such an error
+     * clients should make a full sync request without a `sync_token`. The first page of a full sync
+     * request has an additional quota. If the quota is exceeded, a 429 error will be returned. This
+     * quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted
+     * since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When
+     * the `page_token` or `sync_token` is specified, all other request parameters must match the first
+     * call. See example usage at [List the user's other contacts that have changed](/people/v1/other-
+     * contacts#list_the_users_other_contacts_that_have_changed).
      *
      * Create a request for the method "otherContacts.list".
      *
@@ -1452,7 +1460,15 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts"
-       * are typically auto created contacts from interactions.
+       * are typically auto created contacts from interactions. Sync tokens expire 7 days after the full
+       * sync. A request with an expired sync token will result in a 410 error. In the case of such an
+       * error clients should make a full sync request without a `sync_token`. The first page of a full
+       * sync request has an additional quota. If the quota is exceeded, a 429 error will be returned.
+       * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
+       * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
+       * true. When the `page_token` or `sync_token` is specified, all other request parameters must
+       * match the first call. See example usage at [List the user's other contacts that have
+       * changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
        *
        * Create a request for the method "otherContacts.list".
        *
@@ -1556,25 +1572,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListOtherContacts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `otherContacts.list` must match the first call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to retrieve
-     the subsequent page. When paginating, all other parameters provided to `ListOtherContacts` must
-     match the call that provided the page token.
+      /** Optional. A page token, received from a previous response `next_page_token`. Provide this to
+     retrieve the subsequent page. When paginating, all other parameters provided to
+     `otherContacts.list` must match the first call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListOtherContacts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `otherContacts.list` must match the first call that provided the page token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -1608,27 +1624,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. Whether the response should include `next_sync_token`, which can be used to get
-       * all changes since the last request. For subsequent sync requests use the `sync_token` param
-       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
-       * limit.
+       * Optional. Whether the response should return `next_sync_token` on the last page of results.
+       * It can be used to get incremental changes since the last request by setting it on the
+       * request `sync_token`. More details about sync behavior at `otherContacts.list`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean requestSyncToken;
 
-      /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
-     changes since the last request. For subsequent sync requests use the `sync_token` param instead.
-     Initial sync requests that specify `request_sync_token` have an additional rate limit.
+      /** Optional. Whether the response should return `next_sync_token` on the last page of results. It can
+     be used to get incremental changes since the last request by setting it on the request
+     `sync_token`. More details about sync behavior at `otherContacts.list`.
        */
       public java.lang.Boolean getRequestSyncToken() {
         return requestSyncToken;
       }
 
       /**
-       * Optional. Whether the response should include `next_sync_token`, which can be used to get
-       * all changes since the last request. For subsequent sync requests use the `sync_token` param
-       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
-       * limit.
+       * Optional. Whether the response should return `next_sync_token` on the last page of results.
+       * It can be used to get incremental changes since the last request by setting it on the
+       * request `sync_token`. More details about sync behavior at `otherContacts.list`.
        */
       public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
         this.requestSyncToken = requestSyncToken;
@@ -1658,37 +1672,28 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
-       * retrieve only the resources changed since the last request. Sync requests that specify
-       * `sync_token` have an additional rate limit. When the `syncToken` is specified, resources
-       * deleted since the last sync will be returned as a person with
-       * [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted)
-       * set to true. When the `syncToken` is specified, all other parameters provided to
-       * `ListOtherContacts` must match the call that provided the sync token.
+       * Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+       * retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `otherContacts.list` must match the first call that provided the
+       * sync token. More details about sync behavior at `otherContacts.list`.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
 
-      /** Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve
-     only the resources changed since the last request. Sync requests that specify `sync_token` have an
-     additional rate limit. When the `syncToken` is specified, resources deleted since the last sync
-     will be returned as a person with
-     [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
-     true. When the `syncToken` is specified, all other parameters provided to `ListOtherContacts` must
-     match the call that provided the sync token.
+      /** Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+     retrieve only the resources changed since the last request. When syncing, all other parameters
+     provided to `otherContacts.list` must match the first call that provided the sync token. More
+     details about sync behavior at `otherContacts.list`.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
       }
 
       /**
-       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
-       * retrieve only the resources changed since the last request. Sync requests that specify
-       * `sync_token` have an additional rate limit. When the `syncToken` is specified, resources
-       * deleted since the last sync will be returned as a person with
-       * [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted)
-       * set to true. When the `syncToken` is specified, all other parameters provided to
-       * `ListOtherContacts` must match the call that provided the sync token.
+       * Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+       * retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `otherContacts.list` must match the first call that provided the
+       * sync token. More details about sync behavior at `otherContacts.list`.
        */
       public List setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;
@@ -2708,8 +2713,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * @param resourceName Required. The resource name of the person to provide information about. - To get information about
      *        the authenticated user, specify `people/me`. - To get information about a google account,
      *        specify `people/{account_id}`. - To get information about a contact, specify the resource
-     *        name that identifies the contact as returned by
-     *        [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+     *        name that identifies the contact as returned by `people.connections.list`.
      * @return the request
      */
     public Get get(java.lang.String resourceName) throws java.io.IOException {
@@ -2739,8 +2743,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * @param resourceName Required. The resource name of the person to provide information about. - To get information about
      *        the authenticated user, specify `people/me`. - To get information about a google account,
      *        specify `people/{account_id}`. - To get information about a contact, specify the resource
-     *        name that identifies the contact as returned by
-     *        [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+     *        name that identifies the contact as returned by `people.connections.list`.
        * @since 1.13
        */
       protected Get(java.lang.String resourceName) {
@@ -2823,7 +2826,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * information about the authenticated user, specify `people/me`. - To get information about a
        * google account, specify `people/{account_id}`. - To get information about a contact,
        * specify the resource name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+       * `people.connections.list`.
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
@@ -2831,8 +2834,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /** Required. The resource name of the person to provide information about. - To get information about
      the authenticated user, specify `people/me`. - To get information about a google account, specify
      `people/{account_id}`. - To get information about a contact, specify the resource name that
-     identifies the contact as returned by
-     [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+     identifies the contact as returned by `people.connections.list`.
        */
       public java.lang.String getResourceName() {
         return resourceName;
@@ -2843,7 +2845,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * information about the authenticated user, specify `people/me`. - To get information about a
        * google account, specify `people/{account_id}`. - To get information about a contact,
        * specify the resource name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+       * `people.connections.list`.
        */
       public Get setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
@@ -3112,8 +3114,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * The URL query parameter should be resourceNames==&... - To get information about the
        * authenticated user, specify `people/me`. - To get information about a google account,
        * specify `people/{account_id}`. - To get information about a contact, specify the resource
-       * name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
+       * name that identifies the contact as returned by `people.connections.list`. There is a
        * maximum of 200 resource names.
        */
       @com.google.api.client.util.Key
@@ -3123,8 +3124,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      query parameter should be resourceNames==&... - To get information about the authenticated user,
      specify `people/me`. - To get information about a google account, specify `people/{account_id}`. -
      To get information about a contact, specify the resource name that identifies the contact as
-     returned by [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
-     maximum of 200 resource names.
+     returned by `people.connections.list`. There is a maximum of 200 resource names.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
@@ -3135,8 +3135,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * The URL query parameter should be resourceNames==&... - To get information about the
        * authenticated user, specify `people/me`. - To get information about a google account,
        * specify `people/{account_id}`. - To get information about a contact, specify the resource
-       * name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). There is a
+       * name that identifies the contact as returned by `people.connections.list`. There is a
        * maximum of 200 resource names.
        */
       public GetBatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
@@ -3174,7 +3173,11 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides a list of domain profiles and domain contacts in the authenticated user's domain
-     * directory.
+     * directory. When the `sync_token` is specified, resources deleted since the last sync will be
+     * returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or
+     * `sync_token` is specified, all other request parameters must match the first call. See example
+     * usage at [List the directory people that have
+     * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
      *
      * Create a request for the method "people.listDirectoryPeople".
      *
@@ -3195,7 +3198,11 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides a list of domain profiles and domain contacts in the authenticated user's domain
-       * directory.
+       * directory. When the `sync_token` is specified, resources deleted since the last sync will be
+       * returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or
+       * `sync_token` is specified, all other request parameters must match the first call. See example
+       * usage at [List the directory people that have
+       * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
        *
        * Create a request for the method "people.listDirectoryPeople".
        *
@@ -3323,25 +3330,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
        * to retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListDirectoryPeople` must match the call that provided the page token.
+       * `people.listDirectoryPeople` must match the first call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this to
+      /** Optional. A page token, received from a previous response `next_page_token`. Provide this to
      retrieve the subsequent page. When paginating, all other parameters provided to
-     `ListDirectoryPeople` must match the call that provided the page token.
+     `people.listDirectoryPeople` must match the first call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
        * to retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListDirectoryPeople` must match the call that provided the page token.
+       * `people.listDirectoryPeople` must match the first call that provided the page token.
        */
       public ListDirectoryPeople setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -3386,24 +3393,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. Whether the response should include `next_sync_token`, which can be used to get
-       * all changes since the last request. For subsequent sync requests use the `sync_token` param
-       * instead.
+       * Optional. Whether the response should return `next_sync_token`. It can be used to get
+       * incremental changes since the last request by setting it on the request `sync_token`. More
+       * details about sync behavior at `people.listDirectoryPeople`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean requestSyncToken;
 
-      /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
-     changes since the last request. For subsequent sync requests use the `sync_token` param instead.
+      /** Optional. Whether the response should return `next_sync_token`. It can be used to get incremental
+     changes since the last request by setting it on the request `sync_token`. More details about sync
+     behavior at `people.listDirectoryPeople`.
        */
       public java.lang.Boolean getRequestSyncToken() {
         return requestSyncToken;
       }
 
       /**
-       * Optional. Whether the response should include `next_sync_token`, which can be used to get
-       * all changes since the last request. For subsequent sync requests use the `sync_token` param
-       * instead.
+       * Optional. Whether the response should return `next_sync_token`. It can be used to get
+       * incremental changes since the last request by setting it on the request `sync_token`. More
+       * details about sync behavior at `people.listDirectoryPeople`.
        */
       public ListDirectoryPeople setRequestSyncToken(java.lang.Boolean requestSyncToken) {
         this.requestSyncToken = requestSyncToken;
@@ -3427,27 +3435,28 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this
-       * to retrieve only the resources changed since the last request. When syncing, all other
-       * parameters provided to `ListDirectoryPeople` must match the call that provided the sync
-       * token.
+       * Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+       * retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `people.listDirectoryPeople` must match the first call that provided
+       * the sync token. More details about sync behavior at `people.listDirectoryPeople`.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
 
-      /** Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this to
+      /** Optional. A sync token, received from a previous response `next_sync_token` Provide this to
      retrieve only the resources changed since the last request. When syncing, all other parameters
-     provided to `ListDirectoryPeople` must match the call that provided the sync token.
+     provided to `people.listDirectoryPeople` must match the first call that provided the sync token.
+     More details about sync behavior at `people.listDirectoryPeople`.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
       }
 
       /**
-       * Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this
-       * to retrieve only the resources changed since the last request. When syncing, all other
-       * parameters provided to `ListDirectoryPeople` must match the call that provided the sync
-       * token.
+       * Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+       * retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `people.listDirectoryPeople` must match the first call that provided
+       * the sync token. More details about sync behavior at `people.listDirectoryPeople`.
        */
       public ListDirectoryPeople setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;
@@ -3834,25 +3843,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
        * to retrieve the subsequent page. When paginating, all other parameters provided to
-       * `SearchDirectoryPeople` must match the call that provided the page token.
+       * `SearchDirectoryPeople` must match the first call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this to
+      /** Optional. A page token, received from a previous response `next_page_token`. Provide this to
      retrieve the subsequent page. When paginating, all other parameters provided to
-     `SearchDirectoryPeople` must match the call that provided the page token.
+     `SearchDirectoryPeople` must match the first call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this
+       * Optional. A page token, received from a previous response `next_page_token`. Provide this
        * to retrieve the subsequent page. When paginating, all other parameters provided to
-       * `SearchDirectoryPeople` must match the call that provided the page token.
+       * `SearchDirectoryPeople` must match the first call that provided the page token.
        */
       public SearchDirectoryPeople setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -4347,11 +4356,15 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     public class Connections {
 
       /**
-       * Provides a list of the authenticated user's contacts. The request returns a 400 error if
-       * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified and
-       * is expired. Sync tokens expire after 7 days to prevent data drift between clients and the server.
-       * To handle a sync token expired error, a request should be sent without `sync_token` to get all
-       * contacts.
+       * Provides a list of the authenticated user's contacts. Sync tokens expire 7 days after the full
+       * sync. A request with an expired sync token will result in a 410 error. In the case of such an
+       * error clients should make a full sync request without a `sync_token`. The first page of a full
+       * sync request has an additional quota. If the quota is exceeded, a 429 error will be returned.
+       * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
+       * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
+       * true. When the `page_token` or `sync_token` is specified, all other request parameters must match
+       * the first call. See example usage at [List the user's contacts that have
+       * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
        *
        * Create a request for the method "connections.list".
        *
@@ -4375,11 +4388,15 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^people/[^/]+$");
 
         /**
-         * Provides a list of the authenticated user's contacts. The request returns a 400 error if
-         * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified
-         * and is expired. Sync tokens expire after 7 days to prevent data drift between clients and the
-         * server. To handle a sync token expired error, a request should be sent without `sync_token` to
-         * get all contacts.
+         * Provides a list of the authenticated user's contacts. Sync tokens expire 7 days after the full
+         * sync. A request with an expired sync token will result in a 410 error. In the case of such an
+         * error clients should make a full sync request without a `sync_token`. The first page of a full
+         * sync request has an additional quota. If the quota is exceeded, a 429 error will be returned.
+         * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
+         * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
+         * true. When the `page_token` or `sync_token` is specified, all other request parameters must
+         * match the first call. See example usage at [List the user's contacts that have
+         * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
          *
          * Create a request for the method "connections.list".
          *
@@ -4511,25 +4528,25 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. A page token, received from a previous `ListConnections` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListConnections` must match the call that provided the page token.
+         * Optional. A page token, received from a previous response `next_page_token`. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `people.connections.list` must match the first call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. A page token, received from a previous `ListConnections` call. Provide this to retrieve
-       the subsequent page. When paginating, all other parameters provided to `ListConnections` must match
-       the call that provided the page token.
+        /** Optional. A page token, received from a previous response `next_page_token`. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `people.connections.list` must match the first call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. A page token, received from a previous `ListConnections` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListConnections` must match the call that provided the page token.
+         * Optional. A page token, received from a previous response `next_page_token`. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `people.connections.list` must match the first call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -4597,33 +4614,27 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token` on the last page, which
-         * can be used to get all changes since the last request. For subsequent sync requests use
-         * the `sync_token` param instead. Initial full sync requests that specify
-         * `request_sync_token` and do not specify `sync_token` have an additional rate limit per
-         * user. Each client should generally only be doing a full sync once every few days per user
-         * and so should not hit this limit.
+         * Optional. Whether the response should return `next_sync_token` on the last page of
+         * results. It can be used to get incremental changes since the last request by setting it
+         * on the request `sync_token`. More details about sync behavior at
+         * `people.connections.list`.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
-        /** Optional. Whether the response should include `next_sync_token` on the last page, which can be used
-       to get all changes since the last request. For subsequent sync requests use the `sync_token` param
-       instead. Initial full sync requests that specify `request_sync_token` and do not specify
-       `sync_token` have an additional rate limit per user. Each client should generally only be doing a
-       full sync once every few days per user and so should not hit this limit.
+        /** Optional. Whether the response should return `next_sync_token` on the last page of results. It can
+       be used to get incremental changes since the last request by setting it on the request
+       `sync_token`. More details about sync behavior at `people.connections.list`.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token` on the last page, which
-         * can be used to get all changes since the last request. For subsequent sync requests use
-         * the `sync_token` param instead. Initial full sync requests that specify
-         * `request_sync_token` and do not specify `sync_token` have an additional rate limit per
-         * user. Each client should generally only be doing a full sync once every few days per user
-         * and so should not hit this limit.
+         * Optional. Whether the response should return `next_sync_token` on the last page of
+         * results. It can be used to get incremental changes since the last request by setting it
+         * on the request `sync_token`. More details about sync behavior at
+         * `people.connections.list`.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;
@@ -4677,39 +4688,28 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. When the `syncToken` is
-         * specified, resources deleted since the last sync will be returned as a person with [`Pers
-         * onMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set
-         * to true. When the `syncToken` is specified, all other parameters provided to
-         * `ListConnections` except `page_size` and `page_token` must match the initial call that
-         * provided the sync token. Sync tokens expire after seven days, after which a full sync
-         * request without a `sync_token` should be made.
+         * Optional. A sync token, received from a previous response `next_sync_token` Provide this
+         * to retrieve only the resources changed since the last request. When syncing, all other
+         * parameters provided to `people.connections.list` must match the first call that provided
+         * the sync token. More details about sync behavior at `people.connections.list`.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
-        /** Optional. A sync token, received from a previous `ListConnections` call. Provide this to retrieve
-       only the resources changed since the last request. When the `syncToken` is specified, resources
-       deleted since the last sync will be returned as a person with
-       [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
-       true. When the `syncToken` is specified, all other parameters provided to `ListConnections` except
-       `page_size` and `page_token` must match the initial call that provided the sync token. Sync tokens
-       expire after seven days, after which a full sync request without a `sync_token` should be made.
+        /** Optional. A sync token, received from a previous response `next_sync_token` Provide this to
+       retrieve only the resources changed since the last request. When syncing, all other parameters
+       provided to `people.connections.list` must match the first call that provided the sync token. More
+       details about sync behavior at `people.connections.list`.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
         }
 
         /**
-         * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. When the `syncToken` is
-         * specified, resources deleted since the last sync will be returned as a person with [`Pers
-         * onMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set
-         * to true. When the `syncToken` is specified, all other parameters provided to
-         * `ListConnections` except `page_size` and `page_token` must match the initial call that
-         * provided the sync token. Sync tokens expire after seven days, after which a full sync
-         * request without a `sync_token` should be made.
+         * Optional. A sync token, received from a previous response `next_sync_token` Provide this
+         * to retrieve only the resources changed since the last request. When syncing, all other
+         * parameters provided to `people.connections.list` must match the first call that provided
+         * the sync token. More details about sync behavior at `people.connections.list`.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

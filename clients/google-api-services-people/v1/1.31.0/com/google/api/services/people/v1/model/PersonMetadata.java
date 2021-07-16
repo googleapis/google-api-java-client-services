@@ -31,9 +31,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
-   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
-   * token.
+   * `people.connections.list` and `otherContacts.list` sync requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +54,9 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Any former resource names this person has had. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token. The resource name may change when adding or removing fields that link a contact and
-   * profile such as a verified email, verified phone number, or profile URL.
+   * `people.connections.list` requests that include a sync token. The resource name may change when
+   * adding or removing fields that link a contact and profile such as a verified email, verified
+   * phone number, or profile URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +71,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
-   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
-   * token.
+   * `people.connections.list` and `otherContacts.list` sync requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -84,9 +80,7 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. True if the person resource has been deleted. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) and
-   * [`otherContacts.list`](/people/api/rest/v1/otherContacts/list) requests that include a sync
-   * token.
+   * `people.connections.list` and `otherContacts.list` sync requests.
    * @param deleted deleted or {@code null} for none
    */
   public PersonMetadata setDeleted(java.lang.Boolean deleted) {
@@ -132,9 +126,9 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Any former resource names this person has had. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token. The resource name may change when adding or removing fields that link a contact and
-   * profile such as a verified email, verified phone number, or profile URL.
+   * `people.connections.list` requests that include a sync token. The resource name may change when
+   * adding or removing fields that link a contact and profile such as a verified email, verified
+   * phone number, or profile URL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPreviousResourceNames() {
@@ -143,9 +137,9 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Any former resource names this person has had. Populated only for
-   * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync
-   * token. The resource name may change when adding or removing fields that link a contact and
-   * profile such as a verified email, verified phone number, or profile URL.
+   * `people.connections.list` requests that include a sync token. The resource name may change when
+   * adding or removing fields that link a contact and profile such as a verified email, verified
+   * phone number, or profile URL.
    * @param previousResourceNames previousResourceNames or {@code null} for none
    */
   public PersonMetadata setPreviousResourceNames(java.util.List<java.lang.String> previousResourceNames) {

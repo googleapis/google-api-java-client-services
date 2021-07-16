@@ -48,7 +48,9 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
+   * gce_instance. For a list of types, see Monitoring resource types
+   * (https://cloud.google.com/monitoring/api/resources) and Logging resource types
+   * (https://cloud.google.com/logging/docs/api/v2/resource-list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,9 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
+   * gce_instance. For a list of types, see Monitoring resource types
+   * (https://cloud.google.com/monitoring/api/resources) and Logging resource types
+   * (https://cloud.google.com/logging/docs/api/v2/resource-list).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -88,7 +92,9 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
+   * gce_instance. For a list of types, see Monitoring resource types
+   * (https://cloud.google.com/monitoring/api/resources) and Logging resource types
+   * (https://cloud.google.com/logging/docs/api/v2/resource-list).
    * @param type type or {@code null} for none
    */
   public MonitoredResource setType(java.lang.String type) {

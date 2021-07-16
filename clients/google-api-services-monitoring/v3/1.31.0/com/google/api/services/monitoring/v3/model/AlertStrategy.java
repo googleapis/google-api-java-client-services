@@ -31,16 +31,16 @@ package com.google.api.services.monitoring.v3.model;
 public final class AlertStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required for alert policies with a LogMatch condition.Providing this for alert policies that
-   * are not log-based is unimplemented.
+   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
+   * policies that are not log-based.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NotificationRateLimit notificationRateLimit;
 
   /**
-   * Required for alert policies with a LogMatch condition.Providing this for alert policies that
-   * are not log-based is unimplemented.
+   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
+   * policies that are not log-based.
    * @return value or {@code null} for none
    */
   public NotificationRateLimit getNotificationRateLimit() {
@@ -48,8 +48,8 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required for alert policies with a LogMatch condition.Providing this for alert policies that
-   * are not log-based is unimplemented.
+   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
+   * policies that are not log-based.
    * @param notificationRateLimit notificationRateLimit or {@code null} for none
    */
   public AlertStrategy setNotificationRateLimit(NotificationRateLimit notificationRateLimit) {

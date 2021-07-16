@@ -20,7 +20,7 @@ package com.google.api.services.monitoring.v1;
  * Service definition for Monitoring (v1).
  *
  * <p>
- * Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Monitoring documentation.
+ * Manages your Cloud Monitoring data and configurations. Most projects must be associated with a Workspace, with a few exceptions as noted on the individual method pages. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the Cloud Monitoring documentation (https://cloud.google.com/monitoring/docs).
  * </p>
  *
  * <p>
@@ -133,6 +133,169 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Operations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Monitoring monitoring = new Monitoring(...);}
+   *   {@code Monitoring.Operations.List request = monitoring.operations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Operations operations() {
+    return new Operations();
+  }
+
+  /**
+   * The "operations" collection of methods.
+   */
+  public class Operations {
+
+    /**
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
+     * operation result at intervals as recommended by the API service.
+     *
+     * Create a request for the method "operations.get".
+     *
+     * This request holds the parameters needed by the monitoring server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends MonitoringRequest<com.google.api.services.monitoring.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations/.*$");
+
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the the monitoring server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -174,9 +337,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Creates a new custom dashboard. For examples on how you can use this API to create dashboards,
-       * see Managing dashboards by API. This method requires the monitoring.dashboards.create permission
-       * on the specified project. For more information about permissions, see Cloud Identity and Access
-       * Management.
+       * see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard).
+       * This method requires the monitoring.dashboards.create permission on the specified project. For
+       * more information about permissions, see Cloud Identity and Access Management
+       * (https://cloud.google.com/iam).
        *
        * Create a request for the method "dashboards.create".
        *
@@ -204,9 +368,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Creates a new custom dashboard. For examples on how you can use this API to create dashboards,
-         * see Managing dashboards by API. This method requires the monitoring.dashboards.create
-         * permission on the specified project. For more information about permissions, see Cloud Identity
-         * and Access Management.
+         * see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard).
+         * This method requires the monitoring.dashboards.create permission on the specified project. For
+         * more information about permissions, see Cloud Identity and Access Management
+         * (https://cloud.google.com/iam).
          *
          * Create a request for the method "dashboards.create".
          *

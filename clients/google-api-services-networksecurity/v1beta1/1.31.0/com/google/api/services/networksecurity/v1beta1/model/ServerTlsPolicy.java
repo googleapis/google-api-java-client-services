@@ -32,11 +32,10 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ServerTlsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Determines if server allows plaintext connections. If set to true, server allows
-   * plain text connections. By default, it is set to false. This setting is not exclusive of other
-   * encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain
-   * text and mTLS connections. See documentation of other encryption modes to confirm
-   * compatibility.
+   * Determines if server allows plaintext connections. If set to true, server allows plain text
+   * connections. By default, it is set to false. This setting is not exclusive of other encryption
+   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
+   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,24 +49,24 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private String createTime;
 
   /**
-   * Optional. Free-text description of the resource.
+   * Free-text description of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Set of label tags associated with the resource.
+   * Set of label tags associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Defines a mechanism to provision peer validation certificates for peer to peer
-   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
-   * The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server
-   * allows both plain text and mTLS connections.
+   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
+   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
+   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +81,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be
-   * combined with allow_open as a permissive mode that allows both plain text and TLS is not
-   * supported.
+   * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
+   * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,11 +96,10 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
-   * Optional. Determines if server allows plaintext connections. If set to true, server allows
-   * plain text connections. By default, it is set to false. This setting is not exclusive of other
-   * encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain
-   * text and mTLS connections. See documentation of other encryption modes to confirm
-   * compatibility.
+   * Determines if server allows plaintext connections. If set to true, server allows plain text
+   * connections. By default, it is set to false. This setting is not exclusive of other encryption
+   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
+   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowOpen() {
@@ -110,11 +107,10 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Determines if server allows plaintext connections. If set to true, server allows
-   * plain text connections. By default, it is set to false. This setting is not exclusive of other
-   * encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain
-   * text and mTLS connections. See documentation of other encryption modes to confirm
-   * compatibility.
+   * Determines if server allows plaintext connections. If set to true, server allows plain text
+   * connections. By default, it is set to false. This setting is not exclusive of other encryption
+   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
+   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
    * @param allowOpen allowOpen or {@code null} for none
    */
   public ServerTlsPolicy setAllowOpen(java.lang.Boolean allowOpen) {
@@ -140,7 +136,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Free-text description of the resource.
+   * Free-text description of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -148,7 +144,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Free-text description of the resource.
+   * Free-text description of the resource.
    * @param description description or {@code null} for none
    */
   public ServerTlsPolicy setDescription(java.lang.String description) {
@@ -157,7 +153,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Set of label tags associated with the resource.
+   * Set of label tags associated with the resource.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -165,7 +161,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Set of label tags associated with the resource.
+   * Set of label tags associated with the resource.
    * @param labels labels or {@code null} for none
    */
   public ServerTlsPolicy setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -174,10 +170,10 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Defines a mechanism to provision peer validation certificates for peer to peer
-   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
-   * The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server
-   * allows both plain text and mTLS connections.
+   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
+   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
+   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections.
    * @return value or {@code null} for none
    */
   public MTLSPolicy getMtlsPolicy() {
@@ -185,10 +181,10 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Defines a mechanism to provision peer validation certificates for peer to peer
-   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
-   * The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server
-   * allows both plain text and mTLS connections.
+   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
+   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
+   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections.
    * @param mtlsPolicy mtlsPolicy or {@code null} for none
    */
   public ServerTlsPolicy setMtlsPolicy(MTLSPolicy mtlsPolicy) {
@@ -216,9 +212,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be
-   * combined with allow_open as a permissive mode that allows both plain text and TLS is not
-   * supported.
+   * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
+   * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * @return value or {@code null} for none
    */
   public GoogleCloudNetworksecurityV1beta1CertificateProvider getServerCertificate() {
@@ -226,9 +221,8 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be
-   * combined with allow_open as a permissive mode that allows both plain text and TLS is not
-   * supported.
+   * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
+   * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * @param serverCertificate serverCertificate or {@code null} for none
    */
   public ServerTlsPolicy setServerCertificate(GoogleCloudNetworksecurityV1beta1CertificateProvider serverCertificate) {

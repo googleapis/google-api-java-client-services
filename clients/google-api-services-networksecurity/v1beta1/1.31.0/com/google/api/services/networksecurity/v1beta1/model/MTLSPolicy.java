@@ -30,16 +30,16 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
+   * certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ValidationCA> clientValidationCa;
 
   /**
-   * Required. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
+   * certificate.
    * @return value or {@code null} for none
    */
   public java.util.List<ValidationCA> getClientValidationCa() {
@@ -47,8 +47,8 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
+   * certificate.
    * @param clientValidationCa clientValidationCa or {@code null} for none
    */
   public MTLSPolicy setClientValidationCa(java.util.List<ValidationCA> clientValidationCa) {

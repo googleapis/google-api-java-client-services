@@ -32,7 +32,7 @@ public final class OrdersCancelTestOrderByCustomerResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelTestOrderByCustomerResponse".
+   * "`content#ordersCancelTestOrderByCustomerResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class OrdersCancelTestOrderByCustomerResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelTestOrderByCustomerResponse".
+   * "`content#ordersCancelTestOrderByCustomerResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class OrdersCancelTestOrderByCustomerResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelTestOrderByCustomerResponse".
+   * "`content#ordersCancelTestOrderByCustomerResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersCancelTestOrderByCustomerResponse setKind(java.lang.String kind) {

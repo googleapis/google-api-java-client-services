@@ -39,7 +39,7 @@ public final class OrdersUpdateLineItemShippingDetailsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateLineItemShippingDetailsResponse".
+   * "`content#ordersUpdateLineItemShippingDetailsResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersUpdateLineItemShippingDetailsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateLineItemShippingDetailsResponse".
+   * "`content#ordersUpdateLineItemShippingDetailsResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersUpdateLineItemShippingDetailsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateLineItemShippingDetailsResponse".
+   * "`content#ordersUpdateLineItemShippingDetailsResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersUpdateLineItemShippingDetailsResponse setKind(java.lang.String kind) {

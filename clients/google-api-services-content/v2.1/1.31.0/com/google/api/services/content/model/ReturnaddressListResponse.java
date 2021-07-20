@@ -32,7 +32,7 @@ public final class ReturnaddressListResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnaddressListResponse".
+   * "`content#returnaddressListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class ReturnaddressListResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnaddressListResponse".
+   * "`content#returnaddressListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class ReturnaddressListResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnaddressListResponse".
+   * "`content#returnaddressListResponse`".
    * @param kind kind or {@code null} for none
    */
   public ReturnaddressListResponse setKind(java.lang.String kind) {

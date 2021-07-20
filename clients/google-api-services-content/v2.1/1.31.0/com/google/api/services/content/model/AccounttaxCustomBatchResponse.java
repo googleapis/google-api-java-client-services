@@ -39,7 +39,7 @@ public final class AccounttaxCustomBatchResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponse".
+   * "`content#accounttaxCustomBatchResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AccounttaxCustomBatchResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponse".
+   * "`content#accounttaxCustomBatchResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class AccounttaxCustomBatchResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxCustomBatchResponse".
+   * "`content#accounttaxCustomBatchResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccounttaxCustomBatchResponse setKind(java.lang.String kind) {

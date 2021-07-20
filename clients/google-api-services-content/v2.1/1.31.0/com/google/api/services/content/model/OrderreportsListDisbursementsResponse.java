@@ -45,7 +45,7 @@ public final class OrderreportsListDisbursementsResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreportsListDisbursementsResponse".
+   * "`content#orderreportsListDisbursementsResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class OrderreportsListDisbursementsResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreportsListDisbursementsResponse".
+   * "`content#orderreportsListDisbursementsResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -86,7 +86,7 @@ public final class OrderreportsListDisbursementsResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreportsListDisbursementsResponse".
+   * "`content#orderreportsListDisbursementsResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrderreportsListDisbursementsResponse setKind(java.lang.String kind) {

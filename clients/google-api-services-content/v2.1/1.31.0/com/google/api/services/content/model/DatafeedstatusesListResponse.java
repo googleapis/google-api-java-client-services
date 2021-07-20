@@ -32,7 +32,7 @@ public final class DatafeedstatusesListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesListResponse".
+   * "`content#datafeedstatusesListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class DatafeedstatusesListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesListResponse".
+   * "`content#datafeedstatusesListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class DatafeedstatusesListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesListResponse".
+   * "`content#datafeedstatusesListResponse`".
    * @param kind kind or {@code null} for none
    */
   public DatafeedstatusesListResponse setKind(java.lang.String kind) {

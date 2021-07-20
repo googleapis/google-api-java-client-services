@@ -32,7 +32,7 @@ public final class LiasettingsListResponse extends com.google.api.client.json.Ge
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListResponse".
+   * "`content#liasettingsListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class LiasettingsListResponse extends com.google.api.client.json.Ge
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListResponse".
+   * "`content#liasettingsListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class LiasettingsListResponse extends com.google.api.client.json.Ge
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListResponse".
+   * "`content#liasettingsListResponse`".
    * @param kind kind or {@code null} for none
    */
   public LiasettingsListResponse setKind(java.lang.String kind) {

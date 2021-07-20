@@ -32,7 +32,7 @@ public final class AccountsLinkResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsLinkResponse".
+   * "`content#accountsLinkResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class AccountsLinkResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsLinkResponse".
+   * "`content#accountsLinkResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class AccountsLinkResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsLinkResponse".
+   * "`content#accountsLinkResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccountsLinkResponse setKind(java.lang.String kind) {

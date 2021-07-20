@@ -39,7 +39,7 @@ public final class OrderinvoicesCreateRefundInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateRefundInvoiceResponse".
+   * "`content#orderinvoicesCreateRefundInvoiceResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrderinvoicesCreateRefundInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateRefundInvoiceResponse".
+   * "`content#orderinvoicesCreateRefundInvoiceResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrderinvoicesCreateRefundInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateRefundInvoiceResponse".
+   * "`content#orderinvoicesCreateRefundInvoiceResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrderinvoicesCreateRefundInvoiceResponse setKind(java.lang.String kind) {

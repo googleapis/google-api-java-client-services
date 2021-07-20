@@ -46,7 +46,7 @@ public final class RegionalinventoryCustomBatchResponseEntry extends com.google.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#regionalinventoryCustomBatchResponseEntry".
+   * "`content#regionalinventoryCustomBatchResponseEntry`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class RegionalinventoryCustomBatchResponseEntry extends com.google.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#regionalinventoryCustomBatchResponseEntry".
+   * "`content#regionalinventoryCustomBatchResponseEntry`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +104,7 @@ public final class RegionalinventoryCustomBatchResponseEntry extends com.google.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#regionalinventoryCustomBatchResponseEntry".
+   * "`content#regionalinventoryCustomBatchResponseEntry`".
    * @param kind kind or {@code null} for none
    */
   public RegionalinventoryCustomBatchResponseEntry setKind(java.lang.String kind) {

@@ -32,7 +32,7 @@ public final class ShippingsettingsListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsListResponse".
+   * "`content#shippingsettingsListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class ShippingsettingsListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsListResponse".
+   * "`content#shippingsettingsListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class ShippingsettingsListResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsListResponse".
+   * "`content#shippingsettingsListResponse`".
    * @param kind kind or {@code null} for none
    */
   public ShippingsettingsListResponse setKind(java.lang.String kind) {

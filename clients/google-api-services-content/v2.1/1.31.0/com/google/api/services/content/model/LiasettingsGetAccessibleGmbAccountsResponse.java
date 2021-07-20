@@ -52,7 +52,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsGetAccessibleGmbAccountsResponse".
+   * "`content#liasettingsGetAccessibleGmbAccountsResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsGetAccessibleGmbAccountsResponse".
+   * "`content#liasettingsGetAccessibleGmbAccountsResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -103,7 +103,7 @@ public final class LiasettingsGetAccessibleGmbAccountsResponse extends com.googl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsGetAccessibleGmbAccountsResponse".
+   * "`content#liasettingsGetAccessibleGmbAccountsResponse`".
    * @param kind kind or {@code null} for none
    */
   public LiasettingsGetAccessibleGmbAccountsResponse setKind(java.lang.String kind) {

@@ -39,7 +39,7 @@ public final class AccountsCustomBatchResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponse".
+   * "`content#accountsCustomBatchResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AccountsCustomBatchResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponse".
+   * "`content#accountsCustomBatchResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class AccountsCustomBatchResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsCustomBatchResponse".
+   * "`content#accountsCustomBatchResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccountsCustomBatchResponse setKind(java.lang.String kind) {

@@ -53,7 +53,7 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posInventoryResponse".
+   * "`content#posInventoryResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posInventoryResponse".
+   * "`content#posInventoryResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -157,7 +157,7 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#posInventoryResponse".
+   * "`content#posInventoryResponse`".
    * @param kind kind or {@code null} for none
    */
   public PosInventoryResponse setKind(java.lang.String kind) {

@@ -32,7 +32,7 @@ public final class AccountsUpdateLabelsResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsUpdateLabelsResponse".
+   * "`content#accountsUpdateLabelsResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class AccountsUpdateLabelsResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsUpdateLabelsResponse".
+   * "`content#accountsUpdateLabelsResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class AccountsUpdateLabelsResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsUpdateLabelsResponse".
+   * "`content#accountsUpdateLabelsResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccountsUpdateLabelsResponse setKind(java.lang.String kind) {

@@ -39,7 +39,7 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAcknowledgeResponse".
+   * "`content#ordersAcknowledgeResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAcknowledgeResponse".
+   * "`content#ordersAcknowledgeResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersAcknowledgeResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAcknowledgeResponse".
+   * "`content#ordersAcknowledgeResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersAcknowledgeResponse setKind(java.lang.String kind) {

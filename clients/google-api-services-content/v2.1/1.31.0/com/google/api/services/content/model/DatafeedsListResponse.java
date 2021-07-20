@@ -32,7 +32,7 @@ public final class DatafeedsListResponse extends com.google.api.client.json.Gene
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsListResponse".
+   * "`content#datafeedsListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class DatafeedsListResponse extends com.google.api.client.json.Gene
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsListResponse".
+   * "`content#datafeedsListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class DatafeedsListResponse extends com.google.api.client.json.Gene
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsListResponse".
+   * "`content#datafeedsListResponse`".
    * @param kind kind or {@code null} for none
    */
   public DatafeedsListResponse setKind(java.lang.String kind) {

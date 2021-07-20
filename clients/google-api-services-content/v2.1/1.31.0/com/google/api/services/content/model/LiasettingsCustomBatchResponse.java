@@ -39,7 +39,7 @@ public final class LiasettingsCustomBatchResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsCustomBatchResponse".
+   * "`content#liasettingsCustomBatchResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class LiasettingsCustomBatchResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsCustomBatchResponse".
+   * "`content#liasettingsCustomBatchResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class LiasettingsCustomBatchResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsCustomBatchResponse".
+   * "`content#liasettingsCustomBatchResponse`".
    * @param kind kind or {@code null} for none
    */
   public LiasettingsCustomBatchResponse setKind(java.lang.String kind) {

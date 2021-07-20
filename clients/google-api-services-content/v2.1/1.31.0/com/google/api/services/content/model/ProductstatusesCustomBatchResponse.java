@@ -39,7 +39,7 @@ public final class ProductstatusesCustomBatchResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productstatusesCustomBatchResponse".
+   * "`content#productstatusesCustomBatchResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ProductstatusesCustomBatchResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productstatusesCustomBatchResponse".
+   * "`content#productstatusesCustomBatchResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class ProductstatusesCustomBatchResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productstatusesCustomBatchResponse".
+   * "`content#productstatusesCustomBatchResponse`".
    * @param kind kind or {@code null} for none
    */
   public ProductstatusesCustomBatchResponse setKind(java.lang.String kind) {

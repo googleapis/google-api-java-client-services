@@ -16183,17 +16183,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The Content API Supplemental Feed ID. */
+      /**
+       * The Content API Supplemental Feed ID. If present then product deletion applies to the data
+       * in a supplemental feed. If absent, entire product will be deleted.
+       */
       @com.google.api.client.util.Key
       private java.math.BigInteger feedId;
 
-      /** The Content API Supplemental Feed ID.
+      /** The Content API Supplemental Feed ID. If present then product deletion applies to the data in a
+     supplemental feed. If absent, entire product will be deleted.
        */
       public java.math.BigInteger getFeedId() {
         return feedId;
       }
 
-      /** The Content API Supplemental Feed ID. */
+      /**
+       * The Content API Supplemental Feed ID. If present then product deletion applies to the data
+       * in a supplemental feed. If absent, entire product will be deleted.
+       */
       public Delete setFeedId(java.math.BigInteger feedId) {
         this.feedId = feedId;
         return this;
@@ -16474,17 +16481,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The Content API Supplemental Feed ID. */
+      /**
+       * The Content API Supplemental Feed ID. If present then product insertion applies to the data
+       * in a supplemental feed.
+       */
       @com.google.api.client.util.Key
       private java.math.BigInteger feedId;
 
-      /** The Content API Supplemental Feed ID.
+      /** The Content API Supplemental Feed ID. If present then product insertion applies to the data in a
+     supplemental feed.
        */
       public java.math.BigInteger getFeedId() {
         return feedId;
       }
 
-      /** The Content API Supplemental Feed ID. */
+      /**
+       * The Content API Supplemental Feed ID. If present then product insertion applies to the data
+       * in a supplemental feed.
+       */
       public Insert setFeedId(java.math.BigInteger feedId) {
         this.feedId = feedId;
         return this;

@@ -39,7 +39,7 @@ public final class OrderinvoicesCreateChargeInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateChargeInvoiceResponse".
+   * "`content#orderinvoicesCreateChargeInvoiceResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrderinvoicesCreateChargeInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateChargeInvoiceResponse".
+   * "`content#orderinvoicesCreateChargeInvoiceResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrderinvoicesCreateChargeInvoiceResponse extends com.google.a
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderinvoicesCreateChargeInvoiceResponse".
+   * "`content#orderinvoicesCreateChargeInvoiceResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrderinvoicesCreateChargeInvoiceResponse setKind(java.lang.String kind) {

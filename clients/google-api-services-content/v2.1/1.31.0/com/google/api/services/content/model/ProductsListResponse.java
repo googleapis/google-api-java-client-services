@@ -32,7 +32,7 @@ public final class ProductsListResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsListResponse".
+   * "`content#productsListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class ProductsListResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsListResponse".
+   * "`content#productsListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class ProductsListResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#productsListResponse".
+   * "`content#productsListResponse`".
    * @param kind kind or {@code null} for none
    */
   public ProductsListResponse setKind(java.lang.String kind) {

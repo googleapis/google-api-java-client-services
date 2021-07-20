@@ -32,7 +32,7 @@ public final class ReturnpolicyListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyListResponse".
+   * "`content#returnpolicyListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ReturnpolicyListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyListResponse".
+   * "`content#returnpolicyListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -61,7 +61,7 @@ public final class ReturnpolicyListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#returnpolicyListResponse".
+   * "`content#returnpolicyListResponse`".
    * @param kind kind or {@code null} for none
    */
   public ReturnpolicyListResponse setKind(java.lang.String kind) {

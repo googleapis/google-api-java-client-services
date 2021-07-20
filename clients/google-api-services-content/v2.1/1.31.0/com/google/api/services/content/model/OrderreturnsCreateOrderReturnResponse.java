@@ -39,7 +39,7 @@ public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsCreateOrderReturnResponse".
+   * "`content#orderreturnsCreateOrderReturnResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsCreateOrderReturnResponse".
+   * "`content#orderreturnsCreateOrderReturnResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -80,7 +80,7 @@ public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsCreateOrderReturnResponse".
+   * "`content#orderreturnsCreateOrderReturnResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrderreturnsCreateOrderReturnResponse setKind(java.lang.String kind) {

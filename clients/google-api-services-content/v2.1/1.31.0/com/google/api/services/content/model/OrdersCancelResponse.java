@@ -39,7 +39,7 @@ public final class OrdersCancelResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelResponse".
+   * "`content#ordersCancelResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersCancelResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelResponse".
+   * "`content#ordersCancelResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersCancelResponse extends com.google.api.client.json.Gener
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersCancelResponse".
+   * "`content#ordersCancelResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersCancelResponse setKind(java.lang.String kind) {

@@ -47,7 +47,7 @@ public final class AccountsAuthInfoResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsAuthInfoResponse".
+   * "`content#accountsAuthInfoResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class AccountsAuthInfoResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsAuthInfoResponse".
+   * "`content#accountsAuthInfoResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -85,7 +85,7 @@ public final class AccountsAuthInfoResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accountsAuthInfoResponse".
+   * "`content#accountsAuthInfoResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccountsAuthInfoResponse setKind(java.lang.String kind) {

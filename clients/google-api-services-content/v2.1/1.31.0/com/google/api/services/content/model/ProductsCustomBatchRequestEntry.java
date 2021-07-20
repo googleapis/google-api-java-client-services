@@ -38,7 +38,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   private java.lang.Long batchId;
 
   /**
-   * The Content API feed id.
+   * The Content API Supplemental Feed ID. If present then product insertion or deletion applies to
+   * a supplemental feed instead of primary Content API feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -102,7 +103,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The Content API feed id.
+   * The Content API Supplemental Feed ID. If present then product insertion or deletion applies to
+   * a supplemental feed instead of primary Content API feed.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getFeedId() {
@@ -110,7 +112,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The Content API feed id.
+   * The Content API Supplemental Feed ID. If present then product insertion or deletion applies to
+   * a supplemental feed instead of primary Content API feed.
    * @param feedId feedId or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setFeedId(java.math.BigInteger feedId) {

@@ -32,7 +32,7 @@ public final class SettlementreportsListResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#settlementreportsListResponse".
+   * "`content#settlementreportsListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class SettlementreportsListResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#settlementreportsListResponse".
+   * "`content#settlementreportsListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class SettlementreportsListResponse extends com.google.api.client.j
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#settlementreportsListResponse".
+   * "`content#settlementreportsListResponse`".
    * @param kind kind or {@code null} for none
    */
   public SettlementreportsListResponse setKind(java.lang.String kind) {

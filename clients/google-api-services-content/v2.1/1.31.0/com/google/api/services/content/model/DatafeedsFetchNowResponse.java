@@ -32,7 +32,7 @@ public final class DatafeedsFetchNowResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsFetchNowResponse".
+   * "`content#datafeedsFetchNowResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class DatafeedsFetchNowResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsFetchNowResponse".
+   * "`content#datafeedsFetchNowResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class DatafeedsFetchNowResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedsFetchNowResponse".
+   * "`content#datafeedsFetchNowResponse`".
    * @param kind kind or {@code null} for none
    */
   public DatafeedsFetchNowResponse setKind(java.lang.String kind) {

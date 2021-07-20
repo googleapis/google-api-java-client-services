@@ -33,6 +33,13 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class DeviceClaim extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Additional service registered for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String additionalService;
+
+  /**
    * The ID of the Customer that purchased the device.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String vacationModeStartTime;
+
+  /**
+   * The Additional service registered for the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdditionalService() {
+    return additionalService;
+  }
+
+  /**
+   * The Additional service registered for the device.
+   * @param additionalService additionalService or {@code null} for none
+   */
+  public DeviceClaim setAdditionalService(java.lang.String additionalService) {
+    this.additionalService = additionalService;
+    return this;
+  }
 
   /**
    * The ID of the Customer that purchased the device.

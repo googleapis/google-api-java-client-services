@@ -39,7 +39,7 @@ public final class OrderreturnsProcessResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsProcessResponse".
+   * "`content#orderreturnsProcessResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrderreturnsProcessResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsProcessResponse".
+   * "`content#orderreturnsProcessResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrderreturnsProcessResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#orderreturnsProcessResponse".
+   * "`content#orderreturnsProcessResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrderreturnsProcessResponse setKind(java.lang.String kind) {

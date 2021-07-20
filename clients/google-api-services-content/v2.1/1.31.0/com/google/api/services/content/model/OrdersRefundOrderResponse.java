@@ -39,7 +39,7 @@ public final class OrdersRefundOrderResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRefundOrderResponse".
+   * "`content#ordersRefundOrderResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersRefundOrderResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRefundOrderResponse".
+   * "`content#ordersRefundOrderResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersRefundOrderResponse extends com.google.api.client.json.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRefundOrderResponse".
+   * "`content#ordersRefundOrderResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersRefundOrderResponse setKind(java.lang.String kind) {

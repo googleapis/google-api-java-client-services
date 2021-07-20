@@ -32,7 +32,7 @@ public final class LiasettingsRequestInventoryVerificationResponse extends com.g
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsRequestInventoryVerificationResponse".
+   * "`content#liasettingsRequestInventoryVerificationResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class LiasettingsRequestInventoryVerificationResponse extends com.g
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsRequestInventoryVerificationResponse".
+   * "`content#liasettingsRequestInventoryVerificationResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class LiasettingsRequestInventoryVerificationResponse extends com.g
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsRequestInventoryVerificationResponse".
+   * "`content#liasettingsRequestInventoryVerificationResponse`".
    * @param kind kind or {@code null} for none
    */
   public LiasettingsRequestInventoryVerificationResponse setKind(java.lang.String kind) {

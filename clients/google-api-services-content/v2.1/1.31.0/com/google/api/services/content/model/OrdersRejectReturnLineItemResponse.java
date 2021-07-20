@@ -39,7 +39,7 @@ public final class OrdersRejectReturnLineItemResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRejectReturnLineItemResponse".
+   * "`content#ordersRejectReturnLineItemResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersRejectReturnLineItemResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRejectReturnLineItemResponse".
+   * "`content#ordersRejectReturnLineItemResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersRejectReturnLineItemResponse extends com.google.api.cli
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersRejectReturnLineItemResponse".
+   * "`content#ordersRejectReturnLineItemResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersRejectReturnLineItemResponse setKind(java.lang.String kind) {

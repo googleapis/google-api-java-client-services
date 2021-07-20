@@ -39,7 +39,7 @@ public final class OrdersUpdateMerchantOrderIdResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateMerchantOrderIdResponse".
+   * "`content#ordersUpdateMerchantOrderIdResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersUpdateMerchantOrderIdResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateMerchantOrderIdResponse".
+   * "`content#ordersUpdateMerchantOrderIdResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersUpdateMerchantOrderIdResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateMerchantOrderIdResponse".
+   * "`content#ordersUpdateMerchantOrderIdResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersUpdateMerchantOrderIdResponse setKind(java.lang.String kind) {

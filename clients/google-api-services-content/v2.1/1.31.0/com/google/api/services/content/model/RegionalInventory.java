@@ -53,7 +53,8 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#regionalInventory".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#regionalInventory`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#regionalInventory".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#regionalInventory`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -133,7 +135,8 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#regionalInventory".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#regionalInventory`".
    * @param kind kind or {@code null} for none
    */
   public RegionalInventory setKind(java.lang.String kind) {

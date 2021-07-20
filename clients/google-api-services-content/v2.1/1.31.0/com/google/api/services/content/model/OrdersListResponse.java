@@ -31,7 +31,8 @@ package com.google.api.services.content.model;
 public final class OrdersListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#ordersListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#ordersListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,8 @@ public final class OrdersListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#ordersListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#ordersListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -65,7 +67,8 @@ public final class OrdersListResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#ordersListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#ordersListResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersListResponse setKind(java.lang.String kind) {

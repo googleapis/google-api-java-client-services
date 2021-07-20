@@ -45,7 +45,7 @@ public final class ShippingsettingsGetSupportedCarriersResponse extends com.goog
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedCarriersResponse".
+   * "`content#shippingsettingsGetSupportedCarriersResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class ShippingsettingsGetSupportedCarriersResponse extends com.goog
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedCarriersResponse".
+   * "`content#shippingsettingsGetSupportedCarriersResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,7 +79,7 @@ public final class ShippingsettingsGetSupportedCarriersResponse extends com.goog
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedCarriersResponse".
+   * "`content#shippingsettingsGetSupportedCarriersResponse`".
    * @param kind kind or {@code null} for none
    */
   public ShippingsettingsGetSupportedCarriersResponse setKind(java.lang.String kind) {

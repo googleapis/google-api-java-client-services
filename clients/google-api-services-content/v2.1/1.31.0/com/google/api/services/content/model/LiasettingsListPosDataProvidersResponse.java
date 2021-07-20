@@ -32,7 +32,7 @@ public final class LiasettingsListPosDataProvidersResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListPosDataProvidersResponse".
+   * "`content#liasettingsListPosDataProvidersResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class LiasettingsListPosDataProvidersResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListPosDataProvidersResponse".
+   * "`content#liasettingsListPosDataProvidersResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -56,7 +56,7 @@ public final class LiasettingsListPosDataProvidersResponse extends com.google.ap
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#liasettingsListPosDataProvidersResponse".
+   * "`content#liasettingsListPosDataProvidersResponse`".
    * @param kind kind or {@code null} for none
    */
   public LiasettingsListPosDataProvidersResponse setKind(java.lang.String kind) {

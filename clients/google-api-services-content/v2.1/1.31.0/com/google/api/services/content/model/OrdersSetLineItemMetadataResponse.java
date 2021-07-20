@@ -39,7 +39,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersSetLineItemMetadataResponse".
+   * "`content#ordersSetLineItemMetadataResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersSetLineItemMetadataResponse".
+   * "`content#ordersSetLineItemMetadataResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class OrdersSetLineItemMetadataResponse extends com.google.api.clie
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersSetLineItemMetadataResponse".
+   * "`content#ordersSetLineItemMetadataResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersSetLineItemMetadataResponse setKind(java.lang.String kind) {

@@ -32,7 +32,7 @@ package com.google.api.services.content.model;
 public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
-   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * Output only. How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.util.List<AccountYouTubeChannelLink> youtubeChannelLinks;
 
   /**
-   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * Output only. How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountManagement() {
@@ -153,7 +153,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
+   * Output only. How the account is managed. Acceptable values are: - "`manual`" - "`automatic`"
    * @param accountManagement accountManagement or {@code null} for none
    */
   public Account setAccountManagement(java.lang.String accountManagement) {
@@ -289,7 +289,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -297,7 +297,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "`content#account`"
+   * Identifies what kind of resource this is. Value: the fixed string "`content#account`".
    * @param kind kind or {@code null} for none
    */
   public Account setKind(java.lang.String kind) {

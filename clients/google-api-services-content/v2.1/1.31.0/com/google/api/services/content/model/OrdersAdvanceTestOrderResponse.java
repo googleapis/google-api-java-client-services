@@ -32,7 +32,7 @@ public final class OrdersAdvanceTestOrderResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAdvanceTestOrderResponse".
+   * "`content#ordersAdvanceTestOrderResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class OrdersAdvanceTestOrderResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAdvanceTestOrderResponse".
+   * "`content#ordersAdvanceTestOrderResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -49,7 +49,7 @@ public final class OrdersAdvanceTestOrderResponse extends com.google.api.client.
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersAdvanceTestOrderResponse".
+   * "`content#ordersAdvanceTestOrderResponse`".
    * @param kind kind or {@code null} for none
    */
   public OrdersAdvanceTestOrderResponse setKind(java.lang.String kind) {

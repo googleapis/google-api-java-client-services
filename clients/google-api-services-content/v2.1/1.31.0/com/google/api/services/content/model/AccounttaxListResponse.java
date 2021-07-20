@@ -32,7 +32,7 @@ public final class AccounttaxListResponse extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxListResponse".
+   * "`content#accounttaxListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class AccounttaxListResponse extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxListResponse".
+   * "`content#accounttaxListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -68,7 +68,7 @@ public final class AccounttaxListResponse extends com.google.api.client.json.Gen
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#accounttaxListResponse".
+   * "`content#accounttaxListResponse`".
    * @param kind kind or {@code null} for none
    */
   public AccounttaxListResponse setKind(java.lang.String kind) {

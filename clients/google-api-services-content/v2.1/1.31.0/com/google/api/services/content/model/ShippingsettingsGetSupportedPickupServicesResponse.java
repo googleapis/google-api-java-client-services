@@ -32,7 +32,7 @@ public final class ShippingsettingsGetSupportedPickupServicesResponse extends co
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedPickupServicesResponse".
+   * "`content#shippingsettingsGetSupportedPickupServicesResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ShippingsettingsGetSupportedPickupServicesResponse extends co
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedPickupServicesResponse".
+   * "`content#shippingsettingsGetSupportedPickupServicesResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -62,7 +62,7 @@ public final class ShippingsettingsGetSupportedPickupServicesResponse extends co
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#shippingsettingsGetSupportedPickupServicesResponse".
+   * "`content#shippingsettingsGetSupportedPickupServicesResponse`".
    * @param kind kind or {@code null} for none
    */
   public ShippingsettingsGetSupportedPickupServicesResponse setKind(java.lang.String kind) {

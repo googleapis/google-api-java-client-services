@@ -39,7 +39,7 @@ public final class DatafeedstatusesCustomBatchResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesCustomBatchResponse".
+   * "`content#datafeedstatusesCustomBatchResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class DatafeedstatusesCustomBatchResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesCustomBatchResponse".
+   * "`content#datafeedstatusesCustomBatchResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -73,7 +73,7 @@ public final class DatafeedstatusesCustomBatchResponse extends com.google.api.cl
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#datafeedstatusesCustomBatchResponse".
+   * "`content#datafeedstatusesCustomBatchResponse`".
    * @param kind kind or {@code null} for none
    */
   public DatafeedstatusesCustomBatchResponse setKind(java.lang.String kind) {

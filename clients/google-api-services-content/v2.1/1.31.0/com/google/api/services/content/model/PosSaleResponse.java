@@ -52,7 +52,7 @@ public final class PosSaleResponse extends com.google.api.client.json.GenericJso
   private java.lang.String itemId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSaleResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSaleResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class PosSaleResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSaleResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSaleResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -161,7 +161,7 @@ public final class PosSaleResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posSaleResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posSaleResponse`".
    * @param kind kind or {@code null} for none
    */
   public PosSaleResponse setKind(java.lang.String kind) {

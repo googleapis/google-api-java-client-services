@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class PosListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posListResponse`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class PosListResponse extends com.google.api.client.json.GenericJso
   private java.util.List<PosStore> resources;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posListResponse`".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -52,7 +52,7 @@ public final class PosListResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posListResponse".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posListResponse`".
    * @param kind kind or {@code null} for none
    */
   public PosListResponse setKind(java.lang.String kind) {

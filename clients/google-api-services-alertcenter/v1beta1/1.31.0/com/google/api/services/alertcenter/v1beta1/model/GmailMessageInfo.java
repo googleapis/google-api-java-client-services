@@ -38,7 +38,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> attachmentsSha256Hash;
 
   /**
-   * The date the malicious email was sent.
+   * The date of the event related to this email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The date the malicious email was sent.
+   * The date of the event related to this email.
    * @return value or {@code null} for none
    */
   public String getDate() {
@@ -112,7 +112,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The date the malicious email was sent.
+   * The date of the event related to this email.
    * @param date date or {@code null} for none
    */
   public GmailMessageInfo setDate(String date) {

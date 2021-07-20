@@ -4296,7 +4296,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent of the collection of `WorkerPools`. Format:
-         *        `projects/{project}/locations/location`.
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4323,7 +4323,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent of the collection of `WorkerPools`. Format:
-         *        `projects/{project}/locations/location`.
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4403,13 +4403,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The parent of the collection of `WorkerPools`. Format:
-           * `projects/{project}/locations/location`.
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent of the collection of `WorkerPools`. Format:
-         `projects/{project}/locations/location`.
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4417,7 +4417,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The parent of the collection of `WorkerPools`. Format:
-           * `projects/{project}/locations/location`.
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

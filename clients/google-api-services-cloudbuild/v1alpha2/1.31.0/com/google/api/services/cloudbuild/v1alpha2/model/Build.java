@@ -68,6 +68,13 @@ public final class Build extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Contains information about the build when status=FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FailureInfo failureInfo;
+
+  /**
    * Output only. Time at which execution of the build was finished. The difference between
    * finish_time and start_time is the duration of the build's execution.
    * The value may be {@code null}.
@@ -316,6 +323,23 @@ public final class Build extends com.google.api.client.json.GenericJson {
    */
   public Build setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Contains information about the build when status=FAILURE.
+   * @return value or {@code null} for none
+   */
+  public FailureInfo getFailureInfo() {
+    return failureInfo;
+  }
+
+  /**
+   * Output only. Contains information about the build when status=FAILURE.
+   * @param failureInfo failureInfo or {@code null} for none
+   */
+  public Build setFailureInfo(FailureInfo failureInfo) {
+    this.failureInfo = failureInfo;
     return this;
   }
 

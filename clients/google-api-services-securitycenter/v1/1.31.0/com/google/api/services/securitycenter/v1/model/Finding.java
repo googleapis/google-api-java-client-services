@@ -80,6 +80,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String externalUri;
 
   /**
+   * The class of the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String findingClass;
+
+  /**
+   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * This is an artifact observed on a network or in an operating system that, with high confidence,
+   * indicates a computer intrusion. Reference:
+   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Indicator indicator;
+
+  /**
    * The relative resource name of this finding. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
    * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
@@ -244,6 +261,46 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setExternalUri(java.lang.String externalUri) {
     this.externalUri = externalUri;
+    return this;
+  }
+
+  /**
+   * The class of the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFindingClass() {
+    return findingClass;
+  }
+
+  /**
+   * The class of the finding.
+   * @param findingClass findingClass or {@code null} for none
+   */
+  public Finding setFindingClass(java.lang.String findingClass) {
+    this.findingClass = findingClass;
+    return this;
+  }
+
+  /**
+   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * This is an artifact observed on a network or in an operating system that, with high confidence,
+   * indicates a computer intrusion. Reference:
+   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * @return value or {@code null} for none
+   */
+  public Indicator getIndicator() {
+    return indicator;
+  }
+
+  /**
+   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * This is an artifact observed on a network or in an operating system that, with high confidence,
+   * indicates a computer intrusion. Reference:
+   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * @param indicator indicator or {@code null} for none
+   */
+  public Finding setIndicator(Indicator indicator) {
+    this.indicator = indicator;
     return this;
   }
 

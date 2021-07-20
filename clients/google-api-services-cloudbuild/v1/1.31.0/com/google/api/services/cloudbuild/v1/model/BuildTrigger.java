@@ -144,6 +144,16 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceName;
 
   /**
+   * The repo and ref of the repository from which to build. This field is used only for those
+   * triggers that do not respond to SCM events. Triggers that respond to such events build source
+   * at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub,
+   * Manual, and Cron triggers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitRepoSource sourceToBuild;
+
+  /**
    * Substitutions for Build resource. The keys must match the following regular expression:
    * `^_[A-Z0-9_]+$`.
    * The value may be {@code null}.
@@ -442,6 +452,29 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * The repo and ref of the repository from which to build. This field is used only for those
+   * triggers that do not respond to SCM events. Triggers that respond to such events build source
+   * at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub,
+   * Manual, and Cron triggers.
+   * @return value or {@code null} for none
+   */
+  public GitRepoSource getSourceToBuild() {
+    return sourceToBuild;
+  }
+
+  /**
+   * The repo and ref of the repository from which to build. This field is used only for those
+   * triggers that do not respond to SCM events. Triggers that respond to such events build source
+   * at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub,
+   * Manual, and Cron triggers.
+   * @param sourceToBuild sourceToBuild or {@code null} for none
+   */
+  public BuildTrigger setSourceToBuild(GitRepoSource sourceToBuild) {
+    this.sourceToBuild = sourceToBuild;
     return this;
   }
 

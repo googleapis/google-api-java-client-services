@@ -70,6 +70,16 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
   private String maxWaitTime;
 
   /**
+   * Optional. Job scheduling will be based on this priority, which in the range [0, 1000]. The
+   * bigger the number, the higher the priority. Default to 0 if not set. If there are multiple jobs
+   * requesting same type of accelerators, the high priority job will be scheduled prior to ones
+   * with low priority.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer priority;
+
+  /**
    * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine
    * fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven
    * days). If the training job is still running after this duration, AI Platform Training cancels
@@ -150,6 +160,29 @@ public final class GoogleCloudMlV1Scheduling extends com.google.api.client.json.
    */
   public GoogleCloudMlV1Scheduling setMaxWaitTime(String maxWaitTime) {
     this.maxWaitTime = maxWaitTime;
+    return this;
+  }
+
+  /**
+   * Optional. Job scheduling will be based on this priority, which in the range [0, 1000]. The
+   * bigger the number, the higher the priority. Default to 0 if not set. If there are multiple jobs
+   * requesting same type of accelerators, the high priority job will be scheduled prior to ones
+   * with low priority.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPriority() {
+    return priority;
+  }
+
+  /**
+   * Optional. Job scheduling will be based on this priority, which in the range [0, 1000]. The
+   * bigger the number, the higher the priority. Default to 0 if not set. If there are multiple jobs
+   * requesting same type of accelerators, the high priority job will be scheduled prior to ones
+   * with low priority.
+   * @param priority priority or {@code null} for none
+   */
+  public GoogleCloudMlV1Scheduling setPriority(java.lang.Integer priority) {
+    this.priority = priority;
     return this;
   }
 

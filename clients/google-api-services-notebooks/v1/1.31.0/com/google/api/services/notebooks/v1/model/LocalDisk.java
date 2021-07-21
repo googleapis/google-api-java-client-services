@@ -30,28 +30,28 @@ package com.google.api.services.notebooks.v1.model;
 public final class LocalDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but
-   * not when the disk is detached from the instance).
+   * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is
+   * deleted (but not when the disk is detached from the instance).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoDelete;
 
   /**
-   * Output only. Indicates that this is a boot disk. The virtual machine will use the first
-   * partition of the disk for its root filesystem.
+   * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the
+   * first partition of the disk for its root filesystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boot;
 
   /**
-   * Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. This name can be
-   * used to reference the device for mounting, resizing, and so on, from within the instance. If
-   * not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
-   * applicable for persistent disks.
+   * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * name can be used to reference the device for mounting, resizing, and so on, from within the
+   * instance. If not specified, the server chooses a default device name to apply to this disk, in
+   * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
+   * is only applicable for persistent disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,19 +67,18 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   private java.util.List<RuntimeGuestOsFeature> guestOsFeatures;
 
   /**
-   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
-   * disk. If you have many disks attached to an instance, each disk would have a unique index
-   * number.
+   * Output only. A zero-based index to this disk, where 0 is reserved for the boot disk. If you
+   * have many disks attached to an instance, each disk would have a unique index number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside
-   * the new instance. Use initialization parameters to create boot disks or local SSDs attached to
-   * the new instance. This property is mutually exclusive with the source property; you can only
-   * define one or the other, but not both.
+   * Input only. Specifies the parameters for a new disk that will be created alongside the new
+   * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
+   * instance. This property is mutually exclusive with the source property; you can only define one
+   * or the other, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +103,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * Output only. Any valid publicly visible licenses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +133,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but
-   * not when the disk is detached from the instance).
+   * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is
+   * deleted (but not when the disk is detached from the instance).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoDelete() {
@@ -143,8 +142,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but
-   * not when the disk is detached from the instance).
+   * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is
+   * deleted (but not when the disk is detached from the instance).
    * @param autoDelete autoDelete or {@code null} for none
    */
   public LocalDisk setAutoDelete(java.lang.Boolean autoDelete) {
@@ -153,8 +152,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates that this is a boot disk. The virtual machine will use the first
-   * partition of the disk for its root filesystem.
+   * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the
+   * first partition of the disk for its root filesystem.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoot() {
@@ -162,8 +161,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates that this is a boot disk. The virtual machine will use the first
-   * partition of the disk for its root filesystem.
+   * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the
+   * first partition of the disk for its root filesystem.
    * @param boot boot or {@code null} for none
    */
   public LocalDisk setBoot(java.lang.Boolean boot) {
@@ -172,12 +171,12 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. This name can be
-   * used to reference the device for mounting, resizing, and so on, from within the instance. If
-   * not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
-   * applicable for persistent disks.
+   * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * name can be used to reference the device for mounting, resizing, and so on, from within the
+   * instance. If not specified, the server chooses a default device name to apply to this disk, in
+   * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
+   * is only applicable for persistent disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceName() {
@@ -185,12 +184,12 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. This name can be
-   * used to reference the device for mounting, resizing, and so on, from within the instance. If
-   * not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
-   * applicable for persistent disks.
+   * Optional. Output only. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This
+   * name can be used to reference the device for mounting, resizing, and so on, from within the
+   * instance. If not specified, the server chooses a default device name to apply to this disk, in
+   * the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field
+   * is only applicable for persistent disks.
    * @param deviceName deviceName or {@code null} for none
    */
   public LocalDisk setDeviceName(java.lang.String deviceName) {
@@ -220,9 +219,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
-   * disk. If you have many disks attached to an instance, each disk would have a unique index
-   * number.
+   * Output only. A zero-based index to this disk, where 0 is reserved for the boot disk. If you
+   * have many disks attached to an instance, each disk would have a unique index number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -230,9 +228,8 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
-   * disk. If you have many disks attached to an instance, each disk would have a unique index
-   * number.
+   * Output only. A zero-based index to this disk, where 0 is reserved for the boot disk. If you
+   * have many disks attached to an instance, each disk would have a unique index number.
    * @param index index or {@code null} for none
    */
   public LocalDisk setIndex(java.lang.Integer index) {
@@ -241,10 +238,10 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside
-   * the new instance. Use initialization parameters to create boot disks or local SSDs attached to
-   * the new instance. This property is mutually exclusive with the source property; you can only
-   * define one or the other, but not both.
+   * Input only. Specifies the parameters for a new disk that will be created alongside the new
+   * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
+   * instance. This property is mutually exclusive with the source property; you can only define one
+   * or the other, but not both.
    * @return value or {@code null} for none
    */
   public LocalDiskInitializeParams getInitializeParams() {
@@ -252,10 +249,10 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. [Input Only] Specifies the parameters for a new disk that will be created alongside
-   * the new instance. Use initialization parameters to create boot disks or local SSDs attached to
-   * the new instance. This property is mutually exclusive with the source property; you can only
-   * define one or the other, but not both.
+   * Input only. Specifies the parameters for a new disk that will be created alongside the new
+   * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
+   * instance. This property is mutually exclusive with the source property; you can only define one
+   * or the other, but not both.
    * @param initializeParams initializeParams or {@code null} for none
    */
   public LocalDisk setInitializeParams(LocalDiskInitializeParams initializeParams) {
@@ -306,7 +303,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * Output only. Any valid publicly visible licenses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLicenses() {
@@ -314,7 +311,7 @@ public final class LocalDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * Output only. Any valid publicly visible licenses.
    * @param licenses licenses or {@code null} for none
    */
   public LocalDisk setLicenses(java.util.List<java.lang.String> licenses) {

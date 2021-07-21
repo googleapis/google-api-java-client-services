@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Response listing all bundles.
+ * Response listing all app bundles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class BundlesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * All bundles.
+   * All app bundles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   private java.lang.String kind;
 
   /**
-   * All bundles.
+   * All app bundles.
    * @return value or {@code null} for none
    */
   public java.util.List<Bundle> getBundles() {
@@ -59,7 +59,7 @@ public final class BundlesListResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * All bundles.
+   * All app bundles.
    * @param bundles bundles or {@code null} for none
    */
   public BundlesListResponse setBundles(java.util.List<Bundle> bundles) {

@@ -48,7 +48,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * Required. Immutable. The type for the custom metric's value.
+   * Required. The type for the custom metric's value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   }
 
   /**
-   * Required. Immutable. The type for the custom metric's value.
+   * Required. The type for the custom metric's value.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementUnit() {
@@ -127,7 +127,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   }
 
   /**
-   * Required. Immutable. The type for the custom metric's value.
+   * Required. The type for the custom metric's value.
    * @param measurementUnit measurementUnit or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaCustomMetric setMeasurementUnit(java.lang.String measurementUnit) {

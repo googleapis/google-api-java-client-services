@@ -30,7 +30,7 @@ package com.google.api.services.people.v1.model;
 public final class FieldMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the field is the primary field; false if the field is a secondary field.
+   * True if the field is the primary field for the person.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +44,13 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   private Source source;
 
   /**
+   * True if the field is the primary field for the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sourcePrimary;
+
+  /**
    * Output only. True if the field is verified; false if the field is unverified. A verified field
    * is typically a name, email address, phone number, or website that has been confirmed to be
    * owned by the person.
@@ -53,7 +60,7 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean verified;
 
   /**
-   * True if the field is the primary field; false if the field is a secondary field.
+   * True if the field is the primary field for the person.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrimary() {
@@ -61,7 +68,7 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is the primary field; false if the field is a secondary field.
+   * True if the field is the primary field for the person.
    * @param primary primary or {@code null} for none
    */
   public FieldMetadata setPrimary(java.lang.Boolean primary) {
@@ -83,6 +90,23 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
    */
   public FieldMetadata setSource(Source source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * True if the field is the primary field for the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSourcePrimary() {
+    return sourcePrimary;
+  }
+
+  /**
+   * True if the field is the primary field for the source.
+   * @param sourcePrimary sourcePrimary or {@code null} for none
+   */
+  public FieldMetadata setSourcePrimary(java.lang.Boolean sourcePrimary) {
+    this.sourcePrimary = sourcePrimary;
     return this;
   }
 

@@ -17,10 +17,9 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * Specifies the selection and config of software inside the runtime. / The properties to set on
- * runtime. Properties keys are specified in `key:value` format, for example: * idle_shutdown:
- * idle_shutdown=true * idle_shutdown_timeout: idle_shutdown_timeout=180 * report-system-health:
- * report-system-health=true
+ * Specifies the selection and configuration of software inside the runtime. The properties to set
+ * on runtime. Properties keys are specified in `key:value` format, for example: * `idle_shutdown:
+ * true` * `idle_shutdown_timeout: 180` * `report-system-health: true`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:

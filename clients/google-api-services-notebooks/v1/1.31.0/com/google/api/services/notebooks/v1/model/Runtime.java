@@ -59,7 +59,7 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the runtime. Format:
-   * `projects/{project}/locations/{location}/runtimes/{runtime}`
+   * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the runtime. Format:
-   * `projects/{project}/locations/{location}/runtimes/{runtime}`
+   * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,7 +172,7 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the runtime. Format:
-   * `projects/{project}/locations/{location}/runtimes/{runtime}`
+   * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
    * @param name name or {@code null} for none
    */
   public Runtime setName(java.lang.String name) {

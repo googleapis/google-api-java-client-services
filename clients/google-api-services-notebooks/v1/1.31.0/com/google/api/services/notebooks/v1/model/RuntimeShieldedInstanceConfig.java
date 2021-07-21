@@ -17,7 +17,8 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * A set of Shielded Instance options. Check [Images using supported Shielded VM features] Not all
+ * A set of Shielded Instance options. Check [Images using supported Shielded VM
+ * features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm). Not all
  * combinations are valid.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

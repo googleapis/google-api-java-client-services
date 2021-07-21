@@ -25,7 +25,7 @@ package com.google.api.services.directory;
  *
  * <p>
  * For more information about this service, see the
- * <a href="http://developers.google.com/admin-sdk/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/admin-sdk/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -153,7 +153,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Asps {
 
     /**
-     * Delete an ASP issued by a user.
+     * Deletes an ASP issued by a user.
      *
      * Create a request for the method "asps.delete".
      *
@@ -176,7 +176,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/asps/{codeId}";
 
       /**
-       * Delete an ASP issued by a user.
+       * Deletes an ASP issued by a user.
        *
        * Create a request for the method "asps.delete".
        *
@@ -296,7 +296,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Get information about an ASP issued by a user.
+     * Gets information about an ASP issued by a user.
      *
      * Create a request for the method "asps.get".
      *
@@ -319,7 +319,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/asps/{codeId}";
 
       /**
-       * Get information about an ASP issued by a user.
+       * Gets information about an ASP issued by a user.
        *
        * Create a request for the method "asps.get".
        *
@@ -449,7 +449,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * List the ASPs issued by a user.
+     * Lists the ASPs issued by a user.
      *
      * Create a request for the method "asps.list".
      *
@@ -471,7 +471,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/asps";
 
       /**
-       * List the ASPs issued by a user.
+       * Lists the ASPs issued by a user.
        *
        * Create a request for the method "asps.list".
        *
@@ -606,7 +606,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Channels {
 
     /**
-     * Stop watching resources through this channel.
+     * Stops watching resources through this channel.
      *
      * Create a request for the method "channels.stop".
      *
@@ -627,7 +627,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory_v1/channels/stop";
 
       /**
-       * Stop watching resources through this channel.
+       * Stops watching resources through this channel.
        *
        * Create a request for the method "channels.stop".
        *
@@ -1362,7 +1362,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Move or insert multiple Chrome OS devices to an organizational unit. You can move up to 50
+     * Moves or inserts multiple Chrome OS devices to an organizational unit. You can move up to 50
      * devices at once.
      *
      * Create a request for the method "chromeosdevices.moveDevicesToOu".
@@ -1386,7 +1386,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu";
 
       /**
-       * Move or insert multiple Chrome OS devices to an organizational unit. You can move up to 50
+       * Moves or inserts multiple Chrome OS devices to an organizational unit. You can move up to 50
        * devices at once.
        *
        * Create a request for the method "chromeosdevices.moveDevicesToOu".
@@ -2396,7 +2396,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Patch Customers via Apiary Patch Orchestration
+     * Patches a customer.
      *
      * Create a request for the method "customers.patch".
      *
@@ -2418,7 +2418,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customers/{customerKey}";
 
       /**
-       * Patch Customers via Apiary Patch Orchestration
+       * Patches a customer.
        *
        * Create a request for the method "customers.patch".
        *
@@ -5462,7 +5462,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieve all groups of a domain or of a user given a userKey (paginated)
+     * Retrieves all groups of a domain or of a user given a userKey (paginated).
      *
      * Create a request for the method "groups.list".
      *
@@ -5482,7 +5482,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/groups";
 
       /**
-       * Retrieve all groups of a domain or of a user given a userKey (paginated)
+       * Retrieves all groups of a domain or of a user given a userKey (paginated).
        *
        * Create a request for the method "groups.list".
        *
@@ -10122,7 +10122,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Patches a building via Apiary Patch Orchestration.
+       * Patches a building.
        *
        * Create a request for the method "buildings.patch".
        *
@@ -10146,7 +10146,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "admin/directory/v1/customer/{customer}/resources/buildings/{buildingId}";
 
         /**
-         * Patches a building via Apiary Patch Orchestration.
+         * Patches a building.
          *
          * Create a request for the method "buildings.patch".
          *
@@ -11132,7 +11132,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Patches a calendar resource via Apiary Patch Orchestration.
+       * Patches a calendar resource.
        *
        * Create a request for the method "calendars.patch".
        *
@@ -11156,7 +11156,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "admin/directory/v1/customer/{customer}/resources/calendars/{calendarResourceId}";
 
         /**
-         * Patches a calendar resource via Apiary Patch Orchestration.
+         * Patches a calendar resource.
          *
          * Create a request for the method "calendars.patch".
          *
@@ -12040,7 +12040,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Patches a feature via Apiary Patch Orchestration.
+       * Patches a feature.
        *
        * Create a request for the method "features.patch".
        *
@@ -12064,7 +12064,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "admin/directory/v1/customer/{customer}/resources/features/{featureKey}";
 
         /**
-         * Patches a feature via Apiary Patch Orchestration.
+         * Patches a feature.
          *
          * Create a request for the method "features.patch".
          *
@@ -12633,7 +12633,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieve a role assignment.
+     * Retrieves a role assignment.
      *
      * Create a request for the method "roleAssignments.get".
      *
@@ -12655,7 +12655,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}";
 
       /**
-       * Retrieve a role assignment.
+       * Retrieves a role assignment.
        *
        * Create a request for the method "roleAssignments.get".
        *
@@ -13678,7 +13678,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Patch role via Apiary Patch Orchestration
+     * Patches a role.
      *
      * Create a request for the method "roles.patch".
      *
@@ -13701,7 +13701,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customer}/roles/{roleId}";
 
       /**
-       * Patch role via Apiary Patch Orchestration
+       * Patches a role.
        *
        * Create a request for the method "roles.patch".
        *
@@ -13973,7 +13973,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Schemas {
 
     /**
-     * Delete schema
+     * Deletes a schema.
      *
      * Create a request for the method "schemas.delete".
      *
@@ -13995,7 +13995,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas/{schemaKey}";
 
       /**
-       * Delete schema
+       * Deletes a schema.
        *
        * Create a request for the method "schemas.delete".
        *
@@ -14107,7 +14107,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieve schema
+     * Retrieves a schema.
      *
      * Create a request for the method "schemas.get".
      *
@@ -14129,7 +14129,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas/{schemaKey}";
 
       /**
-       * Retrieve schema
+       * Retrieves a schema.
        *
        * Create a request for the method "schemas.get".
        *
@@ -14251,7 +14251,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Create schema.
+     * Creates a schema.
      *
      * Create a request for the method "schemas.insert".
      *
@@ -14273,7 +14273,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas";
 
       /**
-       * Create schema.
+       * Creates a schema.
        *
        * Create a request for the method "schemas.insert".
        *
@@ -14372,7 +14372,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Retrieve all schemas for a customer
+     * Retrieves all schemas for a customer.
      *
      * Create a request for the method "schemas.list".
      *
@@ -14393,7 +14393,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas";
 
       /**
-       * Retrieve all schemas for a customer
+       * Retrieves all schemas for a customer.
        *
        * Create a request for the method "schemas.list".
        *
@@ -14497,7 +14497,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Patch Schema via Apiary Patch Orchestration
+     * Patches a schema.
      *
      * Create a request for the method "schemas.patch".
      *
@@ -14520,7 +14520,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas/{schemaKey}";
 
       /**
-       * Patch Schema via Apiary Patch Orchestration
+       * Patches a schema.
        *
        * Create a request for the method "schemas.patch".
        *
@@ -14633,7 +14633,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Update schema
+     * Updates a schema.
      *
      * Create a request for the method "schemas.update".
      *
@@ -14656,7 +14656,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/schemas/{schemaKey}";
 
       /**
-       * Update schema
+       * Updates a schema.
        *
        * Create a request for the method "schemas.update".
        *
@@ -14792,7 +14792,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Tokens {
 
     /**
-     * Delete all access tokens issued by a user for an application.
+     * Deletes all access tokens issued by a user for an application.
      *
      * Create a request for the method "tokens.delete".
      *
@@ -14815,7 +14815,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/tokens/{clientId}";
 
       /**
-       * Delete all access tokens issued by a user for an application.
+       * Deletes all access tokens issued by a user for an application.
        *
        * Create a request for the method "tokens.delete".
        *
@@ -14935,7 +14935,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Get information about an access token issued by a user.
+     * Gets information about an access token issued by a user.
      *
      * Create a request for the method "tokens.get".
      *
@@ -14958,7 +14958,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/tokens/{clientId}";
 
       /**
-       * Get information about an access token issued by a user.
+       * Gets information about an access token issued by a user.
        *
        * Create a request for the method "tokens.get".
        *
@@ -15245,7 +15245,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class TwoStepVerification {
 
     /**
-     * Turn off 2-Step Verification for user.
+     * Turns off 2-Step Verification for user.
      *
      * Create a request for the method "twoStepVerification.turnOff".
      *
@@ -15267,7 +15267,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/twoStepVerification/turnOff";
 
       /**
-       * Turn off 2-Step Verification for user.
+       * Turns off 2-Step Verification for user.
        *
        * Create a request for the method "twoStepVerification.turnOff".
        *
@@ -16423,8 +16423,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Sign a user out of all web and device sessions and reset their sign-in cookies. User will have to
-     * sign in by authenticating again.
+     * Signs a user out of all web and device sessions and reset their sign-in cookies. User will have
+     * to sign in by authenticating again.
      *
      * Create a request for the method "users.signOut".
      *
@@ -16446,7 +16446,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/signOut";
 
       /**
-       * Sign a user out of all web and device sessions and reset their sign-in cookies. User will have
+       * Signs a user out of all web and device sessions and reset their sign-in cookies. User will have
        * to sign in by authenticating again.
        *
        * Create a request for the method "users.signOut".
@@ -16798,7 +16798,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Watch for changes in users list
+     * Watches for changes in users list.
      *
      * Create a request for the method "users.watch".
      *
@@ -16819,7 +16819,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/watch";
 
       /**
-       * Watch for changes in users list
+       * Watches for changes in users list.
        *
        * Create a request for the method "users.watch".
        *
@@ -17566,7 +17566,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Watch for changes in users list.
+       * Watches for changes in users list.
        *
        * Create a request for the method "aliases.watch".
        *
@@ -17588,7 +17588,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "admin/directory/v1/users/{userKey}/aliases/watch";
 
         /**
-         * Watch for changes in users list.
+         * Watches for changes in users list.
          *
          * Create a request for the method "aliases.watch".
          *
@@ -18259,7 +18259,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class VerificationCodes {
 
     /**
-     * Generate new backup verification codes for the user.
+     * Generates new backup verification codes for the user.
      *
      * Create a request for the method "verificationCodes.generate".
      *
@@ -18280,7 +18280,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/verificationCodes/generate";
 
       /**
-       * Generate new backup verification codes for the user.
+       * Generates new backup verification codes for the user.
        *
        * Create a request for the method "verificationCodes.generate".
        *
@@ -18375,7 +18375,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Invalidate the current backup verification codes for the user.
+     * Invalidates the current backup verification codes for the user.
      *
      * Create a request for the method "verificationCodes.invalidate".
      *
@@ -18396,7 +18396,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users/{userKey}/verificationCodes/invalidate";
 
       /**
-       * Invalidate the current backup verification codes for the user.
+       * Invalidates the current backup verification codes for the user.
        *
        * Create a request for the method "verificationCodes.invalidate".
        *

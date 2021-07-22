@@ -153,7 +153,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
   public class Customers {
 
     /**
-     * Get a customer account. Use this operation to see a customer account already in your reseller
+     * Gets a customer account. Use this operation to see a customer account already in your reseller
      * management, or to see the minimal account information for an existing customer that you do not
      * manage. For more information about the API response for existing customers, see [retrieving a
      * customer account](/admin-sdk/reseller/v1/how-tos/manage_customers#get_customer).
@@ -179,7 +179,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}";
 
       /**
-       * Get a customer account. Use this operation to see a customer account already in your reseller
+       * Gets a customer account. Use this operation to see a customer account already in your reseller
        * management, or to see the minimal account information for an existing customer that you do not
        * manage. For more information about the API response for existing customers, see [retrieving a
        * customer account](/admin-sdk/reseller/v1/how-tos/manage_customers#get_customer).
@@ -298,7 +298,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Order a new customer's account. Before ordering a new customer account, establish whether the
+     * Orders a new customer's account. Before ordering a new customer account, establish whether the
      * customer account already exists using the [`customers.get`](/admin-
      * sdk/reseller/v1/reference/customers/get) If the customer account exists as a direct Google
      * account or as a resold customer account from another reseller, use the `customerAuthToken\` as
@@ -331,7 +331,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers";
 
       /**
-       * Order a new customer's account. Before ordering a new customer account, establish whether the
+       * Orders a new customer's account. Before ordering a new customer account, establish whether the
        * customer account already exists using the [`customers.get`](/admin-
        * sdk/reseller/v1/reference/customers/get) If the customer account exists as a direct Google
        * account or as a resold customer account from another reseller, use the `customerAuthToken\` as
@@ -452,7 +452,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a customer account's settings. This method supports patch semantics.
+     * Updates a customer account's settings. This method supports patch semantics. You cannot update
+     * `customerType` via the Reseller API, but a `"team"` customer can verify their domain and become
+     * `customerType = "domain"`. For more information, see [Verify your domain to unlock Essentials
+     * features](https://support.google.com/a/answer/9122284).
      *
      * Create a request for the method "customers.patch".
      *
@@ -476,7 +479,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}";
 
       /**
-       * Update a customer account's settings. This method supports patch semantics.
+       * Updates a customer account's settings. This method supports patch semantics. You cannot update
+       * `customerType` via the Reseller API, but a `"team"` customer can verify their domain and become
+       * `customerType = "domain"`. For more information, see [Verify your domain to unlock Essentials
+       * features](https://support.google.com/a/answer/9122284).
        *
        * Create a request for the method "customers.patch".
        *
@@ -584,8 +590,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a customer account's settings. For more information, see [update a customer's settings
-     * ](/admin-sdk/reseller/v1/how-tos/manage_customers#update_customer).
+     * Updates a customer account's settings. You cannot update `customerType` via the Reseller API, but
+     * a `"team"` customer can verify their domain and become `customerType = "domain"`. For more
+     * information, see [update a customer's settings](/admin-sdk/reseller/v1/how-
+     * tos/manage_customers#update_customer).
      *
      * Create a request for the method "customers.update".
      *
@@ -609,8 +617,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}";
 
       /**
-       * Update a customer account's settings. For more information, see [update a customer's settings
-       * ](/admin-sdk/reseller/v1/how-tos/manage_customers#update_customer).
+       * Updates a customer account's settings. You cannot update `customerType` via the Reseller API,
+       * but a `"team"` customer can verify their domain and become `customerType = "domain"`. For more
+       * information, see [update a customer's settings](/admin-sdk/reseller/v1/how-
+       * tos/manage_customers#update_customer).
        *
        * Create a request for the method "customers.update".
        *
@@ -1269,7 +1279,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
+     * Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
      * plan subscription to an annual commitment plan with monthly or yearly payments. How a plan is
      * updated differs depending on the plan and the products. For more information, see the description
      * in [manage subscriptions](/admin-sdk/reseller/v1/how-
@@ -1301,7 +1311,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changePlan";
 
       /**
-       * Update a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
+       * Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
        * plan subscription to an annual commitment plan with monthly or yearly payments. How a plan is
        * updated differs depending on the plan and the products. For more information, see the
        * description in [manage subscriptions](/admin-sdk/reseller/v1/how-
@@ -1447,7 +1457,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a user license's renewal settings. This is applicable for accounts with annual commitment
+     * Updates a user license's renewal settings. This is applicable for accounts with annual commitment
      * plans only. For more information, see the description in [manage subscriptions](/admin-
      * sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
      *
@@ -1478,7 +1488,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings";
 
       /**
-       * Update a user license's renewal settings. This is applicable for accounts with annual
+       * Updates a user license's renewal settings. This is applicable for accounts with annual
        * commitment plans only. For more information, see the description in [manage subscriptions
        * ](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
        *
@@ -1622,7 +1632,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a subscription's user license settings. For more information about updating an annual
+     * Updates a subscription's user license settings. For more information about updating an annual
      * commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](/admin-
      * sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
      *
@@ -1652,7 +1662,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeSeats";
 
       /**
-       * Update a subscription's user license settings. For more information about updating an annual
+       * Updates a subscription's user license settings. For more information about updating an annual
        * commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](/admin-
        * sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
        *
@@ -1796,7 +1806,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Cancel, suspend, or transfer a subscription to direct.
+     * Cancels, suspends, or transfers a subscription to direct.
      *
      * Create a request for the method "subscriptions.delete".
      *
@@ -1825,7 +1835,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}";
 
       /**
-       * Cancel, suspend, or transfer a subscription to direct.
+       * Cancels, suspends, or transfers a subscription to direct.
        *
        * Create a request for the method "subscriptions.delete".
        *
@@ -1992,7 +2002,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Get a specific subscription. The `subscriptionId` can be found using the [Retrieve all reseller
+     * Gets a specific subscription. The `subscriptionId` can be found using the [Retrieve all reseller
      * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions) method.
      * For more information about retrieving a specific subscription, see the information descrived in
      * [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_subscription).
@@ -2022,11 +2032,11 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}";
 
       /**
-       * Get a specific subscription. The `subscriptionId` can be found using the [Retrieve all reseller
-       * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions)
-       * method. For more information about retrieving a specific subscription, see the information
-       * descrived in [manage subscriptions](/admin-sdk/reseller/v1/how-
-       * tos/manage_subscriptions#get_subscription).
+       * Gets a specific subscription. The `subscriptionId` can be found using the [Retrieve all
+       * reseller subscriptions](/admin-sdk/reseller/v1/how-
+       * tos/manage_subscriptions#get_all_subscriptions) method. For more information about retrieving a
+       * specific subscription, see the information descrived in [manage subscriptions](/admin-
+       * sdk/reseller/v1/how-tos/manage_subscriptions#get_subscription).
        *
        * Create a request for the method "subscriptions.get".
        *
@@ -2176,7 +2186,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Create or transfer a subscription. Create a subscription for a customer's account that you
+     * Creates or transfer a subscription. Create a subscription for a customer's account that you
      * ordered using the [Order a new customer account](/admin-
      * sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a
      * subscription for different payment plans, see [manage subscriptions](/admin-sdk/reseller/v1/how-
@@ -2209,7 +2219,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions";
 
       /**
-       * Create or transfer a subscription. Create a subscription for a customer's account that you
+       * Creates or transfer a subscription. Create a subscription for a customer's account that you
        * ordered using the [Order a new customer account](/admin-
        * sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a
        * subscription for different payment plans, see [manage subscriptions](/admin-sdk/reseller/v1
@@ -2358,7 +2368,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * List of subscriptions managed by the reseller. The list can be all subscriptions, all of a
+     * Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a
      * customer's subscriptions, or all of a customer's transferable subscriptions. Optionally, this
      * method can filter the response by a `customerNamePrefix`. For more information, see [manage
      * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions).
@@ -2381,7 +2391,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/subscriptions";
 
       /**
-       * List of subscriptions managed by the reseller. The list can be all subscriptions, all of a
+       * Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a
        * customer's subscriptions, or all of a customer's transferable subscriptions. Optionally, this
        * method can filter the response by a `customerNamePrefix`. For more information, see [manage
        * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions).

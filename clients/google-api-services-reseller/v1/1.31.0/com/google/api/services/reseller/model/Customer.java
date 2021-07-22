@@ -35,8 +35,8 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   /**
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
-   * property is required when creating a new customer and should not use the same domain as
-   * `customerDomain`.
+   * property is required when creating a new "domain" customer and should not use the same domain
+   * as `customerDomain`. The `alternateEmail` field is not necessary to create a "team" customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String customerId;
 
   /**
-   * The type of the customer (DOMAIN or TEAM), default is DOMAIN.
+   * Identifies the type of the customer. Acceptable values include: * `domain`: Implies a domain-
+   * verified customer (default). * `team`: Implies an email-verified customer. For more
+   * information, see [managed teams](https://support.google.com/a/users/answer/9939479).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +117,8 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   /**
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
-   * property is required when creating a new customer and should not use the same domain as
-   * `customerDomain`.
+   * property is required when creating a new "domain" customer and should not use the same domain
+   * as `customerDomain`. The `alternateEmail` field is not necessary to create a "team" customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateEmail() {
@@ -126,8 +128,8 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   /**
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
-   * property is required when creating a new customer and should not use the same domain as
-   * `customerDomain`.
+   * property is required when creating a new "domain" customer and should not use the same domain
+   * as `customerDomain`. The `alternateEmail` field is not necessary to create a "team" customer.
    * @param alternateEmail alternateEmail or {@code null} for none
    */
   public Customer setAlternateEmail(java.lang.String alternateEmail) {
@@ -193,7 +195,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the customer (DOMAIN or TEAM), default is DOMAIN.
+   * Identifies the type of the customer. Acceptable values include: * `domain`: Implies a domain-
+   * verified customer (default). * `team`: Implies an email-verified customer. For more
+   * information, see [managed teams](https://support.google.com/a/users/answer/9939479).
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerType() {
@@ -201,7 +205,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the customer (DOMAIN or TEAM), default is DOMAIN.
+   * Identifies the type of the customer. Acceptable values include: * `domain`: Implies a domain-
+   * verified customer (default). * `team`: Implies an email-verified customer. For more
+   * information, see [managed teams](https://support.google.com/a/users/answer/9939479).
    * @param customerType customerType or {@code null} for none
    */
   public Customer setCustomerType(java.lang.String customerType) {

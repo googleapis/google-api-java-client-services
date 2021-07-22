@@ -38,8 +38,9 @@ public final class CreateCustomClassRequest extends com.google.api.client.json.G
   private CustomClass customClass;
 
   /**
-   * The ID to use for the custom class, which will become the final component of the custom class'
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the custom class, which will become the final component of the
+   * custom class' resource name. This value should be 4-63 characters, and valid characters are
+   * /a-z-/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +64,9 @@ public final class CreateCustomClassRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The ID to use for the custom class, which will become the final component of the custom class'
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the custom class, which will become the final component of the
+   * custom class' resource name. This value should be 4-63 characters, and valid characters are
+   * /a-z-/.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomClassId() {
@@ -72,8 +74,9 @@ public final class CreateCustomClassRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The ID to use for the custom class, which will become the final component of the custom class'
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the custom class, which will become the final component of the
+   * custom class' resource name. This value should be 4-63 characters, and valid characters are
+   * /a-z-/.
    * @param customClassId customClassId or {@code null} for none
    */
   public CreateCustomClassRequest setCustomClassId(java.lang.String customClassId) {

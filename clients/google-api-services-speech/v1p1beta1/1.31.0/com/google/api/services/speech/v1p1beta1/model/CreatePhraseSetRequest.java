@@ -38,8 +38,8 @@ public final class CreatePhraseSetRequest extends com.google.api.client.json.Gen
   private PhraseSet phraseSet;
 
   /**
-   * The ID to use for the phrase set, which will become the final component of the phrase set's
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the phrase set, which will become the final component of the phrase
+   * set's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class CreatePhraseSetRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The ID to use for the phrase set, which will become the final component of the phrase set's
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the phrase set, which will become the final component of the phrase
+   * set's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhraseSetId() {
@@ -72,8 +72,8 @@ public final class CreatePhraseSetRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The ID to use for the phrase set, which will become the final component of the phrase set's
-   * resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+   * Required. The ID to use for the phrase set, which will become the final component of the phrase
+   * set's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
    * @param phraseSetId phraseSetId or {@code null} for none
    */
   public CreatePhraseSetRequest setPhraseSetId(java.lang.String phraseSetId) {

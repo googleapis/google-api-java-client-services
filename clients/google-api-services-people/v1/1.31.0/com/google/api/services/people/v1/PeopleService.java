@@ -1438,7 +1438,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted
      * since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When
      * the `page_token` or `sync_token` is specified, all other request parameters must match the first
-     * call. See example usage at [List the user's other contacts that have changed](/people/v1/other-
+     * call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs
+     * are not intended for read-after-write use cases. See example usage at [List the user's other
+     * contacts that have changed](/people/v1/other-
      * contacts#list_the_users_other_contacts_that_have_changed).
      *
      * Create a request for the method "otherContacts.list".
@@ -1467,8 +1469,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
        * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
        * true. When the `page_token` or `sync_token` is specified, all other request parameters must
-       * match the first call. See example usage at [List the user's other contacts that have
-       * changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
+       * match the first call. Writes may have a propagation delay of several minutes for sync requests.
+       * Incremental syncs are not intended for read-after-write use cases. See example usage at [List
+       * the user's other contacts that have changed](/people/v1/other-
+       * contacts#list_the_users_other_contacts_that_have_changed).
        *
        * Create a request for the method "otherContacts.list".
        *
@@ -3175,8 +3179,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * Provides a list of domain profiles and domain contacts in the authenticated user's domain
      * directory. When the `sync_token` is specified, resources deleted since the last sync will be
      * returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or
-     * `sync_token` is specified, all other request parameters must match the first call. See example
-     * usage at [List the directory people that have
+     * `sync_token` is specified, all other request parameters must match the first call. Writes may
+     * have a propagation delay of several minutes for sync requests. Incremental syncs are not intended
+     * for read-after-write use cases. See example usage at [List the directory people that have
      * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
      *
      * Create a request for the method "people.listDirectoryPeople".
@@ -3200,9 +3205,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Provides a list of domain profiles and domain contacts in the authenticated user's domain
        * directory. When the `sync_token` is specified, resources deleted since the last sync will be
        * returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or
-       * `sync_token` is specified, all other request parameters must match the first call. See example
-       * usage at [List the directory people that have
-       * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
+       * `sync_token` is specified, all other request parameters must match the first call. Writes may
+       * have a propagation delay of several minutes for sync requests. Incremental syncs are not
+       * intended for read-after-write use cases. See example usage at [List the directory people that
+       * have changed](/people/v1/directory#list_the_directory_people_that_have_changed).
        *
        * Create a request for the method "people.listDirectoryPeople".
        *
@@ -4363,7 +4369,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
        * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
        * true. When the `page_token` or `sync_token` is specified, all other request parameters must match
-       * the first call. See example usage at [List the user's contacts that have
+       * the first call. Writes may have a propagation delay of several minutes for sync requests.
+       * Incremental syncs are not intended for read-after-write use cases. See example usage at [List the
+       * user's contacts that have
        * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
        *
        * Create a request for the method "connections.list".
@@ -4395,7 +4403,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
          * This quota is fixed and can not be increased. When the `sync_token` is specified, resources
          * deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to
          * true. When the `page_token` or `sync_token` is specified, all other request parameters must
-         * match the first call. See example usage at [List the user's contacts that have
+         * match the first call. Writes may have a propagation delay of several minutes for sync requests.
+         * Incremental syncs are not intended for read-after-write use cases. See example usage at [List
+         * the user's contacts that have
          * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
          *
          * Create a request for the method "connections.list".

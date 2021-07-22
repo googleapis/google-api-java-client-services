@@ -30,36 +30,33 @@ package com.google.api.services.run.v1alpha1.model;
 public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
-   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
-   * to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
+   * a specific version. The key to project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set. +optional
+   * (Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not
+   * specified, the volume defaultMode will be used. This might be in conflict with other options
+   * that affect the file mode, like fsGroup, and the result can be other mode bits set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer mode;
 
   /**
-   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
-   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
-   * not start with the string '..'.
+   * The relative path of the file to map the key to. May not be an absolute path. May not contain
+   * the path element '..'. May not start with the string '..'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
-   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
-   * to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
+   * a specific version. The key to project.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -67,9 +64,8 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for
-   * the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key
-   * to project.
+   * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for
+   * a specific version. The key to project.
    * @param key key or {@code null} for none
    */
   public KeyToPath setKey(java.lang.String key) {
@@ -78,9 +74,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set. +optional
+   * (Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not
+   * specified, the volume defaultMode will be used. This might be in conflict with other options
+   * that affect the file mode, like fsGroup, and the result can be other mode bits set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMode() {
@@ -88,9 +84,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume
-   * defaultMode will be used. This might be in conflict with other options that affect the file
-   * mode, like fsGroup, and the result can be other mode bits set. +optional
+   * (Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not
+   * specified, the volume defaultMode will be used. This might be in conflict with other options
+   * that affect the file mode, like fsGroup, and the result can be other mode bits set.
    * @param mode mode or {@code null} for none
    */
   public KeyToPath setMode(java.lang.Integer mode) {
@@ -99,9 +95,8 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
-   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
-   * not start with the string '..'.
+   * The relative path of the file to map the key to. May not be an absolute path. May not contain
+   * the path element '..'. May not start with the string '..'.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -109,9 +104,8 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the
-   * file to map the key to. May not be an absolute path. May not contain the path element '..'. May
-   * not start with the string '..'.
+   * The relative path of the file to map the key to. May not be an absolute path. May not contain
+   * the path element '..'. May not start with the string '..'.
    * @param path path or {@code null} for none
    */
   public KeyToPath setPath(java.lang.String path) {

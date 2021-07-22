@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * HTTPGetAction describes an action based on HTTP Get requests.
+ * Not supported by Cloud Run HTTPGetAction describes an action based on HTTP Get requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,45 +30,37 @@ package com.google.api.services.run.v1alpha1.model;
 public final class HTTPGetAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead. +optional
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * Custom headers to set in the request. HTTP allows repeated headers. +optional
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HTTPHeader> httpHeaders;
 
   /**
-   * Path to access on the HTTP server. +optional
+   * (Optional) Path to access on the HTTP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Name or number of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IntOrString port;
-
-  /**
-   * Scheme to use for connecting to the host. Defaults to HTTP. +optional
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scheme;
 
   /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead. +optional
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -76,8 +68,8 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders
-   * instead. +optional
+   * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
+   * httpHeaders instead.
    * @param host host or {@code null} for none
    */
   public HTTPGetAction setHost(java.lang.String host) {
@@ -86,7 +78,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Custom headers to set in the request. HTTP allows repeated headers. +optional
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * @return value or {@code null} for none
    */
   public java.util.List<HTTPHeader> getHttpHeaders() {
@@ -94,7 +86,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Custom headers to set in the request. HTTP allows repeated headers. +optional
+   * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
    * @param httpHeaders httpHeaders or {@code null} for none
    */
   public HTTPGetAction setHttpHeaders(java.util.List<HTTPHeader> httpHeaders) {
@@ -103,7 +95,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Path to access on the HTTP server. +optional
+   * (Optional) Path to access on the HTTP server.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -111,7 +103,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Path to access on the HTTP server. +optional
+   * (Optional) Path to access on the HTTP server.
    * @param path path or {@code null} for none
    */
   public HTTPGetAction setPath(java.lang.String path) {
@@ -120,26 +112,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name or number of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME.
-   * @return value or {@code null} for none
-   */
-  public IntOrString getPort() {
-    return port;
-  }
-
-  /**
-   * Name or number of the port to access on the container. Number must be in the range 1 to 65535.
-   * Name must be an IANA_SVC_NAME.
-   * @param port port or {@code null} for none
-   */
-  public HTTPGetAction setPort(IntOrString port) {
-    this.port = port;
-    return this;
-  }
-
-  /**
-   * Scheme to use for connecting to the host. Defaults to HTTP. +optional
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * @return value or {@code null} for none
    */
   public java.lang.String getScheme() {
@@ -147,7 +120,7 @@ public final class HTTPGetAction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Scheme to use for connecting to the host. Defaults to HTTP. +optional
+   * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
    * @param scheme scheme or {@code null} for none
    */
   public HTTPGetAction setScheme(java.lang.String scheme) {

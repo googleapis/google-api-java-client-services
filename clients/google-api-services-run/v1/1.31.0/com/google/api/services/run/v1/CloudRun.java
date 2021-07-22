@@ -20,7 +20,7 @@ package com.google.api.services.run.v1;
  * Service definition for CloudRun (v1).
  *
  * <p>
- * Deploy and manage user provided container images that scale automatically based on incoming requets. The Cloud Run Admin API follows the Knative Serving API specification.
+ * Deploy and manage user provided container images that scale automatically based on incoming requests. The Cloud Run Admin API follows the Knative Serving API specification.
  * </p>
  *
  * <p>
@@ -653,17 +653,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional encoded string to continue paging.
+        /** Optional. Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -730,17 +730,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** The maximum number of records that should be returned.
+        /** Optional. The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -1488,17 +1488,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional encoded string to continue paging.
+        /** Optional. Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -1565,17 +1565,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** The maximum number of records that should be returned.
+        /** Optional. The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -2161,17 +2161,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional encoded string to continue paging.
+        /** Optional. Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -2238,17 +2238,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** The maximum number of records that should be returned.
+        /** Optional. The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -2616,17 +2616,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional encoded string to continue paging.
+        /** Optional. Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -2693,17 +2693,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** The maximum number of records that should be returned.
+        /** Optional. The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -3453,17 +3453,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         @com.google.api.client.util.Key("continue")
         private java.lang.String continue__;
 
-        /** Optional encoded string to continue paging.
+        /** Optional. Encoded string to continue paging.
          */
         public java.lang.String getContinue() {
           return continue__;
         }
 
-        /** Optional encoded string to continue paging. */
+        /** Optional. Encoded string to continue paging. */
         public List setContinue(java.lang.String continue__) {
           this.continue__ = continue__;
           return this;
@@ -3530,17 +3530,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer limit;
 
-        /** The maximum number of records that should be returned.
+        /** Optional. The maximum number of records that should be returned.
          */
         public java.lang.Integer getLimit() {
           return limit;
         }
 
-        /** The maximum number of records that should be returned. */
+        /** Optional. The maximum number of records that should be returned. */
         public List setLimit(java.lang.Integer limit) {
           this.limit = limit;
           return this;
@@ -4705,17 +4705,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional encoded string to continue paging.
+          /** Optional. Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -4782,17 +4782,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** The maximum number of records that should be returned.
+          /** Optional. The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
@@ -5542,17 +5542,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional encoded string to continue paging.
+          /** Optional. Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -5619,17 +5619,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** The maximum number of records that should be returned.
+          /** Optional. The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
@@ -6217,17 +6217,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional encoded string to continue paging.
+          /** Optional. Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -6294,17 +6294,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** The maximum number of records that should be returned.
+          /** Optional. The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
@@ -6672,17 +6672,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional encoded string to continue paging.
+          /** Optional. Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -6749,17 +6749,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** The maximum number of records that should be returned.
+          /** Optional. The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;
@@ -7695,17 +7695,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           @com.google.api.client.util.Key("continue")
           private java.lang.String continue__;
 
-          /** Optional encoded string to continue paging.
+          /** Optional. Encoded string to continue paging.
            */
           public java.lang.String getContinue() {
             return continue__;
           }
 
-          /** Optional encoded string to continue paging. */
+          /** Optional. Encoded string to continue paging. */
           public List setContinue(java.lang.String continue__) {
             this.continue__ = continue__;
             return this;
@@ -7772,17 +7772,17 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
-          /** The maximum number of records that should be returned.
+          /** Optional. The maximum number of records that should be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
           }
 
-          /** The maximum number of records that should be returned. */
+          /** Optional. The maximum number of records that should be returned. */
           public List setLimit(java.lang.Integer limit) {
             this.limit = limit;
             return this;

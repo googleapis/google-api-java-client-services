@@ -32,210 +32,166 @@ package com.google.api.services.run.v1alpha1.model;
 public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
+   * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
+   * Variable references $(VAR_NAME) are expanded using the container's environment. If a variable
+   * cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax
+   * can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. Cannot be updated. More
-   * info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> command;
 
   /**
-   * List of environment variables to set in the container. Cannot be updated. +optional
+   * (Optional) List of environment variables to set in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EnvVar> env;
 
   /**
-   * List of sources to populate environment variables in the container. The keys defined within a
-   * source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container
-   * is starting. When a key exists in multiple sources, the value associated with the last source
-   * will take precedence. Values defined by an Env with a duplicate key will take precedence.
-   * Cannot be updated. +optional
+   * (Optional) List of sources to populate environment variables in the container. The keys defined
+   * within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the
+   * container is starting. When a key exists in multiple sources, the value associated with the
+   * last source will take precedence. Values defined by an Env with a duplicate key will take
+   * precedence. Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EnvFromSource> envFrom;
 
   /**
-   * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+   * Only supports containers from Google Container Registry or Artifact Registry URL of the
+   * Container image. More info: https://kubernetes.io/docs/concepts/containers/images
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+   * (Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest
+   * tag is specified, or IfNotPresent otherwise. More info:
+   * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imagePullPolicy;
 
   /**
-   * Actions that the management system should take in response to container lifecycle events.
-   * Cannot be updated. +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Lifecycle lifecycle;
-
-  /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes +optional
+   * (Optional) Periodic probe of container liveness. Container will be restarted if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Probe livenessProbe;
 
   /**
-   * Name of the container specified as a DNS_LABEL. Each container must have a unique name
-   * (DNS_LABEL). Cannot be updated.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * List of ports to expose from the container. Exposing a port here gives the system additional
-   * information about the network connections a container uses, but is primarily informational. Not
-   * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
-   * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated. +optional
+   * (Optional) List of ports to expose from the container. Only a single port can be specified. The
+   * specified ports must be listening on all interfaces (0.0.0.0) within the container to be
+   * accessible. If omitted, a port number will be chosen and passed to the container through the
+   * PORT environment variable for the container to listen on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ContainerPort> ports;
 
   /**
-   * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * (Optional) Periodic probe of container service readiness. Container will be removed from
+   * service endpoints if the probe fails. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Probe readinessProbe;
 
   /**
-   * Compute Resources required by this container. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional
+   * (Optional) Compute Resources required by this container. More info:
+   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceRequirements resources;
 
   /**
-   * Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy
-   * /security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container
-   * /security-context/ +optional
+   * (Optional) Security options the pod should run with. More info:
+   * https://kubernetes.io/docs/concepts/policy/security-context/ More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityContext securityContext;
 
   /**
-   * Whether this container should allocate a buffer for stdin in the container runtime. If this is
-   * not set, reads from stdin in the container will always result in EOF. Default is false.
-   * +optional
+   * (Optional) Startup probe of application within the container. All other probes are disabled if
+   * a startup probe is provided, until it succeeds. Container will not be added to service
+   * endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean stdin;
+  private Probe startupProbe;
 
   /**
-   * Whether the container runtime should close the stdin channel after it has been opened by a
-   * single attach. When stdin is true the stdin stream will remain open across multiple attach
-   * sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the
-   * first client attaches to stdin, and then remains open and accepts data until the client
-   * disconnects, at which time stdin is closed and remains closed until the container is restarted.
-   * If this flag is false, a container processes that reads from stdin will never receive an EOF.
-   * Default is false +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean stdinOnce;
-
-  /**
-   * Optional: Path at which the file to which the container's termination message will be written
+   * (Optional) Path at which the file to which the container's termination message will be written
    * is mounted into the container's filesystem. Message written is intended to be brief final
    * status, such as an assertion failure message. Will be truncated by the node if greater than
    * 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log. Cannot be updated. +optional
+   * /dev/termination-log.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terminationMessagePath;
 
   /**
-   * Indicate how the termination message should be populated. File will use the contents of
-   * terminationMessagePath to populate the container status message on both success and failure.
+   * (Optional) Indicate how the termination message should be populated. File will use the contents
+   * of terminationMessagePath to populate the container status message on both success and failure.
    * FallbackToLogsOnError will use the last chunk of container log output if the termination
    * message file is empty and the container exited with an error. The log output is limited to 2048
-   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional
+   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terminationMessagePolicy;
 
   /**
-   * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.
-   * Default is false. +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean tty;
-
-  /**
-   * volumeDevices is the list of block devices to be used by the container. This is an alpha
-   * feature and may change in the future. +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<VolumeDevice> volumeDevices;
-
-  /**
-   * Pod volumes to mount into the container's filesystem. Cannot be updated. +optional
+   * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources.
+   * Pod volumes to mount into the container's filesystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VolumeMount> volumeMounts;
 
   /**
-   * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated. +optional
+   * (Optional) Container's working directory. If not specified, the container runtime's default
+   * will be used, which might be configured in the container image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workingDir;
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
+   * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
+   * Variable references $(VAR_NAME) are expanded using the container's environment. If a variable
+   * cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax
+   * can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -243,13 +199,12 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. Cannot be updated. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
+   * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
+   * Variable references $(VAR_NAME) are expanded using the container's environment. If a variable
+   * cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax
+   * can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
+   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
+   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * @param args args or {@code null} for none
    */
   public Container setArgs(java.util.List<java.lang.String> args) {
@@ -258,13 +213,6 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. Cannot be updated. More
-   * info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -272,13 +220,6 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. Cannot be updated. More
-   * info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell +optional
    * @param command command or {@code null} for none
    */
   public Container setCommand(java.util.List<java.lang.String> command) {
@@ -287,7 +228,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of environment variables to set in the container. Cannot be updated. +optional
+   * (Optional) List of environment variables to set in the container.
    * @return value or {@code null} for none
    */
   public java.util.List<EnvVar> getEnv() {
@@ -295,7 +236,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of environment variables to set in the container. Cannot be updated. +optional
+   * (Optional) List of environment variables to set in the container.
    * @param env env or {@code null} for none
    */
   public Container setEnv(java.util.List<EnvVar> env) {
@@ -304,11 +245,11 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of sources to populate environment variables in the container. The keys defined within a
-   * source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container
-   * is starting. When a key exists in multiple sources, the value associated with the last source
-   * will take precedence. Values defined by an Env with a duplicate key will take precedence.
-   * Cannot be updated. +optional
+   * (Optional) List of sources to populate environment variables in the container. The keys defined
+   * within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the
+   * container is starting. When a key exists in multiple sources, the value associated with the
+   * last source will take precedence. Values defined by an Env with a duplicate key will take
+   * precedence. Cannot be updated.
    * @return value or {@code null} for none
    */
   public java.util.List<EnvFromSource> getEnvFrom() {
@@ -316,11 +257,11 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of sources to populate environment variables in the container. The keys defined within a
-   * source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container
-   * is starting. When a key exists in multiple sources, the value associated with the last source
-   * will take precedence. Values defined by an Env with a duplicate key will take precedence.
-   * Cannot be updated. +optional
+   * (Optional) List of sources to populate environment variables in the container. The keys defined
+   * within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the
+   * container is starting. When a key exists in multiple sources, the value associated with the
+   * last source will take precedence. Values defined by an Env with a duplicate key will take
+   * precedence. Cannot be updated.
    * @param envFrom envFrom or {@code null} for none
    */
   public Container setEnvFrom(java.util.List<EnvFromSource> envFrom) {
@@ -329,7 +270,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+   * Only supports containers from Google Container Registry or Artifact Registry URL of the
+   * Container image. More info: https://kubernetes.io/docs/concepts/containers/images
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -337,7 +279,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
+   * Only supports containers from Google Container Registry or Artifact Registry URL of the
+   * Container image. More info: https://kubernetes.io/docs/concepts/containers/images
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {
@@ -346,9 +289,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+   * (Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest
+   * tag is specified, or IfNotPresent otherwise. More info:
+   * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * @return value or {@code null} for none
    */
   public java.lang.String getImagePullPolicy() {
@@ -356,9 +299,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+   * (Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest
+   * tag is specified, or IfNotPresent otherwise. More info:
+   * https://kubernetes.io/docs/concepts/containers/images#updating-images
    * @param imagePullPolicy imagePullPolicy or {@code null} for none
    */
   public Container setImagePullPolicy(java.lang.String imagePullPolicy) {
@@ -367,28 +310,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Actions that the management system should take in response to container lifecycle events.
-   * Cannot be updated. +optional
-   * @return value or {@code null} for none
-   */
-  public Lifecycle getLifecycle() {
-    return lifecycle;
-  }
-
-  /**
-   * Actions that the management system should take in response to container lifecycle events.
-   * Cannot be updated. +optional
-   * @param lifecycle lifecycle or {@code null} for none
-   */
-  public Container setLifecycle(Lifecycle lifecycle) {
-    this.lifecycle = lifecycle;
-    return this;
-  }
-
-  /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes +optional
+   * (Optional) Periodic probe of container liveness. Container will be restarted if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
    * @return value or {@code null} for none
    */
   public Probe getLivenessProbe() {
@@ -396,9 +320,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be
-   * updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
-   * probes +optional
+   * (Optional) Periodic probe of container liveness. Container will be restarted if the probe
+   * fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-
+   * probes
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public Container setLivenessProbe(Probe livenessProbe) {
@@ -407,8 +331,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL. Each container must have a unique name
-   * (DNS_LABEL). Cannot be updated.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -416,8 +340,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL. Each container must have a unique name
-   * (DNS_LABEL). Cannot be updated.
+   * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More
+   * info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -426,11 +350,10 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of ports to expose from the container. Exposing a port here gives the system additional
-   * information about the network connections a container uses, but is primarily informational. Not
-   * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
-   * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated. +optional
+   * (Optional) List of ports to expose from the container. Only a single port can be specified. The
+   * specified ports must be listening on all interfaces (0.0.0.0) within the container to be
+   * accessible. If omitted, a port number will be chosen and passed to the container through the
+   * PORT environment variable for the container to listen on.
    * @return value or {@code null} for none
    */
   public java.util.List<ContainerPort> getPorts() {
@@ -438,11 +361,10 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of ports to expose from the container. Exposing a port here gives the system additional
-   * information about the network connections a container uses, but is primarily informational. Not
-   * specifying a port here DOES NOT prevent that port from being exposed. Any port which is
-   * listening on the default "0.0.0.0" address inside a container will be accessible from the
-   * network. Cannot be updated. +optional
+   * (Optional) List of ports to expose from the container. Only a single port can be specified. The
+   * specified ports must be listening on all interfaces (0.0.0.0) within the container to be
+   * accessible. If omitted, a port number will be chosen and passed to the container through the
+   * PORT environment variable for the container to listen on.
    * @param ports ports or {@code null} for none
    */
   public Container setPorts(java.util.List<ContainerPort> ports) {
@@ -451,9 +373,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * (Optional) Periodic probe of container service readiness. Container will be removed from
+   * service endpoints if the probe fails. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
   public Probe getReadinessProbe() {
@@ -461,9 +383,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container service readiness. Container will be removed from service endpoints
-   * if the probe fails. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+   * (Optional) Periodic probe of container service readiness. Container will be removed from
+   * service endpoints if the probe fails. More info:
+   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * @param readinessProbe readinessProbe or {@code null} for none
    */
   public Container setReadinessProbe(Probe readinessProbe) {
@@ -472,8 +394,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compute Resources required by this container. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional
+   * (Optional) Compute Resources required by this container. More info:
+   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * @return value or {@code null} for none
    */
   public ResourceRequirements getResources() {
@@ -481,8 +403,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compute Resources required by this container. Cannot be updated. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional
+   * (Optional) Compute Resources required by this container. More info:
+   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * @param resources resources or {@code null} for none
    */
   public Container setResources(ResourceRequirements resources) {
@@ -491,9 +413,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy
-   * /security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container
-   * /security-context/ +optional
+   * (Optional) Security options the pod should run with. More info:
+   * https://kubernetes.io/docs/concepts/policy/security-context/ More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
    * @return value or {@code null} for none
    */
   public SecurityContext getSecurityContext() {
@@ -501,9 +423,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy
-   * /security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container
-   * /security-context/ +optional
+   * (Optional) Security options the pod should run with. More info:
+   * https://kubernetes.io/docs/concepts/policy/security-context/ More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
    * @param securityContext securityContext or {@code null} for none
    */
   public Container setSecurityContext(SecurityContext securityContext) {
@@ -512,61 +434,34 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this container should allocate a buffer for stdin in the container runtime. If this is
-   * not set, reads from stdin in the container will always result in EOF. Default is false.
-   * +optional
+   * (Optional) Startup probe of application within the container. All other probes are disabled if
+   * a startup probe is provided, until it succeeds. Container will not be added to service
+   * endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getStdin() {
-    return stdin;
+  public Probe getStartupProbe() {
+    return startupProbe;
   }
 
   /**
-   * Whether this container should allocate a buffer for stdin in the container runtime. If this is
-   * not set, reads from stdin in the container will always result in EOF. Default is false.
-   * +optional
-   * @param stdin stdin or {@code null} for none
+   * (Optional) Startup probe of application within the container. All other probes are disabled if
+   * a startup probe is provided, until it succeeds. Container will not be added to service
+   * endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods
+   * /pod-lifecycle#container-probes
+   * @param startupProbe startupProbe or {@code null} for none
    */
-  public Container setStdin(java.lang.Boolean stdin) {
-    this.stdin = stdin;
+  public Container setStartupProbe(Probe startupProbe) {
+    this.startupProbe = startupProbe;
     return this;
   }
 
   /**
-   * Whether the container runtime should close the stdin channel after it has been opened by a
-   * single attach. When stdin is true the stdin stream will remain open across multiple attach
-   * sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the
-   * first client attaches to stdin, and then remains open and accepts data until the client
-   * disconnects, at which time stdin is closed and remains closed until the container is restarted.
-   * If this flag is false, a container processes that reads from stdin will never receive an EOF.
-   * Default is false +optional
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getStdinOnce() {
-    return stdinOnce;
-  }
-
-  /**
-   * Whether the container runtime should close the stdin channel after it has been opened by a
-   * single attach. When stdin is true the stdin stream will remain open across multiple attach
-   * sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the
-   * first client attaches to stdin, and then remains open and accepts data until the client
-   * disconnects, at which time stdin is closed and remains closed until the container is restarted.
-   * If this flag is false, a container processes that reads from stdin will never receive an EOF.
-   * Default is false +optional
-   * @param stdinOnce stdinOnce or {@code null} for none
-   */
-  public Container setStdinOnce(java.lang.Boolean stdinOnce) {
-    this.stdinOnce = stdinOnce;
-    return this;
-  }
-
-  /**
-   * Optional: Path at which the file to which the container's termination message will be written
+   * (Optional) Path at which the file to which the container's termination message will be written
    * is mounted into the container's filesystem. Message written is intended to be brief final
    * status, such as an assertion failure message. Will be truncated by the node if greater than
    * 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log. Cannot be updated. +optional
+   * /dev/termination-log.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationMessagePath() {
@@ -574,11 +469,11 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional: Path at which the file to which the container's termination message will be written
+   * (Optional) Path at which the file to which the container's termination message will be written
    * is mounted into the container's filesystem. Message written is intended to be brief final
    * status, such as an assertion failure message. Will be truncated by the node if greater than
    * 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log. Cannot be updated. +optional
+   * /dev/termination-log.
    * @param terminationMessagePath terminationMessagePath or {@code null} for none
    */
   public Container setTerminationMessagePath(java.lang.String terminationMessagePath) {
@@ -587,11 +482,11 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicate how the termination message should be populated. File will use the contents of
-   * terminationMessagePath to populate the container status message on both success and failure.
+   * (Optional) Indicate how the termination message should be populated. File will use the contents
+   * of terminationMessagePath to populate the container status message on both success and failure.
    * FallbackToLogsOnError will use the last chunk of container log output if the termination
    * message file is empty and the container exited with an error. The log output is limited to 2048
-   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional
+   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationMessagePolicy() {
@@ -599,11 +494,11 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicate how the termination message should be populated. File will use the contents of
-   * terminationMessagePath to populate the container status message on both success and failure.
+   * (Optional) Indicate how the termination message should be populated. File will use the contents
+   * of terminationMessagePath to populate the container status message on both success and failure.
    * FallbackToLogsOnError will use the last chunk of container log output if the termination
    * message file is empty and the container exited with an error. The log output is limited to 2048
-   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional
+   * bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
    * @param terminationMessagePolicy terminationMessagePolicy or {@code null} for none
    */
   public Container setTerminationMessagePolicy(java.lang.String terminationMessagePolicy) {
@@ -612,45 +507,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.
-   * Default is false. +optional
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getTty() {
-    return tty;
-  }
-
-  /**
-   * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.
-   * Default is false. +optional
-   * @param tty tty or {@code null} for none
-   */
-  public Container setTty(java.lang.Boolean tty) {
-    this.tty = tty;
-    return this;
-  }
-
-  /**
-   * volumeDevices is the list of block devices to be used by the container. This is an alpha
-   * feature and may change in the future. +optional
-   * @return value or {@code null} for none
-   */
-  public java.util.List<VolumeDevice> getVolumeDevices() {
-    return volumeDevices;
-  }
-
-  /**
-   * volumeDevices is the list of block devices to be used by the container. This is an alpha
-   * feature and may change in the future. +optional
-   * @param volumeDevices volumeDevices or {@code null} for none
-   */
-  public Container setVolumeDevices(java.util.List<VolumeDevice> volumeDevices) {
-    this.volumeDevices = volumeDevices;
-    return this;
-  }
-
-  /**
-   * Pod volumes to mount into the container's filesystem. Cannot be updated. +optional
+   * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources.
+   * Pod volumes to mount into the container's filesystem.
    * @return value or {@code null} for none
    */
   public java.util.List<VolumeMount> getVolumeMounts() {
@@ -658,7 +516,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Pod volumes to mount into the container's filesystem. Cannot be updated. +optional
+   * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources.
+   * Pod volumes to mount into the container's filesystem.
    * @param volumeMounts volumeMounts or {@code null} for none
    */
   public Container setVolumeMounts(java.util.List<VolumeMount> volumeMounts) {
@@ -667,8 +526,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated. +optional
+   * (Optional) Container's working directory. If not specified, the container runtime's default
+   * will be used, which might be configured in the container image.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkingDir() {
@@ -676,8 +535,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container's working directory. If not specified, the container runtime's default will be used,
-   * which might be configured in the container image. Cannot be updated. +optional
+   * (Optional) Container's working directory. If not specified, the container runtime's default
+   * will be used, which might be configured in the container image.
    * @param workingDir workingDir or {@code null} for none
    */
   public Container setWorkingDir(java.lang.String workingDir) {

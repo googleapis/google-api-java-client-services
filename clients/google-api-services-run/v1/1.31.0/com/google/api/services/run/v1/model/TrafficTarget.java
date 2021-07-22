@@ -41,9 +41,9 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String configurationName;
 
   /**
-   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String revisionName;
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   * +optional
+   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +109,9 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatestRevision() {
@@ -120,9 +119,9 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
    * @param latestRevision latestRevision or {@code null} for none
    */
   public TrafficTarget setLatestRevision(java.lang.Boolean latestRevision) {
@@ -173,8 +172,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   * +optional
+   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -182,8 +180,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
-   * +optional
+   * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
    * @param tag tag or {@code null} for none
    */
   public TrafficTarget setTag(java.lang.String tag) {

@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * VolumeMount describes a mounting of a Volume within a container.
+ * Not supported by Cloud Run VolumeMount describes a mounting of a Volume within a container.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -37,15 +37,6 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String mountPath;
 
   /**
-   * mountPropagation determines how mounts are propagated from the host to container and the other
-   * way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10.
-   * +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String mountPropagation;
-
-  /**
    * This must match the Name of a Volume.
    * The value may be {@code null}.
    */
@@ -53,16 +44,15 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
-   * +optional
+   * (Optional) Only true is accepted. Defaults to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean readOnly;
 
   /**
-   * Path within the volume from which the container's volume should be mounted. Defaults to ""
-   * (volume's root). +optional
+   * (Optional) Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,27 +76,6 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * mountPropagation determines how mounts are propagated from the host to container and the other
-   * way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10.
-   * +optional
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMountPropagation() {
-    return mountPropagation;
-  }
-
-  /**
-   * mountPropagation determines how mounts are propagated from the host to container and the other
-   * way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10.
-   * +optional
-   * @param mountPropagation mountPropagation or {@code null} for none
-   */
-  public VolumeMount setMountPropagation(java.lang.String mountPropagation) {
-    this.mountPropagation = mountPropagation;
-    return this;
-  }
-
-  /**
    * This must match the Name of a Volume.
    * @return value or {@code null} for none
    */
@@ -124,8 +93,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
-   * +optional
+   * (Optional) Only true is accepted. Defaults to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -133,8 +101,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
-   * +optional
+   * (Optional) Only true is accepted. Defaults to true.
    * @param readOnly readOnly or {@code null} for none
    */
   public VolumeMount setReadOnly(java.lang.Boolean readOnly) {
@@ -143,8 +110,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path within the volume from which the container's volume should be mounted. Defaults to ""
-   * (volume's root). +optional
+   * (Optional) Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
    * @return value or {@code null} for none
    */
   public java.lang.String getSubPath() {
@@ -152,8 +119,8 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path within the volume from which the container's volume should be mounted. Defaults to ""
-   * (volume's root). +optional
+   * (Optional) Path within the volume from which the container's volume should be mounted. Defaults
+   * to "" (volume's root).
    * @param subPath subPath or {@code null} for none
    */
   public VolumeMount setSubPath(java.lang.String subPath) {

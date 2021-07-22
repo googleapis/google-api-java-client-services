@@ -768,9 +768,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   public static final class TransferInfo extends com.google.api.client.json.GenericJson {
 
     /**
-     * Sku id of the current resold subscription. This is populated only when customer has
-     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
-     * transfer in.
+     * The `skuId` of the current resold subscription. This is populated only when the customer has a
+     * subscription with a legacy SKU and the subscription resource is populated with the `skuId` of
+     * the SKU recommended for the transfer.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -794,9 +794,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     private java.lang.Long transferabilityExpirationTime;
 
     /**
-     * Sku id of the current resold subscription. This is populated only when customer has
-     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
-     * transfer in.
+     * The `skuId` of the current resold subscription. This is populated only when the customer has a
+     * subscription with a legacy SKU and the subscription resource is populated with the `skuId` of
+     * the SKU recommended for the transfer.
      * @return value or {@code null} for none
      */
     public java.lang.String getCurrentLegacySkuId() {
@@ -804,9 +804,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Sku id of the current resold subscription. This is populated only when customer has
-     * subscription with legacy sku and the subscription resource is populated with recommeded sku for
-     * transfer in.
+     * The `skuId` of the current resold subscription. This is populated only when the customer has a
+     * subscription with a legacy SKU and the subscription resource is populated with the `skuId` of
+     * the SKU recommended for the transfer.
      * @param currentLegacySkuId currentLegacySkuId or {@code null} for none
      */
     public TransferInfo setCurrentLegacySkuId(java.lang.String currentLegacySkuId) {

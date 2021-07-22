@@ -31,14 +31,20 @@ package com.google.api.services.reseller.model;
 public final class PrimaryAdmin extends com.google.api.client.json.GenericJson {
 
   /**
-   * Primary admin's domained email This email's domain will be used to create TEAM customer
+   * The business email of the primary administrator of the customer. The email verification link is
+   * sent to this email address at the time of customer creation. Primary administrators have access
+   * to the customer's Admin Console, including the ability to invite and evict users and manage the
+   * administrative needs of the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryEmail;
 
   /**
-   * Primary admin's domained email This email's domain will be used to create TEAM customer
+   * The business email of the primary administrator of the customer. The email verification link is
+   * sent to this email address at the time of customer creation. Primary administrators have access
+   * to the customer's Admin Console, including the ability to invite and evict users and manage the
+   * administrative needs of the customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryEmail() {
@@ -46,7 +52,10 @@ public final class PrimaryAdmin extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Primary admin's domained email This email's domain will be used to create TEAM customer
+   * The business email of the primary administrator of the customer. The email verification link is
+   * sent to this email address at the time of customer creation. Primary administrators have access
+   * to the customer's Admin Console, including the ability to invite and evict users and manage the
+   * administrative needs of the customer.
    * @param primaryEmail primaryEmail or {@code null} for none
    */
   public PrimaryAdmin setPrimaryEmail(java.lang.String primaryEmail) {

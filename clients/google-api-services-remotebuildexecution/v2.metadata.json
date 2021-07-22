@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-remotebuildexecution",
-    "version": "v2-rev20210614-1.32.1"
-  }
-}

@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
    * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
    * not limited, and the system decides the target concurrency for the autoscaler.
@@ -82,7 +82,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.util.List<Volume> volumes;
 
   /**
-   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
    * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
    * not limited, and the system decides the target concurrency for the autoscaler.
@@ -93,7 +93,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
+   * Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests
    * per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80
    * Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is
    * not limited, and the system decides the target concurrency for the autoscaler.

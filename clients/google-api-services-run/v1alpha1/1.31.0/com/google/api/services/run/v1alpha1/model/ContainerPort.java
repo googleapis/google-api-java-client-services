@@ -30,7 +30,7 @@ package com.google.api.services.run.v1alpha1.model;
 public final class ContainerPort extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
+   * (Optional) Port number the container listens on. This must be a valid port number, 0 < x <
    * 65536.
    * The value may be {@code null}.
    */
@@ -38,38 +38,22 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   private java.lang.Integer containerPort;
 
   /**
-   * What host IP to bind the external port to. +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String hostIP;
-
-  /**
-   * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x <
-   * 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need
-   * this. +optional
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer hostPort;
-
-  /**
-   * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod
-   * must have a unique name. Name for the port that can be referred to by services. +optional
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional
+   * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
+   * (Optional) Port number the container listens on. This must be a valid port number, 0 < x <
    * 65536.
    * @return value or {@code null} for none
    */
@@ -78,7 +62,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
+   * (Optional) Port number the container listens on. This must be a valid port number, 0 < x <
    * 65536.
    * @param containerPort containerPort or {@code null} for none
    */
@@ -88,46 +72,8 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * What host IP to bind the external port to. +optional
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHostIP() {
-    return hostIP;
-  }
-
-  /**
-   * What host IP to bind the external port to. +optional
-   * @param hostIP hostIP or {@code null} for none
-   */
-  public ContainerPort setHostIP(java.lang.String hostIP) {
-    this.hostIP = hostIP;
-    return this;
-  }
-
-  /**
-   * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x <
-   * 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need
-   * this. +optional
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getHostPort() {
-    return hostPort;
-  }
-
-  /**
-   * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x <
-   * 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need
-   * this. +optional
-   * @param hostPort hostPort or {@code null} for none
-   */
-  public ContainerPort setHostPort(java.lang.Integer hostPort) {
-    this.hostPort = hostPort;
-    return this;
-  }
-
-  /**
-   * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod
-   * must have a unique name. Name for the port that can be referred to by services. +optional
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,8 +81,8 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod
-   * must have a unique name. Name for the port that can be referred to by services. +optional
+   * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and
+   * "h2c".
    * @param name name or {@code null} for none
    */
   public ContainerPort setName(java.lang.String name) {
@@ -145,7 +91,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional
+   * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -153,7 +99,7 @@ public final class ContainerPort extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional
+   * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
    * @param protocol protocol or {@code null} for none
    */
   public ContainerPort setProtocol(java.lang.String protocol) {

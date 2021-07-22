@@ -30,32 +30,20 @@ package com.google.api.services.run.v1alpha1.model;
 public final class ResourceRequirements extends com.google.api.client.json.GenericJson {
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. The values of the map is
-   * string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/st
-   * aging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> limits;
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. This is a temporary field
-   * created to migrate away from the map limits field. This is done to become compliant with k8s
-   * style API. This field is deprecated in favor of limits field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, Quantity> limitsInMap;
-
-  static {
-    // hack to force ProGuard to consider Quantity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Quantity.class);
-  }
-
-  /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
    * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
    * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
    * source/quantity.go
@@ -65,26 +53,11 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> requests;
 
   /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. This is a temporary field created to migrate away from the map
-   * requests field. This is done to become compliant with k8s style API. This field is deprecated
-   * in favor of requests field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, Quantity> requestsInMap;
-
-  static {
-    // hack to force ProGuard to consider Quantity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Quantity.class);
-  }
-
-  /**
-   * Limits describes the maximum amount of compute resources allowed. The values of the map is
-   * string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/st
-   * aging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -92,9 +65,11 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. The values of the map is
-   * string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/st
-   * aging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum
+   * amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @param limits limits or {@code null} for none
    */
   public ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {
@@ -103,29 +78,9 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Limits describes the maximum amount of compute resources allowed. This is a temporary field
-   * created to migrate away from the map limits field. This is done to become compliant with k8s
-   * style API. This field is deprecated in favor of limits field.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, Quantity> getLimitsInMap() {
-    return limitsInMap;
-  }
-
-  /**
-   * Limits describes the maximum amount of compute resources allowed. This is a temporary field
-   * created to migrate away from the map limits field. This is done to become compliant with k8s
-   * style API. This field is deprecated in favor of limits field.
-   * @param limitsInMap limitsInMap or {@code null} for none
-   */
-  public ResourceRequirements setLimitsInMap(java.util.Map<String, Quantity> limitsInMap) {
-    this.limitsInMap = limitsInMap;
-    return this;
-  }
-
-  /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
    * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
    * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
    * source/quantity.go
@@ -136,8 +91,9 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
+   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
+   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
    * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
    * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
    * source/quantity.go
@@ -145,31 +101,6 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
    */
   public ResourceRequirements setRequests(java.util.Map<String, java.lang.String> requests) {
     this.requests = requests;
-    return this;
-  }
-
-  /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. This is a temporary field created to migrate away from the map
-   * requests field. This is done to become compliant with k8s style API. This field is deprecated
-   * in favor of requests field.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, Quantity> getRequestsInMap() {
-    return requestsInMap;
-  }
-
-  /**
-   * Requests describes the minimum amount of compute resources required. If Requests is omitted for
-   * a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. This is a temporary field created to migrate away from the map
-   * requests field. This is done to become compliant with k8s style API. This field is deprecated
-   * in favor of requests field.
-   * @param requestsInMap requestsInMap or {@code null} for none
-   */
-  public ResourceRequirements setRequestsInMap(java.util.Map<String, Quantity> requestsInMap) {
-    this.requestsInMap = requestsInMap;
     return this;
   }
 

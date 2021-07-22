@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * ObjectMeta is metadata that all persisted resources must have, which includes all objects users
- * must create.
+ * k8s.io.apimachinery.pkg.apis.meta.v1.ObjectMeta is metadata that all persisted resources must
+ * have, which includes all objects users must create.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,77 +31,78 @@ package com.google.api.services.run.v1alpha1.model;
 public final class ObjectMeta extends com.google.api.client.json.GenericJson {
 
   /**
-   * Annotations is an unstructured key value map stored with a resource that may be set by external
-   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional
+   * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
+   * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
+   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * guide/annotations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * (Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This
    * is used to distinguish resources with same name and namespace in different clusters. This field
    * is not set anywhere right now and apiserver is going to ignore it if set in create or update
-   * request. +optional
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterName;
 
   /**
-   * CreationTimestamp is a timestamp representing the server time when this object was created. It
-   * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
-   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#metadata +optional
+   * (Optional) CreationTimestamp is a timestamp representing the server time when this object was
+   * created. It is not guaranteed to be set in happens-before order across separate operations.
+   * Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by
+   * the system. Read-only. Null for lists. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTimestamp;
 
   /**
-   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * (Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully
    * terminate before it will be removed from the system. Only set when deletionTimestamp is also
-   * set. May only be shortened. Read-only. +optional
+   * set. May only be shortened. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer deletionGracePeriodSeconds;
 
   /**
-   * DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field
-   * is set by the server when a graceful deletion is requested by the user, and is not directly
-   * settable by a client. The resource is expected to be deleted (no longer visible from resource
-   * lists, and not reachable by name) after the time in this field, once the finalizers list is
-   * empty. As long as the finalizers list contains items, deletion is blocked. Once the
-   * deletionTimestamp is set, this value may not be unset or be set further into the future,
-   * although it may be shortened or the resource may be deleted prior to this time. For example, a
-   * user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a
-   * graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet
-   * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
-   * pod from the API. In the presence of network partitions, this object may still exist after this
-   * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
-   * the system when a graceful deletion is requested. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * (Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this
+   * resource will be deleted. This field is set by the server when a graceful deletion is requested
+   * by the user, and is not directly settable by a client. The resource is expected to be deleted
+   * (no longer visible from resource lists, and not reachable by name) after the time in this
+   * field, once the finalizers list is empty. As long as the finalizers list contains items,
+   * deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set
+   * further into the future, although it may be shortened or the resource may be deleted prior to
+   * this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet
+   * will react by sending a graceful termination signal to the containers in the pod. After that 30
+   * seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after
+   * cleanup, remove the pod from the API. In the presence of network partitions, this object may
+   * still exist after this timestamp, until an administrator or automated process can determine the
+   * resource is fully terminated. If not set, graceful deletion of the object has not been
+   * requested. Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deletionTimestamp;
 
   /**
-   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * (Optional) Not supported by Cloud Run Must be empty before the object is deleted from the
    * registry. Each entry is an identifier for the responsible component that will remove the entry
    * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
-   * be removed. +optional +patchStrategy=merge
+   * be removed. +patchStrategy=merge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> finalizers;
 
   /**
-   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * (Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server,
    * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
    * the name returned to the client will be different than the name passed. This value will also be
    * combined with a unique suffix. The provided value has the same validation rules as the Name
@@ -111,24 +112,24 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * indicating a unique name could not be found in the time allotted, and the client should retry
    * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
    * specified. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#idempotency +optional string generateName = 2;
+   * conventions.md#idempotency string generateName = 2;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String generateName;
 
   /**
-   * A sequence number representing a specific generation of the desired state. Populated by the
-   * system. Read-only. +optional
+   * (Optional) A sequence number representing a specific generation of the desired state. Populated
+   * by the system. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer generation;
 
   /**
-   * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels +optional
+   * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
+   * select) objects. May match selectors of replication controllers and routes. More info:
+   * http://kubernetes.io/docs/user-guide/labels
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,28 +155,29 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.lang.String namespace;
 
   /**
-   * List of objects that own this object. If ALL objects in the list have been deleted, this object
-   * will be garbage collected. +optional
+   * (Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in
+   * the list have been deleted, this object will be garbage collected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OwnerReference> ownerReferences;
 
   /**
-   * An opaque value that represents the internal version of this object that can be used by clients
-   * to determine when objects have changed. May be used for optimistic concurrency, change
-   * detection, and the watch operation on a resource or set of resources. Clients must treat these
-   * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency +optional
+   * Optional. An opaque value that represents the internal version of this object that can be used
+   * by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. They may only be valid for a particular resource or set of resources.
+   * Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More
+   * info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
+   * #concurrency-control-and-consistency
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceVersion;
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * (Optional) SelfLink is a URL representing this object. Populated by the system. Read-only.
    * string selfLink = 4;
    * The value may be {@code null}.
    */
@@ -183,19 +185,20 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * UID is the unique in time and space value for this object. It is typically generated by the
-   * server on successful creation of a resource and is not allowed to change on PUT operations.
-   * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
-   * guide/identifiers#uids +optional
+   * (Optional) UID is the unique in time and space value for this object. It is typically generated
+   * by the server on successful creation of a resource and is not allowed to change on PUT
+   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * guide/identifiers#uids
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Annotations is an unstructured key value map stored with a resource that may be set by external
-   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional
+   * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
+   * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
+   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * guide/annotations
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -203,9 +206,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotations is an unstructured key value map stored with a resource that may be set by external
-   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional
+   * (Optional) Annotations is an unstructured key value map stored with a resource that may be set
+   * by external tools to store and retrieve arbitrary metadata. They are not queryable and should
+   * be preserved when modifying objects. More info: http://kubernetes.io/docs/user-
+   * guide/annotations
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -214,10 +218,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * (Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This
    * is used to distinguish resources with same name and namespace in different clusters. This field
    * is not set anywhere right now and apiserver is going to ignore it if set in create or update
-   * request. +optional
+   * request.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -225,10 +229,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This
+   * (Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This
    * is used to distinguish resources with same name and namespace in different clusters. This field
    * is not set anywhere right now and apiserver is going to ignore it if set in create or update
-   * request. +optional
+   * request.
    * @param clusterName clusterName or {@code null} for none
    */
   public ObjectMeta setClusterName(java.lang.String clusterName) {
@@ -237,11 +241,11 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CreationTimestamp is a timestamp representing the server time when this object was created. It
-   * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
-   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#metadata +optional
+   * (Optional) CreationTimestamp is a timestamp representing the server time when this object was
+   * created. It is not guaranteed to be set in happens-before order across separate operations.
+   * Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by
+   * the system. Read-only. Null for lists. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * @return value or {@code null} for none
    */
   public String getCreationTimestamp() {
@@ -249,11 +253,11 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CreationTimestamp is a timestamp representing the server time when this object was created. It
-   * is not guaranteed to be set in happens-before order across separate operations. Clients may not
-   * set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-
-   * only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#metadata +optional
+   * (Optional) CreationTimestamp is a timestamp representing the server time when this object was
+   * created. It is not guaranteed to be set in happens-before order across separate operations.
+   * Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by
+   * the system. Read-only. Null for lists. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ObjectMeta setCreationTimestamp(String creationTimestamp) {
@@ -262,9 +266,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * (Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully
    * terminate before it will be removed from the system. Only set when deletionTimestamp is also
-   * set. May only be shortened. Read-only. +optional
+   * set. May only be shortened. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDeletionGracePeriodSeconds() {
@@ -272,9 +276,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully
+   * (Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully
    * terminate before it will be removed from the system. Only set when deletionTimestamp is also
-   * set. May only be shortened. Read-only. +optional
+   * set. May only be shortened. Read-only.
    * @param deletionGracePeriodSeconds deletionGracePeriodSeconds or {@code null} for none
    */
   public ObjectMeta setDeletionGracePeriodSeconds(java.lang.Integer deletionGracePeriodSeconds) {
@@ -283,21 +287,21 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field
-   * is set by the server when a graceful deletion is requested by the user, and is not directly
-   * settable by a client. The resource is expected to be deleted (no longer visible from resource
-   * lists, and not reachable by name) after the time in this field, once the finalizers list is
-   * empty. As long as the finalizers list contains items, deletion is blocked. Once the
-   * deletionTimestamp is set, this value may not be unset or be set further into the future,
-   * although it may be shortened or the resource may be deleted prior to this time. For example, a
-   * user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a
-   * graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet
-   * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
-   * pod from the API. In the presence of network partitions, this object may still exist after this
-   * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
-   * the system when a graceful deletion is requested. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * (Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this
+   * resource will be deleted. This field is set by the server when a graceful deletion is requested
+   * by the user, and is not directly settable by a client. The resource is expected to be deleted
+   * (no longer visible from resource lists, and not reachable by name) after the time in this
+   * field, once the finalizers list is empty. As long as the finalizers list contains items,
+   * deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set
+   * further into the future, although it may be shortened or the resource may be deleted prior to
+   * this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet
+   * will react by sending a graceful termination signal to the containers in the pod. After that 30
+   * seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after
+   * cleanup, remove the pod from the API. In the presence of network partitions, this object may
+   * still exist after this timestamp, until an administrator or automated process can determine the
+   * resource is fully terminated. If not set, graceful deletion of the object has not been
+   * requested. Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * @return value or {@code null} for none
    */
   public String getDeletionTimestamp() {
@@ -305,21 +309,21 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field
-   * is set by the server when a graceful deletion is requested by the user, and is not directly
-   * settable by a client. The resource is expected to be deleted (no longer visible from resource
-   * lists, and not reachable by name) after the time in this field, once the finalizers list is
-   * empty. As long as the finalizers list contains items, deletion is blocked. Once the
-   * deletionTimestamp is set, this value may not be unset or be set further into the future,
-   * although it may be shortened or the resource may be deleted prior to this time. For example, a
-   * user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a
-   * graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet
-   * will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the
-   * pod from the API. In the presence of network partitions, this object may still exist after this
-   * timestamp, until an administrator or automated process can determine the resource is fully
-   * terminated. If not set, graceful deletion of the object has not been requested. Populated by
-   * the system when a graceful deletion is requested. Read-only. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
+   * (Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this
+   * resource will be deleted. This field is set by the server when a graceful deletion is requested
+   * by the user, and is not directly settable by a client. The resource is expected to be deleted
+   * (no longer visible from resource lists, and not reachable by name) after the time in this
+   * field, once the finalizers list is empty. As long as the finalizers list contains items,
+   * deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set
+   * further into the future, although it may be shortened or the resource may be deleted prior to
+   * this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet
+   * will react by sending a graceful termination signal to the containers in the pod. After that 30
+   * seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after
+   * cleanup, remove the pod from the API. In the presence of network partitions, this object may
+   * still exist after this timestamp, until an administrator or automated process can determine the
+   * resource is fully terminated. If not set, graceful deletion of the object has not been
+   * requested. Populated by the system when a graceful deletion is requested. Read-only. More info:
+   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
    * @param deletionTimestamp deletionTimestamp or {@code null} for none
    */
   public ObjectMeta setDeletionTimestamp(String deletionTimestamp) {
@@ -328,10 +332,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * (Optional) Not supported by Cloud Run Must be empty before the object is deleted from the
    * registry. Each entry is an identifier for the responsible component that will remove the entry
    * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
-   * be removed. +optional +patchStrategy=merge
+   * be removed. +patchStrategy=merge
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFinalizers() {
@@ -339,10 +343,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. Must be empty before the object is deleted from the
+   * (Optional) Not supported by Cloud Run Must be empty before the object is deleted from the
    * registry. Each entry is an identifier for the responsible component that will remove the entry
    * from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only
-   * be removed. +optional +patchStrategy=merge
+   * be removed. +patchStrategy=merge
    * @param finalizers finalizers or {@code null} for none
    */
   public ObjectMeta setFinalizers(java.util.List<java.lang.String> finalizers) {
@@ -351,7 +355,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * (Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server,
    * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
    * the name returned to the client will be different than the name passed. This value will also be
    * combined with a unique suffix. The provided value has the same validation rules as the Name
@@ -361,7 +365,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * indicating a unique name could not be found in the time allotted, and the client should retry
    * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
    * specified. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#idempotency +optional string generateName = 2;
+   * conventions.md#idempotency string generateName = 2;
    * @return value or {@code null} for none
    */
   public java.lang.String getGenerateName() {
@@ -369,7 +373,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server,
+   * (Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server,
    * to generate a unique name ONLY IF the Name field has not been provided. If this field is used,
    * the name returned to the client will be different than the name passed. This value will also be
    * combined with a unique suffix. The provided value has the same validation rules as the Name
@@ -379,7 +383,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * indicating a unique name could not be found in the time allotted, and the client should retry
    * (optionally after the time indicated in the Retry-After header). Applied only if Name is not
    * specified. More info: https://git.k8s.io/community/contributors/devel/api-
-   * conventions.md#idempotency +optional string generateName = 2;
+   * conventions.md#idempotency string generateName = 2;
    * @param generateName generateName or {@code null} for none
    */
   public ObjectMeta setGenerateName(java.lang.String generateName) {
@@ -388,8 +392,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sequence number representing a specific generation of the desired state. Populated by the
-   * system. Read-only. +optional
+   * (Optional) A sequence number representing a specific generation of the desired state. Populated
+   * by the system. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGeneration() {
@@ -397,8 +401,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A sequence number representing a specific generation of the desired state. Populated by the
-   * system. Read-only. +optional
+   * (Optional) A sequence number representing a specific generation of the desired state. Populated
+   * by the system. Read-only.
    * @param generation generation or {@code null} for none
    */
   public ObjectMeta setGeneration(java.lang.Integer generation) {
@@ -407,9 +411,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels +optional
+   * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
+   * select) objects. May match selectors of replication controllers and routes. More info:
+   * http://kubernetes.io/docs/user-guide/labels
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -417,9 +421,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * http://kubernetes.io/docs/user-guide/labels +optional
+   * (Optional) Map of string keys and values that can be used to organize and categorize (scope and
+   * select) objects. May match selectors of replication controllers and routes. More info:
+   * http://kubernetes.io/docs/user-guide/labels
    * @param labels labels or {@code null} for none
    */
   public ObjectMeta setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -472,8 +476,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of objects that own this object. If ALL objects in the list have been deleted, this object
-   * will be garbage collected. +optional
+   * (Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in
+   * the list have been deleted, this object will be garbage collected.
    * @return value or {@code null} for none
    */
   public java.util.List<OwnerReference> getOwnerReferences() {
@@ -481,8 +485,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of objects that own this object. If ALL objects in the list have been deleted, this object
-   * will be garbage collected. +optional
+   * (Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in
+   * the list have been deleted, this object will be garbage collected.
    * @param ownerReferences ownerReferences or {@code null} for none
    */
   public ObjectMeta setOwnerReferences(java.util.List<OwnerReference> ownerReferences) {
@@ -491,13 +495,14 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An opaque value that represents the internal version of this object that can be used by clients
-   * to determine when objects have changed. May be used for optimistic concurrency, change
-   * detection, and the watch operation on a resource or set of resources. Clients must treat these
-   * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency +optional
+   * Optional. An opaque value that represents the internal version of this object that can be used
+   * by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. They may only be valid for a particular resource or set of resources.
+   * Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More
+   * info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
+   * #concurrency-control-and-consistency
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -505,13 +510,14 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An opaque value that represents the internal version of this object that can be used by clients
-   * to determine when objects have changed. May be used for optimistic concurrency, change
-   * detection, and the watch operation on a resource or set of resources. Clients must treat these
-   * values as opaque and passed unmodified back to the server. They may only be valid for a
-   * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency +optional
+   * Optional. An opaque value that represents the internal version of this object that can be used
+   * by clients to determine when objects have changed. May be used for optimistic concurrency,
+   * change detection, and the watch operation on a resource or set of resources. Clients must treat
+   * these values as opaque and passed unmodified back to the server or omit the value to disable
+   * conflict-detection. They may only be valid for a particular resource or set of resources.
+   * Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More
+   * info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md
+   * #concurrency-control-and-consistency
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ObjectMeta setResourceVersion(java.lang.String resourceVersion) {
@@ -520,7 +526,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * (Optional) SelfLink is a URL representing this object. Populated by the system. Read-only.
    * string selfLink = 4;
    * @return value or {@code null} for none
    */
@@ -529,7 +535,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SelfLink is a URL representing this object. Populated by the system. Read-only. +optional
+   * (Optional) SelfLink is a URL representing this object. Populated by the system. Read-only.
    * string selfLink = 4;
    * @param selfLink selfLink or {@code null} for none
    */
@@ -539,10 +545,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * UID is the unique in time and space value for this object. It is typically generated by the
-   * server on successful creation of a resource and is not allowed to change on PUT operations.
-   * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
-   * guide/identifiers#uids +optional
+   * (Optional) UID is the unique in time and space value for this object. It is typically generated
+   * by the server on successful creation of a resource and is not allowed to change on PUT
+   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * guide/identifiers#uids
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -550,10 +556,10 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * UID is the unique in time and space value for this object. It is typically generated by the
-   * server on successful creation of a resource and is not allowed to change on PUT operations.
-   * Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
-   * guide/identifiers#uids +optional
+   * (Optional) UID is the unique in time and space value for this object. It is typically generated
+   * by the server on successful creation of a resource and is not allowed to change on PUT
+   * operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-
+   * guide/identifiers#uids
    * @param uid uid or {@code null} for none
    */
   public ObjectMeta setUid(java.lang.String uid) {

@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * HTTPHeader describes a custom header to be used in HTTP probes
+ * Not supported by Cloud Run HTTPHeader describes a custom header to be used in HTTP probes
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

@@ -57,8 +57,8 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   private java.lang.String imageDigest;
 
   /**
-   * Specifies the generated logging url for this particular revision based on the revision url
-   * template specified in the controller's config. +optional
+   * Optional. Specifies the generated logging url for this particular revision based on the
+   * revision url template specified in the controller's config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the generated logging url for this particular revision based on the revision url
-   * template specified in the controller's config. +optional
+   * Optional. Specifies the generated logging url for this particular revision based on the
+   * revision url template specified in the controller's config.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogUrl() {
@@ -138,8 +138,8 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the generated logging url for this particular revision based on the revision url
-   * template specified in the controller's config. +optional
+   * Optional. Specifies the generated logging url for this particular revision based on the
+   * revision url template specified in the controller's config.
    * @param logUrl logUrl or {@code null} for none
    */
   public RevisionStatus setLogUrl(java.lang.String logUrl) {

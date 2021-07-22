@@ -2119,7 +2119,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
         }
         /**
-         * Returns information about all data transfers in the project.
+         * Returns information about all transfer configs owned by a project in the specified location.
          *
          * Create a request for the method "transferConfigs.list".
          *
@@ -2144,7 +2144,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Returns information about all data transfers in the project.
+           * Returns information about all transfer configs owned by a project in the specified location.
            *
            * Create a request for the method "transferConfigs.list".
            *
@@ -4265,7 +4265,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Returns information about all data transfers in the project.
+       * Returns information about all transfer configs owned by a project in the specified location.
        *
        * Create a request for the method "transferConfigs.list".
        *
@@ -4290,7 +4290,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Returns information about all data transfers in the project.
+         * Returns information about all transfer configs owned by a project in the specified location.
          *
          * Create a request for the method "transferConfigs.list".
          *

@@ -89,6 +89,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private BrowserAssignedTargetingOptionDetails browserDetails;
 
   /**
+   * Business chain details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BusinessChainAssignedTargetingOptionDetails businessChainDetails;
+
+  /**
    * Carrier and ISP details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CARRIER_AND_ISP`.
    * The value may be {@code null}.
@@ -271,6 +279,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private NegativeKeywordListAssignedTargetingOptionDetails negativeKeywordListDetails;
 
   /**
+   * Open Measurement enabled inventory details. This field will be populated when the
+   * targeting_type is `TARGETING_TYPE_OMID`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OmidAssignedTargetingOptionDetails omidDetails;
+
+  /**
    * On screen position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ON_SCREEN_POSITION`.
    * The value may be {@code null}.
@@ -293,6 +309,13 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private ParentalStatusAssignedTargetingOptionDetails parentalStatusDetails;
+
+  /**
+   * POI details. This field will be populated when the targeting_type is `TARGETING_TYPE_POI`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PoiAssignedTargetingOptionDetails poiDetails;
 
   /**
    * Proximity location list details. This field will be populated when the targeting_type is
@@ -507,6 +530,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setBrowserDetails(BrowserAssignedTargetingOptionDetails browserDetails) {
     this.browserDetails = browserDetails;
+    return this;
+  }
+
+  /**
+   * Business chain details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * @return value or {@code null} for none
+   */
+  public BusinessChainAssignedTargetingOptionDetails getBusinessChainDetails() {
+    return businessChainDetails;
+  }
+
+  /**
+   * Business chain details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * @param businessChainDetails businessChainDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setBusinessChainDetails(BusinessChainAssignedTargetingOptionDetails businessChainDetails) {
+    this.businessChainDetails = businessChainDetails;
     return this;
   }
 
@@ -941,6 +983,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
+   * Open Measurement enabled inventory details. This field will be populated when the
+   * targeting_type is `TARGETING_TYPE_OMID`.
+   * @return value or {@code null} for none
+   */
+  public OmidAssignedTargetingOptionDetails getOmidDetails() {
+    return omidDetails;
+  }
+
+  /**
+   * Open Measurement enabled inventory details. This field will be populated when the
+   * targeting_type is `TARGETING_TYPE_OMID`.
+   * @param omidDetails omidDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setOmidDetails(OmidAssignedTargetingOptionDetails omidDetails) {
+    this.omidDetails = omidDetails;
+    return this;
+  }
+
+  /**
    * On screen position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ON_SCREEN_POSITION`.
    * @return value or {@code null} for none
@@ -994,6 +1055,23 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setParentalStatusDetails(ParentalStatusAssignedTargetingOptionDetails parentalStatusDetails) {
     this.parentalStatusDetails = parentalStatusDetails;
+    return this;
+  }
+
+  /**
+   * POI details. This field will be populated when the targeting_type is `TARGETING_TYPE_POI`.
+   * @return value or {@code null} for none
+   */
+  public PoiAssignedTargetingOptionDetails getPoiDetails() {
+    return poiDetails;
+  }
+
+  /**
+   * POI details. This field will be populated when the targeting_type is `TARGETING_TYPE_POI`.
+   * @param poiDetails poiDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setPoiDetails(PoiAssignedTargetingOptionDetails poiDetails) {
+    this.poiDetails = poiDetails;
     return this;
   }
 

@@ -59,6 +59,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private BrowserTargetingOptionDetails browserDetails;
 
   /**
+   * Business chain resource details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BusinessChainTargetingOptionDetails businessChainDetails;
+
+  /**
    * Carrier and ISP details.
    * The value may be {@code null}.
    */
@@ -164,6 +171,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private NativeContentPositionTargetingOptionDetails nativeContentPositionDetails;
 
   /**
+   * Open Measurement enabled inventory details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OmidTargetingOptionDetails omidDetails;
+
+  /**
    * On screen position details.
    * The value may be {@code null}.
    */
@@ -183,6 +197,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private ParentalStatusTargetingOptionDetails parentalStatusDetails;
+
+  /**
+   * POI resource details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PoiTargetingOptionDetails poiDetails;
 
   /**
    * Sensitive Category details.
@@ -299,6 +320,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setBrowserDetails(BrowserTargetingOptionDetails browserDetails) {
     this.browserDetails = browserDetails;
+    return this;
+  }
+
+  /**
+   * Business chain resource details.
+   * @return value or {@code null} for none
+   */
+  public BusinessChainTargetingOptionDetails getBusinessChainDetails() {
+    return businessChainDetails;
+  }
+
+  /**
+   * Business chain resource details.
+   * @param businessChainDetails businessChainDetails or {@code null} for none
+   */
+  public TargetingOption setBusinessChainDetails(BusinessChainTargetingOptionDetails businessChainDetails) {
+    this.businessChainDetails = businessChainDetails;
     return this;
   }
 
@@ -558,6 +596,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Open Measurement enabled inventory details.
+   * @return value or {@code null} for none
+   */
+  public OmidTargetingOptionDetails getOmidDetails() {
+    return omidDetails;
+  }
+
+  /**
+   * Open Measurement enabled inventory details.
+   * @param omidDetails omidDetails or {@code null} for none
+   */
+  public TargetingOption setOmidDetails(OmidTargetingOptionDetails omidDetails) {
+    this.omidDetails = omidDetails;
+    return this;
+  }
+
+  /**
    * On screen position details.
    * @return value or {@code null} for none
    */
@@ -605,6 +660,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setParentalStatusDetails(ParentalStatusTargetingOptionDetails parentalStatusDetails) {
     this.parentalStatusDetails = parentalStatusDetails;
+    return this;
+  }
+
+  /**
+   * POI resource details.
+   * @return value or {@code null} for none
+   */
+  public PoiTargetingOptionDetails getPoiDetails() {
+    return poiDetails;
+  }
+
+  /**
+   * POI resource details.
+   * @param poiDetails poiDetails or {@code null} for none
+   */
+  public TargetingOption setPoiDetails(PoiTargetingOptionDetails poiDetails) {
+    this.poiDetails = poiDetails;
     return this;
   }
 

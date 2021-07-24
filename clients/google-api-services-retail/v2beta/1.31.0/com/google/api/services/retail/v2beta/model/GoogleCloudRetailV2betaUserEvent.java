@@ -51,11 +51,12 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Highly recommended for user events that are the result of PredictionService.Predict. This field
    * enables accurate attribution of recommendation model performance. The value must be a valid
    * PredictResponse.attribution_token for user events that are the result of
-   * PredictionService.Predict. This token enables us to accurately attribute page view or purchase
-   * back to the event and the particular predict response containing this clicked/purchased
-   * product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * PredictionService.Predict. The value must be a valid SearchResponse.attribution_token for user
+   * events that are the result of SearchService.Search. This token enables us to accurately
+   * attribute page view or purchase back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,6 +70,15 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String cartId;
+
+  /**
+   * The main completion details related to the event. In a `completion` event, this field
+   * represents the completions returned to the end user and the clicked completion by the end user.
+   * In a `search` event, it represents the search event happens after clicking completion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaCompletionDetail completionDetail;
 
   /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
@@ -99,6 +109,37 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> experimentIds;
+
+  /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the products being filtered. See SearchRequest.filter for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
+   * An integer that specifies the current offset for pagination (the 0-indexed starting location,
+   * amongst the products deemed by the API as relevant). See SearchRequest.offset for definition.
+   * If this field is negative, an INVALID_ARGUMENT is returned. This can only be set for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer offset;
+
+  /**
+   * The order in which products are returned. See SearchRequest.order_by for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. This can only be set for `search` events. Other event types
+   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderBy;
 
   /**
    * The categories associated with a category page. To represent full path of category, use '>'
@@ -161,14 +202,24 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   private java.lang.String referrerUri;
 
   /**
-   * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * page_categories is required for `search` events. Other event types should not set this field.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. At least one of search_query or page_categories is required for `search` events.
+   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String searchQuery;
+
+  /**
+   * A unique identifier for tracking a visitor session with a length limit of 128 bytes. A session
+   * is an aggregation of an end user behavior in a time span. A general guideline to populate the
+   * sesion_id: 1. If user has no activity for 30 min, a new session_id should be assigned. 2. The
+   * session_id should be unique across users, suggest use uuid or add visitor_id as prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sessionId;
 
   /**
    * Complete URL (window.location.href) of the user's current page. When using the client side
@@ -229,11 +280,12 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Highly recommended for user events that are the result of PredictionService.Predict. This field
    * enables accurate attribution of recommendation model performance. The value must be a valid
    * PredictResponse.attribution_token for user events that are the result of
-   * PredictionService.Predict. This token enables us to accurately attribute page view or purchase
-   * back to the event and the particular predict response containing this clicked/purchased
-   * product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * PredictionService.Predict. The value must be a valid SearchResponse.attribution_token for user
+   * events that are the result of SearchService.Search. This token enables us to accurately
+   * attribute page view or purchase back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionToken() {
@@ -244,11 +296,12 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Highly recommended for user events that are the result of PredictionService.Predict. This field
    * enables accurate attribution of recommendation model performance. The value must be a valid
    * PredictResponse.attribution_token for user events that are the result of
-   * PredictionService.Predict. This token enables us to accurately attribute page view or purchase
-   * back to the event and the particular predict response containing this clicked/purchased
-   * product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * PredictionService.Predict. The value must be a valid SearchResponse.attribution_token for user
+   * events that are the result of SearchService.Search. This token enables us to accurately
+   * attribute page view or purchase back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * @param attributionToken attributionToken or {@code null} for none
    */
   public GoogleCloudRetailV2betaUserEvent setAttributionToken(java.lang.String attributionToken) {
@@ -274,6 +327,27 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   public GoogleCloudRetailV2betaUserEvent setCartId(java.lang.String cartId) {
     this.cartId = cartId;
+    return this;
+  }
+
+  /**
+   * The main completion details related to the event. In a `completion` event, this field
+   * represents the completions returned to the end user and the clicked completion by the end user.
+   * In a `search` event, it represents the search event happens after clicking completion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaCompletionDetail getCompletionDetail() {
+    return completionDetail;
+  }
+
+  /**
+   * The main completion details related to the event. In a `completion` event, this field
+   * represents the completions returned to the end user and the clicked completion by the end user.
+   * In a `search` event, it represents the search event happens after clicking completion.
+   * @param completionDetail completionDetail or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setCompletionDetail(GoogleCloudRetailV2betaCompletionDetail completionDetail) {
+    this.completionDetail = completionDetail;
     return this;
   }
 
@@ -343,6 +417,77 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   public GoogleCloudRetailV2betaUserEvent setExperimentIds(java.util.List<java.lang.String> experimentIds) {
     this.experimentIds = experimentIds;
+    return this;
+  }
+
+  /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the products being filtered. See SearchRequest.filter for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * The filter syntax consists of an expression language for constructing a predicate from one or
+   * more fields of the products being filtered. See SearchRequest.filter for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setFilter(java.lang.String filter) {
+    this.filter = filter;
+    return this;
+  }
+
+  /**
+   * An integer that specifies the current offset for pagination (the 0-indexed starting location,
+   * amongst the products deemed by the API as relevant). See SearchRequest.offset for definition.
+   * If this field is negative, an INVALID_ARGUMENT is returned. This can only be set for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOffset() {
+    return offset;
+  }
+
+  /**
+   * An integer that specifies the current offset for pagination (the 0-indexed starting location,
+   * amongst the products deemed by the API as relevant). See SearchRequest.offset for definition.
+   * If this field is negative, an INVALID_ARGUMENT is returned. This can only be set for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * @param offset offset or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setOffset(java.lang.Integer offset) {
+    this.offset = offset;
+    return this;
+  }
+
+  /**
+   * The order in which products are returned. See SearchRequest.order_by for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. This can only be set for `search` events. Other event types
+   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderBy() {
+    return orderBy;
+  }
+
+  /**
+   * The order in which products are returned. See SearchRequest.order_by for definition and syntax.
+   * The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned. This can only be set for `search` events. Other event types
+   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * @param orderBy orderBy or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setOrderBy(java.lang.String orderBy) {
+    this.orderBy = orderBy;
     return this;
   }
 
@@ -470,10 +615,10 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * page_categories is required for `search` events. Other event types should not set this field.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. At least one of search_query or page_categories is required for `search` events.
+   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchQuery() {
@@ -481,14 +626,37 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * page_categories is required for `search` events. Other event types should not set this field.
-   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
+   * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. At least one of search_query or page_categories is required for `search` events.
+   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param searchQuery searchQuery or {@code null} for none
    */
   public GoogleCloudRetailV2betaUserEvent setSearchQuery(java.lang.String searchQuery) {
     this.searchQuery = searchQuery;
+    return this;
+  }
+
+  /**
+   * A unique identifier for tracking a visitor session with a length limit of 128 bytes. A session
+   * is an aggregation of an end user behavior in a time span. A general guideline to populate the
+   * sesion_id: 1. If user has no activity for 30 min, a new session_id should be assigned. 2. The
+   * session_id should be unique across users, suggest use uuid or add visitor_id as prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSessionId() {
+    return sessionId;
+  }
+
+  /**
+   * A unique identifier for tracking a visitor session with a length limit of 128 bytes. A session
+   * is an aggregation of an end user behavior in a time span. A general guideline to populate the
+   * sesion_id: 1. If user has no activity for 30 min, a new session_id should be assigned. 2. The
+   * session_id should be unique across users, suggest use uuid or add visitor_id as prefix.
+   * @param sessionId sessionId or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setSessionId(java.lang.String sessionId) {
+    this.sessionId = sessionId;
     return this;
   }
 

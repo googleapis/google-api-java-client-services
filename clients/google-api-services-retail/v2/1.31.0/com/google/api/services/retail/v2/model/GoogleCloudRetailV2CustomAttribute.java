@@ -30,6 +30,15 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
+   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
+   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean indexable;
+
+  /**
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]` when the key is
    * "lengths_cm". At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is returned.
    * Exactly one of text or numbers should be set. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -37,6 +46,15 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Double> numbers;
+
+  /**
+   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
+   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
+   * error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean searchable;
 
   /**
    * The textual values of this custom attribute. For example, `["yellow", "green"]` when the key is
@@ -48,6 +66,27 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> text;
+
+  /**
+   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
+   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
+   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIndexable() {
+    return indexable;
+  }
+
+  /**
+   * If true, custom attribute values are indexed, so that it can be filtered, faceted or boosted in
+   * SearchService.Search. This field is ignored in a UserEvent. See SearchRequest.filter,
+   * SearchRequest.facet_specs and SearchRequest.boost_spec for more details.
+   * @param indexable indexable or {@code null} for none
+   */
+  public GoogleCloudRetailV2CustomAttribute setIndexable(java.lang.Boolean indexable) {
+    this.indexable = indexable;
+    return this;
+  }
 
   /**
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]` when the key is
@@ -67,6 +106,27 @@ public final class GoogleCloudRetailV2CustomAttribute extends com.google.api.cli
    */
   public GoogleCloudRetailV2CustomAttribute setNumbers(java.util.List<java.lang.Double> numbers) {
     this.numbers = numbers;
+    return this;
+  }
+
+  /**
+   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
+   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
+   * error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSearchable() {
+    return searchable;
+  }
+
+  /**
+   * If true, custom attribute values are searchable by text queries in SearchService.Search. This
+   * field is ignored in a UserEvent. Only set if type text is set. Otherwise, a INVALID_ARGUMENT
+   * error is returned.
+   * @param searchable searchable or {@code null} for none
+   */
+  public GoogleCloudRetailV2CustomAttribute setSearchable(java.lang.Boolean searchable) {
+    this.searchable = searchable;
     return this;
   }
 

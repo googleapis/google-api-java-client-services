@@ -41,7 +41,8 @@ public final class GoogleCloudRetailV2betaPriceInfo extends com.google.api.clien
   /**
    * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-
    * codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is
-   * returned.
+   * returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share
+   * the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +63,35 @@ public final class GoogleCloudRetailV2betaPriceInfo extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.Float price;
+
+  /**
+   * The timestamp when the price starts to be effective. This can be set as a future timestamp, and
+   * the price is only used for search after price_effective_time. If so, the original_price must be
+   * set and original_price is used before price_effective_time. Do not set if price is always
+   * effective because it will cause additional latency during search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String priceEffectiveTime;
+
+  /**
+   * The timestamp when the price stops to be effective. The price is used for search before
+   * price_expire_time. If this field is set, the original_price must be set and original_price is
+   * used after price_expire_time. Do not set if price is always effective because it will cause
+   * additional latency during search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String priceExpireTime;
+
+  /**
+   * Output only. The price range of all the child Product.Type.VARIANT Products grouped together on
+   * the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This
+   * field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaPriceInfoPriceRange priceRange;
 
   /**
    * The costs associated with the sale of a particular product. Used for gross profit reporting. *
@@ -87,7 +117,8 @@ public final class GoogleCloudRetailV2betaPriceInfo extends com.google.api.clien
   /**
    * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-
    * codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is
-   * returned.
+   * returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share
+   * the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -97,7 +128,8 @@ public final class GoogleCloudRetailV2betaPriceInfo extends com.google.api.clien
   /**
    * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-
    * codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is
-   * returned.
+   * returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share
+   * the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public GoogleCloudRetailV2betaPriceInfo setCurrencyCode(java.lang.String currencyCode) {
@@ -140,6 +172,73 @@ public final class GoogleCloudRetailV2betaPriceInfo extends com.google.api.clien
    */
   public GoogleCloudRetailV2betaPriceInfo setPrice(java.lang.Float price) {
     this.price = price;
+    return this;
+  }
+
+  /**
+   * The timestamp when the price starts to be effective. This can be set as a future timestamp, and
+   * the price is only used for search after price_effective_time. If so, the original_price must be
+   * set and original_price is used before price_effective_time. Do not set if price is always
+   * effective because it will cause additional latency during search.
+   * @return value or {@code null} for none
+   */
+  public String getPriceEffectiveTime() {
+    return priceEffectiveTime;
+  }
+
+  /**
+   * The timestamp when the price starts to be effective. This can be set as a future timestamp, and
+   * the price is only used for search after price_effective_time. If so, the original_price must be
+   * set and original_price is used before price_effective_time. Do not set if price is always
+   * effective because it will cause additional latency during search.
+   * @param priceEffectiveTime priceEffectiveTime or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaPriceInfo setPriceEffectiveTime(String priceEffectiveTime) {
+    this.priceEffectiveTime = priceEffectiveTime;
+    return this;
+  }
+
+  /**
+   * The timestamp when the price stops to be effective. The price is used for search before
+   * price_expire_time. If this field is set, the original_price must be set and original_price is
+   * used after price_expire_time. Do not set if price is always effective because it will cause
+   * additional latency during search.
+   * @return value or {@code null} for none
+   */
+  public String getPriceExpireTime() {
+    return priceExpireTime;
+  }
+
+  /**
+   * The timestamp when the price stops to be effective. The price is used for search before
+   * price_expire_time. If this field is set, the original_price must be set and original_price is
+   * used after price_expire_time. Do not set if price is always effective because it will cause
+   * additional latency during search.
+   * @param priceExpireTime priceExpireTime or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaPriceInfo setPriceExpireTime(String priceExpireTime) {
+    this.priceExpireTime = priceExpireTime;
+    return this;
+  }
+
+  /**
+   * Output only. The price range of all the child Product.Type.VARIANT Products grouped together on
+   * the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This
+   * field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaPriceInfoPriceRange getPriceRange() {
+    return priceRange;
+  }
+
+  /**
+   * Output only. The price range of all the child Product.Type.VARIANT Products grouped together on
+   * the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This
+   * field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
+   * @param priceRange priceRange or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaPriceInfo setPriceRange(GoogleCloudRetailV2betaPriceInfoPriceRange priceRange) {
+    this.priceRange = priceRange;
     return this;
   }
 

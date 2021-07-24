@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,6 +58,14 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   private java.lang.String gcsStagingDir;
 
   /**
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported when
+   * ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDate partitionDate;
+
+  /**
    * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
    * 128 characters. If not specified, inherits the project ID from the parent request.
    * The value may be {@code null}.
@@ -78,7 +86,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -91,7 +99,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    * `product_merchant_center`: See [Importing catalog data from Merchant
    * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
    * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
-   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2betaBigQuerySource setDataSchema(java.lang.String dataSchema) {
@@ -134,6 +142,25 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
    */
   public GoogleCloudRetailV2betaBigQuerySource setGcsStagingDir(java.lang.String gcsStagingDir) {
     this.gcsStagingDir = gcsStagingDir;
+    return this;
+  }
+
+  /**
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported when
+   * ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDate getPartitionDate() {
+    return partitionDate;
+  }
+
+  /**
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported when
+   * ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @param partitionDate partitionDate or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaBigQuerySource setPartitionDate(GoogleTypeDate partitionDate) {
+    this.partitionDate = partitionDate;
     return this;
   }
 

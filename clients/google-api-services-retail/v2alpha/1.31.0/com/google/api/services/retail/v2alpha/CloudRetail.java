@@ -193,6 +193,476 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       public class Catalogs {
 
         /**
+         * Completes the specified prefix with keyword suggestions. This feature is only available for users
+         * who have Retail Search enabled. Contact Retail Support (retail-search-support@google.com) if you
+         * are interested in using Retail Search.
+         *
+         * Create a request for the method "catalogs.completeQuery".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link CompleteQuery#execute()} method to invoke the remote operation.
+         *
+         * @param catalog Required. Catalog for which the completion is performed. Full resource name of catalog, such as
+         *        `projects/locations/global/catalogs/default_catalog`.
+         * @return the request
+         */
+        public CompleteQuery completeQuery(java.lang.String catalog) throws java.io.IOException {
+          CompleteQuery result = new CompleteQuery(catalog);
+          initialize(result);
+          return result;
+        }
+
+        public class CompleteQuery extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaCompleteQueryResponse> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}:completeQuery";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Completes the specified prefix with keyword suggestions. This feature is only available for
+           * users who have Retail Search enabled. Contact Retail Support (retail-search-support@google.com)
+           * if you are interested in using Retail Search.
+           *
+           * Create a request for the method "catalogs.completeQuery".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link CompleteQuery#execute()} method to invoke the remote operation. <p>
+           * {@link CompleteQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param catalog Required. Catalog for which the completion is performed. Full resource name of catalog, such as
+         *        `projects/locations/global/catalogs/default_catalog`.
+           * @since 1.13
+           */
+          protected CompleteQuery(java.lang.String catalog) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaCompleteQueryResponse.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CompleteQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (CompleteQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CompleteQuery setAccessToken(java.lang.String accessToken) {
+            return (CompleteQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CompleteQuery setAlt(java.lang.String alt) {
+            return (CompleteQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public CompleteQuery setCallback(java.lang.String callback) {
+            return (CompleteQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public CompleteQuery setFields(java.lang.String fields) {
+            return (CompleteQuery) super.setFields(fields);
+          }
+
+          @Override
+          public CompleteQuery setKey(java.lang.String key) {
+            return (CompleteQuery) super.setKey(key);
+          }
+
+          @Override
+          public CompleteQuery setOauthToken(java.lang.String oauthToken) {
+            return (CompleteQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CompleteQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CompleteQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CompleteQuery setQuotaUser(java.lang.String quotaUser) {
+            return (CompleteQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CompleteQuery setUploadType(java.lang.String uploadType) {
+            return (CompleteQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CompleteQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CompleteQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Catalog for which the completion is performed. Full resource name of catalog,
+           * such as `projects/locations/global/catalogs/default_catalog`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Catalog for which the completion is performed. Full resource name of catalog, such as
+         `projects/locations/global/catalogs/default_catalog`.
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Catalog for which the completion is performed. Full resource name of catalog,
+           * such as `projects/locations/global/catalogs/default_catalog`.
+           */
+          public CompleteQuery setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          /**
+           * Determines which dataset to use for fetching completion. "user-data" will use the
+           * imported dataset through ImportCompletionData. "cloud-retail" will use the dataset
+           * generated by cloud retail based on user events. If leave empty, it will use the "user-
+           * data". Current supported values: * user-data * cloud-retail This option is not
+           * automatically enabled. Before using cloud-retail, contact retail-search-
+           * support@google.com first.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataset;
+
+          /** Determines which dataset to use for fetching completion. "user-data" will use the imported dataset
+         through ImportCompletionData. "cloud-retail" will use the dataset generated by cloud retail based
+         on user events. If leave empty, it will use the "user-data". Current supported values: * user-data
+         * cloud-retail This option is not automatically enabled. Before using cloud-retail, contact retail-
+         search-support@google.com first.
+           */
+          public java.lang.String getDataset() {
+            return dataset;
+          }
+
+          /**
+           * Determines which dataset to use for fetching completion. "user-data" will use the
+           * imported dataset through ImportCompletionData. "cloud-retail" will use the dataset
+           * generated by cloud retail based on user events. If leave empty, it will use the "user-
+           * data". Current supported values: * user-data * cloud-retail This option is not
+           * automatically enabled. Before using cloud-retail, contact retail-search-
+           * support@google.com first.
+           */
+          public CompleteQuery setDataset(java.lang.String dataset) {
+            this.dataset = dataset;
+            return this;
+          }
+
+          /**
+           * The device type context for completion suggestions. It is useful to apply different
+           * suggestions on different device types, e.g. DESKTOP, MOBILE. If it is empty, the
+           * suggestions are across all device types. Supported formats: * UNKNOWN_DEVICE_TYPE *
+           * DESKTOP * MOBILE * A customized string starts with OTHER_, e.g. OTHER_IPHONE.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String deviceType;
+
+          /** The device type context for completion suggestions. It is useful to apply different suggestions on
+         different device types, e.g. DESKTOP, MOBILE. If it is empty, the suggestions are across all device
+         types. Supported formats: * UNKNOWN_DEVICE_TYPE * DESKTOP * MOBILE * A customized string starts
+         with OTHER_, e.g. OTHER_IPHONE.
+           */
+          public java.lang.String getDeviceType() {
+            return deviceType;
+          }
+
+          /**
+           * The device type context for completion suggestions. It is useful to apply different
+           * suggestions on different device types, e.g. DESKTOP, MOBILE. If it is empty, the
+           * suggestions are across all device types. Supported formats: * UNKNOWN_DEVICE_TYPE *
+           * DESKTOP * MOBILE * A customized string starts with OTHER_, e.g. OTHER_IPHONE.
+           */
+          public CompleteQuery setDeviceType(java.lang.String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+          }
+
+          /**
+           * The list of languages of the query. This is the BCP-47 language code, such as "en-US"
+           * or "sr-Latn". For more information, see [Tags for Identifying
+           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of allowed characters
+           * is 255. Only "en-US" is currently supported.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> languageCodes;
+
+          /** The list of languages of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+         For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47). The
+         maximum number of allowed characters is 255. Only "en-US" is currently supported.
+           */
+          public java.util.List<java.lang.String> getLanguageCodes() {
+            return languageCodes;
+          }
+
+          /**
+           * The list of languages of the query. This is the BCP-47 language code, such as "en-US"
+           * or "sr-Latn". For more information, see [Tags for Identifying
+           * Languages](https://tools.ietf.org/html/bcp47). The maximum number of allowed characters
+           * is 255. Only "en-US" is currently supported.
+           */
+          public CompleteQuery setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
+            this.languageCodes = languageCodes;
+            return this;
+          }
+
+          /**
+           * Completion max suggestions. The maximum allowed max suggestions is 20. The default
+           * value is 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer maxSuggestions;
+
+          /** Completion max suggestions. The maximum allowed max suggestions is 20. The default value is 20.
+           */
+          public java.lang.Integer getMaxSuggestions() {
+            return maxSuggestions;
+          }
+
+          /**
+           * Completion max suggestions. The maximum allowed max suggestions is 20. The default
+           * value is 20.
+           */
+          public CompleteQuery setMaxSuggestions(java.lang.Integer maxSuggestions) {
+            this.maxSuggestions = maxSuggestions;
+            return this;
+          }
+
+          /**
+           * Required. The query used to generate suggestions. The maximum number of allowed
+           * characters is 255.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String query;
+
+          /** Required. The query used to generate suggestions. The maximum number of allowed characters is 255.
+           */
+          public java.lang.String getQuery() {
+            return query;
+          }
+
+          /**
+           * Required. The query used to generate suggestions. The maximum number of allowed
+           * characters is 255.
+           */
+          public CompleteQuery setQuery(java.lang.String query) {
+            this.query = query;
+            return this;
+          }
+
+          /**
+           * A unique identifier for tracking visitors. For example, this could be implemented with
+           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+           * This unique identifier should not change if the visitor logs in or out of the website.
+           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
+           * Otherwise, an INVALID_ARGUMENT error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String visitorId;
+
+          /** A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
+         cookie, which should be able to uniquely identify a visitor on a single device. This unique
+         identifier should not change if the visitor logs in or out of the website. The field must be a
+         UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is
+         returned.
+           */
+          public java.lang.String getVisitorId() {
+            return visitorId;
+          }
+
+          /**
+           * A unique identifier for tracking visitors. For example, this could be implemented with
+           * an HTTP cookie, which should be able to uniquely identify a visitor on a single device.
+           * This unique identifier should not change if the visitor logs in or out of the website.
+           * The field must be a UTF-8 encoded string with a length limit of 128 characters.
+           * Otherwise, an INVALID_ARGUMENT error is returned.
+           */
+          public CompleteQuery setVisitorId(java.lang.String visitorId) {
+            this.visitorId = visitorId;
+            return this;
+          }
+
+          @Override
+          public CompleteQuery set(String parameterName, Object value) {
+            return (CompleteQuery) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get which branch is currently default branch set by CatalogService.SetDefaultBranch method under
+         * a specified parent catalog. This feature is only available for users who have Retail Search
+         * enabled. Contact Retail Support (retail-search-support@google.com) if you are interested in using
+         * Retail Search.
+         *
+         * Create a request for the method "catalogs.getDefaultBranch".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link GetDefaultBranch#execute()} method to invoke the remote operation.
+         *
+         * @param catalog The parent catalog resource name, such as `projects/locations/global/catalogs/default_catalog`.
+         * @return the request
+         */
+        public GetDefaultBranch getDefaultBranch(java.lang.String catalog) throws java.io.IOException {
+          GetDefaultBranch result = new GetDefaultBranch(catalog);
+          initialize(result);
+          return result;
+        }
+
+        public class GetDefaultBranch extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGetDefaultBranchResponse> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}:getDefaultBranch";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Get which branch is currently default branch set by CatalogService.SetDefaultBranch method
+           * under a specified parent catalog. This feature is only available for users who have Retail
+           * Search enabled. Contact Retail Support (retail-search-support@google.com) if you are interested
+           * in using Retail Search.
+           *
+           * Create a request for the method "catalogs.getDefaultBranch".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link GetDefaultBranch#execute()} method to invoke the remote operation.
+           * <p> {@link GetDefaultBranch#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param catalog The parent catalog resource name, such as `projects/locations/global/catalogs/default_catalog`.
+           * @since 1.13
+           */
+          protected GetDefaultBranch(java.lang.String catalog) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGetDefaultBranchResponse.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetDefaultBranch set$Xgafv(java.lang.String $Xgafv) {
+            return (GetDefaultBranch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetDefaultBranch setAccessToken(java.lang.String accessToken) {
+            return (GetDefaultBranch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetDefaultBranch setAlt(java.lang.String alt) {
+            return (GetDefaultBranch) super.setAlt(alt);
+          }
+
+          @Override
+          public GetDefaultBranch setCallback(java.lang.String callback) {
+            return (GetDefaultBranch) super.setCallback(callback);
+          }
+
+          @Override
+          public GetDefaultBranch setFields(java.lang.String fields) {
+            return (GetDefaultBranch) super.setFields(fields);
+          }
+
+          @Override
+          public GetDefaultBranch setKey(java.lang.String key) {
+            return (GetDefaultBranch) super.setKey(key);
+          }
+
+          @Override
+          public GetDefaultBranch setOauthToken(java.lang.String oauthToken) {
+            return (GetDefaultBranch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetDefaultBranch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetDefaultBranch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetDefaultBranch setQuotaUser(java.lang.String quotaUser) {
+            return (GetDefaultBranch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetDefaultBranch setUploadType(java.lang.String uploadType) {
+            return (GetDefaultBranch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetDefaultBranch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetDefaultBranch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent catalog resource name, such as
+           * `projects/locations/global/catalogs/default_catalog`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** The parent catalog resource name, such as `projects/locations/global/catalogs/default_catalog`.
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * The parent catalog resource name, such as
+           * `projects/locations/global/catalogs/default_catalog`.
+           */
+          public GetDefaultBranch setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          @Override
+          public GetDefaultBranch set(String parameterName, Object value) {
+            return (GetDefaultBranch) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists all the Catalogs associated with the project.
          *
          * Create a request for the method "catalogs.list".
@@ -552,6 +1022,174 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Set a specified branch id as default branch. API methods such as SearchService.Search,
+         * ProductService.GetProduct, ProductService.ListProducts will treat requests using "default_branch"
+         * to the actual branch id set as default. For example, if `projects/locations/catalogs/branches/1`
+         * is set as default, setting SearchRequest.branch to
+         * `projects/locations/catalogs/branches/default_branch` is equivalent to setting
+         * SearchRequest.branch to `projects/locations/catalogs/branches/1`. Using multiple branches can be
+         * useful when developers would like to have a staging branch to test and verify for future usage.
+         * When it becomes ready, developers switch on the staging branch using this API while keeping using
+         * `projects/locations/catalogs/branches/default_branch` as SearchRequest.branch to route the
+         * traffic to this staging branch. CAUTION: If you have live predict/search traffic, switching the
+         * default branch could potentially cause outages if the ID space of the new branch is very
+         * different from the old one. More specifically: * PredictionService will only return product IDs
+         * from branch {newBranch}. * SearchService will only return product IDs from branch {newBranch} (if
+         * branch is not explicitly set). * UserEventService will only join events with products from branch
+         * {newBranch}. This feature is only available for users who have Retail Search enabled. Contact
+         * Retail Support (retail-search-support@google.com) if you are interested in using Retail Search.
+         *
+         * Create a request for the method "catalogs.setDefaultBranch".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link SetDefaultBranch#execute()} method to invoke the remote operation.
+         *
+         * @param catalog Full resource name of the catalog, such as `projects/locations/global/catalogs/default_catalog`.
+         * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetDefaultBranchRequest}
+         * @return the request
+         */
+        public SetDefaultBranch setDefaultBranch(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetDefaultBranchRequest content) throws java.io.IOException {
+          SetDefaultBranch result = new SetDefaultBranch(catalog, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetDefaultBranch extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}:setDefaultBranch";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Set a specified branch id as default branch. API methods such as SearchService.Search,
+           * ProductService.GetProduct, ProductService.ListProducts will treat requests using
+           * "default_branch" to the actual branch id set as default. For example, if
+           * `projects/locations/catalogs/branches/1` is set as default, setting SearchRequest.branch to
+           * `projects/locations/catalogs/branches/default_branch` is equivalent to setting
+           * SearchRequest.branch to `projects/locations/catalogs/branches/1`. Using multiple branches can
+           * be useful when developers would like to have a staging branch to test and verify for future
+           * usage. When it becomes ready, developers switch on the staging branch using this API while
+           * keeping using `projects/locations/catalogs/branches/default_branch` as SearchRequest.branch to
+           * route the traffic to this staging branch. CAUTION: If you have live predict/search traffic,
+           * switching the default branch could potentially cause outages if the ID space of the new branch
+           * is very different from the old one. More specifically: * PredictionService will only return
+           * product IDs from branch {newBranch}. * SearchService will only return product IDs from branch
+           * {newBranch} (if branch is not explicitly set). * UserEventService will only join events with
+           * products from branch {newBranch}. This feature is only available for users who have Retail
+           * Search enabled. Contact Retail Support (retail-search-support@google.com) if you are interested
+           * in using Retail Search.
+           *
+           * Create a request for the method "catalogs.setDefaultBranch".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link SetDefaultBranch#execute()} method to invoke the remote operation.
+           * <p> {@link SetDefaultBranch#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param catalog Full resource name of the catalog, such as `projects/locations/global/catalogs/default_catalog`.
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetDefaultBranchRequest}
+           * @since 1.13
+           */
+          protected SetDefaultBranch(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetDefaultBranchRequest content) {
+            super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetDefaultBranch set$Xgafv(java.lang.String $Xgafv) {
+            return (SetDefaultBranch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetDefaultBranch setAccessToken(java.lang.String accessToken) {
+            return (SetDefaultBranch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetDefaultBranch setAlt(java.lang.String alt) {
+            return (SetDefaultBranch) super.setAlt(alt);
+          }
+
+          @Override
+          public SetDefaultBranch setCallback(java.lang.String callback) {
+            return (SetDefaultBranch) super.setCallback(callback);
+          }
+
+          @Override
+          public SetDefaultBranch setFields(java.lang.String fields) {
+            return (SetDefaultBranch) super.setFields(fields);
+          }
+
+          @Override
+          public SetDefaultBranch setKey(java.lang.String key) {
+            return (SetDefaultBranch) super.setKey(key);
+          }
+
+          @Override
+          public SetDefaultBranch setOauthToken(java.lang.String oauthToken) {
+            return (SetDefaultBranch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetDefaultBranch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetDefaultBranch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetDefaultBranch setQuotaUser(java.lang.String quotaUser) {
+            return (SetDefaultBranch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetDefaultBranch setUploadType(java.lang.String uploadType) {
+            return (SetDefaultBranch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetDefaultBranch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetDefaultBranch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Full resource name of the catalog, such as
+           * `projects/locations/global/catalogs/default_catalog`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Full resource name of the catalog, such as `projects/locations/global/catalogs/default_catalog`.
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Full resource name of the catalog, such as
+           * `projects/locations/global/catalogs/default_catalog`.
+           */
+          public SetDefaultBranch setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          @Override
+          public SetDefaultBranch set(String parameterName, Object value) {
+            return (SetDefaultBranch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Branches collection.
@@ -755,6 +1393,168 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            */
           public class Products {
 
+            /**
+             * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous
+             * and does not require the Product to exist before updating fulfillment information. If the request
+             * is valid, the update will be enqueued and processed downstream. As a consequence, when a response
+             * is returned, the added place IDs are not immediately manifested in the Product queried by
+             * GetProduct or ListProducts. This feature is only available for users who have Retail Search
+             * enabled. Contact Retail Support (retail-search-support@google.com) if you are interested in using
+             * Retail Search.
+             *
+             * Create a request for the method "products.addFulfillmentPlaces".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link AddFulfillmentPlaces#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest}
+             * @return the request
+             */
+            public AddFulfillmentPlaces addFulfillmentPlaces(java.lang.String product, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest content) throws java.io.IOException {
+              AddFulfillmentPlaces result = new AddFulfillmentPlaces(product, content);
+              initialize(result);
+              return result;
+            }
+
+            public class AddFulfillmentPlaces extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2alpha/{+product}:addFulfillmentPlaces";
+
+              private final java.util.regex.Pattern PRODUCT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+
+              /**
+               * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is
+               * asynchronous and does not require the Product to exist before updating fulfillment information.
+               * If the request is valid, the update will be enqueued and processed downstream. As a
+               * consequence, when a response is returned, the added place IDs are not immediately manifested in
+               * the Product queried by GetProduct or ListProducts. This feature is only available for users who
+               * have Retail Search enabled. Contact Retail Support (retail-search-support@google.com) if you
+               * are interested in using Retail Search.
+               *
+               * Create a request for the method "products.addFulfillmentPlaces".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link AddFulfillmentPlaces#execute()} method to invoke the remote
+               * operation. <p> {@link AddFulfillmentPlaces#initialize(com.google.api.client.googleapis.services
+               * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+               * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest}
+               * @since 1.13
+               */
+              protected AddFulfillmentPlaces(java.lang.String product, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+                this.product = com.google.api.client.util.Preconditions.checkNotNull(product, "Required parameter product must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+              }
+
+              @Override
+              public AddFulfillmentPlaces set$Xgafv(java.lang.String $Xgafv) {
+                return (AddFulfillmentPlaces) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setAccessToken(java.lang.String accessToken) {
+                return (AddFulfillmentPlaces) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setAlt(java.lang.String alt) {
+                return (AddFulfillmentPlaces) super.setAlt(alt);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setCallback(java.lang.String callback) {
+                return (AddFulfillmentPlaces) super.setCallback(callback);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setFields(java.lang.String fields) {
+                return (AddFulfillmentPlaces) super.setFields(fields);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setKey(java.lang.String key) {
+                return (AddFulfillmentPlaces) super.setKey(key);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setOauthToken(java.lang.String oauthToken) {
+                return (AddFulfillmentPlaces) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (AddFulfillmentPlaces) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setQuotaUser(java.lang.String quotaUser) {
+                return (AddFulfillmentPlaces) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setUploadType(java.lang.String uploadType) {
+                return (AddFulfillmentPlaces) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public AddFulfillmentPlaces setUploadProtocol(java.lang.String uploadProtocol) {
+                return (AddFulfillmentPlaces) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String product;
+
+              /** Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalo
+             g/branches/default_branch/products/some_product_id`. If the caller does not have permission to
+             access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+               */
+              public java.lang.String getProduct() {
+                return product;
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              public AddFulfillmentPlaces setProduct(java.lang.String product) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+                this.product = product;
+                return this;
+              }
+
+              @Override
+              public AddFulfillmentPlaces set(String parameterName, Object value) {
+                return (AddFulfillmentPlaces) super.set(parameterName, value);
+              }
+            }
             /**
              * Creates a Product.
              *
@@ -1403,6 +2203,328 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
+             * Gets a list of Products.
+             *
+             * Create a request for the method "products.list".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent branch resource name, such as
+             *        `projects/locations/global/catalogs/default_catalog/branches/0`. Use `default_branch` as
+             *        the branch ID, to list products under the default branch. If the caller does not have
+             *        permission to list Products under this branch, regardless of whether or not this branch
+             *        exists, a PERMISSION_DENIED error is returned.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListProductsResponse> {
+
+              private static final String REST_PATH = "v2alpha/{+parent}/products";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+
+              /**
+               * Gets a list of Products.
+               *
+               * Create a request for the method "products.list".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent branch resource name, such as
+             *        `projects/locations/global/catalogs/default_catalog/branches/0`. Use `default_branch` as
+             *        the branch ID, to list products under the default branch. If the caller does not have
+             *        permission to list Products under this branch, regardless of whether or not this branch
+             *        exists, a PERMISSION_DENIED error is returned.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListProductsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent branch resource name, such as
+               * `projects/locations/global/catalogs/default_catalog/branches/0`. Use
+               * `default_branch` as the branch ID, to list products under the default branch. If
+               * the caller does not have permission to list Products under this branch, regardless
+               * of whether or not this branch exists, a PERMISSION_DENIED error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent branch resource name, such as
+             `projects/locations/global/catalogs/default_catalog/branches/0`. Use `default_branch` as the branch
+             ID, to list products under the default branch. If the caller does not have permission to list
+             Products under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+             error is returned.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent branch resource name, such as
+               * `projects/locations/global/catalogs/default_catalog/branches/0`. Use
+               * `default_branch` as the branch ID, to list products under the default branch. If
+               * the caller does not have permission to list Products under this branch, regardless
+               * of whether or not this branch exists, a PERMISSION_DENIED error is returned.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * A filter to apply on the list results. Supported features: * List all the products
+               * under the parent branch if filter is unset. * List Product.Type.VARIANT Products
+               * sharing the same Product.Type.PRIMARY Product. For example: `primary_product_id =
+               * "some_product_id"` * List Products bundled in a Product.Type.COLLECTION Product.
+               * For example: `collection_product_id = "some_product_id"` * List Products with a
+               * partibular type. For example: `type = "PRIMARY"` `type = "VARIANT"` `type =
+               * "COLLECTION"` If the field is unrecognizable, an INVALID_ARGUMENT error is
+               * returned. If the specified Product.Type.PRIMARY Product or Product.Type.COLLECTION
+               * Product does not exist, a NOT_FOUND error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** A filter to apply on the list results. Supported features: * List all the products under the parent
+             branch if filter is unset. * List Product.Type.VARIANT Products sharing the same
+             Product.Type.PRIMARY Product. For example: `primary_product_id = "some_product_id"` * List Products
+             bundled in a Product.Type.COLLECTION Product. For example: `collection_product_id =
+             "some_product_id"` * List Products with a partibular type. For example: `type = "PRIMARY"` `type =
+             "VARIANT"` `type = "COLLECTION"` If the field is unrecognizable, an INVALID_ARGUMENT error is
+             returned. If the specified Product.Type.PRIMARY Product or Product.Type.COLLECTION Product does not
+             exist, a NOT_FOUND error is returned.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * A filter to apply on the list results. Supported features: * List all the products
+               * under the parent branch if filter is unset. * List Product.Type.VARIANT Products
+               * sharing the same Product.Type.PRIMARY Product. For example: `primary_product_id =
+               * "some_product_id"` * List Products bundled in a Product.Type.COLLECTION Product.
+               * For example: `collection_product_id = "some_product_id"` * List Products with a
+               * partibular type. For example: `type = "PRIMARY"` `type = "VARIANT"` `type =
+               * "COLLECTION"` If the field is unrecognizable, an INVALID_ARGUMENT error is
+               * returned. If the specified Product.Type.PRIMARY Product or Product.Type.COLLECTION
+               * Product does not exist, a NOT_FOUND error is returned.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Maximum number of Products to return. If unspecified, defaults to 100. The maximum
+               * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+               * negative, an INVALID_ARGUMENT error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Maximum number of Products to return. If unspecified, defaults to 100. The maximum allowed value is
+             1000. Values above 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT
+             error is returned.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Maximum number of Products to return. If unspecified, defaults to 100. The maximum
+               * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+               * negative, an INVALID_ARGUMENT error is returned.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token ListProductsResponse.next_page_token, received from a previous
+               * ProductService.ListProducts call. Provide this to retrieve the subsequent page.
+               * When paginating, all other parameters provided to ProductService.ListProducts must
+               * match the call that provided the page token. Otherwise, an INVALID_ARGUMENT error
+               * is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token ListProductsResponse.next_page_token, received from a previous
+             ProductService.ListProducts call. Provide this to retrieve the subsequent page. When paginating,
+             all other parameters provided to ProductService.ListProducts must match the call that provided the
+             page token. Otherwise, an INVALID_ARGUMENT error is returned.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token ListProductsResponse.next_page_token, received from a previous
+               * ProductService.ListProducts call. Provide this to retrieve the subsequent page.
+               * When paginating, all other parameters provided to ProductService.ListProducts must
+               * match the call that provided the page token. Otherwise, an INVALID_ARGUMENT error
+               * is returned.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * The fields of Product to return in the responses. If not set or empty, the
+               * following fields are returned: * Product.name * Product.id * Product.title *
+               * Product.uri * Product.images * Product.price_info * Product.brands If "*" is
+               * provided, all fields are returned. Product.name is always returned no matter what
+               * mask is set. If an unsupported or unknown field is provided, an INVALID_ARGUMENT
+               * error is returned.
+               */
+              @com.google.api.client.util.Key
+              private String readMask;
+
+              /** The fields of Product to return in the responses. If not set or empty, the following fields are
+             returned: * Product.name * Product.id * Product.title * Product.uri * Product.images *
+             Product.price_info * Product.brands If "*" is provided, all fields are returned. Product.name is
+             always returned no matter what mask is set. If an unsupported or unknown field is provided, an
+             INVALID_ARGUMENT error is returned.
+               */
+              public String getReadMask() {
+                return readMask;
+              }
+
+              /**
+               * The fields of Product to return in the responses. If not set or empty, the
+               * following fields are returned: * Product.name * Product.id * Product.title *
+               * Product.uri * Product.images * Product.price_info * Product.brands If "*" is
+               * provided, all fields are returned. Product.name is always returned no matter what
+               * mask is set. If an unsupported or unknown field is provided, an INVALID_ARGUMENT
+               * error is returned.
+               */
+              public List setReadMask(String readMask) {
+                this.readMask = readMask;
+                return this;
+              }
+
+              /**
+               * If true and page_token is empty, ListProductsResponse.total_size is set to the
+               * total count of matched items irrespective of pagination. Notice that setting this
+               * field to true affects the performance.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean requireTotalSize;
+
+              /** If true and page_token is empty, ListProductsResponse.total_size is set to the total count of
+             matched items irrespective of pagination. Notice that setting this field to true affects the
+             performance.
+               */
+              public java.lang.Boolean getRequireTotalSize() {
+                return requireTotalSize;
+              }
+
+              /**
+               * If true and page_token is empty, ListProductsResponse.total_size is set to the
+               * total count of matched items irrespective of pagination. Notice that setting this
+               * field to true affects the performance.
+               */
+              public List setRequireTotalSize(java.lang.Boolean requireTotalSize) {
+                this.requireTotalSize = requireTotalSize;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
              * Updates a Product.
              *
              * Create a request for the method "products.patch".
@@ -1598,8 +2720,511 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 return (Patch) super.set(parameterName, value);
               }
             }
+            /**
+             * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
+             * asynchronous and does not require the Product to exist before updating fulfillment information.
+             * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
+             * when a response is returned, the removed place IDs are not immediately manifested in the Product
+             * queried by GetProduct or ListProducts. This feature is only available for users who have Retail
+             * Search enabled. Contact Retail Support (retail-search-support@google.com) if you are interested
+             * in using Retail Search.
+             *
+             * Create a request for the method "products.removeFulfillmentPlaces".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link RemoveFulfillmentPlaces#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveFulfillmentPlacesRequest}
+             * @return the request
+             */
+            public RemoveFulfillmentPlaces removeFulfillmentPlaces(java.lang.String product, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveFulfillmentPlacesRequest content) throws java.io.IOException {
+              RemoveFulfillmentPlaces result = new RemoveFulfillmentPlaces(product, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RemoveFulfillmentPlaces extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2alpha/{+product}:removeFulfillmentPlaces";
+
+              private final java.util.regex.Pattern PRODUCT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+
+              /**
+               * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
+               * asynchronous and does not require the Product to exist before updating fulfillment information.
+               * If the request is valid, the update will be enqueued and processed downstream. As a
+               * consequence, when a response is returned, the removed place IDs are not immediately manifested
+               * in the Product queried by GetProduct or ListProducts. This feature is only available for users
+               * who have Retail Search enabled. Contact Retail Support (retail-search-support@google.com) if
+               * you are interested in using Retail Search.
+               *
+               * Create a request for the method "products.removeFulfillmentPlaces".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link RemoveFulfillmentPlaces#execute()} method to invoke the remote
+               * operation. <p> {@link RemoveFulfillmentPlaces#initialize(com.google.api.client.googleapis.servi
+               * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param product Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalog
+             *        /branches/default_branch/products/some_product_id`. If the caller does not have permission
+             *        to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error
+             *        is returned.
+               * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveFulfillmentPlacesRequest}
+               * @since 1.13
+               */
+              protected RemoveFulfillmentPlaces(java.lang.String product, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaRemoveFulfillmentPlacesRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+                this.product = com.google.api.client.util.Preconditions.checkNotNull(product, "Required parameter product must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces set$Xgafv(java.lang.String $Xgafv) {
+                return (RemoveFulfillmentPlaces) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setAccessToken(java.lang.String accessToken) {
+                return (RemoveFulfillmentPlaces) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setAlt(java.lang.String alt) {
+                return (RemoveFulfillmentPlaces) super.setAlt(alt);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setCallback(java.lang.String callback) {
+                return (RemoveFulfillmentPlaces) super.setCallback(callback);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setFields(java.lang.String fields) {
+                return (RemoveFulfillmentPlaces) super.setFields(fields);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setKey(java.lang.String key) {
+                return (RemoveFulfillmentPlaces) super.setKey(key);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setOauthToken(java.lang.String oauthToken) {
+                return (RemoveFulfillmentPlaces) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RemoveFulfillmentPlaces) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setQuotaUser(java.lang.String quotaUser) {
+                return (RemoveFulfillmentPlaces) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setUploadType(java.lang.String uploadType) {
+                return (RemoveFulfillmentPlaces) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RemoveFulfillmentPlaces) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String product;
+
+              /** Required. Full resource name of Product, such as `projects/locations/global/catalogs/default_catalo
+             g/branches/default_branch/products/some_product_id`. If the caller does not have permission to
+             access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+               */
+              public java.lang.String getProduct() {
+                return product;
+              }
+
+              /**
+               * Required. Full resource name of Product, such as `projects/locations/global/catalog
+               * s/default_catalog/branches/default_branch/products/some_product_id`. If the caller
+               * does not have permission to access the Product, regardless of whether or not it
+               * exists, a PERMISSION_DENIED error is returned.
+               */
+              public RemoveFulfillmentPlaces setProduct(java.lang.String product) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PRODUCT_PATTERN.matcher(product).matches(),
+                      "Parameter product must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+                this.product = product;
+                return this;
+              }
+
+              @Override
+              public RemoveFulfillmentPlaces set(String parameterName, Object value) {
+                return (RemoveFulfillmentPlaces) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates inventory information for a Product while respecting the last update timestamps of each
+             * inventory field. This process is asynchronous and does not require the Product to exist before
+             * updating fulfillment information. If the request is valid, the update will be enqueued and
+             * processed downstream. As a consequence, when a response is returned, updates are not immediately
+             * manifested in the Product queried by GetProduct or ListProducts. When inventory is updated with
+             * CreateProduct and UpdateProduct, the specified inventory field value(s) will overwrite any
+             * existing value(s) while ignoring the last update time for this field. Furthermore, the last
+             * update time for the specified inventory fields will be overwritten to the time of the
+             * CreateProduct or UpdateProduct request. If no inventory fields are set in
+             * CreateProductRequest.product, then any pre-existing inventory information for this product will
+             * be used. If no inventory fields are set in UpdateProductRequest.set_mask, then any existing
+             * inventory information will be preserved. Pre-existing inventory information can only be updated
+             * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
+             * available for users who have Retail Search enabled. Contact Retail Support (retail-search-
+             * support@google.com) if you are interested in using Retail Search.
+             *
+             * Create a request for the method "products.setInventory".
+             *
+             * This request holds the parameters needed by the retail server.  After setting any optional
+             * parameters, call the {@link SetInventory#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. Full resource name of the product, such as
+             *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
+             *        ct_id`. The branch ID must be "default_branch".
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetInventoryRequest}
+             * @return the request
+             */
+            public SetInventory setInventory(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetInventoryRequest content) throws java.io.IOException {
+              SetInventory result = new SetInventory(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SetInventory extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v2alpha/{+name}:setInventory";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+
+              /**
+               * Updates inventory information for a Product while respecting the last update timestamps of each
+               * inventory field. This process is asynchronous and does not require the Product to exist before
+               * updating fulfillment information. If the request is valid, the update will be enqueued and
+               * processed downstream. As a consequence, when a response is returned, updates are not
+               * immediately manifested in the Product queried by GetProduct or ListProducts. When inventory is
+               * updated with CreateProduct and UpdateProduct, the specified inventory field value(s) will
+               * overwrite any existing value(s) while ignoring the last update time for this field.
+               * Furthermore, the last update time for the specified inventory fields will be overwritten to the
+               * time of the CreateProduct or UpdateProduct request. If no inventory fields are set in
+               * CreateProductRequest.product, then any pre-existing inventory information for this product will
+               * be used. If no inventory fields are set in UpdateProductRequest.set_mask, then any existing
+               * inventory information will be preserved. Pre-existing inventory information can only be updated
+               * with SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature is only
+               * available for users who have Retail Search enabled. Contact Retail Support (retail-search-
+               * support@google.com) if you are interested in using Retail Search.
+               *
+               * Create a request for the method "products.setInventory".
+               *
+               * This request holds the parameters needed by the the retail server.  After setting any optional
+               * parameters, call the {@link SetInventory#execute()} method to invoke the remote operation. <p>
+               * {@link
+               * SetInventory#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. Full resource name of the product, such as
+             *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
+             *        ct_id`. The branch ID must be "default_branch".
+               * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetInventoryRequest}
+               * @since 1.13
+               */
+              protected SetInventory(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSetInventoryRequest content) {
+                super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+              }
+
+              @Override
+              public SetInventory set$Xgafv(java.lang.String $Xgafv) {
+                return (SetInventory) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SetInventory setAccessToken(java.lang.String accessToken) {
+                return (SetInventory) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SetInventory setAlt(java.lang.String alt) {
+                return (SetInventory) super.setAlt(alt);
+              }
+
+              @Override
+              public SetInventory setCallback(java.lang.String callback) {
+                return (SetInventory) super.setCallback(callback);
+              }
+
+              @Override
+              public SetInventory setFields(java.lang.String fields) {
+                return (SetInventory) super.setFields(fields);
+              }
+
+              @Override
+              public SetInventory setKey(java.lang.String key) {
+                return (SetInventory) super.setKey(key);
+              }
+
+              @Override
+              public SetInventory setOauthToken(java.lang.String oauthToken) {
+                return (SetInventory) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SetInventory setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SetInventory) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SetInventory setQuotaUser(java.lang.String quotaUser) {
+                return (SetInventory) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SetInventory setUploadType(java.lang.String uploadType) {
+                return (SetInventory) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SetInventory setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SetInventory) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. Full resource name of the product, such as `projects/locations/global/ca
+               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
+               * must be "default_branch".
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. Full resource name of the product, such as
+             `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
+             The branch ID must be "default_branch".
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. Full resource name of the product, such as `projects/locations/global/ca
+               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
+               * must be "default_branch".
+               */
+              public SetInventory setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public SetInventory set(String parameterName, Object value) {
+                return (SetInventory) super.set(parameterName, value);
+              }
+            }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the CompletionData collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.CompletionData.List request = retail.completionData().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public CompletionData completionData() {
+          return new CompletionData();
+        }
+
+        /**
+         * The "completionData" collection of methods.
+         */
+        public class CompletionData {
+
+          /**
+           * Bulk import of processed completion dataset. Request processing may be synchronous. Partial
+           * updating is not supported. This feature is only available for users who have Retail Search
+           * enabled. Contact Retail Support (retail-search-support@google.com) if you are interested in using
+           * Retail Search.
+           *
+           * Create a request for the method "completionData.import".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link CloudRetailImport#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The catalog which the suggestions dataset belongs to. Format:
+           *        `projects/1234/locations/global/catalogs/default_catalog`.
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaImportCompletionDataRequest}
+           * @return the request
+           */
+          public CloudRetailImport retailImport(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaImportCompletionDataRequest content) throws java.io.IOException {
+            CloudRetailImport result = new CloudRetailImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CloudRetailImport extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/completionData:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Bulk import of processed completion dataset. Request processing may be synchronous. Partial
+             * updating is not supported. This feature is only available for users who have Retail Search
+             * enabled. Contact Retail Support (retail-search-support@google.com) if you are interested in
+             * using Retail Search.
+             *
+             * Create a request for the method "completionData.import".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link CloudRetailImport#execute()} method to invoke the remote operation.
+             * <p> {@link CloudRetailImport#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+             * eClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param parent Required. The catalog which the suggestions dataset belongs to. Format:
+           *        `projects/1234/locations/global/catalogs/default_catalog`.
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaImportCompletionDataRequest}
+             * @since 1.13
+             */
+            protected CloudRetailImport(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaImportCompletionDataRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public CloudRetailImport set$Xgafv(java.lang.String $Xgafv) {
+              return (CloudRetailImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CloudRetailImport setAccessToken(java.lang.String accessToken) {
+              return (CloudRetailImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CloudRetailImport setAlt(java.lang.String alt) {
+              return (CloudRetailImport) super.setAlt(alt);
+            }
+
+            @Override
+            public CloudRetailImport setCallback(java.lang.String callback) {
+              return (CloudRetailImport) super.setCallback(callback);
+            }
+
+            @Override
+            public CloudRetailImport setFields(java.lang.String fields) {
+              return (CloudRetailImport) super.setFields(fields);
+            }
+
+            @Override
+            public CloudRetailImport setKey(java.lang.String key) {
+              return (CloudRetailImport) super.setKey(key);
+            }
+
+            @Override
+            public CloudRetailImport setOauthToken(java.lang.String oauthToken) {
+              return (CloudRetailImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CloudRetailImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CloudRetailImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CloudRetailImport setQuotaUser(java.lang.String quotaUser) {
+              return (CloudRetailImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CloudRetailImport setUploadType(java.lang.String uploadType) {
+              return (CloudRetailImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CloudRetailImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CloudRetailImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The catalog which the suggestions dataset belongs to. Format:
+             * `projects/1234/locations/global/catalogs/default_catalog`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The catalog which the suggestions dataset belongs to. Format:
+           `projects/1234/locations/global/catalogs/default_catalog`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The catalog which the suggestions dataset belongs to. Format:
+             * `projects/1234/locations/global/catalogs/default_catalog`.
+             */
+            public CloudRetailImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public CloudRetailImport set(String parameterName, Object value) {
+              return (CloudRetailImport) super.set(parameterName, value);
+            }
+          }
+
         }
         /**
          * An accessor for creating requests from the Operations collection.
@@ -2143,6 +3768,159 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public Predict set(String parameterName, Object value) {
               return (Predict) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Performs a search. This feature is only available for users who have Retail Search enabled.
+           * Contact Retail Support (retail-search-support@google.com) if you are interested in using Retail
+           * Search.
+           *
+           * Create a request for the method "placements.search".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           *
+           * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
+           *        is used to identify the set of models that will be used to make the search. We currently
+           *        support one placement with the following ID: * `default_search`.
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
+           * @return the request
+           */
+          public Search search(java.lang.String placement, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest content) throws java.io.IOException {
+            Search result = new Search(placement, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Search extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+placement}:search";
+
+            private final java.util.regex.Pattern PLACEMENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+
+            /**
+             * Performs a search. This feature is only available for users who have Retail Search enabled.
+             * Contact Retail Support (retail-search-support@google.com) if you are interested in using Retail
+             * Search.
+             *
+             * Create a request for the method "placements.search".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Search#execute()} method to invoke the remote operation. <p> {@link
+             * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param placement Required. The resource name of the search engine placement, such as
+           *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
+           *        is used to identify the set of models that will be used to make the search. We currently
+           *        support one placement with the following ID: * `default_search`.
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
+             * @since 1.13
+             */
+            protected Search(java.lang.String placement, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchResponse.class);
+              this.placement = com.google.api.client.util.Preconditions.checkNotNull(placement, "Required parameter placement must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+              }
+            }
+
+            @Override
+            public Search set$Xgafv(java.lang.String $Xgafv) {
+              return (Search) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Search setAccessToken(java.lang.String accessToken) {
+              return (Search) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Search setAlt(java.lang.String alt) {
+              return (Search) super.setAlt(alt);
+            }
+
+            @Override
+            public Search setCallback(java.lang.String callback) {
+              return (Search) super.setCallback(callback);
+            }
+
+            @Override
+            public Search setFields(java.lang.String fields) {
+              return (Search) super.setFields(fields);
+            }
+
+            @Override
+            public Search setKey(java.lang.String key) {
+              return (Search) super.setKey(key);
+            }
+
+            @Override
+            public Search setOauthToken(java.lang.String oauthToken) {
+              return (Search) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Search) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Search setQuotaUser(java.lang.String quotaUser) {
+              return (Search) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Search setUploadType(java.lang.String uploadType) {
+              return (Search) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Search setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Search) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
+             * field is used to identify the set of models that will be used to make the search. We
+             * currently support one placement with the following ID: * `default_search`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String placement;
+
+            /** Required. The resource name of the search engine placement, such as
+           `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
+           to identify the set of models that will be used to make the search. We currently support one
+           placement with the following ID: * `default_search`.
+             */
+            public java.lang.String getPlacement() {
+              return placement;
+            }
+
+            /**
+             * Required. The resource name of the search engine placement, such as
+             * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
+             * field is used to identify the set of models that will be used to make the search. We
+             * currently support one placement with the following ID: * `default_search`.
+             */
+            public Search setPlacement(java.lang.String placement) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PLACEMENT_PATTERN.matcher(placement).matches(),
+                    "Parameter placement must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/placements/[^/]+$");
+              }
+              this.placement = placement;
+              return this;
+            }
+
+            @Override
+            public Search set(String parameterName, Object value) {
+              return (Search) super.set(parameterName, value);
             }
           }
 

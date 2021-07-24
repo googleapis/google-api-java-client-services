@@ -45,6 +45,23 @@ public final class GoogleCloudRetailV2ImportMetadata extends com.google.api.clie
   private java.lang.Long failureCount;
 
   /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPubsubTopic;
+
+  /**
+   * Id of the request / operation. This is parroting back the requestId that was passed in the
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
    * Count of entries that were processed successfully.
    * The value may be {@code null}.
    */
@@ -89,6 +106,46 @@ public final class GoogleCloudRetailV2ImportMetadata extends com.google.api.clie
    */
   public GoogleCloudRetailV2ImportMetadata setFailureCount(java.lang.Long failureCount) {
     this.failureCount = failureCount;
+    return this;
+  }
+
+  /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPubsubTopic() {
+    return notificationPubsubTopic;
+  }
+
+  /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
+   * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
+   */
+  public GoogleCloudRetailV2ImportMetadata setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
+    this.notificationPubsubTopic = notificationPubsubTopic;
+    return this;
+  }
+
+  /**
+   * Id of the request / operation. This is parroting back the requestId that was passed in the
+   * request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Id of the request / operation. This is parroting back the requestId that was passed in the
+   * request.
+   * @param requestId requestId or {@code null} for none
+   */
+  public GoogleCloudRetailV2ImportMetadata setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

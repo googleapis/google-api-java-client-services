@@ -44,6 +44,34 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
   private GoogleCloudRetailV2alphaProductInputConfig inputConfig;
 
   /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
+   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationPubsubTopic;
+
+  /**
+   * The mode of reconciliation between existing products and the products to be imported. Defaults
+   * to ReconciliationMode.INCREMENTAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reconciliationMode;
+
+  /**
+   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
+   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
+   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
    * Indicates which fields in the provided imported 'products' to update. If not set, will by
    * default update all fields.
    * The value may be {@code null}.
@@ -82,6 +110,71 @@ public final class GoogleCloudRetailV2alphaImportProductsRequest extends com.goo
    */
   public GoogleCloudRetailV2alphaImportProductsRequest setInputConfig(GoogleCloudRetailV2alphaProductInputConfig inputConfig) {
     this.inputConfig = inputConfig;
+    return this;
+  }
+
+  /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
+   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationPubsubTopic() {
+    return notificationPubsubTopic;
+  }
+
+  /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the import is finished, a
+   * notification will be sent to specified Pub/Sub topic. The message data will be JSON string of a
+   * Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. Only supported
+   * when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaImportProductsRequest setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
+    this.notificationPubsubTopic = notificationPubsubTopic;
+    return this;
+  }
+
+  /**
+   * The mode of reconciliation between existing products and the products to be imported. Defaults
+   * to ReconciliationMode.INCREMENTAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReconciliationMode() {
+    return reconciliationMode;
+  }
+
+  /**
+   * The mode of reconciliation between existing products and the products to be imported. Defaults
+   * to ReconciliationMode.INCREMENTAL.
+   * @param reconciliationMode reconciliationMode or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaImportProductsRequest setReconciliationMode(java.lang.String reconciliationMode) {
+    this.reconciliationMode = reconciliationMode;
+    return this;
+  }
+
+  /**
+   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
+   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
+   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
+   * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
+   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
+   * @param requestId requestId or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaImportProductsRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

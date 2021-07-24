@@ -40,7 +40,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters.
+   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
+   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
+   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +53,14 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaCustomAttribute.class);
   }
+
+  /**
+   * The target group associated with a given audience (e.g. male, veterans, car owners, musicians,
+   * etc.) of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaAudience audience;
 
   /**
    * The online availability of the Product. Default to Availability.IN_STOCK. Google Merchant
@@ -69,11 +79,22 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.Integer availableQuantity;
 
   /**
-   * The timestamp when this Product becomes available for recommendation.
+   * The timestamp when this Product becomes available for SearchService.Search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String availableTime;
+
+  /**
+   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
+   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Google Merchant Center property
+   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
+   * [Product.brand](https://schema.org/brand).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> brands;
 
   /**
    * Product categories. This field is repeated for supporting one product belonging to several
@@ -95,6 +116,35 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.util.List<java.lang.String> categories;
 
   /**
+   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
+   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> collectionMemberIds;
+
+  /**
+   * The color of the product. Google Merchant Center property
+   * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
+   * [Product.color](https://schema.org/color).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaColorInfo colorInfo;
+
+  /**
+   * The condition of the product. Strongly encouraged to use the standard values: "new",
+   * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
+   * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
+   * error is returned. Google Merchant Center property
+   * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
+   * [Offer.itemCondition](https://schema.org/itemCondition).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> conditions;
+
+  /**
    * Product description. This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [description](https://support.google.com/merchants/answer/6324468). schema.org property
@@ -103,6 +153,45 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
+   * Product is not available for SearchService.Search after expire_time. However, the product can
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
+   * Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
+   * Fulfillment information, such as the store IDs for in-store pickup or region IDs for different
+   * shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaFulfillmentInfo> fulfillmentInfo;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaFulfillmentInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaFulfillmentInfo.class);
+  }
+
+  /**
+   * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
+   * Schema.org property [Product.isbn](https://schema.org/isbn) or
+   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
+   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
+   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gtin;
 
   /**
    * Immutable. Product identifier, which is the final component of name. For example, this field is
@@ -134,6 +223,28 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
+   * Language of the title/description and other string attributes. Use language tags defined by BCP
+   * 47. For product prediction, this field is ignored and the model automatically detects the text
+   * language. The Product can include text in different languages, but duplicating Products to
+   * provide text in multiple languages can result in degraded model performance. For product search
+   * this field is in use. It defaults to "en-US" if unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
+   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
+   * [Product.material](https://schema.org/material).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> materials;
+
+  /**
    * Immutable. Full resource name of the product, such as `projects/locations/global/catalogs/defau
    * lt_catalog/branches/default_branch/products/product_id`. The branch ID must be
    * "default_branch".
@@ -141,6 +252,17 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
+   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
+   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> patterns;
 
   /**
    * Product price and cost information. Google Merchant Center property
@@ -165,6 +287,63 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String primaryProductId;
 
   /**
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaPromotion> promotions;
+
+  /**
+   * The timestamp when the product is published by the retailer for the first time, which indicates
+   * the freshness of the products. Note that this field is different from available_time, given it
+   * purely describes product freshness regardless of when it is available on search and
+   * recommendation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String publishTime;
+
+  /**
+   * The rating of this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaRating rating;
+
+  /**
+   * Indicates which fields in the Products are returned in SearchResponse. Supported fields for all
+   * types: * audience * availability * brands * color_info * conditions * gtin * materials * name *
+   * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and
+   * Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: *
+   * Only the first image in images To mark attributes as retrievable, include paths of the form
+   * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
+   * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
+   * default: * name For Type.VARIANT, the following fields are always returned in by default: *
+   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String retrievableFields;
+
+  /**
+   * The size of the product. To represent different size systems or size types, consider using this
+   * format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents
+   * size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system
+   * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
+   * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
+   * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
+   * [Product.size](https://schema.org/size).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sizes;
+
+  /**
    * Custom tags associated with the product. At most 250 values are allowed per Product. This value
    * must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results
@@ -184,6 +363,17 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
 
   /**
    * Immutable. The type of the product. Default to
@@ -206,6 +396,16 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String uri;
 
   /**
+   * Output only. Product variants grouped together on primary product which share similar product
+   * attributes. It's automatically grouped by primary_product_id for all the product variants. Only
+   * populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for
+   * ProductService.GetProduct. Do not set this field in API requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaProduct> variants;
+
+  /**
    * Highly encouraged. Extra product attributes to be included. For example, for products, this
    * could include the store name, vendor, style, color, etc. These are very strong signals for
    * recommendation model, thus we highly recommend providing the attributes here. Features that can
@@ -216,7 +416,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters.
+   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
+   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
+   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -234,11 +436,32 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters.
+   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
+   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
+   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * The target group associated with a given audience (e.g. male, veterans, car owners, musicians,
+   * etc.) of the product.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaAudience getAudience() {
+    return audience;
+  }
+
+  /**
+   * The target group associated with a given audience (e.g. male, veterans, car owners, musicians,
+   * etc.) of the product.
+   * @param audience audience or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setAudience(GoogleCloudRetailV2alphaAudience audience) {
+    this.audience = audience;
     return this;
   }
 
@@ -281,7 +504,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this Product becomes available for recommendation.
+   * The timestamp when this Product becomes available for SearchService.Search.
    * @return value or {@code null} for none
    */
   public String getAvailableTime() {
@@ -289,11 +512,36 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * The timestamp when this Product becomes available for recommendation.
+   * The timestamp when this Product becomes available for SearchService.Search.
    * @param availableTime availableTime or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setAvailableTime(String availableTime) {
     this.availableTime = availableTime;
+    return this;
+  }
+
+  /**
+   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
+   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Google Merchant Center property
+   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
+   * [Product.brand](https://schema.org/brand).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBrands() {
+    return brands;
+  }
+
+  /**
+   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
+   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Google Merchant Center property
+   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
+   * [Product.brand](https://schema.org/brand).
+   * @param brands brands or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setBrands(java.util.List<java.lang.String> brands) {
+    this.brands = brands;
     return this;
   }
 
@@ -339,6 +587,73 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
+   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
+   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCollectionMemberIds() {
+    return collectionMemberIds;
+  }
+
+  /**
+   * The id of the collection members when type is Type.COLLECTION. Should not set it for other
+   * types. A maximum of 1000 values are allowed. Otherwise, an INVALID_ARGUMENT error is return.
+   * @param collectionMemberIds collectionMemberIds or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setCollectionMemberIds(java.util.List<java.lang.String> collectionMemberIds) {
+    this.collectionMemberIds = collectionMemberIds;
+    return this;
+  }
+
+  /**
+   * The color of the product. Google Merchant Center property
+   * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
+   * [Product.color](https://schema.org/color).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaColorInfo getColorInfo() {
+    return colorInfo;
+  }
+
+  /**
+   * The color of the product. Google Merchant Center property
+   * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
+   * [Product.color](https://schema.org/color).
+   * @param colorInfo colorInfo or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setColorInfo(GoogleCloudRetailV2alphaColorInfo colorInfo) {
+    this.colorInfo = colorInfo;
+    return this;
+  }
+
+  /**
+   * The condition of the product. Strongly encouraged to use the standard values: "new",
+   * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
+   * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
+   * error is returned. Google Merchant Center property
+   * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
+   * [Offer.itemCondition](https://schema.org/itemCondition).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * The condition of the product. Strongly encouraged to use the standard values: "new",
+   * "refurbished", "used". A maximum of 5 values are allowed per Product. Each value must be a
+   * UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
+   * error is returned. Google Merchant Center property
+   * [condition](https://support.google.com/merchants/answer/6324469). Schema.org property
+   * [Offer.itemCondition](https://schema.org/itemCondition).
+   * @param conditions conditions or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setConditions(java.util.List<java.lang.String> conditions) {
+    this.conditions = conditions;
+    return this;
+  }
+
+  /**
    * Product description. This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [description](https://support.google.com/merchants/answer/6324468). schema.org property
@@ -358,6 +673,81 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   public GoogleCloudRetailV2alphaProduct setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
+   * Product is not available for SearchService.Search after expire_time. However, the product can
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
+   * Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
+   * Product is not available for SearchService.Search after expire_time. However, the product can
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
+   * Merchant Center property
+   * [expiration_date](https://support.google.com/merchants/answer/6324499).
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Fulfillment information, such as the store IDs for in-store pickup or region IDs for different
+   * shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaFulfillmentInfo> getFulfillmentInfo() {
+    return fulfillmentInfo;
+  }
+
+  /**
+   * Fulfillment information, such as the store IDs for in-store pickup or region IDs for different
+   * shipping methods. All the elements must have distinct FulfillmentInfo.type. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @param fulfillmentInfo fulfillmentInfo or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setFulfillmentInfo(java.util.List<GoogleCloudRetailV2alphaFulfillmentInfo> fulfillmentInfo) {
+    this.fulfillmentInfo = fulfillmentInfo;
+    return this;
+  }
+
+  /**
+   * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
+   * Schema.org property [Product.isbn](https://schema.org/isbn) or
+   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
+   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
+   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGtin() {
+    return gtin;
+  }
+
+  /**
+   * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
+   * Schema.org property [Product.isbn](https://schema.org/isbn) or
+   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
+   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
+   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * @param gtin gtin or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setGtin(java.lang.String gtin) {
+    this.gtin = gtin;
     return this;
   }
 
@@ -414,6 +804,56 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
+   * Language of the title/description and other string attributes. Use language tags defined by BCP
+   * 47. For product prediction, this field is ignored and the model automatically detects the text
+   * language. The Product can include text in different languages, but duplicating Products to
+   * provide text in multiple languages can result in degraded model performance. For product search
+   * this field is in use. It defaults to "en-US" if unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Language of the title/description and other string attributes. Use language tags defined by BCP
+   * 47. For product prediction, this field is ignored and the model automatically detects the text
+   * language. The Product can include text in different languages, but duplicating Products to
+   * provide text in multiple languages can result in degraded model performance. For product search
+   * this field is in use. It defaults to "en-US" if unset.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
+   * [Product.material](https://schema.org/material).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMaterials() {
+    return materials;
+  }
+
+  /**
+   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
+   * [Product.material](https://schema.org/material).
+   * @param materials materials or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setMaterials(java.util.List<java.lang.String> materials) {
+    this.materials = materials;
+    return this;
+  }
+
+  /**
    * Immutable. Full resource name of the product, such as `projects/locations/global/catalogs/defau
    * lt_catalog/branches/default_branch/products/product_id`. The branch ID must be
    * "default_branch".
@@ -431,6 +871,31 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   public GoogleCloudRetailV2alphaProduct setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
+   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
+   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPatterns() {
+    return patterns;
+  }
+
+  /**
+   * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
+   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
+   * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
+   * Schema.org property [Product.pattern](https://schema.org/pattern).
+   * @param patterns patterns or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setPatterns(java.util.List<java.lang.String> patterns) {
+    this.patterns = patterns;
     return this;
   }
 
@@ -485,6 +950,135 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaPromotion> getPromotions() {
+    return promotions;
+  }
+
+  /**
+   * The promotions applied to the product. A maximum of 10 values are allowed per Product.
+   * @param promotions promotions or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setPromotions(java.util.List<GoogleCloudRetailV2alphaPromotion> promotions) {
+    this.promotions = promotions;
+    return this;
+  }
+
+  /**
+   * The timestamp when the product is published by the retailer for the first time, which indicates
+   * the freshness of the products. Note that this field is different from available_time, given it
+   * purely describes product freshness regardless of when it is available on search and
+   * recommendation.
+   * @return value or {@code null} for none
+   */
+  public String getPublishTime() {
+    return publishTime;
+  }
+
+  /**
+   * The timestamp when the product is published by the retailer for the first time, which indicates
+   * the freshness of the products. Note that this field is different from available_time, given it
+   * purely describes product freshness regardless of when it is available on search and
+   * recommendation.
+   * @param publishTime publishTime or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setPublishTime(String publishTime) {
+    this.publishTime = publishTime;
+    return this;
+  }
+
+  /**
+   * The rating of this product.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRating getRating() {
+    return rating;
+  }
+
+  /**
+   * The rating of this product.
+   * @param rating rating or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setRating(GoogleCloudRetailV2alphaRating rating) {
+    this.rating = rating;
+    return this;
+  }
+
+  /**
+   * Indicates which fields in the Products are returned in SearchResponse. Supported fields for all
+   * types: * audience * availability * brands * color_info * conditions * gtin * materials * name *
+   * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and
+   * Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: *
+   * Only the first image in images To mark attributes as retrievable, include paths of the form
+   * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
+   * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
+   * default: * name For Type.VARIANT, the following fields are always returned in by default: *
+   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * @return value or {@code null} for none
+   */
+  public String getRetrievableFields() {
+    return retrievableFields;
+  }
+
+  /**
+   * Indicates which fields in the Products are returned in SearchResponse. Supported fields for all
+   * types: * audience * availability * brands * color_info * conditions * gtin * materials * name *
+   * patterns * price_info * rating * sizes * title * uri Supported fields only for Type.PRIMARY and
+   * Type.COLLECTION: * categories * description * images Supported fields only for Type.VARIANT: *
+   * Only the first image in images To mark attributes as retrievable, include paths of the form
+   * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
+   * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
+   * default: * name For Type.VARIANT, the following fields are always returned in by default: *
+   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
+   * @param retrievableFields retrievableFields or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setRetrievableFields(String retrievableFields) {
+    this.retrievableFields = retrievableFields;
+    return this;
+  }
+
+  /**
+   * The size of the product. To represent different size systems or size types, consider using this
+   * format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents
+   * size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system
+   * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
+   * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
+   * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
+   * [Product.size](https://schema.org/size).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSizes() {
+    return sizes;
+  }
+
+  /**
+   * The size of the product. To represent different size systems or size types, consider using this
+   * format: [[[size_system:]size_type:]size_value]. For example, in "US:MENS:M", "US" represents
+   * size system; "MENS" represents size type; "M" represents size value. In "GIRLS:27", size system
+   * is empty; "GIRLS" represents size type; "27" represents size value. In "32 inches", both size
+   * system and size type are empty, while size value is "32 inches". A maximum of 20 values are
+   * allowed per Product. Each value must be a UTF-8 encoded string with a length limit of 128
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
+   * [size](https://support.google.com/merchants/answer/6324492),
+   * [size_type](https://support.google.com/merchants/answer/6324497) and
+   * [size_system](https://support.google.com/merchants/answer/6324502). Schema.org property
+   * [Product.size](https://schema.org/size).
+   * @param sizes sizes or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setSizes(java.util.List<java.lang.String> sizes) {
+    this.sizes = sizes;
+    return this;
+  }
+
+  /**
    * Custom tags associated with the product. At most 250 values are allowed per Product. This value
    * must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned. This tag can be used for filtering recommendation results
@@ -533,6 +1127,31 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
+   * Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Input only. The TTL (time to live) of the product. If it is set, expire_time is set as current
+   * timestamp plus ttl. The derived expire_time is returned in the output and ttl is left blank
+   * when retrieving the Product. If it is set, the product is not available for
+   * SearchService.Search after current timestamp plus ttl. However, the product can still be
+   * retrieved by ProductService.GetProduct and ProductService.ListProducts.
+   * @param ttl ttl or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setTtl(String ttl) {
+    this.ttl = ttl;
+    return this;
+  }
+
+  /**
    * Immutable. The type of the product. Default to
    * Catalog.product_level_config.ingestion_product_type if unset.
    * @return value or {@code null} for none
@@ -575,6 +1194,29 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    */
   public GoogleCloudRetailV2alphaProduct setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * Output only. Product variants grouped together on primary product which share similar product
+   * attributes. It's automatically grouped by primary_product_id for all the product variants. Only
+   * populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for
+   * ProductService.GetProduct. Do not set this field in API requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaProduct> getVariants() {
+    return variants;
+  }
+
+  /**
+   * Output only. Product variants grouped together on primary product which share similar product
+   * attributes. It's automatically grouped by primary_product_id for all the product variants. Only
+   * populated for Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for
+   * ProductService.GetProduct. Do not set this field in API requests.
+   * @param variants variants or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaProduct setVariants(java.util.List<GoogleCloudRetailV2alphaProduct> variants) {
+    this.variants = variants;
     return this;
   }
 

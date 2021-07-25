@@ -49,11 +49,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
    * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
-   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
-   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
-   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
-   * v1beta1 API. They have the same syntax and read/write to the same location in Service
-   * Directory.
+   * Note: This field is equivalent to the `metadata` field in the v1beta1 API. They have the same
+   * syntax and read/write to the same location in Service Directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,11 +100,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
    * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
-   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
-   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
-   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
-   * v1beta1 API. They have the same syntax and read/write to the same location in Service
-   * Directory.
+   * Note: This field is equivalent to the `metadata` field in the v1beta1 API. They have the same
+   * syntax and read/write to the same location in Service Directory.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -124,11 +118,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
    * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
-   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
-   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
-   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
-   * v1beta1 API. They have the same syntax and read/write to the same location in Service
-   * Directory.
+   * Note: This field is equivalent to the `metadata` field in the v1beta1 API. They have the same
+   * syntax and read/write to the same location in Service Directory.
    * @param annotations annotations or {@code null} for none
    */
   public Endpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {

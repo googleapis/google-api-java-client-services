@@ -42,35 +42,40 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
-   * Product category (1st level) in Google's product taxonomy.
+   * [Product category (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL1;
 
   /**
-   * Product category (2nd level) in Google's product taxonomy.
+   * [Product category (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL2;
 
   /**
-   * Product category (3rd level) in Google's product taxonomy.
+   * [Product category (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL3;
 
   /**
-   * Product category (4th level) in Google's product taxonomy.
+   * [Product category (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL4;
 
   /**
-   * Product category (5th level) in Google's product taxonomy.
+   * [Product category (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,35 +139,45 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   private java.lang.String offerId;
 
   /**
-   * Product category (1st level) in merchant's own product taxonomy.
+   * [Product type (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL1;
 
   /**
-   * Product category (2nd level) in merchant's own product taxonomy.
+   * [Product type (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL2;
 
   /**
-   * Product category (3rd level) in merchant's own product taxonomy.
+   * [Product type (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL3;
 
   /**
-   * Product category (4th level) in merchant's own product taxonomy.
+   * [Product type (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL4;
 
   /**
-   * Product category (5th level) in merchant's own product taxonomy.
+   * [Product type (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +222,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (1st level) in Google's product taxonomy.
+   * [Product category (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL1() {
@@ -215,7 +231,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (1st level) in Google's product taxonomy.
+   * [Product category (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @param categoryL1 categoryL1 or {@code null} for none
    */
   public Segments setCategoryL1(java.lang.String categoryL1) {
@@ -224,7 +241,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (2nd level) in Google's product taxonomy.
+   * [Product category (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL2() {
@@ -232,7 +250,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (2nd level) in Google's product taxonomy.
+   * [Product category (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @param categoryL2 categoryL2 or {@code null} for none
    */
   public Segments setCategoryL2(java.lang.String categoryL2) {
@@ -241,7 +260,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (3rd level) in Google's product taxonomy.
+   * [Product category (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL3() {
@@ -249,7 +269,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (3rd level) in Google's product taxonomy.
+   * [Product category (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @param categoryL3 categoryL3 or {@code null} for none
    */
   public Segments setCategoryL3(java.lang.String categoryL3) {
@@ -258,7 +279,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (4th level) in Google's product taxonomy.
+   * [Product category (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL4() {
@@ -266,7 +288,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (4th level) in Google's product taxonomy.
+   * [Product category (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @param categoryL4 categoryL4 or {@code null} for none
    */
   public Segments setCategoryL4(java.lang.String categoryL4) {
@@ -275,7 +298,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (5th level) in Google's product taxonomy.
+   * [Product category (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL5() {
@@ -283,7 +307,8 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (5th level) in Google's product taxonomy.
+   * [Product category (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
    * @param categoryL5 categoryL5 or {@code null} for none
    */
   public Segments setCategoryL5(java.lang.String categoryL5) {
@@ -430,7 +455,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (1st level) in merchant's own product taxonomy.
+   * [Product type (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL1() {
@@ -438,7 +465,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (1st level) in merchant's own product taxonomy.
+   * [Product type (1st level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @param productTypeL1 productTypeL1 or {@code null} for none
    */
   public Segments setProductTypeL1(java.lang.String productTypeL1) {
@@ -447,7 +476,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (2nd level) in merchant's own product taxonomy.
+   * [Product type (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL2() {
@@ -455,7 +486,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (2nd level) in merchant's own product taxonomy.
+   * [Product type (2nd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @param productTypeL2 productTypeL2 or {@code null} for none
    */
   public Segments setProductTypeL2(java.lang.String productTypeL2) {
@@ -464,7 +497,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (3rd level) in merchant's own product taxonomy.
+   * [Product type (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL3() {
@@ -472,7 +507,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (3rd level) in merchant's own product taxonomy.
+   * [Product type (3rd level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @param productTypeL3 productTypeL3 or {@code null} for none
    */
   public Segments setProductTypeL3(java.lang.String productTypeL3) {
@@ -481,7 +518,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (4th level) in merchant's own product taxonomy.
+   * [Product type (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL4() {
@@ -489,7 +528,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (4th level) in merchant's own product taxonomy.
+   * [Product type (4th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @param productTypeL4 productTypeL4 or {@code null} for none
    */
   public Segments setProductTypeL4(java.lang.String productTypeL4) {
@@ -498,7 +539,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (5th level) in merchant's own product taxonomy.
+   * [Product type (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL5() {
@@ -506,7 +549,9 @@ public final class Segments extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Product category (5th level) in merchant's own product taxonomy.
+   * [Product type (5th level)](https://developers.google.com/shopping-
+   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
+   * taxonomy.
    * @param productTypeL5 productTypeL5 or {@code null} for none
    */
   public Segments setProductTypeL5(java.lang.String productTypeL5) {

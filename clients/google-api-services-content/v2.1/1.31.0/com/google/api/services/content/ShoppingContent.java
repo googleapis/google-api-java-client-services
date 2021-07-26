@@ -1580,6 +1580,158 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Request verification code to start phone verification.
+     *
+     * Create a request for the method "accounts.requestphoneverification".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Requestphoneverification#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param merchantId Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     *        account must be a multi-client account and accountId must be the ID of a sub-account of
+     *        this account.
+     * @param accountId Required. The ID of the account.
+     * @param content the {@link com.google.api.services.content.model.RequestPhoneVerificationRequest}
+     * @return the request
+     */
+    public Requestphoneverification requestphoneverification(java.lang.Long merchantId, java.lang.Long accountId, com.google.api.services.content.model.RequestPhoneVerificationRequest content) throws java.io.IOException {
+      Requestphoneverification result = new Requestphoneverification(merchantId, accountId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Requestphoneverification extends ShoppingContentRequest<com.google.api.services.content.model.RequestPhoneVerificationResponse> {
+
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/requestphoneverification";
+
+      /**
+       * Request verification code to start phone verification.
+       *
+       * Create a request for the method "accounts.requestphoneverification".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Requestphoneverification#execute()} method to invoke the remote
+       * operation. <p> {@link Requestphoneverification#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     *        account must be a multi-client account and accountId must be the ID of a sub-account of
+     *        this account.
+       * @param accountId Required. The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.RequestPhoneVerificationRequest}
+       * @since 1.13
+       */
+      protected Requestphoneverification(java.lang.Long merchantId, java.lang.Long accountId, com.google.api.services.content.model.RequestPhoneVerificationRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RequestPhoneVerificationResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+      }
+
+      @Override
+      public Requestphoneverification set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestphoneverification) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestphoneverification setAccessToken(java.lang.String accessToken) {
+        return (Requestphoneverification) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Requestphoneverification setAlt(java.lang.String alt) {
+        return (Requestphoneverification) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestphoneverification setCallback(java.lang.String callback) {
+        return (Requestphoneverification) super.setCallback(callback);
+      }
+
+      @Override
+      public Requestphoneverification setFields(java.lang.String fields) {
+        return (Requestphoneverification) super.setFields(fields);
+      }
+
+      @Override
+      public Requestphoneverification setKey(java.lang.String key) {
+        return (Requestphoneverification) super.setKey(key);
+      }
+
+      @Override
+      public Requestphoneverification setOauthToken(java.lang.String oauthToken) {
+        return (Requestphoneverification) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Requestphoneverification setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Requestphoneverification) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Requestphoneverification setQuotaUser(java.lang.String quotaUser) {
+        return (Requestphoneverification) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Requestphoneverification setUploadType(java.lang.String uploadType) {
+        return (Requestphoneverification) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestphoneverification setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestphoneverification) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as accountId,
+       * then this account must be a multi-client account and accountId must be the ID of a sub-
+       * account of this account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     account must be a multi-client account and accountId must be the ID of a sub-account of this
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as accountId,
+       * then this account must be a multi-client account and accountId must be the ID of a sub-
+       * account of this account.
+       */
+      public Requestphoneverification setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long accountId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getAccountId() {
+        return accountId;
+      }
+
+      /** Required. The ID of the account. */
+      public Requestphoneverification setAccountId(java.lang.Long accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      @Override
+      public Requestphoneverification set(String parameterName, Object value) {
+        return (Requestphoneverification) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates a Merchant Center account. Any fields that are not provided are deleted from the
      * resource.
      *
@@ -1865,6 +2017,157 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Updatelabels set(String parameterName, Object value) {
         return (Updatelabels) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Validates verification code to verify phone number for the account.
+     *
+     * Create a request for the method "accounts.verifyphonenumber".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Verifyphonenumber#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     *        account must be a multi-client account and accountId must be the ID of a sub-account of
+     *        this account.
+     * @param accountId Required. The ID of the account.
+     * @param content the {@link com.google.api.services.content.model.VerifyPhoneNumberRequest}
+     * @return the request
+     */
+    public Verifyphonenumber verifyphonenumber(java.lang.Long merchantId, java.lang.Long accountId, com.google.api.services.content.model.VerifyPhoneNumberRequest content) throws java.io.IOException {
+      Verifyphonenumber result = new Verifyphonenumber(merchantId, accountId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Verifyphonenumber extends ShoppingContentRequest<com.google.api.services.content.model.VerifyPhoneNumberResponse> {
+
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/verifyphonenumber";
+
+      /**
+       * Validates verification code to verify phone number for the account.
+       *
+       * Create a request for the method "accounts.verifyphonenumber".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Verifyphonenumber#execute()} method to invoke the remote operation.
+       * <p> {@link Verifyphonenumber#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param merchantId Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     *        account must be a multi-client account and accountId must be the ID of a sub-account of
+     *        this account.
+       * @param accountId Required. The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.VerifyPhoneNumberRequest}
+       * @since 1.13
+       */
+      protected Verifyphonenumber(java.lang.Long merchantId, java.lang.Long accountId, com.google.api.services.content.model.VerifyPhoneNumberRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.VerifyPhoneNumberResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+      }
+
+      @Override
+      public Verifyphonenumber set$Xgafv(java.lang.String $Xgafv) {
+        return (Verifyphonenumber) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Verifyphonenumber setAccessToken(java.lang.String accessToken) {
+        return (Verifyphonenumber) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Verifyphonenumber setAlt(java.lang.String alt) {
+        return (Verifyphonenumber) super.setAlt(alt);
+      }
+
+      @Override
+      public Verifyphonenumber setCallback(java.lang.String callback) {
+        return (Verifyphonenumber) super.setCallback(callback);
+      }
+
+      @Override
+      public Verifyphonenumber setFields(java.lang.String fields) {
+        return (Verifyphonenumber) super.setFields(fields);
+      }
+
+      @Override
+      public Verifyphonenumber setKey(java.lang.String key) {
+        return (Verifyphonenumber) super.setKey(key);
+      }
+
+      @Override
+      public Verifyphonenumber setOauthToken(java.lang.String oauthToken) {
+        return (Verifyphonenumber) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Verifyphonenumber setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Verifyphonenumber) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Verifyphonenumber setQuotaUser(java.lang.String quotaUser) {
+        return (Verifyphonenumber) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Verifyphonenumber setUploadType(java.lang.String uploadType) {
+        return (Verifyphonenumber) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Verifyphonenumber setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Verifyphonenumber) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as accountId,
+       * then this account must be a multi-client account and accountId must be the ID of a sub-
+       * account of this account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the managing account. If this parameter is not the same as accountId, then this
+     account must be a multi-client account and accountId must be the ID of a sub-account of this
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as accountId,
+       * then this account must be a multi-client account and accountId must be the ID of a sub-
+       * account of this account.
+       */
+      public Verifyphonenumber setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long accountId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getAccountId() {
+        return accountId;
+      }
+
+      /** Required. The ID of the account. */
+      public Verifyphonenumber setAccountId(java.lang.Long accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      @Override
+      public Verifyphonenumber set(String parameterName, Object value) {
+        return (Verifyphonenumber) super.set(parameterName, value);
       }
     }
 
@@ -7981,6 +8284,274 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Freelistingsprogram collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Freelistingsprogram.List request = content.freelistingsprogram().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Freelistingsprogram freelistingsprogram() {
+    return new Freelistingsprogram();
+  }
+
+  /**
+   * The "freelistingsprogram" collection of methods.
+   */
+  public class Freelistingsprogram {
+
+    /**
+     * Retrieves the status and review eligibility for the free listing program.
+     *
+     * Create a request for the method "freelistingsprogram.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId) throws java.io.IOException {
+      Get result = new Get(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.FreeListingsProgramStatus> {
+
+      private static final String REST_PATH = "{merchantId}/freelistingsprogram";
+
+      /**
+       * Retrieves the status and review eligibility for the free listing program.
+       *
+       * Create a request for the method "freelistingsprogram.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.FreeListingsProgramStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Requests a review for Free Listings program in the provided region. Important: This method is
+     * only whitelisted for selected merchants.
+     *
+     * Create a request for the method "freelistingsprogram.requestreview".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param content the {@link com.google.api.services.content.model.RequestReviewFreeListingsRequest}
+     * @return the request
+     */
+    public Requestreview requestreview(java.lang.Long merchantId, com.google.api.services.content.model.RequestReviewFreeListingsRequest content) throws java.io.IOException {
+      Requestreview result = new Requestreview(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Requestreview extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/freelistingsprogram/requestreview";
+
+      /**
+       * Requests a review for Free Listings program in the provided region. Important: This method is
+       * only whitelisted for selected merchants.
+       *
+       * Create a request for the method "freelistingsprogram.requestreview".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation. <p>
+       * {@link Requestreview#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.RequestReviewFreeListingsRequest}
+       * @since 1.13
+       */
+      protected Requestreview(java.lang.Long merchantId, com.google.api.services.content.model.RequestReviewFreeListingsRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Requestreview set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestreview) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestreview setAccessToken(java.lang.String accessToken) {
+        return (Requestreview) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Requestreview setAlt(java.lang.String alt) {
+        return (Requestreview) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestreview setCallback(java.lang.String callback) {
+        return (Requestreview) super.setCallback(callback);
+      }
+
+      @Override
+      public Requestreview setFields(java.lang.String fields) {
+        return (Requestreview) super.setFields(fields);
+      }
+
+      @Override
+      public Requestreview setKey(java.lang.String key) {
+        return (Requestreview) super.setKey(key);
+      }
+
+      @Override
+      public Requestreview setOauthToken(java.lang.String oauthToken) {
+        return (Requestreview) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Requestreview setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Requestreview) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Requestreview setQuotaUser(java.lang.String quotaUser) {
+        return (Requestreview) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Requestreview setUploadType(java.lang.String uploadType) {
+        return (Requestreview) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestreview setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestreview) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Requestreview setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Requestreview set(String parameterName, Object value) {
+        return (Requestreview) super.set(parameterName, value);
       }
     }
 
@@ -23746,6 +24317,272 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Shoppingadsprogram collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Shoppingadsprogram.List request = content.shoppingadsprogram().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Shoppingadsprogram shoppingadsprogram() {
+    return new Shoppingadsprogram();
+  }
+
+  /**
+   * The "shoppingadsprogram" collection of methods.
+   */
+  public class Shoppingadsprogram {
+
+    /**
+     * Retrieves the status and review eligibility for the Shopping Ads program.
+     *
+     * Create a request for the method "shoppingadsprogram.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId) throws java.io.IOException {
+      Get result = new Get(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ShoppingAdsProgramStatus> {
+
+      private static final String REST_PATH = "{merchantId}/shoppingadsprogram";
+
+      /**
+       * Retrieves the status and review eligibility for the Shopping Ads program.
+       *
+       * Create a request for the method "shoppingadsprogram.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ShoppingAdsProgramStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Requests a review for Shopping Ads program in the provided country.
+     *
+     * Create a request for the method "shoppingadsprogram.requestreview".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param content the {@link com.google.api.services.content.model.RequestReviewShoppingAdsRequest}
+     * @return the request
+     */
+    public Requestreview requestreview(java.lang.Long merchantId, com.google.api.services.content.model.RequestReviewShoppingAdsRequest content) throws java.io.IOException {
+      Requestreview result = new Requestreview(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Requestreview extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/shoppingadsprogram/requestreview";
+
+      /**
+       * Requests a review for Shopping Ads program in the provided country.
+       *
+       * Create a request for the method "shoppingadsprogram.requestreview".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation. <p>
+       * {@link Requestreview#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.RequestReviewShoppingAdsRequest}
+       * @since 1.13
+       */
+      protected Requestreview(java.lang.Long merchantId, com.google.api.services.content.model.RequestReviewShoppingAdsRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Requestreview set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestreview) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestreview setAccessToken(java.lang.String accessToken) {
+        return (Requestreview) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Requestreview setAlt(java.lang.String alt) {
+        return (Requestreview) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestreview setCallback(java.lang.String callback) {
+        return (Requestreview) super.setCallback(callback);
+      }
+
+      @Override
+      public Requestreview setFields(java.lang.String fields) {
+        return (Requestreview) super.setFields(fields);
+      }
+
+      @Override
+      public Requestreview setKey(java.lang.String key) {
+        return (Requestreview) super.setKey(key);
+      }
+
+      @Override
+      public Requestreview setOauthToken(java.lang.String oauthToken) {
+        return (Requestreview) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Requestreview setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Requestreview) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Requestreview setQuotaUser(java.lang.String quotaUser) {
+        return (Requestreview) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Requestreview setUploadType(java.lang.String uploadType) {
+        return (Requestreview) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestreview setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestreview) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Requestreview setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Requestreview set(String parameterName, Object value) {
+        return (Requestreview) super.set(parameterName, value);
       }
     }
 

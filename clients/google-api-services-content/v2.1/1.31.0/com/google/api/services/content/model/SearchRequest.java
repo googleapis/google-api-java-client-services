@@ -49,7 +49,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines performance metrics to retrieve and dimensions according to which
-   * the metrics are to be segmented.
+   * the metrics are to be segmented. For details on how to construct your query, see the [Query
+   * Language guide](https://developers.google.com/shopping-content/guides/reports/query-
+   * language/overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +99,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines performance metrics to retrieve and dimensions according to which
-   * the metrics are to be segmented.
+   * the metrics are to be segmented. For details on how to construct your query, see the [Query
+   * Language guide](https://developers.google.com/shopping-content/guides/reports/query-
+   * language/overview).
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -106,7 +110,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines performance metrics to retrieve and dimensions according to which
-   * the metrics are to be segmented.
+   * the metrics are to be segmented. For details on how to construct your query, see the [Query
+   * Language guide](https://developers.google.com/shopping-content/guides/reports/query-
+   * language/overview).
    * @param query query or {@code null} for none
    */
   public SearchRequest setQuery(java.lang.String query) {

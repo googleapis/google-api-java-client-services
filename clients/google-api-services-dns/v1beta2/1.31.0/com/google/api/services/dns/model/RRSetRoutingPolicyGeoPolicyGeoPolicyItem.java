@@ -37,7 +37,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * The geo-location granularity is a GCP region. This location string should correspond to a GCP
-   * region. e.g "us-east1", "southamerica-east1", "asia-east1", etc.
+   * region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * The geo-location granularity is a GCP region. This location string should correspond to a GCP
-   * region. e.g "us-east1", "southamerica-east1", "asia-east1", etc.
+   * region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -82,7 +82,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * The geo-location granularity is a GCP region. This location string should correspond to a GCP
-   * region. e.g "us-east1", "southamerica-east1", "asia-east1", etc.
+   * region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
    * @param location location or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicyGeoPolicyItem setLocation(java.lang.String location) {

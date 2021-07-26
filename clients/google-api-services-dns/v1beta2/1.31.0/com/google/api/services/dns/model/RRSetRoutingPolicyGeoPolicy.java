@@ -32,7 +32,7 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
   /**
    * If the health check for the primary target for a geo location returns an unhealthy status, the
    * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
+   * failover is not provided, the primary target won't be healthchecked, and it returns the
    * primarily configured rrdata irrespective of whether it is healthy or not.
    * The value may be {@code null}.
    */
@@ -56,7 +56,7 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
   /**
    * If the health check for the primary target for a geo location returns an unhealthy status, the
    * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
+   * failover is not provided, the primary target won't be healthchecked, and it returns the
    * primarily configured rrdata irrespective of whether it is healthy or not.
    * @return value or {@code null} for none
    */
@@ -67,7 +67,7 @@ public final class RRSetRoutingPolicyGeoPolicy extends com.google.api.client.jso
   /**
    * If the health check for the primary target for a geo location returns an unhealthy status, the
    * failover target is returned instead. This failover configuration is not mandatory. If a
-   * failover is not provided, the primary target won't be healthchecked - we'll return the
+   * failover is not provided, the primary target won't be healthchecked, and it returns the
    * primarily configured rrdata irrespective of whether it is healthy or not.
    * @param failovers failovers or {@code null} for none
    */

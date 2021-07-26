@@ -51,6 +51,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer gkeClustersPerResponsePolicy;
 
   /**
+   * Maximum allowed number of items per routing policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer itemsPerRoutingPolicy;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,6 +222,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setGkeClustersPerResponsePolicy(java.lang.Integer gkeClustersPerResponsePolicy) {
     this.gkeClustersPerResponsePolicy = gkeClustersPerResponsePolicy;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of items per routing policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getItemsPerRoutingPolicy() {
+    return itemsPerRoutingPolicy;
+  }
+
+  /**
+   * Maximum allowed number of items per routing policy.
+   * @param itemsPerRoutingPolicy itemsPerRoutingPolicy or {@code null} for none
+   */
+  public Quota setItemsPerRoutingPolicy(java.lang.Integer itemsPerRoutingPolicy) {
+    this.itemsPerRoutingPolicy = itemsPerRoutingPolicy;
     return this;
   }
 

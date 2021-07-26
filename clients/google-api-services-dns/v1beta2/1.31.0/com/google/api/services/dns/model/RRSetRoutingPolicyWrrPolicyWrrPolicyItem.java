@@ -51,8 +51,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   /**
    * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
    * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be a decimal in the range
-   * [0,1].
+   * the sum of weights configured for all items. This weight should be non-negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +107,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   /**
    * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
    * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be a decimal in the range
-   * [0,1].
+   * the sum of weights configured for all items. This weight should be non-negative.
    * @return value or {@code null} for none
    */
   public java.lang.Double getWeight() {
@@ -119,8 +117,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   /**
    * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems
    * are configured, the probability of returning an rrset is proportional to its weight relative to
-   * the sum of weights configured for all items. This weight should be a decimal in the range
-   * [0,1].
+   * the sum of weights configured for all items. This weight should be non-negative.
    * @param weight weight or {@code null} for none
    */
   public RRSetRoutingPolicyWrrPolicyWrrPolicyItem setWeight(java.lang.Double weight) {

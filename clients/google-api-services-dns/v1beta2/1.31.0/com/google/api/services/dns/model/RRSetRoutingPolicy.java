@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A RRSetRoutingPolicy represents ResourceRecordSet data that will be returned dynamically with the
+ * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the
  * response varying based on configured properties such as geolocation or by weighted random
  * selection.
  *
@@ -35,6 +35,12 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private RRSetRoutingPolicyGeoPolicy geo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private RRSetRoutingPolicyGeoPolicy geoPolicy;
 
   /**
@@ -47,7 +53,28 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private RRSetRoutingPolicyWrrPolicy wrr;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private RRSetRoutingPolicyWrrPolicy wrrPolicy;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public RRSetRoutingPolicyGeoPolicy getGeo() {
+    return geo;
+  }
+
+  /**
+   * @param geo geo or {@code null} for none
+   */
+  public RRSetRoutingPolicy setGeo(RRSetRoutingPolicyGeoPolicy geo) {
+    this.geo = geo;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -76,6 +103,21 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    */
   public RRSetRoutingPolicy setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public RRSetRoutingPolicyWrrPolicy getWrr() {
+    return wrr;
+  }
+
+  /**
+   * @param wrr wrr or {@code null} for none
+   */
+  public RRSetRoutingPolicy setWrr(RRSetRoutingPolicyWrrPolicy wrr) {
+    this.wrr = wrr;
     return this;
   }
 

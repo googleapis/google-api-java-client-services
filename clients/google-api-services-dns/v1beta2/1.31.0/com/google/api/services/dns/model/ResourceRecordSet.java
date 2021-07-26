@@ -43,6 +43,15 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy (dynamic). An error is returned otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RRSetRoutingPolicy routingPolicy;
+
+  /**
    * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
    * The value may be {@code null}.
    */
@@ -99,6 +108,27 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
    */
   public ResourceRecordSet setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy (dynamic). An error is returned otherwise.
+   * @return value or {@code null} for none
+   */
+  public RRSetRoutingPolicy getRoutingPolicy() {
+    return routingPolicy;
+  }
+
+  /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy (dynamic). An error is returned otherwise.
+   * @param routingPolicy routingPolicy or {@code null} for none
+   */
+  public ResourceRecordSet setRoutingPolicy(RRSetRoutingPolicy routingPolicy) {
+    this.routingPolicy = routingPolicy;
     return this;
   }
 

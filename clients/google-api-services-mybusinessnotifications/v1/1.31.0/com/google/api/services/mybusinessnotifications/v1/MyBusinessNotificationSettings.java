@@ -306,7 +306,7 @@ public class MyBusinessNotificationSettings extends com.google.api.client.google
      * the remote operation.
      *
      * @param name Required. The resource name this setting is for. This is of the form
-     *        `accounts/{account_id}/notifications/setting`.
+     *        `accounts/{account_id}/notificationSetting`.
      * @param content the {@link com.google.api.services.mybusinessnotifications.v1.model.NotificationSetting}
      * @return the request
      */
@@ -339,7 +339,7 @@ public class MyBusinessNotificationSettings extends com.google.api.client.google
        * instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The resource name this setting is for. This is of the form
-     *        `accounts/{account_id}/notifications/setting`.
+     *        `accounts/{account_id}/notificationSetting`.
        * @param content the {@link com.google.api.services.mybusinessnotifications.v1.model.NotificationSetting}
        * @since 1.13
        */
@@ -410,13 +410,13 @@ public class MyBusinessNotificationSettings extends com.google.api.client.google
 
       /**
        * Required. The resource name this setting is for. This is of the form
-       * `accounts/{account_id}/notifications/setting`.
+       * `accounts/{account_id}/notificationSetting`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name this setting is for. This is of the form
-     `accounts/{account_id}/notifications/setting`.
+     `accounts/{account_id}/notificationSetting`.
        */
       public java.lang.String getName() {
         return name;
@@ -424,7 +424,7 @@ public class MyBusinessNotificationSettings extends com.google.api.client.google
 
       /**
        * Required. The resource name this setting is for. This is of the form
-       * `accounts/{account_id}/notifications/setting`.
+       * `accounts/{account_id}/notificationSetting`.
        */
       public UpdateNotificationSetting setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

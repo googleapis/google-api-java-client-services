@@ -125,9 +125,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
-   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
-   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
-   * organizations/{organization_id}
+   * either empty or a folder resource which is a child of the Workload parent. If not specified all
+   * resources are created under the parent organization. Format: folders/{folder_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,9 +374,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
-   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
-   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
-   * organizations/{organization_id}
+   * either empty or a folder resource which is a child of the Workload parent. If not specified all
+   * resources are created under the parent organization. Format: folders/{folder_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getProvisionedResourcesParent() {
@@ -386,9 +384,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
-   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
-   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
-   * organizations/{organization_id}
+   * either empty or a folder resource which is a child of the Workload parent. If not specified all
+   * resources are created under the parent organization. Format: folders/{folder_id}
    * @param provisionedResourcesParent provisionedResourcesParent or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setProvisionedResourcesParent(java.lang.String provisionedResourcesParent) {

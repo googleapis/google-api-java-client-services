@@ -19,8 +19,8 @@ package com.google.api.services.monitoring.v3.model;
 /**
  * A DistributionCut defines a TimeSeries and thresholds used for measuring good service and total
  * service. The TimeSeries must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind =
- * CUMULATIVE. The computed good_service will be the count of values x in the Distribution such that
- * range.min <= x < range.max.
+ * CUMULATIVE. The computed good_service will be the estimated count of values in the Distribution
+ * that fall within the specified min and max.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

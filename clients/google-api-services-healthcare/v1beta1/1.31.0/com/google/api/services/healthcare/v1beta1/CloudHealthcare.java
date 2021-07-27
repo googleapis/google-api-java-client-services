@@ -26257,6 +26257,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Analyze heathcare entity in a document. Its response includes the recognized entity mentions and
            * the relationships between them. AnalyzeEntities uses context aware models to detect entities.
+           * This method can only analyze documents written in English.
            *
            * Create a request for the method "nlp.analyzeEntities".
            *
@@ -26284,7 +26285,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Analyze heathcare entity in a document. Its response includes the recognized entity mentions
              * and the relationships between them. AnalyzeEntities uses context aware models to detect
-             * entities.
+             * entities. This method can only analyze documents written in English.
              *
              * Create a request for the method "nlp.analyzeEntities".
              *

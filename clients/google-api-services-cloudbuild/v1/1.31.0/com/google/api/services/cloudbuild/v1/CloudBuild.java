@@ -1301,6 +1301,861 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
     }
     /**
+     * An accessor for creating requests from the GithubEnterpriseConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+     *   {@code CloudBuild.GithubEnterpriseConfigs.List request = cloudbuild.githubEnterpriseConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public GithubEnterpriseConfigs githubEnterpriseConfigs() {
+      return new GithubEnterpriseConfigs();
+    }
+
+    /**
+     * The "githubEnterpriseConfigs" collection of methods.
+     */
+    public class GithubEnterpriseConfigs {
+
+      /**
+       * Create an association between a GCP project and a GitHub Enterprise server. This API is
+       * experimental.
+       *
+       * Create a request for the method "githubEnterpriseConfigs.create".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/githubEnterpriseConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Create an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.create".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) {
+          super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the parent project. For example: projects/{$project_number} or
+         * projects/{$project_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Name of the parent project. For example: projects/{$project_number} or
+         * projects/{$project_id}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** ID of the project. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** ID of the project.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** ID of the project. */
+        public Create setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete an association between a GCP project and a GitHub Enterprise server. This API is
+       * experimental.
+       *
+       * Create a request for the method "githubEnterpriseConfigs.delete".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name This field should contain the name of the enterprise config resource. For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+        /**
+         * Delete an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.delete".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name This field should contain the name of the enterprise config resource. For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudBuild.this, "DELETE", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * This field should contain the name of the enterprise config resource. For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** This field should contain the name of the enterprise config resource. For example:
+       "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * This field should contain the name of the enterprise config resource. For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Unique identifier of the `GitHubEnterpriseConfig` */
+        @com.google.api.client.util.Key
+        private java.lang.String configId;
+
+        /** Unique identifier of the `GitHubEnterpriseConfig`
+         */
+        public java.lang.String getConfigId() {
+          return configId;
+        }
+
+        /** Unique identifier of the `GitHubEnterpriseConfig` */
+        public Delete setConfigId(java.lang.String configId) {
+          this.configId = configId;
+          return this;
+        }
+
+        /** ID of the project */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** ID of the project
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** ID of the project */
+        public Delete setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+       *
+       * Create a request for the method "githubEnterpriseConfigs.get".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name This field should contain the name of the enterprise config resource. For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+        /**
+         * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.get".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name This field should contain the name of the enterprise config resource. For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * This field should contain the name of the enterprise config resource. For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** This field should contain the name of the enterprise config resource. For example:
+       "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * This field should contain the name of the enterprise config resource. For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Unique identifier of the `GitHubEnterpriseConfig` */
+        @com.google.api.client.util.Key
+        private java.lang.String configId;
+
+        /** Unique identifier of the `GitHubEnterpriseConfig`
+         */
+        public java.lang.String getConfigId() {
+          return configId;
+        }
+
+        /** Unique identifier of the `GitHubEnterpriseConfig` */
+        public Get setConfigId(java.lang.String configId) {
+          this.configId = configId;
+          return this;
+        }
+
+        /** ID of the project */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** ID of the project
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** ID of the project */
+        public Get setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+       *
+       * Create a request for the method "githubEnterpriseConfigs.list".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListGithubEnterpriseConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/githubEnterpriseConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.list".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListGithubEnterpriseConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the parent project. For example: projects/{$project_number} or
+         * projects/{$project_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Name of the parent project. For example: projects/{$project_number} or
+         * projects/{$project_id}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** ID of the project */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** ID of the project
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** ID of the project */
+        public List setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update an association between a GCP project and a GitHub Enterprise server. This API is
+       * experimental.
+       *
+       * Create a request for the method "githubEnterpriseConfigs.patch".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+        /**
+         * Update an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.patch".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
+       *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) {
+          super(CloudBuild.this, "PATCH", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Optional. The full resource name for the GitHubEnterpriseConfig For example:
+       "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+         * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Update mask for the resource. If this is set, the server will only update the fields
+         * specified in the field mask. Otherwise, a full update of the mutable resource fields will
+         * be performed.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Update mask for the resource. If this is set, the server will only update the fields specified in
+       the field mask. Otherwise, a full update of the mutable resource fields will be performed.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Update mask for the resource. If this is set, the server will only update the fields
+         * specified in the field mask. Otherwise, a full update of the mutable resource fields will
+         * be performed.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -2200,6 +3055,861 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           @Override
           public Retry set(String parameterName, Object value) {
             return (Retry) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the GithubEnterpriseConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+       *   {@code CloudBuild.GithubEnterpriseConfigs.List request = cloudbuild.githubEnterpriseConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public GithubEnterpriseConfigs githubEnterpriseConfigs() {
+        return new GithubEnterpriseConfigs();
+      }
+
+      /**
+       * The "githubEnterpriseConfigs" collection of methods.
+       */
+      public class GithubEnterpriseConfigs {
+
+        /**
+         * Create an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.create".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/githubEnterpriseConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create an association between a GCP project and a GitHub Enterprise server. This API is
+           * experimental.
+           *
+           * Create a request for the method "githubEnterpriseConfigs.create".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the parent project. For example: projects/{$project_number} or
+           * projects/{$project_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Name of the parent project. For example: projects/{$project_number} or
+           * projects/{$project_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** ID of the project. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** ID of the project.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** ID of the project. */
+          public Create setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.delete".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name This field should contain the name of the enterprise config resource. For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+          /**
+           * Delete an association between a GCP project and a GitHub Enterprise server. This API is
+           * experimental.
+           *
+           * Create a request for the method "githubEnterpriseConfigs.delete".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name This field should contain the name of the enterprise config resource. For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudBuild.this, "DELETE", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * This field should contain the name of the enterprise config resource. For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** This field should contain the name of the enterprise config resource. For example:
+         "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * This field should contain the name of the enterprise config resource. For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Unique identifier of the `GitHubEnterpriseConfig` */
+          @com.google.api.client.util.Key
+          private java.lang.String configId;
+
+          /** Unique identifier of the `GitHubEnterpriseConfig`
+           */
+          public java.lang.String getConfigId() {
+            return configId;
+          }
+
+          /** Unique identifier of the `GitHubEnterpriseConfig` */
+          public Delete setConfigId(java.lang.String configId) {
+            this.configId = configId;
+            return this;
+          }
+
+          /** ID of the project */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** ID of the project
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** ID of the project */
+          public Delete setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.get".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name This field should contain the name of the enterprise config resource. For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+          /**
+           * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+           *
+           * Create a request for the method "githubEnterpriseConfigs.get".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name This field should contain the name of the enterprise config resource. For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * This field should contain the name of the enterprise config resource. For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** This field should contain the name of the enterprise config resource. For example:
+         "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * This field should contain the name of the enterprise config resource. For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Unique identifier of the `GitHubEnterpriseConfig` */
+          @com.google.api.client.util.Key
+          private java.lang.String configId;
+
+          /** Unique identifier of the `GitHubEnterpriseConfig`
+           */
+          public java.lang.String getConfigId() {
+            return configId;
+          }
+
+          /** Unique identifier of the `GitHubEnterpriseConfig` */
+          public Get setConfigId(java.lang.String configId) {
+            this.configId = configId;
+            return this;
+          }
+
+          /** ID of the project */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** ID of the project
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** ID of the project */
+          public Get setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.list".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListGithubEnterpriseConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/githubEnterpriseConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+           *
+           * Create a request for the method "githubEnterpriseConfigs.list".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListGithubEnterpriseConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the parent project. For example: projects/{$project_number} or
+           * projects/{$project_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Name of the parent project. For example: projects/{$project_number} or
+           * projects/{$project_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** ID of the project */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** ID of the project
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** ID of the project */
+          public List setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update an association between a GCP project and a GitHub Enterprise server. This API is
+         * experimental.
+         *
+         * Create a request for the method "githubEnterpriseConfigs.patch".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+
+          /**
+           * Update an association between a GCP project and a GitHub Enterprise server. This API is
+           * experimental.
+           *
+           * Create a request for the method "githubEnterpriseConfigs.patch".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Optional. The full resource name for the GitHubEnterpriseConfig For example:
+         *        "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig content) {
+            super(CloudBuild.this, "PATCH", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Optional. The full resource name for the GitHubEnterpriseConfig For example:
+         "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+           * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Update mask for the resource. If this is set, the server will only update the fields specified in
+         the field mask. Otherwise, a full update of the mutable resource fields will be performed.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -5810,6 +7520,128 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+   *   {@code CloudBuild.V1.List request = cloudbuild.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * ReceiveWebhook is called when the API receives a GitHub webhook.
+     *
+     * Create a request for the method "v1.webhook".
+     *
+     * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+     * parameters, call the {@link Webhook#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+     * @return the request
+     */
+    public Webhook webhook(com.google.api.services.cloudbuild.v1.model.HttpBody content) throws java.io.IOException {
+      Webhook result = new Webhook(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Webhook extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/webhook";
+
+      /**
+       * ReceiveWebhook is called when the API receives a GitHub webhook.
+       *
+       * Create a request for the method "v1.webhook".
+       *
+       * This request holds the parameters needed by the the cloudbuild server.  After setting any
+       * optional parameters, call the {@link Webhook#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Webhook#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+       * @since 1.13
+       */
+      protected Webhook(com.google.api.services.cloudbuild.v1.model.HttpBody content) {
+        super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Empty.class);
+      }
+
+      @Override
+      public Webhook set$Xgafv(java.lang.String $Xgafv) {
+        return (Webhook) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Webhook setAccessToken(java.lang.String accessToken) {
+        return (Webhook) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Webhook setAlt(java.lang.String alt) {
+        return (Webhook) super.setAlt(alt);
+      }
+
+      @Override
+      public Webhook setCallback(java.lang.String callback) {
+        return (Webhook) super.setCallback(callback);
+      }
+
+      @Override
+      public Webhook setFields(java.lang.String fields) {
+        return (Webhook) super.setFields(fields);
+      }
+
+      @Override
+      public Webhook setKey(java.lang.String key) {
+        return (Webhook) super.setKey(key);
+      }
+
+      @Override
+      public Webhook setOauthToken(java.lang.String oauthToken) {
+        return (Webhook) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Webhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Webhook) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Webhook setQuotaUser(java.lang.String quotaUser) {
+        return (Webhook) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Webhook setUploadType(java.lang.String uploadType) {
+        return (Webhook) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Webhook setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Webhook) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Webhook set(String parameterName, Object value) {
+        return (Webhook) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

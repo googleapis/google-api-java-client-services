@@ -144,6 +144,16 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceName;
 
   /**
+   * Optional. The service account used for all user-controlled operations including
+   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
+   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
+   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * The repo and ref of the repository from which to build. This field is used only for those
    * triggers that do not respond to SCM events. Triggers that respond to such events build source
    * at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub,
@@ -452,6 +462,29 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Optional. The service account used for all user-controlled operations including
+   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
+   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
+   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account used for all user-controlled operations including
+   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
+   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
+   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public BuildTrigger setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

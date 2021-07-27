@@ -18,7 +18,7 @@ package com.google.api.services.cloudbuild.v1.model;
 
 /**
  * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
- * GitHub event is received. This message is experimental.
+ * GitHub event is received.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -29,6 +29,14 @@ package com.google.api.services.cloudbuild.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GitHubEventsConfig extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. The resource name of the github enterprise config that should be applied to this
+   * installation. For example: "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enterpriseConfigResourceName;
 
   /**
    * The installationID that emits the GitHub event.
@@ -66,6 +74,25 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private PushFilter push;
+
+  /**
+   * Optional. The resource name of the github enterprise config that should be applied to this
+   * installation. For example: "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnterpriseConfigResourceName() {
+    return enterpriseConfigResourceName;
+  }
+
+  /**
+   * Optional. The resource name of the github enterprise config that should be applied to this
+   * installation. For example: "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * @param enterpriseConfigResourceName enterpriseConfigResourceName or {@code null} for none
+   */
+  public GitHubEventsConfig setEnterpriseConfigResourceName(java.lang.String enterpriseConfigResourceName) {
+    this.enterpriseConfigResourceName = enterpriseConfigResourceName;
+    return this;
+  }
 
   /**
    * The installationID that emits the GitHub event.

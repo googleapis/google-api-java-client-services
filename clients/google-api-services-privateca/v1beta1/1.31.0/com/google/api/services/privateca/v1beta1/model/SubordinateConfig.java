@@ -32,9 +32,9 @@ package com.google.api.services.privateca.v1beta1.model;
 public final class SubordinateConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. This can refer to a CertificateAuthority in the same project that was used to create
-   * a subordinate CertificateAuthority. This field is used for information and usability purposes
-   * only. The resource name is in the format `projects/locations/certificateAuthorities`.
+   * Required. This can refer to a CertificateAuthority that was used to create a subordinate
+   * CertificateAuthority. This field is used for information and usability purposes only. The
+   * resource name is in the format `projects/locations/certificateAuthorities`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class SubordinateConfig extends com.google.api.client.json.GenericJ
   private SubordinateConfigChain pemIssuerChain;
 
   /**
-   * Required. This can refer to a CertificateAuthority in the same project that was used to create
-   * a subordinate CertificateAuthority. This field is used for information and usability purposes
-   * only. The resource name is in the format `projects/locations/certificateAuthorities`.
+   * Required. This can refer to a CertificateAuthority that was used to create a subordinate
+   * CertificateAuthority. This field is used for information and usability purposes only. The
+   * resource name is in the format `projects/locations/certificateAuthorities`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateAuthority() {
@@ -59,9 +59,9 @@ public final class SubordinateConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. This can refer to a CertificateAuthority in the same project that was used to create
-   * a subordinate CertificateAuthority. This field is used for information and usability purposes
-   * only. The resource name is in the format `projects/locations/certificateAuthorities`.
+   * Required. This can refer to a CertificateAuthority that was used to create a subordinate
+   * CertificateAuthority. This field is used for information and usability purposes only. The
+   * resource name is in the format `projects/locations/certificateAuthorities`.
    * @param certificateAuthority certificateAuthority or {@code null} for none
    */
   public SubordinateConfig setCertificateAuthority(java.lang.String certificateAuthority) {

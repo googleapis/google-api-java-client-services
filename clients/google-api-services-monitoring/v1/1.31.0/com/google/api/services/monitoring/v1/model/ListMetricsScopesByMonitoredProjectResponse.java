@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.monitoring.v3.model;
+package com.google.api.services.monitoring.v1.model;
 
 /**
- * Range of numerical values within min and max. If the open range "< range.max" is desired, set
- * range.min = -infinity. If the open range ">= range.min" is desired, set range.max = infinity.
+ * Response for the ListMetricsScopesByMonitoredProject method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:
@@ -28,64 +27,40 @@ package com.google.api.services.monitoring.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleMonitoringV3Range extends com.google.api.client.json.GenericJson {
+public final class ListMetricsScopesByMonitoredProjectResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Range maximum.
+   * A set of all metrics scopes that the specified monitored project has been added to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double max;
+  private java.util.List<MetricsScope> metricsScopes;
 
   /**
-   * Range minimum.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double min;
-
-  /**
-   * Range maximum.
+   * A set of all metrics scopes that the specified monitored project has been added to.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getMax() {
-    return max;
+  public java.util.List<MetricsScope> getMetricsScopes() {
+    return metricsScopes;
   }
 
   /**
-   * Range maximum.
-   * @param max max or {@code null} for none
+   * A set of all metrics scopes that the specified monitored project has been added to.
+   * @param metricsScopes metricsScopes or {@code null} for none
    */
-  public GoogleMonitoringV3Range setMax(java.lang.Double max) {
-    this.max = max;
-    return this;
-  }
-
-  /**
-   * Range minimum.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getMin() {
-    return min;
-  }
-
-  /**
-   * Range minimum.
-   * @param min min or {@code null} for none
-   */
-  public GoogleMonitoringV3Range setMin(java.lang.Double min) {
-    this.min = min;
+  public ListMetricsScopesByMonitoredProjectResponse setMetricsScopes(java.util.List<MetricsScope> metricsScopes) {
+    this.metricsScopes = metricsScopes;
     return this;
   }
 
   @Override
-  public GoogleMonitoringV3Range set(String fieldName, Object value) {
-    return (GoogleMonitoringV3Range) super.set(fieldName, value);
+  public ListMetricsScopesByMonitoredProjectResponse set(String fieldName, Object value) {
+    return (ListMetricsScopesByMonitoredProjectResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleMonitoringV3Range clone() {
-    return (GoogleMonitoringV3Range) super.clone();
+  public ListMetricsScopesByMonitoredProjectResponse clone() {
+    return (ListMetricsScopesByMonitoredProjectResponse) super.clone();
   }
 
 }

@@ -133,6 +133,663 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Monitoring monitoring = new Monitoring(...);}
+   *   {@code Monitoring.Locations.List request = monitoring.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * An accessor for creating requests from the Global collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.Global.List request = monitoring.global().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Global global() {
+      return new Global();
+    }
+
+    /**
+     * The "global" collection of methods.
+     */
+    public class Global {
+
+      /**
+       * An accessor for creating requests from the MetricsScopes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Monitoring monitoring = new Monitoring(...);}
+       *   {@code Monitoring.MetricsScopes.List request = monitoring.metricsScopes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MetricsScopes metricsScopes() {
+        return new MetricsScopes();
+      }
+
+      /**
+       * The "metricsScopes" collection of methods.
+       */
+      public class MetricsScopes {
+
+        /**
+         * Returns a specific Metrics Scope.
+         *
+         * Create a request for the method "metricsScopes.get".
+         *
+         * This request holds the parameters needed by the monitoring server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Metrics Scope. Example:
+         *        locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends MonitoringRequest<com.google.api.services.monitoring.v1.model.MetricsScope> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^locations/global/metricsScopes/[^/]+$");
+
+          /**
+           * Returns a specific Metrics Scope.
+           *
+           * Create a request for the method "metricsScopes.get".
+           *
+           * This request holds the parameters needed by the the monitoring server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Metrics Scope. Example:
+         *        locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v1.model.MetricsScope.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/global/metricsScopes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Metrics Scope. Example:
+           * locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Metrics Scope. Example:
+         locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Metrics Scope. Example:
+           * locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/global/metricsScopes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The
+         * metrics scope representing the specified monitored project will always be the first entry in the
+         * response.
+         *
+         * Create a request for the method "metricsScopes.listMetricScopesByMonitoredProject".
+         *
+         * This request holds the parameters needed by the monitoring server.  After setting any optional
+         * parameters, call the {@link ListMetricScopesByMonitoredProject#execute()} method to invoke the
+         * remote operation.
+         *
+         * @return the request
+         */
+        public ListMetricScopesByMonitoredProject listMetricScopesByMonitoredProject() throws java.io.IOException {
+          ListMetricScopesByMonitoredProject result = new ListMetricScopesByMonitoredProject();
+          initialize(result);
+          return result;
+        }
+
+        public class ListMetricScopesByMonitoredProject extends MonitoringRequest<com.google.api.services.monitoring.v1.model.ListMetricsScopesByMonitoredProjectResponse> {
+
+          private static final String REST_PATH = "v1/locations/global/metricsScopes:listMetricScopesByMonitoredProject";
+
+          /**
+           * Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The
+           * metrics scope representing the specified monitored project will always be the first entry in
+           * the response.
+           *
+           * Create a request for the method "metricsScopes.listMetricScopesByMonitoredProject".
+           *
+           * This request holds the parameters needed by the the monitoring server.  After setting any
+           * optional parameters, call the {@link ListMetricScopesByMonitoredProject#execute()} method to
+           * invoke the remote operation. <p> {@link ListMetricScopesByMonitoredProject#initialize(com.googl
+           * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+           * this instance immediately after invoking the constructor. </p>
+           *
+           * @since 1.13
+           */
+          protected ListMetricScopesByMonitoredProject() {
+            super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v1.model.ListMetricsScopesByMonitoredProjectResponse.class);
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject set$Xgafv(java.lang.String $Xgafv) {
+            return (ListMetricScopesByMonitoredProject) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setAccessToken(java.lang.String accessToken) {
+            return (ListMetricScopesByMonitoredProject) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setAlt(java.lang.String alt) {
+            return (ListMetricScopesByMonitoredProject) super.setAlt(alt);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setCallback(java.lang.String callback) {
+            return (ListMetricScopesByMonitoredProject) super.setCallback(callback);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setFields(java.lang.String fields) {
+            return (ListMetricScopesByMonitoredProject) super.setFields(fields);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setKey(java.lang.String key) {
+            return (ListMetricScopesByMonitoredProject) super.setKey(key);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setOauthToken(java.lang.String oauthToken) {
+            return (ListMetricScopesByMonitoredProject) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListMetricScopesByMonitoredProject) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setQuotaUser(java.lang.String quotaUser) {
+            return (ListMetricScopesByMonitoredProject) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setUploadType(java.lang.String uploadType) {
+            return (ListMetricScopesByMonitoredProject) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListMetricScopesByMonitoredProject) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Monitored Project being requested. Example:
+           * projects/{MONITORED_PROJECT_ID_OR_NUMBER}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String monitoredResourceContainer;
+
+          /** Required. The resource name of the Monitored Project being requested. Example:
+         projects/{MONITORED_PROJECT_ID_OR_NUMBER}
+           */
+          public java.lang.String getMonitoredResourceContainer() {
+            return monitoredResourceContainer;
+          }
+
+          /**
+           * Required. The resource name of the Monitored Project being requested. Example:
+           * projects/{MONITORED_PROJECT_ID_OR_NUMBER}
+           */
+          public ListMetricScopesByMonitoredProject setMonitoredResourceContainer(java.lang.String monitoredResourceContainer) {
+            this.monitoredResourceContainer = monitoredResourceContainer;
+            return this;
+          }
+
+          @Override
+          public ListMetricScopesByMonitoredProject set(String parameterName, Object value) {
+            return (ListMetricScopesByMonitoredProject) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Projects collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Monitoring monitoring = new Monitoring(...);}
+         *   {@code Monitoring.Projects.List request = monitoring.projects().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Projects projects() {
+          return new Projects();
+        }
+
+        /**
+         * The "projects" collection of methods.
+         */
+        public class Projects {
+
+          /**
+           * Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
+           *
+           * Create a request for the method "projects.create".
+           *
+           * This request holds the parameters needed by the monitoring server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the existing Metrics Scope that will monitor this project. Example:
+           *        locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+           * @param content the {@link com.google.api.services.monitoring.v1.model.MonitoredProject}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.monitoring.v1.model.MonitoredProject content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends MonitoringRequest<com.google.api.services.monitoring.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/projects";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^locations/global/metricsScopes/[^/]+$");
+
+            /**
+             * Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
+             *
+             * Create a request for the method "projects.create".
+             *
+             * This request holds the parameters needed by the the monitoring server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the existing Metrics Scope that will monitor this project. Example:
+           *        locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+             * @param content the {@link com.google.api.services.monitoring.v1.model.MonitoredProject}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.monitoring.v1.model.MonitoredProject content) {
+              super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/global/metricsScopes/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the existing Metrics Scope that will monitor this
+             * project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the existing Metrics Scope that will monitor this project. Example:
+           locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the existing Metrics Scope that will monitor this
+             * project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/global/metricsScopes/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a MonitoredProject from the specified Metrics Scope.
+           *
+           * Create a request for the method "projects.delete".
+           *
+           * This request holds the parameters needed by the monitoring server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the MonitoredProject. Example: locations/global/metricsScopes/{SCOPIN
+           *        G_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}Authorization requires
+           *        the following Google IAM (https://cloud.google.com/iam) permissions on both the Metrics
+           *        Scope and on the MonitoredProject: monitoring.metricsScopes.link
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends MonitoringRequest<com.google.api.services.monitoring.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/global/metricsScopes/[^/]+/projects/[^/]+$");
+
+            /**
+             * Deletes a MonitoredProject from the specified Metrics Scope.
+             *
+             * Create a request for the method "projects.delete".
+             *
+             * This request holds the parameters needed by the the monitoring server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the MonitoredProject. Example: locations/global/metricsScopes/{SCOPIN
+           *        G_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}Authorization requires
+           *        the following Google IAM (https://cloud.google.com/iam) permissions on both the Metrics
+           *        Scope and on the MonitoredProject: monitoring.metricsScopes.link
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Monitoring.this, "DELETE", REST_PATH, null, com.google.api.services.monitoring.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/global/metricsScopes/[^/]+/projects/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the MonitoredProject. Example: locations/global/metric
+             * sScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}Autho
+             * rization requires the following Google IAM (https://cloud.google.com/iam) permissions
+             * on both the Metrics Scope and on the MonitoredProject: monitoring.metricsScopes.link
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the MonitoredProject. Example: locations/global/metricsScopes/{SCOPI
+           NG_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}Authorization requires the
+           following Google IAM (https://cloud.google.com/iam) permissions on both the Metrics Scope and on
+           the MonitoredProject: monitoring.metricsScopes.link
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the MonitoredProject. Example: locations/global/metric
+             * sScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}Autho
+             * rization requires the following Google IAM (https://cloud.google.com/iam) permissions
+             * on both the Metrics Scope and on the MonitoredProject: monitoring.metricsScopes.link
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/global/metricsScopes/[^/]+/projects/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Operations collection.
    *
    * <p>The typical use is:</p>

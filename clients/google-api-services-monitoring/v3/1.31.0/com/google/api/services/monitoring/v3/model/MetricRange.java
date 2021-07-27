@@ -18,7 +18,7 @@ package com.google.api.services.monitoring.v3.model;
 
 /**
  * A MetricRange is used when each window is good when the value x of a single TimeSeries satisfies
- * range.min <= x < range.max. The provided TimeSeries must have ValueType = INT64 or ValueType =
+ * range.min <= x <= range.max. The provided TimeSeries must have ValueType = INT64 or ValueType =
  * DOUBLE and MetricKind = GAUGE.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

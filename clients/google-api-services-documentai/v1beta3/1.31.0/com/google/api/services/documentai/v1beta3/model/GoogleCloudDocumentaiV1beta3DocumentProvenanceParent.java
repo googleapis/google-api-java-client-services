@@ -39,8 +39,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent extends 
   private java.lang.Integer id;
 
   /**
-   * The index of the parent revisions corresponding collection of items (eg. list of entities,
-   * properties within entities, etc.)
+   * The index of the parent item in the corresponding item list (eg. list of entities, properties
+   * within entities, etc.) on parent revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent extends 
   }
 
   /**
-   * The index of the parent revisions corresponding collection of items (eg. list of entities,
-   * properties within entities, etc.)
+   * The index of the parent item in the corresponding item list (eg. list of entities, properties
+   * within entities, etc.) on parent revision.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -80,8 +80,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent extends 
   }
 
   /**
-   * The index of the parent revisions corresponding collection of items (eg. list of entities,
-   * properties within entities, etc.)
+   * The index of the parent item in the corresponding item list (eg. list of entities, properties
+   * within entities, etc.) on parent revision.
    * @param index index or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent setIndex(java.lang.Integer index) {

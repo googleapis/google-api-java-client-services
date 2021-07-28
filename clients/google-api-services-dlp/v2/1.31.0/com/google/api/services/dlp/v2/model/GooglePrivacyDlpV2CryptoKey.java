@@ -17,9 +17,9 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * This is a data encryption key (DEK) (as opposed to a key encryption key (KEK) stored by KMS).
- * When using KMS to wrap/unwrap DEKs, be sure to set an appropriate IAM policy on the KMS CryptoKey
- * (KEK) to ensure an attacker cannot unwrap the data crypto key.
+ * This is a data encryption key (DEK) (as opposed to a key encryption key (KEK) stored by Cloud Key
+ * Management Service (Cloud KMS). When using Cloud KMS to wrap or unwrap a DEK, be sure to set an
+ * appropriate IAM policy on the KEK to ensure an attacker cannot unwrap the DEK.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -33,7 +33,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Kms wrapped key
+   * Key wrapped using Cloud KMS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   private GooglePrivacyDlpV2UnwrappedCryptoKey unwrapped;
 
   /**
-   * Kms wrapped key
+   * Key wrapped using Cloud KMS
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2KmsWrappedCryptoKey getKmsWrapped() {
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2CryptoKey extends com.google.api.client.jso
   }
 
   /**
-   * Kms wrapped key
+   * Key wrapped using Cloud KMS
    * @param kmsWrapped kmsWrapped or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoKey setKmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKey kmsWrapped) {

@@ -26,6 +26,9 @@ public class FirebaseCloudMessagingScopes {
   /** See, edit, configure, and delete your Google Cloud Platform data. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** Send messages and manage messaging subscriptions for your Firebase applications. */
+  public static final String FIREBASE_MESSAGING = "https://www.googleapis.com/auth/firebase.messaging";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class FirebaseCloudMessagingScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(FIREBASE_MESSAGING);
     return java.util.Collections.unmodifiableSet(set);
   }
 

@@ -1457,7 +1457,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Format: `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1483,7 +1483,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Format: `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1562,19 +1562,21 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. Format: `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+           * Required. Format:
+           * `projects/{project_id}/locations/{location}/executions/{execution_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Format: `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+          /** Required. Format: `projects/{project_id}/locations/{location}/executions/{execution_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Format: `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+           * Required. Format:
+           * `projects/{project_id}/locations/{location}/executions/{execution_id}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

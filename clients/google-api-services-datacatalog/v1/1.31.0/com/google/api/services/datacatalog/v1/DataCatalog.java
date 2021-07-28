@@ -460,7 +460,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
       /**
        * The SQL name of the entry. SQL names are case-sensitive. Examples: *
-       * `pubsub.{PROJECT_ID}.{TOPIC_ID}` * `pubsub.{PROJECT_ID}.{TOPIC.ID.SEPARATED.WITH.DOTS}` *
+       * `pubsub.topic.{PROJECT_ID}.{TOPIC_ID}` *
+       * `pubsub.topic.{PROJECT_ID}.`\``{TOPIC.ID.SEPARATED.WITH.DOTS}`\` *
        * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
        * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
        * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers
@@ -471,7 +472,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
       private java.lang.String sqlResource;
 
       /** The SQL name of the entry. SQL names are case-sensitive. Examples: *
-     `pubsub.{PROJECT_ID}.{TOPIC_ID}` * `pubsub.{PROJECT_ID}.{TOPIC.ID.SEPARATED.WITH.DOTS}` *
+     `pubsub.topic.{PROJECT_ID}.{TOPIC_ID}` *
+     `pubsub.topic.{PROJECT_ID}.`\``{TOPIC.ID.SEPARATED.WITH.DOTS}`\` *
      `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
      `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
      `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers (`*_ID`)
@@ -484,7 +486,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
       /**
        * The SQL name of the entry. SQL names are case-sensitive. Examples: *
-       * `pubsub.{PROJECT_ID}.{TOPIC_ID}` * `pubsub.{PROJECT_ID}.{TOPIC.ID.SEPARATED.WITH.DOTS}` *
+       * `pubsub.topic.{PROJECT_ID}.{TOPIC_ID}` *
+       * `pubsub.topic.{PROJECT_ID}.`\``{TOPIC.ID.SEPARATED.WITH.DOTS}`\` *
        * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
        * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
        * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers

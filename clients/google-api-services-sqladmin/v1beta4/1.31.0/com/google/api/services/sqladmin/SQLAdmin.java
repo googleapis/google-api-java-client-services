@@ -162,7 +162,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Cloud SQL instance ID. This does not include the project ID.
-     * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
+     * @param id The ID of the backup run to delete. To find a backup run ID, use the list method.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String instance, java.lang.Long id) throws java.io.IOException {
@@ -188,7 +188,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
-       * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
+       * @param id The ID of the backup run to delete. To find a backup run ID, use the list method.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String instance, java.lang.Long id) {
@@ -285,17 +285,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The ID of the Backup Run to delete. To find a Backup Run ID, use the list method. */
+      /** The ID of the backup run to delete. To find a backup run ID, use the list method. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
+      /** The ID of the backup run to delete. To find a backup run ID, use the list method.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** The ID of the Backup Run to delete. To find a Backup Run ID, use the list method. */
+      /** The ID of the backup run to delete. To find a backup run ID, use the list method. */
       public Delete setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -316,7 +316,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Cloud SQL instance ID. This does not include the project ID.
-     * @param id The ID of this Backup Run.
+     * @param id The ID of this backup run.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String instance, java.lang.Long id) throws java.io.IOException {
@@ -341,7 +341,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
-       * @param id The ID of this Backup Run.
+       * @param id The ID of this backup run.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String instance, java.lang.Long id) {
@@ -448,17 +448,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The ID of this Backup Run. */
+      /** The ID of this backup run. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** The ID of this Backup Run.
+      /** The ID of this backup run.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** The ID of this Backup Run. */
+      /** The ID of this backup run. */
       public Get setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -470,8 +470,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Creates a new backup run on demand. This method is applicable only to Second Generation
-     * instances.
+     * Creates a new backup run on demand.
      *
      * Create a request for the method "backupRuns.insert".
      *
@@ -494,8 +493,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns";
 
       /**
-       * Creates a new backup run on demand. This method is applicable only to Second Generation
-       * instances.
+       * Creates a new backup run on demand.
        *
        * Create a request for the method "backupRuns.insert".
        *
@@ -2074,7 +2072,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Flags {
 
     /**
-     * List all available database flags for Cloud SQL instances.
+     * Lists all available database flags for Cloud SQL instances.
      *
      * Create a request for the method "flags.list".
      *
@@ -2094,7 +2092,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/flags";
 
       /**
-       * List all available database flags for Cloud SQL instances.
+       * Lists all available database flags for Cloud SQL instances.
        *
        * Create a request for the method "flags.list".
        *
@@ -2922,8 +2920,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Failover the instance to its failover replica instance. Using this operation might cause your
-     * instance to restart.
+     * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
+     * which becomes the primary instance. Users are then rerouted to the new primary. For more
+     * information, see the Overview of high availability page in the Cloud SQL documentation. If using
+     * Legacy HA (MySQL only), this causes the instance to failover to its failover replica instance.
      *
      * Create a request for the method "instances.failover".
      *
@@ -2946,8 +2946,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/failover";
 
       /**
-       * Failover the instance to its failover replica instance. Using this operation might cause your
-       * instance to restart.
+       * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
+       * which becomes the primary instance. Users are then rerouted to the new primary. For more
+       * information, see the Overview of high availability page in the Cloud SQL documentation. If
+       * using Legacy HA (MySQL only), this causes the instance to failover to its failover replica
+       * instance.
        *
        * Create a request for the method "instances.failover".
        *

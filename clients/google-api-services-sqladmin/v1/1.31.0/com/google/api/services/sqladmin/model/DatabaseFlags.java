@@ -31,9 +31,9 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the flag. These flags are passed at instance startup, so include both server
-   * options and system variables for MySQL. Flags are specified with underscores, not hyphens. For
-   * more information, see [Configuring Database Flags](/sql/docs/mysql/flags) in the Cloud SQL
-   * documentation.
+   * options and system variables. Flags are specified with underscores, not hyphens. For more
+   * information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in
+   * the Cloud SQL documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the flag. These flags are passed at instance startup, so include both server
-   * options and system variables for MySQL. Flags are specified with underscores, not hyphens. For
-   * more information, see [Configuring Database Flags](/sql/docs/mysql/flags) in the Cloud SQL
-   * documentation.
+   * options and system variables. Flags are specified with underscores, not hyphens. For more
+   * information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in
+   * the Cloud SQL documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -60,9 +60,9 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the flag. These flags are passed at instance startup, so include both server
-   * options and system variables for MySQL. Flags are specified with underscores, not hyphens. For
-   * more information, see [Configuring Database Flags](/sql/docs/mysql/flags) in the Cloud SQL
-   * documentation.
+   * options and system variables. Flags are specified with underscores, not hyphens. For more
+   * information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in
+   * the Cloud SQL documentation.
    * @param name name or {@code null} for none
    */
   public DatabaseFlags setName(java.lang.String name) {

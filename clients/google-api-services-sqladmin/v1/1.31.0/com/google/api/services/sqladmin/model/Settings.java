@@ -47,10 +47,19 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private SqlActiveDirectoryConfig activeDirectoryConfig;
 
   /**
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> authorizedGaeApplications;
+
+  /**
    * Availability type. Potential values: **ZONAL**: The instance serves data from only one zone.
    * Outages in that zone affect data accessibility. **REGIONAL**: The instance can serve data from
    * more than one zone in a region (it is highly available). For more information, see [Overview of
-   * the High Availability Configuration](/sql/docs/postgres/high-availability).
+   * the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * availability).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,10 +269,30 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAuthorizedGaeApplications() {
+    return authorizedGaeApplications;
+  }
+
+  /**
+   * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
+   * instances only.
+   * @param authorizedGaeApplications authorizedGaeApplications or {@code null} for none
+   */
+  public Settings setAuthorizedGaeApplications(java.util.List<java.lang.String> authorizedGaeApplications) {
+    this.authorizedGaeApplications = authorizedGaeApplications;
+    return this;
+  }
+
+  /**
    * Availability type. Potential values: **ZONAL**: The instance serves data from only one zone.
    * Outages in that zone affect data accessibility. **REGIONAL**: The instance can serve data from
    * more than one zone in a region (it is highly available). For more information, see [Overview of
-   * the High Availability Configuration](/sql/docs/postgres/high-availability).
+   * the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * availability).
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityType() {
@@ -274,7 +303,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    * Availability type. Potential values: **ZONAL**: The instance serves data from only one zone.
    * Outages in that zone affect data accessibility. **REGIONAL**: The instance can serve data from
    * more than one zone in a region (it is highly available). For more information, see [Overview of
-   * the High Availability Configuration](/sql/docs/postgres/high-availability).
+   * the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-
+   * availability).
    * @param availabilityType availabilityType or {@code null} for none
    */
   public Settings setAvailabilityType(java.lang.String availabilityType) {

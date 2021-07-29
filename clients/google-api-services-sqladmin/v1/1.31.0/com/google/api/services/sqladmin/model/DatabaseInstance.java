@@ -57,35 +57,29 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
-   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
-   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*,
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2019_STANDARD*,
+   * *SQLSERVER_2019_ENTERPRISE*, *SQLSERVER_2019_EXPRESS*, or *SQLSERVER_2019_WEB*,
+   * *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or
+   * *SQLSERVER_2017_WEB*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseVersion;
 
   /**
-   * Disk encryption configuration specific to an instance. Applies only to Second Generation
-   * instances.
+   * Disk encryption configuration specific to an instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiskEncryptionConfiguration diskEncryptionConfiguration;
 
   /**
-   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * Disk encryption status specific to an instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiskEncryptionStatus diskEncryptionStatus;
-
-  /**
-   * For internal usage only. The encrypted password.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String encryptedRootPassword;
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
@@ -96,8 +90,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String etag;
 
   /**
-   * The name and status of the failover replica. This property is applicable only to Second
-   * Generation instances.
+   * The name and status of the failover replica.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,14 +106,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String gceZone;
 
   /**
-   * installed_version stores the current fully resolved database version including minor version
-   * such as MySQL_5.6.50
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String installedVersion;
-
-  /**
    * The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance
    * that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on
    * the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-
@@ -129,13 +114,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceType;
-
-  /**
-   * Uid of the Cloud SQL instance. Used by Pantheon to check instance is created
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceUid;
 
   /**
    * The assigned IP addresses for the instance.
@@ -158,13 +136,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
-
-  /**
-   * The reference to the instance which will act as primary in the replication setup.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceReference masterInstance;
 
   /**
    * The name of the instance which will act as primary in the replication setup.
@@ -226,13 +197,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private ReplicaConfiguration replicaConfiguration;
-
-  /**
-   * The replicas of the instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<InstanceReference> replicaInstances;
 
   /**
    * The replicas of the instance.
@@ -381,9 +345,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
-   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
-   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*,
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2019_STANDARD*,
+   * *SQLSERVER_2019_ENTERPRISE*, *SQLSERVER_2019_EXPRESS*, or *SQLSERVER_2019_WEB*,
+   * *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or
+   * *SQLSERVER_2017_WEB*.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -393,9 +359,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The *databaseVersion* field cannot be changed after
    * instance creation. MySQL instances: *MYSQL_8_0*, *MYSQL_5_7* (default), or *MYSQL_5_6*.
-   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*, or
-   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2017_STANDARD* (default),
-   * *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
+   * PostgreSQL instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11*, *POSTGRES_12*,
+   * *POSTGRES_13* (default). SQL Server instances: *SQLSERVER_2019_STANDARD*,
+   * *SQLSERVER_2019_ENTERPRISE*, *SQLSERVER_2019_EXPRESS*, or *SQLSERVER_2019_WEB*,
+   * *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*, *SQLSERVER_2017_EXPRESS*, or
+   * *SQLSERVER_2017_WEB*.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {
@@ -404,8 +372,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Disk encryption configuration specific to an instance. Applies only to Second Generation
-   * instances.
+   * Disk encryption configuration specific to an instance.
    * @return value or {@code null} for none
    */
   public DiskEncryptionConfiguration getDiskEncryptionConfiguration() {
@@ -413,8 +380,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Disk encryption configuration specific to an instance. Applies only to Second Generation
-   * instances.
+   * Disk encryption configuration specific to an instance.
    * @param diskEncryptionConfiguration diskEncryptionConfiguration or {@code null} for none
    */
   public DatabaseInstance setDiskEncryptionConfiguration(DiskEncryptionConfiguration diskEncryptionConfiguration) {
@@ -423,7 +389,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * Disk encryption status specific to an instance.
    * @return value or {@code null} for none
    */
   public DiskEncryptionStatus getDiskEncryptionStatus() {
@@ -431,56 +397,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * Disk encryption status specific to an instance.
    * @param diskEncryptionStatus diskEncryptionStatus or {@code null} for none
    */
   public DatabaseInstance setDiskEncryptionStatus(DiskEncryptionStatus diskEncryptionStatus) {
     this.diskEncryptionStatus = diskEncryptionStatus;
-    return this;
-  }
-
-  /**
-   * For internal usage only. The encrypted password.
-   * @see #decodeEncryptedRootPassword()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEncryptedRootPassword() {
-    return encryptedRootPassword;
-  }
-
-  /**
-   * For internal usage only. The encrypted password.
-   * @see #getEncryptedRootPassword()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeEncryptedRootPassword() {
-    return com.google.api.client.util.Base64.decodeBase64(encryptedRootPassword);
-  }
-
-  /**
-   * For internal usage only. The encrypted password.
-   * @see #encodeEncryptedRootPassword()
-   * @param encryptedRootPassword encryptedRootPassword or {@code null} for none
-   */
-  public DatabaseInstance setEncryptedRootPassword(java.lang.String encryptedRootPassword) {
-    this.encryptedRootPassword = encryptedRootPassword;
-    return this;
-  }
-
-  /**
-   * For internal usage only. The encrypted password.
-   * @see #setEncryptedRootPassword()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public DatabaseInstance encodeEncryptedRootPassword(byte[] encryptedRootPassword) {
-    this.encryptedRootPassword = com.google.api.client.util.Base64.encodeBase64URLSafeString(encryptedRootPassword);
     return this;
   }
 
@@ -504,8 +425,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name and status of the failover replica. This property is applicable only to Second
-   * Generation instances.
+   * The name and status of the failover replica.
    * @return value or {@code null} for none
    */
   public FailoverReplica getFailoverReplica() {
@@ -513,8 +433,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name and status of the failover replica. This property is applicable only to Second
-   * Generation instances.
+   * The name and status of the failover replica.
    * @param failoverReplica failoverReplica or {@code null} for none
    */
   public DatabaseInstance setFailoverReplica(FailoverReplica failoverReplica) {
@@ -544,25 +463,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * installed_version stores the current fully resolved database version including minor version
-   * such as MySQL_5.6.50
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstalledVersion() {
-    return installedVersion;
-  }
-
-  /**
-   * installed_version stores the current fully resolved database version including minor version
-   * such as MySQL_5.6.50
-   * @param installedVersion installedVersion or {@code null} for none
-   */
-  public DatabaseInstance setInstalledVersion(java.lang.String installedVersion) {
-    this.installedVersion = installedVersion;
-    return this;
-  }
-
-  /**
    * The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance
    * that is not replicating from a primary instance. *ON_PREMISES_INSTANCE*: An instance running on
    * the customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-
@@ -582,23 +482,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setInstanceType(java.lang.String instanceType) {
     this.instanceType = instanceType;
-    return this;
-  }
-
-  /**
-   * Uid of the Cloud SQL instance. Used by Pantheon to check instance is created
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceUid() {
-    return instanceUid;
-  }
-
-  /**
-   * Uid of the Cloud SQL instance. Used by Pantheon to check instance is created
-   * @param instanceUid instanceUid or {@code null} for none
-   */
-  public DatabaseInstance setInstanceUid(java.lang.String instanceUid) {
-    this.instanceUid = instanceUid;
     return this;
   }
 
@@ -652,23 +535,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * The reference to the instance which will act as primary in the replication setup.
-   * @return value or {@code null} for none
-   */
-  public InstanceReference getMasterInstance() {
-    return masterInstance;
-  }
-
-  /**
-   * The reference to the instance which will act as primary in the replication setup.
-   * @param masterInstance masterInstance or {@code null} for none
-   */
-  public DatabaseInstance setMasterInstance(InstanceReference masterInstance) {
-    this.masterInstance = masterInstance;
     return this;
   }
 
@@ -815,23 +681,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setReplicaConfiguration(ReplicaConfiguration replicaConfiguration) {
     this.replicaConfiguration = replicaConfiguration;
-    return this;
-  }
-
-  /**
-   * The replicas of the instance.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<InstanceReference> getReplicaInstances() {
-    return replicaInstances;
-  }
-
-  /**
-   * The replicas of the instance.
-   * @param replicaInstances replicaInstances or {@code null} for none
-   */
-  public DatabaseInstance setReplicaInstances(java.util.List<InstanceReference> replicaInstances) {
-    this.replicaInstances = replicaInstances;
     return this;
   }
 
@@ -1049,8 +898,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name and status of the failover replica. This property is applicable only to Second
-   * Generation instances.
+   * The name and status of the failover replica.
    */
   public static final class FailoverReplica extends com.google.api.client.json.GenericJson {
 
@@ -1064,18 +912,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
     private java.lang.Boolean available;
 
     /**
-     * A reference to the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. Currently, the failover replica can only be created in the same
-     * region as the primary instance.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private InstanceReference failoverInstance;
-
-    /**
      * The name of the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. The name doesn't include the project ID. This property is applicable
-     * only to Second Generation instances.
+     * created for the instance. The name doesn't include the project ID.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1103,30 +941,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
     }
 
     /**
-     * A reference to the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. Currently, the failover replica can only be created in the same
-     * region as the primary instance.
-     * @return value or {@code null} for none
-     */
-    public InstanceReference getFailoverInstance() {
-      return failoverInstance;
-    }
-
-    /**
-     * A reference to the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. Currently, the failover replica can only be created in the same
-     * region as the primary instance.
-     * @param failoverInstance failoverInstance or {@code null} for none
-     */
-    public FailoverReplica setFailoverInstance(InstanceReference failoverInstance) {
-      this.failoverInstance = failoverInstance;
-      return this;
-    }
-
-    /**
      * The name of the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. The name doesn't include the project ID. This property is applicable
-     * only to Second Generation instances.
+     * created for the instance. The name doesn't include the project ID.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -1135,8 +951,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
     /**
      * The name of the failover replica. If specified at instance creation, a failover replica is
-     * created for the instance. The name doesn't include the project ID. This property is applicable
-     * only to Second Generation instances.
+     * created for the instance. The name doesn't include the project ID.
      * @param name name or {@code null} for none
      */
     public FailoverReplica setName(java.lang.String name) {

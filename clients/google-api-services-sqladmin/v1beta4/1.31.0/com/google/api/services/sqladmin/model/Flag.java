@@ -88,8 +88,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
-   * Generation instances.
+   * Indicates whether changing this flag will trigger a database restart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,8 +243,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
-   * Generation instances.
+   * Indicates whether changing this flag will trigger a database restart.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequiresRestart() {
@@ -253,8 +251,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
-   * Generation instances.
+   * Indicates whether changing this flag will trigger a database restart.
    * @param requiresRestart requiresRestart or {@code null} for none
    */
   public Flag setRequiresRestart(java.lang.Boolean requiresRestart) {

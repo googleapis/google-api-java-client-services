@@ -81,6 +81,13 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * The URI of this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLink;
+
+  /**
    * Sha1 Fingerprint.
    * The value may be {@code null}.
    */
@@ -207,6 +214,23 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
    */
   public SslCert setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The URI of this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLink() {
+    return selfLink;
+  }
+
+  /**
+   * The URI of this resource.
+   * @param selfLink selfLink or {@code null} for none
+   */
+  public SslCert setSelfLink(java.lang.String selfLink) {
+    this.selfLink = selfLink;
     return this;
   }
 

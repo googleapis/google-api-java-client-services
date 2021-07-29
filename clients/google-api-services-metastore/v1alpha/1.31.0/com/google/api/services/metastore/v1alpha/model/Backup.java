@@ -60,6 +60,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Services that are restoring from the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> restoringServices;
+
+  /**
    * Output only. The revision of the service at the time of backup.
    * The value may be {@code null}.
    */
@@ -140,6 +147,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Services that are restoring from the backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRestoringServices() {
+    return restoringServices;
+  }
+
+  /**
+   * Output only. Services that are restoring from the backup.
+   * @param restoringServices restoringServices or {@code null} for none
+   */
+  public Backup setRestoringServices(java.util.List<java.lang.String> restoringServices) {
+    this.restoringServices = restoringServices;
     return this;
   }
 

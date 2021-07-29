@@ -44,6 +44,20 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   private java.lang.String field;
 
   /**
+   * Output only. Provides a list of fields and the values they must have for this field to be
+   * allowed to be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromePolicyV1PolicySchemaFieldDependencies> fieldDependencies;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromePolicyV1PolicySchemaFieldDependencies used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromePolicyV1PolicySchemaFieldDependencies.class);
+  }
+
+  /**
    * Output only. Any input constraints associated on the values for the field.
    * The value may be {@code null}.
    */
@@ -97,6 +111,25 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
    */
   public GoogleChromePolicyV1PolicySchemaFieldDescription setField(java.lang.String field) {
     this.field = field;
+    return this;
+  }
+
+  /**
+   * Output only. Provides a list of fields and the values they must have for this field to be
+   * allowed to be set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromePolicyV1PolicySchemaFieldDependencies> getFieldDependencies() {
+    return fieldDependencies;
+  }
+
+  /**
+   * Output only. Provides a list of fields and the values they must have for this field to be
+   * allowed to be set.
+   * @param fieldDependencies fieldDependencies or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchemaFieldDescription setFieldDependencies(java.util.List<GoogleChromePolicyV1PolicySchemaFieldDependencies> fieldDependencies) {
+    this.fieldDependencies = fieldDependencies;
     return this;
   }
 

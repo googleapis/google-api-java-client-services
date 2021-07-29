@@ -55,6 +55,13 @@ public final class InterconnectDiagnostics extends com.google.api.client.json.Ge
   private java.lang.String macAddress;
 
   /**
+   * Describes the status of MACsec encryption on the Interconnect's bundle interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectDiagnosticsMacsecStatus macsec;
+
+  /**
    * A list of InterconnectDiagnostics.ARPEntry objects, describing individual neighbors currently
    * seen by the Google router in the ARP cache for the Interconnect. This will be empty when the
    * Interconnect is not bundled.
@@ -108,6 +115,23 @@ public final class InterconnectDiagnostics extends com.google.api.client.json.Ge
    */
   public InterconnectDiagnostics setMacAddress(java.lang.String macAddress) {
     this.macAddress = macAddress;
+    return this;
+  }
+
+  /**
+   * Describes the status of MACsec encryption on the Interconnect's bundle interface.
+   * @return value or {@code null} for none
+   */
+  public InterconnectDiagnosticsMacsecStatus getMacsec() {
+    return macsec;
+  }
+
+  /**
+   * Describes the status of MACsec encryption on the Interconnect's bundle interface.
+   * @param macsec macsec or {@code null} for none
+   */
+  public InterconnectDiagnostics setMacsec(InterconnectDiagnosticsMacsecStatus macsec) {
+    this.macsec = macsec;
     return this;
   }
 

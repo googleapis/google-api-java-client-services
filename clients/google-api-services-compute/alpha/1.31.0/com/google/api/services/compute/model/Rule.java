@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * A rule to be applied in a Policy.
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class Rule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Additional restrictions that must be met. All conditions must pass for the rule to match.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,23 +50,21 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human-readable description of the rule.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR
-   * is in at least one of these entries.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ins;
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,23 +77,21 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If one or more 'not_in' clauses are specified, the rule matches if the
-   * PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> notIns;
 
   /**
-   * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches
-   * all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> permissions;
 
   /**
-   * Required
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -103,7 +99,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required
+   * This is deprecated and has no effect. Do not use.
    * @param action action or {@code null} for none
    */
   public Rule setAction(java.lang.String action) {
@@ -112,7 +108,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional restrictions that must be met. All conditions must pass for the rule to match.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getConditions() {
@@ -120,7 +116,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional restrictions that must be met. All conditions must pass for the rule to match.
+   * This is deprecated and has no effect. Do not use.
    * @param conditions conditions or {@code null} for none
    */
   public Rule setConditions(java.util.List<Condition> conditions) {
@@ -129,7 +125,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human-readable description of the rule.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -137,7 +133,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human-readable description of the rule.
+   * This is deprecated and has no effect. Do not use.
    * @param description description or {@code null} for none
    */
   public Rule setDescription(java.lang.String description) {
@@ -146,8 +142,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR
-   * is in at least one of these entries.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIns() {
@@ -155,8 +150,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR
-   * is in at least one of these entries.
+   * This is deprecated and has no effect. Do not use.
    * @param ins ins or {@code null} for none
    */
   public Rule setIns(java.util.List<java.lang.String> ins) {
@@ -165,8 +159,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<LogConfig> getLogConfigs() {
@@ -174,8 +167,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * This is deprecated and has no effect. Do not use.
    * @param logConfigs logConfigs or {@code null} for none
    */
   public Rule setLogConfigs(java.util.List<LogConfig> logConfigs) {
@@ -184,8 +176,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If one or more 'not_in' clauses are specified, the rule matches if the
-   * PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotIns() {
@@ -193,8 +184,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If one or more 'not_in' clauses are specified, the rule matches if the
-   * PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries.
+   * This is deprecated and has no effect. Do not use.
    * @param notIns notIns or {@code null} for none
    */
   public Rule setNotIns(java.util.List<java.lang.String> notIns) {
@@ -203,8 +193,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches
-   * all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermissions() {
@@ -212,8 +201,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches
-   * all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
+   * This is deprecated and has no effect. Do not use.
    * @param permissions permissions or {@code null} for none
    */
   public Rule setPermissions(java.util.List<java.lang.String> permissions) {

@@ -36,15 +36,13 @@ public final class FutureReservationTimeWindow extends com.google.api.client.jso
   private Duration duration;
 
   /**
-   * TODO(b/183994731): Replace with Timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endTime;
 
   /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string. TODO(b/183994731):
-   * Replace with Timestamp.
+   * Start time of the Future Reservation. The start_time is an RFC3339 string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +64,6 @@ public final class FutureReservationTimeWindow extends com.google.api.client.jso
   }
 
   /**
-   * TODO(b/183994731): Replace with Timestamp.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndTime() {
@@ -74,7 +71,6 @@ public final class FutureReservationTimeWindow extends com.google.api.client.jso
   }
 
   /**
-   * TODO(b/183994731): Replace with Timestamp.
    * @param endTime endTime or {@code null} for none
    */
   public FutureReservationTimeWindow setEndTime(java.lang.String endTime) {
@@ -83,8 +79,7 @@ public final class FutureReservationTimeWindow extends com.google.api.client.jso
   }
 
   /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string. TODO(b/183994731):
-   * Replace with Timestamp.
+   * Start time of the Future Reservation. The start_time is an RFC3339 string.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -92,8 +87,7 @@ public final class FutureReservationTimeWindow extends com.google.api.client.jso
   }
 
   /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string. TODO(b/183994731):
-   * Replace with Timestamp.
+   * Start time of the Future Reservation. The start_time is an RFC3339 string.
    * @param startTime startTime or {@code null} for none
    */
   public FutureReservationTimeWindow setStartTime(java.lang.String startTime) {

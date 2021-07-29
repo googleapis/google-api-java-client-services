@@ -32,13 +32,11 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * The configuration for metadata based readiness signal sent by the instance during
    * initialization when stopping / suspending an instance. The Instance Group Manager will wait for
-   * a signal that indicates successful initialization before stopping / suspending an instance.
-   *
-   * If a successful readiness signal is not sent before timeout, the corresponding instance will
-   * not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field
-   * of the managed instance in the listmanagedinstances method.
-   *
-   * If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
+   * a signal that indicates successful initialization before stopping / suspending an instance. If
+   * a successful readiness signal is not sent before timeout, the corresponding instance will not
+   * be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of
+   * the managed instance in the listmanagedinstances method. If
+   * metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
    * proceed to suspend / stop instances, skipping initialization on them.
    * The value may be {@code null}.
    */
@@ -48,13 +46,11 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * The configuration for metadata based readiness signal sent by the instance during
    * initialization when stopping / suspending an instance. The Instance Group Manager will wait for
-   * a signal that indicates successful initialization before stopping / suspending an instance.
-   *
-   * If a successful readiness signal is not sent before timeout, the corresponding instance will
-   * not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field
-   * of the managed instance in the listmanagedinstances method.
-   *
-   * If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
+   * a signal that indicates successful initialization before stopping / suspending an instance. If
+   * a successful readiness signal is not sent before timeout, the corresponding instance will not
+   * be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of
+   * the managed instance in the listmanagedinstances method. If
+   * metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
    * proceed to suspend / stop instances, skipping initialization on them.
    * @return value or {@code null} for none
    */
@@ -65,13 +61,11 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   /**
    * The configuration for metadata based readiness signal sent by the instance during
    * initialization when stopping / suspending an instance. The Instance Group Manager will wait for
-   * a signal that indicates successful initialization before stopping / suspending an instance.
-   *
-   * If a successful readiness signal is not sent before timeout, the corresponding instance will
-   * not be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field
-   * of the managed instance in the listmanagedinstances method.
-   *
-   * If metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
+   * a signal that indicates successful initialization before stopping / suspending an instance. If
+   * a successful readiness signal is not sent before timeout, the corresponding instance will not
+   * be stopped / suspended. Instead, an error will be visible in the lastAttempt.errors field of
+   * the managed instance in the listmanagedinstances method. If
+   * metadataBasedReadinessSignal.timeoutSec is unset, the Instance Group Manager will directly
    * proceed to suspend / stop instances, skipping initialization on them.
    * @param metadataBasedReadinessSignal metadataBasedReadinessSignal or {@code null} for none
    */

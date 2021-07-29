@@ -32,10 +32,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +48,22 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer availabilityDomain;
+
+  /**
+   * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine
+   * type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer currentCpus;
+
+  /**
+   * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of
+   * the current machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long currentMemoryMb;
 
   /**
    * Specify the time in seconds for host error detection, the value must be within the range of
@@ -127,12 +141,17 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean preemptible;
 
   /**
+   * Specifies the provisioning model of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisioningModel;
+
+  /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomaticRestart() {
@@ -142,10 +161,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * @param automaticRestart automaticRestart or {@code null} for none
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
@@ -173,6 +190,44 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine
+   * type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCurrentCpus() {
+    return currentCpus;
+  }
+
+  /**
+   * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine
+   * type.
+   * @param currentCpus currentCpus or {@code null} for none
+   */
+  public Scheduling setCurrentCpus(java.lang.Integer currentCpus) {
+    this.currentCpus = currentCpus;
+    return this;
+  }
+
+  /**
+   * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of
+   * the current machine type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCurrentMemoryMb() {
+    return currentMemoryMb;
+  }
+
+  /**
+   * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of
+   * the current machine type.
+   * @param currentMemoryMb currentMemoryMb or {@code null} for none
+   */
+  public Scheduling setCurrentMemoryMb(java.lang.Long currentMemoryMb) {
+    this.currentMemoryMb = currentMemoryMb;
     return this;
   }
 
@@ -350,6 +405,23 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Specifies the provisioning model of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisioningModel() {
+    return provisioningModel;
+  }
+
+  /**
+   * Specifies the provisioning model of the instance.
+   * @param provisioningModel provisioningModel or {@code null} for none
+   */
+  public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
+    this.provisioningModel = provisioningModel;
     return this;
   }
 

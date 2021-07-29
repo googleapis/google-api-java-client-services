@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an SSL Policy resource.
- *
- * Use SSL policies to control the SSL features, such as versions and cipher suites, offered by an
- * HTTPS or SSL Proxy load balancer. For more information, read  SSL Policy Concepts. (==
- * resource_for {$api_version}.sslPolicies ==)
+ * Represents an SSL Policy resource. Use SSL policies to control the SSL features, such as versions
+ * and cipher suites, offered by an HTTPS or SSL Proxy load balancer. For more information, read SSL
+ * Policy Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -41,7 +39,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * A list of features enabled when the selected profile is CUSTOM. The - method returns the set of
+   * A list of features enabled when the selected profile is CUSTOM. The method returns the set of
    * features that can be specified in this list. This field must be empty if the profile is not
    * CUSTOM.
    * The value may be {@code null}.
@@ -67,9 +65,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date
    * fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * an SslPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +153,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of features enabled when the selected profile is CUSTOM. The - method returns the set of
+   * A list of features enabled when the selected profile is CUSTOM. The method returns the set of
    * features that can be specified in this list. This field must be empty if the profile is not
    * CUSTOM.
    * @return value or {@code null} for none
@@ -166,7 +163,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of features enabled when the selected profile is CUSTOM. The - method returns the set of
+   * A list of features enabled when the selected profile is CUSTOM. The method returns the set of
    * features that can be specified in this list. This field must be empty if the profile is not
    * CUSTOM.
    * @param customFeatures customFeatures or {@code null} for none
@@ -214,9 +211,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date
    * fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * an SslPolicy.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -228,9 +224,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date
    * fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * an SslPolicy.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -244,9 +239,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date
    * fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * an SslPolicy.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -259,9 +253,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date
    * fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * an SslPolicy.
    * @see #setFingerprint()
    *
    * <p>

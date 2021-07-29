@@ -40,19 +40,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
 
   /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
-   *
    * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
    * without these headers will not be cached at Google's edge, and will require a full trip to the
    * origin on every request, potentially impacting performance and increasing load on the origin
-   * server.
-   *
-   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
-   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
-   * user (user identifiable) content.
-   *
-   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
-   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
-   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
+   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
+   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
+   * content, including common image formats, media (video and audio), and web assets (JavaScript
+   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
+   * (including HTML), will not be cached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,19 +184,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
 
   /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
-   *
    * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
    * without these headers will not be cached at Google's edge, and will require a full trip to the
    * origin on every request, potentially impacting performance and increasing load on the origin
-   * server.
-   *
-   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
-   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
-   * user (user identifiable) content.
-   *
-   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
-   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
-   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
+   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
+   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
+   * content, including common image formats, media (video and audio), and web assets (JavaScript
+   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
+   * (including HTML), will not be cached.
    * @return value or {@code null} for none
    */
   public java.lang.String getCacheMode() {
@@ -209,19 +201,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
 
   /**
    * Specifies the cache setting for all responses from this backend. The possible values are:
-   *
    * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
    * without these headers will not be cached at Google's edge, and will require a full trip to the
    * origin on every request, potentially impacting performance and increasing load on the origin
-   * server.
-   *
-   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
-   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
-   * user (user identifiable) content.
-   *
-   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
-   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
-   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * server. FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache"
+   * directives in Cache-Control response headers. Warning: this may result in Cloud CDN caching
+   * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
+   * content, including common image formats, media (video and audio), and web assets (JavaScript
+   * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
+   * (including HTML), will not be cached.
    * @param cacheMode cacheMode or {@code null} for none
    */
   public BackendBucketCdnPolicy setCacheMode(java.lang.String cacheMode) {

@@ -19,10 +19,8 @@ package com.google.api.services.compute.model;
 /**
  * [Input Only] Specifies the parameters for a new disk that will be created alongside the new
  * instance. Use initialization parameters to create boot disks or local SSDs attached to the new
- * instance.
- *
- * This property is mutually exclusive with the source property; you can only define one or the
- * other, but not both.
+ * instance. This property is mutually exclusive with the source property; you can only define one
+ * or the other, but not both.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -62,12 +60,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Specifies the disk type to use to create the instance. If not specified, the default is pd-
    * standard, specified using the full URL. For example:
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
-   *
-   * Other values include pd-ssd and local-ssd. If you define this field, you can provide either the
-   * full or partial URL. For example, the following are valid values:   -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/diskType  -
-   * projects/project/zones/zone/diskTypes/diskType  - zones/zone/diskTypes/diskType  Note that for
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a
+   * full list of acceptable values, see Persistent disk types. If you define this field, you can
+   * provide either the full or partial URL. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType -
+   * projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for
    * InstanceTemplate, this is the name of the disk type, not URL.
    * The value may be {@code null}.
    */
@@ -76,14 +73,20 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
-   *
-   * Guest OS features are applied by merging initializeParams.guestOsFeatures and
-   * disks.guestOsFeatures
+   * images. Read Enabling guest operating system features to see a list of available options. Guest
+   * OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GuestOsFeature> guestOsFeatures;
+
+  /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("interface")
+  private java.lang.String interface__;
 
   /**
    * Labels to apply to this disk. These can be later modified by the disks.setLabels method. This
@@ -92,6 +95,20 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Integer license codes indicating which licenses are attached to this disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> licenseCodes;
+
+  /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> licenses;
 
   /**
    * Indicates whether or not the disk can be read/write attached to more than one instance.
@@ -109,7 +126,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String onUpdateAction;
 
   /**
-   * Indicates how many IOPS must be provisioned for the disk.
+   * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
+   * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
+   * see the Extreme persistent disk documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -134,23 +153,15 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source image to create this disk. When creating a new instance, one of
    * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with one of the public operating system images, specify the image by its
-   * family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects
-   * /debian-cloud/global/images/family/debian-9
-   *
-   * Alternatively, use a specific version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD
-   *
-   * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image
-   *
-   * You can also specify a custom image by its image family, which returns the latest version of
-   * the image in that family. Replace the image name with family/family-name: global/images/family
-   * /my-image-family
-   *
-   * If the source image is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with one of the public operating system images, specify
+   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
+   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,11 +169,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * The customer-supplied encryption key of the source image. Required if the source image is
-   * protected by a customer-supplied encryption key.
-   *
-   * Instance templates do not store customer-supplied encryption keys, so you cannot create disks
-   * for instances in a managed instance group if the source images are encrypted with your own
-   * keys.
+   * protected by a customer-supplied encryption key. Instance templates do not store customer-
+   * supplied encryption keys, so you cannot create disks for instances in a managed instance group
+   * if the source images are encrypted with your own keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,12 +180,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source snapshot to create this disk. When creating a new instance, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with a snapshot that you created, specify the snapshot name in the following
-   * format: global/snapshots/my-backup
-   *
-   * If the source snapshot is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
+   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
+   * later, this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,12 +257,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Specifies the disk type to use to create the instance. If not specified, the default is pd-
    * standard, specified using the full URL. For example:
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
-   *
-   * Other values include pd-ssd and local-ssd. If you define this field, you can provide either the
-   * full or partial URL. For example, the following are valid values:   -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/diskType  -
-   * projects/project/zones/zone/diskTypes/diskType  - zones/zone/diskTypes/diskType  Note that for
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a
+   * full list of acceptable values, see Persistent disk types. If you define this field, you can
+   * provide either the full or partial URL. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType -
+   * projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for
    * InstanceTemplate, this is the name of the disk type, not URL.
    * @return value or {@code null} for none
    */
@@ -267,12 +272,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Specifies the disk type to use to create the instance. If not specified, the default is pd-
    * standard, specified using the full URL. For example:
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/pd-standard
-   *
-   * Other values include pd-ssd and local-ssd. If you define this field, you can provide either the
-   * full or partial URL. For example, the following are valid values:   -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/diskTypes/diskType  -
-   * projects/project/zones/zone/diskTypes/diskType  - zones/zone/diskTypes/diskType  Note that for
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a
+   * full list of acceptable values, see Persistent disk types. If you define this field, you can
+   * provide either the full or partial URL. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType -
+   * projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for
    * InstanceTemplate, this is the name of the disk type, not URL.
    * @param diskType diskType or {@code null} for none
    */
@@ -283,10 +287,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
-   *
-   * Guest OS features are applied by merging initializeParams.guestOsFeatures and
-   * disks.guestOsFeatures
+   * images. Read Enabling guest operating system features to see a list of available options. Guest
+   * OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
    * @return value or {@code null} for none
    */
   public java.util.List<GuestOsFeature> getGuestOsFeatures() {
@@ -295,14 +297,31 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
-   *
-   * Guest OS features are applied by merging initializeParams.guestOsFeatures and
-   * disks.guestOsFeatures
+   * images. Read Enabling guest operating system features to see a list of available options. Guest
+   * OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
    * @param guestOsFeatures guestOsFeatures or {@code null} for none
    */
   public AttachedDiskInitializeParams setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {
     this.guestOsFeatures = guestOsFeatures;
+    return this;
+  }
+
+  /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterface() {
+    return interface__;
+  }
+
+  /**
+   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
+   * default is SCSI.
+   * @param interface__ interface__ or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setInterface(java.lang.String interface__) {
+    this.interface__ = interface__;
     return this;
   }
 
@@ -322,6 +341,40 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Integer license codes indicating which licenses are attached to this disk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getLicenseCodes() {
+    return licenseCodes;
+  }
+
+  /**
+   * Integer license codes indicating which licenses are attached to this disk.
+   * @param licenseCodes licenseCodes or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setLicenseCodes(java.util.List<java.lang.Long> licenseCodes) {
+    this.licenseCodes = licenseCodes;
+    return this;
+  }
+
+  /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLicenses() {
+    return licenses;
+  }
+
+  /**
+   * A list of publicly visible licenses. Reserved for Google's use.
+   * @param licenses licenses or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setLicenses(java.util.List<java.lang.String> licenses) {
+    this.licenses = licenses;
     return this;
   }
 
@@ -362,7 +415,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Indicates how many IOPS must be provisioned for the disk.
+   * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
+   * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
+   * see the Extreme persistent disk documentation.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedIops() {
@@ -370,7 +425,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Indicates how many IOPS must be provisioned for the disk.
+   * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per
+   * second that the disk can handle. Values must be between 10,000 and 120,000. For more details,
+   * see the Extreme persistent disk documentation.
    * @param provisionedIops provisionedIops or {@code null} for none
    */
   public AttachedDiskInitializeParams setProvisionedIops(java.lang.Long provisionedIops) {
@@ -419,23 +476,15 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source image to create this disk. When creating a new instance, one of
    * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with one of the public operating system images, specify the image by its
-   * family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects
-   * /debian-cloud/global/images/family/debian-9
-   *
-   * Alternatively, use a specific version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD
-   *
-   * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image
-   *
-   * You can also specify a custom image by its image family, which returns the latest version of
-   * the image in that family. Replace the image name with family/family-name: global/images/family
-   * /my-image-family
-   *
-   * If the source image is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with one of the public operating system images, specify
+   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
+   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -445,23 +494,15 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source image to create this disk. When creating a new instance, one of
    * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with one of the public operating system images, specify the image by its
-   * family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects
-   * /debian-cloud/global/images/family/debian-9
-   *
-   * Alternatively, use a specific version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD
-   *
-   * To create a disk with a custom image that you created, specify the image name in the following
-   * format: global/images/my-custom-image
-   *
-   * You can also specify a custom image by its image family, which returns the latest version of
-   * the image in that family. Replace the image name with family/family-name: global/images/family
-   * /my-image-family
-   *
-   * If the source image is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with one of the public operating system images, specify
+   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
+   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * @param sourceImage sourceImage or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceImage(java.lang.String sourceImage) {
@@ -471,11 +512,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * The customer-supplied encryption key of the source image. Required if the source image is
-   * protected by a customer-supplied encryption key.
-   *
-   * Instance templates do not store customer-supplied encryption keys, so you cannot create disks
-   * for instances in a managed instance group if the source images are encrypted with your own
-   * keys.
+   * protected by a customer-supplied encryption key. Instance templates do not store customer-
+   * supplied encryption keys, so you cannot create disks for instances in a managed instance group
+   * if the source images are encrypted with your own keys.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getSourceImageEncryptionKey() {
@@ -484,11 +523,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
 
   /**
    * The customer-supplied encryption key of the source image. Required if the source image is
-   * protected by a customer-supplied encryption key.
-   *
-   * Instance templates do not store customer-supplied encryption keys, so you cannot create disks
-   * for instances in a managed instance group if the source images are encrypted with your own
-   * keys.
+   * protected by a customer-supplied encryption key. Instance templates do not store customer-
+   * supplied encryption keys, so you cannot create disks for instances in a managed instance group
+   * if the source images are encrypted with your own keys.
    * @param sourceImageEncryptionKey sourceImageEncryptionKey or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
@@ -499,12 +536,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source snapshot to create this disk. When creating a new instance, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with a snapshot that you created, specify the snapshot name in the following
-   * format: global/snapshots/my-backup
-   *
-   * If the source snapshot is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
+   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
+   * later, this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -514,12 +548,9 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * The source snapshot to create this disk. When creating a new instance, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD.
-   *
-   * To create a disk with a snapshot that you created, specify the snapshot name in the following
-   * format: global/snapshots/my-backup
-   *
-   * If the source snapshot is deleted later, this field will not be set.
+   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
+   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
+   * later, this field will not be set.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceSnapshot(java.lang.String sourceSnapshot) {

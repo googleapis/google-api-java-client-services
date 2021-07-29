@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cloud Storage Bucket resource.
- *
- * This Cloud Storage bucket resource is referenced by a URL map of a load balancer. For more
- * information, read Backend Buckets.
+ * Represents a Cloud Storage Bucket resource. This Cloud Storage bucket resource is referenced by a
+ * URL map of a load balancer. For more information, read Backend Buckets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -47,7 +45,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private BackendBucketCdnPolicy cdnPolicy;
 
   /**
-   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
    * header.
    * The value may be {@code null}.
    */
@@ -165,7 +163,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
    * header.
    * @return value or {@code null} for none
    */
@@ -174,7 +172,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Compress text responses using Brotli or gzip compression, based on the client?s Accept-Encoding
+   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding
    * header.
    * @param compressionMode compressionMode or {@code null} for none
    */

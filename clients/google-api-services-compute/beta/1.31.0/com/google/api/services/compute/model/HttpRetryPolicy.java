@@ -46,20 +46,22 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   private Duration perTryTimeout;
 
   /**
-   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
-   * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
-   * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-   * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to
-   * response codes 502, 503 or 504. -  - connect-failure: Loadbalancer will retry on failures
-   * connecting to backend services, for example due to connection timeouts.  - retriable-4xx:
-   * Loadbalancer will retry for retriable 4xx response codes. Currently the only retriable error
-   * supported is 409.  - refused-stream:Loadbalancer will retry if the backend service resets the
-   * stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.  -
-   * cancelledLoadbalancer will retry if the gRPC status code in the response header is set to
-   * cancelled  - deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response
-   * header is set to deadline-exceeded  - resource-exhausted: Loadbalancer will retry if the gRPC
-   * status code in the response header is set to resource-exhausted  - unavailable: Loadbalancer
-   * will retry if the gRPC status code in the response header is set to unavailable
+   * Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: Retry
+   * will be attempted if the instance or endpoint responds with any 5xx response code, or if the
+   * instance or endpoint does not respond at all, example: disconnects, reset, read timeout,
+   * connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to
+   * response codes 502, 503 or 504. - - connect-failure: A retry will be attempted on failures
+   * connecting to the instance or endpoint, for example due to connection timeouts. - retriable-
+   * 4xx: A retry will be attempted if the instance or endpoint responds with a retriable 4xx
+   * response code. Currently the only retriable error supported is 409. - refused-stream: A retry
+   * will be attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error
+   * code. This reset type indicates that it is safe to retry. - cancelled: A retry will be
+   * attempted if the gRPC status code in the response header is set to cancelled. - deadline-
+   * exceeded: A retry will be attempted if the gRPC status code in the response header is set to
+   * deadline-exceeded. - internal: A retry will be attempted if the gRPC status code in the
+   * response header is set to internal. - resource-exhausted: A retry will be attempted if the gRPC
+   * status code in the response header is set to resource-exhausted. - unavailable: A retry will be
+   * attempted if the gRPC status code in the response header is set to unavailable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,20 +106,22 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
-   * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
-   * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-   * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to
-   * response codes 502, 503 or 504. -  - connect-failure: Loadbalancer will retry on failures
-   * connecting to backend services, for example due to connection timeouts.  - retriable-4xx:
-   * Loadbalancer will retry for retriable 4xx response codes. Currently the only retriable error
-   * supported is 409.  - refused-stream:Loadbalancer will retry if the backend service resets the
-   * stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.  -
-   * cancelledLoadbalancer will retry if the gRPC status code in the response header is set to
-   * cancelled  - deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response
-   * header is set to deadline-exceeded  - resource-exhausted: Loadbalancer will retry if the gRPC
-   * status code in the response header is set to resource-exhausted  - unavailable: Loadbalancer
-   * will retry if the gRPC status code in the response header is set to unavailable
+   * Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: Retry
+   * will be attempted if the instance or endpoint responds with any 5xx response code, or if the
+   * instance or endpoint does not respond at all, example: disconnects, reset, read timeout,
+   * connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to
+   * response codes 502, 503 or 504. - - connect-failure: A retry will be attempted on failures
+   * connecting to the instance or endpoint, for example due to connection timeouts. - retriable-
+   * 4xx: A retry will be attempted if the instance or endpoint responds with a retriable 4xx
+   * response code. Currently the only retriable error supported is 409. - refused-stream: A retry
+   * will be attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error
+   * code. This reset type indicates that it is safe to retry. - cancelled: A retry will be
+   * attempted if the gRPC status code in the response header is set to cancelled. - deadline-
+   * exceeded: A retry will be attempted if the gRPC status code in the response header is set to
+   * deadline-exceeded. - internal: A retry will be attempted if the gRPC status code in the
+   * response header is set to internal. - resource-exhausted: A retry will be attempted if the gRPC
+   * status code in the response header is set to resource-exhausted. - unavailable: A retry will be
+   * attempted if the gRPC status code in the response header is set to unavailable.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRetryConditions() {
@@ -125,20 +129,22 @@ public final class HttpRetryPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies one or more conditions when this retry rule applies. Valid values are: - 5xx:
-   * Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
-   * or if the backend service does not respond at all, example: disconnects, reset, read timeout,
-   * connection failure, and refused streams.  - gateway-error: Similar to 5xx, but only applies to
-   * response codes 502, 503 or 504. -  - connect-failure: Loadbalancer will retry on failures
-   * connecting to backend services, for example due to connection timeouts.  - retriable-4xx:
-   * Loadbalancer will retry for retriable 4xx response codes. Currently the only retriable error
-   * supported is 409.  - refused-stream:Loadbalancer will retry if the backend service resets the
-   * stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.  -
-   * cancelledLoadbalancer will retry if the gRPC status code in the response header is set to
-   * cancelled  - deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response
-   * header is set to deadline-exceeded  - resource-exhausted: Loadbalancer will retry if the gRPC
-   * status code in the response header is set to resource-exhausted  - unavailable: Loadbalancer
-   * will retry if the gRPC status code in the response header is set to unavailable
+   * Specifies one or more conditions when this retry policy applies. Valid values are: - 5xx: Retry
+   * will be attempted if the instance or endpoint responds with any 5xx response code, or if the
+   * instance or endpoint does not respond at all, example: disconnects, reset, read timeout,
+   * connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to
+   * response codes 502, 503 or 504. - - connect-failure: A retry will be attempted on failures
+   * connecting to the instance or endpoint, for example due to connection timeouts. - retriable-
+   * 4xx: A retry will be attempted if the instance or endpoint responds with a retriable 4xx
+   * response code. Currently the only retriable error supported is 409. - refused-stream: A retry
+   * will be attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error
+   * code. This reset type indicates that it is safe to retry. - cancelled: A retry will be
+   * attempted if the gRPC status code in the response header is set to cancelled. - deadline-
+   * exceeded: A retry will be attempted if the gRPC status code in the response header is set to
+   * deadline-exceeded. - internal: A retry will be attempted if the gRPC status code in the
+   * response header is set to internal. - resource-exhausted: A retry will be attempted if the gRPC
+   * status code in the response header is set to resource-exhausted. - unavailable: A retry will be
+   * attempted if the gRPC status code in the response header is set to unavailable.
    * @param retryConditions retryConditions or {@code null} for none
    */
   public HttpRetryPolicy setRetryConditions(java.util.List<java.lang.String> retryConditions) {

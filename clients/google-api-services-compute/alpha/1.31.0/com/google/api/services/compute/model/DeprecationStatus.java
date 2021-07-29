@@ -76,10 +76,13 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
-   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
-   * rollout policy restricts the zones where the associated resource is considered in a deprecated
-   * state. When the rollout policy does not include the user specified zone, or if the zone is
-   * rolled out, the associated resource is considered in a deprecated state.
+   * The rollout policy for this deprecation. This policy is only enforced by image family views.
+   * The rollout policy restricts the zones where the associated resource is considered in a
+   * deprecated state. When the rollout policy does not include the user specified zone, or if the
+   * zone is rolled out, the associated resource is considered in a deprecated state. The rollout
+   * policy for this deprecation is read-only, except for allowlisted users. This field might not be
+   * configured. To view the latest non-deprecated image in a specific zone, use the
+   * imageFamilyViews.get method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,10 +196,13 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
-   * rollout policy restricts the zones where the associated resource is considered in a deprecated
-   * state. When the rollout policy does not include the user specified zone, or if the zone is
-   * rolled out, the associated resource is considered in a deprecated state.
+   * The rollout policy for this deprecation. This policy is only enforced by image family views.
+   * The rollout policy restricts the zones where the associated resource is considered in a
+   * deprecated state. When the rollout policy does not include the user specified zone, or if the
+   * zone is rolled out, the associated resource is considered in a deprecated state. The rollout
+   * policy for this deprecation is read-only, except for allowlisted users. This field might not be
+   * configured. To view the latest non-deprecated image in a specific zone, use the
+   * imageFamilyViews.get method.
    * @return value or {@code null} for none
    */
   public RolloutPolicy getStateOverride() {
@@ -204,10 +210,13 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
-   * rollout policy restricts the zones where the associated resource is considered in a deprecated
-   * state. When the rollout policy does not include the user specified zone, or if the zone is
-   * rolled out, the associated resource is considered in a deprecated state.
+   * The rollout policy for this deprecation. This policy is only enforced by image family views.
+   * The rollout policy restricts the zones where the associated resource is considered in a
+   * deprecated state. When the rollout policy does not include the user specified zone, or if the
+   * zone is rolled out, the associated resource is considered in a deprecated state. The rollout
+   * policy for this deprecation is read-only, except for allowlisted users. This field might not be
+   * configured. To view the latest non-deprecated image in a specific zone, use the
+   * imageFamilyViews.get method.
    * @param stateOverride stateOverride or {@code null} for none
    */
   public DeprecationStatus setStateOverride(RolloutPolicy stateOverride) {

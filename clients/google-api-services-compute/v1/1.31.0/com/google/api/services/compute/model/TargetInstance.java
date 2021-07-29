@@ -17,12 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target Instance resource.
- *
- * You can use a target instance to handle traffic for one or more forwarding rules, which is ideal
- * for forwarding protocol traffic that is managed by a single source. For example, ESP, AH, TCP, or
- * UDP. For more information, read Target instances. (== resource_for {$api_version}.targetInstances
- * ==)
+ * Represents a Target Instance resource. You can use a target instance to handle traffic for one or
+ * more forwarding rules, which is ideal for forwarding protocol traffic that is managed by a single
+ * source. For example, ESP, AH, TCP, or UDP. For more information, read Target instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,8 +56,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    * A URL to the virtual machine instance that handles traffic for this target instance. When
    * creating a target instance, you can provide the fully-qualified URL or a valid partial URL to
    * the desired virtual machine. For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
-   * projects/project/zones/zone/instances/instance  - zones/zone/instances/instance
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,8 +159,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    * A URL to the virtual machine instance that handles traffic for this target instance. When
    * creating a target instance, you can provide the fully-qualified URL or a valid partial URL to
    * the desired virtual machine. For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
-   * projects/project/zones/zone/instances/instance  - zones/zone/instances/instance
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -174,8 +171,8 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    * A URL to the virtual machine instance that handles traffic for this target instance. When
    * creating a target instance, you can provide the fully-qualified URL or a valid partial URL to
    * the desired virtual machine. For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
-   * projects/project/zones/zone/instances/instance  - zones/zone/instances/instance
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
+   * projects/project/zones/zone/instances/instance - zones/zone/instances/instance
    * @param instance instance or {@code null} for none
    */
   public TargetInstance setInstance(java.lang.String instance) {

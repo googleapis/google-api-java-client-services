@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Route resource.
- *
- * A route defines a path from VM instances in the VPC network to a specific destination. This
- * destination can be inside or outside the VPC network. For more information, read the Routes
- * overview. (== resource_for {$api_version}.routes ==)
+ * Represents a Route resource. A route defines a path from VM instances in the VPC network to a
+ * specific destination. This destination can be inside or outside the VPC network. For more
+ * information, read the Routes overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -89,7 +87,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
    * gateway
    * The value may be {@code null}.
    */
@@ -99,8 +97,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56  - https://www.googleapis.com/compute/v1/projects/project/regions/region/fo
-   * rwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -323,7 +321,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
    * gateway
    * @return value or {@code null} for none
    */
@@ -333,7 +331,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-
    * gateway
    * @param nextHopGateway nextHopGateway or {@code null} for none
    */
@@ -345,8 +343,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56  - https://www.googleapis.com/compute/v1/projects/project/regions/region/fo
-   * rwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopIlb() {
@@ -356,8 +354,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56  - https://www.googleapis.com/compute/v1/projects/project/regions/region/fo
-   * rwardingRules/forwardingRule  - regions/region/forwardingRules/forwardingRule
+   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
    * @param nextHopIlb nextHopIlb or {@code null} for none
    */
   public Route setNextHopIlb(java.lang.String nextHopIlb) {

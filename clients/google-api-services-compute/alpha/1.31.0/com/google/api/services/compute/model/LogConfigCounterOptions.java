@@ -17,22 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Increment a streamz counter with the specified metric and field names.
- *
- * Metric names should start with a '/', generally be lowercase-only, and end in "_count". Field
- * names should not contain an initial slash. The actual exported metric names will have
- * "/iam/policy" prepended.
- *
- * Field names correspond to IAM request parameters and field values are their respective values.
- *
- * Supported field names: - "authority", which is "[token]" if IAMContext.token is present,
- * otherwise the value of IAMContext.authority_selector if present, and otherwise a representation
- * of IAMContext.principal; or - "iam_principal", a representation of IAMContext.principal even if a
- * token or authority selector is present; or - "" (empty string), resulting in a counter with no
- * fields.
- *
- * Examples: counter { metric: "/debug_access_count" field: "iam_principal" } ==> increment counter
- * /iam/policy/debug_access_count {iam_principal=[value of IAMContext.principal]}
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -45,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class LogConfigCounterOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom fields.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LogConfigCounterOptionsCustomField> customFields;
 
   /**
-   * The field value to attribute.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * The metric to update.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * Custom fields.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<LogConfigCounterOptionsCustomField> getCustomFields() {
@@ -74,7 +59,7 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * Custom fields.
+   * This is deprecated and has no effect. Do not use.
    * @param customFields customFields or {@code null} for none
    */
   public LogConfigCounterOptions setCustomFields(java.util.List<LogConfigCounterOptionsCustomField> customFields) {
@@ -83,7 +68,7 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * The field value to attribute.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -91,7 +76,7 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * The field value to attribute.
+   * This is deprecated and has no effect. Do not use.
    * @param field field or {@code null} for none
    */
   public LogConfigCounterOptions setField(java.lang.String field) {
@@ -100,7 +85,7 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * The metric to update.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -108,7 +93,7 @@ public final class LogConfigCounterOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * The metric to update.
+   * This is deprecated and has no effect. Do not use.
    * @param metric metric or {@code null} for none
    */
   public LogConfigCounterOptions setMetric(java.lang.String metric) {

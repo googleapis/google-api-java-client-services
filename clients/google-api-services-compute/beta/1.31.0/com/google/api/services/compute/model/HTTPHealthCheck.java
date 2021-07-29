@@ -58,9 +58,8 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
    * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
    * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
    * specified for each network endpoint is used for health checking. For other backends, the port
-   * or named port specified in the Backend Service is used for health checking.
-   *
-   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * or named port specified in the Backend Service is used for health checking. If not specified,
+   * HTTP health check follows behavior specified in port and portName fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,9 +150,8 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
    * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
    * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
    * specified for each network endpoint is used for health checking. For other backends, the port
-   * or named port specified in the Backend Service is used for health checking.
-   *
-   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * or named port specified in the Backend Service is used for health checking. If not specified,
+   * HTTP health check follows behavior specified in port and portName fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortSpecification() {
@@ -165,9 +163,8 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
    * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
    * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
    * specified for each network endpoint is used for health checking. For other backends, the port
-   * or named port specified in the Backend Service is used for health checking.
-   *
-   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * or named port specified in the Backend Service is used for health checking. If not specified,
+   * HTTP health check follows behavior specified in port and portName fields.
    * @param portSpecification portSpecification or {@code null} for none
    */
   public HTTPHealthCheck setPortSpecification(java.lang.String portSpecification) {

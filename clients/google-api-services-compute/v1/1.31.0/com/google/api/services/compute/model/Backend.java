@@ -31,7 +31,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see  Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,10 +44,6 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
    * backend attached to the backend service.
-   *
-   * Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,23 +65,11 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean failover;
 
   /**
-   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type
-   * of backend that a backend service supports depends on the backend service's
-   * loadBalancingScheme.
-   *
-   *   - When the loadBalancingScheme for the backend service is EXTERNAL (except Network Load
-   * Balancing),  INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED , the backend can be either an instance
-   * group or a NEG. The backends on the backend service must be either all instance groups or all
-   * NEGs. You cannot mix instance group and NEG backends on the same backend service.
-   *
-   * - When the loadBalancingScheme for the backend service is EXTERNAL for Network Load Balancing
-   * or INTERNAL for Internal TCP/UDP Load Balancing, the backend must be an instance group. NEGs
-   * are not supported.
-   *
-   * For regional services, the backend must be in the same region as the backend service.
-   *
-   * You must use the fully-qualified URL (starting with https://www.googleapis.com/) to specify the
-   * instance group or NEG. Partial URLs are not supported.
+   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To
+   * determine what types of backends a load balancer supports, see the [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
+   * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
+   * group or NEG. Partial URLs are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +78,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
    * Connection balancing mode and Utilization balancing mode. Not available if the backend's
-   * balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
+   * balancingMode is RATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,11 +86,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,11 +95,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +104,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +113,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,9 +122,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +137,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see  Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getBalancingMode() {
@@ -173,7 +146,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see  Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode.
    * @param balancingMode balancingMode or {@code null} for none
    */
   public Backend setBalancingMode(java.lang.String balancingMode) {
@@ -188,10 +161,6 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
    * backend attached to the backend service.
-   *
-   * Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
    * @return value or {@code null} for none
    */
   public java.lang.Float getCapacityScaler() {
@@ -205,10 +174,6 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * available capacity. The valid ranges are 0.0 and [0.1,1.0]. You cannot configure a setting
    * larger than 0 and smaller than 0.1. You cannot configure a setting of 0 when there is only one
    * backend attached to the backend service.
-   *
-   * Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
    * @param capacityScaler capacityScaler or {@code null} for none
    */
   public Backend setCapacityScaler(java.lang.Float capacityScaler) {
@@ -253,23 +218,11 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type
-   * of backend that a backend service supports depends on the backend service's
-   * loadBalancingScheme.
-   *
-   *   - When the loadBalancingScheme for the backend service is EXTERNAL (except Network Load
-   * Balancing),  INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED , the backend can be either an instance
-   * group or a NEG. The backends on the backend service must be either all instance groups or all
-   * NEGs. You cannot mix instance group and NEG backends on the same backend service.
-   *
-   * - When the loadBalancingScheme for the backend service is EXTERNAL for Network Load Balancing
-   * or INTERNAL for Internal TCP/UDP Load Balancing, the backend must be an instance group. NEGs
-   * are not supported.
-   *
-   * For regional services, the backend must be in the same region as the backend service.
-   *
-   * You must use the fully-qualified URL (starting with https://www.googleapis.com/) to specify the
-   * instance group or NEG. Partial URLs are not supported.
+   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To
+   * determine what types of backends a load balancer supports, see the [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
+   * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
+   * group or NEG. Partial URLs are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -277,23 +230,11 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. The type
-   * of backend that a backend service supports depends on the backend service's
-   * loadBalancingScheme.
-   *
-   *   - When the loadBalancingScheme for the backend service is EXTERNAL (except Network Load
-   * Balancing),  INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED , the backend can be either an instance
-   * group or a NEG. The backends on the backend service must be either all instance groups or all
-   * NEGs. You cannot mix instance group and NEG backends on the same backend service.
-   *
-   * - When the loadBalancingScheme for the backend service is EXTERNAL for Network Load Balancing
-   * or INTERNAL for Internal TCP/UDP Load Balancing, the backend must be an instance group. NEGs
-   * are not supported.
-   *
-   * For regional services, the backend must be in the same region as the backend service.
-   *
-   * You must use the fully-qualified URL (starting with https://www.googleapis.com/) to specify the
-   * instance group or NEG. Partial URLs are not supported.
+   * The fully-qualified URL of an instance group or network endpoint group (NEG) resource. To
+   * determine what types of backends a load balancer supports, see the [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
+   * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
+   * group or NEG. Partial URLs are not supported.
    * @param group group or {@code null} for none
    */
   public Backend setGroup(java.lang.String group) {
@@ -304,9 +245,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
    * Connection balancing mode and Utilization balancing mode. Not available if the backend's
-   * balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
+   * balancingMode is RATE.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConnections() {
@@ -316,9 +255,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
    * Connection balancing mode and Utilization balancing mode. Not available if the backend's
-   * balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing
+   * balancingMode is RATE.
    * @param maxConnections maxConnections or {@code null} for none
    */
   public Backend setMaxConnections(java.lang.Integer maxConnections) {
@@ -328,11 +265,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConnectionsPerEndpoint() {
@@ -341,11 +275,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * @param maxConnectionsPerEndpoint maxConnectionsPerEndpoint or {@code null} for none
    */
   public Backend setMaxConnectionsPerEndpoint(java.lang.Integer maxConnectionsPerEndpoint) {
@@ -355,11 +286,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConnectionsPerInstance() {
@@ -368,11 +296,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a target maximum number of simultaneous connections. For usage guidelines, see
-   * Connection balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is RATE. Not supported by:
-   *
-   * - Internal TCP/UDP Load Balancing - Network Load Balancing.
+   * Connection balancing mode and Utilization balancing mode. Not available if the backend's
+   * balancingMode is RATE.
    * @param maxConnectionsPerInstance maxConnectionsPerInstance or {@code null} for none
    */
   public Backend setMaxConnectionsPerInstance(java.lang.Integer maxConnectionsPerInstance) {
@@ -382,9 +307,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRate() {
@@ -393,9 +317,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @param maxRate maxRate or {@code null} for none
    */
   public Backend setMaxRate(java.lang.Integer maxRate) {
@@ -405,9 +328,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMaxRatePerEndpoint() {
@@ -416,9 +338,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @param maxRatePerEndpoint maxRatePerEndpoint or {@code null} for none
    */
   public Backend setMaxRatePerEndpoint(java.lang.Float maxRatePerEndpoint) {
@@ -428,9 +349,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMaxRatePerInstance() {
@@ -439,9 +359,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines a maximum target for requests per second (RPS). For usage guidelines, see Rate
-   * balancing mode and Utilization balancing mode.
-   *
-   * Not available if the backend's balancingMode is CONNECTION.
+   * balancing mode and Utilization balancing mode. Not available if the backend's balancingMode is
+   * CONNECTION.
    * @param maxRatePerInstance maxRatePerInstance or {@code null} for none
    */
   public Backend setMaxRatePerInstance(java.lang.Float maxRatePerInstance) {

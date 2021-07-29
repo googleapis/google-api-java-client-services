@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Specifies what kind of log the caller must write
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class LogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud audit options.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LogConfigCloudAuditOptions cloudAudit;
 
   /**
-   * Counter options.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LogConfigCounterOptions counter;
 
   /**
-   * Data access options.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LogConfigDataAccessOptions dataAccess;
 
   /**
-   * Cloud audit options.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public LogConfigCloudAuditOptions getCloudAudit() {
@@ -59,7 +59,7 @@ public final class LogConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud audit options.
+   * This is deprecated and has no effect. Do not use.
    * @param cloudAudit cloudAudit or {@code null} for none
    */
   public LogConfig setCloudAudit(LogConfigCloudAuditOptions cloudAudit) {
@@ -68,7 +68,7 @@ public final class LogConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Counter options.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public LogConfigCounterOptions getCounter() {
@@ -76,7 +76,7 @@ public final class LogConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Counter options.
+   * This is deprecated and has no effect. Do not use.
    * @param counter counter or {@code null} for none
    */
   public LogConfig setCounter(LogConfigCounterOptions counter) {
@@ -85,7 +85,7 @@ public final class LogConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data access options.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public LogConfigDataAccessOptions getDataAccess() {
@@ -93,7 +93,7 @@ public final class LogConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data access options.
+   * This is deprecated and has no effect. Do not use.
    * @param dataAccess dataAccess or {@code null} for none
    */
   public LogConfig setDataAccess(LogConfigDataAccessOptions dataAccess) {

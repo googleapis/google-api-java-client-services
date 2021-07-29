@@ -31,7 +31,7 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved
+   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * The value may be {@code null}.
    */
@@ -58,7 +58,7 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved
+   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * @return value or {@code null} for none
    */
@@ -68,7 +68,7 @@ public final class ReservationAffinity extends com.google.api.client.json.Generi
 
   /**
    * Specifies the type of reservation from which this instance can consume resources:
-   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See  Consuming reserved
+   * ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved
    * instances for examples.
    * @param consumeReservationType consumeReservationType or {@code null} for none
    */

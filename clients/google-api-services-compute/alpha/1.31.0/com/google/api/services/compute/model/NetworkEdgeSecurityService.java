@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Google Cloud Armor network edge security service resource. (== resource_for
- * {$api_version}.networkEdgeSecurityServices ==)
+ * Represents a Google Cloud Armor network edge security service resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -48,9 +47,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a NetworkEdgeSecurityService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +62,6 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityServicefor
-   * NetworkEdgeSecurityServices
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,9 +146,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -164,9 +159,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -180,9 +174,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -195,9 +188,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService.
    * An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a NetworkEdgeSecurityService.
    * @see #setFingerprint()
    *
    * <p>
@@ -229,8 +221,6 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityServicefor
-   * NetworkEdgeSecurityServices
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -238,8 +228,6 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * [Output only] Type of the resource. Always compute#networkEdgeSecurityServicefor
-   * NetworkEdgeSecurityServices
    * @param kind kind or {@code null} for none
    */
   public NetworkEdgeSecurityService setKind(java.lang.String kind) {

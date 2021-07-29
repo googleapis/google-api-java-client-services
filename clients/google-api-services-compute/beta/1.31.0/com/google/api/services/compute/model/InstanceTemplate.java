@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Instance Template resource.
- *
- * You can use instance templates to create VM instances and managed instance groups. For more
- * information, read Instance Templates. (== resource_for {$api_version}.instanceTemplates ==)
+ * Represents an Instance Template resource. You can use instance templates to create VM instances
+ * and managed instance groups. For more information, read Instance Templates.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -90,7 +88,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
    * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
@@ -238,7 +236,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
    * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
@@ -249,7 +247,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   /**
    * The source instance used to create the template. You can provide this as a partial or full URL
    * to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * @param sourceInstance sourceInstance or {@code null} for none
    */

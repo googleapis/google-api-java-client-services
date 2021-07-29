@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class InstanceReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URL for a specific instance.
+   * The URL for a specific instance. @required compute.instancegroups.addInstances/removeInstances
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * The URL for a specific instance.
+   * The URL for a specific instance. @required compute.instancegroups.addInstances/removeInstances
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -45,7 +45,7 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The URL for a specific instance.
+   * The URL for a specific instance. @required compute.instancegroups.addInstances/removeInstances
    * @param instance instance or {@code null} for none
    */
   public InstanceReference setInstance(java.lang.String instance) {

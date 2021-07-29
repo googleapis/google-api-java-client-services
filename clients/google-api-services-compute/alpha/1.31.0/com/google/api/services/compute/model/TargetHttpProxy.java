@@ -17,21 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target HTTP Proxy resource.
- *
- * Google Compute Engine has two Target HTTP Proxy resources:
- *
- * * [Global](/compute/docs/reference/rest/{$api_version}/targetHttpProxies) *
- * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpProxies)
- *
- * A target HTTP proxy is a component of GCP HTTP load balancers.
- *
- * * targetHttpProxies are used by external HTTP load balancers and Traffic Director. *
- * regionTargetHttpProxies are used by internal HTTP load balancers.
- *
- * Forwarding rules reference a target HTTP proxy, and the target proxy then references a URL map.
- * For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for
- * {$api_version}.targetHttpProxies ==) (== resource_for {$api_version}.regionTargetHttpProxies ==)
+ * Represents a Target HTTP Proxy resource. Google Compute Engine has two Target HTTP Proxy
+ * resources: * [Global](/compute/docs/reference/rest/alpha/targetHttpProxies) *
+ * [Regional](/compute/docs/reference/rest/alpha/regionTargetHttpProxies) A target HTTP proxy is a
+ * component of GCP HTTP load balancers. * targetHttpProxies are used by external HTTP load
+ * balancers and Traffic Director. * regionTargetHttpProxies are used by internal HTTP load
+ * balancers. Forwarding rules reference a target HTTP proxy, and the target proxy then references a
+ * URL map. For more information, read Using Target Proxies and Forwarding rule concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -70,9 +62,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
-   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -110,15 +102,11 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,9 +238,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
-   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -266,9 +254,9 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/locatio
-   * nhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/v1alpha1/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -342,15 +330,11 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProxyBind() {
@@ -359,15 +343,11 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * @param proxyBind proxyBind or {@code null} for none
    */
   public TargetHttpProxy setProxyBind(java.lang.Boolean proxyBind) {

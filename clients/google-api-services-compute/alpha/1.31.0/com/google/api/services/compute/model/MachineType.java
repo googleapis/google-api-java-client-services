@@ -17,11 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Machine Type resource.
- *
- * You can use specific machine types for your VM instances based on performance and pricing
- * requirements. For more information, read Machine Types. (== resource_for
- * {$api_version}.machineTypes ==)
+ * Represents a Machine Type resource. You can use specific machine types for your VM instances
+ * based on performance and pricing requirements. For more information, read Machine Types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -31,47 +31,42 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies connection persistence when backends are unhealthy. The default value is
-   * DEFAULT_FOR_PROTOCOL.
-   *
-   * If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on unhealthy backends only for
-   * connection-oriented protocols (TCP and SCTP) and only if the Tracking Mode is PER_CONNECTION
-   * (default tracking mode) or the Session Affinity is configured for 5-tuple. They do not persist
-   * for UDP.
-   *
-   * If set to NEVER_PERSIST, after a backend becomes unhealthy, the existing connections on the
-   * unhealthy backend are never persisted on the unhealthy backend. They are always diverted to
-   * newly selected healthy backends (unless all backends are unhealthy).
-   *
-   * If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backends regardless
-   * of protocol and session affinity. It is generally not recommended to use this mode overriding
-   * the default.
+   * DEFAULT_FOR_PROTOCOL. If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on
+   * unhealthy backends only for connection-oriented protocols (TCP and SCTP) and only if the
+   * Tracking Mode is PER_CONNECTION (default tracking mode) or the Session Affinity is configured
+   * for 5-tuple. They do not persist for UDP. If set to NEVER_PERSIST, after a backend becomes
+   * unhealthy, the existing connections on the unhealthy backend are never persisted on the
+   * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
+   * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
+   * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
+   * to use this mode overriding the default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionPersistenceOnUnhealthyBackends;
 
   /**
+   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableStrongAffinity;
+
+  /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds).
-   *
-   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
-   *
-   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
-   *
-   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
+   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
+   * if the Connection Tracking key is less than 5-tuple.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer idleTimeoutSec;
 
   /**
-   * Specifies the key used for connection tracking. There are two options:
-   *
-   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
-   * Connection Key (default Hash Method) for the specific protocol.
-   *
-   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
-   * matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
+   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
+   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
+   * configured Session Affinity. It matches the configured Session Affinity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,20 +74,15 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies connection persistence when backends are unhealthy. The default value is
-   * DEFAULT_FOR_PROTOCOL.
-   *
-   * If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on unhealthy backends only for
-   * connection-oriented protocols (TCP and SCTP) and only if the Tracking Mode is PER_CONNECTION
-   * (default tracking mode) or the Session Affinity is configured for 5-tuple. They do not persist
-   * for UDP.
-   *
-   * If set to NEVER_PERSIST, after a backend becomes unhealthy, the existing connections on the
-   * unhealthy backend are never persisted on the unhealthy backend. They are always diverted to
-   * newly selected healthy backends (unless all backends are unhealthy).
-   *
-   * If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backends regardless
-   * of protocol and session affinity. It is generally not recommended to use this mode overriding
-   * the default.
+   * DEFAULT_FOR_PROTOCOL. If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on
+   * unhealthy backends only for connection-oriented protocols (TCP and SCTP) and only if the
+   * Tracking Mode is PER_CONNECTION (default tracking mode) or the Session Affinity is configured
+   * for 5-tuple. They do not persist for UDP. If set to NEVER_PERSIST, after a backend becomes
+   * unhealthy, the existing connections on the unhealthy backend are never persisted on the
+   * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
+   * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
+   * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
+   * to use this mode overriding the default.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionPersistenceOnUnhealthyBackends() {
@@ -101,20 +91,15 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies connection persistence when backends are unhealthy. The default value is
-   * DEFAULT_FOR_PROTOCOL.
-   *
-   * If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on unhealthy backends only for
-   * connection-oriented protocols (TCP and SCTP) and only if the Tracking Mode is PER_CONNECTION
-   * (default tracking mode) or the Session Affinity is configured for 5-tuple. They do not persist
-   * for UDP.
-   *
-   * If set to NEVER_PERSIST, after a backend becomes unhealthy, the existing connections on the
-   * unhealthy backend are never persisted on the unhealthy backend. They are always diverted to
-   * newly selected healthy backends (unless all backends are unhealthy).
-   *
-   * If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backends regardless
-   * of protocol and session affinity. It is generally not recommended to use this mode overriding
-   * the default.
+   * DEFAULT_FOR_PROTOCOL. If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on
+   * unhealthy backends only for connection-oriented protocols (TCP and SCTP) and only if the
+   * Tracking Mode is PER_CONNECTION (default tracking mode) or the Session Affinity is configured
+   * for 5-tuple. They do not persist for UDP. If set to NEVER_PERSIST, after a backend becomes
+   * unhealthy, the existing connections on the unhealthy backend are never persisted on the
+   * unhealthy backend. They are always diverted to newly selected healthy backends (unless all
+   * backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on
+   * unhealthy backends regardless of protocol and session affinity. It is generally not recommended
+   * to use this mode overriding the default.
    * @param connectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setConnectionPersistenceOnUnhealthyBackends(java.lang.String connectionPersistenceOnUnhealthyBackends) {
@@ -123,14 +108,27 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
+   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableStrongAffinity() {
+    return enableStrongAffinity;
+  }
+
+  /**
+   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * @param enableStrongAffinity enableStrongAffinity or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy setEnableStrongAffinity(java.lang.Boolean enableStrongAffinity) {
+    this.enableStrongAffinity = enableStrongAffinity;
+    return this;
+  }
+
+  /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds).
-   *
-   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
-   *
-   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
-   *
-   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
+   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
+   * if the Connection Tracking key is less than 5-tuple.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleTimeoutSec() {
@@ -139,13 +137,9 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds).
-   *
-   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
-   *
-   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
-   *
-   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
+   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
+   * if the Connection Tracking key is less than 5-tuple.
    * @param idleTimeoutSec idleTimeoutSec or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setIdleTimeoutSec(java.lang.Integer idleTimeoutSec) {
@@ -154,13 +148,10 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Specifies the key used for connection tracking. There are two options:
-   *
-   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
-   * Connection Key (default Hash Method) for the specific protocol.
-   *
-   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
-   * matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
+   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
+   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
+   * configured Session Affinity. It matches the configured Session Affinity.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingMode() {
@@ -168,13 +159,10 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Specifies the key used for connection tracking. There are two options:
-   *
-   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
-   * Connection Key (default Hash Method) for the specific protocol.
-   *
-   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
-   * matches the configured Session Affinity.
+   * Specifies the key used for connection tracking. There are two options: PER_CONNECTION: This is
+   * the default mode. The Connection Tracking is performed as per the Connection Key (default Hash
+   * Method) for the specific protocol. PER_SESSION: The Connection Tracking is performed as per the
+   * configured Session Affinity. It matches the configured Session Affinity.
    * @param trackingMode trackingMode or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setTrackingMode(java.lang.String trackingMode) {

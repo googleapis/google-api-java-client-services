@@ -50,9 +50,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a PublicDelegatedPrefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,9 +180,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -195,9 +193,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -211,9 +208,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -226,9 +222,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix.
    * An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix,
-   * otherwise the request will fail with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
+   * otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve a PublicDelegatedPrefix.
    * @see #setFingerprint()
    *
    * <p>

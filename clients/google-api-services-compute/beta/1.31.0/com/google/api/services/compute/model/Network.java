@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a VPC Network resource.
- *
- * Networks connect resources to each other and to the internet. For more information, read Virtual
- * Private Cloud (VPC) Network. (== resource_for {$api_version}.networks ==)
+ * Represents a VPC Network resource. Networks connect resources to each other and to the internet.
+ * For more information, read Virtual Private Cloud (VPC) Network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -42,15 +40,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created.
-   *
-   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
-   * is created in custom mode.
-   *
-   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
-   * range as described in Auto mode VPC network IP ranges.
-   *
-   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
+   * the VPC network is created in auto mode. When set to false, the VPC network is created in
+   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
+   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
+   * networks, you can add subnets using the subnetworks insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,15 +155,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created.
-   *
-   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
-   * is created in custom mode.
-   *
-   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
-   * range as described in Auto mode VPC network IP ranges.
-   *
-   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
+   * the VPC network is created in auto mode. When set to false, the VPC network is created in
+   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
+   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
+   * networks, you can add subnets using the subnetworks insert method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateSubnetworks() {
@@ -177,15 +167,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Must be set to create a VPC network. If not set, a legacy network is created.
-   *
-   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
-   * is created in custom mode.
-   *
-   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
-   * range as described in Auto mode VPC network IP ranges.
-   *
-   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
+   * Must be set to create a VPC network. If not set, a legacy network is created. When set to true,
+   * the VPC network is created in auto mode. When set to false, the VPC network is created in
+   * custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a
+   * predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC
+   * networks, you can add subnets using the subnetworks insert method.
    * @param autoCreateSubnetworks autoCreateSubnetworks or {@code null} for none
    */
   public Network setAutoCreateSubnetworks(java.lang.Boolean autoCreateSubnetworks) {

@@ -46,7 +46,7 @@ public final class WafExpressionSet extends com.google.api.client.json.GenericJs
   private java.util.List<WafExpressionSetExpression> expressions;
 
   /**
-   * Google specified expression set ID. The format should be: - E.g. XSS-20170329
+   * Google specified expression set ID. The format should be: - E.g. XSS-20170329 required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class WafExpressionSet extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Google specified expression set ID. The format should be: - E.g. XSS-20170329
+   * Google specified expression set ID. The format should be: - E.g. XSS-20170329 required
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -99,7 +99,7 @@ public final class WafExpressionSet extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Google specified expression set ID. The format should be: - E.g. XSS-20170329
+   * Google specified expression set ID. The format should be: - E.g. XSS-20170329 required
    * @param id id or {@code null} for none
    */
   public WafExpressionSet setId(java.lang.String id) {

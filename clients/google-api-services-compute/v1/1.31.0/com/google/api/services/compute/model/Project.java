@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Project resource.
- *
- * A project is used to organize resources in a Google Cloud Platform environment. For more
- * information, read about the  Resource Hierarchy. (== resource_for {$api_version}.projects ==)
+ * Represents a Project resource. A project is used to organize resources in a Google Cloud Platform
+ * environment. For more information, read about the Resource Hierarchy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -79,7 +77,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
-   * This is not the project ID, and is just a unique ID used by Compute Engine to identify
+   * This is *not* the project ID, and is just a unique ID used by Compute Engine to identify
    * resources.
    * The value may be {@code null}.
    */
@@ -241,7 +239,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
-   * This is not the project ID, and is just a unique ID used by Compute Engine to identify
+   * This is *not* the project ID, and is just a unique ID used by Compute Engine to identify
    * resources.
    * @return value or {@code null} for none
    */
@@ -251,7 +249,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
-   * This is not the project ID, and is just a unique ID used by Compute Engine to identify
+   * This is *not* the project ID, and is just a unique ID used by Compute Engine to identify
    * resources.
    * @param id id or {@code null} for none
    */

@@ -74,13 +74,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD.
-   *
-   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
-   * created with this networkTier.
-   *
-   * If an AccessConfig with a valid external IP address is specified, it must match that of the
-   * networkTier associated with the Address resource owning that IP.
+   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
+   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
+   * with a valid external IP address is specified, it must match that of the networkTier associated
+   * with the Address resource owning that IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,13 +207,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD.
-   *
-   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
-   * created with this networkTier.
-   *
-   * If an AccessConfig with a valid external IP address is specified, it must match that of the
-   * networkTier associated with the Address resource owning that IP.
+   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
+   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
+   * with a valid external IP address is specified, it must match that of the networkTier associated
+   * with the Address resource owning that IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkTier() {
@@ -225,13 +219,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this access configuration and can only
-   * take the following values: PREMIUM, STANDARD.
-   *
-   * If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be
-   * created with this networkTier.
-   *
-   * If an AccessConfig with a valid external IP address is specified, it must match that of the
-   * networkTier associated with the Address resource owning that IP.
+   * take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid
+   * external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig
+   * with a valid external IP address is specified, it must match that of the networkTier associated
+   * with the Address resource owning that IP.
    * @param networkTier networkTier or {@code null} for none
    */
   public AccessConfig setNetworkTier(java.lang.String networkTier) {

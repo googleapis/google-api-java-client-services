@@ -19,9 +19,7 @@ package com.google.api.services.compute.model;
 /**
  * Configuration for a Cloud Run network endpoint group (NEG). The service must be provided
  * explicitly or in the URL mask. The tag is optional, may be provided explicitly or in the URL
- * mask.
- *
- * Note: Cloud Run service must be in the same project and located in the same region as the
+ * mask. Note: Cloud Run service must be in the same project and located in the same region as the
  * Serverless NEG.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -35,11 +33,8 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupCloudRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run service is the main resource of Cloud Run.
-   *
-   * The service must be 1-63 characters long, and comply with RFC1035.
-   *
-   * Example value: "run-service".
+   * Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long,
+   * and comply with RFC1035. Example value: "run-service".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +42,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
 
   /**
    * Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained
-   * traffic routing information.
-   *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
-   *
+   * traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035.
    * Example value: "revision-0010".
    * The value may be {@code null}.
    */
@@ -60,11 +52,9 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * A template to parse service and tag fields from a request URL. URL mask allows for routing to
    * multiple Run services without having to create multiple network endpoint groups and backend
-   * services.
-   *
-   * For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be backed by
-   * the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The URL mask
-   * will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
+   * services. For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be
+   * backed by the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The
+   * URL mask will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
    * respectively.
    * The value may be {@code null}.
    */
@@ -72,11 +62,8 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   private java.lang.String urlMask;
 
   /**
-   * Cloud Run service is the main resource of Cloud Run.
-   *
-   * The service must be 1-63 characters long, and comply with RFC1035.
-   *
-   * Example value: "run-service".
+   * Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long,
+   * and comply with RFC1035. Example value: "run-service".
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -84,11 +71,8 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   }
 
   /**
-   * Cloud Run service is the main resource of Cloud Run.
-   *
-   * The service must be 1-63 characters long, and comply with RFC1035.
-   *
-   * Example value: "run-service".
+   * Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long,
+   * and comply with RFC1035. Example value: "run-service".
    * @param service service or {@code null} for none
    */
   public NetworkEndpointGroupCloudRun setService(java.lang.String service) {
@@ -98,10 +82,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
 
   /**
    * Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained
-   * traffic routing information.
-   *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
-   *
+   * traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035.
    * Example value: "revision-0010".
    * @return value or {@code null} for none
    */
@@ -111,10 +92,7 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
 
   /**
    * Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained
-   * traffic routing information.
-   *
-   * The tag must be 1-63 characters long, and comply with RFC1035.
-   *
+   * traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035.
    * Example value: "revision-0010".
    * @param tag tag or {@code null} for none
    */
@@ -126,11 +104,9 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * A template to parse service and tag fields from a request URL. URL mask allows for routing to
    * multiple Run services without having to create multiple network endpoint groups and backend
-   * services.
-   *
-   * For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be backed by
-   * the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The URL mask
-   * will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
+   * services. For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be
+   * backed by the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The
+   * URL mask will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
    * respectively.
    * @return value or {@code null} for none
    */
@@ -141,11 +117,9 @@ public final class NetworkEndpointGroupCloudRun extends com.google.api.client.js
   /**
    * A template to parse service and tag fields from a request URL. URL mask allows for routing to
    * multiple Run services without having to create multiple network endpoint groups and backend
-   * services.
-   *
-   * For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be backed by
-   * the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The URL mask
-   * will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
+   * services. For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be
+   * backed by the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The
+   * URL mask will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" }
    * respectively.
    * @param urlMask urlMask or {@code null} for none
    */

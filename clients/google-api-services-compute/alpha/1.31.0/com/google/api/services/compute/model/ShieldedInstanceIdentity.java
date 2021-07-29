@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * A shielded Instance identity entry.
+ * A Shielded Instance Identity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -28,6 +28,20 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class ShieldedInstanceIdentity extends com.google.api.client.json.GenericJson {
+
+  /**
+   * An Endorsement Key (EK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceIdentityEntry eccP256EncryptionKey;
+
+  /**
+   * An Attestation Key (AK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceIdentityEntry eccP256SigningKey;
 
   /**
    * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
@@ -50,6 +64,40 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private ShieldedInstanceIdentityEntry signingKey;
+
+  /**
+   * An Endorsement Key (EK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceIdentityEntry getEccP256EncryptionKey() {
+    return eccP256EncryptionKey;
+  }
+
+  /**
+   * An Endorsement Key (EK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * @param eccP256EncryptionKey eccP256EncryptionKey or {@code null} for none
+   */
+  public ShieldedInstanceIdentity setEccP256EncryptionKey(ShieldedInstanceIdentityEntry eccP256EncryptionKey) {
+    this.eccP256EncryptionKey = eccP256EncryptionKey;
+    return this;
+  }
+
+  /**
+   * An Attestation Key (AK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceIdentityEntry getEccP256SigningKey() {
+    return eccP256SigningKey;
+  }
+
+  /**
+   * An Attestation Key (AK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
+   * @param eccP256SigningKey eccP256SigningKey or {@code null} for none
+   */
+  public ShieldedInstanceIdentity setEccP256SigningKey(ShieldedInstanceIdentityEntry eccP256SigningKey) {
+    this.eccP256SigningKey = eccP256SigningKey;
+    return this;
+  }
 
   /**
    * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.

@@ -85,9 +85,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
-   *
-   * Valid only if stackType is IPV4_IPV6.
+   * Internet. This field is always inherited from its subnetwork. Valid only if stackType is
+   * IPV4_IPV6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,12 +117,11 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * URL of the network resource for this instance. When creating an instance, if neither the
    * network nor the subnetwork is specified, the default network global/networks/default is used;
-   * if the network is not specified but the subnetwork is specified, the network is inferred.
-   *
-   * If you specify this property, you can specify the network as a full or partial URL. For
-   * example, the following are all valid URLs:   -
-   * https://www.googleapis.com/compute/v1/projects/project/global/networks/network  -
-   * projects/project/global/networks/network  - global/networks/default
+   * if the network is not specified but the subnetwork is specified, the network is inferred. If
+   * you specify this property, you can specify the network as a full or partial URL. For example,
+   * the following are all valid URLs: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/networks/ network -
+   * projects/project/global/networks/network - global/networks/default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,10 +143,17 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String nicType;
 
   /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer queueCount;
+
+  /**
    * The stack type for this network interface to identify whether the IPv6 feature is enabled or
-   * not. If not specified, IPV4_ONLY will be used.
-   *
-   * This field can be both set at instance creation and update network interface operations.
+   * not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation
+   * and update network interface operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +165,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
    * required. If you specify this field, you can specify the subnetwork as a full or partial URL.
    * For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork  -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork -
    * regions/region/subnetworks/subnetwork
    * The value may be {@code null}.
    */
@@ -287,9 +292,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
-   *
-   * Valid only if stackType is IPV4_IPV6.
+   * Internet. This field is always inherited from its subnetwork. Valid only if stackType is
+   * IPV4_IPV6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6AccessType() {
@@ -298,9 +302,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
-   *
-   * Valid only if stackType is IPV4_IPV6.
+   * Internet. This field is always inherited from its subnetwork. Valid only if stackType is
+   * IPV4_IPV6.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
    */
   public NetworkInterface setIpv6AccessType(java.lang.String ipv6AccessType) {
@@ -364,12 +367,11 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * URL of the network resource for this instance. When creating an instance, if neither the
    * network nor the subnetwork is specified, the default network global/networks/default is used;
-   * if the network is not specified but the subnetwork is specified, the network is inferred.
-   *
-   * If you specify this property, you can specify the network as a full or partial URL. For
-   * example, the following are all valid URLs:   -
-   * https://www.googleapis.com/compute/v1/projects/project/global/networks/network  -
-   * projects/project/global/networks/network  - global/networks/default
+   * if the network is not specified but the subnetwork is specified, the network is inferred. If
+   * you specify this property, you can specify the network as a full or partial URL. For example,
+   * the following are all valid URLs: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/networks/ network -
+   * projects/project/global/networks/network - global/networks/default
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -379,12 +381,11 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   /**
    * URL of the network resource for this instance. When creating an instance, if neither the
    * network nor the subnetwork is specified, the default network global/networks/default is used;
-   * if the network is not specified but the subnetwork is specified, the network is inferred.
-   *
-   * If you specify this property, you can specify the network as a full or partial URL. For
-   * example, the following are all valid URLs:   -
-   * https://www.googleapis.com/compute/v1/projects/project/global/networks/network  -
-   * projects/project/global/networks/network  - global/networks/default
+   * if the network is not specified but the subnetwork is specified, the network is inferred. If
+   * you specify this property, you can specify the network as a full or partial URL. For example,
+   * the following are all valid URLs: -
+   * https://www.googleapis.com/compute/v1/projects/project/global/networks/ network -
+   * projects/project/global/networks/network - global/networks/default
    * @param network network or {@code null} for none
    */
   public NetworkInterface setNetwork(java.lang.String network) {
@@ -429,10 +430,28 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQueueCount() {
+    return queueCount;
+  }
+
+  /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * @param queueCount queueCount or {@code null} for none
+   */
+  public NetworkInterface setQueueCount(java.lang.Integer queueCount) {
+    this.queueCount = queueCount;
+    return this;
+  }
+
+  /**
    * The stack type for this network interface to identify whether the IPv6 feature is enabled or
-   * not. If not specified, IPV4_ONLY will be used.
-   *
-   * This field can be both set at instance creation and update network interface operations.
+   * not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation
+   * and update network interface operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -441,9 +460,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
 
   /**
    * The stack type for this network interface to identify whether the IPv6 feature is enabled or
-   * not. If not specified, IPV4_ONLY will be used.
-   *
-   * This field can be both set at instance creation and update network interface operations.
+   * not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation
+   * and update network interface operations.
    * @param stackType stackType or {@code null} for none
    */
   public NetworkInterface setStackType(java.lang.String stackType) {
@@ -457,7 +475,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
    * required. If you specify this field, you can specify the subnetwork as a full or partial URL.
    * For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork  -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork -
    * regions/region/subnetworks/subnetwork
    * @return value or {@code null} for none
    */
@@ -471,7 +489,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
    * required. If you specify this field, you can specify the subnetwork as a full or partial URL.
    * For example, the following are all valid URLs: -
-   * https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork  -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork -
    * regions/region/subnetworks/subnetwork
    * @param subnetwork subnetwork or {@code null} for none
    */

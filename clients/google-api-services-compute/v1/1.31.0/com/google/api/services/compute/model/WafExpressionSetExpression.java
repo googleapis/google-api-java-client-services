@@ -33,7 +33,7 @@ public final class WafExpressionSetExpression extends com.google.api.client.json
    * Expression ID should uniquely identify the origin of the expression. E.g. owasp-
    * crs-v020901-id973337 identifies Owasp core rule set version 2.9.1 rule id 973337. The ID could
    * be used to determine the individual attack definition that has been detected. It could also be
-   * used to exclude it from the policy in case of false positive.
+   * used to exclude it from the policy in case of false positive. required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class WafExpressionSetExpression extends com.google.api.client.json
    * Expression ID should uniquely identify the origin of the expression. E.g. owasp-
    * crs-v020901-id973337 identifies Owasp core rule set version 2.9.1 rule id 973337. The ID could
    * be used to determine the individual attack definition that has been detected. It could also be
-   * used to exclude it from the policy in case of false positive.
+   * used to exclude it from the policy in case of false positive. required
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -54,7 +54,7 @@ public final class WafExpressionSetExpression extends com.google.api.client.json
    * Expression ID should uniquely identify the origin of the expression. E.g. owasp-
    * crs-v020901-id973337 identifies Owasp core rule set version 2.9.1 rule id 973337. The ID could
    * be used to determine the individual attack definition that has been detected. It could also be
-   * used to exclude it from the policy in case of false positive.
+   * used to exclude it from the policy in case of false positive. required
    * @param id id or {@code null} for none
    */
   public WafExpressionSetExpression setId(java.lang.String id) {

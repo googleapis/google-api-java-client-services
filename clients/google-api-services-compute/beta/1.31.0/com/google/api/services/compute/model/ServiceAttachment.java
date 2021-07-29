@@ -17,11 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a ServiceAttachment resource.
- *
- * A service attachment represents a service that a producer has exposed. It encapsulates the load
- * balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to
- * represent the consumers connecting to the service. next tag = 19
+ * Represents a ServiceAttachment resource. A service attachment represents a service that a
+ * producer has exposed. It encapsulates the load balancer which fronts the service runs and a list
+ * of NAT IP ranges that the producers uses to represent the consumers connecting to the service.
+ * next tag = 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -56,14 +55,6 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists;
-
-  /**
-   * [Output Only] An array of forwarding rules for all the consumers connected to this service
-   * attachment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ServiceAttachmentConsumerForwardingRule> consumerForwardingRules;
 
   /**
    * Projects that are not allowed to connect to this service attachment. The project can be
@@ -232,25 +223,6 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setConsumerAcceptLists(java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists) {
     this.consumerAcceptLists = consumerAcceptLists;
-    return this;
-  }
-
-  /**
-   * [Output Only] An array of forwarding rules for all the consumers connected to this service
-   * attachment.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ServiceAttachmentConsumerForwardingRule> getConsumerForwardingRules() {
-    return consumerForwardingRules;
-  }
-
-  /**
-   * [Output Only] An array of forwarding rules for all the consumers connected to this service
-   * attachment.
-   * @param consumerForwardingRules consumerForwardingRules or {@code null} for none
-   */
-  public ServiceAttachment setConsumerForwardingRules(java.util.List<ServiceAttachmentConsumerForwardingRule> consumerForwardingRules) {
-    this.consumerForwardingRules = consumerForwardingRules;
     return this;
   }
 

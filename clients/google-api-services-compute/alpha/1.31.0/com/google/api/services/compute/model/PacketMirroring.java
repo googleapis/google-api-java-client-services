@@ -17,12 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Packet Mirroring resource.
- *
- * Packet Mirroring clones the traffic of specified instances in your Virtual Private Cloud (VPC)
- * network and forwards it to a collector destination, such as an instance group of an internal
- * TCP/UDP load balancer, for analysis or examination. For more information about setting up Packet
- * Mirroring, see Using Packet Mirroring. (== resource_for {$api_version}.packetMirrorings ==)
+ * Represents a Packet Mirroring resource. Packet Mirroring clones the traffic of specified
+ * instances in your Virtual Private Cloud (VPC) network and forwards it to a collector destination,
+ * such as an instance group of an internal TCP/UDP load balancer, for analysis or examination. For
+ * more information about setting up Packet Mirroring, see Using Packet Mirroring.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,9 +57,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network.
-   *
-   * The default is TRUE.
+   * mirroring policy will not be enforced on the network. The default is TRUE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,9 +115,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins.
-   *
-   * Default value is 1000. Valid range is 0 through 65535.
+   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
+   * through 65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,9 +200,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network.
-   *
-   * The default is TRUE.
+   * mirroring policy will not be enforced on the network. The default is TRUE.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnable() {
@@ -216,9 +209,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
 
   /**
    * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet
-   * mirroring policy will not be enforced on the network.
-   *
-   * The default is TRUE.
+   * mirroring policy will not be enforced on the network. The default is TRUE.
    * @param enable enable or {@code null} for none
    */
   public PacketMirroring setEnable(java.lang.String enable) {
@@ -345,9 +336,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins.
-   *
-   * Default value is 1000. Valid range is 0 through 65535.
+   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
+   * through 65535.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -357,9 +347,8 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   /**
    * The priority of applying this configuration. Priority is used to break ties in cases where
    * there is more than one matching rule. In the case of two rules that apply for a given Instance,
-   * the one with the lowest-numbered priority value wins.
-   *
-   * Default value is 1000. Valid range is 0 through 65535.
+   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
+   * through 65535.
    * @param priority priority or {@code null} for none
    */
   public PacketMirroring setPriority(java.lang.Long priority) {

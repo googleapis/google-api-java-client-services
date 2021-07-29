@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Subnetwork resource.
- *
- * A subnetwork (also known as a subnet) is a logical partition of a Virtual Private Cloud network
- * with one primary IP range and zero or more secondary IP ranges. For more information, read
- * Virtual Private Cloud (VPC) Network. (== resource_for {$api_version}.subnetworks ==)
+ * Represents a Subnetwork resource. A subnetwork (also known as a subnet) is a logical partition of
+ * a Virtual Private Cloud network with one primary IP range and zero or more secondary IP ranges.
+ * For more information, read Virtual Private Cloud (VPC) Network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -68,9 +66,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a Subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,9 +161,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
+   * field can be both set at resource creation time and updated using patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,9 +217,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
+   * updated using patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,9 +313,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a Subnetwork.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -332,9 +326,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a Subnetwork.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -348,9 +341,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a Subnetwork.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -363,9 +355,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
    * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a Subnetwork.
    * @see #setFingerprint()
    *
    * <p>
@@ -583,9 +574,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
+   * field can be both set at resource creation time and updated using patch.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateIpv6GoogleAccess() {
@@ -594,9 +584,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of
-   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This
+   * field can be both set at resource creation time and updated using patch.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */
   public Subnetwork setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
@@ -715,9 +704,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
+   * updated using patch.
    * @return value or {@code null} for none
    */
   public java.lang.String getStackType() {
@@ -726,9 +714,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
-   * specified IPV4_ONLY will be used.
-   *
-   * This field can be both set at resource creation time and updated using patch.
+   * specified IPV4_ONLY will be used. This field can be both set at resource creation time and
+   * updated using patch.
    * @param stackType stackType or {@code null} for none
    */
   public Subnetwork setStackType(java.lang.String stackType) {

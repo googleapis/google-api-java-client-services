@@ -106,7 +106,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
-   * traffic needs to go to a single backend service, there must be one  weightedBackendService with
+   * traffic needs to go to a single backend service, there must be one weightedBackendService with
    * weight set to a non-zero number. Once a backendService is identified and before forwarding the
    * request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.
@@ -287,7 +287,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
-   * traffic needs to go to a single backend service, there must be one  weightedBackendService with
+   * traffic needs to go to a single backend service, there must be one weightedBackendService with
    * weight set to a non-zero number. Once a backendService is identified and before forwarding the
    * request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.
@@ -300,7 +300,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   /**
    * A list of weighted backend services to send traffic to when a route match occurs. The weights
    * determine the fraction of traffic that flows to their corresponding backend service. If all
-   * traffic needs to go to a single backend service, there must be one  weightedBackendService with
+   * traffic needs to go to a single backend service, there must be one weightedBackendService with
    * weight set to a non-zero number. Once a backendService is identified and before forwarding the
    * request to the backend service, advanced routing actions such as URL rewrites and header
    * transformations are applied depending on additional settings specified in this HttpRouteAction.

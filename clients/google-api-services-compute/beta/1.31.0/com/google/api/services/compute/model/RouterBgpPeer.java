@@ -104,7 +104,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users  - MANAGED_BY_ATTACHMENT is a BGP peer
+   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
    * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
    * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
    * the PARTNER InterconnectAttachment is created, updated, or deleted.
@@ -308,7 +308,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users  - MANAGED_BY_ATTACHMENT is a BGP peer
+   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
    * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
    * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
    * the PARTNER InterconnectAttachment is created, updated, or deleted.
@@ -320,7 +320,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the
-   * default value and can be managed by you or other users  - MANAGED_BY_ATTACHMENT is a BGP peer
+   * default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer
    * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
    * of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when
    * the PARTNER InterconnectAttachment is created, updated, or deleted.

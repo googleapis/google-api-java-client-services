@@ -56,7 +56,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#externalVpnGatewayList  for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * The value may be {@code null}.
    */
@@ -137,7 +137,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#externalVpnGatewayList  for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#externalVpnGatewayList  for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * @param kind kind or {@code null} for none
    */

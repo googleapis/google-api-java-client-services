@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<FirewallPolicyRuleMatcherLayer4Config> layer4Configs;
 
   /**
-   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<FirewallPolicyRuleSecureTag> srcSecureTags;
 
   /**
-   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestIpRanges() {
@@ -69,7 +69,7 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   }
 
   /**
-   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * @param destIpRanges destIpRanges or {@code null} for none
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
@@ -95,7 +95,7 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   }
 
   /**
-   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSrcIpRanges() {
@@ -103,7 +103,7 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   }
 
   /**
-   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
    * @param srcIpRanges srcIpRanges or {@code null} for none
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {

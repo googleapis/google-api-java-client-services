@@ -45,13 +45,10 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding `action` is enforced.
-   *
-   * The following examples are valid match expressions:
-   *
-   * "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
-   *
-   * "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
+   * against. If it evaluates to true, the corresponding `action` is enforced. The following
+   * examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') ||
+   * inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
+   * '8.8.8.8'"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,13 +98,10 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding `action` is enforced.
-   *
-   * The following examples are valid match expressions:
-   *
-   * "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
-   *
-   * "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
+   * against. If it evaluates to true, the corresponding `action` is enforced. The following
+   * examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') ||
+   * inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
+   * '8.8.8.8'"
    * @return value or {@code null} for none
    */
   public java.lang.String getMatch() {
@@ -116,13 +110,10 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
 
   /**
    * CEL expression that specifies the match condition that egress traffic from a VM is evaluated
-   * against. If it evaluates to true, the corresponding `action` is enforced.
-   *
-   * The following examples are valid match expressions:
-   *
-   * "inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
-   *
-   * "destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
+   * against. If it evaluates to true, the corresponding `action` is enforced. The following
+   * examples are valid match expressions: "inIpRange(destination.ip, '1.1.0.0/16') ||
+   * inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
+   * '8.8.8.8'"
    * @param match match or {@code null} for none
    */
   public RouterNatRule setMatch(java.lang.String match) {

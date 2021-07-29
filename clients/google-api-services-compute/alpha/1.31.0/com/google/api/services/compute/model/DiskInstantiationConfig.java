@@ -56,11 +56,11 @@ public final class DiskInstantiationConfig extends com.google.api.client.json.Ge
   /**
    * Specifies whether to include the disk and what image to use. Possible values are: - source-
    * image: to use the same image that was used to create the source instance's corresponding disk.
-   * Applicable to the boot disk and additional read-write disks.  - source-image-family: to use the
+   * Applicable to the boot disk and additional read-write disks. - source-image-family: to use the
    * same image family that was used to create the source instance's corresponding disk. Applicable
-   * to the boot disk and additional read-write disks.  - custom-image: to use a user-provided image
-   * url for disk creation. Applicable to the boot disk and additional read-write disks.  - attach-
-   * read-only: to attach a read-only disk. Applicable to read-only disks.  - do-not-include: to
+   * to the boot disk and additional read-write disks. - custom-image: to use a user-provided image
+   * url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-
+   * read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to
    * exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and
    * read-only disks.
    * The value may be {@code null}.
@@ -126,11 +126,11 @@ public final class DiskInstantiationConfig extends com.google.api.client.json.Ge
   /**
    * Specifies whether to include the disk and what image to use. Possible values are: - source-
    * image: to use the same image that was used to create the source instance's corresponding disk.
-   * Applicable to the boot disk and additional read-write disks.  - source-image-family: to use the
+   * Applicable to the boot disk and additional read-write disks. - source-image-family: to use the
    * same image family that was used to create the source instance's corresponding disk. Applicable
-   * to the boot disk and additional read-write disks.  - custom-image: to use a user-provided image
-   * url for disk creation. Applicable to the boot disk and additional read-write disks.  - attach-
-   * read-only: to attach a read-only disk. Applicable to read-only disks.  - do-not-include: to
+   * to the boot disk and additional read-write disks. - custom-image: to use a user-provided image
+   * url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-
+   * read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to
    * exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and
    * read-only disks.
    * @return value or {@code null} for none
@@ -142,11 +142,11 @@ public final class DiskInstantiationConfig extends com.google.api.client.json.Ge
   /**
    * Specifies whether to include the disk and what image to use. Possible values are: - source-
    * image: to use the same image that was used to create the source instance's corresponding disk.
-   * Applicable to the boot disk and additional read-write disks.  - source-image-family: to use the
+   * Applicable to the boot disk and additional read-write disks. - source-image-family: to use the
    * same image family that was used to create the source instance's corresponding disk. Applicable
-   * to the boot disk and additional read-write disks.  - custom-image: to use a user-provided image
-   * url for disk creation. Applicable to the boot disk and additional read-write disks.  - attach-
-   * read-only: to attach a read-only disk. Applicable to read-only disks.  - do-not-include: to
+   * to the boot disk and additional read-write disks. - custom-image: to use a user-provided image
+   * url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-
+   * read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to
    * exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and
    * read-only disks.
    * @param instantiateFrom instantiateFrom or {@code null} for none

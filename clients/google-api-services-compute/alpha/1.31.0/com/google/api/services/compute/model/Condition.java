@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * A condition to be met.
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,43 +30,42 @@ package com.google.api.services.compute.model;
 public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Trusted attributes supplied by the IAM system.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iam;
 
   /**
-   * An operator to apply the subject with.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String op;
 
   /**
-   * Trusted attributes discharged by the service.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String svc;
 
   /**
-   * Trusted attributes supplied by any service that owns resources and uses the IAM system for
-   * access control.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sys;
 
   /**
-   * The objects of the condition.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> values;
 
   /**
-   * Trusted attributes supplied by the IAM system.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getIam() {
@@ -74,7 +73,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trusted attributes supplied by the IAM system.
+   * This is deprecated and has no effect. Do not use.
    * @param iam iam or {@code null} for none
    */
   public Condition setIam(java.lang.String iam) {
@@ -83,7 +82,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An operator to apply the subject with.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getOp() {
@@ -91,7 +90,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An operator to apply the subject with.
+   * This is deprecated and has no effect. Do not use.
    * @param op op or {@code null} for none
    */
   public Condition setOp(java.lang.String op) {
@@ -100,7 +99,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trusted attributes discharged by the service.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getSvc() {
@@ -108,7 +107,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trusted attributes discharged by the service.
+   * This is deprecated and has no effect. Do not use.
    * @param svc svc or {@code null} for none
    */
   public Condition setSvc(java.lang.String svc) {
@@ -117,8 +116,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trusted attributes supplied by any service that owns resources and uses the IAM system for
-   * access control.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getSys() {
@@ -126,8 +124,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trusted attributes supplied by any service that owns resources and uses the IAM system for
-   * access control.
+   * This is deprecated and has no effect. Do not use.
    * @param sys sys or {@code null} for none
    */
   public Condition setSys(java.lang.String sys) {
@@ -136,7 +133,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The objects of the condition.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -144,7 +141,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The objects of the condition.
+   * This is deprecated and has no effect. Do not use.
    * @param values values or {@code null} for none
    */
   public Condition setValues(java.util.List<java.lang.String> values) {

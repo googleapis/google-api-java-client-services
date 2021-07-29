@@ -17,12 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represent a sole-tenant Node Group resource.
- *
- * A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your
- * specific project. Use sole-tenant nodes to keep your instances physically separated from
- * instances in other projects, or to group your instances together on the same host hardware. For
- * more information, read Sole-tenant nodes. (== resource_for {$api_version}.nodeGroups ==)
+ * Represent a sole-tenant Node Group resource. A sole-tenant node is a physical server that is
+ * dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep
+ * your instances physically separated from instances in other projects, or to group your instances
+ * together on the same host hardware. For more information, read Sole-tenant nodes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -87,7 +85,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
    * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
-   * more information, see  Maintenance policies.
+   * more information, see Maintenance policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,7 +308,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
    * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
-   * more information, see  Maintenance policies.
+   * more information, see Maintenance policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenancePolicy() {
@@ -320,7 +318,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
    * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
-   * more information, see  Maintenance policies.
+   * more information, see Maintenance policies.
    * @param maintenancePolicy maintenancePolicy or {@code null} for none
    */
   public NodeGroup setMaintenancePolicy(java.lang.String maintenancePolicy) {

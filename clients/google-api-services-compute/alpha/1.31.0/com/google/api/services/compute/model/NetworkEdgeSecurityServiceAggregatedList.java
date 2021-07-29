@@ -50,8 +50,6 @@ public final class NetworkEdgeSecurityServiceAggregatedList extends com.google.a
   private java.util.Map<String, NetworkEdgeSecurityServicesScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Always compute#networkEdgeSecurityServiceAggregatedList for
-   * lists of Network Edge Security Services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +136,6 @@ public final class NetworkEdgeSecurityServiceAggregatedList extends com.google.a
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#networkEdgeSecurityServiceAggregatedList for
-   * lists of Network Edge Security Services.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,8 +143,6 @@ public final class NetworkEdgeSecurityServiceAggregatedList extends com.google.a
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#networkEdgeSecurityServiceAggregatedList for
-   * lists of Network Edge Security Services.
    * @param kind kind or {@code null} for none
    */
   public NetworkEdgeSecurityServiceAggregatedList setKind(java.lang.String kind) {

@@ -125,6 +125,34 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private Resource resource;
 
   /**
+   * Describes a specific SPDX Document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DocumentOccurrence sbom;
+
+  /**
+   * Describes a specific SPDX File.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FileOccurrence spdxFile;
+
+  /**
+   * Describes a specific SPDX Package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PackageOccurrence spdxPackage;
+
+  /**
+   * Describes a specific SPDX Relationship.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RelationshipOccurrence spdxRelationship;
+
+  /**
    * Output only. The time this occurrence was last updated.
    * The value may be {@code null}.
    */
@@ -362,6 +390,74 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setResource(Resource resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * Describes a specific SPDX Document.
+   * @return value or {@code null} for none
+   */
+  public DocumentOccurrence getSbom() {
+    return sbom;
+  }
+
+  /**
+   * Describes a specific SPDX Document.
+   * @param sbom sbom or {@code null} for none
+   */
+  public Occurrence setSbom(DocumentOccurrence sbom) {
+    this.sbom = sbom;
+    return this;
+  }
+
+  /**
+   * Describes a specific SPDX File.
+   * @return value or {@code null} for none
+   */
+  public FileOccurrence getSpdxFile() {
+    return spdxFile;
+  }
+
+  /**
+   * Describes a specific SPDX File.
+   * @param spdxFile spdxFile or {@code null} for none
+   */
+  public Occurrence setSpdxFile(FileOccurrence spdxFile) {
+    this.spdxFile = spdxFile;
+    return this;
+  }
+
+  /**
+   * Describes a specific SPDX Package.
+   * @return value or {@code null} for none
+   */
+  public PackageOccurrence getSpdxPackage() {
+    return spdxPackage;
+  }
+
+  /**
+   * Describes a specific SPDX Package.
+   * @param spdxPackage spdxPackage or {@code null} for none
+   */
+  public Occurrence setSpdxPackage(PackageOccurrence spdxPackage) {
+    this.spdxPackage = spdxPackage;
+    return this;
+  }
+
+  /**
+   * Describes a specific SPDX Relationship.
+   * @return value or {@code null} for none
+   */
+  public RelationshipOccurrence getSpdxRelationship() {
+    return spdxRelationship;
+  }
+
+  /**
+   * Describes a specific SPDX Relationship.
+   * @param spdxRelationship spdxRelationship or {@code null} for none
+   */
+  public Occurrence setSpdxRelationship(RelationshipOccurrence spdxRelationship) {
+    this.spdxRelationship = spdxRelationship;
     return this;
   }
 

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-policyanalyzer",
+    "version": "v1-rev20210723-1.32.1"
+  }
+}

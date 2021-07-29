@@ -191,8 +191,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<MemoryEvent> memoryEvents;
 
   /**
-   * Memory information. This information is only available if memoryInfoEnabled is true in the
-   * device's policy.
+   * Memory information: contains information about device memory and storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -676,8 +675,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Memory information. This information is only available if memoryInfoEnabled is true in the
-   * device's policy.
+   * Memory information: contains information about device memory and storage.
    * @return value or {@code null} for none
    */
   public MemoryInfo getMemoryInfo() {
@@ -685,8 +683,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Memory information. This information is only available if memoryInfoEnabled is true in the
-   * device's policy.
+   * Memory information: contains information about device memory and storage.
    * @param memoryInfo memoryInfo or {@code null} for none
    */
   public Device setMemoryInfo(MemoryInfo memoryInfo) {

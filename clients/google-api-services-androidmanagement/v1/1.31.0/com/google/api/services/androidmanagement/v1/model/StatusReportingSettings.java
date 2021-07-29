@@ -75,7 +75,7 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean hardwareStatusEnabled;
 
   /**
-   * Whether memory reporting is enabled.
+   * Whether memory event reporting is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +217,7 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether memory reporting is enabled.
+   * Whether memory event reporting is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMemoryInfoEnabled() {
@@ -225,7 +225,7 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether memory reporting is enabled.
+   * Whether memory event reporting is enabled.
    * @param memoryInfoEnabled memoryInfoEnabled or {@code null} for none
    */
   public StatusReportingSettings setMemoryInfoEnabled(java.lang.Boolean memoryInfoEnabled) {

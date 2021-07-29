@@ -143,8 +143,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
-   * which external networks can connect to the instance. The IPv4 address cannot be disabled for
-   * Second Generation instances.
+   * which external networks can connect to the instance. The IPv4 address cannot be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -469,8 +468,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
-   * which external networks can connect to the instance. The IPv4 address cannot be disabled for
-   * Second Generation instances.
+   * which external networks can connect to the instance. The IPv4 address cannot be disabled.
    * @return value or {@code null} for none
    */
   public IpConfiguration getIpConfiguration() {
@@ -479,8 +477,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
-   * which external networks can connect to the instance. The IPv4 address cannot be disabled for
-   * Second Generation instances.
+   * which external networks can connect to the instance. The IPv4 address cannot be disabled.
    * @param ipConfiguration ipConfiguration or {@code null} for none
    */
   public Settings setIpConfiguration(IpConfiguration ipConfiguration) {

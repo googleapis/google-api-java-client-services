@@ -5495,22 +5495,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive',
-       * 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query within the corpus. Supported values are 'drive',
-     'appDataFolder' and 'photos'. [default: drive]
+      /** A comma-separated list of spaces to query within the corpus. Supported values are 'drive' and
+     'appDataFolder'. [default: drive]
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive',
-       * 'appDataFolder' and 'photos'.
+       * A comma-separated list of spaces to query within the corpus. Supported values are 'drive'
+       * and 'appDataFolder'.
        */
       public List setSpaces(java.lang.String spaces) {
         this.spaces = spaces;

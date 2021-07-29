@@ -122,9 +122,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String fileExtension;
 
   /**
-   * The color for a folder as an RGB hex string. The supported colors are published in the
-   * folderColorPalette field of the About resource. If an unsupported color is specified, the
-   * closest color in the palette will be used instead.
+   * The color for a folder or shortcut to a folder as an RGB hex string. The supported colors are
+   * published in the folderColorPalette field of the About resource. If an unsupported color is
+   * specified, the closest color in the palette will be used instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -702,9 +702,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color for a folder as an RGB hex string. The supported colors are published in the
-   * folderColorPalette field of the About resource. If an unsupported color is specified, the
-   * closest color in the palette will be used instead.
+   * The color for a folder or shortcut to a folder as an RGB hex string. The supported colors are
+   * published in the folderColorPalette field of the About resource. If an unsupported color is
+   * specified, the closest color in the palette will be used instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getFolderColorRgb() {
@@ -712,9 +712,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color for a folder as an RGB hex string. The supported colors are published in the
-   * folderColorPalette field of the About resource. If an unsupported color is specified, the
-   * closest color in the palette will be used instead.
+   * The color for a folder or shortcut to a folder as an RGB hex string. The supported colors are
+   * published in the folderColorPalette field of the About resource. If an unsupported color is
+   * specified, the closest color in the palette will be used instead.
    * @param folderColorRgb folderColorRgb or {@code null} for none
    */
   public File setFolderColorRgb(java.lang.String folderColorRgb) {

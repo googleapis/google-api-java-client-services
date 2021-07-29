@@ -130,11 +130,39 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.util.List<RelatedUrl> relatedUrl;
 
   /**
+   * A note describing SPDX Document which represents SBOM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DocumentNote sbom;
+
+  /**
    * A one sentence description of this note.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shortDescription;
+
+  /**
+   * A note describing SPDX File.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FileNote spdxFile;
+
+  /**
+   * A note describing SPDX Package.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PackageNote spdxPackage;
+
+  /**
+   * A note describing SPDX Relationship.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RelationshipNote spdxRelationship;
 
   /**
    * Output only. The time this note was last updated. This field can be used as a filter in list
@@ -392,6 +420,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A note describing SPDX Document which represents SBOM.
+   * @return value or {@code null} for none
+   */
+  public DocumentNote getSbom() {
+    return sbom;
+  }
+
+  /**
+   * A note describing SPDX Document which represents SBOM.
+   * @param sbom sbom or {@code null} for none
+   */
+  public Note setSbom(DocumentNote sbom) {
+    this.sbom = sbom;
+    return this;
+  }
+
+  /**
    * A one sentence description of this note.
    * @return value or {@code null} for none
    */
@@ -405,6 +450,57 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setShortDescription(java.lang.String shortDescription) {
     this.shortDescription = shortDescription;
+    return this;
+  }
+
+  /**
+   * A note describing SPDX File.
+   * @return value or {@code null} for none
+   */
+  public FileNote getSpdxFile() {
+    return spdxFile;
+  }
+
+  /**
+   * A note describing SPDX File.
+   * @param spdxFile spdxFile or {@code null} for none
+   */
+  public Note setSpdxFile(FileNote spdxFile) {
+    this.spdxFile = spdxFile;
+    return this;
+  }
+
+  /**
+   * A note describing SPDX Package.
+   * @return value or {@code null} for none
+   */
+  public PackageNote getSpdxPackage() {
+    return spdxPackage;
+  }
+
+  /**
+   * A note describing SPDX Package.
+   * @param spdxPackage spdxPackage or {@code null} for none
+   */
+  public Note setSpdxPackage(PackageNote spdxPackage) {
+    this.spdxPackage = spdxPackage;
+    return this;
+  }
+
+  /**
+   * A note describing SPDX Relationship.
+   * @return value or {@code null} for none
+   */
+  public RelationshipNote getSpdxRelationship() {
+    return spdxRelationship;
+  }
+
+  /**
+   * A note describing SPDX Relationship.
+   * @param spdxRelationship spdxRelationship or {@code null} for none
+   */
+  public Note setSpdxRelationship(RelationshipNote spdxRelationship) {
+    this.spdxRelationship = spdxRelationship;
     return this;
   }
 

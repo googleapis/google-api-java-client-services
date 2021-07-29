@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target VPN Gateway resource.
- *
- * The target VPN gateway resource represents a Classic Cloud VPN gateway. For more information,
- * read the the Cloud VPN Overview. (== resource_for {$api_version}.targetVpnGateways ==)
+ * Represents a Target VPN Gateway resource. The target VPN gateway resource represents a Classic
+ * Cloud VPN gateway. For more information, read the the Cloud VPN Overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -34,7 +34,7 @@ public final class FutureReservationsScopedList extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<FutureReservation> resources;
+  private java.util.List<FutureReservation> futureReservations;
 
   static {
     // hack to force ProGuard to consider FutureReservation used, since otherwise it would be stripped out
@@ -53,16 +53,16 @@ public final class FutureReservationsScopedList extends com.google.api.client.js
    * A list of future reservations contained in this scope.
    * @return value or {@code null} for none
    */
-  public java.util.List<FutureReservation> getResources() {
-    return resources;
+  public java.util.List<FutureReservation> getFutureReservations() {
+    return futureReservations;
   }
 
   /**
    * A list of future reservations contained in this scope.
-   * @param resources resources or {@code null} for none
+   * @param futureReservations futureReservations or {@code null} for none
    */
-  public FutureReservationsScopedList setResources(java.util.List<FutureReservation> resources) {
-    this.resources = resources;
+  public FutureReservationsScopedList setFutureReservations(java.util.List<FutureReservation> futureReservations) {
+    this.futureReservations = futureReservations;
     return this;
   }
 

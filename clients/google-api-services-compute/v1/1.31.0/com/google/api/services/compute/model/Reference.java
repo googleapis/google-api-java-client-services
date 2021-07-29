@@ -37,7 +37,7 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * A description of the reference type with no implied semantics. Possible values include: -
+   * A description of the reference type with no implied semantics. Possible values include: 1.
    * MEMBER_OF
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the reference type with no implied semantics. Possible values include: -
+   * A description of the reference type with no implied semantics. Possible values include: 1.
    * MEMBER_OF
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A description of the reference type with no implied semantics. Possible values include: -
+   * A description of the reference type with no implied semantics. Possible values include: 1.
    * MEMBER_OF
    * @param referenceType referenceType or {@code null} for none
    */

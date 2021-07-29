@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Write a Data Access (Gin) log
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class LogConfigDataAccessOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logMode;
 
   /**
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogMode() {
@@ -43,6 +45,7 @@ public final class LogConfigDataAccessOptions extends com.google.api.client.json
   }
 
   /**
+   * This is deprecated and has no effect. Do not use.
    * @param logMode logMode or {@code null} for none
    */
   public LogConfigDataAccessOptions setLogMode(java.lang.String logMode) {

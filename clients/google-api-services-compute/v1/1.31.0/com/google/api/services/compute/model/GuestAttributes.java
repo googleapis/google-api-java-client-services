@@ -37,8 +37,8 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * The path to be queried. This can be the default namespace ('/') or a nested namespace ('/\/')
-   * or a specified key ('/\/\')
+   * The path to be queried. This can be the default namespace ('') or a nested namespace ('\/') or
+   * a specified key ('\/\').
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The path to be queried. This can be the default namespace ('/') or a nested namespace ('/\/')
-   * or a specified key ('/\/\')
+   * The path to be queried. This can be the default namespace ('') or a nested namespace ('\/') or
+   * a specified key ('\/\').
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryPath() {
@@ -99,8 +99,8 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The path to be queried. This can be the default namespace ('/') or a nested namespace ('/\/')
-   * or a specified key ('/\/\')
+   * The path to be queried. This can be the default namespace ('') or a nested namespace ('\/') or
+   * a specified key ('\/\').
    * @param queryPath queryPath or {@code null} for none
    */
   public GuestAttributes setQueryPath(java.lang.String queryPath) {

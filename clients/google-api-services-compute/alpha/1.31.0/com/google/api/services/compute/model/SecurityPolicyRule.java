@@ -56,9 +56,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
-   *
-   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
+   * specified when the versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,6 +110,13 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private SecurityPolicyRuleRateLimitOptions rateLimitOptions;
 
   /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRedirectOptions redirectOptions;
+
+  /**
    * This must be specified for redirect actions. Cannot be specified for any other actions.
    * The value may be {@code null}.
    */
@@ -135,9 +141,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,9 +212,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
-   *
-   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
+   * specified when the versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLogging() {
@@ -220,9 +223,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
-   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
-   *
-   * This field may only be specified when the versioned_expr is set to FIREWALL.
+   * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be
+   * specified when the versioned_expr is set to FIREWALL.
    * @param enableLogging enableLogging or {@code null} for none
    */
   public SecurityPolicyRule setEnableLogging(java.lang.Boolean enableLogging) {
@@ -341,6 +343,23 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRedirectOptions getRedirectOptions() {
+    return redirectOptions;
+  }
+
+  /**
+   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * @param redirectOptions redirectOptions or {@code null} for none
+   */
+  public SecurityPolicyRule setRedirectOptions(SecurityPolicyRuleRedirectOptions redirectOptions) {
+    this.redirectOptions = redirectOptions;
+    return this;
+  }
+
+  /**
    * This must be specified for redirect actions. Cannot be specified for any other actions.
    * @return value or {@code null} for none
    */
@@ -396,9 +415,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetResources() {
@@ -408,9 +425,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
-   * will receive the rule.
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
    * @param targetResources targetResources or {@code null} for none
    */
   public SecurityPolicyRule setTargetResources(java.util.List<java.lang.String> targetResources) {

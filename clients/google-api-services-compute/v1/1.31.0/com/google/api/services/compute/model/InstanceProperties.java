@@ -130,7 +130,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
    * default.
    * The value may be {@code null}.
    */
@@ -392,7 +392,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
    * default.
    * @return value or {@code null} for none
    */
@@ -401,7 +401,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
    * default.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */

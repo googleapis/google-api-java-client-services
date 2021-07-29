@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class GuestOsFeature extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of a supported feature. Read  Enabling guest operating system features to see a list of
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
    * available options.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
-   * The ID of a supported feature. Read  Enabling guest operating system features to see a list of
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
    * available options.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of a supported feature. Read  Enabling guest operating system features to see a list of
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
    * available options.
    * @param type type or {@code null} for none
    */

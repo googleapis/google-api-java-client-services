@@ -32,10 +32,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,10 +108,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomaticRestart() {
@@ -123,10 +119,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
-   * instances. Preemptible instances cannot be automatically restarted.
-   *
-   * By default, this is set to true so an instance is automatically restarted if it is terminated
-   * by Compute Engine.
+   * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
+   * true so an instance is automatically restarted if it is terminated by Compute Engine.
    * @param automaticRestart automaticRestart or {@code null} for none
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {

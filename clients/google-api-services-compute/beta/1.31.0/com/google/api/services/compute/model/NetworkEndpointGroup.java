@@ -17,15 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a collection of network endpoints.
- *
- * A network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are
- * reachable, and where they are located. For more information about using NEGs, see  Setting up
- * external HTTP(S) Load Balancing with internet NEGs,  Setting up zonal NEGs, or  Setting up
- * external HTTP(S) Load Balancing with serverless NEGs. (== resource_for
- * {$api_version}.networkEndpointGroups ==) (== resource_for
- * {$api_version}.globalNetworkEndpointGroups ==) (== resource_for
- * {$api_version}.regionNetworkEndpointGroups ==)
+ * Represents a collection of network endpoints. A network endpoint group (NEG) defines how a set of
+ * endpoints should be reached, whether they are reachable, and where they are located. For more
+ * information about using NEGs, see Setting up external HTTP(S) Load Balancing with internet NEGs,
+ * Setting up zonal NEGs, or Setting up external HTTP(S) Load Balancing with serverless NEGs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -133,11 +128,20 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * PRIVATE_SERVICE_CONNECT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkEndpointType;
+
+  /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscTargetService;
 
   /**
    * [Output Only] The URL of the region where the network endpoint group is located.
@@ -152,6 +156,14 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
+   * cloudFunction or serverlessDeployment may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupServerlessDeployment serverlessDeployment;
 
   /**
    * [Output only] Number of network endpoints in the network endpoint group.
@@ -400,7 +412,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * PRIVATE_SERVICE_CONNECT.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointType() {
@@ -409,11 +422,31 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
 
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
-   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
+   * PRIVATE_SERVICE_CONNECT.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {
     this.networkEndpointType = networkEndpointType;
+    return this;
+  }
+
+  /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscTargetService() {
+    return pscTargetService;
+  }
+
+  /**
+   * The target service url used to set up private service connection to a Google API. An example
+   * value is: "asia-northeast3-cloudkms.googleapis.com"
+   * @param pscTargetService pscTargetService or {@code null} for none
+   */
+  public NetworkEndpointGroup setPscTargetService(java.lang.String pscTargetService) {
+    this.pscTargetService = pscTargetService;
     return this;
   }
 
@@ -448,6 +481,25 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
+   * cloudFunction or serverlessDeployment may be set.
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupServerlessDeployment getServerlessDeployment() {
+    return serverlessDeployment;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine,
+   * cloudFunction or serverlessDeployment may be set.
+   * @param serverlessDeployment serverlessDeployment or {@code null} for none
+   */
+  public NetworkEndpointGroup setServerlessDeployment(NetworkEndpointGroupServerlessDeployment serverlessDeployment) {
+    this.serverlessDeployment = serverlessDeployment;
     return this;
   }
 

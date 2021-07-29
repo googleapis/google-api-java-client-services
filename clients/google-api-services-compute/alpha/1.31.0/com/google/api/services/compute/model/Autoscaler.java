@@ -17,20 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Autoscaler resource.
- *
- * Google Compute Engine has two Autoscaler resources:
- *
- * * [Zonal](/compute/docs/reference/rest/{$api_version}/autoscalers) *
- * [Regional](/compute/docs/reference/rest/{$api_version}/regionAutoscalers)
- *
- * Use autoscalers to automatically add or delete instances from a managed instance group according
- * to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.
- *
- * For zonal managed instance groups resource, use the autoscaler resource.
- *
- * For regional managed instance groups, use the regionAutoscalers resource. (== resource_for
- * {$api_version}.autoscalers ==) (== resource_for {$api_version}.regionAutoscalers ==)
+ * Represents an Autoscaler resource. Google Compute Engine has two Autoscaler resources: *
+ * [Zonal](/compute/docs/reference/rest/alpha/autoscalers) *
+ * [Regional](/compute/docs/reference/rest/alpha/regionAutoscalers) Use autoscalers to automatically
+ * add or delete instances from a managed instance group according to your defined autoscaling
+ * policy. For more information, read Autoscaling Groups of Instances. For zonal managed instance
+ * groups resource, use the autoscaler resource. For regional managed instance groups, use the
+ * regionAutoscalers resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -44,10 +37,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
-   *
-   * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
-   * or 60%.
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
+   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
+   * 60%.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,11 +125,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
-   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
-   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
-   * users. Details are present in the statusDetails field.  New values might be added in the
-   * future.
+   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
+   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
+   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
+   * Details are present in the statusDetails field. New values might be added in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,10 +161,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
-   *
-   * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
-   * or 60%.
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
+   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
+   * 60%.
    * @return value or {@code null} for none
    */
   public AutoscalingPolicy getAutoscalingPolicy() {
@@ -182,10 +172,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration parameters for the autoscaling algorithm. You can define one or more signals
-   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.
-   *
-   * If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6
-   * or 60%.
+   * for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If
+   * none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or
+   * 60%.
    * @param autoscalingPolicy autoscalingPolicy or {@code null} for none
    */
   public Autoscaler setAutoscalingPolicy(AutoscalingPolicy autoscalingPolicy) {
@@ -381,11 +370,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
-   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
-   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
-   * users. Details are present in the statusDetails field.  New values might be added in the
-   * future.
+   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
+   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
+   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
+   * Details are present in the statusDetails field. New values might be added in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -394,11 +382,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the autoscaler configuration. Current set of possible values: -
-   * PENDING: Autoscaler backend hasn't read new/updated configuration.  - DELETING: Configuration
-   * is being deleted.  - ACTIVE: Configuration is acknowledged to be effective. Some warnings might
-   * be present in the statusDetails field.  - ERROR: Configuration has errors. Actionable for
-   * users. Details are present in the statusDetails field.  New values might be added in the
-   * future.
+   * PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is
+   * being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be
+   * present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users.
+   * Details are present in the statusDetails field. New values might be added in the future.
    * @param status status or {@code null} for none
    */
   public Autoscaler setStatus(java.lang.String status) {

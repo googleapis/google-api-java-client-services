@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go
- * /rpcsp-custom-fields.
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,22 +30,21 @@ package com.google.api.services.compute.model;
 public final class LogConfigCounterOptionsCustomField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name is the field name.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Value is the field value. It is important that in contrast to the CounterOptions.field, the
-   * value here is a constant that is not derived from the IAMContext.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Name is the field name.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,7 +52,7 @@ public final class LogConfigCounterOptionsCustomField extends com.google.api.cli
   }
 
   /**
-   * Name is the field name.
+   * This is deprecated and has no effect. Do not use.
    * @param name name or {@code null} for none
    */
   public LogConfigCounterOptionsCustomField setName(java.lang.String name) {
@@ -63,8 +61,7 @@ public final class LogConfigCounterOptionsCustomField extends com.google.api.cli
   }
 
   /**
-   * Value is the field value. It is important that in contrast to the CounterOptions.field, the
-   * value here is a constant that is not derived from the IAMContext.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -72,8 +69,7 @@ public final class LogConfigCounterOptionsCustomField extends com.google.api.cli
   }
 
   /**
-   * Value is the field value. It is important that in contrast to the CounterOptions.field, the
-   * value here is a constant that is not derived from the IAMContext.
+   * This is deprecated and has no effect. Do not use.
    * @param value value or {@code null} for none
    */
   public LogConfigCounterOptionsCustomField setValue(java.lang.String value) {

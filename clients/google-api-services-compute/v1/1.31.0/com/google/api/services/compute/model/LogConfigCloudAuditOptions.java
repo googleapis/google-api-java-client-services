@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Write a Cloud Audit log
+ * This is deprecated and has no effect. Do not use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class LogConfigCloudAuditOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information used by the Cloud Audit Logging pipeline.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthorizationLoggingOptions authorizationLoggingOptions;
 
   /**
-   * The log_name to populate in the Cloud Audit Record.
+   * This is deprecated and has no effect. Do not use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logName;
 
   /**
-   * Information used by the Cloud Audit Logging pipeline.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public AuthorizationLoggingOptions getAuthorizationLoggingOptions() {
@@ -52,7 +52,7 @@ public final class LogConfigCloudAuditOptions extends com.google.api.client.json
   }
 
   /**
-   * Information used by the Cloud Audit Logging pipeline.
+   * This is deprecated and has no effect. Do not use.
    * @param authorizationLoggingOptions authorizationLoggingOptions or {@code null} for none
    */
   public LogConfigCloudAuditOptions setAuthorizationLoggingOptions(AuthorizationLoggingOptions authorizationLoggingOptions) {
@@ -61,7 +61,7 @@ public final class LogConfigCloudAuditOptions extends com.google.api.client.json
   }
 
   /**
-   * The log_name to populate in the Cloud Audit Record.
+   * This is deprecated and has no effect. Do not use.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogName() {
@@ -69,7 +69,7 @@ public final class LogConfigCloudAuditOptions extends com.google.api.client.json
   }
 
   /**
-   * The log_name to populate in the Cloud Audit Record.
+   * This is deprecated and has no effect. Do not use.
    * @param logName logName or {@code null} for none
    */
   public LogConfigCloudAuditOptions setLogName(java.lang.String logName) {

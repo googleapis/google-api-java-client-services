@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
    * true then the instances may not be specified in the request.
    * The value may be {@code null}.
    */
@@ -55,8 +55,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
-   * minimum, delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the minimum action is NONE. If your update requires a more disruptive action than you
    * set with this flag, the necessary action is performed to execute the update.
    * The value may be {@code null}.
@@ -66,8 +66,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
-   * REPLACE: Delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the most disruptive allowed action is REPLACE. If your update requires a more
    * disruptive action than you set with this flag, the update request will fail.
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   private java.lang.String mostDisruptiveAllowedAction;
 
   /**
-   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
    * true then the instances may not be specified in the request.
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   }
 
   /**
-   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
    * true then the instances may not be specified in the request.
    * @param allInstances allInstances or {@code null} for none
    */
@@ -134,8 +134,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
-   * minimum, delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the minimum action is NONE. If your update requires a more disruptive action than you
    * set with this flag, the necessary action is performed to execute the update.
    * @return value or {@code null} for none
@@ -146,8 +146,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
-   * minimum, delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the minimum action is NONE. If your update requires a more disruptive action than you
    * set with this flag, the necessary action is performed to execute the update.
    * @param minimalAction minimalAction or {@code null} for none
@@ -159,8 +159,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
-   * REPLACE: Delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the most disruptive allowed action is REPLACE. If your update requires a more
    * disruptive action than you set with this flag, the update request will fail.
    * @return value or {@code null} for none
@@ -171,8 +171,8 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
 
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
-   * REPLACE: Delete the instance and create it again.  - RESTART: Stop the instance and start it
-   * again.  - REFRESH: Do not stop the instance.  - NONE: Do not disrupt the instance at all.  By
+   * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
+   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
    * default, the most disruptive allowed action is REPLACE. If your update requires a more
    * disruptive action than you set with this flag, the update request will fail.
    * @param mostDisruptiveAllowedAction mostDisruptiveAllowedAction or {@code null} for none

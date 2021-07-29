@@ -69,10 +69,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   private java.lang.String prefixRedirect;
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are:   -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  - FOUND, which
-   * corresponds to 302.  - SEE_OTHER which corresponds to 303.  - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method will be retained.  - PERMANENT_REDIRECT,
+   * The HTTP Status code to use for this RedirectAction. Supported values are: -
+   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
+   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
+   * corresponds to 307. In this case, the request method will be retained. - PERMANENT_REDIRECT,
    * which corresponds to 308. In this case, the request method will be retained.
    * The value may be {@code null}.
    */
@@ -179,10 +179,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are:   -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  - FOUND, which
-   * corresponds to 302.  - SEE_OTHER which corresponds to 303.  - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method will be retained.  - PERMANENT_REDIRECT,
+   * The HTTP Status code to use for this RedirectAction. Supported values are: -
+   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
+   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
+   * corresponds to 307. In this case, the request method will be retained. - PERMANENT_REDIRECT,
    * which corresponds to 308. In this case, the request method will be retained.
    * @return value or {@code null} for none
    */
@@ -191,10 +191,10 @@ public final class HttpRedirectAction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The HTTP Status code to use for this RedirectAction. Supported values are:   -
-   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.  - FOUND, which
-   * corresponds to 302.  - SEE_OTHER which corresponds to 303.  - TEMPORARY_REDIRECT, which
-   * corresponds to 307. In this case, the request method will be retained.  - PERMANENT_REDIRECT,
+   * The HTTP Status code to use for this RedirectAction. Supported values are: -
+   * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301. - FOUND, which
+   * corresponds to 302. - SEE_OTHER which corresponds to 303. - TEMPORARY_REDIRECT, which
+   * corresponds to 307. In this case, the request method will be retained. - PERMANENT_REDIRECT,
    * which corresponds to 308. In this case, the request method will be retained.
    * @param redirectResponseCode redirectResponseCode or {@code null} for none
    */

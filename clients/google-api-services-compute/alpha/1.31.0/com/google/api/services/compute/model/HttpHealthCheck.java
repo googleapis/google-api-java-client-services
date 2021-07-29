@@ -17,10 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a legacy HTTP Health Check resource.
- *
- * Legacy health checks are required by network load balancers. For more information, read Health
- * Check Concepts.
+ * Represents a legacy HTTP Health Check resource. Legacy HTTP health checks are now only required
+ * by target pool-based network load balancers. For all other load balancers, including backend
+ * service-based network load balancers, and for managed instance group auto-healing, you must use
+ * modern (non-legacy) health checks. For more information, see Health checks overview .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

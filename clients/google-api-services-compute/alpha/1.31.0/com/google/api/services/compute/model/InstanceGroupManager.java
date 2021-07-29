@@ -17,23 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Whether the instance is a standby. Properties of a standby instance comparing to the regular
- * instance: ========================================================================= | regular |
- * standby ========================================================================= managed by IGM?
- * | yes | yes added to the IG? | yes | yes counts towards IGM's target size? | yes | no taken into
- * account by Autoscaler? | yes | no receives traffic from LB? | yes | no
- * =========================================================================
- *
- * Represents a Managed Instance Group resource.
- *
- * An instance group is a collection of VM instances that you can manage as a single entity. For
- * more information, read Instance groups.
- *
- * For zonal Managed Instance Group, use the instanceGroupManagers resource.
- *
- * For regional Managed Instance Group, use the regionInstanceGroupManagers resource. (==
- * resource_for {$api_version}.instanceGroupManagers ==) (== resource_for
- * {$api_version}.regionInstanceGroupManagers ==)
+ * Represents a Managed Instance Group resource. An instance group is a collection of VM instances
+ * that you can manage as a single entity. For more information, read Instance groups. For zonal
+ * Managed Instance Group, use the instanceGroupManagers resource. For regional Managed Instance
+ * Group, use the regionInstanceGroupManagers resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -77,7 +64,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerActionsSummary currentActions;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,9 +90,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
    * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
+   * InstanceGroupManager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,6 +184,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String serviceAccount;
 
   /**
+   * Stanby policy for stopped and suspended instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStandbyPolicy standbyPolicy;
+
+  /**
    * Stateful configuration for this Instanced Group Manager
    * The value may be {@code null}.
    */
@@ -231,7 +224,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of stopped instances for this managed instance group. This number changes
    * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +233,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of suspended instances for this managed instance group. This number changes
    * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,13 +247,12 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerUpdatePolicy updatePolicy;
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances.
-   *
-   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
-   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
-   * about the relationships between these fields. Exactly one version must leave the targetSize
-   * field unset. That version will be applied to all remaining instances. For more information,
-   * read about canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances. Each
+   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -349,7 +341,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -357,7 +349,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource.
    * @param description description or {@code null} for none
    */
   public InstanceGroupManager setDescription(java.lang.String description) {
@@ -407,9 +399,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
    * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
+   * InstanceGroupManager.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -421,9 +412,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
    * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
+   * InstanceGroupManager.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -437,9 +427,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
    * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
+   * InstanceGroupManager.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -452,9 +441,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
    * update the InstanceGroupManager, otherwise the request will fail with error 412
-   * conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
+   * conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an
+   * InstanceGroupManager.
    * @see #setFingerprint()
    *
    * <p>
@@ -674,6 +662,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
+   * Stanby policy for stopped and suspended instances.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStandbyPolicy getStandbyPolicy() {
+    return standbyPolicy;
+  }
+
+  /**
+   * Stanby policy for stopped and suspended instances.
+   * @param standbyPolicy standbyPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setStandbyPolicy(InstanceGroupManagerStandbyPolicy standbyPolicy) {
+    this.standbyPolicy = standbyPolicy;
+    return this;
+  }
+
+  /**
    * Stateful configuration for this Instanced Group Manager
    * @return value or {@code null} for none
    */
@@ -750,7 +755,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of stopped instances for this managed instance group. This number changes
    * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetStoppedSize() {
@@ -760,7 +765,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of stopped instances for this managed instance group. This number changes
    * when you: - Stop instance using the stopInstances method or start instances using the
-   * startInstances method.  - Manually change the targetStoppedSize using the update method.
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
    * @param targetStoppedSize targetStoppedSize or {@code null} for none
    */
   public InstanceGroupManager setTargetStoppedSize(java.lang.Integer targetStoppedSize) {
@@ -771,7 +776,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of suspended instances for this managed instance group. This number changes
    * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetSuspendedSize() {
@@ -781,7 +786,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * The target number of suspended instances for this managed instance group. This number changes
    * when you: - Suspend instance using the suspendInstances method or resume instances using the
-   * resumeInstances method.  - Manually change the targetSuspendedSize using the update method.
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
    * @param targetSuspendedSize targetSuspendedSize or {@code null} for none
    */
   public InstanceGroupManager setTargetSuspendedSize(java.lang.Integer targetSuspendedSize) {
@@ -807,13 +812,12 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances.
-   *
-   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
-   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
-   * about the relationships between these fields. Exactly one version must leave the targetSize
-   * field unset. That version will be applied to all remaining instances. For more information,
-   * read about canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances. Each
+   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroupManagerVersion> getVersions() {
@@ -821,13 +825,12 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the instance templates used by this managed instance group to create instances.
-   *
-   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
-   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
-   * about the relationships between these fields. Exactly one version must leave the targetSize
-   * field unset. That version will be applied to all remaining instances. For more information,
-   * read about canary updates.
+   * Specifies the instance templates used by this managed instance group to create instances. Each
+   * version is defined by an instanceTemplate and a name. Every version can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
    * @param versions versions or {@code null} for none
    */
   public InstanceGroupManager setVersions(java.util.List<InstanceGroupManagerVersion> versions) {

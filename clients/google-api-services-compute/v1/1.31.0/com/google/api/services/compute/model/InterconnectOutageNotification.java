@@ -53,7 +53,7 @@ public final class InterconnectOutageNotification extends com.google.api.client.
 
   /**
    * Form this outage is expected to take, which can take one of the following values: - OUTAGE: The
-   * Interconnect may be completely out of service for some or all of the specified window.  -
+   * Interconnect may be completely out of service for some or all of the specified window. -
    * PARTIAL_OUTAGE: Some circuits comprising the Interconnect as a whole should remain up, but with
    * reduced bandwidth. Note that the versions of this enum prefixed with "IT_" have been deprecated
    * in favor of the unprefixed values.
@@ -88,9 +88,9 @@ public final class InterconnectOutageNotification extends com.google.api.client.
   /**
    * State of this notification, which can take one of the following values: - ACTIVE: This outage
    * notification is active. The event could be in the past, present, or future. See start_time and
-   * end_time for scheduling.  - CANCELLED: The outage associated with this notification was
-   * cancelled before the outage was due to start.  - COMPLETED: The outage associated with this
-   * notification is complete.  Note that the versions of this enum prefixed with "NS_" have been
+   * end_time for scheduling. - CANCELLED: The outage associated with this notification was
+   * cancelled before the outage was due to start. - COMPLETED: The outage associated with this
+   * notification is complete. Note that the versions of this enum prefixed with "NS_" have been
    * deprecated in favor of the unprefixed values.
    * The value may be {@code null}.
    */
@@ -152,7 +152,7 @@ public final class InterconnectOutageNotification extends com.google.api.client.
 
   /**
    * Form this outage is expected to take, which can take one of the following values: - OUTAGE: The
-   * Interconnect may be completely out of service for some or all of the specified window.  -
+   * Interconnect may be completely out of service for some or all of the specified window. -
    * PARTIAL_OUTAGE: Some circuits comprising the Interconnect as a whole should remain up, but with
    * reduced bandwidth. Note that the versions of this enum prefixed with "IT_" have been deprecated
    * in favor of the unprefixed values.
@@ -164,7 +164,7 @@ public final class InterconnectOutageNotification extends com.google.api.client.
 
   /**
    * Form this outage is expected to take, which can take one of the following values: - OUTAGE: The
-   * Interconnect may be completely out of service for some or all of the specified window.  -
+   * Interconnect may be completely out of service for some or all of the specified window. -
    * PARTIAL_OUTAGE: Some circuits comprising the Interconnect as a whole should remain up, but with
    * reduced bandwidth. Note that the versions of this enum prefixed with "IT_" have been deprecated
    * in favor of the unprefixed values.
@@ -233,9 +233,9 @@ public final class InterconnectOutageNotification extends com.google.api.client.
   /**
    * State of this notification, which can take one of the following values: - ACTIVE: This outage
    * notification is active. The event could be in the past, present, or future. See start_time and
-   * end_time for scheduling.  - CANCELLED: The outage associated with this notification was
-   * cancelled before the outage was due to start.  - COMPLETED: The outage associated with this
-   * notification is complete.  Note that the versions of this enum prefixed with "NS_" have been
+   * end_time for scheduling. - CANCELLED: The outage associated with this notification was
+   * cancelled before the outage was due to start. - COMPLETED: The outage associated with this
+   * notification is complete. Note that the versions of this enum prefixed with "NS_" have been
    * deprecated in favor of the unprefixed values.
    * @return value or {@code null} for none
    */
@@ -246,9 +246,9 @@ public final class InterconnectOutageNotification extends com.google.api.client.
   /**
    * State of this notification, which can take one of the following values: - ACTIVE: This outage
    * notification is active. The event could be in the past, present, or future. See start_time and
-   * end_time for scheduling.  - CANCELLED: The outage associated with this notification was
-   * cancelled before the outage was due to start.  - COMPLETED: The outage associated with this
-   * notification is complete.  Note that the versions of this enum prefixed with "NS_" have been
+   * end_time for scheduling. - CANCELLED: The outage associated with this notification was
+   * cancelled before the outage was due to start. - COMPLETED: The outage associated with this
+   * notification is complete. Note that the versions of this enum prefixed with "NS_" have been
    * deprecated in favor of the unprefixed values.
    * @param state state or {@code null} for none
    */

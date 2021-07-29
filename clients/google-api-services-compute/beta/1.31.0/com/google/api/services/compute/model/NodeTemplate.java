@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represent a sole-tenant Node Template resource.
- *
- * You can use a template to define properties for nodes in a node group. For more information, read
- * Creating node groups and instances. (== resource_for {$api_version}.nodeTemplates ==)
+ * Represent a sole-tenant Node Template resource. You can use a template to define properties for
+ * nodes in a node group. For more information, read Creating node groups and instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -118,10 +116,8 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
    * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties.
-   *
-   * This field is mutually exclusive with the node_type property; you can only define one or the
-   * other, but not both.
+   * create nodes of a type that matches these properties. This field is mutually exclusive with the
+   * node_type property; you can only define one or the other, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,11 +138,10 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Sets the binding properties for the physical server. Valid values include: - [Default]
-   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server  -
-   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible
-   *
-   * See Sole-tenant node options for more information.
+   * Sets the binding properties for the physical server. Valid values include: - *[Default]*
+   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server -
+   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible See
+   * Sole-tenant node options for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,10 +338,8 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
    * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties.
-   *
-   * This field is mutually exclusive with the node_type property; you can only define one or the
-   * other, but not both.
+   * create nodes of a type that matches these properties. This field is mutually exclusive with the
+   * node_type property; you can only define one or the other, but not both.
    * @return value or {@code null} for none
    */
   public NodeTemplateNodeTypeFlexibility getNodeTypeFlexibility() {
@@ -355,10 +348,8 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
    * The flexible properties of the desired node type. Node groups that use this node template will
-   * create nodes of a type that matches these properties.
-   *
-   * This field is mutually exclusive with the node_type property; you can only define one or the
-   * other, but not both.
+   * create nodes of a type that matches these properties. This field is mutually exclusive with the
+   * node_type property; you can only define one or the other, but not both.
    * @param nodeTypeFlexibility nodeTypeFlexibility or {@code null} for none
    */
   public NodeTemplate setNodeTypeFlexibility(NodeTemplateNodeTypeFlexibility nodeTypeFlexibility) {
@@ -401,11 +392,10 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets the binding properties for the physical server. Valid values include: - [Default]
-   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server  -
-   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible
-   *
-   * See Sole-tenant node options for more information.
+   * Sets the binding properties for the physical server. Valid values include: - *[Default]*
+   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server -
+   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible See
+   * Sole-tenant node options for more information.
    * @return value or {@code null} for none
    */
   public ServerBinding getServerBinding() {
@@ -413,11 +403,10 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sets the binding properties for the physical server. Valid values include: - [Default]
-   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server  -
-   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible
-   *
-   * See Sole-tenant node options for more information.
+   * Sets the binding properties for the physical server. Valid values include: - *[Default]*
+   * RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server -
+   * RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible See
+   * Sole-tenant node options for more information.
    * @param serverBinding serverBinding or {@code null} for none
    */
   public NodeTemplate setServerBinding(ServerBinding serverBinding) {

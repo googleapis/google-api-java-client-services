@@ -37,13 +37,6 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String endpoint;
 
   /**
-   * The url of a consumer forwarding rule. [Deprecated] Do not use.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String forwardingRule;
-
-  /**
    * The PSC connection id of the connected endpoint.
    * The value may be {@code null}.
    */
@@ -71,23 +64,6 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public ServiceAttachmentConnectedEndpoint setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
-    return this;
-  }
-
-  /**
-   * The url of a consumer forwarding rule. [Deprecated] Do not use.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getForwardingRule() {
-    return forwardingRule;
-  }
-
-  /**
-   * The url of a consumer forwarding rule. [Deprecated] Do not use.
-   * @param forwardingRule forwardingRule or {@code null} for none
-   */
-  public ServiceAttachmentConnectedEndpoint setForwardingRule(java.lang.String forwardingRule) {
-    this.forwardingRule = forwardingRule;
     return this;
   }
 

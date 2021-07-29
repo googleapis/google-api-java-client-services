@@ -17,12 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target gRPC Proxy resource.
- *
- * A target gRPC proxy is a component of load balancers intended for load balancing gRPC traffic.
- * Only global forwarding rules with load balancing scheme INTERNAL_SELF_MANAGED can reference a
- * target gRPC proxy. The target gRPC Proxy references a URL map that specifies how traffic is
- * routed to gRPC backend services. (== resource_for {$api_version}.targetGrpcProxies ==)
+ * Represents a Target gRPC Proxy resource. A target gRPC proxy is a component of load balancers
+ * intended for load balancing gRPC traffic. Only global forwarding rules with load balancing scheme
+ * INTERNAL_SELF_MANAGED can reference a target gRPC proxy. The target gRPC Proxy references a URL
+ * map that specifies how traffic is routed to gRPC backend services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

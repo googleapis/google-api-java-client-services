@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Interconnect resource.
- *
- * An Interconnect resource is a dedicated connection between the GCP network and your on-premises
- * network. For more information, read the  Dedicated Interconnect Overview. (== resource_for
- * {$api_version}.interconnects ==)
+ * Represents an Interconnect resource. An Interconnect resource is a dedicated connection between
+ * the GCP network and your on-premises network. For more information, read the Dedicated
+ * Interconnect Overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -111,7 +109,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner.  - DEDICATED: A dedicated physical
+   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
    * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
    * DEDICATED.
    * The value may be {@code null}.
@@ -128,7 +126,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics  - LINK_TYPE_ETHERNET_100G_LR: A 100G
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
    * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
    * bundle, not the speed of the entire bundle.
    * The value may be {@code null}.
@@ -167,8 +165,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current status of this Interconnect's functionality, which can take one of
    * the following values: - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to
-   * use. Attachments may be provisioned on this Interconnect.  - OS_UNPROVISIONED: An Interconnect
-   * that has not completed turnup. No attachments may be provisioned on this Interconnect.  -
+   * use. Attachments may be provisioned on this Interconnect. - OS_UNPROVISIONED: An Interconnect
+   * that has not completed turnup. No attachments may be provisioned on this Interconnect. -
    * OS_UNDER_MAINTENANCE: An Interconnect that is undergoing internal maintenance. No attachments
    * may be provisioned or updated on this Interconnect.
    * The value may be {@code null}.
@@ -209,8 +207,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current state of Interconnect functionality, which can take one of the
    * following values: - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments
-   * may be provisioned on this Interconnect.  - UNPROVISIONED: The Interconnect has not completed
-   * turnup. No attachments may be provisioned on this Interconnect.  - UNDER_MAINTENANCE: The
+   * may be provisioned on this Interconnect. - UNPROVISIONED: The Interconnect has not completed
+   * turnup. No attachments may be provisioned on this Interconnect. - UNDER_MAINTENANCE: The
    * Interconnect is undergoing internal maintenance. No attachments may be provisioned or updated
    * on this Interconnect.
    * The value may be {@code null}.
@@ -402,7 +400,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner.  - DEDICATED: A dedicated physical
+   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
    * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
    * DEDICATED.
    * @return value or {@code null} for none
@@ -413,7 +411,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
-   * interconnection shared between customers though a partner.  - DEDICATED: A dedicated physical
+   * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
    * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
    * DEDICATED.
    * @param interconnectType interconnectType or {@code null} for none
@@ -442,7 +440,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics  - LINK_TYPE_ETHERNET_100G_LR: A 100G
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
    * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
    * bundle, not the speed of the entire bundle.
    * @return value or {@code null} for none
@@ -453,7 +451,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested, which can take one of the following values: -
-   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics  - LINK_TYPE_ETHERNET_100G_LR: A 100G
+   * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
    * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
    * bundle, not the speed of the entire bundle.
    * @param linkType linkType or {@code null} for none
@@ -531,8 +529,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current status of this Interconnect's functionality, which can take one of
    * the following values: - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to
-   * use. Attachments may be provisioned on this Interconnect.  - OS_UNPROVISIONED: An Interconnect
-   * that has not completed turnup. No attachments may be provisioned on this Interconnect.  -
+   * use. Attachments may be provisioned on this Interconnect. - OS_UNPROVISIONED: An Interconnect
+   * that has not completed turnup. No attachments may be provisioned on this Interconnect. -
    * OS_UNDER_MAINTENANCE: An Interconnect that is undergoing internal maintenance. No attachments
    * may be provisioned or updated on this Interconnect.
    * @return value or {@code null} for none
@@ -544,8 +542,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current status of this Interconnect's functionality, which can take one of
    * the following values: - OS_ACTIVE: A valid Interconnect, which is turned up and is ready to
-   * use. Attachments may be provisioned on this Interconnect.  - OS_UNPROVISIONED: An Interconnect
-   * that has not completed turnup. No attachments may be provisioned on this Interconnect.  -
+   * use. Attachments may be provisioned on this Interconnect. - OS_UNPROVISIONED: An Interconnect
+   * that has not completed turnup. No attachments may be provisioned on this Interconnect. -
    * OS_UNDER_MAINTENANCE: An Interconnect that is undergoing internal maintenance. No attachments
    * may be provisioned or updated on this Interconnect.
    * @param operationalStatus operationalStatus or {@code null} for none
@@ -630,8 +628,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current state of Interconnect functionality, which can take one of the
    * following values: - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments
-   * may be provisioned on this Interconnect.  - UNPROVISIONED: The Interconnect has not completed
-   * turnup. No attachments may be provisioned on this Interconnect.  - UNDER_MAINTENANCE: The
+   * may be provisioned on this Interconnect. - UNPROVISIONED: The Interconnect has not completed
+   * turnup. No attachments may be provisioned on this Interconnect. - UNDER_MAINTENANCE: The
    * Interconnect is undergoing internal maintenance. No attachments may be provisioned or updated
    * on this Interconnect.
    * @return value or {@code null} for none
@@ -643,8 +641,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * [Output Only] The current state of Interconnect functionality, which can take one of the
    * following values: - ACTIVE: The Interconnect is valid, turned up and ready to use. Attachments
-   * may be provisioned on this Interconnect.  - UNPROVISIONED: The Interconnect has not completed
-   * turnup. No attachments may be provisioned on this Interconnect.  - UNDER_MAINTENANCE: The
+   * may be provisioned on this Interconnect. - UNPROVISIONED: The Interconnect has not completed
+   * turnup. No attachments may be provisioned on this Interconnect. - UNDER_MAINTENANCE: The
    * Interconnect is undergoing internal maintenance. No attachments may be provisioned or updated
    * on this Interconnect.
    * @param state state or {@code null} for none

@@ -80,8 +80,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
    * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
-   * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
+   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
    * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
    * loadBalancingScheme set to EXTERNAL.
    * The value may be {@code null}.
@@ -91,7 +91,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The value of the header must match the regular expression specified in regexMatch. For regular
-   * expression grammar, please see:  github.com/google/re2/wiki/Syntax For matching against a port
+   * expression grammar, please see: github.com/google/re2/wiki/Syntax For matching against a port
    * specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular
    * expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch,
    * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note that
@@ -224,8 +224,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
    * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
-   * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
+   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
    * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
    * loadBalancingScheme set to EXTERNAL.
    * @return value or {@code null} for none
@@ -237,8 +237,8 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The header value must be an integer and its value must be in the range specified in rangeMatch.
    * If the header does not contain an integer, number or is empty, the match fails. For example for
-   * a range [-5, 0]   - -3 will match.  - 0 will not match.  - 0.25 will not match.  - -3someString
-   * will not match.   Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
+   * a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will
+   * not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
    * rangeMatch must be set. Note that rangeMatch is not supported for Loadbalancers that have their
    * loadBalancingScheme set to EXTERNAL.
    * @param rangeMatch rangeMatch or {@code null} for none
@@ -250,7 +250,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The value of the header must match the regular expression specified in regexMatch. For regular
-   * expression grammar, please see:  github.com/google/re2/wiki/Syntax For matching against a port
+   * expression grammar, please see: github.com/google/re2/wiki/Syntax For matching against a port
    * specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular
    * expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch,
    * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note that
@@ -264,7 +264,7 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
 
   /**
    * The value of the header must match the regular expression specified in regexMatch. For regular
-   * expression grammar, please see:  github.com/google/re2/wiki/Syntax For matching against a port
+   * expression grammar, please see: github.com/google/re2/wiki/Syntax For matching against a port
    * specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular
    * expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch,
    * prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. Note that

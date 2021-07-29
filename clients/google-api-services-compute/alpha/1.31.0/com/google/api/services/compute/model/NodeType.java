@@ -17,12 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represent a sole-tenant Node Type resource.
- *
- * Each node within a node group must have a node type. A node type specifies the total amount of
- * cores and memory for that node. Currently, the only available node type is n1-node-96-624 node
- * type that has 96 vCPUs and 624 GB of memory, available in multiple zones. For more information
- * read Node types. (== resource_for {$api_version}.nodeTypes ==)
+ * Represent a sole-tenant Node Type resource. Each node within a node group must have a node type.
+ * A node type specifies the total amount of cores and memory for that node. Currently, the only
+ * available node type is n1-node-96-624 node type that has 96 vCPUs and 624 GB of memory, available
+ * in multiple zones. For more information read Node types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

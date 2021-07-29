@@ -17,10 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Interconnect Attachment (VLAN) Location resource.
- *
- * You can use this resource to find location details about an Interconnect attachment (VLAN). For
- * more information about interconnect attachments, read  Creating VLAN Attachments.
+ * Represents an Interconnect Attachment (VLAN) Location resource. You can use this resource to find
+ * location details about an Interconnect attachment (VLAN). For more information about interconnect
+ * attachments, read Creating VLAN Attachments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -59,7 +58,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
+   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +140,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
    * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
    * Interconnects.
    * The value may be {@code null}.
    */
@@ -209,7 +208,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
+   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
    * @return value or {@code null} for none
    */
   public java.lang.String getContinent() {
@@ -218,7 +217,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
-   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
+   * - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
    * @param continent continent or {@code null} for none
    */
   public InterconnectLocation setContinent(java.lang.String continent) {
@@ -405,7 +404,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
    * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
    * Interconnects.
    * @return value or {@code null} for none
    */
@@ -416,7 +415,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   /**
    * [Output Only] The status of this InterconnectLocation, which can take one of the following
    * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
-   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new
    * Interconnects.
    * @param status status or {@code null} for none
    */

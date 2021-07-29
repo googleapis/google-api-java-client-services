@@ -42,7 +42,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
    * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
    * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
@@ -78,8 +78,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions like
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
-   * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
+   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
+   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
    * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * The value may be {@code null}.
@@ -92,7 +92,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
    * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
    * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
-   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * The value may be {@code null}.
    */
@@ -131,7 +131,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
    * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
    * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
@@ -144,7 +144,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * rvice.backendServiceWeightAction[].headerAction Note that headerAction is not supported for
    * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
    * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
@@ -213,8 +213,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions like
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
-   * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
+   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
+   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
    * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * @return value or {@code null} for none
@@ -226,8 +226,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions like
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
-   * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
+   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
+   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
    * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
    * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * @param routeAction routeAction or {@code null} for none
@@ -242,7 +242,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
    * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
    * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
-   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * @return value or {@code null} for none
    */
@@ -255,7 +255,7 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
    * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
    * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
-   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
    * service or routeAction.weightedBackendService must be set.
    * @param service service or {@code null} for none
    */

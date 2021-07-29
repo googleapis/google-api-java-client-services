@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cloud VPN Tunnel resource.
- *
- * For more information about VPN, read the  the Cloud VPN Overview. (== resource_for
- * {$api_version}.vpnTunnels ==)
+ * Represents a Cloud VPN Tunnel resource. For more information about VPN, read the the Cloud VPN
+ * Overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -178,20 +176,20 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
-   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * Resource is being allocated for the VPN tunnel. - WAITING_FOR_FULL_CONFIG: Waiting to receive
    * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
-   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
-   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
-   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
-   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
-   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
-   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.  -
-   * NO_INCOMING_PACKETS: No incoming packets from peer.  - REJECTED: Tunnel configuration was
-   * rejected, can be result of being denied access.  - ALLOCATING_RESOURCES: Cloud VPN is in the
-   * process of allocating all required resources.  - STOPPED: Tunnel is stopped due to its
-   * Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state.  -
-   * PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT.  -
-   * TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.
+   * and Route resources are needed to setup the VPN tunnel. - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN. - ESTABLISHED: Secure session is successfully established with the
+   * peer VPN. - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS - AUTHORIZATION_ERROR:
+   * Auth error (for example, bad shared secret). - NEGOTIATION_FAILURE: Handshake failed. -
+   * DEPROVISIONING: Resources are being deallocated for the VPN tunnel. - FAILED: Tunnel creation
+   * has failed and the tunnel is not ready to be used. - NO_INCOMING_PACKETS: No incoming packets
+   * from peer. - REJECTED: Tunnel configuration was rejected, can be result of being denied access.
+   * - ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. -
+   * STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or
+   * the project is in frozen state. - PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP,
+   * probably behind NAT. - TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an
+   * HA-VPN tunnel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -565,20 +563,20 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
-   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * Resource is being allocated for the VPN tunnel. - WAITING_FOR_FULL_CONFIG: Waiting to receive
    * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
-   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
-   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
-   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
-   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
-   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
-   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.  -
-   * NO_INCOMING_PACKETS: No incoming packets from peer.  - REJECTED: Tunnel configuration was
-   * rejected, can be result of being denied access.  - ALLOCATING_RESOURCES: Cloud VPN is in the
-   * process of allocating all required resources.  - STOPPED: Tunnel is stopped due to its
-   * Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state.  -
-   * PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT.  -
-   * TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.
+   * and Route resources are needed to setup the VPN tunnel. - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN. - ESTABLISHED: Secure session is successfully established with the
+   * peer VPN. - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS - AUTHORIZATION_ERROR:
+   * Auth error (for example, bad shared secret). - NEGOTIATION_FAILURE: Handshake failed. -
+   * DEPROVISIONING: Resources are being deallocated for the VPN tunnel. - FAILED: Tunnel creation
+   * has failed and the tunnel is not ready to be used. - NO_INCOMING_PACKETS: No incoming packets
+   * from peer. - REJECTED: Tunnel configuration was rejected, can be result of being denied access.
+   * - ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. -
+   * STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or
+   * the project is in frozen state. - PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP,
+   * probably behind NAT. - TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an
+   * HA-VPN tunnel.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -587,20 +585,20 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
-   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * Resource is being allocated for the VPN tunnel. - WAITING_FOR_FULL_CONFIG: Waiting to receive
    * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
-   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
-   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
-   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
-   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
-   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
-   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.  -
-   * NO_INCOMING_PACKETS: No incoming packets from peer.  - REJECTED: Tunnel configuration was
-   * rejected, can be result of being denied access.  - ALLOCATING_RESOURCES: Cloud VPN is in the
-   * process of allocating all required resources.  - STOPPED: Tunnel is stopped due to its
-   * Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state.  -
-   * PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT.  -
-   * TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.
+   * and Route resources are needed to setup the VPN tunnel. - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN. - ESTABLISHED: Secure session is successfully established with the
+   * peer VPN. - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS - AUTHORIZATION_ERROR:
+   * Auth error (for example, bad shared secret). - NEGOTIATION_FAILURE: Handshake failed. -
+   * DEPROVISIONING: Resources are being deallocated for the VPN tunnel. - FAILED: Tunnel creation
+   * has failed and the tunnel is not ready to be used. - NO_INCOMING_PACKETS: No incoming packets
+   * from peer. - REJECTED: Tunnel configuration was rejected, can be result of being denied access.
+   * - ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. -
+   * STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or
+   * the project is in frozen state. - PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP,
+   * probably behind NAT. - TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an
+   * HA-VPN tunnel.
    * @param status status or {@code null} for none
    */
   public VpnTunnel setStatus(java.lang.String status) {

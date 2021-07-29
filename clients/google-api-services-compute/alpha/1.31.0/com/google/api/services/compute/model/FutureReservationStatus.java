@@ -48,7 +48,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    * Time when Future Reservation would become LOCKED, after which no modifications to Future
    * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
    * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time. TODO(b/183994731): Replace with Timestamp.
+   * state at this time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    * Time when Future Reservation would become LOCKED, after which no modifications to Future
    * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
    * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time. TODO(b/183994731): Replace with Timestamp.
+   * state at this time.
    * @return value or {@code null} for none
    */
   public java.lang.String getLockTime() {
@@ -112,7 +112,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    * Time when Future Reservation would become LOCKED, after which no modifications to Future
    * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
    * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time. TODO(b/183994731): Replace with Timestamp.
+   * state at this time.
    * @param lockTime lockTime or {@code null} for none
    */
   public FutureReservationStatus setLockTime(java.lang.String lockTime) {

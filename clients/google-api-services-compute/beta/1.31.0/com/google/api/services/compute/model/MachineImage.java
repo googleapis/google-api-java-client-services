@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a machine image resource.
- *
- * A machine image is a Compute Engine resource that stores all the configuration, metadata,
- * permissions, and data from one or more disks required to create a Virtual machine (VM) instance.
- * For more information, see Machine images. (== resource_for {$api_version}.machineImages ==)
+ * Represents a machine image resource. A machine image is a Compute Engine resource that stores all
+ * the configuration, metadata, permissions, and data from one or more disks required to create a
+ * Virtual machine (VM) instance. For more information, see Machine images.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -71,17 +69,14 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Encrypts the machine image using a customer-supplied encryption key.
-   *
-   * After you encrypt a machine image using a customer-supplied key, you must provide the same key
-   * if you use the machine image later. For example, you must provide the encryption key when you
-   * create an instance from the encrypted machine image in a future request.
-   *
-   * Customer-supplied encryption keys do not protect access to metadata of the machine image.
-   *
-   * If you do not provide an encryption key when creating the machine image, then the machine image
-   * will be encrypted using an automatically generated key and you do not need to provide a key to
-   * use the machine image later.
+   * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a
+   * machine image using a customer-supplied key, you must provide the same key if you use the
+   * machine image later. For example, you must provide the encryption key when you create an
+   * instance from the encrypted machine image in a future request. Customer-supplied encryption
+   * keys do not protect access to metadata of the machine image. If you do not provide an
+   * encryption key when creating the machine image, then the machine image will be encrypted using
+   * an automatically generated key and you do not need to provide a key to use the machine image
+   * later.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +118,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   /**
    * The source instance used to create the machine image. You can provide this as a partial or full
    * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
@@ -249,17 +244,14 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts the machine image using a customer-supplied encryption key.
-   *
-   * After you encrypt a machine image using a customer-supplied key, you must provide the same key
-   * if you use the machine image later. For example, you must provide the encryption key when you
-   * create an instance from the encrypted machine image in a future request.
-   *
-   * Customer-supplied encryption keys do not protect access to metadata of the machine image.
-   *
-   * If you do not provide an encryption key when creating the machine image, then the machine image
-   * will be encrypted using an automatically generated key and you do not need to provide a key to
-   * use the machine image later.
+   * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a
+   * machine image using a customer-supplied key, you must provide the same key if you use the
+   * machine image later. For example, you must provide the encryption key when you create an
+   * instance from the encrypted machine image in a future request. Customer-supplied encryption
+   * keys do not protect access to metadata of the machine image. If you do not provide an
+   * encryption key when creating the machine image, then the machine image will be encrypted using
+   * an automatically generated key and you do not need to provide a key to use the machine image
+   * later.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getMachineImageEncryptionKey() {
@@ -267,17 +259,14 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encrypts the machine image using a customer-supplied encryption key.
-   *
-   * After you encrypt a machine image using a customer-supplied key, you must provide the same key
-   * if you use the machine image later. For example, you must provide the encryption key when you
-   * create an instance from the encrypted machine image in a future request.
-   *
-   * Customer-supplied encryption keys do not protect access to metadata of the machine image.
-   *
-   * If you do not provide an encryption key when creating the machine image, then the machine image
-   * will be encrypted using an automatically generated key and you do not need to provide a key to
-   * use the machine image later.
+   * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a
+   * machine image using a customer-supplied key, you must provide the same key if you use the
+   * machine image later. For example, you must provide the encryption key when you create an
+   * instance from the encrypted machine image in a future request. Customer-supplied encryption
+   * keys do not protect access to metadata of the machine image. If you do not provide an
+   * encryption key when creating the machine image, then the machine image will be encrypted using
+   * an automatically generated key and you do not need to provide a key to use the machine image
+   * later.
    * @param machineImageEncryptionKey machineImageEncryptionKey or {@code null} for none
    */
   public MachineImage setMachineImageEncryptionKey(CustomerEncryptionKey machineImageEncryptionKey) {
@@ -366,7 +355,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   /**
    * The source instance used to create the machine image. You can provide this as a partial or full
    * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
@@ -377,7 +366,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   /**
    * The source instance used to create the machine image. You can provide this as a partial or full
    * URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance  -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance -
    * projects/project/zones/zone/instances/instance
    * @param sourceInstance sourceInstance or {@code null} for none
    */

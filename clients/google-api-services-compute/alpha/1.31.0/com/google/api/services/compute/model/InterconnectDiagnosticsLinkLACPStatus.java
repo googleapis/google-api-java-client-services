@@ -45,7 +45,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
 
   /**
    * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle.  - DETACHED: The link is not configured within the
+   * configured and active within the bundle. - DETACHED: The link is not configured within the
    * bundle. This means that the rest of the object should be empty.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
 
   /**
    * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle.  - DETACHED: The link is not configured within the
+   * configured and active within the bundle. - DETACHED: The link is not configured within the
    * bundle. This means that the rest of the object should be empty.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class InterconnectDiagnosticsLinkLACPStatus extends com.google.api.
 
   /**
    * The state of a LACP link, which can take one of the following values: - ACTIVE: The link is
-   * configured and active within the bundle.  - DETACHED: The link is not configured within the
+   * configured and active within the bundle. - DETACHED: The link is not configured within the
    * bundle. This means that the rest of the object should be empty.
    * @param state state or {@code null} for none
    */

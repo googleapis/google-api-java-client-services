@@ -17,9 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cloud Router resource.
- *
- * For more information about Cloud Router, read the Cloud Router overview.
+ * Represents a Cloud Router resource. For more information about Cloud Router, read the Cloud
+ * Router overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

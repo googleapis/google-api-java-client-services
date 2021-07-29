@@ -56,7 +56,6 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#reservationsList for listsof reservations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +142,6 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#reservationsList for listsof reservations
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -151,7 +149,6 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#reservationsList for listsof reservations
    * @param kind kind or {@code null} for none
    */
   public FutureReservationsListResponse setKind(java.lang.String kind) {

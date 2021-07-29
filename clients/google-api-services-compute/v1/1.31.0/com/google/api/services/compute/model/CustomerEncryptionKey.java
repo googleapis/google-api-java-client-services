@@ -53,6 +53,18 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String rawKey;
 
   /**
+   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
+   * either encrypt or decrypt this resource. The key must meet the following requirements before
+   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
+   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
+   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
+   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rsaEncryptedKey;
+
+  /**
    * [Output only] The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key
    * that protects this resource.
    * The value may be {@code null}.
@@ -112,6 +124,33 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
    */
   public CustomerEncryptionKey setRawKey(java.lang.String rawKey) {
     this.rawKey = rawKey;
+    return this;
+  }
+
+  /**
+   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
+   * either encrypt or decrypt this resource. The key must meet the following requirements before
+   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
+   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
+   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
+   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRsaEncryptedKey() {
+    return rsaEncryptedKey;
+  }
+
+  /**
+   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
+   * either encrypt or decrypt this resource. The key must meet the following requirements before
+   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
+   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
+   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
+   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * @param rsaEncryptedKey rsaEncryptedKey or {@code null} for none
+   */
+  public CustomerEncryptionKey setRsaEncryptedKey(java.lang.String rsaEncryptedKey) {
+    this.rsaEncryptedKey = rsaEncryptedKey;
     return this;
   }
 

@@ -32,8 +32,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the destination zone to move the disk. This can be a full or partial URL. For
    * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone  -
-   * projects/project/zones/zone  - zones/zone
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
+   * - zones/zone
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the target disk to move. This can be a full or partial URL. For example, the
    * following are all valid URLs to a disk: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
+   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the destination zone to move the disk. This can be a full or partial URL. For
    * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone  -
-   * projects/project/zones/zone  - zones/zone
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
+   * - zones/zone
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationZone() {
@@ -63,8 +63,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the destination zone to move the disk. This can be a full or partial URL. For
    * example, the following are all valid URLs to a zone: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone  -
-   * projects/project/zones/zone  - zones/zone
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone - projects/project/zones/zone
+   * - zones/zone
    * @param destinationZone destinationZone or {@code null} for none
    */
   public DiskMoveRequest setDestinationZone(java.lang.String destinationZone) {
@@ -75,8 +75,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the target disk to move. This can be a full or partial URL. For example, the
    * following are all valid URLs to a disk: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
+   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetDisk() {
@@ -86,8 +86,8 @@ public final class DiskMoveRequest extends com.google.api.client.json.GenericJso
   /**
    * The URL of the target disk to move. This can be a full or partial URL. For example, the
    * following are all valid URLs to a disk: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
+   * projects/project/zones/zone/disks/disk - zones/zone/disks/disk
    * @param targetDisk targetDisk or {@code null} for none
    */
   public DiskMoveRequest setTargetDisk(java.lang.String targetDisk) {

@@ -17,10 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Firewall Rule resource.
- *
- * Firewall rules allow or deny ingress traffic to, and egress traffic from your instances. For more
- * information, read Firewall rules.
+ * Represents a Firewall Rule resource. Firewall rules allow or deny ingress traffic to, and egress
+ * traffic from your instances. For more information, read Firewall rules.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -138,8 +136,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
    * rule, the default network is used: global/networks/default If you choose to specify this field,
    * you can specify the network as a full or partial URL. For example, the following are all valid
-   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
-   * - projects/myproject/global/networks/my-network  - global/networks/default
+   * URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network -
+   * projects/myproject/global/networks/my-network - global/networks/default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,8 +440,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
    * rule, the default network is used: global/networks/default If you choose to specify this field,
    * you can specify the network as a full or partial URL. For example, the following are all valid
-   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
-   * - projects/myproject/global/networks/my-network  - global/networks/default
+   * URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network -
+   * projects/myproject/global/networks/my-network - global/networks/default
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -454,8 +452,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
    * rule, the default network is used: global/networks/default If you choose to specify this field,
    * you can specify the network as a full or partial URL. For example, the following are all valid
-   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
-   * - projects/myproject/global/networks/my-network  - global/networks/default
+   * URLs: - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network -
+   * projects/myproject/global/networks/my-network - global/networks/default
    * @param network network or {@code null} for none
    */
   public Firewall setNetwork(java.lang.String network) {
@@ -671,9 +669,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -703,9 +700,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getPorts() {
@@ -715,9 +711,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * @param ports ports or {@code null} for none
      */
     public Allowed setPorts(java.util.List<java.lang.String> ports) {
@@ -754,9 +749,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -786,9 +780,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getPorts() {
@@ -798,9 +791,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * An optional list of ports to which this rule applies. This field is only applicable for the UDP
      * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-     * applies to connections through any port.
-     *
-     * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
+     * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+     * ["12345-12349"].
      * @param ports ports or {@code null} for none
      */
     public Denied setPorts(java.util.List<java.lang.String> ports) {

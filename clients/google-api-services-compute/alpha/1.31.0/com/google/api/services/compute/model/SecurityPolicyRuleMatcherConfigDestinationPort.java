@@ -41,11 +41,8 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPort extends com.go
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port.
-   *
-   * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,11 +72,8 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPort extends com.go
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port.
-   *
-   * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPorts() {
@@ -89,11 +83,8 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPort extends com.go
   /**
    * An optional list of ports to which this rule applies. This field is only applicable for UDP or
    * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
-   * applies to connections through any port.
-   *
-   * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
-   *
-   * This field may only be specified when versioned_expr is set to FIREWALL.
+   * applies to connections through any port. Example inputs include: ["22"], ["80","443"], and
+   * ["12345-12349"]. This field may only be specified when versioned_expr is set to FIREWALL.
    * @param ports ports or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfigDestinationPort setPorts(java.util.List<java.lang.String> ports) {

@@ -69,7 +69,7 @@ public final class AutoscalerAggregatedList extends com.google.api.client.json.G
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class AutoscalerAggregatedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +184,7 @@ public final class AutoscalerAggregatedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public AutoscalerAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

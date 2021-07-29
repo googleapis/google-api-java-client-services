@@ -50,7 +50,6 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   private java.util.Map<String, FutureReservationsScopedList> items;
 
   /**
-   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +136,6 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -145,7 +143,6 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * Type of resource.
    * @param kind kind or {@code null} for none
    */
   public FutureReservationsAggregatedListResponse setKind(java.lang.String kind) {

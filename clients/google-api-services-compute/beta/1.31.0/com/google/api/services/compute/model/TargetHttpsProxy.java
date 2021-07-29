@@ -17,22 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Target HTTPS Proxy resource.
- *
- * Google Compute Engine has two Target HTTPS Proxy resources:
- *
- * * [Global](/compute/docs/reference/rest/{$api_version}/targetHttpsProxies) *
- * [Regional](/compute/docs/reference/rest/{$api_version}/regionTargetHttpsProxies)
- *
- * A target HTTPS proxy is a component of GCP HTTPS load balancers.
- *
- * * targetHttpsProxies are used by external HTTPS load balancers. * regionTargetHttpsProxies are
- * used by internal HTTPS load balancers.
- *
- * Forwarding rules reference a target HTTPS proxy, and the target proxy then references a URL map.
- * For more information, read Using Target Proxies and  Forwarding rule concepts. (== resource_for
- * {$api_version}.targetHttpsProxies ==) (== resource_for {$api_version}.regionTargetHttpsProxies
- * ==)
+ * Represents a Target HTTPS Proxy resource. Google Compute Engine has two Target HTTPS Proxy
+ * resources: * [Global](/compute/docs/reference/rest/beta/targetHttpsProxies) *
+ * [Regional](/compute/docs/reference/rest/beta/regionTargetHttpsProxies) A target HTTPS proxy is a
+ * component of GCP HTTPS load balancers. * targetHttpsProxies are used by external HTTPS load
+ * balancers. * regionTargetHttpsProxies are used by internal HTTPS load balancers. Forwarding rules
+ * reference a target HTTPS proxy, and the target proxy then references a URL map. For more
+ * information, read Using Target Proxies and Forwarding rule concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -97,9 +88,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
-   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -137,15 +128,11 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +141,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines
    * whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE,
-   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
-   * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
-   * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
+   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used. -
+   * When quic-override is set to ENABLE, the load balancer uses QUIC when possible. - When quic-
+   * override is set to DISABLE, the load balancer doesn't use QUIC. - If the quic-override flag is
    * not specified, NONE is implied.
    * The value may be {@code null}.
    */
@@ -210,8 +197,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL
    * to the BackendService. For example, the following are all valid URLs for specifying a URL map:
-   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/url-map  -
-   * projects/project/global/urlMaps/url-map  - global/urlMaps/url-map
+   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map -
+   * projects/project/global/urlMaps/url-map - global/urlMaps/url-map
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,9 +362,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
-   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -391,9 +378,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
-   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
-   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
-   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
+   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
    * Director positions multiple filters at the same location, those filters will be in the same
@@ -467,15 +454,11 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProxyBind() {
@@ -484,15 +467,11 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
 
   /**
    * This field only applies when the forwarding rule that references this target proxy has a
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-   *
-   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
-   * the IP address and port specified in the forwarding rule. This is generally useful when using
-   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
-   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
-   * them.
-   *
-   * The default is false.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies
+   * set up inbound traffic interception and bind to the IP address and port specified in the
+   * forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a
+   * gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for
+   * inbound requests and handles requests when it receives them. The default is false.
    * @param proxyBind proxyBind or {@code null} for none
    */
   public TargetHttpsProxy setProxyBind(java.lang.Boolean proxyBind) {
@@ -503,9 +482,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines
    * whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE,
-   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
-   * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
-   * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
+   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used. -
+   * When quic-override is set to ENABLE, the load balancer uses QUIC when possible. - When quic-
+   * override is set to DISABLE, the load balancer doesn't use QUIC. - If the quic-override flag is
    * not specified, NONE is implied.
    * @return value or {@code null} for none
    */
@@ -516,9 +495,9 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines
    * whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE,
-   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
-   * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
-   * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
+   * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used. -
+   * When quic-override is set to ENABLE, the load balancer uses QUIC when possible. - When quic-
+   * override is set to DISABLE, the load balancer doesn't use QUIC. - If the quic-override flag is
    * not specified, NONE is implied.
    * @param quicOverride quicOverride or {@code null} for none
    */
@@ -633,8 +612,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL
    * to the BackendService. For example, the following are all valid URLs for specifying a URL map:
-   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/url-map  -
-   * projects/project/global/urlMaps/url-map  - global/urlMaps/url-map
+   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map -
+   * projects/project/global/urlMaps/url-map - global/urlMaps/url-map
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlMap() {
@@ -644,8 +623,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL
    * to the BackendService. For example, the following are all valid URLs for specifying a URL map:
-   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/url-map  -
-   * projects/project/global/urlMaps/url-map  - global/urlMaps/url-map
+   * - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map -
+   * projects/project/global/urlMaps/url-map - global/urlMaps/url-map
    * @param urlMap urlMap or {@code null} for none
    */
   public TargetHttpsProxy setUrlMap(java.lang.String urlMap) {

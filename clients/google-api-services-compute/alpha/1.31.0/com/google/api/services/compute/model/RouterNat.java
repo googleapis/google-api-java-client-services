@@ -41,9 +41,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> drainNatIps;
 
   /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true,  -
-   * Dynamic Port Allocation will be enabled on this NAT config.  - enableEndpointIndependentMapping
-   * cannot be set to true.  - If minPorts is set, minPortsPerVm must be set to a power of two
+   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
+   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
+   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
    * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
    * allocated to a VM from this NAT config.
    * The value may be {@code null}.
@@ -101,9 +101,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
    * Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs,
-   * the Nat service fails for new VMs.  - AUTO_ONLY: Nat IPs are allocated by Google Cloud
-   * Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be
-   * empty.
+   * the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform;
+   * customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +125,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the Nat option, which can take one of the following values: -
-   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat.  -
+   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. -
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
-   * allowed to Nat.  - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
+   * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
    * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in
@@ -195,9 +194,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true,  -
-   * Dynamic Port Allocation will be enabled on this NAT config.  - enableEndpointIndependentMapping
-   * cannot be set to true.  - If minPorts is set, minPortsPerVm must be set to a power of two
+   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
+   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
+   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
    * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
    * allocated to a VM from this NAT config.
    * @return value or {@code null} for none
@@ -207,9 +206,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true,  -
-   * Dynamic Port Allocation will be enabled on this NAT config.  - enableEndpointIndependentMapping
-   * cannot be set to true.  - If minPorts is set, minPortsPerVm must be set to a power of two
+   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
+   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
+   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
    * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
    * allocated to a VM from this NAT config.
    * @param enableDynamicPortAllocation enableDynamicPortAllocation or {@code null} for none
@@ -334,9 +333,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
    * Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs,
-   * the Nat service fails for new VMs.  - AUTO_ONLY: Nat IPs are allocated by Google Cloud
-   * Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be
-   * empty.
+   * the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform;
+   * customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNatIpAllocateOption() {
@@ -346,9 +344,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
    * Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs,
-   * the Nat service fails for new VMs.  - AUTO_ONLY: Nat IPs are allocated by Google Cloud
-   * Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be
-   * empty.
+   * the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform;
+   * customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
    * @param natIpAllocateOption natIpAllocateOption or {@code null} for none
    */
   public RouterNat setNatIpAllocateOption(java.lang.String natIpAllocateOption) {
@@ -394,9 +391,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the Nat option, which can take one of the following values: -
-   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat.  -
+   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. -
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
-   * allowed to Nat.  - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
+   * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
    * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in
@@ -409,9 +406,9 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify the Nat option, which can take one of the following values: -
-   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat.  -
+   * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. -
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
-   * allowed to Nat.  - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
+   * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
    * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in

@@ -67,8 +67,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.Long diskSizeGb;
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
-   * /pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For example: projects/project
+   * /zones/zone/diskTypes/pd-standard or pd-ssd
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,8 +244,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
-   * /pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For example: projects/project
+   * /zones/zone/diskTypes/pd-standard or pd-ssd
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -253,8 +253,8 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes
-   * /pd-standard or pd-ssd
+   * [Output Only] URL of the disk type resource. For example: projects/project
+   * /zones/zone/diskTypes/pd-standard or pd-ssd
    * @param diskType diskType or {@code null} for none
    */
   public SavedAttachedDisk setDiskType(java.lang.String diskType) {
@@ -264,7 +264,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * @return value or {@code null} for none
    */
   public java.util.List<GuestOsFeature> getGuestOsFeatures() {
@@ -273,7 +273,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. Read  Enabling guest operating system features to see a list of available options.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * @param guestOsFeatures guestOsFeatures or {@code null} for none
    */
   public SavedAttachedDisk setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {

@@ -19,8 +19,6 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Health-Check as a Service resource.
  *
- * (== resource_for {$api_version}.regionHealthCheckServices ==)
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
@@ -57,7 +55,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.lang.String fingerprint;
 
   /**
-   * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
+   * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
    * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
    * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
    * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
@@ -72,23 +70,21 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
    * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each backend in the health check service.  - AND. If any backend's
-   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
-   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
-   * .
+   * message is returned for each pair in the health check service. - AND. If any health check of an
+   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
+   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String healthStatusAggregationPolicy;
 
   /**
-   * This field is deprecated. Use health_status_aggregation_policy instead.
-   *
-   * Policy for how the results from multiple health checks for the same endpoint are aggregated.
-   * - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check
-   * service.  - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the
-   * HealthState of the entire health check service. If all backend's are healthy, the HealthState
-   * of the health check service is HEALTHY. .
+   * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the
+   * results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An
+   * EndpointHealth message is returned for each backend in the health check service. - AND. If any
+   * backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire
+   * health check service. If all backend's are healthy, the HealthState of the health check service
+   * is HEALTHY. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +116,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * List of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
    * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
    * The value may be {@code null}.
    */
@@ -128,7 +124,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> networkEndpointGroups;
 
   /**
-   * List of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
    * endpoints for receiving notifications of change in health status. For regional
    * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
    * HealthCheckService, NotificationEndpoint must be global.
@@ -256,7 +252,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
+   * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
    * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
    * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
    * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
@@ -270,7 +266,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
+   * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more
    * than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or
    * portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be
    * regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix
@@ -287,10 +283,9 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
    * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each backend in the health check service.  - AND. If any backend's
-   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
-   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
-   * .
+   * message is returned for each pair in the health check service. - AND. If any health check of an
+   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
+   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthStatusAggregationPolicy() {
@@ -300,10 +295,9 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   /**
    * Optional. Policy for how the results from multiple health checks for the same endpoint are
    * aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth
-   * message is returned for each backend in the health check service.  - AND. If any backend's
-   * health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check
-   * service. If all backend's are healthy, the HealthState of the health check service is HEALTHY.
-   * .
+   * message is returned for each pair in the health check service. - AND. If any health check of an
+   * endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health
+   * checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
    * @param healthStatusAggregationPolicy healthStatusAggregationPolicy or {@code null} for none
    */
   public HealthCheckService setHealthStatusAggregationPolicy(java.lang.String healthStatusAggregationPolicy) {
@@ -312,13 +306,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field is deprecated. Use health_status_aggregation_policy instead.
-   *
-   * Policy for how the results from multiple health checks for the same endpoint are aggregated.
-   * - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check
-   * service.  - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the
-   * HealthState of the entire health check service. If all backend's are healthy, the HealthState
-   * of the health check service is HEALTHY. .
+   * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the
+   * results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An
+   * EndpointHealth message is returned for each backend in the health check service. - AND. If any
+   * backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire
+   * health check service. If all backend's are healthy, the HealthState of the health check service
+   * is HEALTHY. .
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthStatusAggregationStrategy() {
@@ -326,13 +319,12 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field is deprecated. Use health_status_aggregation_policy instead.
-   *
-   * Policy for how the results from multiple health checks for the same endpoint are aggregated.
-   * - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check
-   * service.  - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the
-   * HealthState of the entire health check service. If all backend's are healthy, the HealthState
-   * of the health check service is HEALTHY. .
+   * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the
+   * results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An
+   * EndpointHealth message is returned for each backend in the health check service. - AND. If any
+   * backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire
+   * health check service. If all backend's are healthy, the HealthState of the health check service
+   * is HEALTHY. .
    * @param healthStatusAggregationStrategy healthStatusAggregationStrategy or {@code null} for none
    */
   public HealthCheckService setHealthStatusAggregationStrategy(java.lang.String healthStatusAggregationStrategy) {
@@ -400,7 +392,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
    * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
    * @return value or {@code null} for none
    */
@@ -409,7 +401,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional
    * HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
    * @param networkEndpointGroups networkEndpointGroups or {@code null} for none
    */
@@ -419,7 +411,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
    * endpoints for receiving notifications of change in health status. For regional
    * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
    * HealthCheckService, NotificationEndpoint must be global.
@@ -430,7 +422,7 @@ public final class HealthCheckService extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
+   * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of
    * endpoints for receiving notifications of change in health status. For regional
    * HealthCheckService, NotificationEndpoint must be regional and in the same region. For global
    * HealthCheckService, NotificationEndpoint must be global.

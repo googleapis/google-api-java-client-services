@@ -17,27 +17,15 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a URL Map resource.
- *
- * Google Compute Engine has two URL Map resources:
- *
- * * [Global](/compute/docs/reference/rest/{$api_version}/urlMaps) *
- * [Regional](/compute/docs/reference/rest/{$api_version}/regionUrlMaps)
- *
- * A URL map resource is a component of certain types of GCP load balancers and Traffic Director.
- *
- * * urlMaps are used by external HTTP(S) load balancers and Traffic Director. * regionUrlMaps are
- * used by internal HTTP(S) load balancers.
- *
- * For a list of supported URL map features by load balancer type, see the  Load balancing features:
- * Routing and traffic management table.
- *
- * For a list of supported URL map features for Traffic Director, see the  Traffic Director
- * features: Routing and traffic management table.
- *
- * This resource defines mappings from host names and URL paths to either a backend service or a
- * backend bucket.
- *
+ * Represents a URL Map resource. Google Compute Engine has two URL Map resources: *
+ * [Global](/compute/docs/reference/rest/beta/urlMaps) *
+ * [Regional](/compute/docs/reference/rest/beta/regionUrlMaps) A URL map resource is a component of
+ * certain types of GCP load balancers and Traffic Director. * urlMaps are used by external HTTP(S)
+ * load balancers and Traffic Director. * regionUrlMaps are used by internal HTTP(S) load balancers.
+ * For a list of supported URL map features by load balancer type, see the Load balancing features:
+ * Routing and traffic management table. For a list of supported URL map features for Traffic
+ * Director, see the Traffic Director features: Routing and traffic management table. This resource
+ * defines mappings from host names and URL paths to either a backend service or a backend bucket.
  * To use the global urlMaps resource, the backend service must have a loadBalancingScheme of either
  * EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps resource, the backend service must
  * have a loadBalancingScheme of INTERNAL_MANAGED. For more information, read URL Map Concepts.
@@ -60,11 +48,11 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * defaultRouteAction takes effect when none of the hostRules match. The load balancer performs
    * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
    * is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -79,7 +67,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
-   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * specified. Only one of defaultService, defaultUrlRedirect or
    * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
    * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
@@ -107,9 +95,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
    * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a UrlMap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,11 +207,11 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * defaultRouteAction takes effect when none of the hostRules match. The load balancer performs
    * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
    * is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -235,11 +222,11 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs
+   * defaultRouteAction takes effect when none of the hostRules match. The load balancer performs
    * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding
    * the request to the selected backend. If defaultRouteAction specifies any
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
+   * defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
    * is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -256,7 +243,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
-   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * specified. Only one of defaultService, defaultUrlRedirect or
    * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
    * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
@@ -271,7 +258,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
-   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * specified. Only one of defaultService, defaultUrlRedirect or
    * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
    * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param defaultService defaultService or {@code null} for none
@@ -323,9 +310,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
    * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a UrlMap.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -337,9 +323,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
    * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a UrlMap.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -353,9 +338,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
    * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a UrlMap.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -368,9 +352,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
    * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
-   * with error 412 conditionNotMet.
-   *
-   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   * with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve
+   * a UrlMap.
    * @see #setFingerprint()
    *
    * <p>

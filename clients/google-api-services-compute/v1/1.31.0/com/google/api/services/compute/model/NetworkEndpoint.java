@@ -47,9 +47,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   /**
    * The name for a specific VM instance that the IP address belongs to. This is required for
    * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group.
-   *
-   * The name must be 1-63 characters long, and comply with RFC1035.
+   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,9 +110,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   /**
    * The name for a specific VM instance that the IP address belongs to. This is required for
    * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group.
-   *
-   * The name must be 1-63 characters long, and comply with RFC1035.
+   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -124,9 +120,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   /**
    * The name for a specific VM instance that the IP address belongs to. This is required for
    * network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network
-   * endpoint group.
-   *
-   * The name must be 1-63 characters long, and comply with RFC1035.
+   * endpoint group. The name must be 1-63 characters long, and comply with RFC1035.
    * @param instance instance or {@code null} for none
    */
   public NetworkEndpoint setInstance(java.lang.String instance) {

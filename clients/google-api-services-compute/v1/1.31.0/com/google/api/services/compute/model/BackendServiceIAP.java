@@ -47,7 +47,7 @@ public final class BackendServiceIAP extends com.google.api.client.json.GenericJ
   /**
    * OAuth2 client secret to use for the authentication flow. For security reasons, this value
    * cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the
-   * oauth2ClientSecretSha256 field.
+   * oauth2ClientSecretSha256 field. @InputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class BackendServiceIAP extends com.google.api.client.json.GenericJ
   /**
    * OAuth2 client secret to use for the authentication flow. For security reasons, this value
    * cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the
-   * oauth2ClientSecretSha256 field.
+   * oauth2ClientSecretSha256 field. @InputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getOauth2ClientSecret() {
@@ -109,7 +109,7 @@ public final class BackendServiceIAP extends com.google.api.client.json.GenericJ
   /**
    * OAuth2 client secret to use for the authentication flow. For security reasons, this value
    * cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the
-   * oauth2ClientSecretSha256 field.
+   * oauth2ClientSecretSha256 field. @InputOnly
    * @param oauth2ClientSecret oauth2ClientSecret or {@code null} for none
    */
   public BackendServiceIAP setOauth2ClientSecret(java.lang.String oauth2ClientSecret) {

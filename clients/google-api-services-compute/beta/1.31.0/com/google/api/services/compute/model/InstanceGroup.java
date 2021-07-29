@@ -17,23 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Instance Group resource.
- *
- * Instance Groups can be used to configure a target for load balancing.
- *
- * Instance groups can either be managed or unmanaged.
- *
- * To create  managed instance groups, use the instanceGroupManager or regionInstanceGroupManager
- * resource instead.
- *
- * Use zonal unmanaged instance groups if you need to apply load balancing to groups of
- * heterogeneous instances or if you need to manage the instances yourself. You cannot create
- * regional unmanaged instance groups.
- *
+ * Represents an Instance Group resource. Instance Groups can be used to configure a target for load
+ * balancing. Instance groups can either be managed or unmanaged. To create managed instance groups,
+ * use the instanceGroupManager or regionInstanceGroupManager resource instead. Use zonal unmanaged
+ * instance groups if you need to apply load balancing to groups of heterogeneous instances or if
+ * you need to manage the instances yourself. You cannot create regional unmanaged instance groups.
  * For more information, read Instance groups.
- *
- * (== resource_for {$api_version}.instanceGroups ==) (== resource_for
- * {$api_version}.regionInstanceGroups ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -89,13 +78,10 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Assigns a name to a port number. For example: {name: "http", port: 80}
-   *
-   * This allows the system to reference ports by the assigned name instead of a port number. Named
-   * ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http",
-   * port: 8080}]
-   *
-   * Named ports apply to all instances in this instance group.
+   * Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system
+   * to reference ports by the assigned name instead of a port number. Named ports can also contain
+   * multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports
+   * apply to all instances in this instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,13 +269,10 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Assigns a name to a port number. For example: {name: "http", port: 80}
-   *
-   * This allows the system to reference ports by the assigned name instead of a port number. Named
-   * ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http",
-   * port: 8080}]
-   *
-   * Named ports apply to all instances in this instance group.
+   * Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system
+   * to reference ports by the assigned name instead of a port number. Named ports can also contain
+   * multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports
+   * apply to all instances in this instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedPort> getNamedPorts() {
@@ -297,13 +280,10 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Assigns a name to a port number. For example: {name: "http", port: 80}
-   *
-   * This allows the system to reference ports by the assigned name instead of a port number. Named
-   * ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http",
-   * port: 8080}]
-   *
-   * Named ports apply to all instances in this instance group.
+   * Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system
+   * to reference ports by the assigned name instead of a port number. Named ports can also contain
+   * multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports
+   * apply to all instances in this instance group.
    * @param namedPorts namedPorts or {@code null} for none
    */
   public InstanceGroup setNamedPorts(java.util.List<NamedPort> namedPorts) {

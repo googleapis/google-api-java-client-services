@@ -17,11 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a License resource.
- *
- * A License represents billing and aggregate usage data for public and marketplace images.  Caution
- * This resource is intended for use only by third-party partners who are creating Cloud Marketplace
- * images. (== resource_for {$api_version}.licenses ==)
+ * Represents a License resource. A License represents billing and aggregate usage data for public
+ * and marketplace images. *Caution* This resource is intended for use only by third-party partners
+ * who are creating Cloud Marketplace images.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

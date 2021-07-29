@@ -53,7 +53,6 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +183,6 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -192,7 +190,6 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
    * @param kind kind or {@code null} for none
    */
   public FutureReservation setKind(java.lang.String kind) {

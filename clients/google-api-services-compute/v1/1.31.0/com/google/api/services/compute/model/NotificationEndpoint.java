@@ -17,14 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a notification endpoint.
- *
- * A notification endpoint resource defines an endpoint to receive notifications when there are
- * status changes detected by the associated health check service.
- *
- * For more information, see  Health checks overview. (== resource_for
- * {$api_version}.notificationEndpoint ==) (== resource_for
- * {$api_version}.regionNotificationEndpoints ==)
+ * Represents a notification endpoint. A notification endpoint resource defines an endpoint to
+ * receive notifications when there are status changes detected by the associated health check
+ * service. For more information, see Health checks overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

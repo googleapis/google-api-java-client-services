@@ -18,8 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone
- * even if the reserved VMs are not running. For more information, read  Reserving zonal resources.
- * (== resource_for {$api_version}.reservations ==)
+ * even if the reserved VMs are not running. For more information, read Reserving zonal resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -91,6 +90,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Share-settings for shared-reservation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShareSettings shareSettings;
 
   /**
    * Reservation for instances with specific machine shapes.
@@ -266,6 +272,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Share-settings for shared-reservation
+   * @return value or {@code null} for none
+   */
+  public ShareSettings getShareSettings() {
+    return shareSettings;
+  }
+
+  /**
+   * Share-settings for shared-reservation
+   * @param shareSettings shareSettings or {@code null} for none
+   */
+  public Reservation setShareSettings(ShareSettings shareSettings) {
+    this.shareSettings = shareSettings;
     return this;
   }
 

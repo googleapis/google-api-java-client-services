@@ -184,10 +184,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long fileSize;
 
   /**
-   * Folder color as an RGB hex string if the file is a folder. The list of supported colors is
-   * available in the folderColorPalette field of the About resource. If an unsupported color is
-   * specified, it will be changed to the closest color in the palette. Not populated for items in
-   * shared drives.
+   * Folder color as an RGB hex string if the file is a folder or a shortcut to a folder. The list
+   * of supported colors is available in the folderColorPalette field of the About resource. If an
+   * unsupported color is specified, it will be changed to the closest color in the palette.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -940,10 +939,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Folder color as an RGB hex string if the file is a folder. The list of supported colors is
-   * available in the folderColorPalette field of the About resource. If an unsupported color is
-   * specified, it will be changed to the closest color in the palette. Not populated for items in
-   * shared drives.
+   * Folder color as an RGB hex string if the file is a folder or a shortcut to a folder. The list
+   * of supported colors is available in the folderColorPalette field of the About resource. If an
+   * unsupported color is specified, it will be changed to the closest color in the palette.
    * @return value or {@code null} for none
    */
   public java.lang.String getFolderColorRgb() {
@@ -951,10 +949,9 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Folder color as an RGB hex string if the file is a folder. The list of supported colors is
-   * available in the folderColorPalette field of the About resource. If an unsupported color is
-   * specified, it will be changed to the closest color in the palette. Not populated for items in
-   * shared drives.
+   * Folder color as an RGB hex string if the file is a folder or a shortcut to a folder. The list
+   * of supported colors is available in the folderColorPalette field of the About resource. If an
+   * unsupported color is specified, it will be changed to the closest color in the palette.
    * @param folderColorRgb folderColorRgb or {@code null} for none
    */
   public File setFolderColorRgb(java.lang.String folderColorRgb) {

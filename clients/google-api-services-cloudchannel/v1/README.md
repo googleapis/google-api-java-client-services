@@ -1,6 +1,6 @@
 # Cloud Channel API Client Library for Java
 
-
+The Cloud Channel API enables Google Cloud partners to have a single unified resale platform and APIs across all of Google Cloud including GCP, Workspace, Maps and Chrome.
 
 This page contains information about getting started with the Cloud Channel API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudchannel</artifactId>
-      <version>v1-rev20210629-1.32.1</version>
+      <version>v1-rev20210728-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudchannel:v1-rev20210629-1.32.1'
+  compile 'com.google.apis:google-api-services-cloudchannel:v1-rev20210728-1.32.1'
 }
 ```
 

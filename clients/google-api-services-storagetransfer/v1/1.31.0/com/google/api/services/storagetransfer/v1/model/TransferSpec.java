@@ -74,6 +74,13 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private ObjectConditions objectConditions;
 
   /**
+   * A POSIX Filesystem data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PosixFilesystem posixDataSource;
+
+  /**
    * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
    * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
@@ -184,6 +191,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setObjectConditions(ObjectConditions objectConditions) {
     this.objectConditions = objectConditions;
+    return this;
+  }
+
+  /**
+   * A POSIX Filesystem data source.
+   * @return value or {@code null} for none
+   */
+  public PosixFilesystem getPosixDataSource() {
+    return posixDataSource;
+  }
+
+  /**
+   * A POSIX Filesystem data source.
+   * @param posixDataSource posixDataSource or {@code null} for none
+   */
+  public TransferSpec setPosixDataSource(PosixFilesystem posixDataSource) {
+    this.posixDataSource = posixDataSource;
     return this;
   }
 

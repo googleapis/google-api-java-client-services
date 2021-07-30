@@ -88,6 +88,33 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
   private java.lang.Long bytesFromSourceSkippedBySync;
 
   /**
+   * For transfers involving PosixFilesystem only. Number of listing failures for each directory
+   * found at the source. Potential failures when listing a directory include permission failure or
+   * block failure. If listing a directory fails, no files in the directory are transferred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long directoriesFailedToListFromSource;
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of directories found while listing. For
+   * example, if the root directory of the transfer is `base/` and there are two other directories,
+   * `a/` and `b/` under this directory, the count after listing `base/`, `base/a/` and `base/b/` is
+   * 3.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long directoriesFoundFromSource;
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of successful listings for each directory
+   * found at the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long directoriesSuccessfullyListedFromSource;
+
+  /**
    * Objects that are copied to the data sink.
    * The value may be {@code null}.
    */
@@ -283,6 +310,69 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
    */
   public TransferCounters setBytesFromSourceSkippedBySync(java.lang.Long bytesFromSourceSkippedBySync) {
     this.bytesFromSourceSkippedBySync = bytesFromSourceSkippedBySync;
+    return this;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of listing failures for each directory
+   * found at the source. Potential failures when listing a directory include permission failure or
+   * block failure. If listing a directory fails, no files in the directory are transferred.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDirectoriesFailedToListFromSource() {
+    return directoriesFailedToListFromSource;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of listing failures for each directory
+   * found at the source. Potential failures when listing a directory include permission failure or
+   * block failure. If listing a directory fails, no files in the directory are transferred.
+   * @param directoriesFailedToListFromSource directoriesFailedToListFromSource or {@code null} for none
+   */
+  public TransferCounters setDirectoriesFailedToListFromSource(java.lang.Long directoriesFailedToListFromSource) {
+    this.directoriesFailedToListFromSource = directoriesFailedToListFromSource;
+    return this;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of directories found while listing. For
+   * example, if the root directory of the transfer is `base/` and there are two other directories,
+   * `a/` and `b/` under this directory, the count after listing `base/`, `base/a/` and `base/b/` is
+   * 3.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDirectoriesFoundFromSource() {
+    return directoriesFoundFromSource;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of directories found while listing. For
+   * example, if the root directory of the transfer is `base/` and there are two other directories,
+   * `a/` and `b/` under this directory, the count after listing `base/`, `base/a/` and `base/b/` is
+   * 3.
+   * @param directoriesFoundFromSource directoriesFoundFromSource or {@code null} for none
+   */
+  public TransferCounters setDirectoriesFoundFromSource(java.lang.Long directoriesFoundFromSource) {
+    this.directoriesFoundFromSource = directoriesFoundFromSource;
+    return this;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of successful listings for each directory
+   * found at the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDirectoriesSuccessfullyListedFromSource() {
+    return directoriesSuccessfullyListedFromSource;
+  }
+
+  /**
+   * For transfers involving PosixFilesystem only. Number of successful listings for each directory
+   * found at the source.
+   * @param directoriesSuccessfullyListedFromSource directoriesSuccessfullyListedFromSource or {@code null} for none
+   */
+  public TransferCounters setDirectoriesSuccessfullyListedFromSource(java.lang.Long directoriesSuccessfullyListedFromSource) {
+    this.directoriesSuccessfullyListedFromSource = directoriesSuccessfullyListedFromSource;
     return this;
   }
 

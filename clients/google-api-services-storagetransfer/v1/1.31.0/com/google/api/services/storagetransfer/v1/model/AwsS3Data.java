@@ -58,7 +58,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via
+   * The Amazon Resource Name (ARN) of the role to support temporary credentials via
    * `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-
    * arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the
@@ -133,7 +133,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via
+   * The Amazon Resource Name (ARN) of the role to support temporary credentials via
    * `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-
    * arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the
@@ -146,7 +146,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The Amazon Resource Name (ARN) of the role to support temporary credentials via
+   * The Amazon Resource Name (ARN) of the role to support temporary credentials via
    * `AssumeRoleWithWebIdentity`. For more information about ARNs, see [IAM
    * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-
    * arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the

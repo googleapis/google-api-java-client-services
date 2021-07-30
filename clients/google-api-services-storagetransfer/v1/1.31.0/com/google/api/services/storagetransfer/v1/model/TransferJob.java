@@ -67,6 +67,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String latestOperationName;
 
   /**
+   * Logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig loggingConfig;
+
+  /**
    * A unique name (within the transfer project) assigned when the job is created. If this field is
    * empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise,
    * the specified name is used as the unique name for this job. If the specified name is in use by
@@ -210,6 +217,23 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    */
   public TransferJob setLatestOperationName(java.lang.String latestOperationName) {
     this.latestOperationName = latestOperationName;
+    return this;
+  }
+
+  /**
+   * Logging configuration.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public TransferJob setLoggingConfig(LoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

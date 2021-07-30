@@ -7049,6 +7049,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * If set to true, and the in-app product with the given package_name and sku doesn't exist,
+       * the in-app product will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean allowMissing;
+
+      /** If set to true, and the in-app product with the given package_name and sku doesn't exist, the in-
+     app product will be created.
+       */
+      public java.lang.Boolean getAllowMissing() {
+        return allowMissing;
+      }
+
+      /**
+       * If set to true, and the in-app product with the given package_name and sku doesn't exist,
+       * the in-app product will be created.
+       */
+      public Update setAllowMissing(java.lang.Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+      }
+
+      /**
        * If true the prices for all regions targeted by the parent app that don't have a price
        * specified for this in-app product will be auto converted to the target currency based on
        * the default price. Defaults to false.

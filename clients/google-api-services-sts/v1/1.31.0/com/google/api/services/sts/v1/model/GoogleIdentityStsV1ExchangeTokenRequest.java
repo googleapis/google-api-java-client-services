@@ -32,8 +32,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
-   * external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
+   * when exchanging an external credential for a Google access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,16 +114,16 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
-   * //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/
-   * https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ If you are
-   * using temporary security credentials provided by AWS, you must also include the header `x-amz-
-   * security-token`, with the value set to the session token. The following example shows a
+   * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
+   * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
+   * are using temporary security credentials provided by AWS, you must also include the header `x
+   * -amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
-   * "//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/"}, {"key": "host",
-   * "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
+   * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
+   * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` You can also use a
    * Google-issued OAuth 2.0 access token with this field to obtain an access token with new
    * security attributes applied, such as a Credential Access Boundary. In this case, set
@@ -146,8 +146,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
-   * external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
+   * when exchanging an external credential for a Google access token.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -156,8 +156,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The full resource name of the identity provider; for example:
-   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
-   * external credential for a Google access token.
+   * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/`. Required
+   * when exchanging an external credential for a Google access token.
    * @param audience audience or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setAudience(java.lang.String audience) {
@@ -285,16 +285,16 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
-   * //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/
-   * https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ If you are
-   * using temporary security credentials provided by AWS, you must also include the header `x-amz-
-   * security-token`, with the value set to the session token. The following example shows a
+   * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
+   * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
+   * are using temporary security credentials provided by AWS, you must also include the header `x
+   * -amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
-   * "//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/"}, {"key": "host",
-   * "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
+   * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
+   * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` You can also use a
    * Google-issued OAuth 2.0 access token with this field to obtain an access token with new
    * security attributes applied, such as a Credential Access Boundary. In this case, set
@@ -348,16 +348,16 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
-   * //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/
-   * https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ If you are
-   * using temporary security credentials provided by AWS, you must also include the header `x-amz-
-   * security-token`, with the value set to the session token. The following example shows a
+   * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
+   * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
+   * are using temporary security credentials provided by AWS, you must also include the header `x
+   * -amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
-   * "//iam.googleapis.com/projects//locations//workloadIdentityPools//providers/"}, {"key": "host",
-   * "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
+   * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
+   * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` You can also use a
    * Google-issued OAuth 2.0 access token with this field to obtain an access token with new
    * security attributes applied, such as a Credential Access Boundary. In this case, set

@@ -44,6 +44,13 @@ public final class GoogleSearchIdeahubV1alphaTopic extends com.google.api.client
   private java.lang.String mid;
 
   /**
+   * Unique identifier for the topic. Format: topics/{topic}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * String displayed to the creator indicating the name of the Topic.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleSearchIdeahubV1alphaTopic extends com.google.api.client
    */
   public GoogleSearchIdeahubV1alphaTopic setMid(java.lang.String mid) {
     this.mid = mid;
+    return this;
+  }
+
+  /**
+   * Unique identifier for the topic. Format: topics/{topic}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Unique identifier for the topic. Format: topics/{topic}
+   * @param name name or {@code null} for none
+   */
+  public GoogleSearchIdeahubV1alphaTopic setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

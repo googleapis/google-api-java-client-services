@@ -102,6 +102,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
+   * The desired Identity Service component configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceConfig desiredIdentityServiceConfig;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -464,6 +471,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
     this.desiredDnsConfig = desiredDnsConfig;
+    return this;
+  }
+
+  /**
+   * The desired Identity Service component configuration.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceConfig getDesiredIdentityServiceConfig() {
+    return desiredIdentityServiceConfig;
+  }
+
+  /**
+   * The desired Identity Service component configuration.
+   * @param desiredIdentityServiceConfig desiredIdentityServiceConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredIdentityServiceConfig(IdentityServiceConfig desiredIdentityServiceConfig) {
+    this.desiredIdentityServiceConfig = desiredIdentityServiceConfig;
     return this;
   }
 

@@ -49,6 +49,13 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
   private AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults;
 
   /**
+   * Defines autoscaling behaviour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoscalingProfile;
+
+  /**
    * Enables automatic node pool creation and deletion.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   public ClusterAutoscaling setAutoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults) {
     this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
+    return this;
+  }
+
+  /**
+   * Defines autoscaling behaviour.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoscalingProfile() {
+    return autoscalingProfile;
+  }
+
+  /**
+   * Defines autoscaling behaviour.
+   * @param autoscalingProfile autoscalingProfile or {@code null} for none
+   */
+  public ClusterAutoscaling setAutoscalingProfile(java.lang.String autoscalingProfile) {
+    this.autoscalingProfile = autoscalingProfile;
     return this;
   }
 

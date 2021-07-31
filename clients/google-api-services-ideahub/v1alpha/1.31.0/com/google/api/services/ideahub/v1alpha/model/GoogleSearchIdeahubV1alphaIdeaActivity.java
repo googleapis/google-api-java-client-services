@@ -34,7 +34,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ideaIds;
+  private java.util.List<java.lang.String> ideas;
 
   /**
    * Unique identifier for the idea activity. Format:
@@ -49,7 +49,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> topicIds;
+  private java.util.List<java.lang.String> topics;
 
   /**
    * The type of activity performed.
@@ -69,16 +69,16 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
    * The Idea IDs for this entry.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getIdeaIds() {
-    return ideaIds;
+  public java.util.List<java.lang.String> getIdeas() {
+    return ideas;
   }
 
   /**
    * The Idea IDs for this entry.
-   * @param ideaIds ideaIds or {@code null} for none
+   * @param ideas ideas or {@code null} for none
    */
-  public GoogleSearchIdeahubV1alphaIdeaActivity setIdeaIds(java.util.List<java.lang.String> ideaIds) {
-    this.ideaIds = ideaIds;
+  public GoogleSearchIdeahubV1alphaIdeaActivity setIdeas(java.util.List<java.lang.String> ideas) {
+    this.ideas = ideas;
     return this;
   }
 
@@ -105,16 +105,16 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
    * The Topic IDs for this entry.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getTopicIds() {
-    return topicIds;
+  public java.util.List<java.lang.String> getTopics() {
+    return topics;
   }
 
   /**
    * The Topic IDs for this entry.
-   * @param topicIds topicIds or {@code null} for none
+   * @param topics topics or {@code null} for none
    */
-  public GoogleSearchIdeahubV1alphaIdeaActivity setTopicIds(java.util.List<java.lang.String> topicIds) {
-    this.topicIds = topicIds;
+  public GoogleSearchIdeahubV1alphaIdeaActivity setTopics(java.util.List<java.lang.String> topics) {
+    this.topics = topics;
     return this;
   }
 

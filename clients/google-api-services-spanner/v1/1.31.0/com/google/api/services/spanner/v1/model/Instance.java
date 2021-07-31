@@ -81,10 +81,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
-   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
-   * about nodes.
+   * The number of nodes allocated to this instance. At most one of either node_count or
+   * processing_units should be present in the message. This may be zero in API responses for
+   * instances that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The number of processing units allocated to this instance. At most one of processing_units or
    * node_count should be present in the message. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,10 +228,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
-   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
-   * about nodes.
+   * The number of nodes allocated to this instance. At most one of either node_count or
+   * processing_units should be present in the message. This may be zero in API responses for
+   * instances that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -236,10 +240,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
-   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
-   * about nodes.
+   * The number of nodes allocated to this instance. At most one of either node_count or
+   * processing_units should be present in the message. This may be zero in API responses for
+   * instances that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {
@@ -250,7 +255,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The number of processing units allocated to this instance. At most one of processing_units or
    * node_count should be present in the message. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProcessingUnits() {
@@ -260,7 +267,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * The number of processing units allocated to this instance. At most one of processing_units or
    * node_count should be present in the message. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
+   * about nodes and processing units.
    * @param processingUnits processingUnits or {@code null} for none
    */
   public Instance setProcessingUnits(java.lang.Integer processingUnits) {

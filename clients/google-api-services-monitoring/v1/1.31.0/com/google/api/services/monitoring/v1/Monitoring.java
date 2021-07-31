@@ -344,40 +344,40 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * metrics scope representing the specified monitored project will always be the first entry in the
          * response.
          *
-         * Create a request for the method "metricsScopes.listMetricScopesByMonitoredProject".
+         * Create a request for the method "metricsScopes.listMetricsScopesByMonitoredProject".
          *
          * This request holds the parameters needed by the monitoring server.  After setting any optional
-         * parameters, call the {@link ListMetricScopesByMonitoredProject#execute()} method to invoke the
+         * parameters, call the {@link ListMetricsScopesByMonitoredProject#execute()} method to invoke the
          * remote operation.
          *
          * @return the request
          */
-        public ListMetricScopesByMonitoredProject listMetricScopesByMonitoredProject() throws java.io.IOException {
-          ListMetricScopesByMonitoredProject result = new ListMetricScopesByMonitoredProject();
+        public ListMetricsScopesByMonitoredProject listMetricsScopesByMonitoredProject() throws java.io.IOException {
+          ListMetricsScopesByMonitoredProject result = new ListMetricsScopesByMonitoredProject();
           initialize(result);
           return result;
         }
 
-        public class ListMetricScopesByMonitoredProject extends MonitoringRequest<com.google.api.services.monitoring.v1.model.ListMetricsScopesByMonitoredProjectResponse> {
+        public class ListMetricsScopesByMonitoredProject extends MonitoringRequest<com.google.api.services.monitoring.v1.model.ListMetricsScopesByMonitoredProjectResponse> {
 
-          private static final String REST_PATH = "v1/locations/global/metricsScopes:listMetricScopesByMonitoredProject";
+          private static final String REST_PATH = "v1/locations/global/metricsScopes:listMetricsScopesByMonitoredProject";
 
           /**
            * Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The
            * metrics scope representing the specified monitored project will always be the first entry in
            * the response.
            *
-           * Create a request for the method "metricsScopes.listMetricScopesByMonitoredProject".
+           * Create a request for the method "metricsScopes.listMetricsScopesByMonitoredProject".
            *
            * This request holds the parameters needed by the the monitoring server.  After setting any
-           * optional parameters, call the {@link ListMetricScopesByMonitoredProject#execute()} method to
-           * invoke the remote operation. <p> {@link ListMetricScopesByMonitoredProject#initialize(com.googl
-           * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+           * optional parameters, call the {@link ListMetricsScopesByMonitoredProject#execute()} method to
+           * invoke the remote operation. <p> {@link ListMetricsScopesByMonitoredProject#initialize(com.goog
+           * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
            * this instance immediately after invoking the constructor. </p>
            *
            * @since 1.13
            */
-          protected ListMetricScopesByMonitoredProject() {
+          protected ListMetricsScopesByMonitoredProject() {
             super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v1.model.ListMetricsScopesByMonitoredProjectResponse.class);
           }
 
@@ -392,58 +392,58 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject set$Xgafv(java.lang.String $Xgafv) {
-            return (ListMetricScopesByMonitoredProject) super.set$Xgafv($Xgafv);
+          public ListMetricsScopesByMonitoredProject set$Xgafv(java.lang.String $Xgafv) {
+            return (ListMetricsScopesByMonitoredProject) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setAccessToken(java.lang.String accessToken) {
-            return (ListMetricScopesByMonitoredProject) super.setAccessToken(accessToken);
+          public ListMetricsScopesByMonitoredProject setAccessToken(java.lang.String accessToken) {
+            return (ListMetricsScopesByMonitoredProject) super.setAccessToken(accessToken);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setAlt(java.lang.String alt) {
-            return (ListMetricScopesByMonitoredProject) super.setAlt(alt);
+          public ListMetricsScopesByMonitoredProject setAlt(java.lang.String alt) {
+            return (ListMetricsScopesByMonitoredProject) super.setAlt(alt);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setCallback(java.lang.String callback) {
-            return (ListMetricScopesByMonitoredProject) super.setCallback(callback);
+          public ListMetricsScopesByMonitoredProject setCallback(java.lang.String callback) {
+            return (ListMetricsScopesByMonitoredProject) super.setCallback(callback);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setFields(java.lang.String fields) {
-            return (ListMetricScopesByMonitoredProject) super.setFields(fields);
+          public ListMetricsScopesByMonitoredProject setFields(java.lang.String fields) {
+            return (ListMetricsScopesByMonitoredProject) super.setFields(fields);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setKey(java.lang.String key) {
-            return (ListMetricScopesByMonitoredProject) super.setKey(key);
+          public ListMetricsScopesByMonitoredProject setKey(java.lang.String key) {
+            return (ListMetricsScopesByMonitoredProject) super.setKey(key);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setOauthToken(java.lang.String oauthToken) {
-            return (ListMetricScopesByMonitoredProject) super.setOauthToken(oauthToken);
+          public ListMetricsScopesByMonitoredProject setOauthToken(java.lang.String oauthToken) {
+            return (ListMetricsScopesByMonitoredProject) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ListMetricScopesByMonitoredProject) super.setPrettyPrint(prettyPrint);
+          public ListMetricsScopesByMonitoredProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListMetricsScopesByMonitoredProject) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setQuotaUser(java.lang.String quotaUser) {
-            return (ListMetricScopesByMonitoredProject) super.setQuotaUser(quotaUser);
+          public ListMetricsScopesByMonitoredProject setQuotaUser(java.lang.String quotaUser) {
+            return (ListMetricsScopesByMonitoredProject) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setUploadType(java.lang.String uploadType) {
-            return (ListMetricScopesByMonitoredProject) super.setUploadType(uploadType);
+          public ListMetricsScopesByMonitoredProject setUploadType(java.lang.String uploadType) {
+            return (ListMetricsScopesByMonitoredProject) super.setUploadType(uploadType);
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ListMetricScopesByMonitoredProject) super.setUploadProtocol(uploadProtocol);
+          public ListMetricsScopesByMonitoredProject setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListMetricsScopesByMonitoredProject) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -464,14 +464,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
            * Required. The resource name of the Monitored Project being requested. Example:
            * projects/{MONITORED_PROJECT_ID_OR_NUMBER}
            */
-          public ListMetricScopesByMonitoredProject setMonitoredResourceContainer(java.lang.String monitoredResourceContainer) {
+          public ListMetricsScopesByMonitoredProject setMonitoredResourceContainer(java.lang.String monitoredResourceContainer) {
             this.monitoredResourceContainer = monitoredResourceContainer;
             return this;
           }
 
           @Override
-          public ListMetricScopesByMonitoredProject set(String parameterName, Object value) {
-            return (ListMetricScopesByMonitoredProject) super.set(parameterName, value);
+          public ListMetricsScopesByMonitoredProject set(String parameterName, Object value) {
+            return (ListMetricsScopesByMonitoredProject) super.set(parameterName, value);
           }
         }
 

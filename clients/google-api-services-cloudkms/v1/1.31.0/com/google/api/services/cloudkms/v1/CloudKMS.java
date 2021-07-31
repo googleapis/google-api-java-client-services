@@ -4437,6 +4437,272 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
+             * Signs data using a CryptoKeyVersion with CryptoKey.purpose MAC, producing a tag that can be
+             * verified by another source with the same key.
+             *
+             * Create a request for the method "cryptoKeyVersions.macSign".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link MacSign#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the CryptoKeyVersion to use for signing.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.MacSignRequest}
+             * @return the request
+             */
+            public MacSign macSign(java.lang.String name, com.google.api.services.cloudkms.v1.model.MacSignRequest content) throws java.io.IOException {
+              MacSign result = new MacSign(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class MacSign extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.MacSignResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:macSign";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Signs data using a CryptoKeyVersion with CryptoKey.purpose MAC, producing a tag that can be
+               * verified by another source with the same key.
+               *
+               * Create a request for the method "cryptoKeyVersions.macSign".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link MacSign#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * MacSign#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the CryptoKeyVersion to use for signing.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.MacSignRequest}
+               * @since 1.13
+               */
+              protected MacSign(java.lang.String name, com.google.api.services.cloudkms.v1.model.MacSignRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.MacSignResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public MacSign set$Xgafv(java.lang.String $Xgafv) {
+                return (MacSign) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public MacSign setAccessToken(java.lang.String accessToken) {
+                return (MacSign) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public MacSign setAlt(java.lang.String alt) {
+                return (MacSign) super.setAlt(alt);
+              }
+
+              @Override
+              public MacSign setCallback(java.lang.String callback) {
+                return (MacSign) super.setCallback(callback);
+              }
+
+              @Override
+              public MacSign setFields(java.lang.String fields) {
+                return (MacSign) super.setFields(fields);
+              }
+
+              @Override
+              public MacSign setKey(java.lang.String key) {
+                return (MacSign) super.setKey(key);
+              }
+
+              @Override
+              public MacSign setOauthToken(java.lang.String oauthToken) {
+                return (MacSign) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public MacSign setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (MacSign) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public MacSign setQuotaUser(java.lang.String quotaUser) {
+                return (MacSign) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public MacSign setUploadType(java.lang.String uploadType) {
+                return (MacSign) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public MacSign setUploadProtocol(java.lang.String uploadProtocol) {
+                return (MacSign) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for signing. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the CryptoKeyVersion to use for signing.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for signing. */
+              public MacSign setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public MacSign set(String parameterName, Object value) {
+                return (MacSign) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Verifies MAC tag using a CryptoKeyVersion with CryptoKey.purpose MAC, and returns a response that
+             * indicates whether or not the verification was successful.
+             *
+             * Create a request for the method "cryptoKeyVersions.macVerify".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link MacVerify#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the CryptoKeyVersion to use for verification.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.MacVerifyRequest}
+             * @return the request
+             */
+            public MacVerify macVerify(java.lang.String name, com.google.api.services.cloudkms.v1.model.MacVerifyRequest content) throws java.io.IOException {
+              MacVerify result = new MacVerify(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class MacVerify extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.MacVerifyResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:macVerify";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Verifies MAC tag using a CryptoKeyVersion with CryptoKey.purpose MAC, and returns a response
+               * that indicates whether or not the verification was successful.
+               *
+               * Create a request for the method "cryptoKeyVersions.macVerify".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link MacVerify#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * MacVerify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the CryptoKeyVersion to use for verification.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.MacVerifyRequest}
+               * @since 1.13
+               */
+              protected MacVerify(java.lang.String name, com.google.api.services.cloudkms.v1.model.MacVerifyRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.MacVerifyResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public MacVerify set$Xgafv(java.lang.String $Xgafv) {
+                return (MacVerify) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public MacVerify setAccessToken(java.lang.String accessToken) {
+                return (MacVerify) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public MacVerify setAlt(java.lang.String alt) {
+                return (MacVerify) super.setAlt(alt);
+              }
+
+              @Override
+              public MacVerify setCallback(java.lang.String callback) {
+                return (MacVerify) super.setCallback(callback);
+              }
+
+              @Override
+              public MacVerify setFields(java.lang.String fields) {
+                return (MacVerify) super.setFields(fields);
+              }
+
+              @Override
+              public MacVerify setKey(java.lang.String key) {
+                return (MacVerify) super.setKey(key);
+              }
+
+              @Override
+              public MacVerify setOauthToken(java.lang.String oauthToken) {
+                return (MacVerify) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public MacVerify setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (MacVerify) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public MacVerify setQuotaUser(java.lang.String quotaUser) {
+                return (MacVerify) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public MacVerify setUploadType(java.lang.String uploadType) {
+                return (MacVerify) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public MacVerify setUploadProtocol(java.lang.String uploadProtocol) {
+                return (MacVerify) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for verification. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the CryptoKeyVersion to use for verification.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for verification. */
+              public MacVerify setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public MacVerify set(String parameterName, Object value) {
+                return (MacVerify) super.set(parameterName, value);
+              }
+            }
+            /**
              * Update a CryptoKeyVersion's metadata. state may be changed between ENABLED and DISABLED using
              * this method. See DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to move between other
              * states.

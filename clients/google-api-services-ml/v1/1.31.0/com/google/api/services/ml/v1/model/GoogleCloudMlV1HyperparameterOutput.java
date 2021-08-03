@@ -104,8 +104,12 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   private java.lang.String trialId;
 
   /**
-   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
-   * in-progress hyperparameter tuning trials with web access enabled.
+   * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs
+   * /monitor-debug-interactive-shell) (one URI for each training node). Only available if this
+   * trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is
+   * `true`. The keys are names of each node in the training job; for example, `master-replica-0`
+   * for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first
+   * parameter server. The values are the URIs for each node's interactive shell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,8 +271,12 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   }
 
   /**
-   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
-   * in-progress hyperparameter tuning trials with web access enabled.
+   * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs
+   * /monitor-debug-interactive-shell) (one URI for each training node). Only available if this
+   * trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is
+   * `true`. The keys are names of each node in the training job; for example, `master-replica-0`
+   * for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first
+   * parameter server. The values are the URIs for each node's interactive shell.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getWebAccessUris() {
@@ -276,8 +284,12 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   }
 
   /**
-   * The web URIs for the training job. Currently for debug terminal access to the job. Only set for
-   * in-progress hyperparameter tuning trials with web access enabled.
+   * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs
+   * /monitor-debug-interactive-shell) (one URI for each training node). Only available if this
+   * trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is
+   * `true`. The keys are names of each node in the training job; for example, `master-replica-0`
+   * for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first
+   * parameter server. The values are the URIs for each node's interactive shell.
    * @param webAccessUris webAccessUris or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterOutput setWebAccessUris(java.util.Map<String, java.lang.String> webAccessUris) {

@@ -42,7 +42,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.util.List<java.lang.String> args;
 
   /**
-   * Optional. Whether to enable web access for the training job.
+   * Optional. Whether you want AI Platform Training to enable [interactive shell
+   * access](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) to
+   * training containers. If set to `true`, you can access interactive shells at the URIs given by
+   * TrainingOutput.web_access_uris or HyperparameterOutput.web_access_uris (within
+   * TrainingOutput.trials).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +329,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. Whether to enable web access for the training job.
+   * Optional. Whether you want AI Platform Training to enable [interactive shell
+   * access](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) to
+   * training containers. If set to `true`, you can access interactive shells at the URIs given by
+   * TrainingOutput.web_access_uris or HyperparameterOutput.web_access_uris (within
+   * TrainingOutput.trials).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableWebAccess() {
@@ -333,7 +341,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. Whether to enable web access for the training job.
+   * Optional. Whether you want AI Platform Training to enable [interactive shell
+   * access](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) to
+   * training containers. If set to `true`, you can access interactive shells at the URIs given by
+   * TrainingOutput.web_access_uris or HyperparameterOutput.web_access_uris (within
+   * TrainingOutput.trials).
    * @param enableWebAccess enableWebAccess or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setEnableWebAccess(java.lang.Boolean enableWebAccess) {

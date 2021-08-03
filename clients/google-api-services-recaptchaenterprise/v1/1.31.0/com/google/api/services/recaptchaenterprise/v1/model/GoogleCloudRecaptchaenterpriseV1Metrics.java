@@ -45,6 +45,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
+   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Metrics will be continuous and in order by dates, and in the granularity of day. All Key types
    * should have score-based data.
    * The value may be {@code null}.
@@ -75,6 +82,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
    */
   public GoogleCloudRecaptchaenterpriseV1Metrics setChallengeMetrics(java.util.List<GoogleCloudRecaptchaenterpriseV1ChallengeMetrics> challengeMetrics) {
     this.challengeMetrics = challengeMetrics;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. The name of the metrics, in the format "projects/{project}/keys/{key}/metrics".
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Metrics setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

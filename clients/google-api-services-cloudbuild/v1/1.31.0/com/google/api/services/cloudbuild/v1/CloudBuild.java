@@ -7636,6 +7636,29 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         return (Webhook) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+       * GitHubEnterpriseConfig to use for validation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String webhookKey;
+
+      /** For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+     GitHubEnterpriseConfig to use for validation.
+       */
+      public java.lang.String getWebhookKey() {
+        return webhookKey;
+      }
+
+      /**
+       * For GitHub Enterprise webhooks, this key is used to associate the webhook request with the
+       * GitHubEnterpriseConfig to use for validation.
+       */
+      public Webhook setWebhookKey(java.lang.String webhookKey) {
+        this.webhookKey = webhookKey;
+        return this;
+      }
+
       @Override
       public Webhook set(String parameterName, Object value) {
         return (Webhook) super.set(parameterName, value);

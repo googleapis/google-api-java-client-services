@@ -29,7 +29,7 @@ package com.google.api.services.documentai.v1beta3.model;
  * For example, users can call either the 'US' or 'EU' endpoint to feach processor types. In the
  * return, we will have an 'invoice parsing' processor with 'available_locations' field only
  * containing 'US'. So the user can try to create an 'invoice parsing' processor under the location
- * 'US'. Such attempt of creating under the location 'EU' will fail. Next ID: 7.
+ * 'US'. Such attempt of creating under the location 'EU' will fail. Next ID: 8.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

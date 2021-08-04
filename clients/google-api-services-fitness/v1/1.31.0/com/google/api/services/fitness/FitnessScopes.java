@@ -41,10 +41,10 @@ public class FitnessScopes {
   /** Add info about your blood pressure in Google Fit. I consent to Google using my blood pressure information with this app.. */
   public static final String FITNESS_BLOOD_PRESSURE_WRITE = "https://www.googleapis.com/auth/fitness.blood_pressure.write";
 
-  /** See info about your body measurements and heart rate in Google Fit. */
+  /** See info about your body measurements in Google Fit. */
   public static final String FITNESS_BODY_READ = "https://www.googleapis.com/auth/fitness.body.read";
 
-  /** Add info about your body measurements and heart rate to Google Fit. */
+  /** Add info about your body measurements to Google Fit. */
   public static final String FITNESS_BODY_WRITE = "https://www.googleapis.com/auth/fitness.body.write";
 
   /** See info about your body temperature in Google Fit. I consent to Google sharing my body temperature information with this app.. */

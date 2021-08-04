@@ -17,7 +17,11 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * The inventory details of a VM.
+ * This API resource represents the available inventory data for a Compute Engine virtual machine
+ * (VM) instance at a given point in time. You can use this API resource to determine the inventory
+ * data of your VM. For more information, see [Information provided by OS inventory
+ * management](https://cloud.google.com/compute/docs/instances/os-inventory-management#data-
+ * collected).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -39,11 +43,26 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, Item> items;
 
   /**
+   * Output only. The `Inventory` API resource name. Format:
+   * `projects/{project_number}/locations/{location}/instances/{instance_id}/inventory`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Base level operating system information for the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OsInfo osInfo;
+
+  /**
+   * Output only. Timestamp of the last reported inventory for the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Inventory items related to the VM keyed by an opaque unique identifier for each inventory item.
@@ -67,6 +86,25 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The `Inventory` API resource name. Format:
+   * `projects/{project_number}/locations/{location}/instances/{instance_id}/inventory`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. The `Inventory` API resource name. Format:
+   * `projects/{project_number}/locations/{location}/instances/{instance_id}/inventory`
+   * @param name name or {@code null} for none
+   */
+  public Inventory setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
    * Base level operating system information for the VM.
    * @return value or {@code null} for none
    */
@@ -80,6 +118,23 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
    */
   public Inventory setOsInfo(OsInfo osInfo) {
     this.osInfo = osInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp of the last reported inventory for the VM.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp of the last reported inventory for the VM.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Inventory setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

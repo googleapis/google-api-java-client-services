@@ -439,6 +439,52 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
+      /**
+       * A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This
+       * field should only be specified if content_type=RELATIONSHIP. * If specified: it snapshots
+       * specified relationships. It returns an error if any of the [relationship_types] doesn't
+       * belong to the supported relationship types of the [asset_types] or if any of the
+       * [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise:
+       * it snapshots the supported relationships for all [asset_types] or returns an error if any
+       * of the [asset_types] has no relationship support. An unspecified asset types field means
+       * all supported asset_types. See [Introduction to Cloud Asset
+       * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
+       * types and relationship types.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> relationshipTypes;
+
+      /** A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should
+     only be specified if content_type=RELATIONSHIP. * If specified: it snapshots specified
+     relationships. It returns an error if any of the [relationship_types] doesn't belong to the
+     supported relationship types of the [asset_types] or if any of the [asset_types] doesn't belong to
+     the source types of the [relationship_types]. * Otherwise: it snapshots the supported relationships
+     for all [asset_types] or returns an error if any of the [asset_types] has no relationship support.
+     An unspecified asset types field means all supported asset_types. See [Introduction to Cloud Asset
+     Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types
+     and relationship types.
+       */
+      public java.util.List<java.lang.String> getRelationshipTypes() {
+        return relationshipTypes;
+      }
+
+      /**
+       * A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This
+       * field should only be specified if content_type=RELATIONSHIP. * If specified: it snapshots
+       * specified relationships. It returns an error if any of the [relationship_types] doesn't
+       * belong to the supported relationship types of the [asset_types] or if any of the
+       * [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise:
+       * it snapshots the supported relationships for all [asset_types] or returns an error if any
+       * of the [asset_types] has no relationship support. An unspecified asset types field means
+       * all supported asset_types. See [Introduction to Cloud Asset
+       * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
+       * types and relationship types.
+       */
+      public List setRelationshipTypes(java.util.List<java.lang.String> relationshipTypes) {
+        this.relationshipTypes = relationshipTypes;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -2575,6 +2621,50 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Start time of the time window (exclusive). */
       public BatchGetAssetsHistory setReadTimeWindowStartTime(String readTimeWindowStartTime) {
         this.readTimeWindowStartTime = readTimeWindowStartTime;
+        return this;
+      }
+
+      /**
+       * Optional. A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`.
+       * This field should only be specified if content_type=RELATIONSHIP. * If specified: it
+       * outputs specified relationships' history on the [asset_names]. It returns an error if any
+       * of the [relationship_types] doesn't belong to the supported relationship types of the
+       * [asset_names] or if any of the [asset_names]'s types doesn't belong to the source types of
+       * the [relationship_types]. * Otherwise: it outputs the supported relationships' history on
+       * the [asset_names] or returns an error if any of the [asset_names]'s types has no
+       * relationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com
+       * /asset-inventory/docs/overview) for all supported asset types and relationship types.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> relationshipTypes;
+
+      /** Optional. A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This
+     field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified
+     relationships' history on the [asset_names]. It returns an error if any of the [relationship_types]
+     doesn't belong to the supported relationship types of the [asset_names] or if any of the
+     [asset_names]'s types doesn't belong to the source types of the [relationship_types]. * Otherwise:
+     it outputs the supported relationships' history on the [asset_names] or returns an error if any of
+     the [asset_names]'s types has no relationship support. See [Introduction to Cloud Asset
+     Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types
+     and relationship types.
+       */
+      public java.util.List<java.lang.String> getRelationshipTypes() {
+        return relationshipTypes;
+      }
+
+      /**
+       * Optional. A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`.
+       * This field should only be specified if content_type=RELATIONSHIP. * If specified: it
+       * outputs specified relationships' history on the [asset_names]. It returns an error if any
+       * of the [relationship_types] doesn't belong to the supported relationship types of the
+       * [asset_names] or if any of the [asset_names]'s types doesn't belong to the source types of
+       * the [relationship_types]. * Otherwise: it outputs the supported relationships' history on
+       * the [asset_names] or returns an error if any of the [asset_names]'s types has no
+       * relationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com
+       * /asset-inventory/docs/overview) for all supported asset types and relationship types.
+       */
+      public BatchGetAssetsHistory setRelationshipTypes(java.util.List<java.lang.String> relationshipTypes) {
+        this.relationshipTypes = relationshipTypes;
         return this;
       }
 

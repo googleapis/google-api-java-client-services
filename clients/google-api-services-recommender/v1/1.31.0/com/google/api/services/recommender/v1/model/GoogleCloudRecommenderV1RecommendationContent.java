@@ -44,6 +44,13 @@ public final class GoogleCloudRecommenderV1RecommendationContent extends com.goo
   }
 
   /**
+   * Condensed overview information about the recommendation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> overview;
+
+  /**
    * Operations to one or more Google Cloud resources grouped in such a way that, all operations
    * within one group are expected to be performed atomically and in an order.
    * @return value or {@code null} for none
@@ -59,6 +66,23 @@ public final class GoogleCloudRecommenderV1RecommendationContent extends com.goo
    */
   public GoogleCloudRecommenderV1RecommendationContent setOperationGroups(java.util.List<GoogleCloudRecommenderV1OperationGroup> operationGroups) {
     this.operationGroups = operationGroups;
+    return this;
+  }
+
+  /**
+   * Condensed overview information about the recommendation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getOverview() {
+    return overview;
+  }
+
+  /**
+   * Condensed overview information about the recommendation.
+   * @param overview overview or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1RecommendationContent setOverview(java.util.Map<String, java.lang.Object> overview) {
+    this.overview = overview;
     return this;
   }
 

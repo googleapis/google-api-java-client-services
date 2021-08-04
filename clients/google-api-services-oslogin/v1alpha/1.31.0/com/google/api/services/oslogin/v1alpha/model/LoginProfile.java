@@ -44,6 +44,13 @@ public final class LoginProfile extends com.google.api.client.json.GenericJson {
   private java.util.List<PosixAccount> posixAccounts;
 
   /**
+   * The registered security key credentials for a user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityKey> securityKeys;
+
+  /**
    * A map from SSH public key fingerprint to the associated key object.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class LoginProfile extends com.google.api.client.json.GenericJson {
    */
   public LoginProfile setPosixAccounts(java.util.List<PosixAccount> posixAccounts) {
     this.posixAccounts = posixAccounts;
+    return this;
+  }
+
+  /**
+   * The registered security key credentials for a user.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityKey> getSecurityKeys() {
+    return securityKeys;
+  }
+
+  /**
+   * The registered security key credentials for a user.
+   * @param securityKeys securityKeys or {@code null} for none
+   */
+  public LoginProfile setSecurityKeys(java.util.List<SecurityKey> securityKeys) {
+    this.securityKeys = securityKeys;
     return this;
   }
 

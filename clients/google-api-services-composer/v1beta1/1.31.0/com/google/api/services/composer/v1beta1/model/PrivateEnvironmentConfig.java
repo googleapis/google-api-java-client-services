@@ -58,7 +58,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
-   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true .
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,14 +75,16 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This
+   * field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webServerIpv4CidrBlock;
 
   /**
-   * Output only. The IP range reserved for the tenant project's App Engine VMs.
+   * Output only. The IP range reserved for the tenant project's App Engine VMs. This field is
+   * supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +155,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
-   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true .
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEnvironment() {
@@ -161,7 +165,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
-   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true .
+   * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*.
    * @param enablePrivateEnvironment enablePrivateEnvironment or {@code null} for none
    */
   public PrivateEnvironmentConfig setEnablePrivateEnvironment(java.lang.Boolean enablePrivateEnvironment) {
@@ -190,7 +195,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This
+   * field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebServerIpv4CidrBlock() {
@@ -199,7 +205,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
 
   /**
    * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be
-   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block.
+   * disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This
+   * field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @param webServerIpv4CidrBlock webServerIpv4CidrBlock or {@code null} for none
    */
   public PrivateEnvironmentConfig setWebServerIpv4CidrBlock(java.lang.String webServerIpv4CidrBlock) {
@@ -208,7 +215,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The IP range reserved for the tenant project's App Engine VMs.
+   * Output only. The IP range reserved for the tenant project's App Engine VMs. This field is
+   * supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebServerIpv4ReservedRange() {
@@ -216,7 +224,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The IP range reserved for the tenant project's App Engine VMs.
+   * Output only. The IP range reserved for the tenant project's App Engine VMs. This field is
+   * supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @param webServerIpv4ReservedRange webServerIpv4ReservedRange or {@code null} for none
    */
   public PrivateEnvironmentConfig setWebServerIpv4ReservedRange(java.lang.String webServerIpv4ReservedRange) {

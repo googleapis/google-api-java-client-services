@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class BuildDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * In-toto Provenance representation as defined in spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoProvenance intotoProvenance;
+
+  /**
    * The actual provenance
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String provenanceBytes;
+
+  /**
+   * In-toto Provenance representation as defined in spec.
+   * @return value or {@code null} for none
+   */
+  public InTotoProvenance getIntotoProvenance() {
+    return intotoProvenance;
+  }
+
+  /**
+   * In-toto Provenance representation as defined in spec.
+   * @param intotoProvenance intotoProvenance or {@code null} for none
+   */
+  public BuildDetails setIntotoProvenance(InTotoProvenance intotoProvenance) {
+    this.intotoProvenance = intotoProvenance;
+    return this;
+  }
 
   /**
    * The actual provenance

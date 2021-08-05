@@ -31,6 +31,13 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class BuildOccurrence extends com.google.api.client.json.GenericJson {
 
   /**
+   * In-toto Provenance representation as defined in spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoProvenance intotoProvenance;
+
+  /**
    * Required. The actual provenance for the build.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String provenanceBytes;
+
+  /**
+   * In-toto Provenance representation as defined in spec.
+   * @return value or {@code null} for none
+   */
+  public InTotoProvenance getIntotoProvenance() {
+    return intotoProvenance;
+  }
+
+  /**
+   * In-toto Provenance representation as defined in spec.
+   * @param intotoProvenance intotoProvenance or {@code null} for none
+   */
+  public BuildOccurrence setIntotoProvenance(InTotoProvenance intotoProvenance) {
+    this.intotoProvenance = intotoProvenance;
+    return this;
+  }
 
   /**
    * Required. The actual provenance for the build.

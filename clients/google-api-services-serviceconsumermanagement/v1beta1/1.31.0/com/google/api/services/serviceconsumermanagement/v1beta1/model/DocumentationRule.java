@@ -39,8 +39,9 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
   private java.lang.String deprecationDescription;
 
   /**
-   * The description is the comment in front of the selected proto element, such as a message, a
-   * method, a 'service' definition, or a field.
+   * Description of the selected proto element (e.g. a message, a method, a 'service' definition, or
+   * a field). Defaults to leading & trailing comments taken from the proto source definition of the
+   * proto element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +78,9 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The description is the comment in front of the selected proto element, such as a message, a
-   * method, a 'service' definition, or a field.
+   * Description of the selected proto element (e.g. a message, a method, a 'service' definition, or
+   * a field). Defaults to leading & trailing comments taken from the proto source definition of the
+   * proto element.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -86,8 +88,9 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The description is the comment in front of the selected proto element, such as a message, a
-   * method, a 'service' definition, or a field.
+   * Description of the selected proto element (e.g. a message, a method, a 'service' definition, or
+   * a field). Defaults to leading & trailing comments taken from the proto source definition of the
+   * proto element.
    * @param description description or {@code null} for none
    */
   public DocumentationRule setDescription(java.lang.String description) {

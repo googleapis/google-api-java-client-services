@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
  * Parameters for node pool-level network config.

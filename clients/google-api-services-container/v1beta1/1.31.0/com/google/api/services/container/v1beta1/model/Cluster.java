@@ -281,6 +281,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> locations;
 
   /**
+   * Logging configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig loggingConfig;
+
+  /**
    * The logging service the cluster should use to write logs. Currently available options: *
    * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
@@ -330,6 +337,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String masterIpv4CidrBlock;
+
+  /**
+   * Monitoring configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonitoringConfig monitoringConfig;
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
@@ -1151,6 +1165,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Logging configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Logging configuration for the cluster.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public Cluster setLoggingConfig(LoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
+    return this;
+  }
+
+  /**
    * The logging service the cluster should use to write logs. Currently available options: *
    * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
@@ -1267,6 +1298,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMasterIpv4CidrBlock(java.lang.String masterIpv4CidrBlock) {
     this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Monitoring configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public MonitoringConfig getMonitoringConfig() {
+    return monitoringConfig;
+  }
+
+  /**
+   * Monitoring configuration for the cluster.
+   * @param monitoringConfig monitoringConfig or {@code null} for none
+   */
+  public Cluster setMonitoringConfig(MonitoringConfig monitoringConfig) {
+    this.monitoringConfig = monitoringConfig;
     return this;
   }
 

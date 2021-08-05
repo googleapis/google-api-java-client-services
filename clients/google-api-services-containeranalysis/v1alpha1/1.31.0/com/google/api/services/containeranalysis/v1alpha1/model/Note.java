@@ -81,6 +81,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private Discovery discovery;
 
   /**
+   * A note describing a dsse attestation note.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DSSEAttestationNote dsseAttestation;
+
+  /**
    * Time of expiration for this note, null if note does not expire.
    * The value may be {@code null}.
    */
@@ -298,6 +305,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setDiscovery(Discovery discovery) {
     this.discovery = discovery;
+    return this;
+  }
+
+  /**
+   * A note describing a dsse attestation note.
+   * @return value or {@code null} for none
+   */
+  public DSSEAttestationNote getDsseAttestation() {
+    return dsseAttestation;
+  }
+
+  /**
+   * A note describing a dsse attestation note.
+   * @param dsseAttestation dsseAttestation or {@code null} for none
+   */
+  public Note setDsseAttestation(DSSEAttestationNote dsseAttestation) {
+    this.dsseAttestation = dsseAttestation;
     return this;
   }
 

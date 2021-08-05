@@ -120,6 +120,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> desiredLocations;
 
   /**
+   * The desired logging configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig desiredLoggingConfig;
+
+  /**
    * The logging service the cluster should use to write logs. Currently available options: *
    * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
@@ -148,6 +155,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredMasterVersion;
+
+  /**
+   * The desired monitoring configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonitoringConfig desiredMonitoringConfig;
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
@@ -460,6 +474,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired logging configuration.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getDesiredLoggingConfig() {
+    return desiredLoggingConfig;
+  }
+
+  /**
+   * The desired logging configuration.
+   * @param desiredLoggingConfig desiredLoggingConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredLoggingConfig(LoggingConfig desiredLoggingConfig) {
+    this.desiredLoggingConfig = desiredLoggingConfig;
+    return this;
+  }
+
+  /**
    * The logging service the cluster should use to write logs. Currently available options: *
    * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
@@ -525,6 +556,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredMasterVersion(java.lang.String desiredMasterVersion) {
     this.desiredMasterVersion = desiredMasterVersion;
+    return this;
+  }
+
+  /**
+   * The desired monitoring configuration.
+   * @return value or {@code null} for none
+   */
+  public MonitoringConfig getDesiredMonitoringConfig() {
+    return desiredMonitoringConfig;
+  }
+
+  /**
+   * The desired monitoring configuration.
+   * @param desiredMonitoringConfig desiredMonitoringConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredMonitoringConfig(MonitoringConfig desiredMonitoringConfig) {
+    this.desiredMonitoringConfig = desiredMonitoringConfig;
     return this;
   }
 

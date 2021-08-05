@@ -73,6 +73,20 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private DiscoveryOccurrence discovery;
 
   /**
+   * Describes an attestation of an artifact using dsse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DSSEAttestationOccurrence dsseAttestation;
+
+  /**
+   * https://github.com/secure-systems-lab/dsse
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Envelope envelope;
+
+  /**
    * Describes how this resource derives from the basis in the associated note.
    * The value may be {@code null}.
    */
@@ -245,6 +259,40 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setDiscovery(DiscoveryOccurrence discovery) {
     this.discovery = discovery;
+    return this;
+  }
+
+  /**
+   * Describes an attestation of an artifact using dsse.
+   * @return value or {@code null} for none
+   */
+  public DSSEAttestationOccurrence getDsseAttestation() {
+    return dsseAttestation;
+  }
+
+  /**
+   * Describes an attestation of an artifact using dsse.
+   * @param dsseAttestation dsseAttestation or {@code null} for none
+   */
+  public Occurrence setDsseAttestation(DSSEAttestationOccurrence dsseAttestation) {
+    this.dsseAttestation = dsseAttestation;
+    return this;
+  }
+
+  /**
+   * https://github.com/secure-systems-lab/dsse
+   * @return value or {@code null} for none
+   */
+  public Envelope getEnvelope() {
+    return envelope;
+  }
+
+  /**
+   * https://github.com/secure-systems-lab/dsse
+   * @param envelope envelope or {@code null} for none
+   */
+  public Occurrence setEnvelope(Envelope envelope) {
+    this.envelope = envelope;
     return this;
   }
 

@@ -1603,15 +1603,26 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers * photos
+       * fields can be specified by separating them with commas. What values are valid depend on
+       * what ReadSourceType is used. If READ_SOURCE_TYPE_CONTACT is used, valid values are: *
+       * emailAddresses * metadata * names * phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is
+       * used, valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String readMask;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
-     specified by separating them with commas. Valid values are: * emailAddresses * metadata * names *
-     phoneNumbers * photos
+     specified by separating them with commas. What values are valid depend on what ReadSourceType is
+     used. If READ_SOURCE_TYPE_CONTACT is used, valid values are: * emailAddresses * metadata * names *
+     phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is used, valid values are: * addresses *
+     ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses *
+     events * externalIds * genders * imClients * interests * locales * locations * memberships *
+     metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
+     relations * sipAddresses * skills * urls * userDefined
        */
       public String getReadMask() {
         return readMask;
@@ -1619,8 +1630,14 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
-       * * metadata * names * phoneNumbers * photos
+       * fields can be specified by separating them with commas. What values are valid depend on
+       * what ReadSourceType is used. If READ_SOURCE_TYPE_CONTACT is used, valid values are: *
+       * emailAddresses * metadata * names * phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is
+       * used, valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
        */
       public List setReadMask(String readMask) {
         this.readMask = readMask;
@@ -1655,24 +1672,12 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
-       * not set. If READ_SOURCE_TYPE_CONTACT is used, valid values for the readMask are: *
-       * emailAddresses * metadata * names * phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is
-       * used, valid values for the readMask are: * addresses * ageRanges * biographies * birthdays
-       * * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders
-       * * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
-       * names * nicknames * occupations * organizations * phoneNumbers * photos * relations *
-       * sipAddresses * skills * urls * userDefined
+       * not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
       /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
-     If READ_SOURCE_TYPE_CONTACT is used, valid values for the readMask are: * emailAddresses * metadata
-     * names * phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is used, valid values for the readMask
-     are: * addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
-     emailAddresses * events * externalIds * genders * imClients * interests * locales * locations *
-     memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
-     phoneNumbers * photos * relations * sipAddresses * skills * urls * userDefined
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
@@ -1680,13 +1685,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if
-       * not set. If READ_SOURCE_TYPE_CONTACT is used, valid values for the readMask are: *
-       * emailAddresses * metadata * names * phoneNumbers * photos If READ_SOURCE_TYPE_PROFILE is
-       * used, valid values for the readMask are: * addresses * ageRanges * biographies * birthdays
-       * * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders
-       * * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
-       * names * nicknames * occupations * organizations * phoneNumbers * photos * relations *
-       * sipAddresses * skills * urls * userDefined
+       * not set.
        */
       public List setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;

@@ -39,9 +39,9 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
   private java.lang.String androidxOrchestratorVersion;
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is used in the
-   * environment. The package is available at
-   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
+   * Deprecated: Use AndroidX Test Orchestrator going forward. A string representing the current
+   * version of Android Test Orchestrator that is used in the environment. The package is available
+   * at https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +69,9 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
   }
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is used in the
-   * environment. The package is available at
-   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
+   * Deprecated: Use AndroidX Test Orchestrator going forward. A string representing the current
+   * version of Android Test Orchestrator that is used in the environment. The package is available
+   * at https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestratorVersion() {
@@ -79,9 +79,9 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
   }
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is used in the
-   * environment. The package is available at
-   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
+   * Deprecated: Use AndroidX Test Orchestrator going forward. A string representing the current
+   * version of Android Test Orchestrator that is used in the environment. The package is available
+   * at https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * @param orchestratorVersion orchestratorVersion or {@code null} for none
    */
   public ProvidedSoftwareCatalog setOrchestratorVersion(java.lang.String orchestratorVersion) {

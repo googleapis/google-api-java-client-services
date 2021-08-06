@@ -83,7 +83,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the EndpointPolicy resource. It matches pattern
-   * `projects/locations/global/endpointPolicies/`.
+   * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +240,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the EndpointPolicy resource. It matches pattern
-   * `projects/locations/global/endpointPolicies/`.
+   * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -249,7 +249,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Name of the EndpointPolicy resource. It matches pattern
-   * `projects/locations/global/endpointPolicies/`.
+   * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * @param name name or {@code null} for none
    */
   public EndpointPolicy setName(java.lang.String name) {

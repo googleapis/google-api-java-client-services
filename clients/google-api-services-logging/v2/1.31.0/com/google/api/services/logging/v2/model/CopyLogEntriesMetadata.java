@@ -72,9 +72,9 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   private java.lang.String state;
 
   /**
-   * The IAM identity of a service account that must be granted access to the destination. If the
+   * The IAM identity of a service account that must be granted access to the destination.If the
    * service account is not granted permission to the destination within an hour, the operation will
-   * be cancelled. Example: "serviceAccount:foo@bar.com"
+   * be cancelled.For example: "serviceAccount:foo@bar.com"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,9 +183,9 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IAM identity of a service account that must be granted access to the destination. If the
+   * The IAM identity of a service account that must be granted access to the destination.If the
    * service account is not granted permission to the destination within an hour, the operation will
-   * be cancelled. Example: "serviceAccount:foo@bar.com"
+   * be cancelled.For example: "serviceAccount:foo@bar.com"
    * @return value or {@code null} for none
    */
   public java.lang.String getWriterIdentity() {
@@ -193,9 +193,9 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IAM identity of a service account that must be granted access to the destination. If the
+   * The IAM identity of a service account that must be granted access to the destination.If the
    * service account is not granted permission to the destination within an hour, the operation will
-   * be cancelled. Example: "serviceAccount:foo@bar.com"
+   * be cancelled.For example: "serviceAccount:foo@bar.com"
    * @param writerIdentity writerIdentity or {@code null} for none
    */
   public CopyLogEntriesMetadata setWriterIdentity(java.lang.String writerIdentity) {

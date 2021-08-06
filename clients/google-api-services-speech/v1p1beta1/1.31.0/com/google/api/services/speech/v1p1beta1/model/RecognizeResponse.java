@@ -39,6 +39,13 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
   private java.util.List<SpeechRecognitionResult> results;
 
   /**
+   * When available, billed audio seconds for the corresponding request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String totalBilledTime;
+
+  /**
    * Sequential list of transcription results corresponding to sequential portions of audio.
    * @return value or {@code null} for none
    */
@@ -52,6 +59,23 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
    */
   public RecognizeResponse setResults(java.util.List<SpeechRecognitionResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * When available, billed audio seconds for the corresponding request.
+   * @return value or {@code null} for none
+   */
+  public String getTotalBilledTime() {
+    return totalBilledTime;
+  }
+
+  /**
+   * When available, billed audio seconds for the corresponding request.
+   * @param totalBilledTime totalBilledTime or {@code null} for none
+   */
+  public RecognizeResponse setTotalBilledTime(String totalBilledTime) {
+    this.totalBilledTime = totalBilledTime;
     return this;
   }
 

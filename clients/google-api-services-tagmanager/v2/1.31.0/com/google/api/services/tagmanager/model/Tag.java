@@ -55,6 +55,14 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> blockingTriggerId;
 
   /**
+   * Consent settings of a tag. @mutable tagmanager.accounts.containers.workspaces.tags.create
+   * @mutable tagmanager.accounts.containers.workspaces.tags.update
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TagConsentSetting consentSettings;
+
+  /**
    * GTM Container ID.
    * The value may be {@code null}.
    */
@@ -312,6 +320,25 @@ public final class Tag extends com.google.api.client.json.GenericJson {
    */
   public Tag setBlockingTriggerId(java.util.List<java.lang.String> blockingTriggerId) {
     this.blockingTriggerId = blockingTriggerId;
+    return this;
+  }
+
+  /**
+   * Consent settings of a tag. @mutable tagmanager.accounts.containers.workspaces.tags.create
+   * @mutable tagmanager.accounts.containers.workspaces.tags.update
+   * @return value or {@code null} for none
+   */
+  public TagConsentSetting getConsentSettings() {
+    return consentSettings;
+  }
+
+  /**
+   * Consent settings of a tag. @mutable tagmanager.accounts.containers.workspaces.tags.create
+   * @mutable tagmanager.accounts.containers.workspaces.tags.update
+   * @param consentSettings consentSettings or {@code null} for none
+   */
+  public Tag setConsentSettings(TagConsentSetting consentSettings) {
+    this.consentSettings = consentSettings;
     return this;
   }
 

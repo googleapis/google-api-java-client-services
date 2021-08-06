@@ -5717,10 +5717,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest}
        * @return the request
        */
-      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance) throws java.io.IOException {
-        StartExternalSync result = new StartExternalSync(project, instance);
+      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest content) throws java.io.IOException {
+        StartExternalSync result = new StartExternalSync(project, instance, content);
         initialize(result);
         return result;
       }
@@ -5742,10 +5743,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest}
          * @since 1.13
          */
-        protected StartExternalSync(java.lang.String project, java.lang.String instance) {
-          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        protected StartExternalSync(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
           this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
           this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
         }
@@ -5837,38 +5839,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Whether to skip the verification step (VESS). */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean skipVerification;
-
-        /** Whether to skip the verification step (VESS).
-         */
-        public java.lang.Boolean getSkipVerification() {
-          return skipVerification;
-        }
-
-        /** Whether to skip the verification step (VESS). */
-        public StartExternalSync setSkipVerification(java.lang.Boolean skipVerification) {
-          this.skipVerification = skipVerification;
-          return this;
-        }
-
-        /** External sync mode. */
-        @com.google.api.client.util.Key
-        private java.lang.String syncMode;
-
-        /** External sync mode.
-         */
-        public java.lang.String getSyncMode() {
-          return syncMode;
-        }
-
-        /** External sync mode. */
-        public StartExternalSync setSyncMode(java.lang.String syncMode) {
-          this.syncMode = syncMode;
-          return this;
-        }
-
         @Override
         public StartExternalSync set(String parameterName, Object value) {
           return (StartExternalSync) super.set(parameterName, value);
@@ -5885,10 +5855,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest}
        * @return the request
        */
-      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance) throws java.io.IOException {
-        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance);
+      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest content) throws java.io.IOException {
+        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance, content);
         initialize(result);
         return result;
       }
@@ -5910,10 +5881,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param project Project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest}
          * @since 1.13
          */
-        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance) {
-          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
+        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
           this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
           this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
         }
@@ -6002,38 +5974,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
           this.instance = instance;
-          return this;
-        }
-
-        /** External sync mode */
-        @com.google.api.client.util.Key
-        private java.lang.String syncMode;
-
-        /** External sync mode
-         */
-        public java.lang.String getSyncMode() {
-          return syncMode;
-        }
-
-        /** External sync mode */
-        public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
-          this.syncMode = syncMode;
-          return this;
-        }
-
-        /** Flag to enable verifying connection only */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean verifyConnectionOnly;
-
-        /** Flag to enable verifying connection only
-         */
-        public java.lang.Boolean getVerifyConnectionOnly() {
-          return verifyConnectionOnly;
-        }
-
-        /** Flag to enable verifying connection only */
-        public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
-          this.verifyConnectionOnly = verifyConnectionOnly;
           return this;
         }
 
@@ -7424,206 +7364,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /** This field is deprecated and will be removed from a future version of the API. */
-      @com.google.api.client.util.Key("body.etag")
-      private java.lang.String bodyEtag;
-
-      /** This field is deprecated and will be removed from a future version of the API.
-       */
-      public java.lang.String getBodyEtag() {
-        return bodyEtag;
-      }
-
-      /** This field is deprecated and will be removed from a future version of the API. */
-      public List setBodyEtag(java.lang.String bodyEtag) {
-        this.bodyEtag = bodyEtag;
-        return this;
-      }
-
-      /**
-       * The host name from which the user can connect. For *insert* operations, host defaults to an
-       * empty string. For *update* operations, host is specified as part of the request URL. The
-       * host name cannot be updated after insertion.
-       */
-      @com.google.api.client.util.Key("body.host")
-      private java.lang.String bodyHost;
-
-      /** The host name from which the user can connect. For *insert* operations, host defaults to an empty
-     string. For *update* operations, host is specified as part of the request URL. The host name cannot
-     be updated after insertion.
-       */
-      public java.lang.String getBodyHost() {
-        return bodyHost;
-      }
-
-      /**
-       * The host name from which the user can connect. For *insert* operations, host defaults to an
-       * empty string. For *update* operations, host is specified as part of the request URL. The
-       * host name cannot be updated after insertion.
-       */
-      public List setBodyHost(java.lang.String bodyHost) {
-        this.bodyHost = bodyHost;
-        return this;
-      }
-
-      /**
-       * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted
-       * for *update* since it is already specified on the URL.
-       */
-      @com.google.api.client.util.Key("body.instance")
-      private java.lang.String bodyInstance;
-
-      /** The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for
-     *update* since it is already specified on the URL.
-       */
-      public java.lang.String getBodyInstance() {
-        return bodyInstance;
-      }
-
-      /**
-       * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted
-       * for *update* since it is already specified on the URL.
-       */
-      public List setBodyInstance(java.lang.String bodyInstance) {
-        this.bodyInstance = bodyInstance;
-        return this;
-      }
-
-      /** This is always *sql#user*. */
-      @com.google.api.client.util.Key("body.kind")
-      private java.lang.String bodyKind;
-
-      /** This is always *sql#user*.
-       */
-      public java.lang.String getBodyKind() {
-        return bodyKind;
-      }
-
-      /** This is always *sql#user*. */
-      public List setBodyKind(java.lang.String bodyKind) {
-        this.bodyKind = bodyKind;
-        return this;
-      }
-
-      /**
-       * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is
-       * already specified in the URL.
-       */
-      @com.google.api.client.util.Key("body.name")
-      private java.lang.String bodyName;
-
-      /** The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-     specified in the URL.
-       */
-      public java.lang.String getBodyName() {
-        return bodyName;
-      }
-
-      /**
-       * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is
-       * already specified in the URL.
-       */
-      public List setBodyName(java.lang.String bodyName) {
-        this.bodyName = bodyName;
-        return this;
-      }
-
-      /** The password for the user. */
-      @com.google.api.client.util.Key("body.password")
-      private java.lang.String bodyPassword;
-
-      /** The password for the user.
-       */
-      public java.lang.String getBodyPassword() {
-        return bodyPassword;
-      }
-
-      /** The password for the user. */
-      public List setBodyPassword(java.lang.String bodyPassword) {
-        this.bodyPassword = bodyPassword;
-        return this;
-      }
-
-      /**
-       * The project ID of the project containing the Cloud SQL database. The Google apps domain is
-       * prefixed if applicable. Can be omitted for *update* since it is already specified on the
-       * URL.
-       */
-      @com.google.api.client.util.Key("body.project")
-      private java.lang.String bodyProject;
-
-      /** The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed
-     if applicable. Can be omitted for *update* since it is already specified on the URL.
-       */
-      public java.lang.String getBodyProject() {
-        return bodyProject;
-      }
-
-      /**
-       * The project ID of the project containing the Cloud SQL database. The Google apps domain is
-       * prefixed if applicable. Can be omitted for *update* since it is already specified on the
-       * URL.
-       */
-      public List setBodyProject(java.lang.String bodyProject) {
-        this.bodyProject = bodyProject;
-        return this;
-      }
-
-      /** If the user has been disabled */
-      @com.google.api.client.util.Key("body.sqlserverUserDetails.disabled")
-      private java.lang.Boolean bodySqlserverUserDetailsDisabled;
-
-      /** If the user has been disabled
-       */
-      public java.lang.Boolean getBodySqlserverUserDetailsDisabled() {
-        return bodySqlserverUserDetailsDisabled;
-      }
-
-      /** If the user has been disabled */
-      public List setBodySqlserverUserDetailsDisabled(java.lang.Boolean bodySqlserverUserDetailsDisabled) {
-        this.bodySqlserverUserDetailsDisabled = bodySqlserverUserDetailsDisabled;
-        return this;
-      }
-
-      /** The server roles for this user */
-      @com.google.api.client.util.Key("body.sqlserverUserDetails.serverRoles")
-      private java.util.List<java.lang.String> bodySqlserverUserDetailsServerRoles;
-
-      /** The server roles for this user
-       */
-      public java.util.List<java.lang.String> getBodySqlserverUserDetailsServerRoles() {
-        return bodySqlserverUserDetailsServerRoles;
-      }
-
-      /** The server roles for this user */
-      public List setBodySqlserverUserDetailsServerRoles(java.util.List<java.lang.String> bodySqlserverUserDetailsServerRoles) {
-        this.bodySqlserverUserDetailsServerRoles = bodySqlserverUserDetailsServerRoles;
-        return this;
-      }
-
-      /**
-       * The user type. It determines the method to authenticate the user during login. The default
-       * is the database's built-in user type.
-       */
-      @com.google.api.client.util.Key("body.type")
-      private java.lang.String bodyType;
-
-      /** The user type. It determines the method to authenticate the user during login. The default is the
-     database's built-in user type.
-       */
-      public java.lang.String getBodyType() {
-        return bodyType;
-      }
-
-      /**
-       * The user type. It determines the method to authenticate the user during login. The default
-       * is the database's built-in user type.
-       */
-      public List setBodyType(java.lang.String bodyType) {
-        this.bodyType = bodyType;
         return this;
       }
 

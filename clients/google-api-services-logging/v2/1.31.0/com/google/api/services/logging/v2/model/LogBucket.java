@@ -17,7 +17,7 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * Describes a repository of logs.
+ * Describes a repository in which log entries are stored.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -52,28 +52,29 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private java.lang.String lifecycleState;
 
   /**
-   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
-   * Locked buckets may only be deleted if they are empty.
+   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
+   * buckets may only be deleted if they are empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean locked;
 
   /**
-   * Output only. The resource name of the bucket. For example: "projects/my-project-id/locations
-   * /my-location/buckets/my-bucket-id" The supported locations are: global, us-central1, us-east1,
-   * us-west1, asia-east1, europe-west1.For the location of global it is unspecified where logs are
-   * actually stored. Once a bucket has been created, the location can not be changed.
+   * Output only. The resource name of the bucket.For example:projects/my-
+   * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
+   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
+   * unspecified where log entries are actually stored.After a bucket has been created, the location
+   * cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * Log entry field paths that are denied access in this bucket.The following fields and their
    * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
-   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
-   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,8 +150,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
-   * Locked buckets may only be deleted if they are empty.
+   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
+   * buckets may only be deleted if they are empty.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -158,8 +159,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the bucket has been locked. The retention period on a locked bucket may not be changed.
-   * Locked buckets may only be deleted if they are empty.
+   * Whether the bucket is locked.The retention period on a locked bucket cannot be changed. Locked
+   * buckets may only be deleted if they are empty.
    * @param locked locked or {@code null} for none
    */
   public LogBucket setLocked(java.lang.Boolean locked) {
@@ -168,10 +169,11 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the bucket. For example: "projects/my-project-id/locations
-   * /my-location/buckets/my-bucket-id" The supported locations are: global, us-central1, us-east1,
-   * us-west1, asia-east1, europe-west1.For the location of global it is unspecified where logs are
-   * actually stored. Once a bucket has been created, the location can not be changed.
+   * Output only. The resource name of the bucket.For example:projects/my-
+   * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
+   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
+   * unspecified where log entries are actually stored.After a bucket has been created, the location
+   * cannot be changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -179,10 +181,11 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the bucket. For example: "projects/my-project-id/locations
-   * /my-location/buckets/my-bucket-id" The supported locations are: global, us-central1, us-east1,
-   * us-west1, asia-east1, europe-west1.For the location of global it is unspecified where logs are
-   * actually stored. Once a bucket has been created, the location can not be changed.
+   * Output only. The resource name of the bucket.For example:projects/my-
+   * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
+   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
+   * unspecified where log entries are actually stored.After a bucket has been created, the location
+   * cannot be changed.
    * @param name name or {@code null} for none
    */
   public LogBucket setName(java.lang.String name) {
@@ -191,10 +194,10 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * Log entry field paths that are denied access in this bucket.The following fields and their
    * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
-   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
-   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRestrictedFields() {
@@ -202,10 +205,10 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entry field paths that are denied access in this bucket. The following fields and their
+   * Log entry field paths that are denied access in this bucket.The following fields and their
    * children are eligible: textPayload, jsonPayload, protoPayload, httpRequest, labels,
-   * sourceLocation. Restricting a repeated field will restrict all values. Adding a parent will
-   * block all child fields e.g. foo.bar will block foo.bar.baz.
+   * sourceLocation.Restricting a repeated field will restrict all values. Adding a parent will
+   * block all child fields. (e.g. foo.bar will block foo.bar.baz)
    * @param restrictedFields restrictedFields or {@code null} for none
    */
   public LogBucket setRestrictedFields(java.util.List<java.lang.String> restrictedFields) {

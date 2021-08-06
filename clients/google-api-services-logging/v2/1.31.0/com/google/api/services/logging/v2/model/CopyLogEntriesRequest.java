@@ -30,7 +30,7 @@ package com.google.api.services.logging.v2.model;
 public final class CopyLogEntriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Destination to which to copy logs.
+   * Required. Destination to which to copy log entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +45,15 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   private java.lang.String filter;
 
   /**
-   * Required. Bucket from which to copy logs. e.g. "projects/my-project/locations/my-
-   * location/buckets/my-source-bucket
+   * Required. Log bucket from which to copy log entries.For example:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Destination to which to copy logs.
+   * Required. Destination to which to copy log entries.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -61,7 +61,7 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Destination to which to copy logs.
+   * Required. Destination to which to copy log entries.
    * @param destination destination or {@code null} for none
    */
   public CopyLogEntriesRequest setDestination(java.lang.String destination) {
@@ -89,8 +89,8 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Bucket from which to copy logs. e.g. "projects/my-project/locations/my-
-   * location/buckets/my-source-bucket
+   * Required. Log bucket from which to copy log entries.For example:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -98,8 +98,8 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Bucket from which to copy logs. e.g. "projects/my-project/locations/my-
-   * location/buckets/my-source-bucket
+   * Required. Log bucket from which to copy log entries.For example:"projects/my-
+   * project/locations/global/buckets/my-source-bucket"
    * @param name name or {@code null} for none
    */
   public CopyLogEntriesRequest setName(java.lang.String name) {

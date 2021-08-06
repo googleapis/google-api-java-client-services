@@ -17,7 +17,7 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * Describes a view over logs in a bucket.
+ * Describes a view over log entries in a bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -44,18 +44,18 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view. Filters are
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id Example:
-   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * project/folder/organization/billing account. resource type log idFor
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * The resource name of the view. For example "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id/views/my-view
+   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
+   * bucket/views/my-view
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +103,10 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view. Filters are
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id Example:
-   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * project/folder/organization/billing account. resource type log idFor
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -114,10 +114,10 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter that restricts which log entries in a bucket are visible in this view. Filters are
+   * Filter that restricts which log entries in a bucket are visible in this view.Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id Example:
-   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
+   * project/folder/organization/billing account. resource type log idFor
+   * example:SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * @param filter filter or {@code null} for none
    */
   public LogView setFilter(java.lang.String filter) {
@@ -126,8 +126,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the view. For example "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id/views/my-view
+   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
+   * bucket/views/my-view
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,8 +135,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the view. For example "projects/my-project-id/locations/my-
-   * location/buckets/my-bucket-id/views/my-view
+   * The resource name of the view.For example:projects/my-project/locations/global/buckets/my-
+   * bucket/views/my-view
    * @param name name or {@code null} for none
    */
   public LogView setName(java.lang.String name) {

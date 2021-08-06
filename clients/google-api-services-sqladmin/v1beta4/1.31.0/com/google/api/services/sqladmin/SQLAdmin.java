@@ -5717,10 +5717,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest}
        * @return the request
        */
-      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance) throws java.io.IOException {
-        StartExternalSync result = new StartExternalSync(project, instance);
+      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest content) throws java.io.IOException {
+        StartExternalSync result = new StartExternalSync(project, instance, content);
         initialize(result);
         return result;
       }
@@ -5742,10 +5743,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest}
          * @since 1.13
          */
-        protected StartExternalSync(java.lang.String project, java.lang.String instance) {
-          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        protected StartExternalSync(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesStartExternalSyncRequest content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
           this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
           this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
         }
@@ -5837,38 +5839,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Whether to skip the verification step (VESS). */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean skipVerification;
-
-        /** Whether to skip the verification step (VESS).
-         */
-        public java.lang.Boolean getSkipVerification() {
-          return skipVerification;
-        }
-
-        /** Whether to skip the verification step (VESS). */
-        public StartExternalSync setSkipVerification(java.lang.Boolean skipVerification) {
-          this.skipVerification = skipVerification;
-          return this;
-        }
-
-        /** External sync mode. */
-        @com.google.api.client.util.Key
-        private java.lang.String syncMode;
-
-        /** External sync mode.
-         */
-        public java.lang.String getSyncMode() {
-          return syncMode;
-        }
-
-        /** External sync mode. */
-        public StartExternalSync setSyncMode(java.lang.String syncMode) {
-          this.syncMode = syncMode;
-          return this;
-        }
-
         @Override
         public StartExternalSync set(String parameterName, Object value) {
           return (StartExternalSync) super.set(parameterName, value);
@@ -5885,10 +5855,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest}
        * @return the request
        */
-      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance) throws java.io.IOException {
-        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance);
+      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest content) throws java.io.IOException {
+        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance, content);
         initialize(result);
         return result;
       }
@@ -5910,10 +5881,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param project Project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest}
          * @since 1.13
          */
-        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance) {
-          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
+        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsRequest content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
           this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
           this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
         }
@@ -6002,38 +5974,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
           this.instance = instance;
-          return this;
-        }
-
-        /** External sync mode */
-        @com.google.api.client.util.Key
-        private java.lang.String syncMode;
-
-        /** External sync mode
-         */
-        public java.lang.String getSyncMode() {
-          return syncMode;
-        }
-
-        /** External sync mode */
-        public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
-          this.syncMode = syncMode;
-          return this;
-        }
-
-        /** Flag to enable verifying connection only */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean verifyConnectionOnly;
-
-        /** Flag to enable verifying connection only
-         */
-        public java.lang.Boolean getVerifyConnectionOnly() {
-          return verifyConnectionOnly;
-        }
-
-        /** Flag to enable verifying connection only */
-        public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
-          this.verifyConnectionOnly = verifyConnectionOnly;
           return this;
         }
 

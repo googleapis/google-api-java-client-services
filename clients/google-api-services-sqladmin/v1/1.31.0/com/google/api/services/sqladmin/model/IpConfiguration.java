@@ -30,6 +30,17 @@ package com.google.api.services.sqladmin.model;
 public final class IpConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * managed-services-default". If set, the instance ip will be created in the allocated range. The
+   * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
+   * name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allocatedIpRange;
+
+  /**
    * The list of external networks that are allowed to connect to the instance using the IP. In
    * 'CIDR' notation, also known as 'slash' notation (for example: **192.168.100.0/24**).
    * The value may be {@code null}.
@@ -65,6 +76,31 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireSsl;
+
+  /**
+   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * managed-services-default". If set, the instance ip will be created in the allocated range. The
+   * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
+   * name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllocatedIpRange() {
+    return allocatedIpRange;
+  }
+
+  /**
+   * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-
+   * managed-services-default". If set, the instance ip will be created in the allocated range. The
+   * range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the
+   * name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * Reserved for future use.
+   * @param allocatedIpRange allocatedIpRange or {@code null} for none
+   */
+  public IpConfiguration setAllocatedIpRange(java.lang.String allocatedIpRange) {
+    this.allocatedIpRange = allocatedIpRange;
+    return this;
+  }
 
   /**
    * The list of external networks that are allowed to connect to the instance using the IP. In

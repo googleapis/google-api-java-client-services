@@ -1360,7 +1360,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the EndpointPolicy resource. It matches pattern
-         *        `projects/locations/global/endpointPolicies/`.
+         *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
          * @return the request
          */
@@ -1389,7 +1389,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the EndpointPolicy resource. It matches pattern
-         *        `projects/locations/global/endpointPolicies/`.
+         *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.EndpointPolicy}
            * @since 1.13
            */
@@ -1460,13 +1460,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the EndpointPolicy resource. It matches pattern
-           * `projects/locations/global/endpointPolicies/`.
+           * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the EndpointPolicy resource. It matches pattern
-         `projects/locations/global/endpointPolicies/`.
+         `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           public java.lang.String getName() {
             return name;
@@ -1474,7 +1474,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the EndpointPolicy resource. It matches pattern
-           * `projects/locations/global/endpointPolicies/`.
+           * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

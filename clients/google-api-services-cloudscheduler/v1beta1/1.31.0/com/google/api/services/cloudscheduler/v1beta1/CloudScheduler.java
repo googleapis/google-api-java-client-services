@@ -1111,6 +1111,39 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
+           * `filter` can be used to specify a subset of jobs. If `filter` equals
+           * `target_config="HttpConfig"`, then the http target jobs are retrieved. If `filter`
+           * equals `target_config="PubSubConfig"`, then the Pub/Sub target jobs are retrieved. If
+           * `filter` equals `labels.foo=value1 labels.foo=value2` then only jobs which are labeled
+           * with foo=value1 AND foo=value2 will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /**` filter` can be used to specify a subset of jobs. If `filter` equals `target_config="HttpConfig"`,
+        ` then the http target jobs are retrieved. If `filter` equals `target_config="PubSubConfig"`, then
+        ` the Pub/Sub target jobs are retrieved. If `filter` equals `labels.foo=value1 labels.foo=value2`
+        ` then only jobs which are labeled with foo=value1 AND foo=value2 will be returned.
+        `
+
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * `filter` can be used to specify a subset of jobs. If `filter` equals
+           * `target_config="HttpConfig"`, then the http target jobs are retrieved. If `filter`
+           * equals `target_config="PubSubConfig"`, then the Pub/Sub target jobs are retrieved. If
+           * `filter` equals `labels.foo=value1 labels.foo=value2` then only jobs which are labeled
+           * with foo=value1 AND foo=value2 will be returned.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler
            * API. If the field is set to true, the jobs in the __cron queue will be listed instead.
            */

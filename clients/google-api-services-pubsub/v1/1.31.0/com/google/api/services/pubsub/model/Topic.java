@@ -45,6 +45,19 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Indicates the minimum duration to retain a message after it is published to the topic. If this
+   * field is set, messages published to the topic in the last `message_retention_duration` are
+   * always available to subscribers. For instance, it allows any attached subscription to [seek to
+   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
+   * `message_retention_duration` in the past. If this field is not set, message retention is
+   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String messageRetentionDuration;
+
+  /**
    * Policy constraining the set of Google Cloud Platform regions where messages published to the
    * topic may be stored. If not present, then no constraints are in effect.
    * The value may be {@code null}.
@@ -110,6 +123,35 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Indicates the minimum duration to retain a message after it is published to the topic. If this
+   * field is set, messages published to the topic in the last `message_retention_duration` are
+   * always available to subscribers. For instance, it allows any attached subscription to [seek to
+   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
+   * `message_retention_duration` in the past. If this field is not set, message retention is
+   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * minutes.
+   * @return value or {@code null} for none
+   */
+  public String getMessageRetentionDuration() {
+    return messageRetentionDuration;
+  }
+
+  /**
+   * Indicates the minimum duration to retain a message after it is published to the topic. If this
+   * field is set, messages published to the topic in the last `message_retention_duration` are
+   * always available to subscribers. For instance, it allows any attached subscription to [seek to
+   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
+   * `message_retention_duration` in the past. If this field is not set, message retention is
+   * controlled by settings on individual subscriptions. Cannot be more than 7 days or less than 10
+   * minutes.
+   * @param messageRetentionDuration messageRetentionDuration or {@code null} for none
+   */
+  public Topic setMessageRetentionDuration(String messageRetentionDuration) {
+    this.messageRetentionDuration = messageRetentionDuration;
     return this;
   }
 

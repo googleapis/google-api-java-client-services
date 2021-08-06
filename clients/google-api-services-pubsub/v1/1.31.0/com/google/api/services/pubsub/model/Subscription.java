@@ -165,6 +165,17 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String topic;
 
   /**
+   * Output only. Indicates the minimum duration for which a message is retained after it is
+   * published to the subscription's topic. If this field is set, messages published to the
+   * subscription's topic in the last `topic_message_retention_duration` are always available to
+   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
+   * responses from the server; it is ignored if it is set in any requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String topicMessageRetentionDuration;
+
+  /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
    * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
@@ -470,6 +481,31 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setTopic(java.lang.String topic) {
     this.topic = topic;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates the minimum duration for which a message is retained after it is
+   * published to the subscription's topic. If this field is set, messages published to the
+   * subscription's topic in the last `topic_message_retention_duration` are always available to
+   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
+   * responses from the server; it is ignored if it is set in any requests.
+   * @return value or {@code null} for none
+   */
+  public String getTopicMessageRetentionDuration() {
+    return topicMessageRetentionDuration;
+  }
+
+  /**
+   * Output only. Indicates the minimum duration for which a message is retained after it is
+   * published to the subscription's topic. If this field is set, messages published to the
+   * subscription's topic in the last `topic_message_retention_duration` are always available to
+   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
+   * responses from the server; it is ignored if it is set in any requests.
+   * @param topicMessageRetentionDuration topicMessageRetentionDuration or {@code null} for none
+   */
+  public Subscription setTopicMessageRetentionDuration(String topicMessageRetentionDuration) {
+    this.topicMessageRetentionDuration = topicMessageRetentionDuration;
     return this;
   }
 

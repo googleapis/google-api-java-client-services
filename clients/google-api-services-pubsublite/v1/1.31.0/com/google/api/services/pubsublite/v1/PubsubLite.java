@@ -193,6 +193,642 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
       public class Locations {
 
         /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code PubsubLite pubsublite = new PubsubLite(...);}
+         *   {@code PubsubLite.Operations.List request = pubsublite.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.CancelOperationRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.pubsublite.v1.model.CancelOperationRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/admin/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+            /**
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.CancelOperationRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.pubsublite.v1.model.CancelOperationRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be cancelled.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a long-running operation. This method indicates that the client is no longer interested
+           * in the operation result. It does not cancel the operation. If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/admin/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+            /**
+             * Deletes a long-running operation. This method indicates that the client is no longer interested
+             * in the operation result. It does not cancel the operation. If the server doesn't support this
+             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.delete".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(PubsubLite.this, "DELETE", REST_PATH, null, com.google.api.services.pubsublite.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/admin/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(PubsubLite.this, "GET", REST_PATH, null, com.google.api.services.pubsublite.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation's parent resource.
+           * @return the request
+           */
+          public List list(java.lang.String name) throws java.io.IOException {
+            List result = new List(name);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.ListOperationsResponse> {
+
+            private static final String REST_PATH = "v1/admin/{+name}/operations";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+            /**
+             * Lists operations that match the specified filter in the request. If the server doesn't support
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
+             *
+             * Create a request for the method "operations.list".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation's parent resource.
+             * @since 1.13
+             */
+            protected List(java.lang.String name) {
+              super(PubsubLite.this, "GET", REST_PATH, null, com.google.api.services.pubsublite.v1.model.ListOperationsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation's parent resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation's parent resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation's parent resource. */
+            public List setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The standard list filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The standard list filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The standard list page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The standard list page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The standard list page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The standard list page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The standard list page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Subscriptions collection.
          *
          * <p>The typical use is:</p>
@@ -1018,6 +1654,159 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Performs an out-of-band seek for a subscription to a specified target, which may be timestamps or
+           * named positions within the message backlog. Seek translates these targets to cursors for each
+           * partition and orchestrates subscribers to start consuming messages from these seek cursors. If an
+           * operation is returned, the seek has been registered and subscribers will eventually receive
+           * messages from the seek cursors (i.e. eventual consistency), as long as they are using a minimum
+           * supported client library version and not a system that tracks cursors independently of Pub/Sub
+           * Lite (e.g. Apache Beam, Dataflow, Spark). The seek operation will fail for unsupported clients.
+           * If clients would like to know when subscribers react to the seek (or not), they can poll the
+           * operation. The seek operation will succeed and complete once subscribers are ready to receive
+           * messages from the seek cursors for all partitions of the topic. This means that the seek
+           * operation will not complete until all subscribers come online. If the previous seek operation has
+           * not yet completed, it will be aborted and the new invocation of seek will supersede it.
+           *
+           * Create a request for the method "subscriptions.seek".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link Seek#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the subscription to seek.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.SeekSubscriptionRequest}
+           * @return the request
+           */
+          public Seek seek(java.lang.String name, com.google.api.services.pubsublite.v1.model.SeekSubscriptionRequest content) throws java.io.IOException {
+            Seek result = new Seek(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Seek extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/admin/{+name}:seek";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+            /**
+             * Performs an out-of-band seek for a subscription to a specified target, which may be timestamps
+             * or named positions within the message backlog. Seek translates these targets to cursors for
+             * each partition and orchestrates subscribers to start consuming messages from these seek
+             * cursors. If an operation is returned, the seek has been registered and subscribers will
+             * eventually receive messages from the seek cursors (i.e. eventual consistency), as long as they
+             * are using a minimum supported client library version and not a system that tracks cursors
+             * independently of Pub/Sub Lite (e.g. Apache Beam, Dataflow, Spark). The seek operation will fail
+             * for unsupported clients. If clients would like to know when subscribers react to the seek (or
+             * not), they can poll the operation. The seek operation will succeed and complete once
+             * subscribers are ready to receive messages from the seek cursors for all partitions of the
+             * topic. This means that the seek operation will not complete until all subscribers come online.
+             * If the previous seek operation has not yet completed, it will be aborted and the new invocation
+             * of seek will supersede it.
+             *
+             * Create a request for the method "subscriptions.seek".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link Seek#execute()} method to invoke the remote operation. <p>
+             * {@link Seek#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the subscription to seek.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.SeekSubscriptionRequest}
+             * @since 1.13
+             */
+            protected Seek(java.lang.String name, com.google.api.services.pubsublite.v1.model.SeekSubscriptionRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Seek set$Xgafv(java.lang.String $Xgafv) {
+              return (Seek) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Seek setAccessToken(java.lang.String accessToken) {
+              return (Seek) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Seek setAlt(java.lang.String alt) {
+              return (Seek) super.setAlt(alt);
+            }
+
+            @Override
+            public Seek setCallback(java.lang.String callback) {
+              return (Seek) super.setCallback(callback);
+            }
+
+            @Override
+            public Seek setFields(java.lang.String fields) {
+              return (Seek) super.setFields(fields);
+            }
+
+            @Override
+            public Seek setKey(java.lang.String key) {
+              return (Seek) super.setKey(key);
+            }
+
+            @Override
+            public Seek setOauthToken(java.lang.String oauthToken) {
+              return (Seek) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Seek setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Seek) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Seek setQuotaUser(java.lang.String quotaUser) {
+              return (Seek) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Seek setUploadType(java.lang.String uploadType) {
+              return (Seek) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Seek setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Seek) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the subscription to seek. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the subscription to seek.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the subscription to seek. */
+            public Seek setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Seek set(String parameterName, Object value) {
+              return (Seek) super.set(parameterName, value);
             }
           }
 

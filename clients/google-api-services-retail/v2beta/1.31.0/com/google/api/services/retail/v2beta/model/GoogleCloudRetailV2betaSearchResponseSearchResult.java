@@ -75,8 +75,8 @@ public final class GoogleCloudRetailV2betaSearchResponseSearchResult extends com
    * and numerical attributes, the rollup values is a list of string or double values with type
    * google.protobuf.ListValue. For example, if there are two variants with colors "red" and "blue",
    * the rollup values are { key: "colorFamilies" value { list_value { values { string_value: "red"
-   * } values { string_value: "blue" } } } } For Product.fulfillment_info, the rollup values is a
-   * double value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
+   * } values { string_value: "blue" } } } } For FulfillmentInfo, the rollup values is a double
+   * value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
    * number_value: 10 }} means a there are 10 variants in this product are available in the store
    * "store1".
    * The value may be {@code null}.
@@ -180,8 +180,8 @@ public final class GoogleCloudRetailV2betaSearchResponseSearchResult extends com
    * and numerical attributes, the rollup values is a list of string or double values with type
    * google.protobuf.ListValue. For example, if there are two variants with colors "red" and "blue",
    * the rollup values are { key: "colorFamilies" value { list_value { values { string_value: "red"
-   * } values { string_value: "blue" } } } } For Product.fulfillment_info, the rollup values is a
-   * double value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
+   * } values { string_value: "blue" } } } } For FulfillmentInfo, the rollup values is a double
+   * value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
    * number_value: 10 }} means a there are 10 variants in this product are available in the store
    * "store1".
    * @return value or {@code null} for none
@@ -198,8 +198,8 @@ public final class GoogleCloudRetailV2betaSearchResponseSearchResult extends com
    * and numerical attributes, the rollup values is a list of string or double values with type
    * google.protobuf.ListValue. For example, if there are two variants with colors "red" and "blue",
    * the rollup values are { key: "colorFamilies" value { list_value { values { string_value: "red"
-   * } values { string_value: "blue" } } } } For Product.fulfillment_info, the rollup values is a
-   * double value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
+   * } values { string_value: "blue" } } } } For FulfillmentInfo, the rollup values is a double
+   * value with type google.protobuf.Value. For example, {key: "pickupInStore.store1" value {
    * number_value: 10 }} means a there are 10 variants in this product are available in the store
    * "store1".
    * @param variantRollupValues variantRollupValues or {@code null} for none

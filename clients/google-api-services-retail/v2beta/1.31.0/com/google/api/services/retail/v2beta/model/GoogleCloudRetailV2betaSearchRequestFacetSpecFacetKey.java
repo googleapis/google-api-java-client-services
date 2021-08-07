@@ -56,30 +56,30 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   /**
    * Required. Supported textual and numerical facet keys in Product object, over which the facet
    * values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not
-   * specified: * textual_field = *# The Product.brands. * "brands"; *# The Product.categories. *
-   * "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
+   * specified: * textual_field = *# The Product.brands. * | "brands"; *# The Product.categories. *
+   * | "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
    * "ageGroups"; *# The Product.availability. Value is one of * *# "IN_STOCK", "OUT_OF_STOCK",
    * PREORDER", "BACKORDER". * | "availability"; *# The ColorInfo.color_families. * |
    * "colorFamilies"; *# The ColorInfo.colors. * | "colors"; *# The Product.sizes. * | "sizes"; *#
    * The Product.materials. * | "materials"; *# The Product.patterns. * | "patterns"; *# The
    * Product.conditions. * | "conditions"; *# The textual custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. *
-   * *# map. * | "attributes.key"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.PICKUP_IN_STORE. * | "pickupInStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SHIP_TO_STORE. * | "shipToStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SAME_DAY_DELIVERY. * | "sameDayDelivery"; *# The FulfillmentInfo.ids
-   * for type *# FulfillmentInfo.Type.NEXT_DAY_DELIVERY. * | "nextDayDelivery"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_1. * | "customFulfillment1";
-   * *# The FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_2. * |
-   * "customFulfillment2"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.CUSTOM_TYPE_3. * | "customFulfillment3"; *# The FulfillmentInfo.ids for
-   * type *# FulfillmentInfo.Type.CUSTOM_TYPE_4. * | "customFulfillment4"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_5. * | "customFulfillment5"; *
-   * numerical_field = *# The PriceInfo.price. * "price"; *# The discount. Computed by
-   * (original_price-price)/price * "discount"; *# The Rating.average_rating. * "rating"; *# The
-   * Rating.rating_count. * "ratingCount"; *# The numerical custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are numerical. *
-   * | "attributes.key";
+   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. * |
+   * "attributes.key"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "pickup-in-
+   * store". * | "pickupInStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *#
+   * "ship-to-store". * | "shipToStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "same-day-delivery". * | "sameDayDelivery"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "next-day-delivery". * | "nextDayDelivery"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-1". * |
+   * "customFulfillment1"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-
+   * type-2". * | "customFulfillment2"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "custom-type-3". * | "customFulfillment3"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "custom-type-4". * | "customFulfillment4"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-5". * |
+   * "customFulfillment5"; * numerical_field = *# The PriceInfo.price. * | "price"; *# The discount.
+   * Computed by (original_price-price)/price * | "discount"; *# The Rating.average_rating. * |
+   * "rating"; *# The Rating.rating_count. * | "ratingCount"; *# The numerical custom attribute in
+   * Product object. Key can * *# be any key in the Product.attributes map * *# if the attribute
+   * values are numerical. * | "attributes.key";
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,9 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * order by Facet.FacetValue.count descending. * "value desc", which means order by
    * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
    * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.ids
-   * are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
+   * FulfillmentInfo.place_ids are sorted in the order given by
+   * FacetSpec.FacetKey.restricted_values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,30 +180,30 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   /**
    * Required. Supported textual and numerical facet keys in Product object, over which the facet
    * values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not
-   * specified: * textual_field = *# The Product.brands. * "brands"; *# The Product.categories. *
-   * "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
+   * specified: * textual_field = *# The Product.brands. * | "brands"; *# The Product.categories. *
+   * | "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
    * "ageGroups"; *# The Product.availability. Value is one of * *# "IN_STOCK", "OUT_OF_STOCK",
    * PREORDER", "BACKORDER". * | "availability"; *# The ColorInfo.color_families. * |
    * "colorFamilies"; *# The ColorInfo.colors. * | "colors"; *# The Product.sizes. * | "sizes"; *#
    * The Product.materials. * | "materials"; *# The Product.patterns. * | "patterns"; *# The
    * Product.conditions. * | "conditions"; *# The textual custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. *
-   * *# map. * | "attributes.key"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.PICKUP_IN_STORE. * | "pickupInStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SHIP_TO_STORE. * | "shipToStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SAME_DAY_DELIVERY. * | "sameDayDelivery"; *# The FulfillmentInfo.ids
-   * for type *# FulfillmentInfo.Type.NEXT_DAY_DELIVERY. * | "nextDayDelivery"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_1. * | "customFulfillment1";
-   * *# The FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_2. * |
-   * "customFulfillment2"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.CUSTOM_TYPE_3. * | "customFulfillment3"; *# The FulfillmentInfo.ids for
-   * type *# FulfillmentInfo.Type.CUSTOM_TYPE_4. * | "customFulfillment4"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_5. * | "customFulfillment5"; *
-   * numerical_field = *# The PriceInfo.price. * "price"; *# The discount. Computed by
-   * (original_price-price)/price * "discount"; *# The Rating.average_rating. * "rating"; *# The
-   * Rating.rating_count. * "ratingCount"; *# The numerical custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are numerical. *
-   * | "attributes.key";
+   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. * |
+   * "attributes.key"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "pickup-in-
+   * store". * | "pickupInStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *#
+   * "ship-to-store". * | "shipToStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "same-day-delivery". * | "sameDayDelivery"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "next-day-delivery". * | "nextDayDelivery"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-1". * |
+   * "customFulfillment1"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-
+   * type-2". * | "customFulfillment2"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "custom-type-3". * | "customFulfillment3"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "custom-type-4". * | "customFulfillment4"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-5". * |
+   * "customFulfillment5"; * numerical_field = *# The PriceInfo.price. * | "price"; *# The discount.
+   * Computed by (original_price-price)/price * | "discount"; *# The Rating.average_rating. * |
+   * "rating"; *# The Rating.rating_count. * | "ratingCount"; *# The numerical custom attribute in
+   * Product object. Key can * *# be any key in the Product.attributes map * *# if the attribute
+   * values are numerical. * | "attributes.key";
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -212,30 +213,30 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
   /**
    * Required. Supported textual and numerical facet keys in Product object, over which the facet
    * values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not
-   * specified: * textual_field = *# The Product.brands. * "brands"; *# The Product.categories. *
-   * "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
+   * specified: * textual_field = *# The Product.brands. * | "brands"; *# The Product.categories. *
+   * | "categories"; *# The Audience.genders. * | "genders"; *# The Audience.age_groups. * |
    * "ageGroups"; *# The Product.availability. Value is one of * *# "IN_STOCK", "OUT_OF_STOCK",
    * PREORDER", "BACKORDER". * | "availability"; *# The ColorInfo.color_families. * |
    * "colorFamilies"; *# The ColorInfo.colors. * | "colors"; *# The Product.sizes. * | "sizes"; *#
    * The Product.materials. * | "materials"; *# The Product.patterns. * | "patterns"; *# The
    * Product.conditions. * | "conditions"; *# The textual custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. *
-   * *# map. * | "attributes.key"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.PICKUP_IN_STORE. * | "pickupInStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SHIP_TO_STORE. * | "shipToStore"; *# The FulfillmentInfo.ids for type
-   * *# FulfillmentInfo.Type.SAME_DAY_DELIVERY. * | "sameDayDelivery"; *# The FulfillmentInfo.ids
-   * for type *# FulfillmentInfo.Type.NEXT_DAY_DELIVERY. * | "nextDayDelivery"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_1. * | "customFulfillment1";
-   * *# The FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_2. * |
-   * "customFulfillment2"; *# The FulfillmentInfo.ids for type *#
-   * FulfillmentInfo.Type.CUSTOM_TYPE_3. * | "customFulfillment3"; *# The FulfillmentInfo.ids for
-   * type *# FulfillmentInfo.Type.CUSTOM_TYPE_4. * | "customFulfillment4"; *# The
-   * FulfillmentInfo.ids for type *# FulfillmentInfo.Type.CUSTOM_TYPE_5. * | "customFulfillment5"; *
-   * numerical_field = *# The PriceInfo.price. * "price"; *# The discount. Computed by
-   * (original_price-price)/price * "discount"; *# The Rating.average_rating. * "rating"; *# The
-   * Rating.rating_count. * "ratingCount"; *# The numerical custom attribute in Product object. Key
-   * can * *# be any key in the Product.attributes map * *# if the attribute values are numerical. *
-   * | "attributes.key";
+   * can * *# be any key in the Product.attributes map * *# if the attribute values are textual. * |
+   * "attributes.key"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "pickup-in-
+   * store". * | "pickupInStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *#
+   * "ship-to-store". * | "shipToStore"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "same-day-delivery". * | "sameDayDelivery"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "next-day-delivery". * | "nextDayDelivery"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-1". * |
+   * "customFulfillment1"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-
+   * type-2". * | "customFulfillment2"; *# The FulfillmentInfo.place_ids for FulfillmentInfo.type *
+   * *# "custom-type-3". * | "customFulfillment3"; *# The FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type * *# "custom-type-4". * | "customFulfillment4"; *# The
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type * *# "custom-type-5". * |
+   * "customFulfillment5"; * numerical_field = *# The PriceInfo.price. * | "price"; *# The discount.
+   * Computed by (original_price-price)/price * | "discount"; *# The Rating.average_rating. * |
+   * "rating"; *# The Rating.rating_count. * | "ratingCount"; *# The numerical custom attribute in
+   * Product object. Key can * *# be any key in the Product.attributes map * *# if the attribute
+   * values are numerical. * | "attributes.key";
    * @param key key or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setKey(java.lang.String key) {
@@ -248,8 +249,9 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * order by Facet.FacetValue.count descending. * "value desc", which means order by
    * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
    * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.ids
-   * are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
+   * FulfillmentInfo.place_ids are sorted in the order given by
+   * FacetSpec.FacetKey.restricted_values.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -261,8 +263,9 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey extends
    * order by Facet.FacetValue.count descending. * "value desc", which means order by
    * Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values
    * are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
-   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.ids
-   * are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+   * intervals are sorted in the order given by FacetSpec.FacetKey.intervals;
+   * FulfillmentInfo.place_ids are sorted in the order given by
+   * FacetSpec.FacetKey.restricted_values.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey setOrderBy(java.lang.String orderBy) {

@@ -30,7 +30,7 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2CompletionDataInputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. BigQuery input source. Add the IAM permission “BigQuery Data Viewer” for cloud-
+   * Required. BigQuery input source. Add the IAM permission "BigQuery Data Viewer" for cloud-
    * retail-customer-data-access@system.gserviceaccount.com before using this feature otherwise an
    * error is thrown.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2CompletionDataInputConfig extends com.goog
   private GoogleCloudRetailV2BigQuerySource bigQuerySource;
 
   /**
-   * Required. BigQuery input source. Add the IAM permission “BigQuery Data Viewer” for cloud-
+   * Required. BigQuery input source. Add the IAM permission "BigQuery Data Viewer" for cloud-
    * retail-customer-data-access@system.gserviceaccount.com before using this feature otherwise an
    * error is thrown.
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2CompletionDataInputConfig extends com.goog
   }
 
   /**
-   * Required. BigQuery input source. Add the IAM permission “BigQuery Data Viewer” for cloud-
+   * Required. BigQuery input source. Add the IAM permission "BigQuery Data Viewer" for cloud-
    * retail-customer-data-access@system.gserviceaccount.com before using this feature otherwise an
    * error is thrown.
    * @param bigQuerySource bigQuerySource or {@code null} for none

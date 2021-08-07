@@ -319,8 +319,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
    * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
-   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Note: Returning more fields in SearchResponse may increase response payload size and
+   * serving latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1015,8 +1016,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
    * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
-   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Note: Returning more fields in SearchResponse may increase response payload size and
+   * serving latency.
    * @return value or {@code null} for none
    */
   public String getRetrievableFields() {
@@ -1032,8 +1034,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * "attributes.key" where "key" is the key of a custom attribute, as specified in attributes. For
    * Type.PRIMARY and Type.COLLECTION, the following fields are always returned in SearchResponse by
    * default: * name For Type.VARIANT, the following fields are always returned in by default: *
-   * name * color_info Maximum number of paths is 20. Otherwise, an INVALID_ARGUMENT error is
-   * returned.
+   * name * color_info Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
+   * returned. Note: Returning more fields in SearchResponse may increase response payload size and
+   * serving latency.
    * @param retrievableFields retrievableFields or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setRetrievableFields(String retrievableFields) {

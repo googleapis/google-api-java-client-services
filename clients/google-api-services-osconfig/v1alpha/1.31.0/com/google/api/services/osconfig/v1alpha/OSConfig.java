@@ -790,10 +790,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the osconfig server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Format:
-           *        `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either
-           *        `project-number` or `project-id` can be provided. For `{instance}`, only hyphen or dash
-           *        character is supported to list inventories across VMs.
+           * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -819,10 +817,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Format:
-           *        `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either
-           *        `project-number` or `project-id` can be provided. For `{instance}`, only hyphen or dash
-           *        character is supported to list inventories across VMs.
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -902,17 +898,14 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The parent resource name. Format:
-             * `projects/{project}/locations/{location}/instances/{instance}` For `{project}`,
-             * either `project-number` or `project-id` can be provided. For `{instance}`, only
-             * hyphen or dash character is supported to list inventories across VMs.
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Format:
-           `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either `project-
-           number` or `project-id` can be provided. For `{instance}`, only hyphen or dash character is
-           supported to list inventories across VMs.
+            /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           For `{project}`, either `project-number` or `project-id` can be provided.
              */
             public java.lang.String getParent() {
               return parent;
@@ -920,9 +913,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The parent resource name. Format:
-             * `projects/{project}/locations/{location}/instances/{instance}` For `{project}`,
-             * either `project-number` or `project-id` can be provided. For `{instance}`, only
-             * hyphen or dash character is supported to list inventories across VMs.
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1213,10 +1205,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the osconfig server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Format:
-           *        `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either
-           *        `project-number` or `project-id` can be provided. For `{instance}`, only `-` character is
-           *        supported to list vulnerability reports across VMs.
+           * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1242,10 +1232,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Format:
-           *        `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either
-           *        `project-number` or `project-id` can be provided. For `{instance}`, only `-` character is
-           *        supported to list vulnerability reports across VMs.
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1325,17 +1313,14 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The parent resource name. Format:
-             * `projects/{project}/locations/{location}/instances/{instance}` For `{project}`,
-             * either `project-number` or `project-id` can be provided. For `{instance}`, only `-`
-             * character is supported to list vulnerability reports across VMs.
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Format:
-           `projects/{project}/locations/{location}/instances/{instance}` For `{project}`, either `project-
-           number` or `project-id` can be provided. For `{instance}`, only `-` character is supported to list
-           vulnerability reports across VMs.
+            /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           For `{project}`, either `project-number` or `project-id` can be provided.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1343,9 +1328,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The parent resource name. Format:
-             * `projects/{project}/locations/{location}/instances/{instance}` For `{project}`,
-             * either `project-number` or `project-id` can be provided. For `{instance}`, only `-`
-             * character is supported to list vulnerability reports across VMs.
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

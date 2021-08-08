@@ -17,7 +17,7 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * Filtering criteria to select VMs based on OS details.
+ * VM inventory details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
@@ -27,28 +27,26 @@ package com.google.api.services.osconfig.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OSPolicyOSFilter extends com.google.api.client.json.GenericJson {
+public final class OSPolicyAssignmentInstanceFilterInventory extends com.google.api.client.json.GenericJson {
 
   /**
-   * This should match OS short name emitted by the OS inventory agent. An empty value matches any
-   * OS.
+   * Required. The OS short name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osShortName;
 
   /**
-   * This value should match the version emitted by the OS inventory agent. Prefix matches are
-   * supported if asterisk(*) is provided as the last character. For example, to match all versions
-   * with a major version of `7`, specify the following value for this field `7.*`
+   * The OS version Prefix matches are supported if asterisk(*) is provided as the last character.
+   * For example, to match all versions with a major version of `7`, specify the following value for
+   * this field `7.*` An empty string matches all OS versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osVersion;
 
   /**
-   * This should match OS short name emitted by the OS inventory agent. An empty value matches any
-   * OS.
+   * Required. The OS short name
    * @return value or {@code null} for none
    */
   public java.lang.String getOsShortName() {
@@ -56,19 +54,18 @@ public final class OSPolicyOSFilter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This should match OS short name emitted by the OS inventory agent. An empty value matches any
-   * OS.
+   * Required. The OS short name
    * @param osShortName osShortName or {@code null} for none
    */
-  public OSPolicyOSFilter setOsShortName(java.lang.String osShortName) {
+  public OSPolicyAssignmentInstanceFilterInventory setOsShortName(java.lang.String osShortName) {
     this.osShortName = osShortName;
     return this;
   }
 
   /**
-   * This value should match the version emitted by the OS inventory agent. Prefix matches are
-   * supported if asterisk(*) is provided as the last character. For example, to match all versions
-   * with a major version of `7`, specify the following value for this field `7.*`
+   * The OS version Prefix matches are supported if asterisk(*) is provided as the last character.
+   * For example, to match all versions with a major version of `7`, specify the following value for
+   * this field `7.*` An empty string matches all OS versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsVersion() {
@@ -76,24 +73,24 @@ public final class OSPolicyOSFilter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This value should match the version emitted by the OS inventory agent. Prefix matches are
-   * supported if asterisk(*) is provided as the last character. For example, to match all versions
-   * with a major version of `7`, specify the following value for this field `7.*`
+   * The OS version Prefix matches are supported if asterisk(*) is provided as the last character.
+   * For example, to match all versions with a major version of `7`, specify the following value for
+   * this field `7.*` An empty string matches all OS versions.
    * @param osVersion osVersion or {@code null} for none
    */
-  public OSPolicyOSFilter setOsVersion(java.lang.String osVersion) {
+  public OSPolicyAssignmentInstanceFilterInventory setOsVersion(java.lang.String osVersion) {
     this.osVersion = osVersion;
     return this;
   }
 
   @Override
-  public OSPolicyOSFilter set(String fieldName, Object value) {
-    return (OSPolicyOSFilter) super.set(fieldName, value);
+  public OSPolicyAssignmentInstanceFilterInventory set(String fieldName, Object value) {
+    return (OSPolicyAssignmentInstanceFilterInventory) super.set(fieldName, value);
   }
 
   @Override
-  public OSPolicyOSFilter clone() {
-    return (OSPolicyOSFilter) super.clone();
+  public OSPolicyAssignmentInstanceFilterInventory clone() {
+    return (OSPolicyAssignmentInstanceFilterInventory) super.clone();
   }
 
 }

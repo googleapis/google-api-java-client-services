@@ -173,6 +173,146 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * Generate random bytes using the Cloud KMS randomness source in the provided location.
+       *
+       * Create a request for the method "locations.generateRandomBytes".
+       *
+       * This request holds the parameters needed by the cloudkms server.  After setting any optional
+       * parameters, call the {@link GenerateRandomBytes#execute()} method to invoke the remote operation.
+       *
+       * @param location The project-specific location in which to generate random bytes. For example, "projects/my-
+       *        project/locations/us-central1".
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.GenerateRandomBytesRequest}
+       * @return the request
+       */
+      public GenerateRandomBytes generateRandomBytes(java.lang.String location, com.google.api.services.cloudkms.v1.model.GenerateRandomBytesRequest content) throws java.io.IOException {
+        GenerateRandomBytes result = new GenerateRandomBytes(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateRandomBytes extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.GenerateRandomBytesResponse> {
+
+        private static final String REST_PATH = "v1/{+location}:generateRandomBytes";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Generate random bytes using the Cloud KMS randomness source in the provided location.
+         *
+         * Create a request for the method "locations.generateRandomBytes".
+         *
+         * This request holds the parameters needed by the the cloudkms server.  After setting any
+         * optional parameters, call the {@link GenerateRandomBytes#execute()} method to invoke the remote
+         * operation. <p> {@link GenerateRandomBytes#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param location The project-specific location in which to generate random bytes. For example, "projects/my-
+       *        project/locations/us-central1".
+         * @param content the {@link com.google.api.services.cloudkms.v1.model.GenerateRandomBytesRequest}
+         * @since 1.13
+         */
+        protected GenerateRandomBytes(java.lang.String location, com.google.api.services.cloudkms.v1.model.GenerateRandomBytesRequest content) {
+          super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.GenerateRandomBytesResponse.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateRandomBytes set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateRandomBytes) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateRandomBytes setAccessToken(java.lang.String accessToken) {
+          return (GenerateRandomBytes) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateRandomBytes setAlt(java.lang.String alt) {
+          return (GenerateRandomBytes) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateRandomBytes setCallback(java.lang.String callback) {
+          return (GenerateRandomBytes) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateRandomBytes setFields(java.lang.String fields) {
+          return (GenerateRandomBytes) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateRandomBytes setKey(java.lang.String key) {
+          return (GenerateRandomBytes) super.setKey(key);
+        }
+
+        @Override
+        public GenerateRandomBytes setOauthToken(java.lang.String oauthToken) {
+          return (GenerateRandomBytes) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateRandomBytes setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateRandomBytes) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateRandomBytes setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateRandomBytes) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateRandomBytes setUploadType(java.lang.String uploadType) {
+          return (GenerateRandomBytes) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateRandomBytes setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateRandomBytes) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project-specific location in which to generate random bytes. For example, "projects
+         * /my-project/locations/us-central1".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** The project-specific location in which to generate random bytes. For example, "projects/my-
+       project/locations/us-central1".
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * The project-specific location in which to generate random bytes. For example, "projects
+         * /my-project/locations/us-central1".
+         */
+        public GenerateRandomBytes setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public GenerateRandomBytes set(String parameterName, Object value) {
+          return (GenerateRandomBytes) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".

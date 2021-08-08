@@ -40,6 +40,22 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
+   * before transitioning to DESTROYED. If not specified at creation time, the default duration is
+   * 24 hours.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String destroyScheduledDuration;
+
+  /**
+   * Immutable. Whether this key may contain imported versions only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importOnly;
+
+  /**
    * Labels with user-defined metadata. For more information, see [Labeling
    * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * The value may be {@code null}.
@@ -116,6 +132,44 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
    */
   public CryptoKey setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
+   * before transitioning to DESTROYED. If not specified at creation time, the default duration is
+   * 24 hours.
+   * @return value or {@code null} for none
+   */
+  public String getDestroyScheduledDuration() {
+    return destroyScheduledDuration;
+  }
+
+  /**
+   * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
+   * before transitioning to DESTROYED. If not specified at creation time, the default duration is
+   * 24 hours.
+   * @param destroyScheduledDuration destroyScheduledDuration or {@code null} for none
+   */
+  public CryptoKey setDestroyScheduledDuration(String destroyScheduledDuration) {
+    this.destroyScheduledDuration = destroyScheduledDuration;
+    return this;
+  }
+
+  /**
+   * Immutable. Whether this key may contain imported versions only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportOnly() {
+    return importOnly;
+  }
+
+  /**
+   * Immutable. Whether this key may contain imported versions only.
+   * @param importOnly importOnly or {@code null} for none
+   */
+  public CryptoKey setImportOnly(java.lang.Boolean importOnly) {
+    this.importOnly = importOnly;
     return this;
   }
 

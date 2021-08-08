@@ -33,6 +33,24 @@ package com.google.api.services.osconfig.v1alpha.model;
 public final class OSPolicyResourceGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of inventory filters for the resource group. The resources in this resource group are
+   * applied to the target VM if it satisfies at least one of the following inventory filters. For
+   * example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating
+   * systems, specify 2 items for the list with following values:
+   * inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If
+   * the list is empty, this resource group will be applied to the target VM unconditionally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OSPolicyInventoryFilter> inventoryFilters;
+
+  static {
+    // hack to force ProGuard to consider OSPolicyInventoryFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OSPolicyInventoryFilter.class);
+  }
+
+  /**
    * Used to specify the OS filter for a resource group
    * The value may be {@code null}.
    */
@@ -51,6 +69,33 @@ public final class OSPolicyResourceGroup extends com.google.api.client.json.Gene
     // hack to force ProGuard to consider OSPolicyResource used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(OSPolicyResource.class);
+  }
+
+  /**
+   * List of inventory filters for the resource group. The resources in this resource group are
+   * applied to the target VM if it satisfies at least one of the following inventory filters. For
+   * example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating
+   * systems, specify 2 items for the list with following values:
+   * inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If
+   * the list is empty, this resource group will be applied to the target VM unconditionally.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OSPolicyInventoryFilter> getInventoryFilters() {
+    return inventoryFilters;
+  }
+
+  /**
+   * List of inventory filters for the resource group. The resources in this resource group are
+   * applied to the target VM if it satisfies at least one of the following inventory filters. For
+   * example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating
+   * systems, specify 2 items for the list with following values:
+   * inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If
+   * the list is empty, this resource group will be applied to the target VM unconditionally.
+   * @param inventoryFilters inventoryFilters or {@code null} for none
+   */
+  public OSPolicyResourceGroup setInventoryFilters(java.util.List<OSPolicyInventoryFilter> inventoryFilters) {
+    this.inventoryFilters = inventoryFilters;
+    return this;
   }
 
   /**

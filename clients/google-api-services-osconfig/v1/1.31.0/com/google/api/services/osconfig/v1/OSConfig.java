@@ -507,6 +507,878 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code OSConfig osconfig = new OSConfig(...);}
+     *   {@code OSConfig.Locations.List request = osconfig.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Instances collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.Instances.List request = osconfig.instances().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Instances instances() {
+        return new Instances();
+      }
+
+      /**
+       * The "instances" collection of methods.
+       */
+      public class Instances {
+
+        /**
+         * An accessor for creating requests from the Inventories collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.Inventories.List request = osconfig.inventories().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Inventories inventories() {
+          return new Inventories();
+        }
+
+        /**
+         * The "inventories" collection of methods.
+         */
+        public class Inventories {
+
+          /**
+           * Get inventory data for the specified VM instance. If the VM has no associated inventory, the
+           * message `NOT_FOUND` is returned.
+           *
+           * Create a request for the method "inventories.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. API resource name for inventory resource. Format:
+           *        `projects/{project}/locations/{location}/instances/{instance}/inventory` For `{project}`,
+           *        either `project-number` or `project-id` can be provided. For `{instance}`, either Compute
+           *        Engine `instance-id` or `instance-name` can be provided.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Inventory> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/inventory$");
+
+            /**
+             * Get inventory data for the specified VM instance. If the VM has no associated inventory, the
+             * message `NOT_FOUND` is returned.
+             *
+             * Create a request for the method "inventories.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. API resource name for inventory resource. Format:
+           *        `projects/{project}/locations/{location}/instances/{instance}/inventory` For `{project}`,
+           *        either `project-number` or `project-id` can be provided. For `{instance}`, either Compute
+           *        Engine `instance-id` or `instance-name` can be provided.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.Inventory.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/inventory$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. API resource name for inventory resource. Format:
+             * `projects/{project}/locations/{location}/instances/{instance}/inventory` For
+             * `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance}`, either Compute Engine `instance-id` or `instance-name` can be provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. API resource name for inventory resource. Format:
+           `projects/{project}/locations/{location}/instances/{instance}/inventory` For `{project}`, either
+           `project-number` or `project-id` can be provided. For `{instance}`, either Compute Engine
+           `instance-id` or `instance-name` can be provided.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. API resource name for inventory resource. Format:
+             * `projects/{project}/locations/{location}/instances/{instance}/inventory` For
+             * `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance}`, either Compute Engine `instance-id` or `instance-name` can be provided.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/inventory$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Inventory view indicating what information should be included in the inventory
+             * resource. If unspecified, the default view is BASIC.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Inventory view indicating what information should be included in the inventory resource. If
+           unspecified, the default view is BASIC.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Inventory view indicating what information should be included in the inventory
+             * resource. If unspecified, the default view is BASIC.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List inventory data for all VM instances in the specified zone.
+           *
+           * Create a request for the method "inventories.list".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ListInventoriesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/inventories";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * List inventory data for all VM instances in the specified zone.
+             *
+             * Create a request for the method "inventories.list".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListInventoriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name. Format:
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           For `{project}`, either `project-number` or `project-id` can be provided.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name. Format:
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * If provided, this field specifies the criteria that must be met by a `Inventory` API
+             * resource to be included in the response.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** If provided, this field specifies the criteria that must be met by a `Inventory` API resource to be
+           included in the response.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * If provided, this field specifies the criteria that must be met by a `Inventory` API
+             * resource to be included in the response.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The maximum number of results to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of results to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A pagination token returned from a previous call to `ListInventories` that indicates
+             * where this listing should continue from.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A pagination token returned from a previous call to `ListInventories` that indicates where this
+           listing should continue from.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A pagination token returned from a previous call to `ListInventories` that indicates
+             * where this listing should continue from.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Inventory view indicating what information should be included in the inventory
+             * resource. If unspecified, the default view is BASIC.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Inventory view indicating what information should be included in the inventory resource. If
+           unspecified, the default view is BASIC.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Inventory view indicating what information should be included in the inventory
+             * resource. If unspecified, the default view is BASIC.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the VulnerabilityReports collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.VulnerabilityReports.List request = osconfig.vulnerabilityReports().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public VulnerabilityReports vulnerabilityReports() {
+          return new VulnerabilityReports();
+        }
+
+        /**
+         * The "vulnerabilityReports" collection of methods.
+         */
+        public class VulnerabilityReports {
+
+          /**
+           * Gets the vulnerability report for the specified VM instance. Only VMs with inventory data have
+           * vulnerability reports associated with them.
+           *
+           * Create a request for the method "vulnerabilityReports.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. API resource name for vulnerability resource. Format:
+           *        `projects/{project}/locations/{location}/instances/{instance}/vulnerabilityReport` For
+           *        `{project}`, either `project-number` or `project-id` can be provided. For `{instance}`,
+           *        either Compute Engine `instance-id` or `instance-name` can be provided.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v1.model.VulnerabilityReport> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/vulnerabilityReport$");
+
+            /**
+             * Gets the vulnerability report for the specified VM instance. Only VMs with inventory data have
+             * vulnerability reports associated with them.
+             *
+             * Create a request for the method "vulnerabilityReports.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. API resource name for vulnerability resource. Format:
+           *        `projects/{project}/locations/{location}/instances/{instance}/vulnerabilityReport` For
+           *        `{project}`, either `project-number` or `project-id` can be provided. For `{instance}`,
+           *        either Compute Engine `instance-id` or `instance-name` can be provided.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.VulnerabilityReport.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/vulnerabilityReport$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. API resource name for vulnerability resource. Format:
+             * `projects/{project}/locations/{location}/instances/{instance}/vulnerabilityReport`
+             * For `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance}`, either Compute Engine `instance-id` or `instance-name` can be provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. API resource name for vulnerability resource. Format:
+           `projects/{project}/locations/{location}/instances/{instance}/vulnerabilityReport` For `{project}`,
+           either `project-number` or `project-id` can be provided. For `{instance}`, either Compute Engine
+           `instance-id` or `instance-name` can be provided.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. API resource name for vulnerability resource. Format:
+             * `projects/{project}/locations/{location}/instances/{instance}/vulnerabilityReport`
+             * For `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance}`, either Compute Engine `instance-id` or `instance-name` can be provided.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/vulnerabilityReport$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List vulnerability reports for all VM instances in the specified zone.
+           *
+           * Create a request for the method "vulnerabilityReports.list".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ListVulnerabilityReportsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/vulnerabilityReports";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+            /**
+             * List vulnerability reports for all VM instances in the specified zone.
+             *
+             * Create a request for the method "vulnerabilityReports.list".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           *        For `{project}`, either `project-number` or `project-id` can be provided.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListVulnerabilityReportsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name. Format:
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/-`
+           For `{project}`, either `project-number` or `project-id` can be provided.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name. Format:
+             * `projects/{project}/locations/{location}/instances/-` For `{project}`, either
+             * `project-number` or `project-id` can be provided.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * If provided, this field specifies the criteria that must be met by a
+             * `vulnerabilityReport` API resource to be included in the response.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** If provided, this field specifies the criteria that must be met by a `vulnerabilityReport` API
+           resource to be included in the response.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * If provided, this field specifies the criteria that must be met by a
+             * `vulnerabilityReport` API resource to be included in the response.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The maximum number of results to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of results to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A pagination token returned from a previous call to `ListVulnerabilityReports` that
+             * indicates where this listing should continue from.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A pagination token returned from a previous call to `ListVulnerabilityReports` that indicates where
+           this listing should continue from.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A pagination token returned from a previous call to `ListVulnerabilityReports` that
+             * indicates where this listing should continue from.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+    /**
      * An accessor for creating requests from the PatchDeployments collection.
      *
      * <p>The typical use is:</p>

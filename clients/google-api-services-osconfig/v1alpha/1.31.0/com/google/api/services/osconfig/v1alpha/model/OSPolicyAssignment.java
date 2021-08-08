@@ -59,6 +59,14 @@ public final class OSPolicyAssignment extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
+   * The etag for this OS policy assignment. If this is provided on update, it must match the
+   * server's etag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Required. Filter to select VMs.
    * The value may be {@code null}.
    */
@@ -186,6 +194,25 @@ public final class OSPolicyAssignment extends com.google.api.client.json.Generic
    */
   public OSPolicyAssignment setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The etag for this OS policy assignment. If this is provided on update, it must match the
+   * server's etag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * The etag for this OS policy assignment. If this is provided on update, it must match the
+   * server's etag.
+   * @param etag etag or {@code null} for none
+   */
+  public OSPolicyAssignment setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

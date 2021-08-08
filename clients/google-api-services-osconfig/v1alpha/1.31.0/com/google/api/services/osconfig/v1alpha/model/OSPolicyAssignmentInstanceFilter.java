@@ -17,7 +17,8 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * Message to represent the filters to select VMs for an assignment
+ * Filters to select target VMs for an assignment. If more than one filter criteria is specified
+ * below, a VM will be selected if and only if it satisfies all of them.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
@@ -38,9 +39,7 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
 
   /**
    * List of label sets used for VM exclusion. If the list has more than one label set, the VM is
-   * excluded if any of the label sets are applicable for the VM. This filter is applied last in the
-   * filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the
-   * below label sets.
+   * excluded if any of the label sets are applicable for the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +54,15 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   private java.util.List<OSPolicyAssignmentLabelSet> inclusionLabels;
 
   /**
-   * A VM is included if it's OS short name matches with any of the values provided in this list.
+   * List of inventories to select VMs. A VM is selected if its inventory data matches at least one
+   * of the following inventories.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OSPolicyAssignmentInstanceFilterInventory> inventories;
+
+  /**
+   * A VM is selected if it's OS short name matches with any of the values provided in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +87,7 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
 
   /**
    * List of label sets used for VM exclusion. If the list has more than one label set, the VM is
-   * excluded if any of the label sets are applicable for the VM. This filter is applied last in the
-   * filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the
-   * below label sets.
+   * excluded if any of the label sets are applicable for the VM.
    * @return value or {@code null} for none
    */
   public java.util.List<OSPolicyAssignmentLabelSet> getExclusionLabels() {
@@ -91,9 +96,7 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
 
   /**
    * List of label sets used for VM exclusion. If the list has more than one label set, the VM is
-   * excluded if any of the label sets are applicable for the VM. This filter is applied last in the
-   * filtering chain and therefore a VM is guaranteed to be excluded if it satisfies one of the
-   * below label sets.
+   * excluded if any of the label sets are applicable for the VM.
    * @param exclusionLabels exclusionLabels or {@code null} for none
    */
   public OSPolicyAssignmentInstanceFilter setExclusionLabels(java.util.List<OSPolicyAssignmentLabelSet> exclusionLabels) {
@@ -121,7 +124,26 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   }
 
   /**
-   * A VM is included if it's OS short name matches with any of the values provided in this list.
+   * List of inventories to select VMs. A VM is selected if its inventory data matches at least one
+   * of the following inventories.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OSPolicyAssignmentInstanceFilterInventory> getInventories() {
+    return inventories;
+  }
+
+  /**
+   * List of inventories to select VMs. A VM is selected if its inventory data matches at least one
+   * of the following inventories.
+   * @param inventories inventories or {@code null} for none
+   */
+  public OSPolicyAssignmentInstanceFilter setInventories(java.util.List<OSPolicyAssignmentInstanceFilterInventory> inventories) {
+    this.inventories = inventories;
+    return this;
+  }
+
+  /**
+   * A VM is selected if it's OS short name matches with any of the values provided in this list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOsShortNames() {
@@ -129,7 +151,7 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   }
 
   /**
-   * A VM is included if it's OS short name matches with any of the values provided in this list.
+   * A VM is selected if it's OS short name matches with any of the values provided in this list.
    * @param osShortNames osShortNames or {@code null} for none
    */
   public OSPolicyAssignmentInstanceFilter setOsShortNames(java.util.List<java.lang.String> osShortNames) {

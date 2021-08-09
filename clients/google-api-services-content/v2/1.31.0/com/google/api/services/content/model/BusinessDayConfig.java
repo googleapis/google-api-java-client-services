@@ -31,14 +31,14 @@ package com.google.api.services.content.model;
 public final class BusinessDayConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Regular business days. May not be empty.
+   * Regular business days, such as '"monday"'. May not be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> businessDays;
 
   /**
-   * Regular business days. May not be empty.
+   * Regular business days, such as '"monday"'. May not be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBusinessDays() {
@@ -46,7 +46,7 @@ public final class BusinessDayConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Regular business days. May not be empty.
+   * Regular business days, such as '"monday"'. May not be empty.
    * @param businessDays businessDays or {@code null} for none
    */
   public BusinessDayConfig setBusinessDays(java.util.List<java.lang.String> businessDays) {

@@ -2298,6 +2298,160 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Imports a Customer from the Cloud Identity associated with the provided Cloud Identity ID or
+         * domain before a TransferEntitlements call. If a linked Customer already exists and
+         * overwrite_if_exists is true, it will update that Customer's data. Possible error codes: *
+         * PERMISSION_DENIED: The reseller account making the request is different from the reseller account
+         * in the API request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. * INVALID_ARGUMENT:
+         * Required parameters are missing, or the auth_token is expired or invalid. * ALREADY_EXISTS: A
+         * customer already exists and has conflicting critical fields. Requires an overwrite. Return value:
+         * The Customer.
+         *
+         * Create a request for the method "customers.import".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link CloudchannelImport#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the reseller's account. Parent takes the format:
+         *        accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest}
+         * @return the request
+         */
+        public CloudchannelImport cloudchannelImport(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest content) throws java.io.IOException {
+          CloudchannelImport result = new CloudchannelImport(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloudchannelImport extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Customer> {
+
+          private static final String REST_PATH = "v1/{+parent}/customers:import";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+
+          /**
+           * Imports a Customer from the Cloud Identity associated with the provided Cloud Identity ID or
+           * domain before a TransferEntitlements call. If a linked Customer already exists and
+           * overwrite_if_exists is true, it will update that Customer's data. Possible error codes: *
+           * PERMISSION_DENIED: The reseller account making the request is different from the reseller
+           * account in the API request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. *
+           * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is expired or invalid. *
+           * ALREADY_EXISTS: A customer already exists and has conflicting critical fields. Requires an
+           * overwrite. Return value: The Customer.
+           *
+           * Create a request for the method "customers.import".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link CloudchannelImport#execute()} method to invoke the remote
+           * operation. <p> {@link CloudchannelImport#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the reseller's account. Parent takes the format:
+         *        accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest}
+           * @since 1.13
+           */
+          protected CloudchannelImport(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest content) {
+            super(Cloudchannel.this, "POST", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Customer.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloudchannelImport set$Xgafv(java.lang.String $Xgafv) {
+            return (CloudchannelImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloudchannelImport setAccessToken(java.lang.String accessToken) {
+            return (CloudchannelImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloudchannelImport setAlt(java.lang.String alt) {
+            return (CloudchannelImport) super.setAlt(alt);
+          }
+
+          @Override
+          public CloudchannelImport setCallback(java.lang.String callback) {
+            return (CloudchannelImport) super.setCallback(callback);
+          }
+
+          @Override
+          public CloudchannelImport setFields(java.lang.String fields) {
+            return (CloudchannelImport) super.setFields(fields);
+          }
+
+          @Override
+          public CloudchannelImport setKey(java.lang.String key) {
+            return (CloudchannelImport) super.setKey(key);
+          }
+
+          @Override
+          public CloudchannelImport setOauthToken(java.lang.String oauthToken) {
+            return (CloudchannelImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloudchannelImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloudchannelImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloudchannelImport setQuotaUser(java.lang.String quotaUser) {
+            return (CloudchannelImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloudchannelImport setUploadType(java.lang.String uploadType) {
+            return (CloudchannelImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloudchannelImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloudchannelImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the reseller's account. Parent takes the format:
+           * accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the reseller's account. Parent takes the format:
+         accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the reseller's account. Parent takes the format:
+           * accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+           */
+          public CloudchannelImport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/channelPartnerLinks/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public CloudchannelImport set(String parameterName, Object value) {
+            return (CloudchannelImport) super.set(parameterName, value);
+          }
+        }
+        /**
          * List Customers. Possible error codes: * PERMISSION_DENIED: The reseller account making the
          * request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required
          * request parameters are missing or invalid. Return value: List of Customers, or an empty list if
@@ -3118,6 +3272,160 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Imports a Customer from the Cloud Identity associated with the provided Cloud Identity ID or
+       * domain before a TransferEntitlements call. If a linked Customer already exists and
+       * overwrite_if_exists is true, it will update that Customer's data. Possible error codes: *
+       * PERMISSION_DENIED: The reseller account making the request is different from the reseller account
+       * in the API request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. * INVALID_ARGUMENT:
+       * Required parameters are missing, or the auth_token is expired or invalid. * ALREADY_EXISTS: A
+       * customer already exists and has conflicting critical fields. Requires an overwrite. Return value:
+       * The Customer.
+       *
+       * Create a request for the method "customers.import".
+       *
+       * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+       * parameters, call the {@link CloudchannelImport#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the reseller's account. Parent takes the format:
+       *        accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+       * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest}
+       * @return the request
+       */
+      public CloudchannelImport cloudchannelImport(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest content) throws java.io.IOException {
+        CloudchannelImport result = new CloudchannelImport(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CloudchannelImport extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Customer> {
+
+        private static final String REST_PATH = "v1/{+parent}/customers:import";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Imports a Customer from the Cloud Identity associated with the provided Cloud Identity ID or
+         * domain before a TransferEntitlements call. If a linked Customer already exists and
+         * overwrite_if_exists is true, it will update that Customer's data. Possible error codes: *
+         * PERMISSION_DENIED: The reseller account making the request is different from the reseller
+         * account in the API request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. *
+         * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is expired or invalid. *
+         * ALREADY_EXISTS: A customer already exists and has conflicting critical fields. Requires an
+         * overwrite. Return value: The Customer.
+         *
+         * Create a request for the method "customers.import".
+         *
+         * This request holds the parameters needed by the the cloudchannel server.  After setting any
+         * optional parameters, call the {@link CloudchannelImport#execute()} method to invoke the remote
+         * operation. <p> {@link CloudchannelImport#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the reseller's account. Parent takes the format:
+       *        accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest}
+         * @since 1.13
+         */
+        protected CloudchannelImport(java.lang.String parent, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ImportCustomerRequest content) {
+          super(Cloudchannel.this, "POST", REST_PATH, content, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1Customer.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public CloudchannelImport set$Xgafv(java.lang.String $Xgafv) {
+          return (CloudchannelImport) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CloudchannelImport setAccessToken(java.lang.String accessToken) {
+          return (CloudchannelImport) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CloudchannelImport setAlt(java.lang.String alt) {
+          return (CloudchannelImport) super.setAlt(alt);
+        }
+
+        @Override
+        public CloudchannelImport setCallback(java.lang.String callback) {
+          return (CloudchannelImport) super.setCallback(callback);
+        }
+
+        @Override
+        public CloudchannelImport setFields(java.lang.String fields) {
+          return (CloudchannelImport) super.setFields(fields);
+        }
+
+        @Override
+        public CloudchannelImport setKey(java.lang.String key) {
+          return (CloudchannelImport) super.setKey(key);
+        }
+
+        @Override
+        public CloudchannelImport setOauthToken(java.lang.String oauthToken) {
+          return (CloudchannelImport) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CloudchannelImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CloudchannelImport) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CloudchannelImport setQuotaUser(java.lang.String quotaUser) {
+          return (CloudchannelImport) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CloudchannelImport setUploadType(java.lang.String uploadType) {
+          return (CloudchannelImport) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CloudchannelImport setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CloudchannelImport) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the reseller's account. Parent takes the format:
+         * accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the reseller's account. Parent takes the format:
+       accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the reseller's account. Parent takes the format:
+         * accounts/{account_id} or accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+         */
+        public CloudchannelImport setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public CloudchannelImport set(String parameterName, Object value) {
+          return (CloudchannelImport) super.set(parameterName, value);
         }
       }
       /**

@@ -32,18 +32,18 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   /**
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. The ID value is formed differently for each conference solution type:   -
-   * eventHangout: ID is not set. - eventNamedHangout: ID is the name of the Hangout. -
-   * hangoutsMeet: ID is the 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is
-   * defined by the third-party provider.  Optional.
+   * eventHangout: ID is not set. (This conference type is deprecated.) - eventNamedHangout: ID is
+   * the name of the Hangout. (This conference type is deprecated.) - hangoutsMeet: ID is the
+   * 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is defined by the third-party
+   * provider.  Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conferenceId;
 
   /**
-   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
-   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
-   * required.
+   * The conference solution, such as Google Meet. Unset for a conference with a failed create
+   * request. Either conferenceSolution and at least one entryPoint, or createRequest is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +96,10 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   /**
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. The ID value is formed differently for each conference solution type:   -
-   * eventHangout: ID is not set. - eventNamedHangout: ID is the name of the Hangout. -
-   * hangoutsMeet: ID is the 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is
-   * defined by the third-party provider.  Optional.
+   * eventHangout: ID is not set. (This conference type is deprecated.) - eventNamedHangout: ID is
+   * the name of the Hangout. (This conference type is deprecated.) - hangoutsMeet: ID is the
+   * 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is defined by the third-party
+   * provider.  Optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getConferenceId() {
@@ -108,9 +109,10 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   /**
    * The ID of the conference. Can be used by developers to keep track of conferences, should not be
    * displayed to users. The ID value is formed differently for each conference solution type:   -
-   * eventHangout: ID is not set. - eventNamedHangout: ID is the name of the Hangout. -
-   * hangoutsMeet: ID is the 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is
-   * defined by the third-party provider.  Optional.
+   * eventHangout: ID is not set. (This conference type is deprecated.) - eventNamedHangout: ID is
+   * the name of the Hangout. (This conference type is deprecated.) - hangoutsMeet: ID is the
+   * 10-letter meeting code, for example aaa-bbbb-ccc. - addOn: ID is defined by the third-party
+   * provider.  Optional.
    * @param conferenceId conferenceId or {@code null} for none
    */
   public ConferenceData setConferenceId(java.lang.String conferenceId) {
@@ -119,9 +121,8 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
-   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
-   * required.
+   * The conference solution, such as Google Meet. Unset for a conference with a failed create
+   * request. Either conferenceSolution and at least one entryPoint, or createRequest is required.
    * @return value or {@code null} for none
    */
   public ConferenceSolution getConferenceSolution() {
@@ -129,9 +130,8 @@ public final class ConferenceData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The conference solution, such as Hangouts or Google Meet. Unset for a conference with a failed
-   * create request. Either conferenceSolution and at least one entryPoint, or createRequest is
-   * required.
+   * The conference solution, such as Google Meet. Unset for a conference with a failed create
+   * request. Either conferenceSolution and at least one entryPoint, or createRequest is required.
    * @param conferenceSolution conferenceSolution or {@code null} for none
    */
   public ConferenceData setConferenceSolution(ConferenceSolution conferenceSolution) {

@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * An outage incident reported by Google for a Google Workspace (formerly G Suite) application.
+ * An outage incident reported for a Google Workspace service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
@@ -38,7 +38,7 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   private java.lang.String dashboardUri;
 
   /**
-   * Timestamp by which the next update shall be provided.
+   * Timestamp by which the next update is expected to arrive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,8 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> products;
 
   /**
-   * Timestamp of the outage expected or confirmed resolution. (Used only when known).
+   * Timestamp when the outage is expected to be resolved, or has confirmed resolution. Provided
+   * only when known.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,7 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp by which the next update shall be provided.
+   * Timestamp by which the next update is expected to arrive.
    * @return value or {@code null} for none
    */
   public String getNextUpdateTime() {
@@ -91,7 +92,7 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp by which the next update shall be provided.
+   * Timestamp by which the next update is expected to arrive.
    * @param nextUpdateTime nextUpdateTime or {@code null} for none
    */
   public AppsOutage setNextUpdateTime(String nextUpdateTime) {
@@ -117,7 +118,8 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the outage expected or confirmed resolution. (Used only when known).
+   * Timestamp when the outage is expected to be resolved, or has confirmed resolution. Provided
+   * only when known.
    * @return value or {@code null} for none
    */
   public String getResolutionTime() {
@@ -125,7 +127,8 @@ public final class AppsOutage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timestamp of the outage expected or confirmed resolution. (Used only when known).
+   * Timestamp when the outage is expected to be resolved, or has confirmed resolution. Provided
+   * only when known.
    * @param resolutionTime resolutionTime or {@code null} for none
    */
   public AppsOutage setResolutionTime(String resolutionTime) {

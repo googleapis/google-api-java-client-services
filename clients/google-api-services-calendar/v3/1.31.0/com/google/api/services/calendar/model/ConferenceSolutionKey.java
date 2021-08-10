@@ -32,10 +32,11 @@ public final class ConferenceSolutionKey extends com.google.api.client.json.Gene
   /**
    * The conference solution type. If a client encounters an unfamiliar or empty type, it should
    * still be able to display the entry points. However, it should disallow modifications. The
-   * possible values are:   - "eventHangout" for Hangouts for consumers (http://hangouts.google.com)
-   * - "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated;
-   * http://hangouts.google.com) - "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn"
-   * for 3P conference providers
+   * possible values are:   - "eventHangout" for Hangouts for consumers (deprecated; existing events
+   * may show this conference solution type but new conferences cannot be created) -
+   * "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated; existing
+   * events may show this conference solution type but new conferences cannot be created) -
+   * "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn" for 3P conference providers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,10 +45,11 @@ public final class ConferenceSolutionKey extends com.google.api.client.json.Gene
   /**
    * The conference solution type. If a client encounters an unfamiliar or empty type, it should
    * still be able to display the entry points. However, it should disallow modifications. The
-   * possible values are:   - "eventHangout" for Hangouts for consumers (http://hangouts.google.com)
-   * - "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated;
-   * http://hangouts.google.com) - "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn"
-   * for 3P conference providers
+   * possible values are:   - "eventHangout" for Hangouts for consumers (deprecated; existing events
+   * may show this conference solution type but new conferences cannot be created) -
+   * "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated; existing
+   * events may show this conference solution type but new conferences cannot be created) -
+   * "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn" for 3P conference providers
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -57,10 +59,11 @@ public final class ConferenceSolutionKey extends com.google.api.client.json.Gene
   /**
    * The conference solution type. If a client encounters an unfamiliar or empty type, it should
    * still be able to display the entry points. However, it should disallow modifications. The
-   * possible values are:   - "eventHangout" for Hangouts for consumers (http://hangouts.google.com)
-   * - "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated;
-   * http://hangouts.google.com) - "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn"
-   * for 3P conference providers
+   * possible values are:   - "eventHangout" for Hangouts for consumers (deprecated; existing events
+   * may show this conference solution type but new conferences cannot be created) -
+   * "eventNamedHangout" for classic Hangouts for Google Workspace users (deprecated; existing
+   * events may show this conference solution type but new conferences cannot be created) -
+   * "hangoutsMeet" for Google Meet (http://meet.google.com) - "addOn" for 3P conference providers
    * @param type type or {@code null} for none
    */
   public ConferenceSolutionKey setType(java.lang.String type) {

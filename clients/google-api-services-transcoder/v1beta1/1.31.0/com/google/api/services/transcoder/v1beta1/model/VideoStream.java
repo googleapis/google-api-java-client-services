@@ -63,7 +63,8 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean bPyramid;
 
   /**
-   * Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.
+   * Required. The video bitrate in bits per second. The minimum value is 1,000. The maximum value
+   * for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,7 +288,8 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.
+   * Required. The video bitrate in bits per second. The minimum value is 1,000. The maximum value
+   * for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBitrateBps() {
@@ -295,7 +297,8 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The video bitrate in bits per second. Must be between 1 and 1,000,000,000.
+   * Required. The video bitrate in bits per second. The minimum value is 1,000. The maximum value
+   * for H264/H265 is 800,000,000. The maximum value for VP9 is 480,000,000.
    * @param bitrateBps bitrateBps or {@code null} for none
    */
   public VideoStream setBitrateBps(java.lang.Integer bitrateBps) {

@@ -23,7 +23,7 @@ package com.google.api.services.vision.v1;
  */
 public class VisionScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** Apply machine learning models to understand and label images. */

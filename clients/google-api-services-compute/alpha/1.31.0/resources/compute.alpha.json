@@ -3,7 +3,7 @@
   "oauth2": {
    "scopes": {
     "https://www.googleapis.com/auth/cloud-platform": {
-     "description": "See, edit, configure, and delete your Google Cloud Platform data"
+     "description": "See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account."
     },
     "https://www.googleapis.com/auth/compute": {
      "description": "View and manage your Google Compute Engine resources"
@@ -12,13 +12,13 @@
      "description": "View your Google Compute Engine resources"
     },
     "https://www.googleapis.com/auth/devstorage.full_control": {
-     "description": "Manage your data and permissions in Google Cloud Storage"
+     "description": "Manage your data and permissions in Cloud Storage and see the email address for your Google Account"
     },
     "https://www.googleapis.com/auth/devstorage.read_only": {
      "description": "View your data in Google Cloud Storage"
     },
     "https://www.googleapis.com/auth/devstorage.read_write": {
-     "description": "Manage your data in Google Cloud Storage"
+     "description": "Manage your data in Cloud Storage and see the email address of your Google Account"
     }
    }
   }
@@ -10941,12 +10941,6 @@
        "location": "query",
        "type": "string"
       },
-      "secureTags": {
-       "description": "DEPRECATED: Please use resource.secure_tag instead. Secure tags to apply to this instance. These can be later modified by the update method. Maximum number of secure tags allowed is 50.",
-       "location": "query",
-       "repeated": true,
-       "type": "string"
-      },
       "sourceInstanceTemplate": {
        "description": "Specifies instance template to create the instance. This field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate ",
        "location": "query",
@@ -12410,12 +12404,6 @@
       "requestId": {
        "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).",
        "location": "query",
-       "type": "string"
-      },
-      "secureTags": {
-       "description": "DEPRECATED: Please use resource.secure_tag instead. Secure tags to apply to this instance. Maximum number of secure tags allowed is 50.",
-       "location": "query",
-       "repeated": true,
        "type": "string"
       },
       "zone": {
@@ -16736,7 +16724,7 @@
      ]
     },
     "updatePeering": {
-     "description": "Updates the specified network peering with the data included in the request Only the following fields can be modified: NetworkPeering.export_custom_routes, and NetworkPeering.import_custom_routes",
+     "description": "Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.",
      "flatPath": "projects/{project}/global/networks/{network}/updatePeering",
      "httpMethod": "PATCH",
      "id": "compute.networks.updatePeering",
@@ -32295,6 +32283,11 @@
        "description": "Opt-in for partial success behavior which provides partial results in case of failure. The default value is false.",
        "location": "query",
        "type": "boolean"
+      },
+      "serviceProject": {
+       "description": "The project id or project number in which the subnetwork is intended to be used. Only applied for Shared VPC. See [Shared VPC documentation](https://cloud.google.com/vpc/docs/shared-vpc/)",
+       "location": "query",
+       "type": "string"
       }
      },
      "path": "projects/{project}/aggregated/subnetworks/listUsable",
@@ -37881,7 +37874,7 @@
    }
   }
  },
- "revision": "20210719",
+ "revision": "20210802",
  "rootUrl": "https://compute.googleapis.com/",
  "schemas": {
   "AcceleratorConfig": {
@@ -38477,7 +38470,6 @@
       "IPSEC_INTERCONNECT",
       "NAT_AUTO",
       "PRIVATE_SERVICE_CONNECT",
-      "PSC_PRODUCER_NAT_RANGE",
       "SHARED_LOADBALANCER_VIP",
       "VPC_PEERING"
      ],
@@ -38487,7 +38479,6 @@
       "A regional internal IP address range reserved for the VLAN attachment that is used in IPsec-encrypted Cloud Interconnect. This regional internal IP address range must not overlap with any IP address range of subnet/route in the VPC network and its peering networks. After the VLAN attachment is created with the reserved IP address range, when creating a new VPN gateway, its interface IP address is allocated from the associated VLAN attachment\u2019s IP address range.",
       "External IP automatically reserved for Cloud NAT.",
       "A private network IP address that can be used to configure Private Service Connect. This purpose can be specified only for GLOBAL addresses of Type INTERNAL",
-      "Internal IP range provided by producers for PSC ILB.",
       "A private network IP address that can be shared by multiple Internal Load Balancer forwarding rules.",
       "IP range for peer networks."
      ],
@@ -40091,7 +40082,7 @@
    "id": "Backend",
    "properties": {
     "balancingMode": {
-     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.",
+     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Restrictions and guidelines. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and will be ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.",
      "enum": [
       "CONNECTION",
       "RATE",
@@ -40152,6 +40143,7 @@
      "type": "number"
     },
     "maxUtilization": {
+     "description": "Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.",
      "format": "float",
      "type": "number"
     }
@@ -41666,13 +41658,6 @@
      },
      "description": "Per-instance properties to be set on individual instances. Keys of this map specify requested instance names. Can be empty if name_pattern is used.",
      "type": "object"
-    },
-    "secureTags": {
-     "description": "DEPRECATED: Please use instance_properties.secure_tag instead. Secure tags to apply to this instance. These can be later modified by the update method. Maximum number of secure tags allowed is 50.",
-     "items": {
-      "type": "string"
-     },
-     "type": "array"
     },
     "sourceInstanceTemplate": {
      "description": "Specifies the instance template from which to create instances. You may combine sourceInstanceTemplate with instanceProperties to override specific values from an existing instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396. It can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate This field is optional.",
@@ -44255,7 +44240,7 @@
      "type": "string"
     },
     "destinationRanges": {
-     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.",
+     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -44324,7 +44309,7 @@
      "type": "string"
     },
     "sourceRanges": {
-     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Only IPv4 is supported.",
+     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -48318,6 +48303,10 @@
      },
      "type": "array"
     },
+    "locked": {
+     "description": "A flag for marketplace VM disk created from the image, which is designed for marketplace VM disk to prevent the proprietary data on the disk from being accessed unwantedly. The flag will be inherited by the disk created from the image. The disk with locked flag set to true will be prohibited from performing the operations below: - R/W or R/O disk attach - Disk detach, if disk is created via create-on-create - Create images - Create snapshots - Create disk clone (create disk from the current disk) The image with the locked field set to true will be prohibited from performing the operations below: - Create images from the current image - Update the locked field for the current image The instance with at least one disk with locked flag set to true will be prohibited from performing the operations below: - Secondary disk attach - Create instant snapshot - Create machine images - Create instance template - Delete the instance with --keep-disk parameter set to true ",
+     "type": "boolean"
+    },
     "name": {
      "annotations": {
       "required": [
@@ -48347,7 +48336,7 @@
        "type": "string"
       },
       "source": {
-       "description": "The full Google Cloud Storage URL where the disk image is stored. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+       "description": "The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
        "type": "string"
       }
      },
@@ -48386,7 +48375,7 @@
      "type": "string"
     },
     "sourceImage": {
-     "description": "URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceImageEncryptionKey": {
@@ -48398,7 +48387,7 @@
      "type": "string"
     },
     "sourceSnapshot": {
-     "description": "URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceSnapshotEncryptionKey": {
@@ -53167,10 +53156,6 @@
     "macAddress": {
      "description": "The MAC address of the Interconnect's bundle interface.",
      "type": "string"
-    },
-    "macsec": {
-     "$ref": "InterconnectDiagnosticsMacsecStatus",
-     "description": "Describes the status of MACsec encryption on the Interconnect's bundle interface."
     }
    },
    "type": "object"
@@ -53266,6 +53251,10 @@
     "lacpStatus": {
      "$ref": "InterconnectDiagnosticsLinkLACPStatus"
     },
+    "macsec": {
+     "$ref": "InterconnectDiagnosticsMacsecStatus",
+     "description": "Describes the status of MACsec encryption on this link."
+    },
     "receivingOpticalPower": {
      "$ref": "InterconnectDiagnosticsLinkOpticalPower",
      "description": "An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of the received light level."
@@ -53285,23 +53274,9 @@
      "description": "Indicates the Connectivity Association Key Name (CKN) currently being used if MACsec is operational.",
      "type": "string"
     },
-    "state": {
-     "description": "The current state of MACsec configuration on this Interconnect, which can take one of the following values: - INITIALIZED: MACsec has been configured on the bundle interface. The Google edge router is waiting to establish a MACsec session with the customer router on the other side of this Interconnect. In addition, when key rollover fails between the two routers, the bundle interface will return to the initialized state. - SECURED: MACsec session has been successfully established between the Google edge router and the customer router. - FAILED: MACsec configuration on the bundle interface encountered an error. - DISABLED: MACsec is explicitly disabled on this Interconnect. ",
-     "enum": [
-      "DISABLED",
-      "FAILED",
-      "INITIALIZED",
-      "SECURED",
-      "STATE_UNSPECIFIED"
-     ],
-     "enumDescriptions": [
-      "MACsec is explicitly disabled on this Interconnect.",
-      "MACsec configuration on the bundle interface encountered an error.",
-      "MACsec has been configured on the bundle interface. The Google edge router is waiting to establish a MACsec session with the customer router on the other side of this Interconnect. In addition, when key rollover fails between the two routers, the bundle interface will return to the initialized state.",
-      "MACsec session has been successfully established between the Google edge router and the customer router.",
-      "The default value."
-     ],
-     "type": "string"
+    "operational": {
+     "description": "Indicates whether or not MACsec is operational on this link.",
+     "type": "boolean"
     }
    },
    "type": "object"
@@ -57082,7 +57057,7 @@
      "type": "boolean"
     },
     "exportSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.",
      "type": "boolean"
     },
     "importCustomRoutes": {
@@ -57090,7 +57065,7 @@
      "type": "boolean"
     },
     "importSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.",
      "type": "boolean"
     },
     "name": {
@@ -57312,7 +57287,7 @@
    "type": "object"
   },
   "NodeGroup": {
-   "description": "Represent a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
+   "description": "Represents a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
    "id": "NodeGroup",
    "properties": {
     "autoscalingPolicy": {
@@ -61126,6 +61101,10 @@
     "organization": {
      "description": "Optional organization ID managed by Cloud Resource Manager, for which to list shared VPC host projects. If not specified, the organization will be inferred from the project.",
      "type": "string"
+    },
+    "returnPartialPage": {
+     "description": "Opt-in for partial page behavior which provides a partial filled page (number of items on which may be smaller than maxResults) within the API deadline. If opt-in, then the user should rely on if nextPageToken is empty in the response to determine if there is a next page. Empty page is also valid and possible. The default value is false.",
+     "type": "boolean"
     }
    },
    "type": "object"
@@ -66092,7 +66071,7 @@
      "type": "string"
     },
     "match": {
-     "description": "CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions: \"inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')\" \"destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'\"",
+     "description": "CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: \"inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')\" \"destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'\" The following example is a valid match expression for private NAT: \"nexthop.hub == '/projects/my-project/global/hub/hub-1'\"",
      "type": "string"
     },
     "ruleNumber": {
@@ -66107,14 +66086,14 @@
    "id": "RouterNatRuleAction",
    "properties": {
     "sourceNatActiveIps": {
-     "description": "A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project.",
+     "description": "A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.",
      "items": {
       "type": "string"
      },
      "type": "array"
     },
     "sourceNatDrainIps": {
-     "description": "A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only.",
+     "description": "A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.",
      "items": {
       "type": "string"
      },
@@ -68431,6 +68410,13 @@
    "description": "The share setting for reservations and sole tenancy node groups.",
    "id": "ShareSettings",
    "properties": {
+    "folderMap": {
+     "additionalProperties": {
+      "$ref": "ShareSettingsFolderConfig"
+     },
+     "description": "A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.",
+     "type": "object"
+    },
     "projects": {
      "description": "A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.",
      "items": {
@@ -68441,15 +68427,30 @@
     "shareType": {
      "description": "Type of sharing for this shared-reservation",
      "enum": [
+      "DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS",
+      "LOCAL",
       "ORGANIZATION",
       "SHARE_TYPE_UNSPECIFIED",
       "SPECIFIC_PROJECTS"
      ],
      "enumDescriptions": [
+      "Shared-reservation is open to direct child projects of specific folders.",
+      "Default value.",
       "Shared-reservation is open to entire Organization",
       "Default value. This value is unused.",
       "Shared-reservation is open to specific projects"
      ],
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
+  "ShareSettingsFolderConfig": {
+   "description": "Config for each folder in the share settings.",
+   "id": "ShareSettingsFolderConfig",
+   "properties": {
+    "folderId": {
+     "description": "The folder ID, should be same as the key of this folder config in the parent map.",
      "type": "string"
     }
    },
@@ -74733,6 +74734,18 @@
     },
     "selfLink": {
      "description": "[Output Only] Server-defined URL for the resource.",
+     "type": "string"
+    },
+    "stackType": {
+     "description": "The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.",
+     "enum": [
+      "IPV4_IPV6",
+      "IPV4_ONLY"
+     ],
+     "enumDescriptions": [
+      "Enable VPN gateway with both IPv4 and IPv6 protocols.",
+      "Enable VPN gateway with only IPv4 protocol."
+     ],
      "type": "string"
     },
     "vpnInterfaces": {

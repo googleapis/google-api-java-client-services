@@ -32,6 +32,15 @@ package com.google.api.services.compute.model;
 public final class TargetSslProxy extends com.google.api.client.json.GenericJson {
 
   /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificateMap;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -109,6 +118,27 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String sslPolicy;
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificateMap() {
+    return certificateMap;
+  }
+
+  /**
+   * URL of a certificate map that identifies a certificate map associated with the given target
+   * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
+   * ignored.
+   * @param certificateMap certificateMap or {@code null} for none
+   */
+  public TargetSslProxy setCertificateMap(java.lang.String certificateMap) {
+    this.certificateMap = certificateMap;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

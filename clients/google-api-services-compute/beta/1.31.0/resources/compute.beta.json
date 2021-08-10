@@ -3,7 +3,7 @@
   "oauth2": {
    "scopes": {
     "https://www.googleapis.com/auth/cloud-platform": {
-     "description": "See, edit, configure, and delete your Google Cloud Platform data"
+     "description": "See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account."
     },
     "https://www.googleapis.com/auth/compute": {
      "description": "View and manage your Google Compute Engine resources"
@@ -12,13 +12,13 @@
      "description": "View your Google Compute Engine resources"
     },
     "https://www.googleapis.com/auth/devstorage.full_control": {
-     "description": "Manage your data and permissions in Google Cloud Storage"
+     "description": "Manage your data and permissions in Cloud Storage and see the email address for your Google Account"
     },
     "https://www.googleapis.com/auth/devstorage.read_only": {
      "description": "View your data in Google Cloud Storage"
     },
     "https://www.googleapis.com/auth/devstorage.read_write": {
-     "description": "Manage your data in Google Cloud Storage"
+     "description": "Manage your data in Cloud Storage and see the email address of your Google Account"
     }
    }
   }
@@ -14649,7 +14649,7 @@
      ]
     },
     "updatePeering": {
-     "description": "Updates the specified network peering with the data included in the request Only the following fields can be modified: NetworkPeering.export_custom_routes, and NetworkPeering.import_custom_routes",
+     "description": "Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.",
      "flatPath": "projects/{project}/global/networks/{network}/updatePeering",
      "httpMethod": "PATCH",
      "id": "compute.networks.updatePeering",
@@ -27748,6 +27748,11 @@
        "description": "Opt-in for partial success behavior which provides partial results in case of failure. The default value is false.",
        "location": "query",
        "type": "boolean"
+      },
+      "serviceProject": {
+       "description": "The project id or project number in which the subnetwork is intended to be used. Only applied for Shared VPC. See [Shared VPC documentation](https://cloud.google.com/vpc/docs/shared-vpc/)",
+       "location": "query",
+       "type": "string"
       }
      },
      "path": "projects/{project}/aggregated/subnetworks/listUsable",
@@ -28813,6 +28818,47 @@
      "path": "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}",
      "request": {
       "$ref": "TargetHttpsProxy"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "setCertificateMap": {
+     "description": "Changes the Certificate Map for TargetHttpsProxy.",
+     "flatPath": "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}/setCertificateMap",
+     "httpMethod": "POST",
+     "id": "compute.targetHttpsProxies.setCertificateMap",
+     "parameterOrder": [
+      "project",
+      "targetHttpsProxy"
+     ],
+     "parameters": {
+      "project": {
+       "description": "Project ID for this request.",
+       "location": "path",
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "required": true,
+       "type": "string"
+      },
+      "requestId": {
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).",
+       "location": "query",
+       "type": "string"
+      },
+      "targetHttpsProxy": {
+       "description": "Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.",
+       "location": "path",
+       "required": true,
+       "type": "string"
+      }
+     },
+     "path": "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}/setCertificateMap",
+     "request": {
+      "$ref": "TargetHttpsProxiesSetCertificateMapRequest"
      },
      "response": {
       "$ref": "Operation"
@@ -30138,6 +30184,47 @@
      "path": "projects/{project}/global/targetSslProxies/{targetSslProxy}/setBackendService",
      "request": {
       "$ref": "TargetSslProxiesSetBackendServiceRequest"
+     },
+     "response": {
+      "$ref": "Operation"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute"
+     ]
+    },
+    "setCertificateMap": {
+     "description": "Changes the Certificate Map for TargetSslProxy.",
+     "flatPath": "projects/{project}/global/targetSslProxies/{targetSslProxy}/setCertificateMap",
+     "httpMethod": "POST",
+     "id": "compute.targetSslProxies.setCertificateMap",
+     "parameterOrder": [
+      "project",
+      "targetSslProxy"
+     ],
+     "parameters": {
+      "project": {
+       "description": "Project ID for this request.",
+       "location": "path",
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "required": true,
+       "type": "string"
+      },
+      "requestId": {
+       "description": "An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).",
+       "location": "query",
+       "type": "string"
+      },
+      "targetSslProxy": {
+       "description": "Name of the TargetSslProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.",
+       "location": "path",
+       "required": true,
+       "type": "string"
+      }
+     },
+     "path": "projects/{project}/global/targetSslProxies/{targetSslProxy}/setCertificateMap",
+     "request": {
+      "$ref": "TargetSslProxiesSetCertificateMapRequest"
      },
      "response": {
       "$ref": "Operation"
@@ -32424,7 +32511,7 @@
    }
   }
  },
- "revision": "20210719",
+ "revision": "20210802",
  "rootUrl": "https://compute.googleapis.com/",
  "schemas": {
   "AcceleratorConfig": {
@@ -34477,7 +34564,7 @@
    "id": "Backend",
    "properties": {
     "balancingMode": {
-     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.",
+     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Restrictions and guidelines. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and will be ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.",
      "enum": [
       "CONNECTION",
       "RATE",
@@ -34538,6 +34625,7 @@
      "type": "number"
     },
     "maxUtilization": {
+     "description": "Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.",
      "format": "float",
      "type": "number"
     }
@@ -38454,7 +38542,7 @@
      "type": "string"
     },
     "destinationRanges": {
-     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.",
+     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -38519,7 +38607,7 @@
      "type": "string"
     },
     "sourceRanges": {
-     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Only IPv4 is supported.",
+     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -41667,7 +41755,7 @@
        "type": "string"
       },
       "source": {
-       "description": "The full Google Cloud Storage URL where the disk image is stored. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+       "description": "The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
        "type": "string"
       }
      },
@@ -41702,7 +41790,7 @@
      "type": "string"
     },
     "sourceImage": {
-     "description": "URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceImageEncryptionKey": {
@@ -41714,7 +41802,7 @@
      "type": "string"
     },
     "sourceSnapshot": {
-     "description": "URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceSnapshotEncryptionKey": {
@@ -48740,7 +48828,7 @@
      "type": "boolean"
     },
     "exportSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.",
      "type": "boolean"
     },
     "importCustomRoutes": {
@@ -48748,7 +48836,7 @@
      "type": "boolean"
     },
     "importSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.",
      "type": "boolean"
     },
     "name": {
@@ -48951,7 +49039,7 @@
    "type": "object"
   },
   "NodeGroup": {
-   "description": "Represent a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
+   "description": "Represents a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
    "id": "NodeGroup",
    "properties": {
     "autoscalingPolicy": {
@@ -58640,10 +58728,12 @@
     "shareType": {
      "description": "Type of sharing for this shared-reservation",
      "enum": [
+      "LOCAL",
       "SHARE_TYPE_UNSPECIFIED",
       "SPECIFIC_PROJECTS"
      ],
      "enumDescriptions": [
+      "Default value.",
       "Default value. This value is unused.",
       "Shared-reservation is open to specific projects"
      ],
@@ -61380,6 +61470,16 @@
    },
    "type": "object"
   },
+  "TargetHttpsProxiesSetCertificateMapRequest": {
+   "id": "TargetHttpsProxiesSetCertificateMapRequest",
+   "properties": {
+    "certificateMap": {
+     "description": "URL of the Certificate Map to associate with this TargetHttpsProxy.",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
   "TargetHttpsProxiesSetQuicOverrideRequest": {
    "id": "TargetHttpsProxiesSetQuicOverrideRequest",
    "properties": {
@@ -61427,6 +61527,10 @@
     },
     "authorizationPolicy": {
      "description": "Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.",
+     "type": "string"
+    },
+    "certificateMap": {
+     "description": "URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.",
      "type": "string"
     },
     "creationTimestamp": {
@@ -62654,6 +62758,16 @@
    },
    "type": "object"
   },
+  "TargetSslProxiesSetCertificateMapRequest": {
+   "id": "TargetSslProxiesSetCertificateMapRequest",
+   "properties": {
+    "certificateMap": {
+     "description": "URL of the Certificate Map to associate with this TargetSslProxy.",
+     "type": "string"
+    }
+   },
+   "type": "object"
+  },
   "TargetSslProxiesSetProxyHeaderRequest": {
    "id": "TargetSslProxiesSetProxyHeaderRequest",
    "properties": {
@@ -62689,6 +62803,10 @@
    "description": "Represents a Target SSL Proxy resource. A target SSL proxy is a component of a SSL Proxy load balancer. Global forwarding rules reference a target SSL proxy, and the target proxy then references an external backend service. For more information, read Using Target Proxies.",
    "id": "TargetSslProxy",
    "properties": {
+    "certificateMap": {
+     "description": "URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.",
+     "type": "string"
+    },
     "creationTimestamp": {
      "description": "[Output Only] Creation timestamp in RFC3339 text format.",
      "type": "string"

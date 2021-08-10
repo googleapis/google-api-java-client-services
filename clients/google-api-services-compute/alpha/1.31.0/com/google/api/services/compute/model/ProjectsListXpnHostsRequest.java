@@ -38,6 +38,16 @@ public final class ProjectsListXpnHostsRequest extends com.google.api.client.jso
   private java.lang.String organization;
 
   /**
+   * Opt-in for partial page behavior which provides a partial filled page (number of items on which
+   * may be smaller than maxResults) within the API deadline. If opt-in, then the user should rely
+   * on if nextPageToken is empty in the response to determine if there is a next page. Empty page
+   * is also valid and possible. The default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnPartialPage;
+
+  /**
    * Optional organization ID managed by Cloud Resource Manager, for which to list shared VPC host
    * projects. If not specified, the organization will be inferred from the project.
    * @return value or {@code null} for none
@@ -53,6 +63,29 @@ public final class ProjectsListXpnHostsRequest extends com.google.api.client.jso
    */
   public ProjectsListXpnHostsRequest setOrganization(java.lang.String organization) {
     this.organization = organization;
+    return this;
+  }
+
+  /**
+   * Opt-in for partial page behavior which provides a partial filled page (number of items on which
+   * may be smaller than maxResults) within the API deadline. If opt-in, then the user should rely
+   * on if nextPageToken is empty in the response to determine if there is a next page. Empty page
+   * is also valid and possible. The default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnPartialPage() {
+    return returnPartialPage;
+  }
+
+  /**
+   * Opt-in for partial page behavior which provides a partial filled page (number of items on which
+   * may be smaller than maxResults) within the API deadline. If opt-in, then the user should rely
+   * on if nextPageToken is empty in the response to determine if there is a next page. Empty page
+   * is also valid and possible. The default value is false.
+   * @param returnPartialPage returnPartialPage or {@code null} for none
+   */
+  public ProjectsListXpnHostsRequest setReturnPartialPage(java.lang.Boolean returnPartialPage) {
+    this.returnPartialPage = returnPartialPage;
     return this;
   }
 

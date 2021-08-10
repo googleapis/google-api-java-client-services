@@ -228,9 +228,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDiskId;
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,9 +256,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceImageId;
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -802,9 +806,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -812,9 +818,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Image setSourceImage(java.lang.String sourceImage) {
@@ -863,9 +871,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -873,9 +883,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public Image setSourceSnapshot(java.lang.String sourceSnapshot) {
@@ -1034,9 +1046,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String sha1Checksum;
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1083,9 +1097,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * @return value or {@code null} for none
      */
     public java.lang.String getSource() {
@@ -1093,9 +1109,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * @param source source or {@code null} for none
      */
     public RawDisk setSource(java.lang.String source) {

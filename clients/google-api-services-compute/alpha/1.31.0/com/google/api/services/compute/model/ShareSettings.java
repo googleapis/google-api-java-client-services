@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class ShareSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * A map of folder id and folder config to specify consumer projects for this shared-reservation.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ShareSettingsFolderConfig> folderMap;
+
+  /**
    * A List of Project names to specify consumer projects for this shared-reservation. This is only
    * valid when share_type's value is SPECIFIC_PROJECTS.
    * The value may be {@code null}.
@@ -43,6 +51,25 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String shareType;
+
+  /**
+   * A map of folder id and folder config to specify consumer projects for this shared-reservation.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ShareSettingsFolderConfig> getFolderMap() {
+    return folderMap;
+  }
+
+  /**
+   * A map of folder id and folder config to specify consumer projects for this shared-reservation.
+   * This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS.
+   * @param folderMap folderMap or {@code null} for none
+   */
+  public ShareSettings setFolderMap(java.util.Map<String, ShareSettingsFolderConfig> folderMap) {
+    this.folderMap = folderMap;
+    return this;
+  }
 
   /**
    * A List of Project names to specify consumer projects for this shared-reservation. This is only

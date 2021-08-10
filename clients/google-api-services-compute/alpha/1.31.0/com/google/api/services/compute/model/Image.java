@@ -148,6 +148,23 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * A flag for marketplace VM disk created from the image, which is designed for marketplace VM
+   * disk to prevent the proprietary data on the disk from being accessed unwantedly. The flag will
+   * be inherited by the disk created from the image. The disk with locked flag set to true will be
+   * prohibited from performing the operations below: - R/W or R/O disk attach - Disk detach, if
+   * disk is created via create-on-create - Create images - Create snapshots - Create disk clone
+   * (create disk from the current disk) The image with the locked field set to true will be
+   * prohibited from performing the operations below: - Create images from the current image -
+   * Update the locked field for the current image The instance with at least one disk with locked
+   * flag set to true will be prohibited from performing the operations below: - Secondary disk
+   * attach - Create instant snapshot - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -235,9 +252,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDiskId;
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,9 +280,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceImageId;
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -622,6 +643,43 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A flag for marketplace VM disk created from the image, which is designed for marketplace VM
+   * disk to prevent the proprietary data on the disk from being accessed unwantedly. The flag will
+   * be inherited by the disk created from the image. The disk with locked flag set to true will be
+   * prohibited from performing the operations below: - R/W or R/O disk attach - Disk detach, if
+   * disk is created via create-on-create - Create images - Create snapshots - Create disk clone
+   * (create disk from the current disk) The image with the locked field set to true will be
+   * prohibited from performing the operations below: - Create images from the current image -
+   * Update the locked field for the current image The instance with at least one disk with locked
+   * flag set to true will be prohibited from performing the operations below: - Secondary disk
+   * attach - Create instant snapshot - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * A flag for marketplace VM disk created from the image, which is designed for marketplace VM
+   * disk to prevent the proprietary data on the disk from being accessed unwantedly. The flag will
+   * be inherited by the disk created from the image. The disk with locked flag set to true will be
+   * prohibited from performing the operations below: - R/W or R/O disk attach - Disk detach, if
+   * disk is created via create-on-create - Create images - Create snapshots - Create disk clone
+   * (create disk from the current disk) The image with the locked field set to true will be
+   * prohibited from performing the operations below: - Create images from the current image -
+   * Update the locked field for the current image The instance with at least one disk with locked
+   * flag set to true will be prohibited from performing the operations below: - Secondary disk
+   * attach - Create instant snapshot - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true
+   * @param locked locked or {@code null} for none
+   */
+  public Image setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
+    return this;
+  }
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -826,9 +884,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -836,9 +896,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source image used to create this image. The following are valid formats for the URL:
+   * - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name -
+   * projects/project_id/global/images/image_name In order to create an image, you must provide the
+   * full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL -
+   * The sourceImage URL - The sourceSnapshot URL
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Image setSourceImage(java.lang.String sourceImage) {
@@ -887,9 +949,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -897,9 +961,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. In order to create an image, you must
-   * provide the full or partial URL of one of the following: - The rawDisk.source URL - The
-   * sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+   * URL of the source snapshot used to create this image. The following are valid formats for the
+   * URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/
+   * snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create
+   * an image, you must provide the full or partial URL of one of the following: - The
+   * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public Image setSourceSnapshot(java.lang.String sourceSnapshot) {
@@ -1058,9 +1124,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String sha1Checksum;
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1107,9 +1175,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * @return value or {@code null} for none
      */
     public java.lang.String getSource() {
@@ -1117,9 +1187,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL where the disk image is stored. In order to create an image,
-     * you must provide the full or partial URL of one of the following: - The rawDisk.source URL -
-     * The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name -
+     * https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create
+     * an image, you must provide the full or partial URL of one of the following: - The
+     * rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * @param source source or {@code null} for none
      */
     public RawDisk setSource(java.lang.String source) {

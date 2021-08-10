@@ -31,7 +31,12 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use
+   * compatible balancing modes. For more information, see Restrictions and guidelines. Note:
+   * Currently, if you use the API to configure incompatible balancing modes, the configuration
+   * might be accepted even though it has no impact and will be ignored. Specifically,
+   * Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this
+   * incompatible combination will be rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +135,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxRatePerInstance;
 
   /**
+   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +144,12 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use
+   * compatible balancing modes. For more information, see Restrictions and guidelines. Note:
+   * Currently, if you use the API to configure incompatible balancing modes, the configuration
+   * might be accepted even though it has no impact and will be ignored. Specifically,
+   * Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this
+   * incompatible combination will be rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getBalancingMode() {
@@ -146,7 +158,12 @@ public final class Backend extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
-   * or is fully loaded. For usage guidelines, see Connection balancing mode.
+   * or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use
+   * compatible balancing modes. For more information, see Restrictions and guidelines. Note:
+   * Currently, if you use the API to configure incompatible balancing modes, the configuration
+   * might be accepted even though it has no impact and will be ignored. Specifically,
+   * Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this
+   * incompatible combination will be rejected.
    * @param balancingMode balancingMode or {@code null} for none
    */
   public Backend setBalancingMode(java.lang.String balancingMode) {
@@ -369,6 +386,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMaxUtilization() {
@@ -376,6 +395,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid
+   * range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.
    * @param maxUtilization maxUtilization or {@code null} for none
    */
   public Backend setMaxUtilization(java.lang.Float maxUtilization) {

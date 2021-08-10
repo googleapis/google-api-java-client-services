@@ -31,7 +31,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
 
   /**
    * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid
-   * static external IP addresses assigned to the project.
+   * static external IP addresses assigned to the project. This field is used for public NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
   /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule
-   * only.
+   * only. This field is used for public NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
 
   /**
    * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid
-   * static external IP addresses assigned to the project.
+   * static external IP addresses assigned to the project. This field is used for public NAT.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceNatActiveIps() {
@@ -57,7 +57,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
 
   /**
    * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid
-   * static external IP addresses assigned to the project.
+   * static external IP addresses assigned to the project. This field is used for public NAT.
    * @param sourceNatActiveIps sourceNatActiveIps or {@code null} for none
    */
   public RouterNatRuleAction setSourceNatActiveIps(java.util.List<java.lang.String> sourceNatActiveIps) {
@@ -68,7 +68,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
   /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule
-   * only.
+   * only. This field is used for public NAT.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceNatDrainIps() {
@@ -78,7 +78,7 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
   /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule
-   * only.
+   * only. This field is used for public NAT.
    * @param sourceNatDrainIps sourceNatDrainIps or {@code null} for none
    */
   public RouterNatRuleAction setSourceNatDrainIps(java.util.List<java.lang.String> sourceNatDrainIps) {

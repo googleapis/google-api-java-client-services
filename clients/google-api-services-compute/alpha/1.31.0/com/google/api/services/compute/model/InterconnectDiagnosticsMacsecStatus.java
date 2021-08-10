@@ -38,18 +38,11 @@ public final class InterconnectDiagnosticsMacsecStatus extends com.google.api.cl
   private java.lang.String ckn;
 
   /**
-   * The current state of MACsec configuration on this Interconnect, which can take one of the
-   * following values: - INITIALIZED: MACsec has been configured on the bundle interface. The Google
-   * edge router is waiting to establish a MACsec session with the customer router on the other side
-   * of this Interconnect. In addition, when key rollover fails between the two routers, the bundle
-   * interface will return to the initialized state. - SECURED: MACsec session has been successfully
-   * established between the Google edge router and the customer router. - FAILED: MACsec
-   * configuration on the bundle interface encountered an error. - DISABLED: MACsec is explicitly
-   * disabled on this Interconnect.
+   * Indicates whether or not MACsec is operational on this link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String state;
+  private java.lang.Boolean operational;
 
   /**
    * Indicates the Connectivity Association Key Name (CKN) currently being used if MACsec is
@@ -71,33 +64,19 @@ public final class InterconnectDiagnosticsMacsecStatus extends com.google.api.cl
   }
 
   /**
-   * The current state of MACsec configuration on this Interconnect, which can take one of the
-   * following values: - INITIALIZED: MACsec has been configured on the bundle interface. The Google
-   * edge router is waiting to establish a MACsec session with the customer router on the other side
-   * of this Interconnect. In addition, when key rollover fails between the two routers, the bundle
-   * interface will return to the initialized state. - SECURED: MACsec session has been successfully
-   * established between the Google edge router and the customer router. - FAILED: MACsec
-   * configuration on the bundle interface encountered an error. - DISABLED: MACsec is explicitly
-   * disabled on this Interconnect.
+   * Indicates whether or not MACsec is operational on this link.
    * @return value or {@code null} for none
    */
-  public java.lang.String getState() {
-    return state;
+  public java.lang.Boolean getOperational() {
+    return operational;
   }
 
   /**
-   * The current state of MACsec configuration on this Interconnect, which can take one of the
-   * following values: - INITIALIZED: MACsec has been configured on the bundle interface. The Google
-   * edge router is waiting to establish a MACsec session with the customer router on the other side
-   * of this Interconnect. In addition, when key rollover fails between the two routers, the bundle
-   * interface will return to the initialized state. - SECURED: MACsec session has been successfully
-   * established between the Google edge router and the customer router. - FAILED: MACsec
-   * configuration on the bundle interface encountered an error. - DISABLED: MACsec is explicitly
-   * disabled on this Interconnect.
-   * @param state state or {@code null} for none
+   * Indicates whether or not MACsec is operational on this link.
+   * @param operational operational or {@code null} for none
    */
-  public InterconnectDiagnosticsMacsecStatus setState(java.lang.String state) {
-    this.state = state;
+  public InterconnectDiagnosticsMacsecStatus setOperational(java.lang.Boolean operational) {
+    this.operational = operational;
     return this;
   }
 

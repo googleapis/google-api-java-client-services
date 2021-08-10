@@ -38,6 +38,17 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
   private java.util.List<java.lang.String> instances;
 
   /**
+   * Specifies whether the request should proceed despite the inclusion of instances that are not
+   * members of the group or that are already in the process of being deleted or abandoned. If this
+   * field is set to `false` and such an instance is specified in the request, the operation fails.
+   * The operation always fails if the request contains a malformed instance URL or a reference to
+   * an instance that exists in a zone or region other than the group's zone or region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipInstancesOnValidationError;
+
+  /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
    * zones/[ZONE]/instances/[INSTANCE_NAME].
    * @return value or {@code null} for none
@@ -53,6 +64,31 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
    */
   public InstanceGroupManagersDeleteInstancesRequest setInstances(java.util.List<java.lang.String> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * Specifies whether the request should proceed despite the inclusion of instances that are not
+   * members of the group or that are already in the process of being deleted or abandoned. If this
+   * field is set to `false` and such an instance is specified in the request, the operation fails.
+   * The operation always fails if the request contains a malformed instance URL or a reference to
+   * an instance that exists in a zone or region other than the group's zone or region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipInstancesOnValidationError() {
+    return skipInstancesOnValidationError;
+  }
+
+  /**
+   * Specifies whether the request should proceed despite the inclusion of instances that are not
+   * members of the group or that are already in the process of being deleted or abandoned. If this
+   * field is set to `false` and such an instance is specified in the request, the operation fails.
+   * The operation always fails if the request contains a malformed instance URL or a reference to
+   * an instance that exists in a zone or region other than the group's zone or region.
+   * @param skipInstancesOnValidationError skipInstancesOnValidationError or {@code null} for none
+   */
+  public InstanceGroupManagersDeleteInstancesRequest setSkipInstancesOnValidationError(java.lang.Boolean skipInstancesOnValidationError) {
+    this.skipInstancesOnValidationError = skipInstancesOnValidationError;
     return this;
   }
 

@@ -3,7 +3,7 @@
   "oauth2": {
    "scopes": {
     "https://www.googleapis.com/auth/cloud-platform": {
-     "description": "See, edit, configure, and delete your Google Cloud Platform data"
+     "description": "See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account."
     },
     "https://www.googleapis.com/auth/compute": {
      "description": "View and manage your Google Compute Engine resources"
@@ -12,13 +12,13 @@
      "description": "View your Google Compute Engine resources"
     },
     "https://www.googleapis.com/auth/devstorage.full_control": {
-     "description": "Manage your data and permissions in Google Cloud Storage"
+     "description": "Manage your data and permissions in Cloud Storage and see the email address for your Google Account"
     },
     "https://www.googleapis.com/auth/devstorage.read_only": {
      "description": "View your data in Google Cloud Storage"
     },
     "https://www.googleapis.com/auth/devstorage.read_write": {
-     "description": "Manage your data in Google Cloud Storage"
+     "description": "Manage your data in Cloud Storage and see the email address of your Google Account"
     }
    }
   }
@@ -6177,6 +6177,53 @@
      "scopes": [
       "https://www.googleapis.com/auth/cloud-platform",
       "https://www.googleapis.com/auth/compute"
+     ]
+    }
+   }
+  },
+  "imageFamilyViews": {
+   "methods": {
+    "get": {
+     "description": "Returns the latest image that is part of an image family, is not deprecated and is rolled out in the specified zone.",
+     "flatPath": "projects/{project}/zones/{zone}/imageFamilyViews/{family}",
+     "httpMethod": "GET",
+     "id": "compute.imageFamilyViews.get",
+     "parameterOrder": [
+      "project",
+      "zone",
+      "family"
+     ],
+     "parameters": {
+      "family": {
+       "description": "Name of the image family to search for.",
+       "location": "path",
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}",
+       "required": true,
+       "type": "string"
+      },
+      "project": {
+       "description": "Project ID for this request.",
+       "location": "path",
+       "pattern": "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))",
+       "required": true,
+       "type": "string"
+      },
+      "zone": {
+       "description": "The name of the zone for this request.",
+       "location": "path",
+       "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?",
+       "required": true,
+       "type": "string"
+      }
+     },
+     "path": "projects/{project}/zones/{zone}/imageFamilyViews/{family}",
+     "response": {
+      "$ref": "ImageFamilyView"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/compute",
+      "https://www.googleapis.com/auth/compute.readonly"
      ]
     }
    }
@@ -12741,7 +12788,7 @@
      ]
     },
     "updatePeering": {
-     "description": "Updates the specified network peering with the data included in the request Only the following fields can be modified: NetworkPeering.export_custom_routes, and NetworkPeering.import_custom_routes",
+     "description": "Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.",
      "flatPath": "projects/{project}/global/networks/{network}/updatePeering",
      "httpMethod": "PATCH",
      "id": "compute.networks.updatePeering",
@@ -28231,7 +28278,7 @@
    }
   }
  },
- "revision": "20210719",
+ "revision": "20210802",
  "rootUrl": "https://compute.googleapis.com/",
  "schemas": {
   "AcceleratorConfig": {
@@ -30218,7 +30265,7 @@
    "id": "Backend",
    "properties": {
     "balancingMode": {
-     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode.",
+     "description": "Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Restrictions and guidelines. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and will be ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.",
      "enum": [
       "CONNECTION",
       "RATE",
@@ -30279,6 +30326,7 @@
      "type": "number"
     },
     "maxUtilization": {
+     "description": "Optional parameter to define a target capacity for the UTILIZATIONbalancing mode. The valid range is [0.0, 1.0]. For usage guidelines, see Utilization balancing mode.",
      "format": "float",
      "type": "number"
     }
@@ -31587,6 +31635,30 @@
     },
     "statusMessage": {
      "description": "[Output Only] An optional, human-readable explanation of the status.",
+     "type": "string"
+    },
+    "type": {
+     "description": "The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.",
+     "enum": [
+      "ACCELERATOR_OPTIMIZED",
+      "COMPUTE_OPTIMIZED",
+      "GENERAL_PURPOSE",
+      "GENERAL_PURPOSE_E2",
+      "GENERAL_PURPOSE_N2",
+      "GENERAL_PURPOSE_N2D",
+      "MEMORY_OPTIMIZED",
+      "TYPE_UNSPECIFIED"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
      "type": "string"
     }
    },
@@ -33755,7 +33827,7 @@
      "type": "string"
     },
     "destinationRanges": {
-     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Only IPv4 is supported.",
+     "description": "If destination ranges are specified, the firewall rule applies only to traffic that has destination IP address in these ranges. These ranges must be expressed in CIDR format. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -33816,7 +33888,7 @@
      "type": "string"
     },
     "sourceRanges": {
-     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Only IPv4 is supported.",
+     "description": "If source ranges are specified, the firewall rule applies only to traffic that has a source IP address in these ranges. These ranges must be expressed in CIDR format. One or both of sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic that has a source IP address within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags field. The connection does not need to match both fields for the rule to apply. Both IPv4 and IPv6 are supported.",
      "items": {
       "type": "string"
      },
@@ -36917,7 +36989,7 @@
        "type": "string"
       },
       "source": {
-       "description": "The full Google Cloud Storage URL where the disk image is stored. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+       "description": "The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
        "type": "string"
       }
      },
@@ -36948,7 +37020,7 @@
      "type": "string"
     },
     "sourceImage": {
-     "description": "URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceImageEncryptionKey": {
@@ -36960,7 +37032,7 @@
      "type": "string"
     },
     "sourceSnapshot": {
-     "description": "URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
+     "description": "URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL ",
      "type": "string"
     },
     "sourceSnapshotEncryptionKey": {
@@ -37004,6 +37076,16 @@
       "type": "string"
      },
      "type": "array"
+    }
+   },
+   "type": "object"
+  },
+  "ImageFamilyView": {
+   "id": "ImageFamilyView",
+   "properties": {
+    "image": {
+     "$ref": "Image",
+     "description": "The latest image that is part of the specified image family in the requested location, and that is not deprecated."
     }
    },
    "type": "object"
@@ -38474,6 +38556,10 @@
       "type": "string"
      },
      "type": "array"
+    },
+    "skipInstancesOnValidationError": {
+     "description": "Specifies whether the request should proceed despite the inclusion of instances that are not members of the group or that are already in the process of being deleted or abandoned. If this field is set to `false` and such an instance is specified in the request, the operation fails. The operation always fails if the request contains a malformed instance URL or a reference to an instance that exists in a zone or region other than the group's zone or region.",
+     "type": "boolean"
     }
    },
    "type": "object"
@@ -43484,7 +43570,7 @@
      "type": "boolean"
     },
     "exportSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.",
      "type": "boolean"
     },
     "importCustomRoutes": {
@@ -43492,7 +43578,7 @@
      "type": "boolean"
     },
     "importSubnetRoutesWithPublicIp": {
-     "description": "Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.",
+     "description": "Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.",
      "type": "boolean"
     },
     "name": {
@@ -43652,7 +43738,7 @@
    "type": "object"
   },
   "NodeGroup": {
-   "description": "Represent a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
+   "description": "Represents a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.",
    "id": "NodeGroup",
    "properties": {
     "autoscalingPolicy": {
@@ -48601,6 +48687,10 @@
       "type": "string"
      },
      "type": "array"
+    },
+    "skipInstancesOnValidationError": {
+     "description": "Specifies whether the request should proceed despite the inclusion of instances that are not members of the group or that are already in the process of being deleted or abandoned. If this field is set to `false` and such an instance is specified in the request, the operation fails. The operation always fails if the request contains a malformed instance URL or a reference to an instance that exists in a zone or region other than the group's zone or region.",
+     "type": "boolean"
     }
    },
    "type": "object"

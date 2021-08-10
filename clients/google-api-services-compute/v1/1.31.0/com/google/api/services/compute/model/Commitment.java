@@ -155,6 +155,16 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
+   * The type of commitment, which affects the discount rate and the eligible resources. Type
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * The category of the commitment. Category MACHINE specifies commitments composed of machine
    * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
    * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
@@ -443,6 +453,29 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * The type of commitment, which affects the discount rate and the eligible resources. Type
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The type of commitment, which affects the discount rate and the eligible resources. Type
+   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
+   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
+   * machines.
+   * @param type type or {@code null} for none
+   */
+  public Commitment setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

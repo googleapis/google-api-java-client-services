@@ -60,8 +60,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. The IPv4 special-use ranges
-   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
    * controlled by this field.
    * The value may be {@code null}.
    */
@@ -76,9 +75,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean importCustomRoutes;
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
-   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
-   * from peers and are not controlled by this field.
+   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * special-use ranges are always imported from peers and are not controlled by this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,8 +189,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. The IPv4 special-use ranges
-   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
    * controlled by this field.
    * @return value or {@code null} for none
    */
@@ -202,8 +199,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * Whether subnet routes with public IP range are exported. The default value is true, all subnet
-   * routes are exported. The IPv4 special-use ranges
-   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * routes are exported. IPv4 special-use ranges are always exported to peers and are not
    * controlled by this field.
    * @param exportSubnetRoutesWithPublicIp exportSubnetRoutesWithPublicIp or {@code null} for none
    */
@@ -230,9 +226,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
-   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
-   * from peers and are not controlled by this field.
+   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * special-use ranges are always imported from peers and are not controlled by this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportSubnetRoutesWithPublicIp() {
@@ -240,9 +235,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
-   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
-   * from peers and are not controlled by this field.
+   * Whether subnet routes with public IP range are imported. The default value is false. IPv4
+   * special-use ranges are always imported from peers and are not controlled by this field.
    * @param importSubnetRoutesWithPublicIp importSubnetRoutesWithPublicIp or {@code null} for none
    */
   public NetworkPeering setImportSubnetRoutesWithPublicIp(java.lang.Boolean importSubnetRoutesWithPublicIp) {

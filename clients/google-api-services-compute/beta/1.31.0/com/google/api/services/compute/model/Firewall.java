@@ -74,8 +74,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * If destination ranges are specified, the firewall rule applies only to traffic that has
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * IPv4 is supported.
+   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Both
+   * IPv4 and IPv6 are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
    * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
    * tag listed in the sourceTags field. The connection does not need to match both fields for the
-   * rule to apply. Only IPv4 is supported.
+   * rule to apply. Both IPv4 and IPv6 are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +305,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * If destination ranges are specified, the firewall rule applies only to traffic that has
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * IPv4 is supported.
+   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Both
+   * IPv4 and IPv6 are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinationRanges() {
@@ -315,8 +315,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * If destination ranges are specified, the firewall rule applies only to traffic that has
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * IPv4 is supported.
+   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Both
+   * IPv4 and IPv6 are supported.
    * @param destinationRanges destinationRanges or {@code null} for none
    */
   public Firewall setDestinationRanges(java.util.List<java.lang.String> destinationRanges) {
@@ -538,7 +538,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
    * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
    * tag listed in the sourceTags field. The connection does not need to match both fields for the
-   * rule to apply. Only IPv4 is supported.
+   * rule to apply. Both IPv4 and IPv6 are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceRanges() {
@@ -551,7 +551,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
    * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
    * tag listed in the sourceTags field. The connection does not need to match both fields for the
-   * rule to apply. Only IPv4 is supported.
+   * rule to apply. Both IPv4 and IPv6 are supported.
    * @param sourceRanges sourceRanges or {@code null} for none
    */
   public Firewall setSourceRanges(java.util.List<java.lang.String> sourceRanges) {

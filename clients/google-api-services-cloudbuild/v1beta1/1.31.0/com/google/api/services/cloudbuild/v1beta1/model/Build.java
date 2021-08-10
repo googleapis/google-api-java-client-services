@@ -38,6 +38,13 @@ package com.google.api.services.cloudbuild.v1beta1.model;
 public final class Build extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Describes this build's approval configuration, status, and result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuildApproval approval;
+
+  /**
    * Artifacts produced by the build that should be uploaded upon successful completion of all build
    * steps.
    * The value may be {@code null}.
@@ -254,6 +261,23 @@ public final class Build extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Warning> warnings;
+
+  /**
+   * Output only. Describes this build's approval configuration, status, and result.
+   * @return value or {@code null} for none
+   */
+  public BuildApproval getApproval() {
+    return approval;
+  }
+
+  /**
+   * Output only. Describes this build's approval configuration, status, and result.
+   * @param approval approval or {@code null} for none
+   */
+  public Build setApproval(BuildApproval approval) {
+    this.approval = approval;
+    return this;
+  }
 
   /**
    * Artifacts produced by the build that should be uploaded upon successful completion of all build

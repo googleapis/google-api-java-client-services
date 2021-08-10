@@ -30,6 +30,13 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for manual approval to start a build invocation of this BuildTrigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApprovalConfig approvalConfig;
+
+  /**
    * Autodetect build configuration. The following precedence is used (case insensitive): 1.
    * cloudbuild.yaml 2. cloudbuild.yml 3. cloudbuild.json 4. Dockerfile Currently only available for
    * GitHub App Triggers.
@@ -74,11 +81,18 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String filename;
 
   /**
-   * Optional. A Common Expression Language string.
+   * A Common Expression Language string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
+
+  /**
+   * The file source describing the local or remote Build template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitFileSource gitFileSource;
 
   /**
    * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
@@ -144,10 +158,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceName;
 
   /**
-   * Optional. The service account used for all user-controlled operations including
-   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
-   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
-   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * The service account used for all user-controlled operations including UpdateBuildTrigger,
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
+   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,6 +208,23 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WebhookConfig webhookConfig;
+
+  /**
+   * Configuration for manual approval to start a build invocation of this BuildTrigger.
+   * @return value or {@code null} for none
+   */
+  public ApprovalConfig getApprovalConfig() {
+    return approvalConfig;
+  }
+
+  /**
+   * Configuration for manual approval to start a build invocation of this BuildTrigger.
+   * @param approvalConfig approvalConfig or {@code null} for none
+   */
+  public BuildTrigger setApprovalConfig(ApprovalConfig approvalConfig) {
+    this.approvalConfig = approvalConfig;
+    return this;
+  }
 
   /**
    * Autodetect build configuration. The following precedence is used (case insensitive): 1.
@@ -302,7 +333,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A Common Expression Language string.
+   * A Common Expression Language string.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -310,11 +341,28 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A Common Expression Language string.
+   * A Common Expression Language string.
    * @param filter filter or {@code null} for none
    */
   public BuildTrigger setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * The file source describing the local or remote Build template.
+   * @return value or {@code null} for none
+   */
+  public GitFileSource getGitFileSource() {
+    return gitFileSource;
+  }
+
+  /**
+   * The file source describing the local or remote Build template.
+   * @param gitFileSource gitFileSource or {@code null} for none
+   */
+  public BuildTrigger setGitFileSource(GitFileSource gitFileSource) {
+    this.gitFileSource = gitFileSource;
     return this;
   }
 
@@ -466,10 +514,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The service account used for all user-controlled operations including
-   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
-   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
-   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * The service account used for all user-controlled operations including UpdateBuildTrigger,
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
+   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -477,10 +525,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The service account used for all user-controlled operations including
-   * UpdateBuildTrigger, RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is
-   * set, then the standard Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com)
-   * will be used instead. Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * The service account used for all user-controlled operations including UpdateBuildTrigger,
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
+   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
+   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public BuildTrigger setServiceAccount(java.lang.String serviceAccount) {

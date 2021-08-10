@@ -99,6 +99,14 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private TimeSpan pullTiming;
 
   /**
+   * A shell script to be executed in the step. When script is provided, the user cannot specify the
+   * entrypoint or args.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String script;
+
+  /**
    * A list of environment variables which are encrypted using a Cloud Key Management Service crypto
    * key. These values must be specified in the build's `Secret`.
    * The value may be {@code null}.
@@ -305,6 +313,25 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   public BuildStep setPullTiming(TimeSpan pullTiming) {
     this.pullTiming = pullTiming;
+    return this;
+  }
+
+  /**
+   * A shell script to be executed in the step. When script is provided, the user cannot specify the
+   * entrypoint or args.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScript() {
+    return script;
+  }
+
+  /**
+   * A shell script to be executed in the step. When script is provided, the user cannot specify the
+   * entrypoint or args.
+   * @param script script or {@code null} for none
+   */
+  public BuildStep setScript(java.lang.String script) {
+    this.script = script;
     return this;
   }
 

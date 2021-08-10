@@ -479,6 +479,145 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class Builds {
 
       /**
+       * Approves or rejects a pending build. If approved, the returned LRO will be analogous to the LRO
+       * returned from a CreateBuild call. If rejected, the returned LRO will be immediately done.
+       *
+       * Create a request for the method "builds.approve".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest}
+       * @return the request
+       */
+      public Approve approve(java.lang.String name, com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest content) throws java.io.IOException {
+        Approve result = new Approve(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Approve extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:approve";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/builds/[^/]+$");
+
+        /**
+         * Approves or rejects a pending build. If approved, the returned LRO will be analogous to the LRO
+         * returned from a CreateBuild call. If rejected, the returned LRO will be immediately done.
+         *
+         * Create a request for the method "builds.approve".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest}
+         * @since 1.13
+         */
+        protected Approve(java.lang.String name, com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest content) {
+          super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/builds/[^/]+$");
+          }
+        }
+
+        @Override
+        public Approve set$Xgafv(java.lang.String $Xgafv) {
+          return (Approve) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Approve setAccessToken(java.lang.String accessToken) {
+          return (Approve) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Approve setAlt(java.lang.String alt) {
+          return (Approve) super.setAlt(alt);
+        }
+
+        @Override
+        public Approve setCallback(java.lang.String callback) {
+          return (Approve) super.setCallback(callback);
+        }
+
+        @Override
+        public Approve setFields(java.lang.String fields) {
+          return (Approve) super.setFields(fields);
+        }
+
+        @Override
+        public Approve setKey(java.lang.String key) {
+          return (Approve) super.setKey(key);
+        }
+
+        @Override
+        public Approve setOauthToken(java.lang.String oauthToken) {
+          return (Approve) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Approve) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Approve setQuotaUser(java.lang.String quotaUser) {
+          return (Approve) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Approve setUploadType(java.lang.String uploadType) {
+          return (Approve) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Approve) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the target build. For example:
+         * "projects/{$project_id}/builds/{$build_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the target build. For example:
+         * "projects/{$project_id}/builds/{$build_id}"
+         */
+        public Approve setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/builds/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Approve set(String parameterName, Object value) {
+          return (Approve) super.set(parameterName, value);
+        }
+      }
+      /**
        * Cancels a build in progress.
        *
        * Create a request for the method "builds.cancel".
@@ -2195,6 +2334,145 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        */
       public class Builds {
 
+        /**
+         * Approves or rejects a pending build. If approved, the returned LRO will be analogous to the LRO
+         * returned from a CreateBuild call. If rejected, the returned LRO will be immediately done.
+         *
+         * Create a request for the method "builds.approve".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest}
+         * @return the request
+         */
+        public Approve approve(java.lang.String name, com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest content) throws java.io.IOException {
+          Approve result = new Approve(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Approve extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:approve";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+
+          /**
+           * Approves or rejects a pending build. If approved, the returned LRO will be analogous to the LRO
+           * returned from a CreateBuild call. If rejected, the returned LRO will be immediately done.
+           *
+           * Create a request for the method "builds.approve".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest}
+           * @since 1.13
+           */
+          protected Approve(java.lang.String name, com.google.api.services.cloudbuild.v1.model.ApproveBuildRequest content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Approve set$Xgafv(java.lang.String $Xgafv) {
+            return (Approve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Approve setAccessToken(java.lang.String accessToken) {
+            return (Approve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Approve setAlt(java.lang.String alt) {
+            return (Approve) super.setAlt(alt);
+          }
+
+          @Override
+          public Approve setCallback(java.lang.String callback) {
+            return (Approve) super.setCallback(callback);
+          }
+
+          @Override
+          public Approve setFields(java.lang.String fields) {
+            return (Approve) super.setFields(fields);
+          }
+
+          @Override
+          public Approve setKey(java.lang.String key) {
+            return (Approve) super.setKey(key);
+          }
+
+          @Override
+          public Approve setOauthToken(java.lang.String oauthToken) {
+            return (Approve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Approve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Approve setQuotaUser(java.lang.String quotaUser) {
+            return (Approve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Approve setUploadType(java.lang.String uploadType) {
+            return (Approve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Approve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the target build. For example:
+           * "projects/{$project_id}/builds/{$build_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the target build. For example: "projects/{$project_id}/builds/{$build_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the target build. For example:
+           * "projects/{$project_id}/builds/{$build_id}"
+           */
+          public Approve setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Approve set(String parameterName, Object value) {
+            return (Approve) super.set(parameterName, value);
+          }
+        }
         /**
          * Cancels a build in progress.
          *

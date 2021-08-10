@@ -88,7 +88,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
    * configuration. The following monitored resource types are valid for this field: uptime_url,
-   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer
+   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,7 +252,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
    * configuration. The following monitored resource types are valid for this field: uptime_url,
-   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer
+   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
    * @return value or {@code null} for none
    */
   public MonitoredResource getMonitoredResource() {
@@ -262,7 +262,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
    * configuration. The following monitored resource types are valid for this field: uptime_url,
-   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer
+   * gce_instance, gae_app, aws_ec2_instance, aws_elb_load_balancer k8s_service
    * @param monitoredResource monitoredResource or {@code null} for none
    */
   public UptimeCheckConfig setMonitoredResource(MonitoredResource monitoredResource) {

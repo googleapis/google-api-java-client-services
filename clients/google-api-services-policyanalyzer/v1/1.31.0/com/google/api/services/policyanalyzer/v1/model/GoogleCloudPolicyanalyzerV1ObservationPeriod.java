@@ -30,21 +30,21 @@ package com.google.api.services.policyanalyzer.v1.model;
 public final class GoogleCloudPolicyanalyzerV1ObservationPeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * The observation end time.
+   * The observation end time. The time in this timestamp is always `07:00:00Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The observation start time.
+   * The observation start time. The time in this timestamp is always `07:00:00Z`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The observation end time.
+   * The observation end time. The time in this timestamp is always `07:00:00Z`.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -52,7 +52,7 @@ public final class GoogleCloudPolicyanalyzerV1ObservationPeriod extends com.goog
   }
 
   /**
-   * The observation end time.
+   * The observation end time. The time in this timestamp is always `07:00:00Z`.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudPolicyanalyzerV1ObservationPeriod setEndTime(String endTime) {
@@ -61,7 +61,7 @@ public final class GoogleCloudPolicyanalyzerV1ObservationPeriod extends com.goog
   }
 
   /**
-   * The observation start time.
+   * The observation start time. The time in this timestamp is always `07:00:00Z`.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -69,7 +69,7 @@ public final class GoogleCloudPolicyanalyzerV1ObservationPeriod extends com.goog
   }
 
   /**
-   * The observation start time.
+   * The observation start time. The time in this timestamp is always `07:00:00Z`.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudPolicyanalyzerV1ObservationPeriod setStartTime(String startTime) {

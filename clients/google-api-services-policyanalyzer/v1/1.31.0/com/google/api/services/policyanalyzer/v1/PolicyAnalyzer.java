@@ -213,7 +213,7 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
         public class Activities {
 
           /**
-           * Queries policy activities on GCP resources.
+           * Queries policy activities on Google Cloud resources.
            *
            * Create a request for the method "activities.query".
            *
@@ -222,7 +222,7 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
            *
            * @param parent Required. The container resource on which to execute the request. Acceptable formats:
            *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
-           *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
            * @return the request
            */
           public Query query(java.lang.String parent) throws java.io.IOException {
@@ -239,7 +239,7 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
 
             /**
-             * Queries policy activities on GCP resources.
+             * Queries policy activities on Google Cloud resources.
              *
              * Create a request for the method "activities.query".
              *
@@ -251,7 +251,7 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
              *
              * @param parent Required. The container resource on which to execute the request. Acceptable formats:
            *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
-           *        LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
              * @since 1.13
              */
             protected Query(java.lang.String parent) {
@@ -332,14 +332,15 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
              * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
-             * PE]` LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The container resource on which to execute the request. Acceptable formats:
            `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]` LOCATION
-           here refers to GCP Locations: https://cloud.google.com/about/locations/
+           here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
              */
             public java.lang.String getParent() {
               return parent;
@@ -348,7 +349,8 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
             /**
              * Required. The container resource on which to execute the request. Acceptable formats:
              * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
-             * PE]` LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
              */
             public Query setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -361,25 +363,25 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
             }
 
             /**
-             * Optional. Optional filter expression to restrict the activities returned. Supported
-             * filters are: - service_account_last_authn.full_resource_name {=} -
-             * service_account_key_last_authn.full_resource_name {=}
+             * Optional. Filter expression to restrict the activities returned. Supported filters
+             * are: - service_account_last_authn.full_resource_name {=} [STRING] -
+             * service_account_key_last_authn.full_resource_name {=} [STRING]
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Optional filter expression to restrict the activities returned. Supported filters are: -
-           service_account_last_authn.full_resource_name {=} -
-           service_account_key_last_authn.full_resource_name {=}
+            /** Optional. Filter expression to restrict the activities returned. Supported filters are: -
+           service_account_last_authn.full_resource_name {=} [STRING] -
+           service_account_key_last_authn.full_resource_name {=} [STRING]
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Optional filter expression to restrict the activities returned. Supported
-             * filters are: - service_account_last_authn.full_resource_name {=} -
-             * service_account_key_last_authn.full_resource_name {=}
+             * Optional. Filter expression to restrict the activities returned. Supported filters
+             * are: - service_account_last_authn.full_resource_name {=} [STRING] -
+             * service_account_key_last_authn.full_resource_name {=} [STRING]
              */
             public Query setFilter(java.lang.String filter) {
               this.filter = filter;

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-policyanalyzer</artifactId>
-      <version>v1beta1-rev20210723-1.32.1</version>
+      <version>v1beta1-rev20210806-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-policyanalyzer:v1beta1-rev20210723-1.32.1'
+  compile 'com.google.apis:google-api-services-policyanalyzer:v1beta1-rev20210806-1.32.1'
 }
 ```
 

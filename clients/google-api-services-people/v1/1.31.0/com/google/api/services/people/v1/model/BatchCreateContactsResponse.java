@@ -17,7 +17,8 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * The response to a request to create a batch of contacts.
+ * If not successful, returns BatchCreateContactsErrorDetails.contacts which contains a list of
+ * errors for each invalid contact. The response to a request to create a batch of contacts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

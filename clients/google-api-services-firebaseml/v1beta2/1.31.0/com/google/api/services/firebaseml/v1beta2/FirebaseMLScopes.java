@@ -23,7 +23,7 @@ package com.google.api.services.firebaseml.v1beta2;
  */
 public class FirebaseMLScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

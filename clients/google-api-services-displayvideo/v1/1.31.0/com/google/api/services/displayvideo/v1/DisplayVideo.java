@@ -24291,7 +24291,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
        * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
-       *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+       *        `TARGETING_TYPE_GEO_REGION`
        * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
        * @return the request
        */
@@ -24320,7 +24320,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
-       *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+       *        `TARGETING_TYPE_GEO_REGION`
          * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
          * @since 1.13
          */
@@ -24391,13 +24391,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The type of targeting options to retrieve. Accepted values are: *
-         * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+         * `TARGETING_TYPE_GEO_REGION`
          */
         @com.google.api.client.util.Key
         private java.lang.String targetingType;
 
         /** Required. The type of targeting options to retrieve. Accepted values are: *
-       `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+       `TARGETING_TYPE_GEO_REGION`
          */
         public java.lang.String getTargetingType() {
           return targetingType;
@@ -24405,7 +24405,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The type of targeting options to retrieve. Accepted values are: *
-         * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+         * `TARGETING_TYPE_GEO_REGION`
          */
         public Search setTargetingType(java.lang.String targetingType) {
           if (!getSuppressPatternChecks()) {

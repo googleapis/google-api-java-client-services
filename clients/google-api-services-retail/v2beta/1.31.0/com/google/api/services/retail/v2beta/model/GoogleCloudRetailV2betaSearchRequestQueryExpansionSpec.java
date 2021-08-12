@@ -37,6 +37,14 @@ public final class GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec extend
   private java.lang.String condition;
 
   /**
+   * Whether to pin unexpanded results. If this field is set to true, unexpanded products are always
+   * at the top of the search results, followed by the expanded results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pinUnexpandedResults;
+
+  /**
    * The condition under which query expansion should occur. Default to Condition.DISABLED.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec extend
    */
   public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec setCondition(java.lang.String condition) {
     this.condition = condition;
+    return this;
+  }
+
+  /**
+   * Whether to pin unexpanded results. If this field is set to true, unexpanded products are always
+   * at the top of the search results, followed by the expanded results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPinUnexpandedResults() {
+    return pinUnexpandedResults;
+  }
+
+  /**
+   * Whether to pin unexpanded results. If this field is set to true, unexpanded products are always
+   * at the top of the search results, followed by the expanded results.
+   * @param pinUnexpandedResults pinUnexpandedResults or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec setPinUnexpandedResults(java.lang.Boolean pinUnexpandedResults) {
+    this.pinUnexpandedResults = pinUnexpandedResults;
     return this;
   }
 

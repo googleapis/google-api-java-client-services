@@ -37,6 +37,13 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private Categories categories;
 
   /**
+   * Optional. Collation specification of the field. It only can be set on string type field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String collationSpec;
+
+  /**
    * [Optional] The field description. The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setCategories(Categories categories) {
     this.categories = categories;
+    return this;
+  }
+
+  /**
+   * Optional. Collation specification of the field. It only can be set on string type field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCollationSpec() {
+    return collationSpec;
+  }
+
+  /**
+   * Optional. Collation specification of the field. It only can be set on string type field.
+   * @param collationSpec collationSpec or {@code null} for none
+   */
+  public TableFieldSchema setCollationSpec(java.lang.String collationSpec) {
+    this.collationSpec = collationSpec;
     return this;
   }
 

@@ -47,7 +47,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   /**
    * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   /**
    * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -131,7 +131,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   /**
    * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
    * @param name name or {@code null} for none
    */
   public ServicePerimeter setName(java.lang.String name) {

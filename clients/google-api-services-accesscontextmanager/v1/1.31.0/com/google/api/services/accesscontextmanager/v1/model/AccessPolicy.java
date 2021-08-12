@@ -43,7 +43,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
+   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
+   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,7 +94,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
+   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
    * @param name name or {@code null} for none
    */
   public AccessPolicy setName(java.lang.String name) {

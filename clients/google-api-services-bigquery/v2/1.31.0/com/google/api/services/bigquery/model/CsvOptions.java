@@ -67,6 +67,13 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String fieldDelimiter;
 
   /**
+   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("null_marker")
+  private java.lang.String nullMarker;
+
+  /**
    * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the
    * string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the
    * data in its raw, binary state. The default value is a double-quote ('"'). If your data does not
@@ -175,6 +182,23 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
    */
   public CsvOptions setFieldDelimiter(java.lang.String fieldDelimiter) {
     this.fieldDelimiter = fieldDelimiter;
+    return this;
+  }
+
+  /**
+   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNullMarker() {
+    return nullMarker;
+  }
+
+  /**
+   * [Optional] An custom string that will represent a NULL value in CSV import data.
+   * @param nullMarker nullMarker or {@code null} for none
+   */
+  public CsvOptions setNullMarker(java.lang.String nullMarker) {
+    this.nullMarker = nullMarker;
     return this;
   }
 

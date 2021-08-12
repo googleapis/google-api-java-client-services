@@ -128,6 +128,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isCaseInsensitive;
+
+  /**
    * [Output-only] The resource type.
    * The value may be {@code null}.
    */
@@ -385,6 +392,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsCaseInsensitive() {
+    return isCaseInsensitive;
+  }
+
+  /**
+   * [Optional] Indicates if table names are case insensitive in the dataset.
+   * @param isCaseInsensitive isCaseInsensitive or {@code null} for none
+   */
+  public Dataset setIsCaseInsensitive(java.lang.Boolean isCaseInsensitive) {
+    this.isCaseInsensitive = isCaseInsensitive;
     return this;
   }
 

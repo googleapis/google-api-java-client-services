@@ -32,7 +32,8 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class PeeredDnsDomain extends com.google.api.client.json.GenericJson {
 
   /**
-   * The DNS domain name suffix e.g. `example.com.`.
+   * The DNS domain name suffix e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends with
+   * a trailing dot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class PeeredDnsDomain extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * The DNS domain name suffix e.g. `example.com.`.
+   * The DNS domain name suffix e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends with
+   * a trailing dot.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsSuffix() {
@@ -56,7 +58,8 @@ public final class PeeredDnsDomain extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The DNS domain name suffix e.g. `example.com.`.
+   * The DNS domain name suffix e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends with
+   * a trailing dot.
    * @param dnsSuffix dnsSuffix or {@code null} for none
    */
   public PeeredDnsDomain setDnsSuffix(java.lang.String dnsSuffix) {

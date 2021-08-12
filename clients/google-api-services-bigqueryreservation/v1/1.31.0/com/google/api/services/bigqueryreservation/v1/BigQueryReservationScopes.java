@@ -23,10 +23,10 @@ package com.google.api.services.bigqueryreservation.v1;
  */
 public class BigQueryReservationScopes {
 
-  /** View and manage your data in Google BigQuery. */
+  /** View and manage your data in Google BigQuery and see the email address for your Google Account. */
   public static final String BIGQUERY = "https://www.googleapis.com/auth/bigquery";
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

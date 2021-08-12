@@ -40,9 +40,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
-   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
-   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
+   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
+   * example, key0LikeThis or KEY_1_LIKE_THIS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +233,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   private java.lang.String languageCode;
 
   /**
-   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
@@ -417,9 +416,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
-   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
-   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
+   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
+   * example, key0LikeThis or KEY_1_LIKE_THIS.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> getAttributes() {
@@ -437,9 +435,8 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
    * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * Max indexable entries count: 200 by default; 40 for Type.VARIANT. * Max
-   * searchable entries count: 30. * For indexable attribute, the key must match the pattern:
-   * a-zA-Z0-9*. For example, key0LikeThis or KEY_1_LIKE_THIS.
+   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
+   * example, key0LikeThis or KEY_1_LIKE_THIS.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> attributes) {
@@ -830,7 +827,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org property
@@ -842,7 +839,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
   }
 
   /**
-   * The material of the product. For example, "leather", "wooden". A maximum of 5 values are
+   * The material of the product. For example, "leather", "wooden". A maximum of 20 values are
    * allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters.
    * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org property

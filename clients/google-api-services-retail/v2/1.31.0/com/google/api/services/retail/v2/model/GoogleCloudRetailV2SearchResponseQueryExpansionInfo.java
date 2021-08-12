@@ -37,6 +37,14 @@ public final class GoogleCloudRetailV2SearchResponseQueryExpansionInfo extends c
   private java.lang.Boolean expandedQuery;
 
   /**
+   * Number of pinned results. This field will only be set when expansion happens and
+   * SearchRequest.query_expansion_spec.pin_unexpanded_results is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long pinnedResultCount;
+
+  /**
    * Bool describing whether query expansion has occurred.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudRetailV2SearchResponseQueryExpansionInfo extends c
    */
   public GoogleCloudRetailV2SearchResponseQueryExpansionInfo setExpandedQuery(java.lang.Boolean expandedQuery) {
     this.expandedQuery = expandedQuery;
+    return this;
+  }
+
+  /**
+   * Number of pinned results. This field will only be set when expansion happens and
+   * SearchRequest.query_expansion_spec.pin_unexpanded_results is set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPinnedResultCount() {
+    return pinnedResultCount;
+  }
+
+  /**
+   * Number of pinned results. This field will only be set when expansion happens and
+   * SearchRequest.query_expansion_spec.pin_unexpanded_results is set to true.
+   * @param pinnedResultCount pinnedResultCount or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchResponseQueryExpansionInfo setPinnedResultCount(java.lang.Long pinnedResultCount) {
+    this.pinnedResultCount = pinnedResultCount;
     return this;
   }
 

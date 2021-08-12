@@ -1049,6 +1049,29 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             return this;
           }
 
+          /**
+           * Can be used to force delete commitments even if assignments exist. Deleting commitments
+           * with assignments may cause queries to fail if they no longer have access to slots.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Can be used to force delete commitments even if assignments exist. Deleting commitments with
+         assignments may cause queries to fail if they no longer have access to slots.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Can be used to force delete commitments even if assignments exist. Deleting commitments
+           * with assignments may cause queries to fail if they no longer have access to slots.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

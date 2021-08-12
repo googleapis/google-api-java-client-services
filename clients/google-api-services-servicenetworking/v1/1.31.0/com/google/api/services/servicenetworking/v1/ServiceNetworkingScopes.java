@@ -23,7 +23,7 @@ package com.google.api.services.servicenetworking.v1;
  */
 public class ServiceNetworkingScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /** Manage your Google API service configuration. */

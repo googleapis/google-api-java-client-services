@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for LiveChatMessageSnippet.
+ * Next ID: 29
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -35,7 +35,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
    * moderator that took the action messageRetractedEvent - the author that retracted their message
    * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase
+   * purchase superStickerEvent - the user that made the purchase
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
    * moderator that took the action messageRetractedEvent - the author that retracted their message
    * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase
+   * purchase superStickerEvent - the user that made the purchase
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorChannelId() {
@@ -142,7 +142,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
    * moderator that took the action messageRetractedEvent - the author that retracted their message
    * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase
+   * purchase superStickerEvent - the user that made the purchase
    * @param authorChannelId authorChannelId or {@code null} for none
    */
   public LiveChatMessageSnippet setAuthorChannelId(java.lang.String authorChannelId) {

@@ -66,10 +66,10 @@ public final class JobCondition extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include: * "Completed": True when the Job has successfully completed. *
-   * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True
-   * when underlying resources have been provisioned.
+   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
+   * Types include: * "Completed": True when the Job has successfully completed. * "Started": True
+   * when the Job has successfully started running. * "ResourcesAvailable": True when underlying
+   * resources have been provisioned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,10 +162,10 @@ public final class JobCondition extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include: * "Completed": True when the Job has successfully completed. *
-   * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True
-   * when underlying resources have been provisioned.
+   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
+   * Types include: * "Completed": True when the Job has successfully completed. * "Started": True
+   * when the Job has successfully started running. * "ResourcesAvailable": True when underlying
+   * resources have been provisioned.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -174,10 +174,10 @@ public final class JobCondition extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/master/docs/spec/errors.md#error-conditions-and-
-   * reporting Types include: * "Completed": True when the Job has successfully completed. *
-   * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True
-   * when underlying resources have been provisioned.
+   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
+   * Types include: * "Completed": True when the Job has successfully completed. * "Started": True
+   * when the Job has successfully started running. * "ResourcesAvailable": True when underlying
+   * resources have been provisioned.
    * @param type type or {@code null} for none
    */
   public JobCondition setType(java.lang.String type) {

@@ -43,7 +43,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -119,7 +119,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
    * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+   * documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
    * @param containers containers or {@code null} for none
    */
   public RevisionSpec setContainers(java.util.List<Container> containers) {

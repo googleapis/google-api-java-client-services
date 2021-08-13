@@ -51,6 +51,13 @@ public final class Threshold extends com.google.api.client.json.GenericJson {
   private java.lang.String label;
 
   /**
+   * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetAxis;
+
+  /**
    * The value of the threshold. The value should be defined in the native scale of the metric.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class Threshold extends com.google.api.client.json.GenericJson {
    */
   public Threshold setLabel(java.lang.String label) {
     this.label = label;
+    return this;
+  }
+
+  /**
+   * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetAxis() {
+    return targetAxis;
+  }
+
+  /**
+   * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+   * @param targetAxis targetAxis or {@code null} for none
+   */
+  public Threshold setTargetAxis(java.lang.String targetAxis) {
+    this.targetAxis = targetAxis;
     return this;
   }
 

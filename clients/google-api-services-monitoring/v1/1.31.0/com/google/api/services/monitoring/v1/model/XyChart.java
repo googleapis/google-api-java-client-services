@@ -79,6 +79,13 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   private Axis xAxis;
 
   /**
+   * The properties applied to the Y2 axis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Axis y2Axis;
+
+  /**
    * The properties applied to the Y axis.
    * The value may be {@code null}.
    */
@@ -171,6 +178,23 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
    */
   public XyChart setXAxis(Axis xAxis) {
     this.xAxis = xAxis;
+    return this;
+  }
+
+  /**
+   * The properties applied to the Y2 axis.
+   * @return value or {@code null} for none
+   */
+  public Axis getY2Axis() {
+    return y2Axis;
+  }
+
+  /**
+   * The properties applied to the Y2 axis.
+   * @param y2Axis y2Axis or {@code null} for none
+   */
+  public XyChart setY2Axis(Axis y2Axis) {
+    this.y2Axis = y2Axis;
     return this;
   }
 

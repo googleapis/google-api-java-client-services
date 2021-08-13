@@ -193,7 +193,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       public class MetricsScopes {
 
         /**
-         * Returns a specific Metrics Scope.
+         * Returns a specific Metrics Scope, including the list of projects monitored by the specified
+         * Metrics Scope.
          *
          * Create a request for the method "metricsScopes.get".
          *
@@ -218,7 +219,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^locations/global/metricsScopes/[^/]+$");
 
           /**
-           * Returns a specific Metrics Scope.
+           * Returns a specific Metrics Scope, including the list of projects monitored by the specified
+           * Metrics Scope.
            *
            * Create a request for the method "metricsScopes.get".
            *

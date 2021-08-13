@@ -72,6 +72,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Enable or disable gvnic in the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualNIC gvnic;
+
+  /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
    * will be used.
    * The value may be {@code null}.
@@ -317,6 +324,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Enable or disable gvnic in the node pool.
+   * @return value or {@code null} for none
+   */
+  public VirtualNIC getGvnic() {
+    return gvnic;
+  }
+
+  /**
+   * Enable or disable gvnic in the node pool.
+   * @param gvnic gvnic or {@code null} for none
+   */
+  public NodeConfig setGvnic(VirtualNIC gvnic) {
+    this.gvnic = gvnic;
     return this;
   }
 

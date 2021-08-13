@@ -39,6 +39,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String clusterId;
 
   /**
+   * Enable or disable gvnic on the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualNIC gvnic;
+
+  /**
    * Required. The desired image type for the node pool.
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setClusterId(java.lang.String clusterId) {
     this.clusterId = clusterId;
+    return this;
+  }
+
+  /**
+   * Enable or disable gvnic on the node pool.
+   * @return value or {@code null} for none
+   */
+  public VirtualNIC getGvnic() {
+    return gvnic;
+  }
+
+  /**
+   * Enable or disable gvnic on the node pool.
+   * @param gvnic gvnic or {@code null} for none
+   */
+  public UpdateNodePoolRequest setGvnic(VirtualNIC gvnic) {
+    this.gvnic = gvnic;
     return this;
   }
 

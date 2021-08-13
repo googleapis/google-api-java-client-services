@@ -63,8 +63,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
+   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
+   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
+   * filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +117,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,8 +242,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
+   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
+   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
+   * filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getDimensionFilter() {
@@ -249,8 +253,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The filter clause of dimensions. Dimensions must be requested to be used in this filter.
-   * Metrics cannot be used in this filter.
+   * Dimension filters allow you to ask for only specific dimension values in the report. To learn
+   * more, see [Fundamentals of Dimension Filters](https://developers.google.com/analytics/devguides
+   * /reporting/data/v1/basics#dimension_filters) for examples. Metrics cannot be used in this
+   * filter.
    * @param dimensionFilter dimensionFilter or {@code null} for none
    */
   public RunReportRequest setDimensionFilter(FilterExpression dimensionFilter) {
@@ -346,7 +352,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * @return value or {@code null} for none
    */
   public FilterExpression getMetricFilter() {
@@ -355,7 +361,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The filter clause of metrics. Applied at post aggregation phase, similar to SQL having-clause.
-   * Metrics must be requested to be used in this filter. Dimensions cannot be used in this filter.
+   * Dimensions cannot be used in this filter.
    * @param metricFilter metricFilter or {@code null} for none
    */
   public RunReportRequest setMetricFilter(FilterExpression metricFilter) {

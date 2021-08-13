@@ -55,6 +55,13 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   private java.lang.String plotType;
 
   /**
+   * Optional. The target axis to use for plotting the metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetAxis;
+
+  /**
    * Required. Fields for querying time series data from the Stackdriver metrics API.
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
    */
   public DataSet setPlotType(java.lang.String plotType) {
     this.plotType = plotType;
+    return this;
+  }
+
+  /**
+   * Optional. The target axis to use for plotting the metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetAxis() {
+    return targetAxis;
+  }
+
+  /**
+   * Optional. The target axis to use for plotting the metric.
+   * @param targetAxis targetAxis or {@code null} for none
+   */
+  public DataSet setTargetAxis(java.lang.String targetAxis) {
+    this.targetAxis = targetAxis;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Range of numerical values within min and max. If the open range "< range.max" is desired, set
- * range.min = -infinity. If the open range ">= range.min" is desired, set range.max = infinity.
+ * Range of numerical values within min and max.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

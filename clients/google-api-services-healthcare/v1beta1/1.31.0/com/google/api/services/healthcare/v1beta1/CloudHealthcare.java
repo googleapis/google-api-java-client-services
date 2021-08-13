@@ -21993,12 +21993,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `_count`, `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The
              * maximum number of search results returned defaults to 100, which can be overridden by the
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-             * `Bundle` contains pagination links. Resources with a total size larger than 5MB or a field count
-             * larger than 50,000 might not be fully searchable as the server might trim its generated search
-             * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a slight
-             * delay between the time a resource is created or changes and when the change is reflected in
-             * search results. For samples and detailed information, see [Searching for FHIR
-             * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+             * `Bundle` contains a link of `relation` "next", which has a `_page_token` parameter for an opaque
+             * pagination token that can be used to retrieve the next page. Resources with a total size larger
+             * than 5MB or a field count larger than 50,000 might not be fully searchable as the server might
+             * trim its generated search index in those cases. Note: FHIR resources are indexed asynchronously,
+             * so there might be a slight delay between the time a resource is created or changes and when the
+             * change is reflected in search results. For samples and detailed information, see [Searching for
+             * FHIR resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
              * features](/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search".
@@ -22054,13 +22055,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * search result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
                * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to
                * 100, which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there
-               * are additional results, the returned `Bundle` contains pagination links. Resources with a total
-               * size larger than 5MB or a field count larger than 50,000 might not be fully searchable as the
-               * server might trim its generated search index in those cases. Note: FHIR resources are indexed
-               * asynchronously, so there might be a slight delay between the time a resource is created or
-               * changes and when the change is reflected in search results. For samples and detailed
-               * information, see [Searching for FHIR resources](/healthcare/docs/how-tos/fhir-search) and
-               * [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
+               * are additional results, the returned `Bundle` contains a link of `relation` "next", which has a
+               * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
+               * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
+               * be fully searchable as the server might trim its generated search index in those cases. Note:
+               * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
+               * resource is created or changes and when the change is reflected in search results. For samples
+               * and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-tos/fhir-
+               * search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -22196,12 +22198,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `_count`, `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The
              * maximum number of search results returned defaults to 100, which can be overridden by the
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-             * `Bundle` contains pagination links. Resources with a total size larger than 5MB or a field count
-             * larger than 50,000 might not be fully searchable as the server might trim its generated search
-             * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a slight
-             * delay between the time a resource is created or changes and when the change is reflected in
-             * search results. For samples and detailed information, see [Searching for FHIR
-             * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+             * `Bundle` contains a link of `relation` "next", which has a `_page_token` parameter for an opaque
+             * pagination token that can be used to retrieve the next page. Resources with a total size larger
+             * than 5MB or a field count larger than 50,000 might not be fully searchable as the server might
+             * trim its generated search index in those cases. Note: FHIR resources are indexed asynchronously,
+             * so there might be a slight delay between the time a resource is created or changes and when the
+             * change is reflected in search results. For samples and detailed information, see [Searching for
+             * FHIR resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
              * features](/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search-type".
@@ -22261,13 +22264,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * search result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
                * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to
                * 100, which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there
-               * are additional results, the returned `Bundle` contains pagination links. Resources with a total
-               * size larger than 5MB or a field count larger than 50,000 might not be fully searchable as the
-               * server might trim its generated search index in those cases. Note: FHIR resources are indexed
-               * asynchronously, so there might be a slight delay between the time a resource is created or
-               * changes and when the change is reflected in search results. For samples and detailed
-               * information, see [Searching for FHIR resources](/healthcare/docs/how-tos/fhir-search) and
-               * [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
+               * are additional results, the returned `Bundle` contains a link of `relation` "next", which has a
+               * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
+               * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
+               * be fully searchable as the server might trim its generated search index in those cases. Note:
+               * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
+               * resource is created or changes and when the change is reflected in search results. For samples
+               * and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-tos/fhir-
+               * search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

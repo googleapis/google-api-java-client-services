@@ -80,6 +80,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private EphemeralStorageConfig ephemeralStorageConfig;
 
   /**
+   * Enable or disable gvnic on the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualNIC gvnic;
+
+  /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
    * will be used.
    * The value may be {@code null}.
@@ -344,6 +351,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setEphemeralStorageConfig(EphemeralStorageConfig ephemeralStorageConfig) {
     this.ephemeralStorageConfig = ephemeralStorageConfig;
+    return this;
+  }
+
+  /**
+   * Enable or disable gvnic on the node pool.
+   * @return value or {@code null} for none
+   */
+  public VirtualNIC getGvnic() {
+    return gvnic;
+  }
+
+  /**
+   * Enable or disable gvnic on the node pool.
+   * @param gvnic gvnic or {@code null} for none
+   */
+  public NodeConfig setGvnic(VirtualNIC gvnic) {
+    this.gvnic = gvnic;
     return this;
   }
 

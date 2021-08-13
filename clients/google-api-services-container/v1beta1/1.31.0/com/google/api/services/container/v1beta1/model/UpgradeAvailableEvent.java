@@ -60,6 +60,13 @@ public final class UpgradeAvailableEvent extends com.google.api.client.json.Gene
   private java.lang.String version;
 
   /**
+   * Windows node versions info.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WindowsVersions windowsVersions;
+
+  /**
    * The release channel of the version. If empty, it means a non-channel release.
    * @return value or {@code null} for none
    */
@@ -124,6 +131,23 @@ public final class UpgradeAvailableEvent extends com.google.api.client.json.Gene
    */
   public UpgradeAvailableEvent setVersion(java.lang.String version) {
     this.version = version;
+    return this;
+  }
+
+  /**
+   * Windows node versions info.
+   * @return value or {@code null} for none
+   */
+  public WindowsVersions getWindowsVersions() {
+    return windowsVersions;
+  }
+
+  /**
+   * Windows node versions info.
+   * @param windowsVersions windowsVersions or {@code null} for none
+   */
+  public UpgradeAvailableEvent setWindowsVersions(WindowsVersions windowsVersions) {
+    this.windowsVersions = windowsVersions;
     return this;
   }
 

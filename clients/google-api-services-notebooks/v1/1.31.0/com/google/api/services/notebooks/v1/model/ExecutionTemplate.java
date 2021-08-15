@@ -46,6 +46,13 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   private java.lang.String containerImageUri;
 
   /**
+   * Parameters used in Dataproc JobType executions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataprocParameters dataprocParameters;
+
+  /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
    * gs://{project_id}/{folder}/{notebook_file_name} Ex:
    * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
@@ -53,6 +60,13 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String inputNotebookFile;
+
+  /**
+   * The type of Job to be used on this execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobType;
 
   /**
    * Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'.
@@ -161,6 +175,23 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Parameters used in Dataproc JobType executions.
+   * @return value or {@code null} for none
+   */
+  public DataprocParameters getDataprocParameters() {
+    return dataprocParameters;
+  }
+
+  /**
+   * Parameters used in Dataproc JobType executions.
+   * @param dataprocParameters dataprocParameters or {@code null} for none
+   */
+  public ExecutionTemplate setDataprocParameters(DataprocParameters dataprocParameters) {
+    this.dataprocParameters = dataprocParameters;
+    return this;
+  }
+
+  /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
    * gs://{project_id}/{folder}/{notebook_file_name} Ex:
    * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
@@ -178,6 +209,23 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setInputNotebookFile(java.lang.String inputNotebookFile) {
     this.inputNotebookFile = inputNotebookFile;
+    return this;
+  }
+
+  /**
+   * The type of Job to be used on this execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobType() {
+    return jobType;
+  }
+
+  /**
+   * The type of Job to be used on this execution.
+   * @param jobType jobType or {@code null} for none
+   */
+  public ExecutionTemplate setJobType(java.lang.String jobType) {
+    this.jobType = jobType;
     return this;
   }
 

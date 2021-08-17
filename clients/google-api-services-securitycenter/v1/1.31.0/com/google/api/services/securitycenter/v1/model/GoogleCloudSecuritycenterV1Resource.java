@@ -82,6 +82,13 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   private java.lang.String projectDisplayName;
 
   /**
+   * The full resource type of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
    * is the deepest nested folder, and the last folder is the folder directly under the
    * Organization.
@@ -186,6 +193,23 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
    */
   public GoogleCloudSecuritycenterV1Resource setProjectDisplayName(java.lang.String projectDisplayName) {
     this.projectDisplayName = projectDisplayName;
+    return this;
+  }
+
+  /**
+   * The full resource type of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The full resource type of the resource.
+   * @param type type or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -19,9 +19,7 @@ package com.google.api.services.billingbudgets.v1.model;
 /**
  * Describes a budget amount targeted to the last Filter.calendar_period spend. At this time, the
  * amount is automatically 100% of the last calendar period's spend; that is, there are no other
- * options yet. Future configuration options will be described here (for example, configuring a
- * percentage of last period's spend). LastPeriodAmount cannot be set for a budget configured with a
- * Filter.custom_period.
+ * options yet. LastPeriodAmount cannot be set for a budget configured with a Filter.custom_period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing Budget API. For a detailed explanation

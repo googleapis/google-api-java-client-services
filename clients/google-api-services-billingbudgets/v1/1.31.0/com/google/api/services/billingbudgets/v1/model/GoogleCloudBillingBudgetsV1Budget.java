@@ -58,7 +58,7 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An
-   * empty etag will cause an update to overwrite other changes.
+   * empty etag causes an update to overwrite other changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An
-   * empty etag will cause an update to overwrite other changes.
+   * empty etag causes an update to overwrite other changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -154,7 +154,7 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
 
   /**
    * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An
-   * empty etag will cause an update to overwrite other changes.
+   * empty etag causes an update to overwrite other changes.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Budget setEtag(java.lang.String etag) {

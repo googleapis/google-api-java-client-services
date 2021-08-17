@@ -32,8 +32,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
-   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the
-   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
+   * current calendar month is April, May, June. After that, it tracks usage from July 1 to
    * September 30 when the current calendar month is July, August, September, so on.
    * The value may be {@code null}.
    */
@@ -69,8 +69,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Currently, multiple entries or multiple values per
-   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. If omitted, the report includes all labeled and
+   * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
-   * this set of projects should be included in the budget. If omitted, the report will include all
+   * this set of projects should be included in the budget. If omitted, the report includes all
    * usage for the billing account, regardless of which project the usage occurred on. Only zero or
    * one project can be specified currently.
    * The value may be {@code null}.
@@ -88,7 +89,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
-   * only this set of services should be included in the budget. If omitted, the report will include
+   * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
    * https://cloud.google.com/billing/v1/how-tos/catalog-api.
    * The value may be {@code null}.
@@ -99,9 +100,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the parent account, usage from the parent account will be included. If the
-   * field is omitted, the report will include usage from the parent account and all subaccounts, if
-   * they exist.
+   * set to the name of the parent account, usage from the parent account is included. If the field
+   * is omitted, the report includes usage from the parent account and all subaccounts, if they
+   * exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +110,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
-   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the
-   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
+   * current calendar month is April, May, June. After that, it tracks usage from July 1 to
    * September 30 when the current calendar month is July, August, September, so on.
    * @return value or {@code null} for none
    */
@@ -120,8 +121,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
-   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the
-   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
+   * current calendar month is April, May, June. After that, it tracks usage from July 1 to
    * September 30 when the current calendar month is July, August, September, so on.
    * @param calendarPeriod calendarPeriod or {@code null} for none
    */
@@ -195,8 +196,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Currently, multiple entries or multiple values per
-   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. If omitted, the report includes all labeled and
+   * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.util.List<java.lang.Object>> getLabels() {
@@ -205,8 +207,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
-   * resources should be included in the budget. Currently, multiple entries or multiple values per
-   * entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.
+   * resources should be included in the budget. If omitted, the report includes all labeled and
+   * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setLabels(java.util.Map<String, java.util.List<java.lang.Object>> labels) {
@@ -216,7 +219,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
-   * this set of projects should be included in the budget. If omitted, the report will include all
+   * this set of projects should be included in the budget. If omitted, the report includes all
    * usage for the billing account, regardless of which project the usage occurred on. Only zero or
    * one project can be specified currently.
    * @return value or {@code null} for none
@@ -227,7 +230,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
-   * this set of projects should be included in the budget. If omitted, the report will include all
+   * this set of projects should be included in the budget. If omitted, the report includes all
    * usage for the billing account, regardless of which project the usage occurred on. Only zero or
    * one project can be specified currently.
    * @param projects projects or {@code null} for none
@@ -239,7 +242,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
-   * only this set of services should be included in the budget. If omitted, the report will include
+   * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
    * https://cloud.google.com/billing/v1/how-tos/catalog-api.
    * @return value or {@code null} for none
@@ -250,7 +253,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
-   * only this set of services should be included in the budget. If omitted, the report will include
+   * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
    * https://cloud.google.com/billing/v1/how-tos/catalog-api.
    * @param services services or {@code null} for none
@@ -263,9 +266,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the parent account, usage from the parent account will be included. If the
-   * field is omitted, the report will include usage from the parent account and all subaccounts, if
-   * they exist.
+   * set to the name of the parent account, usage from the parent account is included. If the field
+   * is omitted, the report includes usage from the parent account and all subaccounts, if they
+   * exist.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubaccounts() {
@@ -275,9 +278,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
-   * set to the name of the parent account, usage from the parent account will be included. If the
-   * field is omitted, the report will include usage from the parent account and all subaccounts, if
-   * they exist.
+   * set to the name of the parent account, usage from the parent account is included. If the field
+   * is omitted, the report includes usage from the parent account and all subaccounts, if they
+   * exist.
    * @param subaccounts subaccounts or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setSubaccounts(java.util.List<java.lang.String> subaccounts) {

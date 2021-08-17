@@ -71,8 +71,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   private Product product;
 
   /**
-   * The ID of the product to mutate. Only defined if the method is `get`, `delete`, or `update`. or
-   * `delete`.
+   * The ID of the product to get or mutate. Only defined if the method is `get`, `delete`, or
+   * `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,8 +185,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the product to mutate. Only defined if the method is `get`, `delete`, or `update`. or
-   * `delete`.
+   * The ID of the product to get or mutate. Only defined if the method is `get`, `delete`, or
+   * `update`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -194,8 +194,8 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The ID of the product to mutate. Only defined if the method is `get`, `delete`, or `update`. or
-   * `delete`.
+   * The ID of the product to get or mutate. Only defined if the method is `get`, `delete`, or
+   * `update`.
    * @param productId productId or {@code null} for none
    */
   public ProductsCustomBatchRequestEntry setProductId(java.lang.String productId) {

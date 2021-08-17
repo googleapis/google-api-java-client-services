@@ -31,7 +31,8 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipant extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Dialogflow participant. Format:
+   * Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant.
+   * Format:
    * projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
    * The value may be {@code null}.
    */
@@ -61,7 +62,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipant ext
   private java.lang.String userId;
 
   /**
-   * The name of the Dialogflow participant. Format:
+   * Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant.
+   * Format:
    * projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
    * @return value or {@code null} for none
    */
@@ -70,7 +72,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipant ext
   }
 
   /**
-   * The name of the Dialogflow participant. Format:
+   * Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant.
+   * Format:
    * projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
    * @param dialogflowParticipant dialogflowParticipant or {@code null} for none
    */

@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class AccountAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * CLDR country code (e.g. "US"). This value cannot be set for a sub-account of an MCA. All MCA
-   * sub-accounts inherit the country of their parent MCA.
+   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
+   * default, however the country can be updated for individual sub-accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   private java.lang.String streetAddress;
 
   /**
-   * CLDR country code (e.g. "US"). This value cannot be set for a sub-account of an MCA. All MCA
-   * sub-accounts inherit the country of their parent MCA.
+   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
+   * default, however the country can be updated for individual sub-accounts.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -78,8 +78,8 @@ public final class AccountAddress extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * CLDR country code (e.g. "US"). This value cannot be set for a sub-account of an MCA. All MCA
-   * sub-accounts inherit the country of their parent MCA.
+   * CLDR country code (e.g. "US"). All MCA sub-accounts inherit the country of their parent MCA by
+   * default, however the country can be updated for individual sub-accounts.
    * @param country country or {@code null} for none
    */
   public AccountAddress setCountry(java.lang.String country) {

@@ -67,6 +67,16 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.Integer ipPrefixLength;
 
   /**
+   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
+   * the access types that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
+
+  /**
    * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
    * west1`.
    * The value may be {@code null}.
@@ -197,6 +207,29 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
+   * the access types that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
+   * the access types that can be set using this field, see
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public AddSubnetworkRequest setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 

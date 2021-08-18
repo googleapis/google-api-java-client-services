@@ -18,7 +18,7 @@ package com.google.api.services.testing.model;
 
 /**
  * A test of an android application that explores the application on a virtual or physical Android
- * Device, finding culprits and crashes as it goes. Next tag: 30
+ * Device, finding culprits and crashes as it goes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:

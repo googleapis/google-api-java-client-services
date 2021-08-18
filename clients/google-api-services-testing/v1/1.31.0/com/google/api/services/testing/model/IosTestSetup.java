@@ -53,9 +53,9 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to Cloud Storage at the end of the test.
-   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
-   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
-   * id.
+   * Directories should either be in a shared directory (such as /private/var/mobile/Media) or
+   * within an accessible directory inside the app's filesystem (such as /Documents) by specifying
+   * the bundle ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,9 +120,9 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to Cloud Storage at the end of the test.
-   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
-   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
-   * id.
+   * Directories should either be in a shared directory (such as /private/var/mobile/Media) or
+   * within an accessible directory inside the app's filesystem (such as /Documents) by specifying
+   * the bundle ID.
    * @return value or {@code null} for none
    */
   public java.util.List<IosDeviceFile> getPullDirectories() {
@@ -131,9 +131,9 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
    * List of directories on the device to upload to Cloud Storage at the end of the test.
-   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
-   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
-   * id.
+   * Directories should either be in a shared directory (such as /private/var/mobile/Media) or
+   * within an accessible directory inside the app's filesystem (such as /Documents) by specifying
+   * the bundle ID.
    * @param pullDirectories pullDirectories or {@code null} for none
    */
   public IosTestSetup setPullDirectories(java.util.List<IosDeviceFile> pullDirectories) {

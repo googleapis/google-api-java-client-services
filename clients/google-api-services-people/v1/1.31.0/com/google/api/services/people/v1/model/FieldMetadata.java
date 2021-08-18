@@ -30,7 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class FieldMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if the field is the primary field for the person.
+   * Output only. True if the field is the primary field for all sources in the person. Each person
+   * will have at most one field with `primary` set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   private Source source;
 
   /**
-   * True if the field is the primary field for the source.
+   * True if the field is the primary field for the source. Each source must have at most one field
+   * with `source_primary` set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +62,8 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean verified;
 
   /**
-   * True if the field is the primary field for the person.
+   * Output only. True if the field is the primary field for all sources in the person. Each person
+   * will have at most one field with `primary` set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrimary() {
@@ -68,7 +71,8 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is the primary field for the person.
+   * Output only. True if the field is the primary field for all sources in the person. Each person
+   * will have at most one field with `primary` set to true.
    * @param primary primary or {@code null} for none
    */
   public FieldMetadata setPrimary(java.lang.Boolean primary) {
@@ -94,7 +98,8 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is the primary field for the source.
+   * True if the field is the primary field for the source. Each source must have at most one field
+   * with `source_primary` set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSourcePrimary() {
@@ -102,7 +107,8 @@ public final class FieldMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * True if the field is the primary field for the source.
+   * True if the field is the primary field for the source. Each source must have at most one field
+   * with `source_primary` set to true.
    * @param sourcePrimary sourcePrimary or {@code null} for none
    */
   public FieldMetadata setSourcePrimary(java.lang.Boolean sourcePrimary) {

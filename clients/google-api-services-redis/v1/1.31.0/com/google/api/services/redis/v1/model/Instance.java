@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * A Google Cloud Redis instance. next id = 30
+ * A Google Cloud Redis instance. next id = 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -105,9 +105,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If alternative_location_id is also provided, it
-   * must be different from location_id.
+   * choose a zone from the specified region for the instance. For standard tier, instances will be
+   * created across two zones for protection against zonal failures. If [alternative_location_id] is
+   * also provided, it must be different from [location_id].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -406,9 +406,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If alternative_location_id is also provided, it
-   * must be different from location_id.
+   * choose a zone from the specified region for the instance. For standard tier, instances will be
+   * created across two zones for protection against zonal failures. If [alternative_location_id] is
+   * also provided, it must be different from [location_id].
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -417,9 +417,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone for the instance. For STANDARD_HA tier, instances will be created across two
-   * zones for protection against zonal failures. If alternative_location_id is also provided, it
-   * must be different from location_id.
+   * choose a zone from the specified region for the instance. For standard tier, instances will be
+   * created across two zones for protection against zonal failures. If [alternative_location_id] is
+   * also provided, it must be different from [location_id].
    * @param locationId locationId or {@code null} for none
    */
   public Instance setLocationId(java.lang.String locationId) {

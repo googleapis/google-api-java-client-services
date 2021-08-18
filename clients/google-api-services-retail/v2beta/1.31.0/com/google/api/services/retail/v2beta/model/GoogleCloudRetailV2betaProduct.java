@@ -38,10 +38,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
-   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
-   * example, key0LikeThis or KEY_1_LIKE_THIS.
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
+   * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
+   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,12 +181,13 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
-   * Schema.org property [Product.isbn](https://schema.org/isbn) or
-   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
-   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
-   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
+   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
+   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
+   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
+   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +255,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
-   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
    * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
    * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
    * Schema.org property [Product.pattern](https://schema.org/pattern).
@@ -414,10 +415,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
-   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
-   * example, key0LikeThis or KEY_1_LIKE_THIS.
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
+   * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
+   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> getAttributes() {
@@ -433,10 +434,10 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * customer. Numerical features. Some examples would be the height/weight of a product, or age of
    * a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm":
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
-   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200 by
-   * default; 100 for Type.VARIANT. * The key must be a UTF-8 encoded string with a length limit of
-   * 128 characters. * For indexable attribute, the key must match the pattern: a-zA-Z0-9*. For
-   * example, key0LikeThis or KEY_1_LIKE_THIS.
+   * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
+   * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
+   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * KEY_1_LIKE_THIS.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setAttributes(java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> attributes) {
@@ -722,12 +723,13 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
-   * Schema.org property [Product.isbn](https://schema.org/isbn) or
-   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
-   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
-   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
+   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
+   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
+   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
+   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getGtin() {
@@ -736,12 +738,13 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The Global Trade Item Number (GTIN) of the product. This field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
-   * Merchant Center property [gtin](https://support.google.com/merchants/answer/6324461).
-   * Schema.org property [Product.isbn](https://schema.org/isbn) or
-   * [Product.gtin8](https://schema.org/gtin8) or [Product.gtin12](https://schema.org/gtin12) or
-   * [Product.gtin13](https://schema.org/gtin13) or [Product.gtin14](https://schema.org/gtin14). If
-   * the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
+   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. This
+   * field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant
+   * Center property [gtin](https://support.google.com/merchants/answer/6324461). Schema.org
+   * property [Product.isbn](https://schema.org/isbn) or [Product.gtin8](https://schema.org/gtin8)
+   * or [Product.gtin12](https://schema.org/gtin12) or [Product.gtin13](https://schema.org/gtin13)
+   * or [Product.gtin14](https://schema.org/gtin14). If the value is not a valid GTIN, an
+   * INVALID_ARGUMENT error is returned.
    * @param gtin gtin or {@code null} for none
    */
   public GoogleCloudRetailV2betaProduct setGtin(java.lang.String gtin) {
@@ -874,7 +877,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
-   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
    * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
    * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
    * Schema.org property [Product.pattern](https://schema.org/pattern).
@@ -886,7 +889,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
 
   /**
    * The pattern or graphic print of the product. For example, "striped", "polka dot", "paisley". A
-   * maximum of 5 values are allowed per Product. Each value must be a UTF-8 encoded string with a
+   * maximum of 20 values are allowed per Product. Each value must be a UTF-8 encoded string with a
    * length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google
    * Merchant Center property [pattern](https://support.google.com/merchants/answer/6324483).
    * Schema.org property [Product.pattern](https://schema.org/pattern).

@@ -42,9 +42,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a
-   * URI to a Cloud Storage bucket.
+   * location bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private LifecycleConfig lifecycleConfig;
 
   /**
-   * Optional. The Compute Engine config settings for the master instance in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's master instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private MetastoreConfig metastoreConfig;
 
   /**
-   * Optional. The Compute Engine config settings for additional worker instances in a cluster.
+   * Optional. The Compute Engine config settings for a cluster's secondary worker instances
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private SecurityConfig securityConfig;
 
   /**
-   * Optional. The config settings for software inside the cluster.
+   * Optional. The config settings for cluster software.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,15 +141,16 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
-   * (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI
-   * to a Cloud Storage bucket.
+   * (or none) if you specify a bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tempBucket;
 
   /**
-   * Optional. The Compute Engine config settings for worker instances in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's worker instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,9 +180,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a
-   * URI to a Cloud Storage bucket.
+   * location bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigBucket() {
@@ -193,9 +194,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a
-   * URI to a Cloud Storage bucket.
+   * location bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @param configBucket configBucket or {@code null} for none
    */
   public ClusterConfig setConfigBucket(java.lang.String configBucket) {
@@ -322,7 +323,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for the master instance in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's master instance.
    * @return value or {@code null} for none
    */
   public InstanceGroupConfig getMasterConfig() {
@@ -330,7 +331,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for the master instance in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's master instance.
    * @param masterConfig masterConfig or {@code null} for none
    */
   public ClusterConfig setMasterConfig(InstanceGroupConfig masterConfig) {
@@ -356,7 +357,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for additional worker instances in a cluster.
+   * Optional. The Compute Engine config settings for a cluster's secondary worker instances
    * @return value or {@code null} for none
    */
   public InstanceGroupConfig getSecondaryWorkerConfig() {
@@ -364,7 +365,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for additional worker instances in a cluster.
+   * Optional. The Compute Engine config settings for a cluster's secondary worker instances
    * @param secondaryWorkerConfig secondaryWorkerConfig or {@code null} for none
    */
   public ClusterConfig setSecondaryWorkerConfig(InstanceGroupConfig secondaryWorkerConfig) {
@@ -390,7 +391,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The config settings for software inside the cluster.
+   * Optional. The config settings for cluster software.
    * @return value or {@code null} for none
    */
   public SoftwareConfig getSoftwareConfig() {
@@ -398,7 +399,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The config settings for software inside the cluster.
+   * Optional. The config settings for cluster software.
    * @param softwareConfig softwareConfig or {@code null} for none
    */
   public ClusterConfig setSoftwareConfig(SoftwareConfig softwareConfig) {
@@ -412,8 +413,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
-   * (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI
-   * to a Cloud Storage bucket.
+   * (or none) if you specify a bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getTempBucket() {
@@ -426,8 +428,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
    * Compute Engine zone where your cluster is deployed, and then create and manage this project-
    * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
-   * (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI
-   * to a Cloud Storage bucket.
+   * (or none) if you specify a bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
+   * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @param tempBucket tempBucket or {@code null} for none
    */
   public ClusterConfig setTempBucket(java.lang.String tempBucket) {
@@ -436,7 +439,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for worker instances in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's worker instances.
    * @return value or {@code null} for none
    */
   public InstanceGroupConfig getWorkerConfig() {
@@ -444,7 +447,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Compute Engine config settings for worker instances in a cluster.
+   * Optional. The Compute Engine config settings for the cluster's worker instances.
    * @param workerConfig workerConfig or {@code null} for none
    */
   public ClusterConfig setWorkerConfig(InstanceGroupConfig workerConfig) {

@@ -34,7 +34,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range used to allocate IP addresses to pods in the GKE cluster. This
    * field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range
    * with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific
-   * netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
+   * netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
    * (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * The value may be {@code null}.
@@ -54,7 +54,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range of the services IP addresses in this GKE cluster. This field is
    * applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the
    * default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask.
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * The value may be {@code null}.
@@ -82,7 +82,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range used to allocate IP addresses to pods in the GKE cluster. This
    * field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range
    * with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific
-   * netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
+   * netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
    * (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @return value or {@code null} for none
@@ -95,7 +95,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range used to allocate IP addresses to pods in the GKE cluster. This
    * field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range
    * with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific
-   * netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
+   * netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation
    * (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @param clusterIpv4CidrBlock clusterIpv4CidrBlock or {@code null} for none
@@ -128,7 +128,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range of the services IP addresses in this GKE cluster. This field is
    * applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the
    * default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask.
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @return value or {@code null} for none
@@ -141,7 +141,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The IP address range of the services IP addresses in this GKE cluster. This field is
    * applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the
    * default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask.
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @param servicesIpv4CidrBlock servicesIpv4CidrBlock or {@code null} for none

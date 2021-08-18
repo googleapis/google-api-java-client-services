@@ -38,8 +38,7 @@ public final class ApprovalResult extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Email of the user that called the ApproveBuild API to approve or reject a build at
-   * the time that the API was called (the user's actual email that is tied to their GAIA ID may
-   * have changed). This field is not stored, rather, it is calculated on the fly using approver_id.
+   * the time that the API was called.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +86,7 @@ public final class ApprovalResult extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Email of the user that called the ApproveBuild API to approve or reject a build at
-   * the time that the API was called (the user's actual email that is tied to their GAIA ID may
-   * have changed). This field is not stored, rather, it is calculated on the fly using approver_id.
+   * the time that the API was called.
    * @return value or {@code null} for none
    */
   public java.lang.String getApproverAccount() {
@@ -97,8 +95,7 @@ public final class ApprovalResult extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Email of the user that called the ApproveBuild API to approve or reject a build at
-   * the time that the API was called (the user's actual email that is tied to their GAIA ID may
-   * have changed). This field is not stored, rather, it is calculated on the fly using approver_id.
+   * the time that the API was called.
    * @param approverAccount approverAccount or {@code null} for none
    */
   public ApprovalResult setApproverAccount(java.lang.String approverAccount) {

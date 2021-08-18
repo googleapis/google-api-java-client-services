@@ -17,8 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Describes the identifying information, config, and status of a cluster of Compute Engine
- * instances.
+ * Describes the identifying information, config, and status of a Dataproc cluster
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -47,8 +46,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterUuid;
 
   /**
-   * Required. The cluster config. Note that Dataproc may set default values, and values may change
-   * when clusters are updated.
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
+   * set default values, and values may change when clusters are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +132,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The cluster config. Note that Dataproc may set default values, and values may change
-   * when clusters are updated.
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
+   * set default values, and values may change when clusters are updated.
    * @return value or {@code null} for none
    */
   public ClusterConfig getConfig() {
@@ -142,8 +141,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The cluster config. Note that Dataproc may set default values, and values may change
-   * when clusters are updated.
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
+   * set default values, and values may change when clusters are updated.
    * @param config config or {@code null} for none
    */
   public Cluster setConfig(ClusterConfig config) {

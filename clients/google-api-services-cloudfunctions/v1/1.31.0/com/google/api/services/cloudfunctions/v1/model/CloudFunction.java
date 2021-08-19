@@ -52,6 +52,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String buildId;
 
   /**
+   * Output only. The Cloud Build Name of the function deployment. projects//locations//builds/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildName;
+
+  /**
    * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
    * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * {project} and {region} are the project id and region respectively where the worker pool is
@@ -127,6 +134,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxInstances;
+
+  /**
+   * A lower bound for the number function instances that may coexist at a given time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minInstances;
 
   /**
    * A user-defined name of the function. Function names must be unique globally and match pattern
@@ -313,6 +327,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. The Cloud Build Name of the function deployment. projects//locations//builds/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildName() {
+    return buildName;
+  }
+
+  /**
+   * Output only. The Cloud Build Name of the function deployment. projects//locations//builds/.
+   * @param buildName buildName or {@code null} for none
+   */
+  public CloudFunction setBuildName(java.lang.String buildName) {
+    this.buildName = buildName;
+    return this;
+  }
+
+  /**
    * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
    * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * {project} and {region} are the project id and region respectively where the worker pool is
@@ -490,6 +521,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setMaxInstances(java.lang.Integer maxInstances) {
     this.maxInstances = maxInstances;
+    return this;
+  }
+
+  /**
+   * A lower bound for the number function instances that may coexist at a given time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinInstances() {
+    return minInstances;
+  }
+
+  /**
+   * A lower bound for the number function instances that may coexist at a given time.
+   * @param minInstances minInstances or {@code null} for none
+   */
+  public CloudFunction setMinInstances(java.lang.Integer minInstances) {
+    this.minInstances = minInstances;
     return this;
   }
 

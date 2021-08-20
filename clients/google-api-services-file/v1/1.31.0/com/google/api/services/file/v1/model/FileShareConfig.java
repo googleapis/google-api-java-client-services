@@ -52,8 +52,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share
+   * has been restored from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share
+   * has been restored from.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -122,8 +122,8 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share
+   * has been restored from.
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public FileShareConfig setSourceBackup(java.lang.String sourceBackup) {

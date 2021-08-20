@@ -26,7 +26,8 @@ package com.google.api.services.vectortile.v1.model;
  * rows[n].a[m] Rather than storing the altitudes directly, we store the diffs between them as
  * integers at some requested level of precision to take advantage of integer packing. The actual
  * altitude values a[] can be reconstructed using the scale and each row's first_altitude and
- * altitude_diff fields.
+ * altitude_diff fields. More details in go/elevation-encoding-options-for-enduro under "Recommended
+ * implementation".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:

@@ -39,7 +39,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the snapshot, in the format
-   * projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}.
+   * `projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -83,7 +83,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public RestoreInstanceRequest setSourceBackup(java.lang.String sourceBackup) {
@@ -93,7 +93,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the snapshot, in the format
-   * projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}.
+   * `projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -102,7 +102,7 @@ public final class RestoreInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * The resource name of the snapshot, in the format
-   * projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}.
+   * `projects/{project_id}/locations/{location_id}/snapshots/{snapshot_id}`.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public RestoreInstanceRequest setSourceSnapshot(java.lang.String sourceSnapshot) {

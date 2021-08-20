@@ -73,7 +73,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -213,7 +213,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

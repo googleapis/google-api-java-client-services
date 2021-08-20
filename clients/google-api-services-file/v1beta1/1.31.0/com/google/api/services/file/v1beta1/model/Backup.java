@@ -67,7 +67,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the source Cloud Filestore instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}, used to create this
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * The value may be {@code null}.
    */
@@ -208,7 +208,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -217,7 +217,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the backup, in the format
-   * projects/{project_id}/locations/{location_id}/backups/{backup_id}.
+   * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`.
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {
@@ -261,7 +261,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the source Cloud Filestore instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}, used to create this
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * @return value or {@code null} for none
    */
@@ -271,7 +271,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the source Cloud Filestore instance, in the format
-   * projects/{project_id}/locations/{location_id}/instances/{instance_id}, used to create this
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this
    * backup.
    * @param sourceInstance sourceInstance or {@code null} for none
    */

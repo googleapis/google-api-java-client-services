@@ -56,10 +56,10 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
   private java.lang.Long anonUid;
 
   /**
-   * List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR
-   * ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the
-   * file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An
-   * error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
+   * List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR
+   * ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file
+   * share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error
+   * will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
    * NfsExportOptions.
    * The value may be {@code null}.
    */
@@ -136,10 +136,10 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR
-   * ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the
-   * file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An
-   * error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
+   * List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR
+   * ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file
+   * share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error
+   * will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
    * NfsExportOptions.
    * @return value or {@code null} for none
    */
@@ -148,10 +148,10 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * List of either an IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or CIDR
-   * ranges in the format {octet 1}.{octet 2}.{octet 3}.{octet 4}/{mask size} which may mount the
-   * file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An
-   * error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
+   * List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR
+   * ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file
+   * share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error
+   * will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all
    * NfsExportOptions.
    * @param ipRanges ipRanges or {@code null} for none
    */

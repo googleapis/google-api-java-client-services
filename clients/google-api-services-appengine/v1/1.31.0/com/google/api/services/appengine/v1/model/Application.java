@@ -129,6 +129,14 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The service account associated with the application. This is the app-level default identity. If
+   * no identity provided during create version, Admin API will fallback to this one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Serving status of this application.
    * The value may be {@code null}.
    */
@@ -369,6 +377,25 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The service account associated with the application. This is the app-level default identity. If
+   * no identity provided during create version, Admin API will fallback to this one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * The service account associated with the application. This is the app-level default identity. If
+   * no identity provided during create version, Admin API will fallback to this one.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public Application setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

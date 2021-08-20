@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1alpha1.model;
 
 /**
- * Not supported by Cloud Run Volume represents a named volume in a container.
+ * Volume represents a named volume in a container.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -36,7 +36,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private ConfigMapVolumeSource configMap;
 
   /**
-   * Volume's name.
+   * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume's name.
+   * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,7 +72,7 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume's name.
+   * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
    * @param name name or {@code null} for none
    */
   public Volume setName(java.lang.String name) {

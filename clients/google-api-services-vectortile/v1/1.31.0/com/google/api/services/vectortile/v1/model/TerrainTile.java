@@ -38,6 +38,7 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
 
   /**
    * Terrain elevation data encoded as a FirstDerivativeElevationGrid.
+   * cs/symbol:FirstDerivativeElevationGrid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Terrain elevation data encoded as a SecondDerivativeElevationGrid. .
+   * Terrain elevation data encoded as a SecondDerivativeElevationGrid.
+   * cs/symbol:SecondDerivativeElevationGrid. See go/byte-encoded-terrain for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,6 +80,7 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
 
   /**
    * Terrain elevation data encoded as a FirstDerivativeElevationGrid.
+   * cs/symbol:FirstDerivativeElevationGrid.
    * @return value or {@code null} for none
    */
   public FirstDerivativeElevationGrid getFirstDerivative() {
@@ -86,6 +89,7 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
 
   /**
    * Terrain elevation data encoded as a FirstDerivativeElevationGrid.
+   * cs/symbol:FirstDerivativeElevationGrid.
    * @param firstDerivative firstDerivative or {@code null} for none
    */
   public TerrainTile setFirstDerivative(FirstDerivativeElevationGrid firstDerivative) {
@@ -115,7 +119,8 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Terrain elevation data encoded as a SecondDerivativeElevationGrid. .
+   * Terrain elevation data encoded as a SecondDerivativeElevationGrid.
+   * cs/symbol:SecondDerivativeElevationGrid. See go/byte-encoded-terrain for more details.
    * @return value or {@code null} for none
    */
   public SecondDerivativeElevationGrid getSecondDerivative() {
@@ -123,7 +128,8 @@ public final class TerrainTile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Terrain elevation data encoded as a SecondDerivativeElevationGrid. .
+   * Terrain elevation data encoded as a SecondDerivativeElevationGrid.
+   * cs/symbol:SecondDerivativeElevationGrid. See go/byte-encoded-terrain for more details.
    * @param secondDerivative secondDerivative or {@code null} for none
    */
   public TerrainTile setSecondDerivative(SecondDerivativeElevationGrid secondDerivative) {

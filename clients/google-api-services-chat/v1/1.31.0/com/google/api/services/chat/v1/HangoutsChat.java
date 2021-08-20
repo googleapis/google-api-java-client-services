@@ -279,8 +279,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -289,20 +289,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-     this is the first message with a given thread identifier, a new thread is created. Subsequent
-     messages with the same thread identifier will be posted into the same thread. This relieves bots
-     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-     is set in message.
+      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+     thread. If this is the first message with a given thread identifier, a new thread is created.
+     Subsequent messages with the same thread identifier will be posted into the same thread. This
+     relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+     existing thread, is set in message.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -445,8 +445,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -455,20 +455,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-     this is the first message with a given thread identifier, a new thread is created. Subsequent
-     messages with the same thread identifier will be posted into the same thread. This relieves bots
-     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-     is set in message.
+      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+     thread. If this is the first message with a given thread identifier, a new thread is created.
+     Subsequent messages with the same thread identifier will be posted into the same thread. This
+     relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+     existing thread, is set in message.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -632,34 +632,34 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-       this is the first message with a given thread identifier, a new thread is created. Subsequent
-       messages with the same thread identifier will be posted into the same thread. This relieves bots
-       and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-       is set in message.
+        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+       thread. If this is the first message with a given thread identifier, a new thread is created.
+       Subsequent messages with the same thread identifier will be posted into the same thread. This
+       relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+       existing thread, is set in message.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1000,8 +1000,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -1010,20 +1010,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-     this is the first message with a given thread identifier, a new thread is created. Subsequent
-     messages with the same thread identifier will be posted into the same thread. This relieves bots
-     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-     is set in message.
+      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+     thread. If this is the first message with a given thread identifier, a new thread is created.
+     Subsequent messages with the same thread identifier will be posted into the same thread. This
+     relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+     existing thread, is set in message.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -1166,8 +1166,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -1176,20 +1176,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-     this is the first message with a given thread identifier, a new thread is created. Subsequent
-     messages with the same thread identifier will be posted into the same thread. This relieves bots
-     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-     is set in message.
+      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+     thread. If this is the first message with a given thread identifier, a new thread is created.
+     Subsequent messages with the same thread identifier will be posted into the same thread. This
+     relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+     existing thread, is set in message.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -1353,34 +1353,34 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-       this is the first message with a given thread identifier, a new thread is created. Subsequent
-       messages with the same thread identifier will be posted into the same thread. This relieves bots
-       and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-       is set in message.
+        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+       thread. If this is the first message with a given thread identifier, a new thread is created.
+       Subsequent messages with the same thread identifier will be posted into the same thread. This
+       relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+       existing thread, is set in message.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Messages setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1830,8 +1830,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -1840,20 +1840,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String threadKey;
 
-      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-     this is the first message with a given thread identifier, a new thread is created. Subsequent
-     messages with the same thread identifier will be posted into the same thread. This relieves bots
-     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-     is set in message.
+      /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+     thread. If this is the first message with a given thread identifier, a new thread is created.
+     Subsequent messages with the same thread identifier will be posted into the same thread. This
+     relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+     earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+     existing thread, is set in message.
        */
       public java.lang.String getThreadKey() {
         return threadKey;
       }
 
       /**
-       * Opaque thread identifier string that can be specified to group messages into a single
-       * thread. If this is the first message with a given thread identifier, a new thread is
+       * Optional. Opaque thread identifier string that can be specified to group messages into a
+       * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
        * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
        * a thread (created earlier by them) to post further updates to it. Has no effect if thread
@@ -2371,34 +2371,34 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
 
-        /** Opaque thread identifier string that can be specified to group messages into a single thread. If
-       this is the first message with a given thread identifier, a new thread is created. Subsequent
-       messages with the same thread identifier will be posted into the same thread. This relieves bots
-       and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
-       is set in message.
+        /** Optional. Opaque thread identifier string that can be specified to group messages into a single
+       thread. If this is the first message with a given thread identifier, a new thread is created.
+       Subsequent messages with the same thread identifier will be posted into the same thread. This
+       relieves bots and webhooks from having to store the Hangouts Chat thread ID of a thread (created
+       earlier by them) to post further updates to it. Has no effect if thread field, corresponding to an
+       existing thread, is set in message.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
         }
 
         /**
-         * Opaque thread identifier string that can be specified to group messages into a single
-         * thread. If this is the first message with a given thread identifier, a new thread is
-         * created. Subsequent messages with the same thread identifier will be posted into the same
-         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it. Has no effect if
-         * thread field, corresponding to an existing thread, is set in message.
+         * Optional. Opaque thread identifier string that can be specified to group messages into a
+         * single thread. If this is the first message with a given thread identifier, a new thread
+         * is created. Subsequent messages with the same thread identifier will be posted into the
+         * same thread. This relieves bots and webhooks from having to store the Hangouts Chat
+         * thread ID of a thread (created earlier by them) to post further updates to it. Has no
+         * effect if thread field, corresponding to an existing thread, is set in message.
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;

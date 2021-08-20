@@ -253,38 +253,6 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Identifies the platform from which this user is accessing Idea Hub. */
-      @com.google.api.client.util.Key("creator.platform")
-      private java.lang.String creatorPlatform;
-
-      /** Identifies the platform from which this user is accessing Idea Hub.
-       */
-      public java.lang.String getCreatorPlatform() {
-        return creatorPlatform;
-      }
-
-      /** Identifies the platform from which this user is accessing Idea Hub. */
-      public List setCreatorPlatform(java.lang.String creatorPlatform) {
-        this.creatorPlatform = creatorPlatform;
-        return this;
-      }
-
-      /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas. */
-      @com.google.api.client.util.Key("creator.platformId")
-      private java.lang.String creatorPlatformId;
-
-      /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas.
-       */
-      public java.lang.String getCreatorPlatformId() {
-        return creatorPlatformId;
-      }
-
-      /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas. */
-      public List setCreatorPlatformId(java.lang.String creatorPlatformId) {
-        this.creatorPlatformId = creatorPlatformId;
-        return this;
-      }
-
       /**
        * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
        * restrictions. * Restrictions are implicitly combined, as if the `AND` operator was always
@@ -949,38 +917,6 @@ public class Ideahub extends com.google.api.client.googleapis.services.json.Abst
                   "^platforms/[^/]+/properties/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /** Identifies the platform from which this user is accessing Idea Hub. */
-          @com.google.api.client.util.Key("creator.platform")
-          private java.lang.String creatorPlatform;
-
-          /** Identifies the platform from which this user is accessing Idea Hub.
-           */
-          public java.lang.String getCreatorPlatform() {
-            return creatorPlatform;
-          }
-
-          /** Identifies the platform from which this user is accessing Idea Hub. */
-          public List setCreatorPlatform(java.lang.String creatorPlatform) {
-            this.creatorPlatform = creatorPlatform;
-            return this;
-          }
-
-          /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas. */
-          @com.google.api.client.util.Key("creator.platformId")
-          private java.lang.String creatorPlatformId;
-
-          /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas.
-           */
-          public java.lang.String getCreatorPlatformId() {
-            return creatorPlatformId;
-          }
-
-          /** Identifies the platform account (blog/site/etc.) for which to fetch Ideas. */
-          public List setCreatorPlatformId(java.lang.String creatorPlatformId) {
-            this.creatorPlatformId = creatorPlatformId;
             return this;
           }
 

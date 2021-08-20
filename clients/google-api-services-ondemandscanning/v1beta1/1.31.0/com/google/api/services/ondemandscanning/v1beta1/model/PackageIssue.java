@@ -54,6 +54,14 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   private Version affectedVersion;
 
   /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when it is not available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveSeverity;
+
+  /**
    * Output only. Whether a fix is available for this package.
    * The value may be {@code null}.
    */
@@ -83,6 +91,13 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Version fixedVersion;
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageType;
 
   /**
    * Required. The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
@@ -134,6 +149,25 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
    */
   public PackageIssue setAffectedVersion(Version affectedVersion) {
     this.affectedVersion = affectedVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when it is not available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveSeverity() {
+    return effectiveSeverity;
+  }
+
+  /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when it is not available.
+   * @param effectiveSeverity effectiveSeverity or {@code null} for none
+   */
+  public PackageIssue setEffectiveSeverity(java.lang.String effectiveSeverity) {
+    this.effectiveSeverity = effectiveSeverity;
     return this;
   }
 
@@ -208,6 +242,23 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
    */
   public PackageIssue setFixedVersion(Version fixedVersion) {
     this.fixedVersion = fixedVersion;
+    return this;
+  }
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageType() {
+    return packageType;
+  }
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * @param packageType packageType or {@code null} for none
+   */
+  public PackageIssue setPackageType(java.lang.String packageType) {
+    this.packageType = packageType;
     return this;
   }
 

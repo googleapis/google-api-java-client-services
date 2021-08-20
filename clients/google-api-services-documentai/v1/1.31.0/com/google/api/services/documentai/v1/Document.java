@@ -698,23 +698,23 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
          * `Code.CANCELLED`.
          *
-         * Create a request for the method "operations.cancelOperation".
+         * Create a request for the method "operations.cancel".
          *
          * This request holds the parameters needed by the documentai server.  After setting any optional
-         * parameters, call the {@link CancelOperation#execute()} method to invoke the remote operation.
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param name The name of the operation resource to be cancelled.
          * @return the request
          */
-        public CancelOperation cancelOperation(java.lang.String name) throws java.io.IOException {
-          CancelOperation result = new CancelOperation(name);
+        public Cancel cancel(java.lang.String name) throws java.io.IOException {
+          Cancel result = new Cancel(name);
           initialize(result);
           return result;
         }
 
-        public class CancelOperation extends DocumentRequest<com.google.api.services.documentai.v1.model.GoogleProtobufEmpty> {
+        public class Cancel extends DocumentRequest<com.google.api.services.documentai.v1.model.GoogleProtobufEmpty> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1/{+name}:cancel";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -728,19 +728,19 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
            * `Code.CANCELLED`.
            *
-           * Create a request for the method "operations.cancelOperation".
+           * Create a request for the method "operations.cancel".
            *
            * This request holds the parameters needed by the the documentai server.  After setting any
-           * optional parameters, call the {@link CancelOperation#execute()} method to invoke the remote
-           * operation. <p> {@link CancelOperation#initialize(com.google.api.client.googleapis.services.Abst
-           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of the operation resource to be cancelled.
            * @since 1.13
            */
-          protected CancelOperation(java.lang.String name) {
-            super(Document.this, "DELETE", REST_PATH, null, com.google.api.services.documentai.v1.model.GoogleProtobufEmpty.class);
+          protected Cancel(java.lang.String name) {
+            super(Document.this, "POST", REST_PATH, null, com.google.api.services.documentai.v1.model.GoogleProtobufEmpty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -750,58 +750,58 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public CancelOperation set$Xgafv(java.lang.String $Xgafv) {
-            return (CancelOperation) super.set$Xgafv($Xgafv);
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public CancelOperation setAccessToken(java.lang.String accessToken) {
-            return (CancelOperation) super.setAccessToken(accessToken);
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
           }
 
           @Override
-          public CancelOperation setAlt(java.lang.String alt) {
-            return (CancelOperation) super.setAlt(alt);
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
           }
 
           @Override
-          public CancelOperation setCallback(java.lang.String callback) {
-            return (CancelOperation) super.setCallback(callback);
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
           }
 
           @Override
-          public CancelOperation setFields(java.lang.String fields) {
-            return (CancelOperation) super.setFields(fields);
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
           }
 
           @Override
-          public CancelOperation setKey(java.lang.String key) {
-            return (CancelOperation) super.setKey(key);
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
           }
 
           @Override
-          public CancelOperation setOauthToken(java.lang.String oauthToken) {
-            return (CancelOperation) super.setOauthToken(oauthToken);
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public CancelOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (CancelOperation) super.setPrettyPrint(prettyPrint);
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public CancelOperation setQuotaUser(java.lang.String quotaUser) {
-            return (CancelOperation) super.setQuotaUser(quotaUser);
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public CancelOperation setUploadType(java.lang.String uploadType) {
-            return (CancelOperation) super.setUploadType(uploadType);
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
           }
 
           @Override
-          public CancelOperation setUploadProtocol(java.lang.String uploadProtocol) {
-            return (CancelOperation) super.setUploadProtocol(uploadProtocol);
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The name of the operation resource to be cancelled. */
@@ -815,7 +815,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /** The name of the operation resource to be cancelled. */
-          public CancelOperation setName(java.lang.String name) {
+          public Cancel setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
@@ -826,8 +826,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           @Override
-          public CancelOperation set(String parameterName, Object value) {
-            return (CancelOperation) super.set(parameterName, value);
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
           }
         }
         /**
@@ -2570,23 +2570,23 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
            * `Code.CANCELLED`.
            *
-           * Create a request for the method "operations.cancelOperation".
+           * Create a request for the method "operations.cancel".
            *
            * This request holds the parameters needed by the documentai server.  After setting any optional
-           * parameters, call the {@link CancelOperation#execute()} method to invoke the remote operation.
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
            *
            * @param name The name of the operation resource to be cancelled.
            * @return the request
            */
-          public CancelOperation cancelOperation(java.lang.String name) throws java.io.IOException {
-            CancelOperation result = new CancelOperation(name);
+          public Cancel cancel(java.lang.String name) throws java.io.IOException {
+            Cancel result = new Cancel(name);
             initialize(result);
             return result;
           }
 
-          public class CancelOperation extends DocumentRequest<com.google.api.services.documentai.v1.model.GoogleProtobufEmpty> {
+          public class Cancel extends DocumentRequest<com.google.api.services.documentai.v1.model.GoogleProtobufEmpty> {
 
-            private static final String REST_PATH = "uiv1beta3/{+name}";
+            private static final String REST_PATH = "uiv1beta3/{+name}:cancel";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -2600,19 +2600,19 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
              * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
              * `Code.CANCELLED`.
              *
-             * Create a request for the method "operations.cancelOperation".
+             * Create a request for the method "operations.cancel".
              *
              * This request holds the parameters needed by the the documentai server.  After setting any
-             * optional parameters, call the {@link CancelOperation#execute()} method to invoke the remote
-             * operation. <p> {@link CancelOperation#initialize(com.google.api.client.googleapis.services.Abst
-             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-             * the constructor. </p>
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name The name of the operation resource to be cancelled.
              * @since 1.13
              */
-            protected CancelOperation(java.lang.String name) {
-              super(Document.this, "DELETE", REST_PATH, null, com.google.api.services.documentai.v1.model.GoogleProtobufEmpty.class);
+            protected Cancel(java.lang.String name) {
+              super(Document.this, "POST", REST_PATH, null, com.google.api.services.documentai.v1.model.GoogleProtobufEmpty.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2622,58 +2622,58 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
 
             @Override
-            public CancelOperation set$Xgafv(java.lang.String $Xgafv) {
-              return (CancelOperation) super.set$Xgafv($Xgafv);
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public CancelOperation setAccessToken(java.lang.String accessToken) {
-              return (CancelOperation) super.setAccessToken(accessToken);
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
             }
 
             @Override
-            public CancelOperation setAlt(java.lang.String alt) {
-              return (CancelOperation) super.setAlt(alt);
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
             }
 
             @Override
-            public CancelOperation setCallback(java.lang.String callback) {
-              return (CancelOperation) super.setCallback(callback);
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
             }
 
             @Override
-            public CancelOperation setFields(java.lang.String fields) {
-              return (CancelOperation) super.setFields(fields);
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
             }
 
             @Override
-            public CancelOperation setKey(java.lang.String key) {
-              return (CancelOperation) super.setKey(key);
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
             }
 
             @Override
-            public CancelOperation setOauthToken(java.lang.String oauthToken) {
-              return (CancelOperation) super.setOauthToken(oauthToken);
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public CancelOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (CancelOperation) super.setPrettyPrint(prettyPrint);
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public CancelOperation setQuotaUser(java.lang.String quotaUser) {
-              return (CancelOperation) super.setQuotaUser(quotaUser);
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public CancelOperation setUploadType(java.lang.String uploadType) {
-              return (CancelOperation) super.setUploadType(uploadType);
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
             }
 
             @Override
-            public CancelOperation setUploadProtocol(java.lang.String uploadProtocol) {
-              return (CancelOperation) super.setUploadProtocol(uploadProtocol);
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
             }
 
             /** The name of the operation resource to be cancelled. */
@@ -2687,7 +2687,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /** The name of the operation resource to be cancelled. */
-            public CancelOperation setName(java.lang.String name) {
+            public Cancel setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
@@ -2698,8 +2698,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
 
             @Override
-            public CancelOperation set(String parameterName, Object value) {
-              return (CancelOperation) super.set(parameterName, value);
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
             }
           }
           /**

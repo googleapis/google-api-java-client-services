@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Not supported by Cloud Run VolumeMount describes a mounting of a Volume within a container.
+ * VolumeMount describes a mounting of a Volume within a container.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   private java.lang.String mountPath;
 
   /**
-   * This must match the Name of a Volume.
+   * The name of the volume. There must be a corresponding Volume with the same name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This must match the Name of a Volume.
+   * The name of the volume. There must be a corresponding Volume with the same name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,7 +84,7 @@ public final class VolumeMount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This must match the Name of a Volume.
+   * The name of the volume. There must be a corresponding Volume with the same name.
    * @param name name or {@code null} for none
    */
   public VolumeMount setName(java.lang.String name) {

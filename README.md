@@ -143,7 +143,7 @@ packages on [Maven Central][maven-search].
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
-| GKE Hub | [v1](clients/google-api-services-gkehub/v1), [v1alpha](clients/google-api-services-gkehub/v1alpha), [v1alpha2](clients/google-api-services-gkehub/v1alpha2), [v1beta](clients/google-api-services-gkehub/v1beta), [v1beta1](clients/google-api-services-gkehub/v1beta1) |
+| GKE Hub API | [v1](clients/google-api-services-gkehub/v1), [v1alpha](clients/google-api-services-gkehub/v1alpha), [v1alpha2](clients/google-api-services-gkehub/v1alpha2), [v1beta](clients/google-api-services-gkehub/v1beta), [v1beta1](clients/google-api-services-gkehub/v1beta1) |
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |

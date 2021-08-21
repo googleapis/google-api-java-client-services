@@ -36,12 +36,12 @@ package com.google.api.services.gkehub.v1beta1.model;
  * domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role:
  * roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role:
  * roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not
- * grant access after Sep 2020 expression: request.time < timestamp('2020-10-01T00:00:00.000Z') -
- * etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM
+ * grant access after Sep 2020 expression: request.time < timestamp('2020-10-01T00:00:00.000Z')
+ * etag: BwWWja0YfJA= version: 3 For a description of IAM and its features, see the [IAM
  * documentation](https://cloud.google.com/iam/docs/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:
+ * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

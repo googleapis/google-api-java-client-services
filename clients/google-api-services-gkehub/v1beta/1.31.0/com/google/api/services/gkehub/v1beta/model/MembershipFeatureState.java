@@ -20,7 +20,7 @@ package com.google.api.services.gkehub.v1beta.model;
  * MembershipFeatureState contains Feature status information for a single Membership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:
+ * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -35,6 +35,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private ConfigManagementMembershipState configmanagement;
+
+  /**
+   * Identity Service-specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceMembershipState identityservice;
 
   /**
    * Metering-specific spec.
@@ -64,6 +71,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setConfigmanagement(ConfigManagementMembershipState configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Identity Service-specific state.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceMembershipState getIdentityservice() {
+    return identityservice;
+  }
+
+  /**
+   * Identity Service-specific state.
+   * @param identityservice identityservice or {@code null} for none
+   */
+  public MembershipFeatureState setIdentityservice(IdentityServiceMembershipState identityservice) {
+    this.identityservice = identityservice;
     return this;
   }
 

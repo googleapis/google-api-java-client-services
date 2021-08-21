@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha2;
 
 /**
- * Available OAuth 2.0 scopes for use with the GKE Hub.
+ * Available OAuth 2.0 scopes for use with the GKE Hub API.
  *
  * @since 1.4
  */

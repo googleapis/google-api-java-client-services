@@ -20,7 +20,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * MembershipFeatureSpec contains configuration information for a single Membership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the GKE Hub. For a detailed explanation see:
+ * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,6 +37,13 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ConfigManagementMembershipSpec configmanagement;
 
   /**
+   * Identity Service-specific spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceMembershipSpec identityservice;
+
+  /**
    * Config Management-specific spec.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setConfigmanagement(ConfigManagementMembershipSpec configmanagement) {
     this.configmanagement = configmanagement;
+    return this;
+  }
+
+  /**
+   * Identity Service-specific spec.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceMembershipSpec getIdentityservice() {
+    return identityservice;
+  }
+
+  /**
+   * Identity Service-specific spec.
+   * @param identityservice identityservice or {@code null} for none
+   */
+  public MembershipFeatureSpec setIdentityservice(IdentityServiceMembershipSpec identityservice) {
+    this.identityservice = identityservice;
     return this;
   }
 

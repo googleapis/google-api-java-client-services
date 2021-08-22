@@ -105,11 +105,21 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
-   * transfer config finish.
+   * transfer config finish. The format for specifying a pubsub topic is:
+   * `projects/{project}/topics/{topic}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationPubsubTopic;
+
+  /**
+   * Output only. Information about the user whose credentials are used to transfer data. Populated
+   * only for `transferConfigs.get` requests. In case the user information is not available, this
+   * field will not be populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserInfo ownerInfo;
 
   /**
    * Parameters specific to each data source. For more information see the bq tab in the 'Setting up
@@ -330,7 +340,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
-   * transfer config finish.
+   * transfer config finish. The format for specifying a pubsub topic is:
+   * `projects/{project}/topics/{topic}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -339,11 +350,33 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Pub/Sub topic where notifications will be sent after transfer runs associated with this
-   * transfer config finish.
+   * transfer config finish. The format for specifying a pubsub topic is:
+   * `projects/{project}/topics/{topic}`
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public TransferConfig setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
     this.notificationPubsubTopic = notificationPubsubTopic;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the user whose credentials are used to transfer data. Populated
+   * only for `transferConfigs.get` requests. In case the user information is not available, this
+   * field will not be populated.
+   * @return value or {@code null} for none
+   */
+  public UserInfo getOwnerInfo() {
+    return ownerInfo;
+  }
+
+  /**
+   * Output only. Information about the user whose credentials are used to transfer data. Populated
+   * only for `transferConfigs.get` requests. In case the user information is not available, this
+   * field will not be populated.
+   * @param ownerInfo ownerInfo or {@code null} for none
+   */
+  public TransferConfig setOwnerInfo(UserInfo ownerInfo) {
+    this.ownerInfo = ownerInfo;
     return this;
   }
 

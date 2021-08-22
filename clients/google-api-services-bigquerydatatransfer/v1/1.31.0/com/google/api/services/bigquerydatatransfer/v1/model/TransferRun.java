@@ -76,7 +76,8 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes.
+   * The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +255,8 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes.
+   * The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPubsubTopic() {
@@ -262,7 +264,8 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes
+   * Output only. Pub/Sub topic where a notification will be sent after this transfer run finishes.
+   * The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
    * @param notificationPubsubTopic notificationPubsubTopic or {@code null} for none
    */
   public TransferRun setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {

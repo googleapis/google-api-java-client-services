@@ -158,6 +158,14 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Vulnerability vulnerability;
+
+  /**
    * The canonical name of the finding. It's either
    * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
    * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
@@ -444,6 +452,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
+   * @return value or {@code null} for none
+   */
+  public Vulnerability getVulnerability() {
+    return vulnerability;
+  }
+
+  /**
+   * Represents vulnerability specific fields like cve, cvss scores etc. CVE stands for Common
+   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
+   * @param vulnerability vulnerability or {@code null} for none
+   */
+  public Finding setVulnerability(Vulnerability vulnerability) {
+    this.vulnerability = vulnerability;
     return this;
   }
 

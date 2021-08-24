@@ -66,6 +66,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaCustomMetric customMetric;
 
   /**
+   * A snapshot of a data retention settings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings;
+
+  /**
    * A snapshot of a DisplayVideo360AdvertiserLink resource in change history.
    * The value may be {@code null}.
    */
@@ -210,6 +217,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setCustomMetric(GoogleAnalyticsAdminV1alphaCustomMetric customMetric) {
     this.customMetric = customMetric;
+    return this;
+  }
+
+  /**
+   * A snapshot of a data retention settings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaDataRetentionSettings getDataRetentionSettings() {
+    return dataRetentionSettings;
+  }
+
+  /**
+   * A snapshot of a data retention settings resource in change history.
+   * @param dataRetentionSettings dataRetentionSettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setDataRetentionSettings(GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings) {
+    this.dataRetentionSettings = dataRetentionSettings;
     return this;
   }
 

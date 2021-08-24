@@ -62,6 +62,20 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
   private GoogleTypeDateTime datetimeValue;
 
   /**
+   * Float value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float floatValue;
+
+  /**
+   * Integer value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer integerValue;
+
+  /**
    * Money value. See also:
    * https://github.com/googleapis/googleapis/blob/master/google/type/money.proto
    * The value may be {@code null}.
@@ -70,11 +84,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
   private GoogleTypeMoney moneyValue;
 
   /**
-   * Required. Normalized entity value stored as a string. This field is populated for supported
-   * document type (e.g. Invoice). For some entity types, one of respective 'structured_value'
-   * fields may also be populated. - Money/Currency type (`money_value`) is in the ISO 4217 text
-   * format. - Date type (`date_value`) is in the ISO 8601 text format. - Datetime type
-   * (`datetime_value`) is in the ISO 8601 text format.
+   * Optional. An optional field to store a normalized string. For some entity types, one of
+   * respective 'structured_value' fields may also be populated. Also not all the types of
+   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * int normalized text by default. Below are sample formats mapped to structured values. -
+   * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
+   * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,6 +171,40 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
   }
 
   /**
+   * Float value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFloatValue() {
+    return floatValue;
+  }
+
+  /**
+   * Float value.
+   * @param floatValue floatValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue setFloatValue(java.lang.Float floatValue) {
+    this.floatValue = floatValue;
+    return this;
+  }
+
+  /**
+   * Integer value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getIntegerValue() {
+    return integerValue;
+  }
+
+  /**
+   * Integer value.
+   * @param integerValue integerValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue setIntegerValue(java.lang.Integer integerValue) {
+    this.integerValue = integerValue;
+    return this;
+  }
+
+  /**
    * Money value. See also:
    * https://github.com/googleapis/googleapis/blob/master/google/type/money.proto
    * @return value or {@code null} for none
@@ -174,11 +224,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Required. Normalized entity value stored as a string. This field is populated for supported
-   * document type (e.g. Invoice). For some entity types, one of respective 'structured_value'
-   * fields may also be populated. - Money/Currency type (`money_value`) is in the ISO 4217 text
-   * format. - Date type (`date_value`) is in the ISO 8601 text format. - Datetime type
-   * (`datetime_value`) is in the ISO 8601 text format.
+   * Optional. An optional field to store a normalized string. For some entity types, one of
+   * respective 'structured_value' fields may also be populated. Also not all the types of
+   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * int normalized text by default. Below are sample formats mapped to structured values. -
+   * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
+   * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -186,11 +238,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Required. Normalized entity value stored as a string. This field is populated for supported
-   * document type (e.g. Invoice). For some entity types, one of respective 'structured_value'
-   * fields may also be populated. - Money/Currency type (`money_value`) is in the ISO 4217 text
-   * format. - Date type (`date_value`) is in the ISO 8601 text format. - Datetime type
-   * (`datetime_value`) is in the ISO 8601 text format.
+   * Optional. An optional field to store a normalized string. For some entity types, one of
+   * respective 'structured_value' fields may also be populated. Also not all the types of
+   * 'structured_value' will be normalized. For example, some processors may not generate float or
+   * int normalized text by default. Below are sample formats mapped to structured values. -
+   * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date type (`date_value`)
+   * is in the ISO 8601 text format. - Datetime type (`datetime_value`) is in the ISO 8601 text
+   * format.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue setText(java.lang.String text) {

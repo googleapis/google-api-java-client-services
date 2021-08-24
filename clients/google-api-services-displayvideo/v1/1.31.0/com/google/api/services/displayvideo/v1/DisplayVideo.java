@@ -16318,13 +16318,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
        * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
        * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
-       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
-       * the value is a string. We return all custom bidding algorithms whose display_name contains
-       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
-       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
-       * custom bidding algorithms for which the display name contains "politics":
-       * `displayName:politics`. * All custom bidding algorithms for which the type is
-       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
+       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` -
+       * `customBiddingAlgorithmState` * For `displayName`, the value is a string. We return all
+       * custom bidding algorithms whose display_name contains such string. * For
+       * `customBiddingAlgorithmType`, the value is a string. We return all algorithms whose
+       * custom_bidding_algorithm_type is equal to the given type. * For
+       * `customBiddingAlgorithmState`, the value is a string. We return all algorithms whose
+       * custom_bidding_algorithm_state is equal to the given type. Examples: * All custom bidding
+       * algorithms for which the display name contains "politics": `displayName:politics`. * All
+       * custom bidding algorithms for which the type is "SCRIPT_BASED":
+       * `customBiddingAlgorithmType=SCRIPT_BASED` * All custom bidding algorithms for which the
+       * state is "ENABLED": `customBiddingAlgorithmState=ENABLED` The length of this field should
        * be no more than 500 characters.
        */
       @com.google.api.client.util.Key
@@ -16335,12 +16339,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      restrictions * implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`.
      * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for
      the following field: - `displayName` * The operator must be `EQUALS (=)` for the following field: -
-     `customBiddingAlgorithmType` * For `displayName`, the value is a string. We return all custom
-     bidding algorithms whose display_name contains such string. * For `customBiddingAlgorithmType`, the
-     value is a string. We return all algorithms whose custom_bidding_algorithm_type is equal to the
+     `customBiddingAlgorithmType` - `customBiddingAlgorithmState` * For `displayName`, the value is a
+     string. We return all custom bidding algorithms whose display_name contains such string. * For
+     `customBiddingAlgorithmType`, the value is a string. We return all algorithms whose
+     custom_bidding_algorithm_type is equal to the given type. * For `customBiddingAlgorithmState`, the
+     value is a string. We return all algorithms whose custom_bidding_algorithm_state is equal to the
      given type. Examples: * All custom bidding algorithms for which the display name contains
      "politics": `displayName:politics`. * All custom bidding algorithms for which the type is
-     "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should be no
+     "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` * All custom bidding algorithms for which
+     the state is "ENABLED": `customBiddingAlgorithmState=ENABLED` The length of this field should be no
      more than 500 characters.
        */
       public java.lang.String getFilter() {
@@ -16353,13 +16360,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
        * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
        * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
-       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
-       * the value is a string. We return all custom bidding algorithms whose display_name contains
-       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
-       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
-       * custom bidding algorithms for which the display name contains "politics":
-       * `displayName:politics`. * All custom bidding algorithms for which the type is
-       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
+       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` -
+       * `customBiddingAlgorithmState` * For `displayName`, the value is a string. We return all
+       * custom bidding algorithms whose display_name contains such string. * For
+       * `customBiddingAlgorithmType`, the value is a string. We return all algorithms whose
+       * custom_bidding_algorithm_type is equal to the given type. * For
+       * `customBiddingAlgorithmState`, the value is a string. We return all algorithms whose
+       * custom_bidding_algorithm_state is equal to the given type. Examples: * All custom bidding
+       * algorithms for which the display name contains "politics": `displayName:politics`. * All
+       * custom bidding algorithms for which the type is "SCRIPT_BASED":
+       * `customBiddingAlgorithmType=SCRIPT_BASED` * All custom bidding algorithms for which the
+       * state is "ENABLED": `customBiddingAlgorithmState=ENABLED` The length of this field should
        * be no more than 500 characters.
        */
       public List setFilter(java.lang.String filter) {

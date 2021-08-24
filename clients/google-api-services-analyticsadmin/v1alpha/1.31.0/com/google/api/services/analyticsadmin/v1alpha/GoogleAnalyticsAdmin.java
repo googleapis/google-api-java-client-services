@@ -3286,6 +3286,157 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Returns the singleton data retention settings for this property.
+     *
+     * Create a request for the method "properties.getDataRetentionSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetDataRetentionSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the settings to lookup. Format: properties/{property}/dataRetentionSettings
+     *        Example: "properties/1000/dataRetentionSettings"
+     * @return the request
+     */
+    public GetDataRetentionSettings getDataRetentionSettings(java.lang.String name) throws java.io.IOException {
+      GetDataRetentionSettings result = new GetDataRetentionSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetDataRetentionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/dataRetentionSettings$");
+
+      /**
+       * Returns the singleton data retention settings for this property.
+       *
+       * Create a request for the method "properties.getDataRetentionSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetDataRetentionSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetDataRetentionSettings#initialize(com.google.api.client.googleap
+       * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the settings to lookup. Format: properties/{property}/dataRetentionSettings
+     *        Example: "properties/1000/dataRetentionSettings"
+       * @since 1.13
+       */
+      protected GetDataRetentionSettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/dataRetentionSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetDataRetentionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetDataRetentionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetDataRetentionSettings setAccessToken(java.lang.String accessToken) {
+        return (GetDataRetentionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetDataRetentionSettings setAlt(java.lang.String alt) {
+        return (GetDataRetentionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetDataRetentionSettings setCallback(java.lang.String callback) {
+        return (GetDataRetentionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetDataRetentionSettings setFields(java.lang.String fields) {
+        return (GetDataRetentionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetDataRetentionSettings setKey(java.lang.String key) {
+        return (GetDataRetentionSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetDataRetentionSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetDataRetentionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetDataRetentionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetDataRetentionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetDataRetentionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetDataRetentionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetDataRetentionSettings setUploadType(java.lang.String uploadType) {
+        return (GetDataRetentionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetDataRetentionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetDataRetentionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/dataRetentionSettings Example:
+       * "properties/1000/dataRetentionSettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the settings to lookup. Format: properties/{property}/dataRetentionSettings
+     Example: "properties/1000/dataRetentionSettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/dataRetentionSettings Example:
+       * "properties/1000/dataRetentionSettings"
+       */
+      public GetDataRetentionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/dataRetentionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetDataRetentionSettings set(String parameterName, Object value) {
+        return (GetDataRetentionSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lookup for Google Signals settings for a property.
      *
      * Create a request for the method "properties.getGoogleSignalsSettings".
@@ -3824,6 +3975,173 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the singleton data retention settings for this property.
+     *
+     * Create a request for the method "properties.updateDataRetentionSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link UpdateDataRetentionSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Output only. Resource name for this DataRetentionSetting resource. Format:
+     *        properties/{property}/dataRetentionSettings
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings}
+     * @return the request
+     */
+    public UpdateDataRetentionSettings updateDataRetentionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings content) throws java.io.IOException {
+      UpdateDataRetentionSettings result = new UpdateDataRetentionSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateDataRetentionSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/dataRetentionSettings$");
+
+      /**
+       * Updates the singleton data retention settings for this property.
+       *
+       * Create a request for the method "properties.updateDataRetentionSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateDataRetentionSettings#execute()} method to invoke
+       * the remote operation. <p> {@link UpdateDataRetentionSettings#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. Resource name for this DataRetentionSetting resource. Format:
+     *        properties/{property}/dataRetentionSettings
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings}
+       * @since 1.13
+       */
+      protected UpdateDataRetentionSettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings content) {
+        super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaDataRetentionSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/dataRetentionSettings$");
+        }
+      }
+
+      @Override
+      public UpdateDataRetentionSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateDataRetentionSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateDataRetentionSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setAlt(java.lang.String alt) {
+        return (UpdateDataRetentionSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setCallback(java.lang.String callback) {
+        return (UpdateDataRetentionSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setFields(java.lang.String fields) {
+        return (UpdateDataRetentionSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setKey(java.lang.String key) {
+        return (UpdateDataRetentionSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateDataRetentionSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateDataRetentionSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateDataRetentionSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateDataRetentionSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateDataRetentionSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateDataRetentionSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. Resource name for this DataRetentionSetting resource. Format:
+       * properties/{property}/dataRetentionSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. Resource name for this DataRetentionSetting resource. Format:
+     properties/{property}/dataRetentionSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. Resource name for this DataRetentionSetting resource. Format:
+       * properties/{property}/dataRetentionSettings
+       */
+      public UpdateDataRetentionSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/dataRetentionSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+     "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+     with the string "*" to match all fields.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields.
+       */
+      public UpdateDataRetentionSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateDataRetentionSettings set(String parameterName, Object value) {
+        return (UpdateDataRetentionSettings) super.set(parameterName, value);
       }
     }
     /**

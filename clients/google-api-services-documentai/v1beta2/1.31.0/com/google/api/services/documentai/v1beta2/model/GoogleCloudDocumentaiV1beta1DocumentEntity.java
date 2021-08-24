@@ -17,7 +17,8 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * A phrase in the text that is a known entity type, such as a person, an organization, or location.
+ * An entity that could be a phrase in the text or a property belongs to the document. It is a known
+ * entity type, such as a person, an organization, or location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -52,7 +53,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   private java.lang.String mentionId;
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
+   * present in the document, this field will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +165,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
+   * present in the document, this field will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionText() {
@@ -171,7 +174,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value in the document e.g. `1600 Amphitheatre Pkwy`. If the entity is not
+   * present in the document, this field will be empty.
    * @param mentionText mentionText or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setMentionText(java.lang.String mentionText) {

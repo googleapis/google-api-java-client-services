@@ -51,7 +51,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   private java.lang.String kind;
 
   /**
-   * Information about the current page.
+   * Deprecated and unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Information about the current page.
+   * Deprecated and unset.
    * @return value or {@code null} for none
    */
   public PageInfo getPageInfo() {
@@ -107,7 +107,7 @@ public final class InappproductsListResponse extends com.google.api.client.json.
   }
 
   /**
-   * Information about the current page.
+   * Deprecated and unset.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public InappproductsListResponse setPageInfo(PageInfo pageInfo) {

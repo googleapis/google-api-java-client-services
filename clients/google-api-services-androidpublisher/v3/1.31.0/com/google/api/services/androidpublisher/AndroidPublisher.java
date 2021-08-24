@@ -6581,7 +6581,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Lists all in-app products - both managed products and subscriptions.
+     * Lists all in-app products - both managed products and subscriptions. If an app has a large number
+     * of in-app products, the response may be paginated. In this case the response field
+     * `tokenPagination.nextPageToken` will be set and the caller should provide its value as a `token`
+     * request parameter to retrieve the next page.
      *
      * Create a request for the method "inappproducts.list".
      *
@@ -6602,7 +6605,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * Lists all in-app products - both managed products and subscriptions.
+       * Lists all in-app products - both managed products and subscriptions. If an app has a large
+       * number of in-app products, the response may be paginated. In this case the response field
+       * `tokenPagination.nextPageToken` will be set and the caller should provide its value as a
+       * `token` request parameter to retrieve the next page.
        *
        * Create a request for the method "inappproducts.list".
        *
@@ -6700,33 +6706,33 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /** How many results the list operation should return. */
+      /** Deprecated and ignored. The page size is determined by the server. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** How many results the list operation should return.
+      /** Deprecated and ignored. The page size is determined by the server.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** How many results the list operation should return. */
+      /** Deprecated and ignored. The page size is determined by the server. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** The index of the first element to return. */
+      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page. */
       @com.google.api.client.util.Key
       private java.lang.Long startIndex;
 
-      /** The index of the first element to return.
+      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page.
        */
       public java.lang.Long getStartIndex() {
         return startIndex;
       }
 
-      /** The index of the first element to return. */
+      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page. */
       public List setStartIndex(java.lang.Long startIndex) {
         this.startIndex = startIndex;
         return this;

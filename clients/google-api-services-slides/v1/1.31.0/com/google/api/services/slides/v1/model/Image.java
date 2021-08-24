@@ -46,6 +46,15 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private ImageProperties imageProperties;
 
   /**
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
+   * masters. If set, the image is a placeholder image and any inherited properties can be resolved
+   * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Placeholder placeholder;
+
+  /**
    * The source URL is the URL used to insert the image. The source URL can be empty.
    * The value may be {@code null}.
    */
@@ -87,6 +96,27 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setImageProperties(ImageProperties imageProperties) {
     this.imageProperties = imageProperties;
+    return this;
+  }
+
+  /**
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
+   * masters. If set, the image is a placeholder image and any inherited properties can be resolved
+   * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
+   * @return value or {@code null} for none
+   */
+  public Placeholder getPlaceholder() {
+    return placeholder;
+  }
+
+  /**
+   * Placeholders are page elements that inherit from corresponding placeholders on layouts and
+   * masters. If set, the image is a placeholder image and any inherited properties can be resolved
+   * by looking at the parent placeholder identified by the Placeholder.parent_object_id field.
+   * @param placeholder placeholder or {@code null} for none
+   */
+  public Image setPlaceholder(Placeholder placeholder) {
+    this.placeholder = placeholder;
     return this;
   }
 

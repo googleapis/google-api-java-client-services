@@ -74,8 +74,8 @@ public final class GoogleAppsCloudidentityDevicesV1DeviceUser extends com.google
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * DeviceUser in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where
-   * `device_user_id` uniquely identifies a user's use of a device.
+   * DeviceUser in format: `devices/{device}/deviceUsers/{device_user}`, where `device_user`
+   * uniquely identifies a user's use of a device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,8 +206,8 @@ public final class GoogleAppsCloudidentityDevicesV1DeviceUser extends com.google
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * DeviceUser in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where
-   * `device_user_id` uniquely identifies a user's use of a device.
+   * DeviceUser in format: `devices/{device}/deviceUsers/{device_user}`, where `device_user`
+   * uniquely identifies a user's use of a device.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -216,8 +216,8 @@ public final class GoogleAppsCloudidentityDevicesV1DeviceUser extends com.google
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * DeviceUser in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where
-   * `device_user_id` uniquely identifies a user's use of a device.
+   * DeviceUser in format: `devices/{device}/deviceUsers/{device_user}`, where `device_user`
+   * uniquely identifies a user's use of a device.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1DeviceUser setName(java.lang.String name) {

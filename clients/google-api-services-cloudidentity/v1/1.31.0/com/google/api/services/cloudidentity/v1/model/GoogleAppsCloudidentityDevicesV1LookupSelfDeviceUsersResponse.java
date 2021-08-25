@@ -39,8 +39,8 @@ public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
 
   /**
    * [Resource names](https://cloud.google.com/apis/design/resource_names) of the DeviceUsers in the
-   * format: `devices/{device_id}/deviceUsers/{user_resource_id}`, where device_id is the unique ID
-   * assigned to a Device and user_resource_id is the unique user ID
+   * format: `devices/{device}/deviceUsers/{user_resource}`, where device is the unique ID assigned
+   * to a Device and user_resource is the unique user ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
 
   /**
    * [Resource names](https://cloud.google.com/apis/design/resource_names) of the DeviceUsers in the
-   * format: `devices/{device_id}/deviceUsers/{user_resource_id}`, where device_id is the unique ID
-   * assigned to a Device and user_resource_id is the unique user ID
+   * format: `devices/{device}/deviceUsers/{user_resource}`, where device is the unique ID assigned
+   * to a Device and user_resource is the unique user ID
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNames() {
@@ -84,8 +84,8 @@ public final class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
 
   /**
    * [Resource names](https://cloud.google.com/apis/design/resource_names) of the DeviceUsers in the
-   * format: `devices/{device_id}/deviceUsers/{user_resource_id}`, where device_id is the unique ID
-   * assigned to a Device and user_resource_id is the unique user ID
+   * format: `devices/{device}/deviceUsers/{user_resource}`, where device is the unique ID assigned
+   * to a Device and user_resource is the unique user ID
    * @param names names or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse setNames(java.util.List<java.lang.String> names) {

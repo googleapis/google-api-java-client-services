@@ -32,8 +32,8 @@ public final class GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest e
   /**
    * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use `customers/my_customer` If you're using
-   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
-   * the customer to whom the device belongs.
+   * this API to manage another organization, use `customers/{customer}`, where customer is the
+   * customer to whom the device belongs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest e
   /**
    * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use `customers/my_customer` If you're using
-   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
-   * the customer to whom the device belongs.
+   * this API to manage another organization, use `customers/{customer}`, where customer is the
+   * customer to whom the device belongs.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -53,8 +53,8 @@ public final class GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest e
   /**
    * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use `customers/my_customer` If you're using
-   * this API to manage another organization, use `customers/{customer_id}`, where customer_id is
-   * the customer to whom the device belongs.
+   * this API to manage another organization, use `customers/{customer}`, where customer is the
+   * customer to whom the device belongs.
    * @param customer customer or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest setCustomer(java.lang.String customer) {

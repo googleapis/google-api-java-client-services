@@ -673,204 +673,6 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return (Get) super.set(parameterName, value);
           }
         }
-        /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
-         *
-         * Create a request for the method "operations.list".
-         *
-         * This request holds the parameters needed by the artifactregistry server.  After setting any
-         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param name The name of the operation's parent resource.
-         * @return the request
-         */
-        public List list(java.lang.String name) throws java.io.IOException {
-          List result = new List(name);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta1.model.ListOperationsResponse> {
-
-          private static final String REST_PATH = "v1beta1/{+name}/operations";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
-           *
-           * Create a request for the method "operations.list".
-           *
-           * This request holds the parameters needed by the the artifactregistry server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The name of the operation's parent resource.
-           * @since 1.13
-           */
-          protected List(java.lang.String name) {
-            super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1beta1.model.ListOperationsResponse.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** The name of the operation's parent resource. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The name of the operation's parent resource.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** The name of the operation's parent resource. */
-          public List setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** The standard list filter. */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** The standard list filter.
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /** The standard list filter. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
-            return this;
-          }
-
-          /** The standard list page size. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The standard list page size.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The standard list page size. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /** The standard list page token. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The standard list page token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
 
       }
       /**
@@ -3580,8 +3382,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name The name of the tag, for example: "projects/p1/locations/us-
-             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts
-             *        contain slashes, the slashes are escaped.
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+             *        slashes, the slashes are escaped. The tag part can only have characters in
+             *        [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
              * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Tag}
              * @return the request
              */
@@ -3610,8 +3413,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name The name of the tag, for example: "projects/p1/locations/us-
-             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts
-             *        contain slashes, the slashes are escaped.
+             *        central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+             *        slashes, the slashes are escaped. The tag part can only have characters in
+             *        [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
                * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Tag}
                * @since 1.13
                */
@@ -3682,15 +3486,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * The name of the tag, for example: "projects/p1/locations/us-
-               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID
-               * parts contain slashes, the slashes are escaped.
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+               * slashes, the slashes are escaped. The tag part can only have characters in
+               * [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** The name of the tag, for example: "projects/p1/locations/us-
-             central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID parts contain
-             slashes, the slashes are escaped.
+             central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the
+             slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else
+             must be URL encoded.
                */
               public java.lang.String getName() {
                 return name;
@@ -3698,8 +3504,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * The name of the tag, for example: "projects/p1/locations/us-
-               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package or tag ID
-               * parts contain slashes, the slashes are escaped.
+               * central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains
+               * slashes, the slashes are escaped. The tag part can only have characters in
+               * [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

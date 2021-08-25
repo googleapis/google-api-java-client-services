@@ -35,12 +35,12 @@ public final class ListFilesResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<File> files;
+  private java.util.List<GoogleDevtoolsArtifactregistryV1beta2File> files;
 
   static {
-    // hack to force ProGuard to consider File used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleDevtoolsArtifactregistryV1beta2File used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(File.class);
+    com.google.api.client.util.Data.nullOf(GoogleDevtoolsArtifactregistryV1beta2File.class);
   }
 
   /**
@@ -54,7 +54,7 @@ public final class ListFilesResponse extends com.google.api.client.json.GenericJ
    * The files returned.
    * @return value or {@code null} for none
    */
-  public java.util.List<File> getFiles() {
+  public java.util.List<GoogleDevtoolsArtifactregistryV1beta2File> getFiles() {
     return files;
   }
 
@@ -62,7 +62,7 @@ public final class ListFilesResponse extends com.google.api.client.json.GenericJ
    * The files returned.
    * @param files files or {@code null} for none
    */
-  public ListFilesResponse setFiles(java.util.List<File> files) {
+  public ListFilesResponse setFiles(java.util.List<GoogleDevtoolsArtifactregistryV1beta2File> files) {
     this.files = files;
     return this;
   }

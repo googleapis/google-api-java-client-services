@@ -582,17 +582,21 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
      * This request holds the parameters needed by the artifactregistry server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
+     * @param name The name of the operation's parent resource.
      * @return the request
      */
-    public List list() throws java.io.IOException {
-      List result = new List();
+    public List list(java.lang.String name) throws java.io.IOException {
+      List result = new List(name);
       initialize(result);
       return result;
     }
 
     public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListOperationsResponse> {
 
-      private static final String REST_PATH = "v1/operations";
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations$");
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
@@ -610,10 +614,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param name The name of the operation's parent resource.
        * @since 1.13
        */
-      protected List() {
+      protected List(java.lang.String name) {
         super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListOperationsResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations$");
+        }
       }
 
       @Override
@@ -681,6 +692,27 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The name of the operation's parent resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation's parent resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation's parent resource. */
+      public List setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations$");
+        }
+        this.name = name;
+        return this;
+      }
+
       /** The standard list filter. */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -694,22 +726,6 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
       /** The standard list filter. */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
-        return this;
-      }
-
-      /** The name of the operation's parent resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation's parent resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation's parent resource. */
-      public List setName(java.lang.String name) {
-        this.name = name;
         return this;
       }
 

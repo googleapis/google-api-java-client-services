@@ -31,7 +31,7 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
-   * `Membership`. Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Must be of the form `groups/{group}/memberships/{membership}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
-   * `Membership`. Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Must be of the form `groups/{group}/memberships/{membership}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,7 +48,7 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
-   * `Membership`. Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Must be of the form `groups/{group}/memberships/{membership}`.
    * @param name name or {@code null} for none
    */
   public LookupMembershipNameResponse setName(java.lang.String name) {

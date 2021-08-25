@@ -102,14 +102,13 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * ClientState in format:
-   * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
-   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
-   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer ID. The
-   * *suffix* is any string the caller specifies. This string will be displayed verbatim in the
-   * administration console. This suffix is used in setting up Custom Access Levels in Context-Aware
-   * Access. Your organization's customer ID can be obtained from the URL: `GET
+   * ClientState in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`,
+   * where partner corresponds to the partner storing the data. For partners belonging to the
+   * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+   * callers, this is a string of the form: `{customer}-suffix`, where `customer` is your customer
+   * ID. The *suffix* is any string the caller specifies. This string will be displayed verbatim in
+   * the administration console. This suffix is used in setting up Custom Access Levels in Context-
+   * Aware Access. Your organization's customer ID can be obtained from the URL: `GET
    * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the
    * response contains the customer ID starting with the letter 'C'. The customer ID to be used in
    * this API is the string after the letter 'C' (not including 'C')
@@ -301,14 +300,13 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * ClientState in format:
-   * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
-   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
-   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer ID. The
-   * *suffix* is any string the caller specifies. This string will be displayed verbatim in the
-   * administration console. This suffix is used in setting up Custom Access Levels in Context-Aware
-   * Access. Your organization's customer ID can be obtained from the URL: `GET
+   * ClientState in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`,
+   * where partner corresponds to the partner storing the data. For partners belonging to the
+   * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+   * callers, this is a string of the form: `{customer}-suffix`, where `customer` is your customer
+   * ID. The *suffix* is any string the caller specifies. This string will be displayed verbatim in
+   * the administration console. This suffix is used in setting up Custom Access Levels in Context-
+   * Aware Access. Your organization's customer ID can be obtained from the URL: `GET
    * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the
    * response contains the customer ID starting with the letter 'C'. The customer ID to be used in
    * this API is the string after the letter 'C' (not including 'C')
@@ -320,14 +318,13 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * ClientState in format:
-   * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
-   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
-   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer ID. The
-   * *suffix* is any string the caller specifies. This string will be displayed verbatim in the
-   * administration console. This suffix is used in setting up Custom Access Levels in Context-Aware
-   * Access. Your organization's customer ID can be obtained from the URL: `GET
+   * ClientState in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`,
+   * where partner corresponds to the partner storing the data. For partners belonging to the
+   * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+   * callers, this is a string of the form: `{customer}-suffix`, where `customer` is your customer
+   * ID. The *suffix* is any string the caller specifies. This string will be displayed verbatim in
+   * the administration console. This suffix is used in setting up Custom Access Levels in Context-
+   * Aware Access. Your organization's customer ID can be obtained from the URL: `GET
    * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the
    * response contains the customer ID starting with the letter 'C'. The customer ID to be used in
    * this API is the string after the letter 'C' (not including 'C')

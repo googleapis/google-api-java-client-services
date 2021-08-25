@@ -39,6 +39,13 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private FormAction action;
 
   /**
+   * This will include form information for dialogs such as form inputs, action parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommonEventObject common;
+
+  /**
    * The URL the bot should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
    * guide](/chat/how-tos/auth-3p) for more information.
@@ -48,11 +55,26 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String configCompleteRedirectUrl;
 
   /**
+   * The type of dialog event we have received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dialogEventType;
+
+  /**
    * The timestamp indicating when the event was dispatched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDialogEvent;
 
   /**
    * The message that triggered the event, if applicable.
@@ -121,6 +143,23 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * This will include form information for dialogs such as form inputs, action parameters.
+   * @return value or {@code null} for none
+   */
+  public CommonEventObject getCommon() {
+    return common;
+  }
+
+  /**
+   * This will include form information for dialogs such as form inputs, action parameters.
+   * @param common common or {@code null} for none
+   */
+  public DeprecatedEvent setCommon(CommonEventObject common) {
+    this.common = common;
+    return this;
+  }
+
+  /**
    * The URL the bot should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. See the [Authorizing access to 3p services
    * guide](/chat/how-tos/auth-3p) for more information.
@@ -142,6 +181,23 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The type of dialog event we have received.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDialogEventType() {
+    return dialogEventType;
+  }
+
+  /**
+   * The type of dialog event we have received.
+   * @param dialogEventType dialogEventType or {@code null} for none
+   */
+  public DeprecatedEvent setDialogEventType(java.lang.String dialogEventType) {
+    this.dialogEventType = dialogEventType;
+    return this;
+  }
+
+  /**
    * The timestamp indicating when the event was dispatched.
    * @return value or {@code null} for none
    */
@@ -155,6 +211,25 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
    */
   public DeprecatedEvent setEventTime(String eventTime) {
     this.eventTime = eventTime;
+    return this;
+  }
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDialogEvent() {
+    return isDialogEvent;
+  }
+
+  /**
+   * Whether or not this event is related to dialogs request, submit or cancel. This will be set to
+   * true when we want a request/submit/cancel event.
+   * @param isDialogEvent isDialogEvent or {@code null} for none
+   */
+  public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {
+    this.isDialogEvent = isDialogEvent;
     return this;
   }
 

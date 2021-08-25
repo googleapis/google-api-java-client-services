@@ -46,6 +46,14 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   private java.lang.String acceleratorType;
 
   /**
+   * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user
+   * guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gpuPartitionSize;
+
+  /**
    * The number of the accelerator cards exposed to an instance.
    * @return value or {@code null} for none
    */
@@ -78,6 +86,25 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    */
   public AcceleratorConfig setAcceleratorType(java.lang.String acceleratorType) {
     this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user
+   * guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGpuPartitionSize() {
+    return gpuPartitionSize;
+  }
+
+  /**
+   * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user
+   * guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+   * @param gpuPartitionSize gpuPartitionSize or {@code null} for none
+   */
+  public AcceleratorConfig setGpuPartitionSize(java.lang.String gpuPartitionSize) {
+    this.gpuPartitionSize = gpuPartitionSize;
     return this;
   }
 

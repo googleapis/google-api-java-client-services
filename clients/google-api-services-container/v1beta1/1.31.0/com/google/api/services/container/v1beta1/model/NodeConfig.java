@@ -146,10 +146,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
    * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
    * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
-   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
-   * free-form strings, and only have meaning as interpreted by the image running in the instance.
-   * The only restriction placed on them is that each value's size must be less than or equal to 32
-   * KB. The total size of all keys and values must be less than 512 KB.
+   * Values are free-form strings, and only have meaning as interpreted by the image running in the
+   * instance. The only restriction placed on them is that each value's size must be less than or
+   * equal to 32 KB. The total size of all keys and values must be less than 512 KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,10 +499,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
    * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
    * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
-   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
-   * free-form strings, and only have meaning as interpreted by the image running in the instance.
-   * The only restriction placed on them is that each value's size must be less than or equal to 32
-   * KB. The total size of all keys and values must be less than 512 KB.
+   * Values are free-form strings, and only have meaning as interpreted by the image running in the
+   * instance. The only restriction placed on them is that each value's size must be less than or
+   * equal to 32 KB. The total size of all keys and values must be less than 512 KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -519,10 +517,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
    * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
    * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
-   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
-   * free-form strings, and only have meaning as interpreted by the image running in the instance.
-   * The only restriction placed on them is that each value's size must be less than or equal to 32
-   * KB. The total size of all keys and values must be less than 512 KB.
+   * Values are free-form strings, and only have meaning as interpreted by the image running in the
+   * instance. The only restriction placed on them is that each value's size must be less than or
+   * equal to 32 KB. The total size of all keys and values must be less than 512 KB.
    * @param metadata metadata or {@code null} for none
    */
   public NodeConfig setMetadata(java.util.Map<String, java.lang.String> metadata) {

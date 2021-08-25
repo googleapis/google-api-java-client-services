@@ -82,7 +82,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`. Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +90,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
-   * `customer_id` must begin with "C" (for example, 'C046psxkn').
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
+   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
+   * must begin with "C" (for example, 'C046psxkn').
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +225,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`. Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -234,7 +234,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`. Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group}`.
    * @param name name or {@code null} for none
    */
   public Group setName(java.lang.String name) {
@@ -244,9 +244,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
-   * `customer_id` must begin with "C" (for example, 'C046psxkn').
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
+   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
+   * must begin with "C" (for example, 'C046psxkn').
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -255,9 +255,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
-   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The
-   * `customer_id` must begin with "C" (for example, 'C046psxkn').
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for
+   * external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer`
+   * must begin with "C" (for example, 'C046psxkn').
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {

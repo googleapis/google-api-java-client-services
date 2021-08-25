@@ -165,7 +165,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link CancelWipe#execute()} method to invoke the remote operation.
      *
      * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
      * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest}
      * @return the request
      */
@@ -198,7 +198,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest}
        * @since 1.13
        */
@@ -269,14 +269,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device.
+       * Device in format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       public java.lang.String getName() {
         return name;
@@ -284,8 +283,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device.
+       * Device in format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       public CancelWipe setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -403,16 +401,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
+       * If you're using this API to manage another organization, use `customers/{customer}`, where
+       * customer is the customer to whom the device belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
      you're using this API for your own organization, use `customers/my_customer` If you're using this
-     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-     customer to whom the device belongs.
+     API to manage another organization, use `customers/{customer}`, where customer is the customer to
+     whom the device belongs.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -421,8 +419,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
+       * If you're using this API to manage another organization, use `customers/{customer}`, where
+       * customer is the customer to whom the device belongs.
        */
       public Create setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -443,7 +441,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -471,7 +469,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -541,14 +539,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device.
+       * Device in format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       public java.lang.String getName() {
         return name;
@@ -556,8 +553,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device.
+       * Device in format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -572,16 +568,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
+       * If you're using this API to manage another organization, use `customers/{customer}`, where
+       * customer is the customer to whom the device belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
      you're using this API for your own organization, use `customers/my_customer` If you're using this
-     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-     customer to whom the device belongs.
+     API to manage another organization, use `customers/{customer}`, where customer is the customer to
+     whom the device belongs.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -590,8 +586,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * customer. If you're using this API for your own organization, use `customers/my_customer`
-       * If you're using this API to manage another organization, use `customers/{customer_id}`,
-       * where customer_id is the customer to whom the device belongs.
+       * If you're using this API to manage another organization, use `customers/{customer}`, where
+       * customer is the customer to whom the device belongs.
        */
       public Delete setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -612,7 +608,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -639,7 +635,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     *        format: `devices/{device}`, where device is the unique ID assigned to the Device.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -719,14 +715,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in the format: `devices/{device_id}`, where device_id is the unique ID assigned to
-       * the Device.
+       * Device in the format: `devices/{device}`, where device is the unique ID assigned to the
+       * Device.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
-     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     format: `devices/{device}`, where device is the unique ID assigned to the Device.
        */
       public java.lang.String getName() {
         return name;
@@ -734,8 +730,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in the format: `devices/{device_id}`, where device_id is the unique ID assigned to
-       * the Device.
+       * Device in the format: `devices/{device}`, where device is the unique ID assigned to the
+       * Device.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -749,19 +745,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
-       * whom the device belongs. If you're using this API for your own organization, use
+       * Customer in the format: `customers/{customer}`, where customer is the customer to whom the
+       * device belongs. If you're using this API for your own organization, use
        * `customers/my_customer`. If you're using this API to manage another organization, use
-       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       * `customers/{customer}`, where customer is the customer to whom the device belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in
-     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
-     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
-     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
-     the customer to whom the device belongs.
+     the format: `customers/{customer}`, where customer is the customer to whom the device belongs. If
+     you're using this API for your own organization, use `customers/my_customer`. If you're using this
+     API to manage another organization, use `customers/{customer}`, where customer is the customer to
+     whom the device belongs.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -769,10 +765,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
-       * whom the device belongs. If you're using this API for your own organization, use
+       * Customer in the format: `customers/{customer}`, where customer is the customer to whom the
+       * device belongs. If you're using this API for your own organization, use
        * `customers/my_customer`. If you're using this API to manage another organization, use
-       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       * `customers/{customer}`, where customer is the customer to whom the device belongs.
        */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -887,19 +883,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
-       * whom the device belongs. If you're using this API for your own organization, use
+       * customer in the format: `customers/{customer}`, where customer is the customer to whom the
+       * device belongs. If you're using this API for your own organization, use
        * `customers/my_customer`. If you're using this API to manage another organization, use
-       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       * `customers/{customer}`, where customer is the customer to whom the device belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
       /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer in
-     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
-     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
-     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
-     the customer to whom the device belongs.
+     the format: `customers/{customer}`, where customer is the customer to whom the device belongs. If
+     you're using this API for your own organization, use `customers/my_customer`. If you're using this
+     API to manage another organization, use `customers/{customer}`, where customer is the customer to
+     whom the device belongs.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -907,10 +903,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
-       * whom the device belongs. If you're using this API for your own organization, use
+       * customer in the format: `customers/{customer}`, where customer is the customer to whom the
+       * device belongs. If you're using this API for your own organization, use
        * `customers/my_customer`. If you're using this API to manage another organization, use
-       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       * `customers/{customer}`, where customer is the customer to whom the device belongs.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -1053,8 +1049,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Wipe#execute()} method to invoke the remote operation.
      *
      * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-     *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+     *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+     *        assigned to the Device, and device_user is the unique ID assigned to the User.
      * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest}
      * @return the request
      */
@@ -1082,8 +1078,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-     *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+     *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+     *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest}
        * @since 1.13
        */
@@ -1154,16 +1150,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-       * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-       * User.
+       * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique
+       * ID assigned to the Device, and device_user is the unique ID assigned to the User.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-     assigned to the Device, and device_user_id is the unique ID assigned to the User.
+     format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+     Device, and device_user is the unique ID assigned to the User.
        */
       public java.lang.String getName() {
         return name;
@@ -1171,9 +1166,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-       * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-       * User.
+       * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique
+       * ID assigned to the Device, and device_user is the unique ID assigned to the User.
        */
       public Wipe setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1220,8 +1214,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest}
        * @return the request
        */
@@ -1250,8 +1244,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest}
          * @since 1.13
          */
@@ -1322,16 +1316,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -1339,9 +1332,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public Approve setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1367,8 +1359,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Block#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest}
        * @return the request
        */
@@ -1397,8 +1389,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest}
          * @since 1.13
          */
@@ -1469,16 +1461,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -1486,9 +1477,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public Block setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1515,8 +1505,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link CancelWipe#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest}
        * @return the request
        */
@@ -1546,8 +1536,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest}
          * @since 1.13
          */
@@ -1618,16 +1608,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -1635,9 +1624,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public CancelWipe setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1663,8 +1651,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1692,8 +1680,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1763,16 +1751,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -1780,9 +1767,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1797,16 +1783,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
         /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
        you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
+       API to manage another organization, use `customers/{customer}`, where customer is the customer to
+       whom the device belongs.
          */
         public java.lang.String getCustomer() {
           return customer;
@@ -1815,8 +1801,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         public Delete setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -1837,8 +1823,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1865,8 +1851,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1946,16 +1932,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -1963,9 +1948,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1980,16 +1964,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
         /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
        you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
+       API to manage another organization, use `customers/{customer}`, where customer is the customer to
+       whom the device belongs.
          */
         public java.lang.String getCustomer() {
           return customer;
@@ -1998,8 +1982,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         public Get setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -2156,16 +2140,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
         /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
        you're using this API for your own organization, use `customers/my_customer` If you're using this
-       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-       customer to whom the device belongs.
+       API to manage another organization, use `customers/{customer}`, where customer is the customer to
+       whom the device belongs.
          */
         public java.lang.String getCustomer() {
           return customer;
@@ -2174,8 +2158,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * customer. If you're using this API for your own organization, use `customers/my_customer`
-         * If you're using this API to manage another organization, use `customers/{customer_id}`,
-         * where customer_id is the customer to whom the device belongs.
+         * If you're using this API to manage another organization, use `customers/{customer}`,
+         * where customer is the customer to whom the device belongs.
          */
         public List setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -2583,8 +2567,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Wipe#execute()} method to invoke the remote operation.
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest}
        * @return the request
        */
@@ -2616,8 +2600,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
-       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       *        format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID
+       *        assigned to the Device, and device_user is the unique ID assigned to the User.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest}
          * @since 1.13
          */
@@ -2688,16 +2672,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
-       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       format: `devices/{device}/deviceUsers/{device_user}`, where device is the unique ID assigned to the
+       Device, and device_user is the unique ID assigned to the User.
          */
         public java.lang.String getName() {
           return name;
@@ -2705,9 +2688,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
-         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
-         * User.
+         * Device in format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+         * unique ID assigned to the Device, and device_user is the unique ID assigned to the User.
          */
         public Wipe setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2754,16 +2736,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
-         *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
-         *        where `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique
-         *        ID assigned to the User and `partner_id` identifies the partner storing the data. To get
-         *        the client state for devices belonging to your own organization, the `partnerId` is in the
-         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
-         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
-         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
-         *        managed by your own organization. You may specify `-` in place of the `{device_id}`, so
-         *        the ClientState resource name can be:
-         *        `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+         *        format: `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where
+         *        `device` is the unique ID assigned to the Device, `device_user` is the unique ID assigned
+         *        to the User and `partner` identifies the partner storing the data. To get the client state
+         *        for devices belonging to your own organization, the `partnerId` is in the format:
+         *        `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and
+         *        `anystring` is any suffix. This suffix is used in setting up Custom Access Levels in
+         *        Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization. You may specify `-` in place of the `{device}`, so the
+         *        ClientState resource name can be:
+         *        `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2790,16 +2772,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
-         *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
-         *        where `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique
-         *        ID assigned to the User and `partner_id` identifies the partner storing the data. To get
-         *        the client state for devices belonging to your own organization, the `partnerId` is in the
-         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
-         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
-         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
-         *        managed by your own organization. You may specify `-` in place of the `{device_id}`, so
-         *        the ClientState resource name can be:
-         *        `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+         *        format: `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where
+         *        `device` is the unique ID assigned to the Device, `device_user` is the unique ID assigned
+         *        to the User and `partner` identifies the partner storing the data. To get the client state
+         *        for devices belonging to your own organization, the `partnerId` is in the format:
+         *        `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and
+         *        `anystring` is any suffix. This suffix is used in setting up Custom Access Levels in
+         *        Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization. You may specify `-` in place of the `{device}`, so the
+         *        ClientState resource name can be:
+         *        `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2880,30 +2862,30 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           /**
            * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * ClientState in format:
-           * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-           * `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID
-           * assigned to the User and `partner_id` identifies the partner storing the data. To get
-           * the client state for devices belonging to your own organization, the `partnerId` is in
-           * the format: `customerId-*anystring*`. Where the `customerId` is your organization's
-           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
-           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
-           * customer ID for devices managed by your own organization. You may specify `-` in place
-           * of the `{device_id}`, so the ClientState resource name can be:
-           * `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+           * `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where `device` is
+           * the unique ID assigned to the Device, `device_user` is the unique ID assigned to the
+           * User and `partner` identifies the partner storing the data. To get the client state for
+           * devices belonging to your own organization, the `partnerId` is in the format:
+           * `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and
+           * `anystring` is any suffix. This suffix is used in setting up Custom Access Levels in
+           * Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+           * managed by your own organization. You may specify `-` in place of the `{device}`, so
+           * the ClientState resource name can be:
+           * `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
-         in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-         `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID assigned to
-         the User and `partner_id` identifies the partner storing the data. To get the client state for
-         devices belonging to your own organization, the `partnerId` is in the format:
-         `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and `anystring`
-         is any suffix. This suffix is used in setting up Custom Access Levels in Context-Aware Access. You
-         may use `my_customer` instead of the customer ID for devices managed by your own organization. You
-         may specify `-` in place of the `{device_id}`, so the ClientState resource name can be:
-         `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+         in format: `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where `device` is
+         the unique ID assigned to the Device, `device_user` is the unique ID assigned to the User and
+         `partner` identifies the partner storing the data. To get the client state for devices belonging to
+         your own organization, the `partnerId` is in the format: `customerId-*anystring*`. Where the
+         `customerId` is your organization's customer ID and `anystring` is any suffix. This suffix is used
+         in setting up Custom Access Levels in Context-Aware Access. You may use `my_customer` instead of
+         the customer ID for devices managed by your own organization. You may specify `-` in place of the
+         `{device}`, so the ClientState resource name can be:
+         `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2912,16 +2894,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           /**
            * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * ClientState in format:
-           * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
-           * `device_id` is the unique ID assigned to the Device, `device_user_id` is the unique ID
-           * assigned to the User and `partner_id` identifies the partner storing the data. To get
-           * the client state for devices belonging to your own organization, the `partnerId` is in
-           * the format: `customerId-*anystring*`. Where the `customerId` is your organization's
-           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
-           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
-           * customer ID for devices managed by your own organization. You may specify `-` in place
-           * of the `{device_id}`, so the ClientState resource name can be:
-           * `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+           * `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where `device` is
+           * the unique ID assigned to the Device, `device_user` is the unique ID assigned to the
+           * User and `partner` identifies the partner storing the data. To get the client state for
+           * devices belonging to your own organization, the `partnerId` is in the format:
+           * `customerId-*anystring*`. Where the `customerId` is your organization's customer ID and
+           * `anystring` is any suffix. This suffix is used in setting up Custom Access Levels in
+           * Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+           * managed by your own organization. You may specify `-` in place of the `{device}`, so
+           * the ClientState resource name can be:
+           * `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2937,16 +2919,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           @com.google.api.client.util.Key
           private java.lang.String customer;
 
           /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
          you're using this API for your own organization, use `customers/my_customer` If you're using this
-         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-         customer to whom the device belongs.
+         API to manage another organization, use `customers/{customer}`, where customer is the customer to
+         whom the device belongs.
            */
           public java.lang.String getCustomer() {
             return customer;
@@ -2956,8 +2937,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           public Get setCustomer(java.lang.String customer) {
             this.customer = customer;
@@ -3120,16 +3100,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           @com.google.api.client.util.Key
           private java.lang.String customer;
 
           /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
          you're using this API for your own organization, use `customers/my_customer` If you're using this
-         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-         customer to whom the device belongs.
+         API to manage another organization, use `customers/{customer}`, where customer is the customer to
+         whom the device belongs.
            */
           public java.lang.String getCustomer() {
             return customer;
@@ -3139,8 +3118,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           public List setCustomer(java.lang.String customer) {
             this.customer = customer;
@@ -3221,11 +3199,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
-         *        in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
-         *        where partner_id corresponds to the partner storing the data. For partners belonging to
-         *        the "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all
-         *        other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id`
-         *        is your customer ID. The *suffix* is any string the caller specifies. This string will be
+         *        in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where
+         *        partner corresponds to the partner storing the data. For partners belonging to the
+         *        "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+         *        callers, this is a string of the form: `{customer}-suffix`, where `customer` is your
+         *        customer ID. The *suffix* is any string the caller specifies. This string will be
          *        displayed verbatim in the administration console. This suffix is used in setting up Custom
          *        Access Levels in Context-Aware Access. Your organization's customer ID can be obtained
          *        from the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer`
@@ -3261,11 +3239,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
-         *        in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
-         *        where partner_id corresponds to the partner storing the data. For partners belonging to
-         *        the "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all
-         *        other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id`
-         *        is your customer ID. The *suffix* is any string the caller specifies. This string will be
+         *        in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where
+         *        partner corresponds to the partner storing the data. For partners belonging to the
+         *        "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+         *        callers, this is a string of the form: `{customer}-suffix`, where `customer` is your
+         *        customer ID. The *suffix* is any string the caller specifies. This string will be
          *        displayed verbatim in the administration console. This suffix is used in setting up Custom
          *        Access Levels in Context-Aware Access. Your organization's customer ID can be obtained
          *        from the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer`
@@ -3342,29 +3320,29 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of
            * the ClientState in format:
-           * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where
-           * partner_id corresponds to the partner storing the data. For partners belonging to the
-           * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
-           * callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is
-           * your customer ID. The *suffix* is any string the caller specifies. This string will be
-           * displayed verbatim in the administration console. This suffix is used in setting up
-           * Custom Access Levels in Context-Aware Access. Your organization's customer ID can be
-           * obtained from the URL: `GET
-           * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in
-           * the response contains the customer ID starting with the letter 'C'. The customer ID to
-           * be used in this API is the string after the letter 'C' (not including 'C')
+           * `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where partner
+           * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+           * Alliance", this is the partner ID specified to you by Google. For all other callers,
+           * this is a string of the form: `{customer}-suffix`, where `customer` is your customer
+           * ID. The *suffix* is any string the caller specifies. This string will be displayed
+           * verbatim in the administration console. This suffix is used in setting up Custom Access
+           * Levels in Context-Aware Access. Your organization's customer ID can be obtained from
+           * the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer` The
+           * `id` field in the response contains the customer ID starting with the letter 'C'. The
+           * customer ID to be used in this API is the string after the letter 'C' (not including
+           * 'C')
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
-         where partner_id corresponds to the partner storing the data. For partners belonging to the
-         "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other callers,
-         this is a string of the form: `{customer_id}-suffix`, where `customer_id` is your customer ID. The
-         *suffix* is any string the caller specifies. This string will be displayed verbatim in the
-         administration console. This suffix is used in setting up Custom Access Levels in Context-Aware
-         Access. Your organization's customer ID can be obtained from the URL: `GET
+         ClientState in format: `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where
+         partner corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+         Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
+         string of the form: `{customer}-suffix`, where `customer` is your customer ID. The *suffix* is any
+         string the caller specifies. This string will be displayed verbatim in the administration console.
+         This suffix is used in setting up Custom Access Levels in Context-Aware Access. Your organization's
+         customer ID can be obtained from the URL: `GET
          https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the response
          contains the customer ID starting with the letter 'C'. The customer ID to be used in this API is
          the string after the letter 'C' (not including 'C')
@@ -3376,17 +3354,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of
            * the ClientState in format:
-           * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where
-           * partner_id corresponds to the partner storing the data. For partners belonging to the
-           * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
-           * callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is
-           * your customer ID. The *suffix* is any string the caller specifies. This string will be
-           * displayed verbatim in the administration console. This suffix is used in setting up
-           * Custom Access Levels in Context-Aware Access. Your organization's customer ID can be
-           * obtained from the URL: `GET
-           * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in
-           * the response contains the customer ID starting with the letter 'C'. The customer ID to
-           * be used in this API is the string after the letter 'C' (not including 'C')
+           * `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where partner
+           * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+           * Alliance", this is the partner ID specified to you by Google. For all other callers,
+           * this is a string of the form: `{customer}-suffix`, where `customer` is your customer
+           * ID. The *suffix* is any string the caller specifies. This string will be displayed
+           * verbatim in the administration console. This suffix is used in setting up Custom Access
+           * Levels in Context-Aware Access. Your organization's customer ID can be obtained from
+           * the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer` The
+           * `id` field in the response contains the customer ID starting with the letter 'C'. The
+           * customer ID to be used in this API is the string after the letter 'C' (not including
+           * 'C')
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3402,16 +3380,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           @com.google.api.client.util.Key
           private java.lang.String customer;
 
           /** Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
          you're using this API for your own organization, use `customers/my_customer` If you're using this
-         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
-         customer to whom the device belongs.
+         API to manage another organization, use `customers/{customer}`, where customer is the customer to
+         whom the device belongs.
            */
           public java.lang.String getCustomer() {
             return customer;
@@ -3421,8 +3398,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
            * customer. If you're using this API for your own organization, use
            * `customers/my_customer` If you're using this API to manage another organization, use
-           * `customers/{customer_id}`, where customer_id is the customer to whom the device
-           * belongs.
+           * `customers/{customer}`, where customer is the customer to whom the device belongs.
            */
           public Patch setCustomer(java.lang.String customer) {
             this.customer = customer;
@@ -3606,7 +3582,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     *        retrieve. Must be of the form `groups/{group_id}`.
+     *        retrieve. Must be of the form `groups/{group}`.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3634,7 +3610,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     *        retrieve. Must be of the form `groups/{group_id}`.
+     *        retrieve. Must be of the form `groups/{group}`.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -3704,13 +3680,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
+       * `Group` to retrieve. Must be of the form `groups/{group}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
-     to retrieve. Must be of the form `groups/{group_id}`.
+     to retrieve. Must be of the form `groups/{group}`.
        */
       public java.lang.String getName() {
         return name;
@@ -3718,7 +3694,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
+       * `Group` to retrieve. Must be of the form `groups/{group}`.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -3744,7 +3720,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     *        retrieve. Must be of the form `groups/{group_id}`.
+     *        retrieve. Must be of the form `groups/{group}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -3771,7 +3747,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
-     *        retrieve. Must be of the form `groups/{group_id}`.
+     *        retrieve. Must be of the form `groups/{group}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -3851,13 +3827,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
+       * `Group` to retrieve. Must be of the form `groups/{group}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
-     to retrieve. Must be of the form `groups/{group_id}`.
+     to retrieve. Must be of the form `groups/{group}`.
        */
       public java.lang.String getName() {
         return name;
@@ -3865,7 +3841,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
+       * `Group` to retrieve. Must be of the form `groups/{group}`.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -4033,17 +4009,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The parent resource under which to list all `Group` resources. Must be of the
-       * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
-       * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
-       * example, 'C046psxkn').
+       * form `identitysources/{identity_source}` for external- identity-mapped groups or
+       * `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example,
+       * 'C046psxkn').
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. The parent resource under which to list all `Group` resources. Must be of the form
-     `identitysources/{identity_source_id}` for external- identity-mapped groups or
-     `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for example,
-     'C046psxkn').
+     `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}`
+     for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
        */
       public java.lang.String getParent() {
         return parent;
@@ -4051,9 +4026,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The parent resource under which to list all `Group` resources. Must be of the
-       * form `identitysources/{identity_source_id}` for external- identity-mapped groups or
-       * `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for
-       * example, 'C046psxkn').
+       * form `identitysources/{identity_source}` for external- identity-mapped groups or
+       * `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example,
+       * 'C046psxkn').
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -4216,7 +4191,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Google-managed entity such as a Google user or a Google Group. If specified, the
        * `EntityKey` represents an external-identity-mapped group. The namespace must correspond to
        * an identity source created in Admin Console and must be in the form of
-       * `identitysources/{identity_source_id}`.
+       * `identitysources/{identity_source}`.
        */
       @com.google.api.client.util.Key("groupKey.namespace")
       private java.lang.String groupKeyNamespace;
@@ -4224,7 +4199,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /** The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-
      managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an
      external-identity-mapped group. The namespace must correspond to an identity source created in
-     Admin Console and must be in the form of `identitysources/{identity_source_id}`.
+     Admin Console and must be in the form of `identitysources/{identity_source}`.
        */
       public java.lang.String getGroupKeyNamespace() {
         return groupKeyNamespace;
@@ -4235,7 +4210,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Google-managed entity such as a Google user or a Google Group. If specified, the
        * `EntityKey` represents an external-identity-mapped group. The namespace must correspond to
        * an identity source created in Admin Console and must be in the form of
-       * `identitysources/{identity_source_id}`.
+       * `identitysources/{identity_source}`.
        */
       public Lookup setGroupKeyNamespace(java.lang.String groupKeyNamespace) {
         this.groupKeyNamespace = groupKeyNamespace;
@@ -4256,7 +4231,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-     *        `Group`. Shall be of the form `groups/{group_id}`.
+     *        `Group`. Shall be of the form `groups/{group}`.
      * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
      * @return the request
      */
@@ -4285,7 +4260,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-     *        `Group`. Shall be of the form `groups/{group_id}`.
+     *        `Group`. Shall be of the form `groups/{group}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
        * @since 1.13
        */
@@ -4356,13 +4331,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
-       * the `Group`. Shall be of the form `groups/{group_id}`.
+       * the `Group`. Shall be of the form `groups/{group}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-     `Group`. Shall be of the form `groups/{group_id}`.
+     `Group`. Shall be of the form `groups/{group}`.
        */
       public java.lang.String getName() {
         return name;
@@ -4370,7 +4345,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
-       * the `Group`. Shall be of the form `groups/{group_id}`.
+       * the `Group`. Shall be of the form `groups/{group}`.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -4565,8 +4540,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Required. The search query. Must be specified in [Common Expression
        * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
+       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer` must
        * begin with "C" (for example, 'C046psxkn').
        */
       @com.google.api.client.util.Key
@@ -4574,9 +4549,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /** Required. The search query. Must be specified in [Common Expression
      Language](https://opensource.google/projects/cel). May only contain equality operators on the
-     parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must begin
-     with "C" (for example, 'C046psxkn').
+     parent and inclusion operators on labels (e.g., `parent == 'customers/{customer}' &&
+     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer` must begin with
+     "C" (for example, 'C046psxkn').
        */
       public java.lang.String getQuery() {
         return query;
@@ -4585,8 +4560,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Required. The search query. Must be specified in [Common Expression
        * Language](https://opensource.google/projects/cel). May only contain equality operators on
-       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
-       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer_id` must
+       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). The `customer` must
        * begin with "C" (for example, 'C046psxkn').
        */
       public Search setQuery(java.lang.String query) {
@@ -4651,7 +4626,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * operation.
        *
        * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
-       *        transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id
+       *        transitive membership in. Format: `groups/{group}`, where `group` is the unique id
        *        assigned to the Group to which the Membership belongs to.
        * @return the request
        */
@@ -4686,7 +4661,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * immediately after invoking the constructor. </p>
          *
          * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
-       *        transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id
+       *        transitive membership in. Format: `groups/{group}`, where `group` is the unique id
        *        assigned to the Group to which the Membership belongs to.
          * @since 1.13
          */
@@ -4767,15 +4742,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the
-         * unique id assigned to the Group to which the Membership belongs to.
+         * check the transitive membership in. Format: `groups/{group}`, where `group` is the unique
+         * id assigned to the Group to which the Membership belongs to.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
-      [ transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id assigned
-      [ to the Group to which the Membership belongs to.
+      [ transitive membership in. Format: `groups/{group}`, where `group` is the unique id assigned to the
+      [ Group to which the Membership belongs to.
       [
 
          */
@@ -4785,8 +4760,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the
-         * unique id assigned to the Group to which the Membership belongs to.
+         * check the transitive membership in. Format: `groups/{group}`, where `group` is the unique
+         * id assigned to the Group to which the Membership belongs to.
          */
         public CheckTransitiveMembership setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4841,7 +4816,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
-       *        `groups/{group_id}`.
+       *        `groups/{group}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.Membership}
        * @return the request
        */
@@ -4870,7 +4845,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
-       *        `groups/{group_id}`.
+       *        `groups/{group}`.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.Membership}
          * @since 1.13
          */
@@ -4941,13 +4916,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to create the `Membership`. Must be of
-         * the form `groups/{group_id}`.
+         * the form `groups/{group}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
-       `groups/{group_id}`.
+       `groups/{group}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -4955,7 +4930,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to create the `Membership`. Must be of
-         * the form `groups/{group_id}`.
+         * the form `groups/{group}`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4981,8 +4956,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       *        `Membership` to delete. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`
+       *        `Membership` to delete. Must be of the form `groups/{group}/memberships/{membership}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5010,8 +4984,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       *        `Membership` to delete. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`
+       *        `Membership` to delete. Must be of the form `groups/{group}/memberships/{membership}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -5081,14 +5054,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * `Membership` to delete. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`
+         * `Membership` to delete. Must be of the form `groups/{group}/memberships/{membership}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       `Membership` to delete. Must be of the form `groups/{group_id}/memberships/{membership_id}`
+       `Membership` to delete. Must be of the form `groups/{group}/memberships/{membership}`
          */
         public java.lang.String getName() {
           return name;
@@ -5096,8 +5068,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * `Membership` to delete. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`
+         * `Membership` to delete. Must be of the form `groups/{group}/memberships/{membership}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5123,8 +5094,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       *        `Membership` to retrieve. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`.
+       *        `Membership` to retrieve. Must be of the form `groups/{group}/memberships/{membership}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5151,8 +5121,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       *        `Membership` to retrieve. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`.
+       *        `Membership` to retrieve. Must be of the form `groups/{group}/memberships/{membership}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5232,14 +5201,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * `Membership` to retrieve. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`.
+         * `Membership` to retrieve. Must be of the form `groups/{group}/memberships/{membership}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-       `Membership` to retrieve. Must be of the form `groups/{group_id}/memberships/{membership_id}`.
+       `Membership` to retrieve. Must be of the form `groups/{group}/memberships/{membership}`.
          */
         public java.lang.String getName() {
           return name;
@@ -5247,8 +5215,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * `Membership` to retrieve. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`.
+         * `Membership` to retrieve. Must be of the form `groups/{group}/memberships/{membership}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5279,12 +5246,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link GetMembershipGraph#execute()} method to invoke the remote operation.
        *
        * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-       *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
-       *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
-       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
-       *        constrained to paths between the member (defined in the query) and the parent. If a
-       *        wildcard collection is provided, all membership paths connected to the member will be
-       *        returned.
+       *        search transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID
+       *        assigned to the Group to which the Membership belongs to. group can be a wildcard
+       *        collection id "-". When a group is specified, the membership graph will be constrained to
+       *        paths between the member (defined in the query) and the parent. If a wildcard collection
+       *        is provided, all membership paths connected to the member will be returned.
        * @return the request
        */
       public GetMembershipGraph getMembershipGraph(java.lang.String parent) throws java.io.IOException {
@@ -5317,12 +5283,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * invoking the constructor. </p>
          *
          * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-       *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
-       *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
-       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
-       *        constrained to paths between the member (defined in the query) and the parent. If a
-       *        wildcard collection is provided, all membership paths connected to the member will be
-       *        returned.
+       *        search transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID
+       *        assigned to the Group to which the Membership belongs to. group can be a wildcard
+       *        collection id "-". When a group is specified, the membership graph will be constrained to
+       *        paths between the member (defined in the query) and the parent. If a wildcard collection
+       *        is provided, all membership paths connected to the member will be returned.
          * @since 1.13
          */
         protected GetMembershipGraph(java.lang.String parent) {
@@ -5402,10 +5367,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
-         * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
-         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
-         * be constrained to paths between the member (defined in the query) and the parent. If a
+         * group to search transitive memberships in. Format: `groups/{group}`, where `group` is the
+         * unique ID assigned to the Group to which the Membership belongs to. group can be a
+         * wildcard collection id "-". When a group is specified, the membership graph will be
+         * constrained to paths between the member (defined in the query) and the parent. If a
          * wildcard collection is provided, all membership paths connected to the member will be
          * returned.
          */
@@ -5413,11 +5378,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         private java.lang.String parent;
 
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-       search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
-       assigned to the Group to which the Membership belongs to. group_id can be a wildcard collection id
-       "-". When a group_id is specified, the membership graph will be constrained to paths between the
-       member (defined in the query) and the parent. If a wildcard collection is provided, all membership
-       paths connected to the member will be returned.
+       search transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID assigned
+       to the Group to which the Membership belongs to. group can be a wildcard collection id "-". When a
+       group is specified, the membership graph will be constrained to paths between the member (defined
+       in the query) and the parent. If a wildcard collection is provided, all membership paths connected
+       to the member will be returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5425,10 +5390,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
-         * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
-         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
-         * be constrained to paths between the member (defined in the query) and the parent. If a
+         * group to search transitive memberships in. Format: `groups/{group}`, where `group` is the
+         * unique ID assigned to the Group to which the Membership belongs to. group can be a
+         * wildcard collection id "-". When a group is specified, the membership graph will be
+         * constrained to paths between the member (defined in the query) and the parent. If a
          * wildcard collection is provided, all membership paths connected to the member will be
          * returned.
          */
@@ -5485,7 +5450,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       *        form `groups/{group_id}`.
+       *        form `groups/{group}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5512,7 +5477,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       *        form `groups/{group_id}`.
+       *        form `groups/{group}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5592,13 +5557,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
-         * be of the form `groups/{group_id}`.
+         * be of the form `groups/{group}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       form `groups/{group_id}`.
+       form `groups/{group}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5606,7 +5571,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
-         * be of the form `groups/{group_id}`.
+         * be of the form `groups/{group}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5699,7 +5664,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       *        form `groups/{group_id}`.
+       *        form `groups/{group}`.
        * @return the request
        */
       public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -5728,7 +5693,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       *        form `groups/{group_id}`.
+       *        form `groups/{group}`.
          * @since 1.13
          */
         protected Lookup(java.lang.String parent) {
@@ -5808,13 +5773,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
-         * be of the form `groups/{group_id}`.
+         * be of the form `groups/{group}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
-       form `groups/{group_id}`.
+       form `groups/{group}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5822,7 +5787,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
-         * be of the form `groups/{group_id}`.
+         * be of the form `groups/{group}`.
          */
         public Lookup setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5867,7 +5832,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Google-managed entity such as a Google user or a Google Group. If specified, the
          * `EntityKey` represents an external-identity-mapped group. The namespace must correspond
          * to an identity source created in Admin Console and must be in the form of
-         * `identitysources/{identity_source_id}`.
+         * `identitysources/{identity_source}`.
          */
         @com.google.api.client.util.Key("memberKey.namespace")
         private java.lang.String memberKeyNamespace;
@@ -5875,7 +5840,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /** The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-
        managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an
        external-identity-mapped group. The namespace must correspond to an identity source created in
-       Admin Console and must be in the form of `identitysources/{identity_source_id}`.
+       Admin Console and must be in the form of `identitysources/{identity_source}`.
          */
         public java.lang.String getMemberKeyNamespace() {
           return memberKeyNamespace;
@@ -5886,7 +5851,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Google-managed entity such as a Google user or a Google Group. If specified, the
          * `EntityKey` represents an external-identity-mapped group. The namespace must correspond
          * to an identity source created in Admin Console and must be in the form of
-         * `identitysources/{identity_source_id}`.
+         * `identitysources/{identity_source}`.
          */
         public Lookup setMemberKeyNamespace(java.lang.String memberKeyNamespace) {
           this.memberKeyNamespace = memberKeyNamespace;
@@ -5909,7 +5874,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        *
        * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        `Membership` whose roles are to be modified. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`.
+       *        `groups/{group}/memberships/{membership}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
        * @return the request
        */
@@ -5939,7 +5904,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        `Membership` whose roles are to be modified. Must be of the form
-       *        `groups/{group_id}/memberships/{membership_id}`.
+       *        `groups/{group}/memberships/{membership}`.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
          * @since 1.13
          */
@@ -6011,14 +5976,14 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` whose roles are to be modified. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`.
+         * `groups/{group}/memberships/{membership}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        `Membership` whose roles are to be modified. Must be of the form
-       `groups/{group_id}/memberships/{membership_id}`.
+       `groups/{group}/memberships/{membership}`.
          */
         public java.lang.String getName() {
           return name;
@@ -6027,7 +5992,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
          * `Membership` whose roles are to be modified. Must be of the form
-         * `groups/{group_id}/memberships/{membership_id}`.
+         * `groups/{group}/memberships/{membership}`.
          */
         public ModifyMembershipRoles setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6058,8 +6023,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * operation.
        *
        * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as
-       *        this API will search across all groups for a given member.
+       *        transitive memberships in. Format: `groups/{group}`, where `group` is always '-' as this
+       *        API will search across all groups for a given member.
        * @return the request
        */
       public SearchTransitiveGroups searchTransitiveGroups(java.lang.String parent) throws java.io.IOException {
@@ -6092,8 +6057,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * after invoking the constructor. </p>
          *
          * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as
-       *        this API will search across all groups for a given member.
+       *        transitive memberships in. Format: `groups/{group}`, where `group` is always '-' as this
+       *        API will search across all groups for a given member.
          * @since 1.13
          */
         protected SearchTransitiveGroups(java.lang.String parent) {
@@ -6173,15 +6138,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always
-         * '-' as this API will search across all groups for a given member.
+         * search transitive memberships in. Format: `groups/{group}`, where `group` is always '-'
+         * as this API will search across all groups for a given member.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-      [ transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as this API
-      [ will search across all groups for a given member.
+      [ transitive memberships in. Format: `groups/{group}`, where `group` is always '-' as this API will
+      [ search across all groups for a given member.
       [
 
          */
@@ -6191,8 +6156,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always
-         * '-' as this API will search across all groups for a given member.
+         * search transitive memberships in. Format: `groups/{group}`, where `group` is always '-'
+         * as this API will search across all groups for a given member.
          */
         public SearchTransitiveGroups setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6289,7 +6254,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * operation.
        *
        * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
+       *        transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID
        *        assigned to the Group.
        * @return the request
        */
@@ -6322,7 +6287,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * immediately after invoking the constructor. </p>
          *
          * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
+       *        transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID
        *        assigned to the Group.
          * @since 1.13
          */
@@ -6403,15 +6368,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
-         * unique ID assigned to the Group.
+         * search transitive memberships in. Format: `groups/{group}`, where `group` is the unique
+         * ID assigned to the Group.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
-      [ transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned
-      [ to the Group.
+      [ transitive memberships in. Format: `groups/{group}`, where `group` is the unique ID assigned to
+      [ the Group.
       [
 
          */
@@ -6421,8 +6386,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
-         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
-         * unique ID assigned to the Group.
+         * search transitive memberships in. Format: `groups/{group}`, where `group` is the unique
+         * ID assigned to the Group.
          */
         public SearchTransitiveMemberships setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

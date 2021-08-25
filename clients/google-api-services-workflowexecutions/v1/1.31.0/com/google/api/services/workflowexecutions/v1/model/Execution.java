@@ -42,6 +42,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String argument;
 
   /**
+   * The call logging level associated to this execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String callLogLevel;
+
+  /**
    * Output only. Marks the end of execution, successful or not.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setArgument(java.lang.String argument) {
     this.argument = argument;
+    return this;
+  }
+
+  /**
+   * The call logging level associated to this execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCallLogLevel() {
+    return callLogLevel;
+  }
+
+  /**
+   * The call logging level associated to this execution.
+   * @param callLogLevel callLogLevel or {@code null} for none
+   */
+  public Execution setCallLogLevel(java.lang.String callLogLevel) {
+    this.callLogLevel = callLogLevel;
     return this;
   }
 

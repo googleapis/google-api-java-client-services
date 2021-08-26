@@ -30,6 +30,13 @@ package com.google.api.services.people.v1.model;
 public final class Organization extends com.google.api.client.json.GenericJson {
 
   /**
+   * The person's cost center at the organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String costCenter;
+
+  /**
    * True if the organization is the person's current organization; false if the organization is a
    * past organization.
    * The value may be {@code null}.
@@ -65,6 +72,13 @@ public final class Organization extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedType;
+
+  /**
+   * The person's full-time equivalent millipercent within the organization (100000 = 100%).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer fullTimeEquivalentMillipercent;
 
   /**
    * The person's job description at the organization.
@@ -130,6 +144,23 @@ public final class Organization extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The person's cost center at the organization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCostCenter() {
+    return costCenter;
+  }
+
+  /**
+   * The person's cost center at the organization.
+   * @param costCenter costCenter or {@code null} for none
+   */
+  public Organization setCostCenter(java.lang.String costCenter) {
+    this.costCenter = costCenter;
+    return this;
+  }
 
   /**
    * True if the organization is the person's current organization; false if the organization is a
@@ -217,6 +248,23 @@ public final class Organization extends com.google.api.client.json.GenericJson {
    */
   public Organization setFormattedType(java.lang.String formattedType) {
     this.formattedType = formattedType;
+    return this;
+  }
+
+  /**
+   * The person's full-time equivalent millipercent within the organization (100000 = 100%).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFullTimeEquivalentMillipercent() {
+    return fullTimeEquivalentMillipercent;
+  }
+
+  /**
+   * The person's full-time equivalent millipercent within the organization (100000 = 100%).
+   * @param fullTimeEquivalentMillipercent fullTimeEquivalentMillipercent or {@code null} for none
+   */
+  public Organization setFullTimeEquivalentMillipercent(java.lang.Integer fullTimeEquivalentMillipercent) {
+    this.fullTimeEquivalentMillipercent = fullTimeEquivalentMillipercent;
     return this;
   }
 

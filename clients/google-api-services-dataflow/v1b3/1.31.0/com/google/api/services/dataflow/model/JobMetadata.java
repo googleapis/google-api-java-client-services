@@ -31,7 +31,7 @@ package com.google.api.services.dataflow.model;
 public final class JobMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identification of a Cloud BigTable source used in the Dataflow job.
+   * Identification of a Cloud Bigtable source used in the Dataflow job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identification of a PubSub source used in the Dataflow job.
+   * Identification of a Pub/Sub source used in the Dataflow job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   private java.util.List<SpannerIODetails> spannerDetails;
 
   /**
-   * Identification of a Cloud BigTable source used in the Dataflow job.
+   * Identification of a Cloud Bigtable source used in the Dataflow job.
    * @return value or {@code null} for none
    */
   public java.util.List<BigTableIODetails> getBigTableDetails() {
@@ -112,7 +112,7 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identification of a Cloud BigTable source used in the Dataflow job.
+   * Identification of a Cloud Bigtable source used in the Dataflow job.
    * @param bigTableDetails bigTableDetails or {@code null} for none
    */
   public JobMetadata setBigTableDetails(java.util.List<BigTableIODetails> bigTableDetails) {
@@ -172,7 +172,7 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identification of a PubSub source used in the Dataflow job.
+   * Identification of a Pub/Sub source used in the Dataflow job.
    * @return value or {@code null} for none
    */
   public java.util.List<PubSubIODetails> getPubsubDetails() {
@@ -180,7 +180,7 @@ public final class JobMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identification of a PubSub source used in the Dataflow job.
+   * Identification of a Pub/Sub source used in the Dataflow job.
    * @param pubsubDetails pubsubDetails or {@code null} for none
    */
   public JobMetadata setPubsubDetails(java.util.List<PubSubIODetails> pubsubDetails) {

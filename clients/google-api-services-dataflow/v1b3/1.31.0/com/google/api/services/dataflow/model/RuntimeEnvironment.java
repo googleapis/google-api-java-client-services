@@ -30,7 +30,7 @@ package com.google.api.services.dataflow.model;
 public final class RuntimeEnvironment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional experiment flags for the job.
+   * Additional experiment flags for the job, specified with the `--experiments` option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String zone;
 
   /**
-   * Additional experiment flags for the job.
+   * Additional experiment flags for the job, specified with the `--experiments` option.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalExperiments() {
@@ -169,7 +169,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional experiment flags for the job.
+   * Additional experiment flags for the job, specified with the `--experiments` option.
    * @param additionalExperiments additionalExperiments or {@code null} for none
    */
   public RuntimeEnvironment setAdditionalExperiments(java.util.List<java.lang.String> additionalExperiments) {

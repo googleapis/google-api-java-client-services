@@ -65,7 +65,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * PubSub snapshot metadata.
+   * Pub/Sub snapshot metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PubSub snapshot metadata.
+   * Pub/Sub snapshot metadata.
    * @return value or {@code null} for none
    */
   public java.util.List<PubsubSnapshotMetadata> getPubsubMetadata() {
@@ -199,7 +199,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PubSub snapshot metadata.
+   * Pub/Sub snapshot metadata.
    * @param pubsubMetadata pubsubMetadata or {@code null} for none
    */
   public Snapshot setPubsubMetadata(java.util.List<PubsubSnapshotMetadata> pubsubMetadata) {

@@ -47,11 +47,27 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.util.Map<String, java.lang.String> additionalUserLabels;
 
   /**
+   * The algorithm to use for autoscaling
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoscalingAlgorithm;
+
+  /**
    * Worker disk size, in gigabytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer diskSizeGb;
+
+  /**
+   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
+   * memory. The location of the heap file will either be echoed back to the user, or the user will
+   * be given the opportunity to download the heap file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dumpHeapOnOom;
 
   /**
    * Whether to enable Streaming Engine for the job.
@@ -90,13 +106,6 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.String machineType;
 
   /**
-   * The maximum number of workers to cap scaling at.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxNumWorkers;
-
-  /**
    * The maximum number of Google Compute Engine instances to be made available to your pipeline
    * during execution, from 1 to 1000.
    * The value may be {@code null}.
@@ -118,6 +127,14 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numWorkers;
+
+  /**
+   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
+   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String saveHeapDumpsToGcsPath;
 
   /**
    * Docker registry location of container image to use for the 'worker harness. Default is the
@@ -231,6 +248,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
+   * The algorithm to use for autoscaling
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoscalingAlgorithm() {
+    return autoscalingAlgorithm;
+  }
+
+  /**
+   * The algorithm to use for autoscaling
+   * @param autoscalingAlgorithm autoscalingAlgorithm or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setAutoscalingAlgorithm(java.lang.String autoscalingAlgorithm) {
+    this.autoscalingAlgorithm = autoscalingAlgorithm;
+    return this;
+  }
+
+  /**
    * Worker disk size, in gigabytes.
    * @return value or {@code null} for none
    */
@@ -244,6 +278,27 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setDiskSizeGb(java.lang.Integer diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
+   * memory. The location of the heap file will either be echoed back to the user, or the user will
+   * be given the opportunity to download the heap file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDumpHeapOnOom() {
+    return dumpHeapOnOom;
+  }
+
+  /**
+   * If true, save a heap dump before killing a thread or process which is GC thrashing or out of
+   * memory. The location of the heap file will either be echoed back to the user, or the user will
+   * be given the opportunity to download the heap file.
+   * @param dumpHeapOnOom dumpHeapOnOom or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setDumpHeapOnOom(java.lang.Boolean dumpHeapOnOom) {
+    this.dumpHeapOnOom = dumpHeapOnOom;
     return this;
   }
 
@@ -335,23 +390,6 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * The maximum number of workers to cap scaling at.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxNumWorkers() {
-    return maxNumWorkers;
-  }
-
-  /**
-   * The maximum number of workers to cap scaling at.
-   * @param maxNumWorkers maxNumWorkers or {@code null} for none
-   */
-  public FlexTemplateRuntimeEnvironment setMaxNumWorkers(java.lang.Integer maxNumWorkers) {
-    this.maxNumWorkers = maxNumWorkers;
-    return this;
-  }
-
-  /**
    * The maximum number of Google Compute Engine instances to be made available to your pipeline
    * during execution, from 1 to 1000.
    * @return value or {@code null} for none
@@ -403,6 +441,25 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setNumWorkers(java.lang.Integer numWorkers) {
     this.numWorkers = numWorkers;
+    return this;
+  }
+
+  /**
+   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
+   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSaveHeapDumpsToGcsPath() {
+    return saveHeapDumpsToGcsPath;
+  }
+
+  /**
+   * Cloud Storage bucket (directory) to upload heap dumps to the given location. Enabling this
+   * implies that heap dumps should be generated on OOM (dump_heap_on_oom is set to true).
+   * @param saveHeapDumpsToGcsPath saveHeapDumpsToGcsPath or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setSaveHeapDumpsToGcsPath(java.lang.String saveHeapDumpsToGcsPath) {
+    this.saveHeapDumpsToGcsPath = saveHeapDumpsToGcsPath;
     return this;
   }
 

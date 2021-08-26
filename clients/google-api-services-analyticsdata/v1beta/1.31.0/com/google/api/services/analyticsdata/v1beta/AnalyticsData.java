@@ -464,6 +464,178 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
+     * This compatibility method lists dimensions and metrics that can be added to a report request and
+     * maintain compatibility. This method fails if the request's dimensions and metrics are
+     * incompatible. In Google Analytics, reports fail if they request incompatible dimensions and/or
+     * metrics; in that case, you will need to remove dimensions and/or metrics from the incompatible
+     * report until the report is compatible. The Realtime and Core reports have different compatibility
+     * rules. This method checks compatibility for Core reports.
+     *
+     * Create a request for the method "properties.checkCompatibility".
+     *
+     * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+     * parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote operation.
+     *
+     * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
+     *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
+     *        /property-id). `property` should be the same value as in your `runReport` request.
+     *        Example: properties/1234 Set the Property ID to 0 for compatibility checking on dimensions
+     *        and metrics common to all properties. In this special mode, this method will not return
+     *        custom dimensions and metrics.
+     * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
+     * @return the request
+     */
+    public CheckCompatibility checkCompatibility(java.lang.String property, com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest content) throws java.io.IOException {
+      CheckCompatibility result = new CheckCompatibility(property, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CheckCompatibility extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityResponse> {
+
+      private static final String REST_PATH = "v1beta/{+property}:checkCompatibility";
+
+      private final java.util.regex.Pattern PROPERTY_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+      /**
+       * This compatibility method lists dimensions and metrics that can be added to a report request
+       * and maintain compatibility. This method fails if the request's dimensions and metrics are
+       * incompatible. In Google Analytics, reports fail if they request incompatible dimensions and/or
+       * metrics; in that case, you will need to remove dimensions and/or metrics from the incompatible
+       * report until the report is compatible. The Realtime and Core reports have different
+       * compatibility rules. This method checks compatibility for Core reports.
+       *
+       * Create a request for the method "properties.checkCompatibility".
+       *
+       * This request holds the parameters needed by the the analyticsdata server.  After setting any
+       * optional parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote
+       * operation. <p> {@link CheckCompatibility#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
+     *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
+     *        /property-id). `property` should be the same value as in your `runReport` request.
+     *        Example: properties/1234 Set the Property ID to 0 for compatibility checking on dimensions
+     *        and metrics common to all properties. In this special mode, this method will not return
+     *        custom dimensions and metrics.
+       * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
+       * @since 1.13
+       */
+      protected CheckCompatibility(java.lang.String property, com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest content) {
+        super(AnalyticsData.this, "POST", REST_PATH, content, com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityResponse.class);
+        this.property = com.google.api.client.util.Preconditions.checkNotNull(property, "Required parameter property must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+      }
+
+      @Override
+      public CheckCompatibility set$Xgafv(java.lang.String $Xgafv) {
+        return (CheckCompatibility) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CheckCompatibility setAccessToken(java.lang.String accessToken) {
+        return (CheckCompatibility) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CheckCompatibility setAlt(java.lang.String alt) {
+        return (CheckCompatibility) super.setAlt(alt);
+      }
+
+      @Override
+      public CheckCompatibility setCallback(java.lang.String callback) {
+        return (CheckCompatibility) super.setCallback(callback);
+      }
+
+      @Override
+      public CheckCompatibility setFields(java.lang.String fields) {
+        return (CheckCompatibility) super.setFields(fields);
+      }
+
+      @Override
+      public CheckCompatibility setKey(java.lang.String key) {
+        return (CheckCompatibility) super.setKey(key);
+      }
+
+      @Override
+      public CheckCompatibility setOauthToken(java.lang.String oauthToken) {
+        return (CheckCompatibility) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CheckCompatibility setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CheckCompatibility) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CheckCompatibility setQuotaUser(java.lang.String quotaUser) {
+        return (CheckCompatibility) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CheckCompatibility setUploadType(java.lang.String uploadType) {
+        return (CheckCompatibility) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CheckCompatibility setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CheckCompatibility) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A Google Analytics GA4 property identifier whose events are tracked. To learn more, see
+       * [where to find your Property
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+       * `property` should be the same value as in your `runReport` request. Example:
+       * properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and
+       * metrics common to all properties. In this special mode, this method will not return custom
+       * dimensions and metrics.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String property;
+
+      /** A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
+     find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
+     /property-id). `property` should be the same value as in your `runReport` request. Example:
+     properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and metrics
+     common to all properties. In this special mode, this method will not return custom dimensions and
+     metrics.
+       */
+      public java.lang.String getProperty() {
+        return property;
+      }
+
+      /**
+       * A Google Analytics GA4 property identifier whose events are tracked. To learn more, see
+       * [where to find your Property
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+       * `property` should be the same value as in your `runReport` request. Example:
+       * properties/1234 Set the Property ID to 0 for compatibility checking on dimensions and
+       * metrics common to all properties. In this special mode, this method will not return custom
+       * dimensions and metrics.
+       */
+      public CheckCompatibility setProperty(java.lang.String property) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.property = property;
+        return this;
+      }
+
+      @Override
+      public CheckCompatibility set(String parameterName, Object value) {
+        return (CheckCompatibility) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
      * dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified
      * in the request, and the metadata response includes Custom dimensions and metrics as well as

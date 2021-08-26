@@ -81,8 +81,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.List<GuestOsFeature> guestOsFeatures;
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -307,8 +307,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -316,8 +316,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * @param interface__ interface__ or {@code null} for none
    */
   public AttachedDiskInitializeParams setInterface(java.lang.String interface__) {

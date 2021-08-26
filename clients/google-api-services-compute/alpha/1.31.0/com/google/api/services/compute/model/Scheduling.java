@@ -75,6 +75,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer hostErrorTimeoutSeconds;
 
   /**
+   * Specifies the termination action for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceTerminationAction;
+
+  /**
    * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
    * instance creation, or when the instance is not currently running. It must not be set if the
    * preemptible option is also set.
@@ -249,6 +256,23 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setHostErrorTimeoutSeconds(java.lang.Integer hostErrorTimeoutSeconds) {
     this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
+    return this;
+  }
+
+  /**
+   * Specifies the termination action for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceTerminationAction() {
+    return instanceTerminationAction;
+  }
+
+  /**
+   * Specifies the termination action for the instance.
+   * @param instanceTerminationAction instanceTerminationAction or {@code null} for none
+   */
+  public Scheduling setInstanceTerminationAction(java.lang.String instanceTerminationAction) {
+    this.instanceTerminationAction = instanceTerminationAction;
     return this;
   }
 

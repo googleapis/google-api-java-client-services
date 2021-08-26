@@ -43,14 +43,17 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String aggregationInterval;
 
   /**
-   * Whether this subnetwork can conflict with static routes. Setting this to true allows this
-   * subnetwork's primary and secondary ranges to conflict with routes that have already been
-   * configured on the corresponding network. Static routes will take precedence over the subnetwork
-   * route if the route prefix length is at least as large as the subnetwork prefix length. Also,
-   * packets destined to IPs within subnetwork may contain private/sensitive data and are prevented
-   * from leaving the virtual network. Setting this field to true will disable this feature. The
-   * default value is false and applies to all existing subnetworks and automatically created
-   * subnetworks. This field cannot be set to true at resource creation time.
+   * Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) static
+   * routes that have already been configured on the corresponding network. For example if a static
+   * route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if
+   * allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes
+   * whose ranges conflict with this subnetwork's ranges won't be allowed unless
+   * route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within
+   * the subnetwork (which may contain private/sensitive data) are prevented from leaving the
+   * virtual network. Setting this field to true will disable this feature. The default value is
+   * false and applies to all existing subnetworks and automatically created subnetworks. This field
+   * cannot be set to true at resource creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,14 +359,17 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this subnetwork can conflict with static routes. Setting this to true allows this
-   * subnetwork's primary and secondary ranges to conflict with routes that have already been
-   * configured on the corresponding network. Static routes will take precedence over the subnetwork
-   * route if the route prefix length is at least as large as the subnetwork prefix length. Also,
-   * packets destined to IPs within subnetwork may contain private/sensitive data and are prevented
-   * from leaving the virtual network. Setting this field to true will disable this feature. The
-   * default value is false and applies to all existing subnetworks and automatically created
-   * subnetworks. This field cannot be set to true at resource creation time.
+   * Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) static
+   * routes that have already been configured on the corresponding network. For example if a static
+   * route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if
+   * allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes
+   * whose ranges conflict with this subnetwork's ranges won't be allowed unless
+   * route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within
+   * the subnetwork (which may contain private/sensitive data) are prevented from leaving the
+   * virtual network. Setting this field to true will disable this feature. The default value is
+   * false and applies to all existing subnetworks and automatically created subnetworks. This field
+   * cannot be set to true at resource creation time.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowSubnetCidrRoutesOverlap() {
@@ -371,14 +377,17 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this subnetwork can conflict with static routes. Setting this to true allows this
-   * subnetwork's primary and secondary ranges to conflict with routes that have already been
-   * configured on the corresponding network. Static routes will take precedence over the subnetwork
-   * route if the route prefix length is at least as large as the subnetwork prefix length. Also,
-   * packets destined to IPs within subnetwork may contain private/sensitive data and are prevented
-   * from leaving the virtual network. Setting this field to true will disable this feature. The
-   * default value is false and applies to all existing subnetworks and automatically created
-   * subnetworks. This field cannot be set to true at resource creation time.
+   * Whether this subnetwork's ranges can conflict with existing static routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) static
+   * routes that have already been configured on the corresponding network. For example if a static
+   * route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be created if
+   * allow_conflicting_routes=true. Overlapping is only allowed on subnetwork operations; routes
+   * whose ranges conflict with this subnetwork's ranges won't be allowed unless
+   * route.allow_conflicting_subnetworks is set to true. Typically packets destined to IPs within
+   * the subnetwork (which may contain private/sensitive data) are prevented from leaving the
+   * virtual network. Setting this field to true will disable this feature. The default value is
+   * false and applies to all existing subnetworks and automatically created subnetworks. This field
+   * cannot be set to true at resource creation time.
    * @param allowSubnetCidrRoutesOverlap allowSubnetCidrRoutesOverlap or {@code null} for none
    */
   public Subnetwork setAllowSubnetCidrRoutesOverlap(java.lang.Boolean allowSubnetCidrRoutesOverlap) {

@@ -196,8 +196,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * security policies can be configured to filter incoming HTTP requests targeting backend
    * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (GCS). They filter
-   * requests before the request is served from Google’s cache.
+   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
+   * filter requests before the request is served from Google's cache.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -662,8 +662,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * security policies can be configured to filter incoming HTTP requests targeting backend
    * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (GCS). They filter
-   * requests before the request is served from Google’s cache.
+   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
+   * filter requests before the request is served from Google's cache.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -675,8 +675,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    * security policies can be configured to filter incoming HTTP requests targeting backend
    * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
    * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (GCS). They filter
-   * requests before the request is served from Google’s cache.
+   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
+   * filter requests before the request is served from Google's cache.
    * @param type type or {@code null} for none
    */
   public SecurityPolicy setType(java.lang.String type) {

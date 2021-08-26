@@ -39,11 +39,27 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   private VulnerabilityLocation affectedLocation;
 
   /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when distro or language system has not yet
+   * assigned a severity for this vulnerability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveSeverity;
+
+  /**
    * The location of the available fix for vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VulnerabilityLocation fixedLocation;
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageType;
 
   /**
    * The value may be {@code null}.
@@ -69,6 +85,27 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when distro or language system has not yet
+   * assigned a severity for this vulnerability.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveSeverity() {
+    return effectiveSeverity;
+  }
+
+  /**
+   * Output only. The distro or language system assigned severity for this vulnerability when that
+   * is available and note provider assigned severity when distro or language system has not yet
+   * assigned a severity for this vulnerability.
+   * @param effectiveSeverity effectiveSeverity or {@code null} for none
+   */
+  public PackageIssue setEffectiveSeverity(java.lang.String effectiveSeverity) {
+    this.effectiveSeverity = effectiveSeverity;
+    return this;
+  }
+
+  /**
    * The location of the available fix for vulnerability.
    * @return value or {@code null} for none
    */
@@ -82,6 +119,23 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
    */
   public PackageIssue setFixedLocation(VulnerabilityLocation fixedLocation) {
     this.fixedLocation = fixedLocation;
+    return this;
+  }
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageType() {
+    return packageType;
+  }
+
+  /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   * @param packageType packageType or {@code null} for none
+   */
+  public PackageIssue setPackageType(java.lang.String packageType) {
+    this.packageType = packageType;
     return this;
   }
 

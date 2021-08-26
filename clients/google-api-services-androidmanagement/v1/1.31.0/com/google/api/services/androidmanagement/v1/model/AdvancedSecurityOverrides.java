@@ -61,6 +61,16 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String googlePlayProtectVerifyApps;
 
   /**
+   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
+   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
+   * By default, no personal apps (aside from system apps) can read work notifications. Each value
+   * in the list must be a package name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> personalAppsThatCanReadWorkNotifications;
+
+  /**
    * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
    * install_unknown_sources_allowed (deprecated).
    * The value may be {@code null}.
@@ -132,6 +142,29 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    */
   public AdvancedSecurityOverrides setGooglePlayProtectVerifyApps(java.lang.String googlePlayProtectVerifyApps) {
     this.googlePlayProtectVerifyApps = googlePlayProtectVerifyApps;
+    return this;
+  }
+
+  /**
+   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
+   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
+   * By default, no personal apps (aside from system apps) can read work notifications. Each value
+   * in the list must be a package name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPersonalAppsThatCanReadWorkNotifications() {
+    return personalAppsThatCanReadWorkNotifications;
+  }
+
+  /**
+   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
+   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
+   * By default, no personal apps (aside from system apps) can read work notifications. Each value
+   * in the list must be a package name.
+   * @param personalAppsThatCanReadWorkNotifications personalAppsThatCanReadWorkNotifications or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setPersonalAppsThatCanReadWorkNotifications(java.util.List<java.lang.String> personalAppsThatCanReadWorkNotifications) {
+    this.personalAppsThatCanReadWorkNotifications = personalAppsThatCanReadWorkNotifications;
     return this;
   }
 

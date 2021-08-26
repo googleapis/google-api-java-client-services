@@ -369,6 +369,24 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> serviceBindings;
+
+  /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
+   * reference a global policy. If used with a regional backend service, must reference a regional
+   * policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceLbPolicy;
+
+  /**
    * Type of session affinity to use. The default is NONE. For a detailed description of session
    * affinity options, see: [Session affinity](https://cloud.google.com/load-balancing/docs/backend-
    * service#session_affinity). Not supported when the backend service is referenced by a URL map
@@ -1180,6 +1198,48 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServiceBindings() {
+    return serviceBindings;
+  }
+
+  /**
+   * URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is
+   * INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
+   * @param serviceBindings serviceBindings or {@code null} for none
+   */
+  public BackendService setServiceBindings(java.util.List<java.lang.String> serviceBindings) {
+    this.serviceBindings = serviceBindings;
+    return this;
+  }
+
+  /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
+   * reference a global policy. If used with a regional backend service, must reference a regional
+   * policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceLbPolicy() {
+    return serviceLbPolicy;
+  }
+
+  /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
+   * reference a global policy. If used with a regional backend service, must reference a regional
+   * policy.
+   * @param serviceLbPolicy serviceLbPolicy or {@code null} for none
+   */
+  public BackendService setServiceLbPolicy(java.lang.String serviceLbPolicy) {
+    this.serviceLbPolicy = serviceLbPolicy;
     return this;
   }
 

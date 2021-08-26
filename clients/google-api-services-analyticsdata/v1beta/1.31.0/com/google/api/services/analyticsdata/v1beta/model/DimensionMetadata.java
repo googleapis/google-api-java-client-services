@@ -38,6 +38,14 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiName;
 
   /**
+   * The display name of the category that this dimension belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * True if the dimension is a custom dimension for this property.
    * The value may be {@code null}.
    */
@@ -81,6 +89,25 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
    */
   public DimensionMetadata setApiName(java.lang.String apiName) {
     this.apiName = apiName;
+    return this;
+  }
+
+  /**
+   * The display name of the category that this dimension belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * The display name of the category that this dimension belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * @param category category or {@code null} for none
+   */
+  public DimensionMetadata setCategory(java.lang.String category) {
+    this.category = category;
     return this;
   }
 

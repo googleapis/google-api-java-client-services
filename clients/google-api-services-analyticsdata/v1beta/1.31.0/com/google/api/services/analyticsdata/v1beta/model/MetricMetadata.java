@@ -38,6 +38,14 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String apiName;
 
   /**
+   * The display name of the category that this metrics belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * True if the metric is a custom metric for this property.
    * The value may be {@code null}.
    */
@@ -97,6 +105,25 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
    */
   public MetricMetadata setApiName(java.lang.String apiName) {
     this.apiName = apiName;
+    return this;
+  }
+
+  /**
+   * The display name of the category that this metrics belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * The display name of the category that this metrics belongs to. Similar dimensions and metrics
+   * are categorized together.
+   * @param category category or {@code null} for none
+   */
+  public MetricMetadata setCategory(java.lang.String category) {
+    this.category = category;
     return this;
   }
 

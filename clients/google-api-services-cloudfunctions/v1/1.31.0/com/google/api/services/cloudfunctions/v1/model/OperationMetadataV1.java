@@ -39,7 +39,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * The Cloud Build Name of the function deployment. This field is only populated for Create and
-   * Update operations. projects//locations//builds/.
+   * Update operations. `projects//locations//builds/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * Target of the operation - for example
-   * projects/project-1/locations/region-1/functions/function-1
+   * `projects/project-1/locations/region-1/functions/function-1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * The Cloud Build Name of the function deployment. This field is only populated for Create and
-   * Update operations. projects//locations//builds/.
+   * Update operations. `projects//locations//builds/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuildName() {
@@ -120,7 +120,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * The Cloud Build Name of the function deployment. This field is only populated for Create and
-   * Update operations. projects//locations//builds/.
+   * Update operations. `projects//locations//builds/`.
    * @param buildName buildName or {@code null} for none
    */
   public OperationMetadataV1 setBuildName(java.lang.String buildName) {
@@ -166,7 +166,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * Target of the operation - for example
-   * projects/project-1/locations/region-1/functions/function-1
+   * `projects/project-1/locations/region-1/functions/function-1`
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -175,7 +175,7 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
 
   /**
    * Target of the operation - for example
-   * projects/project-1/locations/region-1/functions/function-1
+   * `projects/project-1/locations/region-1/functions/function-1`
    * @param target target or {@code null} for none
    */
   public OperationMetadataV1 setTarget(java.lang.String target) {

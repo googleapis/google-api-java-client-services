@@ -34,11 +34,13 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
   /**
    * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial
    * and recipe.entryPoint. For example, if the recipe type were "make", then this might be the
-   * flags passed to make aside from the target, which is captured in recipe.entryPoint.
+   * flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the
+   * arguments field can greatly vary in structure, depending on the builder and recipe type, this
+   * is of form "Any".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> arguments;
+  private java.util.List<java.util.Map<String, java.lang.Object>> arguments;
 
   /**
    * Index in materials containing the recipe steps that are not implied by recipe.type. For
@@ -62,11 +64,13 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
 
   /**
    * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only
-   * needed for reproducing the build but not evaluated as part of policy.
+   * needed for reproducing the build but not evaluated as part of policy. Since the environment
+   * field can greatly vary in structure, depending on the builder and recipe type, this is of form
+   * "Any".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> environment;
+  private java.util.List<java.util.Map<String, java.lang.Object>> environment;
 
   /**
    * URI indicating what type of recipe was performed. It determines the meaning of
@@ -79,20 +83,24 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
   /**
    * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial
    * and recipe.entryPoint. For example, if the recipe type were "make", then this might be the
-   * flags passed to make aside from the target, which is captured in recipe.entryPoint.
+   * flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the
+   * arguments field can greatly vary in structure, depending on the builder and recipe type, this
+   * is of form "Any".
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getArguments() {
+  public java.util.List<java.util.Map<String, java.lang.Object>> getArguments() {
     return arguments;
   }
 
   /**
    * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial
    * and recipe.entryPoint. For example, if the recipe type were "make", then this might be the
-   * flags passed to make aside from the target, which is captured in recipe.entryPoint.
+   * flags passed to make aside from the target, which is captured in recipe.entryPoint. Since the
+   * arguments field can greatly vary in structure, depending on the builder and recipe type, this
+   * is of form "Any".
    * @param arguments arguments or {@code null} for none
    */
-  public Recipe setArguments(java.util.List<java.lang.String> arguments) {
+  public Recipe setArguments(java.util.List<java.util.Map<String, java.lang.Object>> arguments) {
     this.arguments = arguments;
     return this;
   }
@@ -145,19 +153,23 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
 
   /**
    * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only
-   * needed for reproducing the build but not evaluated as part of policy.
+   * needed for reproducing the build but not evaluated as part of policy. Since the environment
+   * field can greatly vary in structure, depending on the builder and recipe type, this is of form
+   * "Any".
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getEnvironment() {
+  public java.util.List<java.util.Map<String, java.lang.Object>> getEnvironment() {
     return environment;
   }
 
   /**
    * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only
-   * needed for reproducing the build but not evaluated as part of policy.
+   * needed for reproducing the build but not evaluated as part of policy. Since the environment
+   * field can greatly vary in structure, depending on the builder and recipe type, this is of form
+   * "Any".
    * @param environment environment or {@code null} for none
    */
-  public Recipe setEnvironment(java.util.Map<String, java.lang.String> environment) {
+  public Recipe setEnvironment(java.util.List<java.util.Map<String, java.lang.Object>> environment) {
     this.environment = environment;
     return this;
   }

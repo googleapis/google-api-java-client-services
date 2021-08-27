@@ -153,6 +153,147 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
   public class Projects {
 
     /**
+     * Enroll data sources in a user project. This allows users to create transfer configurations for
+     * these data sources. They will also appear in the ListDataSources RPC and as such, will appear in
+     * the BigQuery UI 'https://bigquery.cloud.google.com' (and the documents can be found at
+     * https://cloud.google.com/bigquery/bigquery-web-ui and https://cloud.google.com/bigquery/docs
+     * /working-with-transfers).
+     *
+     * Create a request for the method "projects.enrollDataSources".
+     *
+     * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+     * optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name The name of the project resource in the form: `projects/{project_id}`
+     * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
+     * @return the request
+     */
+    public EnrollDataSources enrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest content) throws java.io.IOException {
+      EnrollDataSources result = new EnrollDataSources(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EnrollDataSources extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/{+name}:enrollDataSources";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Enroll data sources in a user project. This allows users to create transfer configurations for
+       * these data sources. They will also appear in the ListDataSources RPC and as such, will appear
+       * in the BigQuery UI 'https://bigquery.cloud.google.com' (and the documents can be found at
+       * https://cloud.google.com/bigquery/bigquery-web-ui and https://cloud.google.com/bigquery/docs
+       * /working-with-transfers).
+       *
+       * Create a request for the method "projects.enrollDataSources".
+       *
+       * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+       * any optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the
+       * remote operation. <p> {@link EnrollDataSources#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
+       * @since 1.13
+       */
+      protected EnrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest content) {
+        super(BigQueryDataTransfer.this, "POST", REST_PATH, content, com.google.api.services.bigquerydatatransfer.v1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public EnrollDataSources set$Xgafv(java.lang.String $Xgafv) {
+        return (EnrollDataSources) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EnrollDataSources setAccessToken(java.lang.String accessToken) {
+        return (EnrollDataSources) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EnrollDataSources setAlt(java.lang.String alt) {
+        return (EnrollDataSources) super.setAlt(alt);
+      }
+
+      @Override
+      public EnrollDataSources setCallback(java.lang.String callback) {
+        return (EnrollDataSources) super.setCallback(callback);
+      }
+
+      @Override
+      public EnrollDataSources setFields(java.lang.String fields) {
+        return (EnrollDataSources) super.setFields(fields);
+      }
+
+      @Override
+      public EnrollDataSources setKey(java.lang.String key) {
+        return (EnrollDataSources) super.setKey(key);
+      }
+
+      @Override
+      public EnrollDataSources setOauthToken(java.lang.String oauthToken) {
+        return (EnrollDataSources) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EnrollDataSources setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EnrollDataSources) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EnrollDataSources setQuotaUser(java.lang.String quotaUser) {
+        return (EnrollDataSources) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EnrollDataSources setUploadType(java.lang.String uploadType) {
+        return (EnrollDataSources) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EnrollDataSources setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EnrollDataSources) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the project resource in the form: `projects/{project_id}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the project resource in the form: `projects/{project_id}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the project resource in the form: `projects/{project_id}` */
+      public EnrollDataSources setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public EnrollDataSources set(String parameterName, Object value) {
+        return (EnrollDataSources) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the DataSources collection.
      *
      * <p>The typical use is:</p>
@@ -688,6 +829,146 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
      */
     public class Locations {
 
+      /**
+       * Enroll data sources in a user project. This allows users to create transfer configurations for
+       * these data sources. They will also appear in the ListDataSources RPC and as such, will appear in
+       * the BigQuery UI 'https://bigquery.cloud.google.com' (and the documents can be found at
+       * https://cloud.google.com/bigquery/bigquery-web-ui and https://cloud.google.com/bigquery/docs
+       * /working-with-transfers).
+       *
+       * Create a request for the method "locations.enrollDataSources".
+       *
+       * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+       * optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
+       * @return the request
+       */
+      public EnrollDataSources enrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest content) throws java.io.IOException {
+        EnrollDataSources result = new EnrollDataSources(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class EnrollDataSources extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}:enrollDataSources";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Enroll data sources in a user project. This allows users to create transfer configurations for
+         * these data sources. They will also appear in the ListDataSources RPC and as such, will appear
+         * in the BigQuery UI 'https://bigquery.cloud.google.com' (and the documents can be found at
+         * https://cloud.google.com/bigquery/bigquery-web-ui and https://cloud.google.com/bigquery/docs
+         * /working-with-transfers).
+         *
+         * Create a request for the method "locations.enrollDataSources".
+         *
+         * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+         * any optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the
+         * remote operation. <p> {@link EnrollDataSources#initialize(com.google.api.client.googleapis.serv
+         * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name The name of the project resource in the form: `projects/{project_id}`
+         * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
+         * @since 1.13
+         */
+        protected EnrollDataSources(java.lang.String name, com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest content) {
+          super(BigQueryDataTransfer.this, "POST", REST_PATH, content, com.google.api.services.bigquerydatatransfer.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public EnrollDataSources set$Xgafv(java.lang.String $Xgafv) {
+          return (EnrollDataSources) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public EnrollDataSources setAccessToken(java.lang.String accessToken) {
+          return (EnrollDataSources) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public EnrollDataSources setAlt(java.lang.String alt) {
+          return (EnrollDataSources) super.setAlt(alt);
+        }
+
+        @Override
+        public EnrollDataSources setCallback(java.lang.String callback) {
+          return (EnrollDataSources) super.setCallback(callback);
+        }
+
+        @Override
+        public EnrollDataSources setFields(java.lang.String fields) {
+          return (EnrollDataSources) super.setFields(fields);
+        }
+
+        @Override
+        public EnrollDataSources setKey(java.lang.String key) {
+          return (EnrollDataSources) super.setKey(key);
+        }
+
+        @Override
+        public EnrollDataSources setOauthToken(java.lang.String oauthToken) {
+          return (EnrollDataSources) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public EnrollDataSources setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (EnrollDataSources) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public EnrollDataSources setQuotaUser(java.lang.String quotaUser) {
+          return (EnrollDataSources) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public EnrollDataSources setUploadType(java.lang.String uploadType) {
+          return (EnrollDataSources) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public EnrollDataSources setUploadProtocol(java.lang.String uploadProtocol) {
+          return (EnrollDataSources) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the project resource in the form: `projects/{project_id}` */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the project resource in the form: `projects/{project_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the project resource in the form: `projects/{project_id}` */
+        public EnrollDataSources setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public EnrollDataSources set(String parameterName, Object value) {
+          return (EnrollDataSources) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets information about a location.
        *

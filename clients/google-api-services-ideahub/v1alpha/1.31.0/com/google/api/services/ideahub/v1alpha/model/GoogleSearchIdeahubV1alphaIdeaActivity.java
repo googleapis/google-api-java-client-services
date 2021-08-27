@@ -30,7 +30,7 @@ package com.google.api.services.ideahub.v1alpha.model;
 public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Idea IDs for this entry.
+   * The Idea IDs for this entry. If empty, topics should be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   private java.lang.String name;
 
   /**
-   * The Topic IDs for this entry.
+   * The Topic IDs for this entry. If empty, ideas should be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   private java.lang.String uri;
 
   /**
-   * The Idea IDs for this entry.
+   * The Idea IDs for this entry. If empty, topics should be set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdeas() {
@@ -74,7 +74,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   }
 
   /**
-   * The Idea IDs for this entry.
+   * The Idea IDs for this entry. If empty, topics should be set.
    * @param ideas ideas or {@code null} for none
    */
   public GoogleSearchIdeahubV1alphaIdeaActivity setIdeas(java.util.List<java.lang.String> ideas) {
@@ -102,7 +102,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   }
 
   /**
-   * The Topic IDs for this entry.
+   * The Topic IDs for this entry. If empty, ideas should be set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTopics() {
@@ -110,7 +110,7 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   }
 
   /**
-   * The Topic IDs for this entry.
+   * The Topic IDs for this entry. If empty, ideas should be set.
    * @param topics topics or {@code null} for none
    */
   public GoogleSearchIdeahubV1alphaIdeaActivity setTopics(java.util.List<java.lang.String> topics) {

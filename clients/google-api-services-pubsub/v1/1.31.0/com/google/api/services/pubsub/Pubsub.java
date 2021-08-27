@@ -603,22 +603,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The set of fields to return in the response. If not set, returns a Schema with `name` and
-         * `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         * The set of fields to return in the response. If not set, returns a Schema with all fields
+         * filled out. Set to `BASIC` to omit the `definition`.
          */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** The set of fields to return in the response. If not set, returns a Schema with `name` and `type`,
-       but not `definition`. Set to `FULL` to retrieve all fields.
+        /** The set of fields to return in the response. If not set, returns a Schema with all fields filled
+       out. Set to `BASIC` to omit the `definition`.
          */
         public java.lang.String getView() {
           return view;
         }
 
         /**
-         * The set of fields to return in the response. If not set, returns a Schema with `name` and
-         * `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         * The set of fields to return in the response. If not set, returns a Schema with all fields
+         * filled out. Set to `BASIC` to omit the `definition`.
          */
         public Get setView(java.lang.String view) {
           this.view = view;

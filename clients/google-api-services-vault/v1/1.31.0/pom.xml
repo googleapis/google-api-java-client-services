@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-vault</artifactId>
-  <version>v1-rev20210621-1.32.1</version>
-  <name>G Suite Vault API v1-rev20210621-1.32.1</name>
+  <version>v1-rev20210817-1.32.1</version>
+  <name>Google Vault API v1-rev20210817-1.32.1</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>G Suite Vault API ${project.version}</doctitle>
-          <windowtitle>G Suite Vault API ${project.version}</windowtitle>
+          <doctitle>Google Vault API ${project.version}</doctitle>
+          <windowtitle>Google Vault API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

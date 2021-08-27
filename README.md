@@ -43,7 +43,7 @@ packages on [Maven Central][maven-search].
 | Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
-| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1), [v1alpha1](clients/google-api-services-baremetalsolution/v1alpha1), [v2](clients/google-api-services-baremetalsolution/v2) |
+| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -142,7 +142,6 @@ packages on [Maven Central][maven-search].
 | Firebase Realtime Database Management API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
-| G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
 | GKE Hub API | [v1](clients/google-api-services-gkehub/v1), [v1alpha](clients/google-api-services-gkehub/v1alpha), [v1alpha2](clients/google-api-services-gkehub/v1alpha2), [v1beta](clients/google-api-services-gkehub/v1beta), [v1beta1](clients/google-api-services-gkehub/v1beta1) |
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
@@ -171,6 +170,7 @@ packages on [Maven Central][maven-search].
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
+| Google Vault API | [v1](clients/google-api-services-vault/v1) |
 | Google Workspace Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | Google Workspace Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |

@@ -38,6 +38,14 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
   private java.lang.Long advertiserId;
 
   /**
+   * Search terms for Business Chain targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BusinessChainSearchTerms businessChainSearchTerms;
+
+  /**
    * Search terms for geo region targeting options. Can only be used when targeting_type is
    * `TARGETING_TYPE_GEO_REGION`.
    * The value may be {@code null}.
@@ -63,6 +71,14 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
   private java.lang.String pageToken;
 
   /**
+   * Search terms for POI targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_POI`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PoiSearchTerms poiSearchTerms;
+
+  /**
    * Required. The Advertiser this request is being made in the context of.
    * @return value or {@code null} for none
    */
@@ -76,6 +92,25 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
    */
   public SearchTargetingOptionsRequest setAdvertiserId(java.lang.Long advertiserId) {
     this.advertiserId = advertiserId;
+    return this;
+  }
+
+  /**
+   * Search terms for Business Chain targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * @return value or {@code null} for none
+   */
+  public BusinessChainSearchTerms getBusinessChainSearchTerms() {
+    return businessChainSearchTerms;
+  }
+
+  /**
+   * Search terms for Business Chain targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * @param businessChainSearchTerms businessChainSearchTerms or {@code null} for none
+   */
+  public SearchTargetingOptionsRequest setBusinessChainSearchTerms(BusinessChainSearchTerms businessChainSearchTerms) {
+    this.businessChainSearchTerms = businessChainSearchTerms;
     return this;
   }
 
@@ -135,6 +170,25 @@ public final class SearchTargetingOptionsRequest extends com.google.api.client.j
    */
   public SearchTargetingOptionsRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * Search terms for POI targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_POI`.
+   * @return value or {@code null} for none
+   */
+  public PoiSearchTerms getPoiSearchTerms() {
+    return poiSearchTerms;
+  }
+
+  /**
+   * Search terms for POI targeting options. Can only be used when targeting_type is
+   * `TARGETING_TYPE_POI`.
+   * @param poiSearchTerms poiSearchTerms or {@code null} for none
+   */
+  public SearchTargetingOptionsRequest setPoiSearchTerms(PoiSearchTerms poiSearchTerms) {
+    this.poiSearchTerms = poiSearchTerms;
     return this;
   }
 

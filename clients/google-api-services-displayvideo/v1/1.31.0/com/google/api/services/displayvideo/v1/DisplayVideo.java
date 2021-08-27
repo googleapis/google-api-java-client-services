@@ -16034,6 +16034,107 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class CustomBiddingAlgorithms {
 
     /**
+     * Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if
+     * successful.
+     *
+     * Create a request for the method "customBiddingAlgorithms.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms";
+
+      /**
+       * Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if
+       * successful.
+       *
+       * Create a request for the method "customBiddingAlgorithms.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets a custom bidding algorithm.
      *
      * Create a request for the method "customBiddingAlgorithms.get".
@@ -16472,6 +16573,145 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
+     * successful.
+     *
+     * Create a request for the method "customBiddingAlgorithms.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param customBiddingAlgorithmId Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) throws java.io.IOException {
+      Patch result = new Patch(customBiddingAlgorithmId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}";
+
+      private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
+       * successful.
+       *
+       * Create a request for the method "customBiddingAlgorithms.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param customBiddingAlgorithmId Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm.class);
+        this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system. */
+      @com.google.api.client.util.Key
+      private java.lang.Long customBiddingAlgorithmId;
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+       */
+      public java.lang.Long getCustomBiddingAlgorithmId() {
+        return customBiddingAlgorithmId;
+      }
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system. */
+      public Patch setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+        this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
       }
     }
 
@@ -20435,6 +20675,195 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (Download) super.set(parameterName, value);
       }
     }
+    /**
+     * Uploads media. Upload is supported on the URI
+     * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+     * successful without including `upload_type=media` query string.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia}
+     * @return the request
+     */
+    public Upload upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content) throws java.io.IOException {
+      Upload result = new Upload(resourceName, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Uploads media. Upload is supported on the URI
+     * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+     * successful without including `upload_type=media` query string.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the displayvideo server.  After setting any
+     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(resourceName, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia> {
+
+      private static final String REST_PATH = "media/{+resourceName}";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.*$");
+
+      /**
+       * Uploads media. Upload is supported on the URI
+       * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+       * successful without including `upload_type=media` query string.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia}
+       * @since 1.13
+       */
+      protected Upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+      }
+
+      /**
+       * Uploads media. Upload is supported on the URI
+       * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+       * successful without including `upload_type=media` query string.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(DisplayVideo.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      public Upload setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -24302,7 +24731,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
        * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
-       *        `TARGETING_TYPE_GEO_REGION`
+       *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
        * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
        * @return the request
        */
@@ -24331,7 +24760,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
-       *        `TARGETING_TYPE_GEO_REGION`
+       *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
          * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
          * @since 1.13
          */
@@ -24402,13 +24831,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The type of targeting options to retrieve. Accepted values are: *
-         * `TARGETING_TYPE_GEO_REGION`
+         * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
          */
         @com.google.api.client.util.Key
         private java.lang.String targetingType;
 
         /** Required. The type of targeting options to retrieve. Accepted values are: *
-       `TARGETING_TYPE_GEO_REGION`
+       `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
          */
         public java.lang.String getTargetingType() {
           return targetingType;
@@ -24416,7 +24845,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The type of targeting options to retrieve. Accepted values are: *
-         * `TARGETING_TYPE_GEO_REGION`
+         * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
          */
         public Search setTargetingType(java.lang.String targetingType) {
           if (!getSuppressPatternChecks()) {

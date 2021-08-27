@@ -31,8 +31,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class BusinessChainSearchTerms extends com.google.api.client.json.GenericJson {
 
   /**
-   * The search query for the desired business chain. The query can be a prefix, e.g. "KFC",
-   * "mercede".
+   * The search query for the desired business chain. The query must be the full name of the
+   * business, e.g. "KFC", "mercedes-benz".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class BusinessChainSearchTerms extends com.google.api.client.json.G
   private java.lang.String region;
 
   /**
-   * The search query for the desired business chain. The query can be a prefix, e.g. "KFC",
-   * "mercede".
+   * The search query for the desired business chain. The query must be the full name of the
+   * business, e.g. "KFC", "mercedes-benz".
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessChain() {
@@ -55,8 +55,8 @@ public final class BusinessChainSearchTerms extends com.google.api.client.json.G
   }
 
   /**
-   * The search query for the desired business chain. The query can be a prefix, e.g. "KFC",
-   * "mercede".
+   * The search query for the desired business chain. The query must be the full name of the
+   * business, e.g. "KFC", "mercedes-benz".
    * @param businessChain businessChain or {@code null} for none
    */
   public BusinessChainSearchTerms setBusinessChain(java.lang.String businessChain) {

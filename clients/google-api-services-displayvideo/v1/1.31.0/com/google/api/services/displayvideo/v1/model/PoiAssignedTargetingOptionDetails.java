@@ -32,7 +32,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class PoiAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle", followed by its
+   * full address if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,14 +70,16 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   private java.lang.String proximityRadiusUnit;
 
   /**
-   * Input only. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
+   * existing assigned_targeting_option_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetingOptionId;
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle", followed by its
+   * full address if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -84,7 +87,8 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle", followed by its
+   * full address if available.
    * @param displayName displayName or {@code null} for none
    */
   public PoiAssignedTargetingOptionDetails setDisplayName(java.lang.String displayName) {
@@ -165,7 +169,8 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Input only. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
+   * existing assigned_targeting_option_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingOptionId() {
@@ -173,7 +178,8 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Input only. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
+   * existing assigned_targeting_option_id.
    * @param targetingOptionId targetingOptionId or {@code null} for none
    */
   public PoiAssignedTargetingOptionDetails setTargetingOptionId(java.lang.String targetingOptionId) {

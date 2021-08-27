@@ -87,8 +87,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -155,6 +155,21 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String locationHint;
+
+  /**
+   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
+   * of a disk created from a locked source image will cause the following operations to become
+   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
+   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
+   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
+   * will be prohibited from performing the operations below: - Further attachment of secondary
+   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
+   * with --auto-delete parameter set to false
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
 
   /**
    * Indicates whether or not the disk can be read/write attached to more than one instance.
@@ -512,8 +527,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -521,8 +536,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The
-   * default is SCSI.
+   * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI
+   * or NVME. The default is SCSI.
    * @param interface__ interface__ or {@code null} for none
    */
   public Disk setInterface(java.lang.String interface__) {
@@ -713,6 +728,39 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
+    return this;
+  }
+
+  /**
+   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
+   * of a disk created from a locked source image will cause the following operations to become
+   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
+   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
+   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
+   * will be prohibited from performing the operations below: - Further attachment of secondary
+   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
+   * with --auto-delete parameter set to false
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
+   * of a disk created from a locked source image will cause the following operations to become
+   * irreversibly prohibited: - R/W or R/O disk attachment to any other instance - Disk detachment.
+   * And the disk can only be deleted when the instance is deleted - Creation of images or snapshots
+   * - Disk cloning Furthermore, the instance with at least one disk with locked flag set to true
+   * will be prohibited from performing the operations below: - Further attachment of secondary
+   * disks. - Detachment of any disks - Create machine images - Create instance template - Delete
+   * the instance with --keep-disk parameter set to true for locked disks - Attach a locked disk
+   * with --auto-delete parameter set to false
+   * @param locked locked or {@code null} for none
+   */
+  public Disk setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
     return this;
   }
 

@@ -131,6 +131,17 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
+   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
+   * image creation. The instance with at least one locked attached disk is not allow to be used as
+   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
+   * --keep-disk parameter set to true for locked disks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
+
+  /**
    * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the
    * default is to attach the disk in READ_WRITE mode.
    * The value may be {@code null}.
@@ -405,6 +416,31 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setLicenses(java.util.List<java.lang.String> licenses) {
     this.licenses = licenses;
+    return this;
+  }
+
+  /**
+   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
+   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
+   * image creation. The instance with at least one locked attached disk is not allow to be used as
+   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
+   * --keep-disk parameter set to true for locked disks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
+   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
+   * image creation. The instance with at least one locked attached disk is not allow to be used as
+   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
+   * --keep-disk parameter set to true for locked disks.
+   * @param locked locked or {@code null} for none
+   */
+  public AttachedDisk setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
     return this;
   }
 

@@ -20,7 +20,7 @@ package com.google.api.services.vault.v1.model;
  * Options for Drive exports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the G Suite Vault API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Vault API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

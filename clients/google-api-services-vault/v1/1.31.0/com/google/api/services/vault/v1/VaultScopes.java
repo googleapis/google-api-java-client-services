@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the G Suite Vault API.
+ * Available OAuth 2.0 scopes for use with the Google Vault API.
  *
  * @since 1.4
  */

@@ -4758,6 +4758,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. Failure action when primary worker creation fails. */
+          @com.google.api.client.util.Key
+          private java.lang.String actionOnFailedPrimaryWorkers;
+
+          /** Optional. Failure action when primary worker creation fails.
+           */
+          public java.lang.String getActionOnFailedPrimaryWorkers() {
+            return actionOnFailedPrimaryWorkers;
+          }
+
+          /** Optional. Failure action when primary worker creation fails. */
+          public Create setActionOnFailedPrimaryWorkers(java.lang.String actionOnFailedPrimaryWorkers) {
+            this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
+            return this;
+          }
+
           /**
            * Optional. A unique ID used to identify the request. If the server receives two
            * CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud

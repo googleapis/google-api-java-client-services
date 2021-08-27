@@ -45,6 +45,13 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.lang.Long customBiddingAlgorithmId;
 
   /**
+   * Output only. The status of custom bidding algorithm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customBiddingAlgorithmState;
+
+  /**
    * Required. Immutable. The type of custom bidding algorithm.
    * The value may be {@code null}.
    */
@@ -82,6 +89,14 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.lang.Long partnerId;
 
   /**
+   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
+   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> sharedAdvertiserIds;
+
+  /**
    * Immutable. The unique ID of the advertiser that owns the custom bidding algorithm.
    * @return value or {@code null} for none
    */
@@ -112,6 +127,23 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
    */
   public CustomBiddingAlgorithm setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
     this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+    return this;
+  }
+
+  /**
+   * Output only. The status of custom bidding algorithm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomBiddingAlgorithmState() {
+    return customBiddingAlgorithmState;
+  }
+
+  /**
+   * Output only. The status of custom bidding algorithm.
+   * @param customBiddingAlgorithmState customBiddingAlgorithmState or {@code null} for none
+   */
+  public CustomBiddingAlgorithm setCustomBiddingAlgorithmState(java.lang.String customBiddingAlgorithmState) {
+    this.customBiddingAlgorithmState = customBiddingAlgorithmState;
     return this;
   }
 
@@ -201,6 +233,25 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
    */
   public CustomBiddingAlgorithm setPartnerId(java.lang.Long partnerId) {
     this.partnerId = partnerId;
+    return this;
+  }
+
+  /**
+   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
+   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getSharedAdvertiserIds() {
+    return sharedAdvertiserIds;
+  }
+
+  /**
+   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
+   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * @param sharedAdvertiserIds sharedAdvertiserIds or {@code null} for none
+   */
+  public CustomBiddingAlgorithm setSharedAdvertiserIds(java.util.List<java.lang.Long> sharedAdvertiserIds) {
+    this.sharedAdvertiserIds = sharedAdvertiserIds;
     return this;
   }
 

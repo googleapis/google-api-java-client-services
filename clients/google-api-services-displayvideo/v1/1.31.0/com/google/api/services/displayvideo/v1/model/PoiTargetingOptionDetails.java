@@ -32,7 +32,8 @@ package com.google.api.services.displayvideo.v1.model;
 public final class PoiTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI(e.g. "Times Square", "Space Needle"), followed by its
+   * full address if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class PoiTargetingOptionDetails extends com.google.api.client.json.
   private java.lang.Double longitude;
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI(e.g. "Times Square", "Space Needle"), followed by its
+   * full address if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -61,7 +63,8 @@ public final class PoiTargetingOptionDetails extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The display name of a POI, e.g. "Times Square", "Space Needle".
+   * Output only. The display name of a POI(e.g. "Times Square", "Space Needle"), followed by its
+   * full address if available.
    * @param displayName displayName or {@code null} for none
    */
   public PoiTargetingOptionDetails setDisplayName(java.lang.String displayName) {

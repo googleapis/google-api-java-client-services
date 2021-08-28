@@ -120,7 +120,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SessionInfo sessionInfoTemplate;
+  private SessionInfo sessionInfo;
 
   /**
    * The total number of bytes processed for this query. If this query was a dry run, this is the
@@ -332,16 +332,16 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * [Output-only] [Preview] Information of the session if this job is part of one.
    * @return value or {@code null} for none
    */
-  public SessionInfo getSessionInfoTemplate() {
-    return sessionInfoTemplate;
+  public SessionInfo getSessionInfo() {
+    return sessionInfo;
   }
 
   /**
    * [Output-only] [Preview] Information of the session if this job is part of one.
-   * @param sessionInfoTemplate sessionInfoTemplate or {@code null} for none
+   * @param sessionInfo sessionInfo or {@code null} for none
    */
-  public QueryResponse setSessionInfoTemplate(SessionInfo sessionInfoTemplate) {
-    this.sessionInfoTemplate = sessionInfoTemplate;
+  public QueryResponse setSessionInfo(SessionInfo sessionInfo) {
+    this.sessionInfo = sessionInfo;
     return this;
   }
 

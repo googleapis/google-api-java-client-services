@@ -4177,15 +4177,18 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped key material provided
-             * in the request. The version ID will be assigned the next sequential id within the CryptoKey.
+             * Import wrapped key material into a CryptoKeyVersion. All requests must specify a CryptoKey. If a
+             * CryptoKeyVersion is additionally specified in the request, key material will be reimported into
+             * that version. Otherwise, a new version will be created, and will be assigned the next sequential
+             * id within the CryptoKey.
              *
              * Create a request for the method "cryptoKeyVersions.import".
              *
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link CloudKMSImport#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The name of the CryptoKey to be imported into.
+             * @param parent Required. The name of the CryptoKey to be imported into. The create permission is only required on
+             *        this key when creating a new CryptoKeyVersion.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportCryptoKeyVersionRequest}
              * @return the request
              */
@@ -4203,9 +4206,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
 
               /**
-               * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped key material
-               * provided in the request. The version ID will be assigned the next sequential id within the
-               * CryptoKey.
+               * Import wrapped key material into a CryptoKeyVersion. All requests must specify a CryptoKey. If
+               * a CryptoKeyVersion is additionally specified in the request, key material will be reimported
+               * into that version. Otherwise, a new version will be created, and will be assigned the next
+               * sequential id within the CryptoKey.
                *
                * Create a request for the method "cryptoKeyVersions.import".
                *
@@ -4215,7 +4219,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent Required. The name of the CryptoKey to be imported into.
+               * @param parent Required. The name of the CryptoKey to be imported into. The create permission is only required on
+             *        this key when creating a new CryptoKeyVersion.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportCryptoKeyVersionRequest}
                * @since 1.13
                */
@@ -4284,17 +4289,24 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (CloudKMSImport) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the CryptoKey to be imported into. */
+              /**
+               * Required. The name of the CryptoKey to be imported into. The create permission is
+               * only required on this key when creating a new CryptoKeyVersion.
+               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The name of the CryptoKey to be imported into.
+              /** Required. The name of the CryptoKey to be imported into. The create permission is only required on
+             this key when creating a new CryptoKeyVersion.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. The name of the CryptoKey to be imported into. */
+              /**
+               * Required. The name of the CryptoKey to be imported into. The create permission is
+               * only required on this key when creating a new CryptoKeyVersion.
+               */
               public CloudKMSImport setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

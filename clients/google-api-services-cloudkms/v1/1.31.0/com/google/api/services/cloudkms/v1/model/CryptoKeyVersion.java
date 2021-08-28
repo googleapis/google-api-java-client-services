@@ -89,22 +89,23 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   private String generateTime;
 
   /**
-   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * Output only. The root cause of the most recent import failure. Only present if state is
+   * IMPORT_FAILED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String importFailureReason;
 
   /**
-   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
-   * the underlying key material was imported.
+   * Output only. The name of the ImportJob used in the most recent import of this CryptoKeyVersion.
+   * Only present if the underlying key material was imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String importJob;
 
   /**
-   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * Output only. The time at which this CryptoKeyVersion's key material was most recently imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,6 +126,14 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String protectionLevel;
+
+  /**
+   * Output only. Whether or not this key version is eligible for reimport, by being specified as a
+   * target in ImportCryptoKeyVersionRequest.crypto_key_version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reimportEligible;
 
   /**
    * The current state of the CryptoKeyVersion.
@@ -263,7 +272,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * Output only. The root cause of the most recent import failure. Only present if state is
+   * IMPORT_FAILED.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportFailureReason() {
@@ -271,7 +281,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * Output only. The root cause of the most recent import failure. Only present if state is
+   * IMPORT_FAILED.
    * @param importFailureReason importFailureReason or {@code null} for none
    */
   public CryptoKeyVersion setImportFailureReason(java.lang.String importFailureReason) {
@@ -280,8 +291,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
-   * the underlying key material was imported.
+   * Output only. The name of the ImportJob used in the most recent import of this CryptoKeyVersion.
+   * Only present if the underlying key material was imported.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportJob() {
@@ -289,8 +300,8 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
-   * the underlying key material was imported.
+   * Output only. The name of the ImportJob used in the most recent import of this CryptoKeyVersion.
+   * Only present if the underlying key material was imported.
    * @param importJob importJob or {@code null} for none
    */
   public CryptoKeyVersion setImportJob(java.lang.String importJob) {
@@ -299,7 +310,7 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * Output only. The time at which this CryptoKeyVersion's key material was most recently imported.
    * @return value or {@code null} for none
    */
   public String getImportTime() {
@@ -307,7 +318,7 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * Output only. The time at which this CryptoKeyVersion's key material was most recently imported.
    * @param importTime importTime or {@code null} for none
    */
   public CryptoKeyVersion setImportTime(String importTime) {
@@ -350,6 +361,25 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   public CryptoKeyVersion setProtectionLevel(java.lang.String protectionLevel) {
     this.protectionLevel = protectionLevel;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this key version is eligible for reimport, by being specified as a
+   * target in ImportCryptoKeyVersionRequest.crypto_key_version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReimportEligible() {
+    return reimportEligible;
+  }
+
+  /**
+   * Output only. Whether or not this key version is eligible for reimport, by being specified as a
+   * target in ImportCryptoKeyVersionRequest.crypto_key_version.
+   * @param reimportEligible reimportEligible or {@code null} for none
+   */
+  public CryptoKeyVersion setReimportEligible(java.lang.Boolean reimportEligible) {
+    this.reimportEligible = reimportEligible;
     return this;
   }
 

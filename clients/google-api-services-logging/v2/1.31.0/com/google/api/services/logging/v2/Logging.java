@@ -2721,7 +2721,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Views {
 
           /**
-           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
            *
            * Create a request for the method "views.create".
            *
@@ -2748,7 +2748,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
              *
              * Create a request for the method "views.create".
              *
@@ -9257,7 +9257,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Views {
 
           /**
-           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
            *
            * Create a request for the method "views.create".
            *
@@ -9284,7 +9284,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
              *
              * Create a request for the method "views.create".
              *
@@ -13701,7 +13701,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       public class Views {
 
         /**
-         * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+         * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
          *
          * Create a request for the method "views.create".
          *
@@ -13728,7 +13728,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
            *
            * Create a request for the method "views.create".
            *
@@ -18410,7 +18410,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Views {
 
           /**
-           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
            *
            * Create a request for the method "views.create".
            *
@@ -18437,7 +18437,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
              *
              * Create a request for the method "views.create".
              *
@@ -23763,7 +23763,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Views {
 
           /**
-           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+           * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
            *
            * Create a request for the method "views.create".
            *
@@ -23790,7 +23790,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 50 views.
+             * Creates a view over log entries in a log bucket. A bucket may contain a maximum of 30 views.
              *
              * Create a request for the method "views.create".
              *

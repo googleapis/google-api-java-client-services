@@ -62,6 +62,14 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Describes the schema of the logs stored in the bucket that are accessible via this view.This
+   * field is only populated for views in analytics-enabled buckets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableSchema schema;
+
+  /**
    * Output only. The last update timestamp of the view.
    * The value may be {@code null}.
    */
@@ -141,6 +149,25 @@ public final class LogView extends com.google.api.client.json.GenericJson {
    */
   public LogView setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Describes the schema of the logs stored in the bucket that are accessible via this view.This
+   * field is only populated for views in analytics-enabled buckets.
+   * @return value or {@code null} for none
+   */
+  public TableSchema getSchema() {
+    return schema;
+  }
+
+  /**
+   * Describes the schema of the logs stored in the bucket that are accessible via this view.This
+   * field is only populated for views in analytics-enabled buckets.
+   * @param schema schema or {@code null} for none
+   */
+  public LogView setSchema(TableSchema schema) {
+    this.schema = schema;
     return this;
   }
 

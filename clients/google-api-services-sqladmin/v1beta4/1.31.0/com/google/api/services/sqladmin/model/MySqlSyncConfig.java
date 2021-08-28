@@ -29,6 +29,30 @@ package com.google.api.services.sqladmin.model;
 @SuppressWarnings("javadoc")
 public final class MySqlSyncConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Flags to use for the initial dump.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SyncFlags> initialSyncFlags;
+
+  /**
+   * Flags to use for the initial dump.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SyncFlags> getInitialSyncFlags() {
+    return initialSyncFlags;
+  }
+
+  /**
+   * Flags to use for the initial dump.
+   * @param initialSyncFlags initialSyncFlags or {@code null} for none
+   */
+  public MySqlSyncConfig setInitialSyncFlags(java.util.List<SyncFlags> initialSyncFlags) {
+    this.initialSyncFlags = initialSyncFlags;
+    return this;
+  }
+
   @Override
   public MySqlSyncConfig set(String fieldName, Object value) {
     return (MySqlSyncConfig) super.set(fieldName, value);

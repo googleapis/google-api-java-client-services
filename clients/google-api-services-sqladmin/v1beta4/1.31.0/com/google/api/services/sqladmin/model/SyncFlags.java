@@ -17,7 +17,8 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * MySQL-specific external server sync settings.
+ * Initial sync flags for certain Cloud SQL APIs. Currently used for the MySQL external server
+ * initial dump.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +28,64 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MySqlSyncConfig extends com.google.api.client.json.GenericJson {
+public final class SyncFlags extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flags to use for the initial dump.
+   * The name of the flag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SyncFlags> initialSyncFlags;
+  private java.lang.String name;
 
   /**
-   * Flags to use for the initial dump.
+   * The value of the flag. This field must be omitted if the flag doesn't take a value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String value;
+
+  /**
+   * The name of the flag.
    * @return value or {@code null} for none
    */
-  public java.util.List<SyncFlags> getInitialSyncFlags() {
-    return initialSyncFlags;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Flags to use for the initial dump.
-   * @param initialSyncFlags initialSyncFlags or {@code null} for none
+   * The name of the flag.
+   * @param name name or {@code null} for none
    */
-  public MySqlSyncConfig setInitialSyncFlags(java.util.List<SyncFlags> initialSyncFlags) {
-    this.initialSyncFlags = initialSyncFlags;
+  public SyncFlags setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * The value of the flag. This field must be omitted if the flag doesn't take a value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValue() {
+    return value;
+  }
+
+  /**
+   * The value of the flag. This field must be omitted if the flag doesn't take a value.
+   * @param value value or {@code null} for none
+   */
+  public SyncFlags setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public MySqlSyncConfig set(String fieldName, Object value) {
-    return (MySqlSyncConfig) super.set(fieldName, value);
+  public SyncFlags set(String fieldName, Object value) {
+    return (SyncFlags) super.set(fieldName, value);
   }
 
   @Override
-  public MySqlSyncConfig clone() {
-    return (MySqlSyncConfig) super.clone();
+  public SyncFlags clone() {
+    return (SyncFlags) super.clone();
   }
 
 }

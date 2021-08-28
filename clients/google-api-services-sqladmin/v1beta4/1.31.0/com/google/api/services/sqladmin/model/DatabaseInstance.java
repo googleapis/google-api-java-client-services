@@ -46,6 +46,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String connectionName;
 
   /**
+   * Output only. The time when the instance was created in RFC 3339 format
+   * (https://tools.ietf.org/html/rfc3339), for example 2012-11-15T16:19:00.094Z
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The current disk usage of the instance in bytes. This property has been deprecated. Use the
    * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
    * Please see this announcement for details.
@@ -318,6 +326,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setConnectionName(java.lang.String connectionName) {
     this.connectionName = connectionName;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the instance was created in RFC 3339 format
+   * (https://tools.ietf.org/html/rfc3339), for example 2012-11-15T16:19:00.094Z
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time when the instance was created in RFC 3339 format
+   * (https://tools.ietf.org/html/rfc3339), for example 2012-11-15T16:19:00.094Z
+   * @param createTime createTime or {@code null} for none
+   */
+  public DatabaseInstance setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

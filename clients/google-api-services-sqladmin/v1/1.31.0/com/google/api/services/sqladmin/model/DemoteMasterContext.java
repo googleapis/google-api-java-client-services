@@ -52,6 +52,13 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   private DemoteMasterConfiguration replicaConfiguration;
 
   /**
+   * Flag to skip replication setup on the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipReplicationSetup;
+
+  /**
    * Verify GTID consistency for demote operation. Default value: *True*. Setting this flag to false
    * enables you to bypass GTID consistency check between on-premises primary instance and Cloud SQL
    * instance during the demotion operation but also exposes you to the risk of future replication
@@ -112,6 +119,23 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
    */
   public DemoteMasterContext setReplicaConfiguration(DemoteMasterConfiguration replicaConfiguration) {
     this.replicaConfiguration = replicaConfiguration;
+    return this;
+  }
+
+  /**
+   * Flag to skip replication setup on the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipReplicationSetup() {
+    return skipReplicationSetup;
+  }
+
+  /**
+   * Flag to skip replication setup on the instance.
+   * @param skipReplicationSetup skipReplicationSetup or {@code null} for none
+   */
+  public DemoteMasterContext setSkipReplicationSetup(java.lang.Boolean skipReplicationSetup) {
+    this.skipReplicationSetup = skipReplicationSetup;
     return this;
   }
 

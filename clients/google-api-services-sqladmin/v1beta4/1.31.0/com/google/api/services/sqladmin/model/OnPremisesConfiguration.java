@@ -80,6 +80,13 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String password;
 
   /**
+   * The reference to Cloud SQL instance if the source is Cloud SQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceReference sourceInstance;
+
+  /**
    * The username for connecting to on-premises instance.
    * The value may be {@code null}.
    */
@@ -204,6 +211,23 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   public OnPremisesConfiguration setPassword(java.lang.String password) {
     this.password = password;
+    return this;
+  }
+
+  /**
+   * The reference to Cloud SQL instance if the source is Cloud SQL.
+   * @return value or {@code null} for none
+   */
+  public InstanceReference getSourceInstance() {
+    return sourceInstance;
+  }
+
+  /**
+   * The reference to Cloud SQL instance if the source is Cloud SQL.
+   * @param sourceInstance sourceInstance or {@code null} for none
+   */
+  public OnPremisesConfiguration setSourceInstance(InstanceReference sourceInstance) {
+    this.sourceInstance = sourceInstance;
     return this;
   }
 

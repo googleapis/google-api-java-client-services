@@ -39,6 +39,20 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   private java.lang.String algorithm;
 
   /**
+   * Optional. The optional name of an existing CryptoKeyVersion to target for an import operation.
+   * If this field is not present, a new CryptoKeyVersion containing the supplied key material is
+   * created. If this field is present, the supplied key material is imported into the existing
+   * CryptoKeyVersion. To import into an existing CryptoKeyVersion, the CryptoKeyVersion must be a
+   * child of ImportCryptoKeyVersionRequest.parent, have been previously created via
+   * ImportCryptoKeyVersion, and be in DESTROYED or IMPORT_FAILED state. The key material and
+   * algorithm must match the previous CryptoKeyVersion exactly if the CryptoKeyVersion has ever
+   * contained key material.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyVersion;
+
+  /**
    * Required. The name of the ImportJob that was used to wrap this key material.
    * The value may be {@code null}.
    */
@@ -75,6 +89,37 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
    */
   public ImportCryptoKeyVersionRequest setAlgorithm(java.lang.String algorithm) {
     this.algorithm = algorithm;
+    return this;
+  }
+
+  /**
+   * Optional. The optional name of an existing CryptoKeyVersion to target for an import operation.
+   * If this field is not present, a new CryptoKeyVersion containing the supplied key material is
+   * created. If this field is present, the supplied key material is imported into the existing
+   * CryptoKeyVersion. To import into an existing CryptoKeyVersion, the CryptoKeyVersion must be a
+   * child of ImportCryptoKeyVersionRequest.parent, have been previously created via
+   * ImportCryptoKeyVersion, and be in DESTROYED or IMPORT_FAILED state. The key material and
+   * algorithm must match the previous CryptoKeyVersion exactly if the CryptoKeyVersion has ever
+   * contained key material.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyVersion() {
+    return cryptoKeyVersion;
+  }
+
+  /**
+   * Optional. The optional name of an existing CryptoKeyVersion to target for an import operation.
+   * If this field is not present, a new CryptoKeyVersion containing the supplied key material is
+   * created. If this field is present, the supplied key material is imported into the existing
+   * CryptoKeyVersion. To import into an existing CryptoKeyVersion, the CryptoKeyVersion must be a
+   * child of ImportCryptoKeyVersionRequest.parent, have been previously created via
+   * ImportCryptoKeyVersion, and be in DESTROYED or IMPORT_FAILED state. The key material and
+   * algorithm must match the previous CryptoKeyVersion exactly if the CryptoKeyVersion has ever
+   * contained key material.
+   * @param cryptoKeyVersion cryptoKeyVersion or {@code null} for none
+   */
+  public ImportCryptoKeyVersionRequest setCryptoKeyVersion(java.lang.String cryptoKeyVersion) {
+    this.cryptoKeyVersion = cryptoKeyVersion;
     return this;
   }
 

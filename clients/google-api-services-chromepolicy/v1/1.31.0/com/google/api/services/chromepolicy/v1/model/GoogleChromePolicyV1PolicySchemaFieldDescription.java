@@ -65,7 +65,7 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   private java.lang.String inputConstraint;
 
   /**
-   * Output only. If the field has a set of know values, this field will provide a description for
+   * Output only. If the field has a set of known values, this field will provide a description for
    * these values.
    * The value may be {@code null}.
    */
@@ -151,7 +151,7 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
-   * Output only. If the field has a set of know values, this field will provide a description for
+   * Output only. If the field has a set of known values, this field will provide a description for
    * these values.
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class GoogleChromePolicyV1PolicySchemaFieldDescription extends com.
   }
 
   /**
-   * Output only. If the field has a set of know values, this field will provide a description for
+   * Output only. If the field has a set of known values, this field will provide a description for
    * these values.
    * @param knownValueDescriptions knownValueDescriptions or {@code null} for none
    */

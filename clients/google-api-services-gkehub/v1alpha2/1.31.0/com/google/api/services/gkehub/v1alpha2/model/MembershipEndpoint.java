@@ -31,7 +31,7 @@ package com.google.api.services.gkehub.v1alpha2.model;
 public final class MembershipEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   private KubernetesResource kubernetesResource;
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * @return value or {@code null} for none
    */
   public GkeCluster getGkeCluster() {
@@ -64,7 +64,7 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * @param gkeCluster gkeCluster or {@code null} for none
    */
   public MembershipEndpoint setGkeCluster(GkeCluster gkeCluster) {

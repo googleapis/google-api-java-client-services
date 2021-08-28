@@ -31,7 +31,7 @@ package com.google.api.services.gkehub.v1.model;
 public final class MembershipEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,21 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   private KubernetesMetadata kubernetesMetadata;
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE Multi-Cloud cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiCloudCluster multiCloudCluster;
+
+  /**
+   * Optional. Specific information for a GKE On-Prem cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OnPremCluster onPremCluster;
+
+  /**
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * @return value or {@code null} for none
    */
   public GkeCluster getGkeCluster() {
@@ -53,7 +67,7 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. GKE-specific information. Only present if this Membership is a GKE cluster.
+   * Optional. Specific information for a GKE-on-GCP cluster.
    * @param gkeCluster gkeCluster or {@code null} for none
    */
   public MembershipEndpoint setGkeCluster(GkeCluster gkeCluster) {
@@ -75,6 +89,40 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
    */
   public MembershipEndpoint setKubernetesMetadata(KubernetesMetadata kubernetesMetadata) {
     this.kubernetesMetadata = kubernetesMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Specific information for a GKE Multi-Cloud cluster.
+   * @return value or {@code null} for none
+   */
+  public MultiCloudCluster getMultiCloudCluster() {
+    return multiCloudCluster;
+  }
+
+  /**
+   * Optional. Specific information for a GKE Multi-Cloud cluster.
+   * @param multiCloudCluster multiCloudCluster or {@code null} for none
+   */
+  public MembershipEndpoint setMultiCloudCluster(MultiCloudCluster multiCloudCluster) {
+    this.multiCloudCluster = multiCloudCluster;
+    return this;
+  }
+
+  /**
+   * Optional. Specific information for a GKE On-Prem cluster.
+   * @return value or {@code null} for none
+   */
+  public OnPremCluster getOnPremCluster() {
+    return onPremCluster;
+  }
+
+  /**
+   * Optional. Specific information for a GKE On-Prem cluster.
+   * @param onPremCluster onPremCluster or {@code null} for none
+   */
+  public MembershipEndpoint setOnPremCluster(OnPremCluster onPremCluster) {
+    this.onPremCluster = onPremCluster;
     return this;
   }
 

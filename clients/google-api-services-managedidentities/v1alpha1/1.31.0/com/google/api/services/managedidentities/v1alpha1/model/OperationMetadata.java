@@ -39,7 +39,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
+   * Operations that have been cancelled successfully have Operation.error value with a
    * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
    * The value may be {@code null}.
    */
@@ -100,7 +100,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
+   * Operations that have been cancelled successfully have Operation.error value with a
    * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
+   * Operations that have been cancelled successfully have Operation.error value with a
    * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
    * @param cancelRequested cancelRequested or {@code null} for none
    */

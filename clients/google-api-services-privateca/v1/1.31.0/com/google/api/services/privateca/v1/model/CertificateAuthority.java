@@ -105,8 +105,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The desired lifetime of the CA certificate. Used to create the "not_before_time" and
-   * "not_after_time" fields inside an X.509 certificate.
+   * Required. Immutable. The desired lifetime of the CA certificate. Used to create the
+   * "not_before_time" and "not_after_time" fields inside an X.509 certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,8 +341,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The desired lifetime of the CA certificate. Used to create the "not_before_time" and
-   * "not_after_time" fields inside an X.509 certificate.
+   * Required. Immutable. The desired lifetime of the CA certificate. Used to create the
+   * "not_before_time" and "not_after_time" fields inside an X.509 certificate.
    * @return value or {@code null} for none
    */
   public String getLifetime() {
@@ -350,8 +350,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The desired lifetime of the CA certificate. Used to create the "not_before_time" and
-   * "not_after_time" fields inside an X.509 certificate.
+   * Required. Immutable. The desired lifetime of the CA certificate. Used to create the
+   * "not_before_time" and "not_after_time" fields inside an X.509 certificate.
    * @param lifetime lifetime or {@code null} for none
    */
   public CertificateAuthority setLifetime(String lifetime) {

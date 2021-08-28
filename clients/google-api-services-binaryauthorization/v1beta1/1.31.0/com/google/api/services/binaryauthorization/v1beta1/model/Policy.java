@@ -17,7 +17,7 @@
 package com.google.api.services.binaryauthorization.v1beta1.model;
 
 /**
- * A policy for container image binary authorization.
+ * A policy for Binary Authorization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation

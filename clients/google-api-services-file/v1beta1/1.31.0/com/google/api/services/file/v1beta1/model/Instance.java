@@ -65,6 +65,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * KMS key name used for data encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -107,6 +114,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> suspensionReasons;
 
   /**
    * The service tier of the instance.
@@ -182,6 +196,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setFileShares(java.util.List<FileShareConfig> fileShares) {
     this.fileShares = fileShares;
+    return this;
+  }
+
+  /**
+   * KMS key name used for data encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * KMS key name used for data encryption.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Instance setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 
@@ -288,6 +319,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
+    return this;
+  }
+
+  /**
+   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSuspensionReasons() {
+    return suspensionReasons;
+  }
+
+  /**
+   * Output only. field indicates all the reasons the instance is in "SUSPENDED" state.
+   * @param suspensionReasons suspensionReasons or {@code null} for none
+   */
+  public Instance setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
+    this.suspensionReasons = suspensionReasons;
     return this;
   }
 

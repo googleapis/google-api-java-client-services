@@ -1771,7 +1771,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Stops a node.
+         * Stops a node. This operation is only available with single TPU nodes.
          *
          * Create a request for the method "nodes.stop".
          *
@@ -1796,7 +1796,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
 
           /**
-           * Stops a node.
+           * Stops a node. This operation is only available with single TPU nodes.
            *
            * Create a request for the method "nodes.stop".
            *

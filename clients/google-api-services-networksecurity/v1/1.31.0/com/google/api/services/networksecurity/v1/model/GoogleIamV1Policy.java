@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networksecurity.v1beta1.model;
+package com.google.api.services.networksecurity.v1.model;
 
 /**
  * An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud

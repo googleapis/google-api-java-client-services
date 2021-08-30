@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The customer service pending email.
+   * The customer service pending email. After verification this field becomes empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerServicePendingEmail;
 
   /**
-   * The customer service verified email.
+   * Output only. The customer service verified email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerServiceVerifiedEmail;
 
   /**
-   * The current participation stage for the program.
+   * Output only. The current participation stage for the program.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participationStage;
 
   /**
-   * The customer service pending email.
+   * The customer service pending email. After verification this field becomes empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerServicePendingEmail() {
@@ -60,7 +60,7 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
-   * The customer service pending email.
+   * The customer service pending email. After verification this field becomes empty.
    * @param customerServicePendingEmail customerServicePendingEmail or {@code null} for none
    */
   public BuyOnGoogleProgramStatus setCustomerServicePendingEmail(java.lang.String customerServicePendingEmail) {
@@ -69,7 +69,7 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
-   * The customer service verified email.
+   * Output only. The customer service verified email.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerServiceVerifiedEmail() {
@@ -77,7 +77,7 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
-   * The customer service verified email.
+   * Output only. The customer service verified email.
    * @param customerServiceVerifiedEmail customerServiceVerifiedEmail or {@code null} for none
    */
   public BuyOnGoogleProgramStatus setCustomerServiceVerifiedEmail(java.lang.String customerServiceVerifiedEmail) {
@@ -86,7 +86,7 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
-   * The current participation stage for the program.
+   * Output only. The current participation stage for the program.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipationStage() {
@@ -94,7 +94,7 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
-   * The current participation stage for the program.
+   * Output only. The current participation stage for the program.
    * @param participationStage participationStage or {@code null} for none
    */
   public BuyOnGoogleProgramStatus setParticipationStage(java.lang.String participationStage) {

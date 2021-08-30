@@ -482,6 +482,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<ProductProductDetail> productDetails;
 
   /**
+   * The height of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductDimension productHeight;
+
+  /**
    * Bullet points describing the most relevant highlights of a product.
    * The value may be {@code null}.
    */
@@ -489,11 +497,35 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> productHighlights;
 
   /**
+   * The length of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductDimension productLength;
+
+  /**
    * Categories of the item (formatted as in products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> productTypes;
+
+  /**
+   * The weight of the product in the units provided. The value must be between 0 (exclusive) and
+   * 2000 (inclusive).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductWeight productWeight;
+
+  /**
+   * The width of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductDimension productWidth;
 
   /**
    * The unique ID of a promotion.
@@ -1730,6 +1762,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The height of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @return value or {@code null} for none
+   */
+  public ProductDimension getProductHeight() {
+    return productHeight;
+  }
+
+  /**
+   * The height of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @param productHeight productHeight or {@code null} for none
+   */
+  public Product setProductHeight(ProductDimension productHeight) {
+    this.productHeight = productHeight;
+    return this;
+  }
+
+  /**
    * Bullet points describing the most relevant highlights of a product.
    * @return value or {@code null} for none
    */
@@ -1747,6 +1798,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The length of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @return value or {@code null} for none
+   */
+  public ProductDimension getProductLength() {
+    return productLength;
+  }
+
+  /**
+   * The length of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @param productLength productLength or {@code null} for none
+   */
+  public Product setProductLength(ProductDimension productLength) {
+    this.productLength = productLength;
+    return this;
+  }
+
+  /**
    * Categories of the item (formatted as in products data specification).
    * @return value or {@code null} for none
    */
@@ -1760,6 +1830,44 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setProductTypes(java.util.List<java.lang.String> productTypes) {
     this.productTypes = productTypes;
+    return this;
+  }
+
+  /**
+   * The weight of the product in the units provided. The value must be between 0 (exclusive) and
+   * 2000 (inclusive).
+   * @return value or {@code null} for none
+   */
+  public ProductWeight getProductWeight() {
+    return productWeight;
+  }
+
+  /**
+   * The weight of the product in the units provided. The value must be between 0 (exclusive) and
+   * 2000 (inclusive).
+   * @param productWeight productWeight or {@code null} for none
+   */
+  public Product setProductWeight(ProductWeight productWeight) {
+    this.productWeight = productWeight;
+    return this;
+  }
+
+  /**
+   * The width of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @return value or {@code null} for none
+   */
+  public ProductDimension getProductWidth() {
+    return productWidth;
+  }
+
+  /**
+   * The width of the product in the units provided. The value must be between 0 (exclusive) and
+   * 3000 (inclusive).
+   * @param productWidth productWidth or {@code null} for none
+   */
+  public Product setProductWidth(ProductDimension productWidth) {
+    this.productWidth = productWidth;
     return this;
   }
 

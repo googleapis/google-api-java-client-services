@@ -51,7 +51,8 @@ public final class OSPolicyResourceGroup extends com.google.api.client.json.Gene
   }
 
   /**
-   * Used to specify the OS filter for a resource group
+   * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a
+   * resource group
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,8 @@ public final class OSPolicyResourceGroup extends com.google.api.client.json.Gene
   }
 
   /**
-   * Used to specify the OS filter for a resource group
+   * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a
+   * resource group
    * @return value or {@code null} for none
    */
   public OSPolicyOSFilter getOsFilter() {
@@ -107,7 +109,8 @@ public final class OSPolicyResourceGroup extends com.google.api.client.json.Gene
   }
 
   /**
-   * Used to specify the OS filter for a resource group
+   * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a
+   * resource group
    * @param osFilter osFilter or {@code null} for none
    */
   public OSPolicyResourceGroup setOsFilter(OSPolicyOSFilter osFilter) {

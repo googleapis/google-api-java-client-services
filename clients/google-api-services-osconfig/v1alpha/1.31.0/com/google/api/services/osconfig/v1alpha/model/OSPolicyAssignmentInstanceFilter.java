@@ -62,7 +62,8 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   private java.util.List<OSPolicyAssignmentInstanceFilterInventory> inventories;
 
   /**
-   * A VM is selected if it's OS short name matches with any of the values provided in this list.
+   * Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches
+   * with any of the values provided in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,8 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   }
 
   /**
-   * A VM is selected if it's OS short name matches with any of the values provided in this list.
+   * Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches
+   * with any of the values provided in this list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOsShortNames() {
@@ -151,7 +153,8 @@ public final class OSPolicyAssignmentInstanceFilter extends com.google.api.clien
   }
 
   /**
-   * A VM is selected if it's OS short name matches with any of the values provided in this list.
+   * Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches
+   * with any of the values provided in this list.
    * @param osShortNames osShortNames or {@code null} for none
    */
   public OSPolicyAssignmentInstanceFilter setOsShortNames(java.util.List<java.lang.String> osShortNames) {

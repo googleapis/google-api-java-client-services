@@ -12973,6 +12973,159 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Capture funds from the customer for the current order total. This method should be called after
+     * the merchant verifies that they are able and ready to start shipping the order. This method
+     * blocks until a response is received from the payment processsor. If this method succeeds, the
+     * merchant is guaranteed to receive funds for the order after shipment. If the request fails, it
+     * can be retried or the order may be cancelled. This method cannot be called after the entire order
+     * is already shipped.
+     *
+     * Create a request for the method "orders.captureOrder".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link CaptureOrder#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param orderId Required. The ID of the Order.
+     * @param content the {@link com.google.api.services.content.model.CaptureOrderRequest}
+     * @return the request
+     */
+    public CaptureOrder captureOrder(java.lang.Long merchantId, java.lang.String orderId, com.google.api.services.content.model.CaptureOrderRequest content) throws java.io.IOException {
+      CaptureOrder result = new CaptureOrder(merchantId, orderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CaptureOrder extends ShoppingContentRequest<com.google.api.services.content.model.CaptureOrderResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orders/{orderId}/captureOrder";
+
+      /**
+       * Capture funds from the customer for the current order total. This method should be called after
+       * the merchant verifies that they are able and ready to start shipping the order. This method
+       * blocks until a response is received from the payment processsor. If this method succeeds, the
+       * merchant is guaranteed to receive funds for the order after shipment. If the request fails, it
+       * can be retried or the order may be cancelled. This method cannot be called after the entire
+       * order is already shipped.
+       *
+       * Create a request for the method "orders.captureOrder".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link CaptureOrder#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * CaptureOrder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param orderId Required. The ID of the Order.
+       * @param content the {@link com.google.api.services.content.model.CaptureOrderRequest}
+       * @since 1.13
+       */
+      protected CaptureOrder(java.lang.Long merchantId, java.lang.String orderId, com.google.api.services.content.model.CaptureOrderRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.CaptureOrderResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.orderId = com.google.api.client.util.Preconditions.checkNotNull(orderId, "Required parameter orderId must be specified.");
+      }
+
+      @Override
+      public CaptureOrder set$Xgafv(java.lang.String $Xgafv) {
+        return (CaptureOrder) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CaptureOrder setAccessToken(java.lang.String accessToken) {
+        return (CaptureOrder) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CaptureOrder setAlt(java.lang.String alt) {
+        return (CaptureOrder) super.setAlt(alt);
+      }
+
+      @Override
+      public CaptureOrder setCallback(java.lang.String callback) {
+        return (CaptureOrder) super.setCallback(callback);
+      }
+
+      @Override
+      public CaptureOrder setFields(java.lang.String fields) {
+        return (CaptureOrder) super.setFields(fields);
+      }
+
+      @Override
+      public CaptureOrder setKey(java.lang.String key) {
+        return (CaptureOrder) super.setKey(key);
+      }
+
+      @Override
+      public CaptureOrder setOauthToken(java.lang.String oauthToken) {
+        return (CaptureOrder) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CaptureOrder setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CaptureOrder) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CaptureOrder setQuotaUser(java.lang.String quotaUser) {
+        return (CaptureOrder) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CaptureOrder setUploadType(java.lang.String uploadType) {
+        return (CaptureOrder) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CaptureOrder setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CaptureOrder) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that manages the order. This cannot be a multi-client
+       * account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that manages the order. This cannot be a multi-client
+       * account.
+       */
+      public CaptureOrder setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The ID of the Order. */
+      @com.google.api.client.util.Key
+      private java.lang.String orderId;
+
+      /** Required. The ID of the Order.
+       */
+      public java.lang.String getOrderId() {
+        return orderId;
+      }
+
+      /** Required. The ID of the Order. */
+      public CaptureOrder setOrderId(java.lang.String orderId) {
+        this.orderId = orderId;
+        return this;
+      }
+
+      @Override
+      public CaptureOrder set(String parameterName, Object value) {
+        return (CaptureOrder) super.set(parameterName, value);
+      }
+    }
+    /**
      * Sandbox only. Creates a test order.
      *
      * Create a request for the method "orders.createtestorder".
@@ -18200,6 +18353,148 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Promotions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Promotions.List request = content.promotions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Promotions promotions() {
+    return new Promotions();
+  }
+
+  /**
+   * The "promotions" collection of methods.
+   */
+  public class Promotions {
+
+    /**
+     * Inserts a promotion for your Merchant Center account. If the promotion already exists, then it
+     * will update the promotion instead.
+     *
+     * Create a request for the method "promotions.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection.
+     * @param content the {@link com.google.api.services.content.model.Promotion}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.Promotion content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Promotion> {
+
+      private static final String REST_PATH = "{merchantId}/promotions";
+
+      /**
+       * Inserts a promotion for your Merchant Center account. If the promotion already exists, then it
+       * will update the promotion instead.
+       *
+       * Create a request for the method "promotions.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection.
+       * @param content the {@link com.google.api.services.content.model.Promotion}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.Promotion content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Promotion.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

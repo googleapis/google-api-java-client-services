@@ -37,8 +37,8 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   private java.util.List<java.lang.String> ideas;
 
   /**
-   * Unique identifier for the idea activity. Format:
-   * platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
+   * Unique identifier for the idea activity. The name is ignored when creating an idea activity.
+   * Format: platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,8 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   }
 
   /**
-   * Unique identifier for the idea activity. Format:
-   * platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
+   * Unique identifier for the idea activity. The name is ignored when creating an idea activity.
+   * Format: platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -92,8 +92,8 @@ public final class GoogleSearchIdeahubV1alphaIdeaActivity extends com.google.api
   }
 
   /**
-   * Unique identifier for the idea activity. Format:
-   * platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
+   * Unique identifier for the idea activity. The name is ignored when creating an idea activity.
+   * Format: platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}
    * @param name name or {@code null} for none
    */
   public GoogleSearchIdeahubV1alphaIdeaActivity setName(java.lang.String name) {

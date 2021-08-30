@@ -47,7 +47,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`
+   * `projects//instanceConfigs/a-z*`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`
+   * `projects//instanceConfigs/a-z*`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`
+   * `projects//instanceConfigs/a-z*`.
    * @param name name or {@code null} for none
    */
   public InstanceConfig setName(java.lang.String name) {

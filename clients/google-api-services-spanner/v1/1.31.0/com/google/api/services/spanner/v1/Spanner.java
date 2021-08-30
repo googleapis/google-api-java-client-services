@@ -1428,7 +1428,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * readable via the API. The returned long-running operation will have a name of the format
        * `/operations/` and can be used to track the instance modification. The metadata field type is
        * UpdateInstanceMetadata. The response field type is Instance, if successful. Authorization
-       * requires `spanner.instances.update` permission on resource name.
+       * requires `spanner.instances.update` permission on the resource name.
        *
        * Create a request for the method "instances.patch".
        *
@@ -1470,7 +1470,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * resource levels are readable via the API. The returned long-running operation will have a name
          * of the format `/operations/` and can be used to track the instance modification. The metadata
          * field type is UpdateInstanceMetadata. The response field type is Instance, if successful.
-         * Authorization requires `spanner.instances.update` permission on resource name.
+         * Authorization requires `spanner.instances.update` permission on the resource name.
          *
          * Create a request for the method "instances.patch".
          *

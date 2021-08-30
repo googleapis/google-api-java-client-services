@@ -38,6 +38,13 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   private DataCatalogConfig dataCatalogConfig;
 
   /**
+   * The integration config for the Dataplex service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataplexConfig dataplexConfig;
+
+  /**
    * The integration config for the Data Catalog service.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
    */
   public MetadataIntegration setDataCatalogConfig(DataCatalogConfig dataCatalogConfig) {
     this.dataCatalogConfig = dataCatalogConfig;
+    return this;
+  }
+
+  /**
+   * The integration config for the Dataplex service.
+   * @return value or {@code null} for none
+   */
+  public DataplexConfig getDataplexConfig() {
+    return dataplexConfig;
+  }
+
+  /**
+   * The integration config for the Dataplex service.
+   * @param dataplexConfig dataplexConfig or {@code null} for none
+   */
+  public MetadataIntegration setDataplexConfig(DataplexConfig dataplexConfig) {
+    this.dataplexConfig = dataplexConfig;
     return this;
   }
 

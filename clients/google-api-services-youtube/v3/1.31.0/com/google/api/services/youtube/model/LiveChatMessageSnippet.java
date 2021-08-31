@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Next ID: 29
+ * Next ID: 31
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -32,10 +32,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   /**
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
-   * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
-   * moderator that took the action messageRetractedEvent - the author that retracted their message
-   * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase superStickerEvent - the user that made the purchase
+   * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
+   * member that sent the message messageDeletedEvent - the moderator that took the action
+   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
+   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
+   * user that made the purchase
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +71,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private java.lang.String liveChatId;
 
   /**
+   * Details about the Member Milestone Chat event, this is only set if the type is
+   * 'memberMilestoneChatEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatMemberMilestoneChatDetails memberMilestoneChatDetails;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,6 +89,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private LiveChatMessageRetractedDetails messageRetractedDetails;
+
+  /**
+   * Details about the New Member Announcement event, this is only set if the type is
+   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatNewSponsorDetails newSponsorDetails;
 
   /**
    * The date and time when the message was orignally published.
@@ -126,10 +143,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   /**
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
-   * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
-   * moderator that took the action messageRetractedEvent - the author that retracted their message
-   * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase superStickerEvent - the user that made the purchase
+   * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
+   * member that sent the message messageDeletedEvent - the moderator that took the action
+   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
+   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
+   * user that made the purchase
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorChannelId() {
@@ -139,10 +157,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   /**
    * The ID of the user that authored this message, this field is not always filled.
    * textMessageEvent - the user that wrote the message fanFundingEvent - the user that funded the
-   * broadcast newSponsorEvent - the user that just became a sponsor messageDeletedEvent - the
-   * moderator that took the action messageRetractedEvent - the author that retracted their message
-   * userBannedEvent - the moderator that took the action superChatEvent - the user that made the
-   * purchase superStickerEvent - the user that made the purchase
+   * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
+   * member that sent the message messageDeletedEvent - the moderator that took the action
+   * messageRetractedEvent - the author that retracted their message userBannedEvent - the moderator
+   * that took the action superChatEvent - the user that made the purchase superStickerEvent - the
+   * user that made the purchase
    * @param authorChannelId authorChannelId or {@code null} for none
    */
   public LiveChatMessageSnippet setAuthorChannelId(java.lang.String authorChannelId) {
@@ -219,6 +238,25 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
+   * Details about the Member Milestone Chat event, this is only set if the type is
+   * 'memberMilestoneChatEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatMemberMilestoneChatDetails getMemberMilestoneChatDetails() {
+    return memberMilestoneChatDetails;
+  }
+
+  /**
+   * Details about the Member Milestone Chat event, this is only set if the type is
+   * 'memberMilestoneChatEvent'.
+   * @param memberMilestoneChatDetails memberMilestoneChatDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setMemberMilestoneChatDetails(LiveChatMemberMilestoneChatDetails memberMilestoneChatDetails) {
+    this.memberMilestoneChatDetails = memberMilestoneChatDetails;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public LiveChatMessageDeletedDetails getMessageDeletedDetails() {
@@ -245,6 +283,25 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setMessageRetractedDetails(LiveChatMessageRetractedDetails messageRetractedDetails) {
     this.messageRetractedDetails = messageRetractedDetails;
+    return this;
+  }
+
+  /**
+   * Details about the New Member Announcement event, this is only set if the type is
+   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * @return value or {@code null} for none
+   */
+  public LiveChatNewSponsorDetails getNewSponsorDetails() {
+    return newSponsorDetails;
+  }
+
+  /**
+   * Details about the New Member Announcement event, this is only set if the type is
+   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * @param newSponsorDetails newSponsorDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setNewSponsorDetails(LiveChatNewSponsorDetails newSponsorDetails) {
+    this.newSponsorDetails = newSponsorDetails;
     return this;
   }
 

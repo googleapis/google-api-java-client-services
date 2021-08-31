@@ -825,22 +825,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of folders to return in the response. If unspecified, server
-       * picks an appropriate default.
+       * Optional. The maximum number of folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of folders to return in the response. If unspecified, server picks an
-     appropriate default.
+      /** Optional. The maximum number of folders to return in the response. The server can return fewer
+     folders than requested. If unspecified, server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of folders to return in the response. If unspecified, server
-       * picks an appropriate default.
+       * Optional. The maximum number of folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1358,22 +1358,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of folders to return in the response. If unspecified, server
-       * picks an appropriate default.
+       * Optional. The maximum number of folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of folders to return in the response. If unspecified, server picks an
-     appropriate default.
+      /** Optional. The maximum number of folders to return in the response. The server can return fewer
+     folders than requested. If unspecified, server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of folders to return in the response. If unspecified, server
-       * picks an appropriate default.
+       * Optional. The maximum number of folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2416,17 +2416,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The maximum number of items to return. This is a suggestion for the server. */
+      /**
+       * The maximum number of items to return. This is a suggestion for the server. The server can
+       * return fewer liens than requested. If unspecified, server picks an appropriate default.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of items to return. This is a suggestion for the server.
+      /** The maximum number of items to return. This is a suggestion for the server. The server can return
+     fewer liens than requested. If unspecified, server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of items to return. This is a suggestion for the server. */
+      /**
+       * The maximum number of items to return. This is a suggestion for the server. The server can
+       * return fewer liens than requested. If unspecified, server picks an appropriate default.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -3077,22 +3084,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. The maximum number of organizations to return in the response. If unspecified,
-       * server picks an appropriate default.
+       * Optional. The maximum number of organizations to return in the response. The server can
+       * return fewer organizations than requested. If unspecified, server picks an appropriate
+       * default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of organizations to return in the response. If unspecified, server
-     picks an appropriate default.
+      /** Optional. The maximum number of organizations to return in the response. The server can return
+     fewer organizations than requested. If unspecified, server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of organizations to return in the response. If unspecified,
-       * server picks an appropriate default.
+       * Optional. The maximum number of organizations to return in the response. The server can
+       * return fewer organizations than requested. If unspecified, server picks an appropriate
+       * default.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

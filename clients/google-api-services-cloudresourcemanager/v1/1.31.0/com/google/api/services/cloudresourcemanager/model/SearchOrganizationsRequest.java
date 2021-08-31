@@ -43,7 +43,8 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
   private java.lang.String filter;
 
   /**
-   * The maximum number of Organizations to return in the response. This field is optional.
+   * The maximum number of Organizations to return in the response. The server can return fewer
+   * organizations than requested. If unspecified, server picks an appropriate default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
   }
 
   /**
-   * The maximum number of Organizations to return in the response. This field is optional.
+   * The maximum number of Organizations to return in the response. The server can return fewer
+   * organizations than requested. If unspecified, server picks an appropriate default.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -93,7 +95,8 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
   }
 
   /**
-   * The maximum number of Organizations to return in the response. This field is optional.
+   * The maximum number of Organizations to return in the response. The server can return fewer
+   * organizations than requested. If unspecified, server picks an appropriate default.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchOrganizationsRequest setPageSize(java.lang.Integer pageSize) {

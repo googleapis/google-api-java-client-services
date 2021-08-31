@@ -847,17 +847,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Optional. The maximum number of Folders to return in the response. */
+      /**
+       * Optional. The maximum number of Folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of Folders to return in the response.
+      /** Optional. The maximum number of Folders to return in the response. The server can return fewer
+     folders than requested. If unspecified, server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Optional. The maximum number of Folders to return in the response. */
+      /**
+       * Optional. The maximum number of Folders to return in the response. The server can return
+       * fewer folders than requested. If unspecified, server picks an appropriate default.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

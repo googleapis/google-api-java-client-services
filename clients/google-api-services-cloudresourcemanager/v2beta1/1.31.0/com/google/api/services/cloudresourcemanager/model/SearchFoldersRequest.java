@@ -31,7 +31,8 @@ package com.google.api.services.cloudresourcemanager.model;
 public final class SearchFoldersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The maximum number of folders to return in the response.
+   * Optional. The maximum number of folders to return in the response. The server can return fewer
+   * folders than requested. If unspecified, server picks an appropriate default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   private java.lang.String query;
 
   /**
-   * Optional. The maximum number of folders to return in the response.
+   * Optional. The maximum number of folders to return in the response. The server can return fewer
+   * folders than requested. If unspecified, server picks an appropriate default.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -72,7 +74,8 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The maximum number of folders to return in the response.
+   * Optional. The maximum number of folders to return in the response. The server can return fewer
+   * folders than requested. If unspecified, server picks an appropriate default.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchFoldersRequest setPageSize(java.lang.Integer pageSize) {

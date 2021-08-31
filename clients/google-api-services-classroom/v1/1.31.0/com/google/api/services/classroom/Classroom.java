@@ -7001,7 +7001,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course or
        * for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
        * course does not exist. * `FAILED_PRECONDITION` if the requested ID belongs to the primary teacher
-       * of this course.
+       * of this course. * `FAILED_PRECONDITION` if the requested ID belongs to the owner of the course
+       * Drive folder. * `FAILED_PRECONDITION` if the course no longer has an active owner.
        *
        * Create a request for the method "teachers.delete".
        *
@@ -7030,7 +7031,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course
          * or for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
          * course does not exist. * `FAILED_PRECONDITION` if the requested ID belongs to the primary
-         * teacher of this course.
+         * teacher of this course. * `FAILED_PRECONDITION` if the requested ID belongs to the owner of the
+         * course Drive folder. * `FAILED_PRECONDITION` if the course no longer has an active owner.
          *
          * Create a request for the method "teachers.delete".
          *

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-youtube</artifactId>
-      <version>v3-rev20210811-1.32.1</version>
+      <version>v3-rev20210828-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-youtube:v3-rev20210811-1.32.1'
+  compile 'com.google.apis:google-api-services-youtube:v3-rev20210828-1.32.1'
 }
 ```
 

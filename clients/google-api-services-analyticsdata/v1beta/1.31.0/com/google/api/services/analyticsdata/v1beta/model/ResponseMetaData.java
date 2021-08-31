@@ -31,12 +31,60 @@ package com.google.api.services.analyticsdata.v1beta.model;
 public final class ResponseMetaData extends com.google.api.client.json.GenericJson {
 
   /**
+   * The currency code used in this report. Intended to be used in formatting currency metrics like
+   * `purchaseRevenue` for visualization. If currency_code was specified in the request, this
+   * response parameter will echo the request parameter; otherwise, this response parameter is the
+   * property's current currency_code. Currency codes are string encodings of currency types from
+   * the ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD", "EUR",
+   * "JPY". To learn more, see https://support.google.com/analytics/answer/9796179.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currencyCode;
+
+  /**
    * If true, indicates some buckets of dimension combinations are rolled into "(other)" row. This
    * can happen for high cardinality reports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dataLossFromOtherRow;
+
+  /**
+   * The property's current timezone. Intended to be used to interpret time-based dimensions like
+   * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
+   * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
+   * The currency code used in this report. Intended to be used in formatting currency metrics like
+   * `purchaseRevenue` for visualization. If currency_code was specified in the request, this
+   * response parameter will echo the request parameter; otherwise, this response parameter is the
+   * property's current currency_code. Currency codes are string encodings of currency types from
+   * the ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD", "EUR",
+   * "JPY". To learn more, see https://support.google.com/analytics/answer/9796179.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrencyCode() {
+    return currencyCode;
+  }
+
+  /**
+   * The currency code used in this report. Intended to be used in formatting currency metrics like
+   * `purchaseRevenue` for visualization. If currency_code was specified in the request, this
+   * response parameter will echo the request parameter; otherwise, this response parameter is the
+   * property's current currency_code. Currency codes are string encodings of currency types from
+   * the ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD", "EUR",
+   * "JPY". To learn more, see https://support.google.com/analytics/answer/9796179.
+   * @param currencyCode currencyCode or {@code null} for none
+   */
+  public ResponseMetaData setCurrencyCode(java.lang.String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
 
   /**
    * If true, indicates some buckets of dimension combinations are rolled into "(other)" row. This
@@ -54,6 +102,27 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    */
   public ResponseMetaData setDataLossFromOtherRow(java.lang.Boolean dataLossFromOtherRow) {
     this.dataLossFromOtherRow = dataLossFromOtherRow;
+    return this;
+  }
+
+  /**
+   * The property's current timezone. Intended to be used to interpret time-based dimensions like
+   * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
+   * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * The property's current timezone. Intended to be used to interpret time-based dimensions like
+   * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
+   * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public ResponseMetaData setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Contact details for LaForge enterprises.
+ * Contact details for managed Google Play enterprises.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

@@ -30,8 +30,8 @@ package com.google.api.services.people.v1.model;
 public final class Gender extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values: * `male` * `female` * `other`
+   * Free form text field for pronouns that should be used to address the person. Common values are:
+   * * `he`/`him` * `she`/`her` * `they`/`them`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values: * `male` * `female` * `other`
+   * Free form text field for pronouns that should be used to address the person. Common values are:
+   * * `he`/`him` * `she`/`her` * `they`/`them`
    * @return value or {@code null} for none
    */
   public java.lang.String getAddressMeAs() {
@@ -70,8 +70,8 @@ public final class Gender extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of pronouns that should be used to address the person. The value can be custom or one
-   * of these predefined values: * `male` * `female` * `other`
+   * Free form text field for pronouns that should be used to address the person. Common values are:
+   * * `he`/`him` * `she`/`her` * `they`/`them`
    * @param addressMeAs addressMeAs or {@code null} for none
    */
   public Gender setAddressMeAs(java.lang.String addressMeAs) {

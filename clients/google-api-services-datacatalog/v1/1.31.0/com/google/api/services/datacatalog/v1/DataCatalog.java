@@ -867,7 +867,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the entry group to delete.  */
+          /** Required. The name of the entry group to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -877,7 +877,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /** Required. The name of the entry group to delete.  */
+          /** Required. The name of the entry group to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1021,7 +1021,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the entry group to get.  */
+          /** Required. The name of the entry group to get. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -1031,7 +1031,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /** Required. The name of the entry group to get.  */
+          /** Required. The name of the entry group to get. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2180,7 +2180,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the entry to delete.  */
+            /** Required. The name of the entry to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -2190,7 +2190,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the entry to delete.  */
+            /** Required. The name of the entry to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2318,7 +2318,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the entry to get.  */
+            /** Required. The name of the entry to get. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -2328,7 +2328,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the entry to get.  */
+            /** Required. The name of the entry to get. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3329,7 +3329,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the tag to delete.  */
+              /** Required. The name of the tag to delete. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
@@ -3339,7 +3339,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 return name;
               }
 
-              /** Required. The name of the tag to delete.  */
+              /** Required. The name of the tag to delete. */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3996,7 +3996,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the tag to delete.  */
+            /** Required. The name of the tag to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -4006,7 +4006,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the tag to delete.  */
+            /** Required. The name of the tag to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4678,7 +4678,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the tag template to delete.  */
+          /** Required. The name of the tag template to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -4688,7 +4688,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /** Required. The name of the tag template to delete.  */
+          /** Required. The name of the tag template to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4839,7 +4839,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the tag template to get.  */
+          /** Required. The name of the tag template to get. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -4849,7 +4849,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /** Required. The name of the tag template to get.  */
+          /** Required. The name of the tag template to get. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5797,7 +5797,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the tag template field to delete.  */
+            /** Required. The name of the tag template field to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -5807,7 +5807,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the tag template field to delete.  */
+            /** Required. The name of the tag template field to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5957,7 +5957,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the tag template field.  */
+            /** Required. The name of the tag template field. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -5967,7 +5967,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the tag template field.  */
+            /** Required. The name of the tag template field. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6132,7 +6132,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Rename) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the tag template.  */
+            /** Required. The name of the tag template. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -6142,7 +6142,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. The name of the tag template.  */
+            /** Required. The name of the tag template. */
             public Rename setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6285,7 +6285,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 return (Rename) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the enum field value.  */
+              /** Required. The name of the enum field value. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
@@ -6295,7 +6295,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 return name;
               }
 
-              /** Required. The name of the enum field value.  */
+              /** Required. The name of the enum field value. */
               public Rename setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6442,7 +6442,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of the project that the taxonomy will belong to.  */
+          /** Required. Resource name of the project that the taxonomy will belong to. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -6452,7 +6452,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return parent;
           }
 
-          /** Required. Resource name of the project that the taxonomy will belong to.  */
+          /** Required. Resource name of the project that the taxonomy will belong to. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6726,7 +6726,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Export) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of the project that the exported taxonomies belong to.  */
+          /** Required. Resource name of the project that the exported taxonomies belong to. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -6736,7 +6736,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return parent;
           }
 
-          /** Required. Resource name of the project that the exported taxonomies belong to.  */
+          /** Required. Resource name of the project that the exported taxonomies belong to. */
           public Export setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6902,7 +6902,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of the taxonomy to get.  */
+          /** Required. Resource name of the taxonomy to get. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -6912,7 +6912,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /** Required. Resource name of the taxonomy to get.  */
+          /** Required. Resource name of the taxonomy to get. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7179,7 +7179,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (DataCatalogImport) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of project that the imported taxonomies will belong to.  */
+          /** Required. Resource name of project that the imported taxonomies will belong to. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -7189,7 +7189,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return parent;
           }
 
-          /** Required. Resource name of project that the imported taxonomies will belong to.  */
+          /** Required. Resource name of project that the imported taxonomies will belong to. */
           public DataCatalogImport setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7317,7 +7317,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of the project to list the taxonomies of.  */
+          /** Required. Resource name of the project to list the taxonomies of. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -7327,7 +7327,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             return parent;
           }
 
-          /** Required. Resource name of the project to list the taxonomies of.  */
+          /** Required. Resource name of the project to list the taxonomies of. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8102,7 +8102,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Resource name of the taxonomy that the policy tag will belong to.  */
+            /** Required. Resource name of the taxonomy that the policy tag will belong to. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -8112,7 +8112,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return parent;
             }
 
-            /** Required. Resource name of the taxonomy that the policy tag will belong to.  */
+            /** Required. Resource name of the taxonomy that the policy tag will belong to. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8382,7 +8382,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Resource name of the policy tag.  */
+            /** Required. Resource name of the policy tag. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
@@ -8392,7 +8392,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return name;
             }
 
-            /** Required. Resource name of the policy tag.  */
+            /** Required. Resource name of the policy tag. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8660,7 +8660,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Resource name of the taxonomy to list the policy tags of.  */
+            /** Required. Resource name of the taxonomy to list the policy tags of. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -8670,7 +8670,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return parent;
             }
 
-            /** Required. Resource name of the taxonomy to list the policy tags of.  */
+            /** Required. Resource name of the taxonomy to list the policy tags of. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

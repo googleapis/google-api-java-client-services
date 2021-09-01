@@ -62,6 +62,13 @@ public final class SoftwarePackage extends com.google.api.client.json.GenericJso
   private WindowsQuickFixEngineeringPackage qfePackage;
 
   /**
+   * Details of Windows Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WindowsApplication windowsApplication;
+
+  /**
    * Details of a Windows Update package. See https://docs.microsoft.com/en-
    * us/windows/win32/api/_wua/ for information about Windows Update.
    * The value may be {@code null}.
@@ -167,6 +174,23 @@ public final class SoftwarePackage extends com.google.api.client.json.GenericJso
    */
   public SoftwarePackage setQfePackage(WindowsQuickFixEngineeringPackage qfePackage) {
     this.qfePackage = qfePackage;
+    return this;
+  }
+
+  /**
+   * Details of Windows Application.
+   * @return value or {@code null} for none
+   */
+  public WindowsApplication getWindowsApplication() {
+    return windowsApplication;
+  }
+
+  /**
+   * Details of Windows Application.
+   * @param windowsApplication windowsApplication or {@code null} for none
+   */
+  public SoftwarePackage setWindowsApplication(WindowsApplication windowsApplication) {
+    this.windowsApplication = windowsApplication;
     return this;
   }
 

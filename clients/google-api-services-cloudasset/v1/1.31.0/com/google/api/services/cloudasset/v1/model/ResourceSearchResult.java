@@ -208,6 +208,23 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String project;
 
   /**
+   * A map of related resources of this resource, keyed by the relationship type. A relationship
+   * type is in the format of {SourceType}_{ACTION}_{DestType}. Example: `DISK_TO_INSTANCE`,
+   * `DISK_TO_NETWORK`, `INSTANCE_TO_INSTANCEGROUP`. See [supported relationship
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_relationship_types).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, RelatedResources> relationships;
+
+  static {
+    // hack to force ProGuard to consider RelatedResources used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RelatedResources.class);
+  }
+
+  /**
    * The state of this resource. Different resources types have different state definitions that are
    * mapped from various fields of different resource types. This field is available only when the
    * resource's proto contains it. Example: If the resource is an instance provided by Compute
@@ -635,6 +652,31 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * A map of related resources of this resource, keyed by the relationship type. A relationship
+   * type is in the format of {SourceType}_{ACTION}_{DestType}. Example: `DISK_TO_INSTANCE`,
+   * `DISK_TO_NETWORK`, `INSTANCE_TO_INSTANCEGROUP`. See [supported relationship
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_relationship_types).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, RelatedResources> getRelationships() {
+    return relationships;
+  }
+
+  /**
+   * A map of related resources of this resource, keyed by the relationship type. A relationship
+   * type is in the format of {SourceType}_{ACTION}_{DestType}. Example: `DISK_TO_INSTANCE`,
+   * `DISK_TO_NETWORK`, `INSTANCE_TO_INSTANCEGROUP`. See [supported relationship
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#supported_relationship_types).
+   * @param relationships relationships or {@code null} for none
+   */
+  public ResourceSearchResult setRelationships(java.util.Map<String, RelatedResources> relationships) {
+    this.relationships = relationships;
     return this;
   }
 

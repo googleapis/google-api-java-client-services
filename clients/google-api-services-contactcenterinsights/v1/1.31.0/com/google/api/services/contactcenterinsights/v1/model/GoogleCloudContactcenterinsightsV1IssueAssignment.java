@@ -31,6 +31,14 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IssueAssignment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * immutable since then.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Resource name of the assigned issue.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignment extends com
    */
   @com.google.api.client.util.Key
   private java.lang.Double score;
+
+  /**
+   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * immutable since then.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * immutable since then.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IssueAssignment setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Resource name of the assigned issue.

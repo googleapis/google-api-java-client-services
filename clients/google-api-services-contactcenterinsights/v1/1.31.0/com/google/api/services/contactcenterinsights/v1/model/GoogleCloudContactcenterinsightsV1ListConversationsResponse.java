@@ -44,8 +44,8 @@ public final class GoogleCloudContactcenterinsightsV1ListConversationsResponse e
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is set, it
+   * means there is another page available. If it is not set, it means no other pages are available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class GoogleCloudContactcenterinsightsV1ListConversationsResponse e
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is set, it
+   * means there is another page available. If it is not set, it means no other pages are available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,8 +78,8 @@ public final class GoogleCloudContactcenterinsightsV1ListConversationsResponse e
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token which can be sent as `page_token` to retrieve the next page. If this field is set, it
+   * means there is another page available. If it is not set, it means no other pages are available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ListConversationsResponse setNextPageToken(java.lang.String nextPageToken) {

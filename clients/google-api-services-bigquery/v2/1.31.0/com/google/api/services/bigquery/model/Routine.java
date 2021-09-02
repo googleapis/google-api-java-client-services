@@ -148,6 +148,16 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String routineType;
 
   /**
+   * Optional. Can be set for procedures only. If true (default), the definition body will be
+   * validated in the creation and the updates of the procedure. For procedures with an argument of
+   * ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this
+   * field must be set to false explicitly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean strictMode;
+
+  /**
    * Optional.
    * @return value or {@code null} for none
    */
@@ -407,6 +417,29 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setRoutineType(java.lang.String routineType) {
     this.routineType = routineType;
+    return this;
+  }
+
+  /**
+   * Optional. Can be set for procedures only. If true (default), the definition body will be
+   * validated in the creation and the updates of the procedure. For procedures with an argument of
+   * ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this
+   * field must be set to false explicitly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStrictMode() {
+    return strictMode;
+  }
+
+  /**
+   * Optional. Can be set for procedures only. If true (default), the definition body will be
+   * validated in the creation and the updates of the procedure. For procedures with an argument of
+   * ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this
+   * field must be set to false explicitly.
+   * @param strictMode strictMode or {@code null} for none
+   */
+  public Routine setStrictMode(java.lang.Boolean strictMode) {
+    this.strictMode = strictMode;
     return this;
   }
 

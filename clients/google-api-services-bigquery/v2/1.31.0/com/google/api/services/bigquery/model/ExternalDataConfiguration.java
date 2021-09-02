@@ -38,6 +38,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.Boolean autodetect;
 
   /**
+   * Additional properties to set if sourceFormat is set to Avro.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AvroOptions avroOptions;
+
+  /**
    * [Optional] Additional options if sourceFormat is set to BIGTABLE.
    * The value may be {@code null}.
    */
@@ -178,6 +185,23 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setAutodetect(java.lang.Boolean autodetect) {
     this.autodetect = autodetect;
+    return this;
+  }
+
+  /**
+   * Additional properties to set if sourceFormat is set to Avro.
+   * @return value or {@code null} for none
+   */
+  public AvroOptions getAvroOptions() {
+    return avroOptions;
+  }
+
+  /**
+   * Additional properties to set if sourceFormat is set to Avro.
+   * @param avroOptions avroOptions or {@code null} for none
+   */
+  public ExternalDataConfiguration setAvroOptions(AvroOptions avroOptions) {
+    this.avroOptions = avroOptions;
     return this;
   }
 

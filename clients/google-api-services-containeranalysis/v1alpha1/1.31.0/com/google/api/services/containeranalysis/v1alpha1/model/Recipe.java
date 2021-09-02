@@ -38,7 +38,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> arguments;
+  private java.util.List<java.util.Map<String, java.lang.Object>> arguments;
 
   /**
    * Index in materials containing the recipe steps that are not implied by recipe.type. For
@@ -66,7 +66,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> environment;
+  private java.util.List<java.util.Map<String, java.lang.Object>> environment;
 
   /**
    * URI indicating what type of recipe was performed. It determines the meaning of
@@ -82,7 +82,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * flags passed to make aside from the target, which is captured in recipe.entryPoint.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getArguments() {
+  public java.util.List<java.util.Map<String, java.lang.Object>> getArguments() {
     return arguments;
   }
 
@@ -92,7 +92,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * flags passed to make aside from the target, which is captured in recipe.entryPoint.
    * @param arguments arguments or {@code null} for none
    */
-  public Recipe setArguments(java.util.List<java.lang.String> arguments) {
+  public Recipe setArguments(java.util.List<java.util.Map<String, java.lang.Object>> arguments) {
     this.arguments = arguments;
     return this;
   }
@@ -148,7 +148,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * needed for reproducing the build but not evaluated as part of policy.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getEnvironment() {
+  public java.util.List<java.util.Map<String, java.lang.Object>> getEnvironment() {
     return environment;
   }
 
@@ -157,7 +157,7 @@ public final class Recipe extends com.google.api.client.json.GenericJson {
    * needed for reproducing the build but not evaluated as part of policy.
    * @param environment environment or {@code null} for none
    */
-  public Recipe setEnvironment(java.util.Map<String, java.lang.String> environment) {
+  public Recipe setEnvironment(java.util.List<java.util.Map<String, java.lang.Object>> environment) {
     this.environment = environment;
     return this;
   }

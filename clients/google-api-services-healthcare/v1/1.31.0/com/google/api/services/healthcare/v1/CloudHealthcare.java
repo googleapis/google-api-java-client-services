@@ -21254,6 +21254,192 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
         }
       }
+      /**
+       * An accessor for creating requests from the Services collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+       *   {@code CloudHealthcare.Services.List request = healthcare.services().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Services services() {
+        return new Services();
+      }
+
+      /**
+       * The "services" collection of methods.
+       */
+      public class Services {
+
+        /**
+         * An accessor for creating requests from the Nlp collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+         *   {@code CloudHealthcare.Nlp.List request = healthcare.nlp().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Nlp nlp() {
+          return new Nlp();
+        }
+
+        /**
+         * The "nlp" collection of methods.
+         */
+        public class Nlp {
+
+          /**
+           * Analyze heathcare entity in a document. Its response includes the recognized entity mentions and
+           * the relationships between them. AnalyzeEntities uses context aware models to detect entities.
+           *
+           * Create a request for the method "nlp.analyzeEntities".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link AnalyzeEntities#execute()} method to invoke the remote operation.
+           *
+           * @param nlpService The resource name of the service of the form:
+           *        "projects/{project_id}/locations/{location_id}/services/nlp".
+           * @param content the {@link com.google.api.services.healthcare.v1.model.AnalyzeEntitiesRequest}
+           * @return the request
+           */
+          public AnalyzeEntities analyzeEntities(java.lang.String nlpService, com.google.api.services.healthcare.v1.model.AnalyzeEntitiesRequest content) throws java.io.IOException {
+            AnalyzeEntities result = new AnalyzeEntities(nlpService, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AnalyzeEntities extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.AnalyzeEntitiesResponse> {
+
+            private static final String REST_PATH = "v1/{+nlpService}:analyzeEntities";
+
+            private final java.util.regex.Pattern NLP_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/nlp$");
+
+            /**
+             * Analyze heathcare entity in a document. Its response includes the recognized entity mentions
+             * and the relationships between them. AnalyzeEntities uses context aware models to detect
+             * entities.
+             *
+             * Create a request for the method "nlp.analyzeEntities".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link AnalyzeEntities#execute()} method to invoke the remote
+             * operation. <p> {@link AnalyzeEntities#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param nlpService The resource name of the service of the form:
+           *        "projects/{project_id}/locations/{location_id}/services/nlp".
+             * @param content the {@link com.google.api.services.healthcare.v1.model.AnalyzeEntitiesRequest}
+             * @since 1.13
+             */
+            protected AnalyzeEntities(java.lang.String nlpService, com.google.api.services.healthcare.v1.model.AnalyzeEntitiesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.AnalyzeEntitiesResponse.class);
+              this.nlpService = com.google.api.client.util.Preconditions.checkNotNull(nlpService, "Required parameter nlpService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NLP_SERVICE_PATTERN.matcher(nlpService).matches(),
+                    "Parameter nlpService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/nlp$");
+              }
+            }
+
+            @Override
+            public AnalyzeEntities set$Xgafv(java.lang.String $Xgafv) {
+              return (AnalyzeEntities) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AnalyzeEntities setAccessToken(java.lang.String accessToken) {
+              return (AnalyzeEntities) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AnalyzeEntities setAlt(java.lang.String alt) {
+              return (AnalyzeEntities) super.setAlt(alt);
+            }
+
+            @Override
+            public AnalyzeEntities setCallback(java.lang.String callback) {
+              return (AnalyzeEntities) super.setCallback(callback);
+            }
+
+            @Override
+            public AnalyzeEntities setFields(java.lang.String fields) {
+              return (AnalyzeEntities) super.setFields(fields);
+            }
+
+            @Override
+            public AnalyzeEntities setKey(java.lang.String key) {
+              return (AnalyzeEntities) super.setKey(key);
+            }
+
+            @Override
+            public AnalyzeEntities setOauthToken(java.lang.String oauthToken) {
+              return (AnalyzeEntities) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AnalyzeEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AnalyzeEntities) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AnalyzeEntities setQuotaUser(java.lang.String quotaUser) {
+              return (AnalyzeEntities) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AnalyzeEntities setUploadType(java.lang.String uploadType) {
+              return (AnalyzeEntities) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AnalyzeEntities setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AnalyzeEntities) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the service of the form:
+             * "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String nlpService;
+
+            /** The resource name of the service of the form:
+           "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            public java.lang.String getNlpService() {
+              return nlpService;
+            }
+
+            /**
+             * The resource name of the service of the form:
+             * "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            public AnalyzeEntities setNlpService(java.lang.String nlpService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NLP_SERVICE_PATTERN.matcher(nlpService).matches(),
+                    "Parameter nlpService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/nlp$");
+              }
+              this.nlpService = nlpService;
+              return this;
+            }
+
+            @Override
+            public AnalyzeEntities set(String parameterName, Object value) {
+              return (AnalyzeEntities) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 

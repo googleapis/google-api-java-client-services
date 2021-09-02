@@ -8218,6 +8218,307 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Disable a ServiceAccountKey. A disabled service account key can be enabled through
+         * EnableServiceAccountKey. The API is currently in preview phase.
+         *
+         * Create a request for the method "keys.disable".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the service account key in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
+         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         *        `email` address or the `unique_id` of the service account.
+         * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest}
+         * @return the request
+         */
+        public Disable disable(java.lang.String name, com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest content) throws java.io.IOException {
+          Disable result = new Disable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Disable extends IamRequest<com.google.api.services.iam.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:disable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+
+          /**
+           * Disable a ServiceAccountKey. A disabled service account key can be enabled through
+           * EnableServiceAccountKey. The API is currently in preview phase.
+           *
+           * Create a request for the method "keys.disable".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the service account key in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
+         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         *        `email` address or the `unique_id` of the service account.
+           * @param content the {@link com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest}
+           * @since 1.13
+           */
+          protected Disable(java.lang.String name, com.google.api.services.iam.v1.model.DisableServiceAccountKeyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+          }
+
+          @Override
+          public Disable set$Xgafv(java.lang.String $Xgafv) {
+            return (Disable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Disable setAccessToken(java.lang.String accessToken) {
+            return (Disable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Disable setAlt(java.lang.String alt) {
+            return (Disable) super.setAlt(alt);
+          }
+
+          @Override
+          public Disable setCallback(java.lang.String callback) {
+            return (Disable) super.setCallback(callback);
+          }
+
+          @Override
+          public Disable setFields(java.lang.String fields) {
+            return (Disable) super.setFields(fields);
+          }
+
+          @Override
+          public Disable setKey(java.lang.String key) {
+            return (Disable) super.setKey(key);
+          }
+
+          @Override
+          public Disable setOauthToken(java.lang.String oauthToken) {
+            return (Disable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Disable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Disable setQuotaUser(java.lang.String quotaUser) {
+            return (Disable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Disable setUploadType(java.lang.String uploadType) {
+            return (Disable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Disable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the service account key in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
+           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
+           * be the `email` address or the `unique_id` of the service account.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the service account key in the following format:
+         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
+         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
+         address or the `unique_id` of the service account.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the service account key in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
+           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
+           * be the `email` address or the `unique_id` of the service account.
+           */
+          public Disable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Disable set(String parameterName, Object value) {
+            return (Disable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enable a ServiceAccountKey. The API is currently in preview phase.
+         *
+         * Create a request for the method "keys.enable".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the service account key in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
+         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         *        `email` address or the `unique_id` of the service account.
+         * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest}
+         * @return the request
+         */
+        public Enable enable(java.lang.String name, com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest content) throws java.io.IOException {
+          Enable result = new Enable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Enable extends IamRequest<com.google.api.services.iam.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:enable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+
+          /**
+           * Enable a ServiceAccountKey. The API is currently in preview phase.
+           *
+           * Create a request for the method "keys.enable".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Enable#execute()} method to invoke the remote operation. <p> {@link
+           * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the service account key in the following format:
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for
+         *        the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+         *        `email` address or the `unique_id` of the service account.
+           * @param content the {@link com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest}
+           * @since 1.13
+           */
+          protected Enable(java.lang.String name, com.google.api.services.iam.v1.model.EnableServiceAccountKeyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+          }
+
+          @Override
+          public Enable set$Xgafv(java.lang.String $Xgafv) {
+            return (Enable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Enable setAccessToken(java.lang.String accessToken) {
+            return (Enable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Enable setAlt(java.lang.String alt) {
+            return (Enable) super.setAlt(alt);
+          }
+
+          @Override
+          public Enable setCallback(java.lang.String callback) {
+            return (Enable) super.setCallback(callback);
+          }
+
+          @Override
+          public Enable setFields(java.lang.String fields) {
+            return (Enable) super.setFields(fields);
+          }
+
+          @Override
+          public Enable setKey(java.lang.String key) {
+            return (Enable) super.setKey(key);
+          }
+
+          @Override
+          public Enable setOauthToken(java.lang.String oauthToken) {
+            return (Enable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Enable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Enable setQuotaUser(java.lang.String quotaUser) {
+            return (Enable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Enable setUploadType(java.lang.String uploadType) {
+            return (Enable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Enable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the service account key in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
+           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
+           * be the `email` address or the `unique_id` of the service account.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the service account key in the following format:
+         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
+         `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
+         address or the `unique_id` of the service account.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the service account key in the following format:
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard
+           * for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can
+           * be the `email` address or the `unique_id` of the service account.
+           */
+          public Enable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Enable set(String parameterName, Object value) {
+            return (Enable) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a ServiceAccountKey.
          *
          * Create a request for the method "keys.get".

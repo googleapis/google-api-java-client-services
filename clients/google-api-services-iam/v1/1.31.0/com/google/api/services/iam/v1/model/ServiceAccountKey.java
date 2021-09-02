@@ -42,6 +42,13 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccountKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * The key status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Specifies the algorithm (and possibly key size) for the key.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String validBeforeTime;
+
+  /**
+   * The key status.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * The key status.
+   * @param disabled disabled or {@code null} for none
+   */
+  public ServiceAccountKey setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
+    return this;
+  }
 
   /**
    * Specifies the algorithm (and possibly key size) for the key.

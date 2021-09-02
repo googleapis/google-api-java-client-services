@@ -31,6 +31,22 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta2DocumentPageFormField extends com.google.api.client.json.GenericJson {
 
   /**
+   * Created for Labeling UI to export key text. If corrections were made to the text identified by
+   * the `field_name.text_anchor`, this field will contain the correction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String correctedKeyText;
+
+  /**
+   * Created for Labeling UI to export value text. If corrections were made to the text identified
+   * by the `field_value.text_anchor`, this field will contain the correction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String correctedValueText;
+
+  /**
    * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
    * The value may be {@code null}.
    */
@@ -84,6 +100,44 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageFormField extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
+
+  /**
+   * Created for Labeling UI to export key text. If corrections were made to the text identified by
+   * the `field_name.text_anchor`, this field will contain the correction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCorrectedKeyText() {
+    return correctedKeyText;
+  }
+
+  /**
+   * Created for Labeling UI to export key text. If corrections were made to the text identified by
+   * the `field_name.text_anchor`, this field will contain the correction.
+   * @param correctedKeyText correctedKeyText or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPageFormField setCorrectedKeyText(java.lang.String correctedKeyText) {
+    this.correctedKeyText = correctedKeyText;
+    return this;
+  }
+
+  /**
+   * Created for Labeling UI to export value text. If corrections were made to the text identified
+   * by the `field_value.text_anchor`, this field will contain the correction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCorrectedValueText() {
+    return correctedValueText;
+  }
+
+  /**
+   * Created for Labeling UI to export value text. If corrections were made to the text identified
+   * by the `field_value.text_anchor`, this field will contain the correction.
+   * @param correctedValueText correctedValueText or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPageFormField setCorrectedValueText(java.lang.String correctedValueText) {
+    this.correctedValueText = correctedValueText;
+    return this;
+  }
 
   /**
    * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.

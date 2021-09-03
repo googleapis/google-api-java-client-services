@@ -31,12 +31,36 @@ package com.google.api.services.monitoring.v3.model;
 public final class AlertStrategy extends com.google.api.client.json.GenericJson {
 
   /**
+   * If an alert policy that was active has no data for this log, any open incidents will close
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String autoClose;
+
+  /**
    * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
    * policies that are not log-based.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NotificationRateLimit notificationRateLimit;
+
+  /**
+   * If an alert policy that was active has no data for this log, any open incidents will close
+   * @return value or {@code null} for none
+   */
+  public String getAutoClose() {
+    return autoClose;
+  }
+
+  /**
+   * If an alert policy that was active has no data for this log, any open incidents will close
+   * @param autoClose autoClose or {@code null} for none
+   */
+  public AlertStrategy setAutoClose(String autoClose) {
+    this.autoClose = autoClose;
+    return this;
+  }
 
   /**
    * Required for alert policies with a LogMatch condition.This limit is not implemented for alert

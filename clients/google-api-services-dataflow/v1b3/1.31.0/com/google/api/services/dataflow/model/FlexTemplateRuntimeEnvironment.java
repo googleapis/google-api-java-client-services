@@ -99,6 +99,13 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.String kmsKeyName;
 
   /**
+   * The machine type to use for launching the job. The default is n1-standard-1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launcherMachineType;
+
+  /**
    * The machine type to use for the job. Defaults to the value from the template if not specified.
    * The value may be {@code null}.
    */
@@ -369,6 +376,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * The machine type to use for launching the job. The default is n1-standard-1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLauncherMachineType() {
+    return launcherMachineType;
+  }
+
+  /**
+   * The machine type to use for launching the job. The default is n1-standard-1.
+   * @param launcherMachineType launcherMachineType or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setLauncherMachineType(java.lang.String launcherMachineType) {
+    this.launcherMachineType = launcherMachineType;
     return this;
   }
 

@@ -39,17 +39,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private CustomRankingInfo customRankingInfo;
 
   /**
-   * Controls whether to disable exact keyword match on Job.title, Job.description,
-   * Job.company_display_name, Job.addresses, Job.qualifications. When disable keyword match is
-   * turned off, a keyword match returns jobs that do not match given category filters when there
-   * are matching keywords. For example, for the query "program manager," a result is returned even
-   * if the job posting has the title "software developer," which doesn't fall into "program
-   * manager" ontology, but does have "program manager" appearing in its description. For queries
-   * like "cloud" that don't contain title or location specific ontology, jobs with "cloud" keyword
-   * matches are returned regardless of this flag's value. Use
-   * Company.keyword_searchable_job_custom_attributes if company-specific globally matched custom
-   * field/attribute string values are needed. Enabling keyword match improves recall of subsequent
-   * search requests. Defaults to false.
+   * This field is deprecated. Please use SearchJobsRequest.keyword_match_mode going forward. To
+   * migrate, disable_keyword_match set to false maps to KeywordMatchMode.KEYWORD_MATCH_ALL, and
+   * disable_keyword_match set to true maps to KeywordMatchMode.KEYWORD_MATCH_DISABLED. If
+   * SearchJobsRequest.keyword_match_mode is set, this field is ignored. Controls whether to disable
+   * exact keyword match on Job.title, Job.description, Job.company_display_name, Job.addresses,
+   * Job.qualifications. When disable keyword match is turned off, a keyword match returns jobs that
+   * do not match given category filters when there are matching keywords. For example, for the
+   * query "program manager," a result is returned even if the job posting has the title "software
+   * developer," which doesn't fall into "program manager" ontology, but does have "program manager"
+   * appearing in its description. For queries like "cloud" that don't contain title or location
+   * specific ontology, jobs with "cloud" keyword matches are returned regardless of this flag's
+   * value. Use Company.keyword_searchable_job_custom_attributes if company-specific globally
+   * matched custom field/attribute string values are needed. Enabling keyword match improves recall
+   * of subsequent search requests. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,6 +149,15 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String jobView;
+
+  /**
+   * Controls what keyword match options to use. If both keyword_match_mode and
+   * disable_keyword_match are set, keyword_match_mode will take precedence. Defaults to
+   * KeywordMatchMode.KEYWORD_MATCH_ALL if no value is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keywordMatchMode;
 
   /**
    * A limit on the number of jobs returned in the search results. Increasing this value above the
@@ -247,17 +259,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Controls whether to disable exact keyword match on Job.title, Job.description,
-   * Job.company_display_name, Job.addresses, Job.qualifications. When disable keyword match is
-   * turned off, a keyword match returns jobs that do not match given category filters when there
-   * are matching keywords. For example, for the query "program manager," a result is returned even
-   * if the job posting has the title "software developer," which doesn't fall into "program
-   * manager" ontology, but does have "program manager" appearing in its description. For queries
-   * like "cloud" that don't contain title or location specific ontology, jobs with "cloud" keyword
-   * matches are returned regardless of this flag's value. Use
-   * Company.keyword_searchable_job_custom_attributes if company-specific globally matched custom
-   * field/attribute string values are needed. Enabling keyword match improves recall of subsequent
-   * search requests. Defaults to false.
+   * This field is deprecated. Please use SearchJobsRequest.keyword_match_mode going forward. To
+   * migrate, disable_keyword_match set to false maps to KeywordMatchMode.KEYWORD_MATCH_ALL, and
+   * disable_keyword_match set to true maps to KeywordMatchMode.KEYWORD_MATCH_DISABLED. If
+   * SearchJobsRequest.keyword_match_mode is set, this field is ignored. Controls whether to disable
+   * exact keyword match on Job.title, Job.description, Job.company_display_name, Job.addresses,
+   * Job.qualifications. When disable keyword match is turned off, a keyword match returns jobs that
+   * do not match given category filters when there are matching keywords. For example, for the
+   * query "program manager," a result is returned even if the job posting has the title "software
+   * developer," which doesn't fall into "program manager" ontology, but does have "program manager"
+   * appearing in its description. For queries like "cloud" that don't contain title or location
+   * specific ontology, jobs with "cloud" keyword matches are returned regardless of this flag's
+   * value. Use Company.keyword_searchable_job_custom_attributes if company-specific globally
+   * matched custom field/attribute string values are needed. Enabling keyword match improves recall
+   * of subsequent search requests. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableKeywordMatch() {
@@ -265,17 +280,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Controls whether to disable exact keyword match on Job.title, Job.description,
-   * Job.company_display_name, Job.addresses, Job.qualifications. When disable keyword match is
-   * turned off, a keyword match returns jobs that do not match given category filters when there
-   * are matching keywords. For example, for the query "program manager," a result is returned even
-   * if the job posting has the title "software developer," which doesn't fall into "program
-   * manager" ontology, but does have "program manager" appearing in its description. For queries
-   * like "cloud" that don't contain title or location specific ontology, jobs with "cloud" keyword
-   * matches are returned regardless of this flag's value. Use
-   * Company.keyword_searchable_job_custom_attributes if company-specific globally matched custom
-   * field/attribute string values are needed. Enabling keyword match improves recall of subsequent
-   * search requests. Defaults to false.
+   * This field is deprecated. Please use SearchJobsRequest.keyword_match_mode going forward. To
+   * migrate, disable_keyword_match set to false maps to KeywordMatchMode.KEYWORD_MATCH_ALL, and
+   * disable_keyword_match set to true maps to KeywordMatchMode.KEYWORD_MATCH_DISABLED. If
+   * SearchJobsRequest.keyword_match_mode is set, this field is ignored. Controls whether to disable
+   * exact keyword match on Job.title, Job.description, Job.company_display_name, Job.addresses,
+   * Job.qualifications. When disable keyword match is turned off, a keyword match returns jobs that
+   * do not match given category filters when there are matching keywords. For example, for the
+   * query "program manager," a result is returned even if the job posting has the title "software
+   * developer," which doesn't fall into "program manager" ontology, but does have "program manager"
+   * appearing in its description. For queries like "cloud" that don't contain title or location
+   * specific ontology, jobs with "cloud" keyword matches are returned regardless of this flag's
+   * value. Use Company.keyword_searchable_job_custom_attributes if company-specific globally
+   * matched custom field/attribute string values are needed. Enabling keyword match improves recall
+   * of subsequent search requests. Defaults to false.
    * @param disableKeywordMatch disableKeywordMatch or {@code null} for none
    */
   public SearchJobsRequest setDisableKeywordMatch(java.lang.Boolean disableKeywordMatch) {
@@ -467,6 +485,27 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    */
   public SearchJobsRequest setJobView(java.lang.String jobView) {
     this.jobView = jobView;
+    return this;
+  }
+
+  /**
+   * Controls what keyword match options to use. If both keyword_match_mode and
+   * disable_keyword_match are set, keyword_match_mode will take precedence. Defaults to
+   * KeywordMatchMode.KEYWORD_MATCH_ALL if no value is specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeywordMatchMode() {
+    return keywordMatchMode;
+  }
+
+  /**
+   * Controls what keyword match options to use. If both keyword_match_mode and
+   * disable_keyword_match are set, keyword_match_mode will take precedence. Defaults to
+   * KeywordMatchMode.KEYWORD_MATCH_ALL if no value is specified.
+   * @param keywordMatchMode keywordMatchMode or {@code null} for none
+   */
+  public SearchJobsRequest setKeywordMatchMode(java.lang.String keywordMatchMode) {
+    this.keywordMatchMode = keywordMatchMode;
     return this;
   }
 

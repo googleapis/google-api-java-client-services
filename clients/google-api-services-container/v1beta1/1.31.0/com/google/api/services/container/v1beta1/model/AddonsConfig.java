@@ -62,6 +62,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
 
   /**
+   * Configuration for the GCP Filestore CSI driver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -179,6 +186,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setGcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
     this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the GCP Filestore CSI driver.
+   * @return value or {@code null} for none
+   */
+  public GcpFilestoreCsiDriverConfig getGcpFilestoreCsiDriverConfig() {
+    return gcpFilestoreCsiDriverConfig;
+  }
+
+  /**
+   * Configuration for the GCP Filestore CSI driver.
+   * @param gcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig or {@code null} for none
+   */
+  public AddonsConfig setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
+    this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
     return this;
   }
 

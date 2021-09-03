@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Medium of conversations used in training data.
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig e
   private java.lang.Long trainingConversationsCount;
 
   /**
-   * Required. Medium of conversations used in training data.
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -53,7 +53,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig e
   }
 
   /**
-   * Required. Medium of conversations used in training data.
+   * Required.
    * @param medium medium or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig setMedium(java.lang.String medium) {

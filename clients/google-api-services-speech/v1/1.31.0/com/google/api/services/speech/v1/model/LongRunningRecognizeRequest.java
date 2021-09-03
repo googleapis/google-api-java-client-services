@@ -45,6 +45,13 @@ public final class LongRunningRecognizeRequest extends com.google.api.client.jso
   private RecognitionConfig config;
 
   /**
+   * Optional. Specifies an optional destination for the recognition results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TranscriptOutputConfig outputConfig;
+
+  /**
    * Required. The audio data to be recognized.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class LongRunningRecognizeRequest extends com.google.api.client.jso
    */
   public LongRunningRecognizeRequest setConfig(RecognitionConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies an optional destination for the recognition results.
+   * @return value or {@code null} for none
+   */
+  public TranscriptOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Optional. Specifies an optional destination for the recognition results.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public LongRunningRecognizeRequest setOutputConfig(TranscriptOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
     return this;
   }
 

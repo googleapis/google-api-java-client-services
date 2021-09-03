@@ -39,7 +39,13 @@ public final class TranscriptNormalization extends com.google.api.client.json.Ge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SpeechEntry entries;
+  private java.util.List<SpeechEntry> entries;
+
+  static {
+    // hack to force ProGuard to consider SpeechEntry used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SpeechEntry.class);
+  }
 
   /**
    * A list of replacement entries. We will perform replacement with one entry at a time. For
@@ -47,7 +53,7 @@ public final class TranscriptNormalization extends com.google.api.client.json.Ge
    * applied because we will always process the first entry before it. At most 100 entries.
    * @return value or {@code null} for none
    */
-  public SpeechEntry getEntries() {
+  public java.util.List<SpeechEntry> getEntries() {
     return entries;
   }
 
@@ -57,7 +63,7 @@ public final class TranscriptNormalization extends com.google.api.client.json.Ge
    * applied because we will always process the first entry before it. At most 100 entries.
    * @param entries entries or {@code null} for none
    */
-  public TranscriptNormalization setEntries(SpeechEntry entries) {
+  public TranscriptNormalization setEntries(java.util.List<SpeechEntry> entries) {
     this.entries = entries;
     return this;
   }

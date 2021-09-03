@@ -82,7 +82,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day.
+   * `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is
+   * not set, the subscription never expires.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -288,7 +289,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day.
+   * `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is
+   * not set, the subscription never expires.
    * @return value or {@code null} for none
    */
   public ExpirationPolicy getExpirationPolicy() {
@@ -300,7 +302,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day.
+   * `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is
+   * not set, the subscription never expires.
    * @param expirationPolicy expirationPolicy or {@code null} for none
    */
   public Subscription setExpirationPolicy(ExpirationPolicy expirationPolicy) {

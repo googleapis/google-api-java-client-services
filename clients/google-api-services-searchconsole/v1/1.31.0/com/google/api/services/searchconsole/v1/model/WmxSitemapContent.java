@@ -31,7 +31,7 @@ package com.google.api.services.searchconsole.v1.model;
 public final class WmxSitemapContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of URLs from the sitemap that were indexed (of the content type).
+   * *Deprecated; do not use.*
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -52,7 +52,7 @@ public final class WmxSitemapContent extends com.google.api.client.json.GenericJ
   private java.lang.String type;
 
   /**
-   * The number of URLs from the sitemap that were indexed (of the content type).
+   * *Deprecated; do not use.*
    * @return value or {@code null} for none
    */
   public java.lang.Long getIndexed() {
@@ -60,7 +60,7 @@ public final class WmxSitemapContent extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of URLs from the sitemap that were indexed (of the content type).
+   * *Deprecated; do not use.*
    * @param indexed indexed or {@code null} for none
    */
   public WmxSitemapContent setIndexed(java.lang.Long indexed) {

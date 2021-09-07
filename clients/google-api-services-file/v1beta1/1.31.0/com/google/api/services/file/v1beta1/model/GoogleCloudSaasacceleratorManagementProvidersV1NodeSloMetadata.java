@@ -32,16 +32,6 @@ package com.google.api.services.file.v1beta1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * By default node is eligible if instance is eligible. But individual node might be excluded from
-   * SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node
-   * level exclusions are present for time period, the node level's reason will be reported by
-   * Eligibility Exporter.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions;
-
-  /**
    * The location of the node, if different from instance location.
    * The value may be {@code null}.
    */
@@ -62,29 +52,6 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadat
    */
   @com.google.api.client.util.Key
   private GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility perSliEligibility;
-
-  /**
-   * By default node is eligible if instance is eligible. But individual node might be excluded from
-   * SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node
-   * level exclusions are present for time period, the node level's reason will be reported by
-   * Eligibility Exporter.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> getExclusions() {
-    return exclusions;
-  }
-
-  /**
-   * By default node is eligible if instance is eligible. But individual node might be excluded from
-   * SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node
-   * level exclusions are present for time period, the node level's reason will be reported by
-   * Eligibility Exporter.
-   * @param exclusions exclusions or {@code null} for none
-   */
-  public GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata setExclusions(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions) {
-    this.exclusions = exclusions;
-    return this;
-  }
 
   /**
    * The location of the node, if different from instance location.

@@ -1717,6 +1717,29 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * If set to true, any snapshots of the instance will also be deleted. (Otherwise, the
+           * request will only work if the instance has no snapshots.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, any snapshots of the instance will also be deleted. (Otherwise, the request will
+         only work if the instance has no snapshots.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, any snapshots of the instance will also be deleted. (Otherwise, the
+           * request will only work if the instance has no snapshots.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

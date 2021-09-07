@@ -89,7 +89,12 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
-   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * Output only. URIs for accessing [interactive shells](https://cloud.google.com/ai-
+   * platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only
+   * available if training_input.enable_web_access is `true`. The keys are names of each node in the
+   * training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the
+   * first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for
+   * each node's interactive shell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +226,12 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
-   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * Output only. URIs for accessing [interactive shells](https://cloud.google.com/ai-
+   * platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only
+   * available if training_input.enable_web_access is `true`. The keys are names of each node in the
+   * training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the
+   * first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for
+   * each node's interactive shell.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getWebAccessUris() {
@@ -229,7 +239,12 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
-   * Output only. The web URIs for the training job. Currently for debug terminal access to the job.
+   * Output only. URIs for accessing [interactive shells](https://cloud.google.com/ai-
+   * platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only
+   * available if training_input.enable_web_access is `true`. The keys are names of each node in the
+   * training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the
+   * first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for
+   * each node's interactive shell.
    * @param webAccessUris webAccessUris or {@code null} for none
    */
   public GoogleCloudMlV1TrainingOutput setWebAccessUris(java.util.Map<String, java.lang.String> webAccessUris) {

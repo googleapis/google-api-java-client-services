@@ -31,11 +31,35 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowAllBundleIds;
+
+  /**
    * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedBundleIds;
+
+  /**
+   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowAllBundleIds() {
+    return allowAllBundleIds;
+  }
+
+  /**
+   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * @param allowAllBundleIds allowAllBundleIds or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowAllBundleIds(java.lang.Boolean allowAllBundleIds) {
+    this.allowAllBundleIds = allowAllBundleIds;
+    return this;
+  }
 
   /**
    * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'

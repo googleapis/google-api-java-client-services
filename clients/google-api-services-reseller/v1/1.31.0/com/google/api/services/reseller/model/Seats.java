@@ -63,8 +63,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * `ANNUAL_YEARLY_PAY` plans. This property sets the maximum number of licenses assignable to
    * users on a subscription. The reseller can add more licenses, but once set, the `numberOfSeats`
    * cannot be reduced until renewal. The reseller is invoiced based on the `numberOfSeats` value
-   * regardless of how many of these user licenses are assigned. *Note: *G Suite subscriptions
-   * automatically assign a license to every user.
+   * regardless of how many of these user licenses are assigned. *Note: *Google Workspace
+   * subscriptions automatically assign a license to every user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * `ANNUAL_YEARLY_PAY` plans. This property sets the maximum number of licenses assignable to
    * users on a subscription. The reseller can add more licenses, but once set, the `numberOfSeats`
    * cannot be reduced until renewal. The reseller is invoiced based on the `numberOfSeats` value
-   * regardless of how many of these user licenses are assigned. *Note: *G Suite subscriptions
-   * automatically assign a license to every user.
+   * regardless of how many of these user licenses are assigned. *Note: *Google Workspace
+   * subscriptions automatically assign a license to every user.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumberOfSeats() {
@@ -153,8 +153,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * `ANNUAL_YEARLY_PAY` plans. This property sets the maximum number of licenses assignable to
    * users on a subscription. The reseller can add more licenses, but once set, the `numberOfSeats`
    * cannot be reduced until renewal. The reseller is invoiced based on the `numberOfSeats` value
-   * regardless of how many of these user licenses are assigned. *Note: *G Suite subscriptions
-   * automatically assign a license to every user.
+   * regardless of how many of these user licenses are assigned. *Note: *Google Workspace
+   * subscriptions automatically assign a license to every user.
    * @param numberOfSeats numberOfSeats or {@code null} for none
    */
   public Seats setNumberOfSeats(java.lang.Integer numberOfSeats) {

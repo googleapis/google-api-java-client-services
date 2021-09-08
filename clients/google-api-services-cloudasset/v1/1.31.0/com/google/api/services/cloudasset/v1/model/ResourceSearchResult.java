@@ -113,10 +113,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
-   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
-   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
-   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
+   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
+   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -438,10 +438,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
-   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
-   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
-   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
+   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
+   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -450,10 +450,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
-   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
-   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
-   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
-   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
+   * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
+   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @param kmsKey kmsKey or {@code null} for none
    */
   public ResourceSearchResult setKmsKey(java.lang.String kmsKey) {

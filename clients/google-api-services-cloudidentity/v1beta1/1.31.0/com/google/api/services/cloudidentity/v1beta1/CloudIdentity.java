@@ -4773,21 +4773,21 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The names of fields to update. May only contain the following fields:
+       * Required. The names of fields to update. May only contain the following field names:
        * `display_name`, `description`, `labels`, `dynamic_group_metadata`, `posix_groups`.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. The names of fields to update. May only contain the following fields: `display_name`,
-     `description`, `labels`, `dynamic_group_metadata`, `posix_groups`.
+      /** Required. The names of fields to update. May only contain the following field names:
+     `display_name`, `description`, `labels`, `dynamic_group_metadata`, `posix_groups`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * Required. The names of fields to update. May only contain the following fields:
+       * Required. The names of fields to update. May only contain the following field names:
        * `display_name`, `description`, `labels`, `dynamic_group_metadata`, `posix_groups`.
        */
       public Patch setUpdateMask(String updateMask) {

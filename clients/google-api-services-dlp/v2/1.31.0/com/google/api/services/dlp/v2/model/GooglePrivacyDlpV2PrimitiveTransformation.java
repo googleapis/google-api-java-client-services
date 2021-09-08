@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   private GooglePrivacyDlpV2RedactConfig redactConfig;
 
   /**
-   * Replace
+   * Replace with a specified value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +244,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
-   * Replace
+   * Replace with a specified value.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2ReplaceValueConfig getReplaceConfig() {
@@ -252,7 +252,7 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
-   * Replace
+   * Replace with a specified value.
    * @param replaceConfig replaceConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setReplaceConfig(GooglePrivacyDlpV2ReplaceValueConfig replaceConfig) {

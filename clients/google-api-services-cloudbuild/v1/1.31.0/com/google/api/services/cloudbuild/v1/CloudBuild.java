@@ -1460,8 +1460,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class GithubEnterpriseConfigs {
 
       /**
-       * Create an association between a GCP project and a GitHub Enterprise server. This API is
-       * experimental.
+       * Create an association between a GCP project and a GitHub Enterprise server.
        *
        * Create a request for the method "githubEnterpriseConfigs.create".
        *
@@ -1486,8 +1485,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Create an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Create an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.create".
          *
@@ -1615,8 +1613,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Delete an association between a GCP project and a GitHub Enterprise server. This API is
-       * experimental.
+       * Delete an association between a GCP project and a GitHub Enterprise server.
        *
        * Create a request for the method "githubEnterpriseConfigs.delete".
        *
@@ -1641,8 +1638,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
         /**
-         * Delete an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Delete an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.delete".
          *
@@ -1787,7 +1783,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+       * Retrieve a GitHubEnterpriseConfig.
        *
        * Create a request for the method "githubEnterpriseConfigs.get".
        *
@@ -1812,7 +1808,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
         /**
-         * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+         * Retrieve a GitHubEnterpriseConfig.
          *
          * Create a request for the method "githubEnterpriseConfigs.get".
          *
@@ -1966,7 +1962,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+       * List all GitHubEnterpriseConfigs for a given project.
        *
        * Create a request for the method "githubEnterpriseConfigs.list".
        *
@@ -1990,7 +1986,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+         * List all GitHubEnterpriseConfigs for a given project.
          *
          * Create a request for the method "githubEnterpriseConfigs.list".
          *
@@ -2126,8 +2122,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Update an association between a GCP project and a GitHub Enterprise server. This API is
-       * experimental.
+       * Update an association between a GCP project and a GitHub Enterprise server.
        *
        * Create a request for the method "githubEnterpriseConfigs.patch".
        *
@@ -2153,8 +2148,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
         /**
-         * Update an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Update an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.patch".
          *
@@ -3358,8 +3352,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class GithubEnterpriseConfigs {
 
         /**
-         * Create an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Create an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.create".
          *
@@ -3384,8 +3377,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create an association between a GCP project and a GitHub Enterprise server. This API is
-           * experimental.
+           * Create an association between a GCP project and a GitHub Enterprise server.
            *
            * Create a request for the method "githubEnterpriseConfigs.create".
            *
@@ -3513,8 +3505,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Delete an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Delete an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.delete".
          *
@@ -3539,8 +3530,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
           /**
-           * Delete an association between a GCP project and a GitHub Enterprise server. This API is
-           * experimental.
+           * Delete an association between a GCP project and a GitHub Enterprise server.
            *
            * Create a request for the method "githubEnterpriseConfigs.delete".
            *
@@ -3685,7 +3675,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+         * Retrieve a GitHubEnterpriseConfig.
          *
          * Create a request for the method "githubEnterpriseConfigs.get".
          *
@@ -3710,7 +3700,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
           /**
-           * Retrieve a GitHubEnterpriseConfig. This API is experimental.
+           * Retrieve a GitHubEnterpriseConfig.
            *
            * Create a request for the method "githubEnterpriseConfigs.get".
            *
@@ -3864,7 +3854,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+         * List all GitHubEnterpriseConfigs for a given project.
          *
          * Create a request for the method "githubEnterpriseConfigs.list".
          *
@@ -3888,7 +3878,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List all GitHubEnterpriseConfigs for a given project. This API is experimental.
+           * List all GitHubEnterpriseConfigs for a given project.
            *
            * Create a request for the method "githubEnterpriseConfigs.list".
            *
@@ -4024,8 +4014,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Update an association between a GCP project and a GitHub Enterprise server. This API is
-         * experimental.
+         * Update an association between a GCP project and a GitHub Enterprise server.
          *
          * Create a request for the method "githubEnterpriseConfigs.patch".
          *
@@ -4051,8 +4040,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/githubEnterpriseConfigs/[^/]+$");
 
           /**
-           * Update an association between a GCP project and a GitHub Enterprise server. This API is
-           * experimental.
+           * Update an association between a GCP project and a GitHub Enterprise server.
            *
            * Create a request for the method "githubEnterpriseConfigs.patch".
            *

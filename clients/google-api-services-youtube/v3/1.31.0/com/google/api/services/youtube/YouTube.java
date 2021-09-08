@@ -13160,6 +13160,21 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      @com.google.api.client.util.Key
+      private java.lang.String externalChannelId;
+
+      /**
+
+       */
+      public java.lang.String getExternalChannelId() {
+        return externalChannelId;
+      }
+
+      public Insert setExternalChannelId(java.lang.String externalChannelId) {
+        this.externalChannelId = externalChannelId;
+        return this;
+      }
+
       @Override
       public Insert set(String parameterName, Object value) {
         return (Insert) super.set(parameterName, value);

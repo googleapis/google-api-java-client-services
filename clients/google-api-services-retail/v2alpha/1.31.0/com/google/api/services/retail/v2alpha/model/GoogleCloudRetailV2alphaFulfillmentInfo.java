@@ -32,8 +32,8 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfo extends com.google.ap
 
   /**
    * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the
-   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 2000 values are allowed.
-   * Each value must be a string with a length limit of 10 characters, matching the pattern
+   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed.
+   * Each value must be a string with a length limit of 30 characters, matching the pattern
    * [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is
    * returned.
    * The value may be {@code null}.
@@ -55,8 +55,8 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfo extends com.google.ap
 
   /**
    * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the
-   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 2000 values are allowed.
-   * Each value must be a string with a length limit of 10 characters, matching the pattern
+   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed.
+   * Each value must be a string with a length limit of 30 characters, matching the pattern
    * [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is
    * returned.
    * @return value or {@code null} for none
@@ -67,8 +67,8 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfo extends com.google.ap
 
   /**
    * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the
-   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 2000 values are allowed.
-   * Each value must be a string with a length limit of 10 characters, matching the pattern
+   * region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed.
+   * Each value must be a string with a length limit of 30 characters, matching the pattern
    * [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is
    * returned.
    * @param placeIds placeIds or {@code null} for none

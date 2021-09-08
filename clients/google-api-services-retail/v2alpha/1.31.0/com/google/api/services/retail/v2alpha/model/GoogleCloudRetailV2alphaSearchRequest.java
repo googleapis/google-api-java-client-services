@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * The value may be {@code null}.
    */
@@ -153,7 +153,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The relevance threshold of the search results. Defaults to RelevanceThreshold.HIGH, which means
    * only the most relevant results are shown, and the least number of results are returned. See
-   * more details at this [user guide](/retail/private/docs/result-size#relevance_thresholding).
+   * more details at this [user guide](https://cloud.google.com/retail/docs/result-
+   * size#relevance_thresholding).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +206,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequestBoostSpec getBoostSpec() {
@@ -214,7 +215,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setBoostSpec(GoogleCloudRetailV2alphaSearchRequestBoostSpec boostSpec) {
@@ -311,8 +312,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -322,8 +323,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setFilter(java.lang.String filter) {
@@ -355,8 +356,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -366,8 +367,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setOrderBy(java.lang.String orderBy) {
@@ -465,7 +466,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * @return value or {@code null} for none
    */
@@ -475,7 +476,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * @param queryExpansionSpec queryExpansionSpec or {@code null} for none
    */
@@ -487,7 +488,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The relevance threshold of the search results. Defaults to RelevanceThreshold.HIGH, which means
    * only the most relevant results are shown, and the least number of results are returned. See
-   * more details at this [user guide](/retail/private/docs/result-size#relevance_thresholding).
+   * more details at this [user guide](https://cloud.google.com/retail/docs/result-
+   * size#relevance_thresholding).
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevanceThreshold() {
@@ -497,7 +499,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * The relevance threshold of the search results. Defaults to RelevanceThreshold.HIGH, which means
    * only the most relevant results are shown, and the least number of results are returned. See
-   * more details at this [user guide](/retail/private/docs/result-size#relevance_thresholding).
+   * more details at this [user guide](https://cloud.google.com/retail/docs/result-
+   * size#relevance_thresholding).
    * @param relevanceThreshold relevanceThreshold or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {

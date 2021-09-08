@@ -63,7 +63,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   private java.lang.String attributionToken;
 
   /**
-   * The id or name of the associated shopping cart. This id is used to associate multiple items
+   * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
    * The value may be {@code null}.
@@ -155,7 +155,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   private java.util.List<java.lang.String> pageCategories;
 
   /**
-   * A unique id of a web page view. This should be kept the same for all user events triggered from
+   * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
    * user is browsing the page. The `pageViewId` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
@@ -169,9 +169,9 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * The main product details related to the event. This field is required for the following event
    * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event, this
    * field represents the products returned to the end user on the current page (the end user may
-   * have not finished broswing the whole page yet). When a new page is returned to the end user,
+   * have not finished browsing the whole page yet). When a new page is returned to the end user,
    * after pagination/filtering/ordering even for the same query, a new `search` event with
-   * different product_details is desired. The end user may have not finished broswing the whole
+   * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.
    * The value may be {@code null}.
    */
@@ -310,7 +310,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * The id or name of the associated shopping cart. This id is used to associate multiple items
+   * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
    * @return value or {@code null} for none
@@ -320,7 +320,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * The id or name of the associated shopping cart. This id is used to associate multiple items
+   * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
    * @param cartId cartId or {@code null} for none
@@ -521,7 +521,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * A unique id of a web page view. This should be kept the same for all user events triggered from
+   * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
    * user is browsing the page. The `pageViewId` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
@@ -533,7 +533,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
-   * A unique id of a web page view. This should be kept the same for all user events triggered from
+   * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
    * user is browsing the page. The `pageViewId` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
@@ -549,9 +549,9 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * The main product details related to the event. This field is required for the following event
    * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event, this
    * field represents the products returned to the end user on the current page (the end user may
-   * have not finished broswing the whole page yet). When a new page is returned to the end user,
+   * have not finished browsing the whole page yet). When a new page is returned to the end user,
    * after pagination/filtering/ordering even for the same query, a new `search` event with
-   * different product_details is desired. The end user may have not finished broswing the whole
+   * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.
    * @return value or {@code null} for none
    */
@@ -563,9 +563,9 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * The main product details related to the event. This field is required for the following event
    * types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event, this
    * field represents the products returned to the end user on the current page (the end user may
-   * have not finished broswing the whole page yet). When a new page is returned to the end user,
+   * have not finished browsing the whole page yet). When a new page is returned to the end user,
    * after pagination/filtering/ordering even for the same query, a new `search` event with
-   * different product_details is desired. The end user may have not finished broswing the whole
+   * different product_details is desired. The end user may have not finished browsing the whole
    * page yet.
    * @param productDetails productDetails or {@code null} for none
    */

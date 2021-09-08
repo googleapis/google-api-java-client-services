@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * The value may be {@code null}.
    */
@@ -196,7 +196,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestBoostSpec getBoostSpec() {
@@ -205,7 +205,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](/retail/private/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting).
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setBoostSpec(GoogleCloudRetailV2betaSearchRequestBoostSpec boostSpec) {
@@ -302,8 +302,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -313,8 +313,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the products being filtered. Filter expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#filter). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setFilter(java.lang.String filter) {
@@ -346,8 +346,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -357,8 +357,8 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   /**
    * The order in which products are returned. Products can be ordered by a field in an Product
    * object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more
-   * details at this [user guide](/retail/private/docs/filter-and-order#order). If this field is
-   * unrecognizable, an INVALID_ARGUMENT is returned.
+   * details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If
+   * this field is unrecognizable, an INVALID_ARGUMENT is returned.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setOrderBy(java.lang.String orderBy) {
@@ -456,7 +456,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * @return value or {@code null} for none
    */
@@ -466,7 +466,7 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * will occur. See more details at this [user guide](/retail/private/docs/result-
+   * will occur. See more details at this [user guide](https://cloud.google.com/retail/docs/result-
    * size#query_expansion).
    * @param queryExpansionSpec queryExpansionSpec or {@code null} for none
    */

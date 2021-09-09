@@ -178,6 +178,13 @@ public final class Lodging extends com.google.api.client.json.GenericJson {
   private GuestUnitFeatures someUnits;
 
   /**
+   * Sustainability practices implemented at the hotel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Sustainability sustainability;
+
+  /**
    * Vehicles or vehicular services facilitated or owned by the property.
    * The value may be {@code null}.
    */
@@ -530,6 +537,23 @@ public final class Lodging extends com.google.api.client.json.GenericJson {
    */
   public Lodging setSomeUnits(GuestUnitFeatures someUnits) {
     this.someUnits = someUnits;
+    return this;
+  }
+
+  /**
+   * Sustainability practices implemented at the hotel.
+   * @return value or {@code null} for none
+   */
+  public Sustainability getSustainability() {
+    return sustainability;
+  }
+
+  /**
+   * Sustainability practices implemented at the hotel.
+   * @param sustainability sustainability or {@code null} for none
+   */
+  public Lodging setSustainability(Sustainability sustainability) {
+    this.sustainability = sustainability;
     return this;
   }
 

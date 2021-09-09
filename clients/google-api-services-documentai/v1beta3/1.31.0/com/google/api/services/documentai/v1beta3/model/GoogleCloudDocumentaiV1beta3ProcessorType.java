@@ -44,7 +44,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to require for whitelisting.
+   * processor type. Otherwise, user needs to request access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to require for whitelisting.
+   * processor type. Otherwise, user needs to request access.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowCreation() {
@@ -90,7 +90,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorType extends com.google.
 
   /**
    * Whether the processor type allows creation. If yes, user can create a processor of this
-   * processor type. Otherwise, user needs to require for whitelisting.
+   * processor type. Otherwise, user needs to request access.
    * @param allowCreation allowCreation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorType setAllowCreation(java.lang.Boolean allowCreation) {

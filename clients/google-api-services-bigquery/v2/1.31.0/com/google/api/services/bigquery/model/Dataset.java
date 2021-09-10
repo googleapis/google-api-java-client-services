@@ -62,6 +62,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private DatasetReference datasetReference;
 
   /**
+   * [Output-only] The default collation of the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultCollation;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,6 +246,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setDatasetReference(DatasetReference datasetReference) {
     this.datasetReference = datasetReference;
+    return this;
+  }
+
+  /**
+   * [Output-only] The default collation of the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultCollation() {
+    return defaultCollation;
+  }
+
+  /**
+   * [Output-only] The default collation of the dataset.
+   * @param defaultCollation defaultCollation or {@code null} for none
+   */
+  public Dataset setDefaultCollation(java.lang.String defaultCollation) {
+    this.defaultCollation = defaultCollation;
     return this;
   }
 

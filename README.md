@@ -68,7 +68,7 @@ packages on [Maven Central][maven-search].
 | Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2) |
 | Cloud Data Fusion API | [v1](clients/google-api-services-datafusion/v1), [v1beta1](clients/google-api-services-datafusion/v1beta1) |
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
-| Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1), [v1beta2](clients/google-api-services-dataproc/v1beta2) |
+| Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1) |
 | Cloud Datastore API | [v1](clients/google-api-services-datastore/v1), [v1beta1](clients/google-api-services-datastore/v1beta1), [v1beta3](clients/google-api-services-datastore/v1beta3) |
 | Cloud Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
 | Cloud Deployment Manager V2 API | [alpha](clients/google-api-services-deploymentmanager/alpha), [v2](clients/google-api-services-deploymentmanager/v2), [v2beta](clients/google-api-services-deploymentmanager/v2beta) |

@@ -31,7 +31,7 @@ package com.google.api.services.recommendationengine.v1beta1.model;
 public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Use dryRun mode for this prediction query. If set to true, a dummy model will be used
+   * Optional. Use dryRun mode for this prediction query. If set to true, a fake model will be used
    * that returns arbitrary catalog items. Note that the dryRun mode should only be used for testing
    * the API, or if the model is not ready.
    * The value may be {@code null}.
@@ -113,7 +113,7 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   private GoogleCloudRecommendationengineV1beta1UserEvent userEvent;
 
   /**
-   * Optional. Use dryRun mode for this prediction query. If set to true, a dummy model will be used
+   * Optional. Use dryRun mode for this prediction query. If set to true, a fake model will be used
    * that returns arbitrary catalog items. Note that the dryRun mode should only be used for testing
    * the API, or if the model is not ready.
    * @return value or {@code null} for none
@@ -123,7 +123,7 @@ public final class GoogleCloudRecommendationengineV1beta1PredictRequest extends 
   }
 
   /**
-   * Optional. Use dryRun mode for this prediction query. If set to true, a dummy model will be used
+   * Optional. Use dryRun mode for this prediction query. If set to true, a fake model will be used
    * that returns arbitrary catalog items. Note that the dryRun mode should only be used for testing
    * the API, or if the model is not ready.
    * @param dryRun dryRun or {@code null} for none

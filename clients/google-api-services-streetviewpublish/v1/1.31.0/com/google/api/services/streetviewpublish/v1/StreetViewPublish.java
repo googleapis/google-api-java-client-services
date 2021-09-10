@@ -1392,13 +1392,13 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
+       * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
        * only filter supported at the moment is `placeId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The only
+      /** Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The only
      filter supported at the moment is `placeId`.
        */
       public java.lang.String getFilter() {
@@ -1406,7 +1406,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
+       * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
        * only filter supported at the moment is `placeId`.
        */
       public List setFilter(java.lang.String filter) {

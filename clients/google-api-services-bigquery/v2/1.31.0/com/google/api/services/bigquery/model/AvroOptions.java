@@ -30,16 +30,18 @@ package com.google.api.services.bigquery.model;
 public final class AvroOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional] If set to true will enable interpreting logical types into their corresponding types
-   * (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAvroLogicalTypes;
 
   /**
-   * [Optional] If set to true will enable interpreting logical types into their corresponding types
-   * (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -47,8 +49,9 @@ public final class AvroOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] If set to true will enable interpreting logical types into their corresponding types
-   * (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public AvroOptions setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {

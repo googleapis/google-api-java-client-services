@@ -299,9 +299,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TimePartitioning timePartitioning;
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
-   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
-   * (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -943,9 +943,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
-   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
-   * (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -953,9 +953,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
-   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
-   * (ie. INTEGER).
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as
+   * the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type
+   * (for example, INTEGER).
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public JobConfigurationLoad setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {

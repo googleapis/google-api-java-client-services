@@ -371,6 +371,35 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private java.util.List<java.lang.String> columns;
 
     /**
+     * Specifies the character that should appear before a data character that needs to be escaped.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String escapeCharacter;
+
+    /**
+     * Specifies the character that separates columns within each row (line) of the file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String fieldsTerminatedBy;
+
+    /**
+     * This is used to separate lines. If a line does not contain all fields, the rest of the columns
+     * are set to their default values.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String linesTerminatedBy;
+
+    /**
+     * Specifies the quoting character to be used when a data value is quoted.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String quoteCharacter;
+
+    /**
      * The table to which CSV data is imported.
      * The value may be {@code null}.
      */
@@ -393,6 +422,76 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     public CsvImportOptions setColumns(java.util.List<java.lang.String> columns) {
       this.columns = columns;
+      return this;
+    }
+
+    /**
+     * Specifies the character that should appear before a data character that needs to be escaped.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getEscapeCharacter() {
+      return escapeCharacter;
+    }
+
+    /**
+     * Specifies the character that should appear before a data character that needs to be escaped.
+     * @param escapeCharacter escapeCharacter or {@code null} for none
+     */
+    public CsvImportOptions setEscapeCharacter(java.lang.String escapeCharacter) {
+      this.escapeCharacter = escapeCharacter;
+      return this;
+    }
+
+    /**
+     * Specifies the character that separates columns within each row (line) of the file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getFieldsTerminatedBy() {
+      return fieldsTerminatedBy;
+    }
+
+    /**
+     * Specifies the character that separates columns within each row (line) of the file.
+     * @param fieldsTerminatedBy fieldsTerminatedBy or {@code null} for none
+     */
+    public CsvImportOptions setFieldsTerminatedBy(java.lang.String fieldsTerminatedBy) {
+      this.fieldsTerminatedBy = fieldsTerminatedBy;
+      return this;
+    }
+
+    /**
+     * This is used to separate lines. If a line does not contain all fields, the rest of the columns
+     * are set to their default values.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getLinesTerminatedBy() {
+      return linesTerminatedBy;
+    }
+
+    /**
+     * This is used to separate lines. If a line does not contain all fields, the rest of the columns
+     * are set to their default values.
+     * @param linesTerminatedBy linesTerminatedBy or {@code null} for none
+     */
+    public CsvImportOptions setLinesTerminatedBy(java.lang.String linesTerminatedBy) {
+      this.linesTerminatedBy = linesTerminatedBy;
+      return this;
+    }
+
+    /**
+     * Specifies the quoting character to be used when a data value is quoted.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getQuoteCharacter() {
+      return quoteCharacter;
+    }
+
+    /**
+     * Specifies the quoting character to be used when a data value is quoted.
+     * @param quoteCharacter quoteCharacter or {@code null} for none
+     */
+    public CsvImportOptions setQuoteCharacter(java.lang.String quoteCharacter) {
+      this.quoteCharacter = quoteCharacter;
       return this;
     }
 

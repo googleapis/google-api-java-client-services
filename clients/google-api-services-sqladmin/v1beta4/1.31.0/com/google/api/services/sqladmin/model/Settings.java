@@ -199,6 +199,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long settingsVersion;
 
   /**
+   * SQL Server specific audit configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerAuditConfig sqlServerAuditConfig;
+
+  /**
    * Configuration to increase storage size automatically. The default value is true.
    * The value may be {@code null}.
    */
@@ -598,6 +605,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setSettingsVersion(java.lang.Long settingsVersion) {
     this.settingsVersion = settingsVersion;
+    return this;
+  }
+
+  /**
+   * SQL Server specific audit configuration.
+   * @return value or {@code null} for none
+   */
+  public SqlServerAuditConfig getSqlServerAuditConfig() {
+    return sqlServerAuditConfig;
+  }
+
+  /**
+   * SQL Server specific audit configuration.
+   * @param sqlServerAuditConfig sqlServerAuditConfig or {@code null} for none
+   */
+  public Settings setSqlServerAuditConfig(SqlServerAuditConfig sqlServerAuditConfig) {
+    this.sqlServerAuditConfig = sqlServerAuditConfig;
     return this;
   }
 

@@ -36,31 +36,31 @@ public final class BusinessChainSearchTerms extends com.google.api.client.json.G
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String businessChain;
+  private java.lang.String businessChainQuery;
 
   /**
    * The search query for the desired geo region, e.g. "Seattle", "United State".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String region;
+  private java.lang.String regionQuery;
 
   /**
    * The search query for the desired business chain. The query must be the full name of the
    * business, e.g. "KFC", "mercedes-benz".
    * @return value or {@code null} for none
    */
-  public java.lang.String getBusinessChain() {
-    return businessChain;
+  public java.lang.String getBusinessChainQuery() {
+    return businessChainQuery;
   }
 
   /**
    * The search query for the desired business chain. The query must be the full name of the
    * business, e.g. "KFC", "mercedes-benz".
-   * @param businessChain businessChain or {@code null} for none
+   * @param businessChainQuery businessChainQuery or {@code null} for none
    */
-  public BusinessChainSearchTerms setBusinessChain(java.lang.String businessChain) {
-    this.businessChain = businessChain;
+  public BusinessChainSearchTerms setBusinessChainQuery(java.lang.String businessChainQuery) {
+    this.businessChainQuery = businessChainQuery;
     return this;
   }
 
@@ -68,16 +68,16 @@ public final class BusinessChainSearchTerms extends com.google.api.client.json.G
    * The search query for the desired geo region, e.g. "Seattle", "United State".
    * @return value or {@code null} for none
    */
-  public java.lang.String getRegion() {
-    return region;
+  public java.lang.String getRegionQuery() {
+    return regionQuery;
   }
 
   /**
    * The search query for the desired geo region, e.g. "Seattle", "United State".
-   * @param region region or {@code null} for none
+   * @param regionQuery regionQuery or {@code null} for none
    */
-  public BusinessChainSearchTerms setRegion(java.lang.String region) {
-    this.region = region;
+  public BusinessChainSearchTerms setRegionQuery(java.lang.String regionQuery) {
+    this.regionQuery = regionQuery;
     return this;
   }
 

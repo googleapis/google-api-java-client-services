@@ -51,6 +51,13 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   private java.lang.Boolean verifyConnectionOnly;
 
   /**
+   * Optional. Flag to verify settings required by replication setup only
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifyReplicationOnly;
+
+  /**
    * Optional. MySQL-specific settings for start external sync.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
    */
   public SqlInstancesVerifyExternalSyncSettingsRequest setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
     this.verifyConnectionOnly = verifyConnectionOnly;
+    return this;
+  }
+
+  /**
+   * Optional. Flag to verify settings required by replication setup only
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifyReplicationOnly() {
+    return verifyReplicationOnly;
+  }
+
+  /**
+   * Optional. Flag to verify settings required by replication setup only
+   * @param verifyReplicationOnly verifyReplicationOnly or {@code null} for none
+   */
+  public SqlInstancesVerifyExternalSyncSettingsRequest setVerifyReplicationOnly(java.lang.Boolean verifyReplicationOnly) {
+    this.verifyReplicationOnly = verifyReplicationOnly;
     return this;
   }
 

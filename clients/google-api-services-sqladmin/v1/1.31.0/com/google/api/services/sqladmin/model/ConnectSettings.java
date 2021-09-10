@@ -64,6 +64,14 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
+   * changed after instance creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * SSL configuration.
    * The value may be {@code null}.
    */
@@ -147,6 +155,25 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
+   * changed after instance creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * The cloud region for the instance. e.g. **us-central1**, **europe-west1**. The region cannot be
+   * changed after instance creation.
+   * @param region region or {@code null} for none
+   */
+  public ConnectSettings setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

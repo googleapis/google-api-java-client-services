@@ -52,9 +52,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Target is the service name used to group related deployments: * Service name for GAE Flex /
-   * Standard. * Cluster and container name for GKE. * User-specified string for direct GCE
-   * profiling (e.g. Java). * Job name for Dataflow. Validation regex:
+   * Target is the service name used to group related deployments: * Service name for App Engine
+   * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
+   * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
    * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * The value may be {@code null}.
    */
@@ -110,9 +110,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Target is the service name used to group related deployments: * Service name for GAE Flex /
-   * Standard. * Cluster and container name for GKE. * User-specified string for direct GCE
-   * profiling (e.g. Java). * Job name for Dataflow. Validation regex:
+   * Target is the service name used to group related deployments: * Service name for App Engine
+   * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
+   * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
    * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * @return value or {@code null} for none
    */
@@ -121,9 +121,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Target is the service name used to group related deployments: * Service name for GAE Flex /
-   * Standard. * Cluster and container name for GKE. * User-specified string for direct GCE
-   * profiling (e.g. Java). * Job name for Dataflow. Validation regex:
+   * Target is the service name used to group related deployments: * Service name for App Engine
+   * Flex / Standard. * Cluster and container name for GKE. * User-specified string for direct
+   * Compute Engine profiling (e.g. Java). * Job name for Dataflow. Validation regex:
    * `^[a-z]([-a-z0-9_.]{0,253}[a-z0-9])?$`.
    * @param target target or {@code null} for none
    */

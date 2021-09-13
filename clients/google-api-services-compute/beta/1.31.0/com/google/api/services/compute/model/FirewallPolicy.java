@@ -52,7 +52,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated, please use short name instead. User-provided name of the Organization firewall
-   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * policy. The name should be unique in the organization in which the firewall policy is created.
    * This name must be set on creation and cannot be changed. The name must be 1-63 characters long,
    * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
    * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
@@ -201,7 +201,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated, please use short name instead. User-provided name of the Organization firewall
-   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * policy. The name should be unique in the organization in which the firewall policy is created.
    * This name must be set on creation and cannot be changed. The name must be 1-63 characters long,
    * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
    * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
@@ -215,7 +215,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Deprecated, please use short name instead. User-provided name of the Organization firewall
-   * plicy. The name should be unique in the organization in which the firewall policy is created.
+   * policy. The name should be unique in the organization in which the firewall policy is created.
    * This name must be set on creation and cannot be changed. The name must be 1-63 characters long,
    * and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
    * regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a

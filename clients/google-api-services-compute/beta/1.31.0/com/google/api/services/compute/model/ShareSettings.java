@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class ShareSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
+   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ShareSettingsProjectConfig> projectMap;
+
+  /**
    * A List of Project names to specify consumer projects for this shared-reservation. This is only
    * valid when share_type's value is SPECIFIC_PROJECTS.
    * The value may be {@code null}.
@@ -43,6 +51,25 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String shareType;
+
+  /**
+   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
+   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ShareSettingsProjectConfig> getProjectMap() {
+    return projectMap;
+  }
+
+  /**
+   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
+   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * @param projectMap projectMap or {@code null} for none
+   */
+  public ShareSettings setProjectMap(java.util.Map<String, ShareSettingsProjectConfig> projectMap) {
+    this.projectMap = projectMap;
+    return this;
+  }
 
   /**
    * A List of Project names to specify consumer projects for this shared-reservation. This is only

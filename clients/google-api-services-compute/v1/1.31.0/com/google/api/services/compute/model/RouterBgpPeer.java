@@ -73,6 +73,13 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Long advertisedRoutePriority;
 
   /**
+   * BFD configuration for the BGP peering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouterBgpPeerBfd bfd;
+
+  /**
    * The status of the BGP peer connection. If set to FALSE, any active session with the peer is
    * terminated and all associated routing information is removed. If set to TRUE, the peer
    * connection can be established with routing information. The default is TRUE.
@@ -130,6 +137,16 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
+
+  /**
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routerApplianceInstance;
 
   /**
    * User-specified flag to indicate which mode to use for advertisement.
@@ -214,6 +231,23 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setAdvertisedRoutePriority(java.lang.Long advertisedRoutePriority) {
     this.advertisedRoutePriority = advertisedRoutePriority;
+    return this;
+  }
+
+  /**
+   * BFD configuration for the BGP peering.
+   * @return value or {@code null} for none
+   */
+  public RouterBgpPeerBfd getBfd() {
+    return bfd;
+  }
+
+  /**
+   * BFD configuration for the BGP peering.
+   * @param bfd bfd or {@code null} for none
+   */
+  public RouterBgpPeer setBfd(RouterBgpPeerBfd bfd) {
+    this.bfd = bfd;
     return this;
   }
 
@@ -353,6 +387,29 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
    */
   public RouterBgpPeer setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouterApplianceInstance() {
+    return routerApplianceInstance;
+  }
+
+  /**
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
+   * @param routerApplianceInstance routerApplianceInstance or {@code null} for none
+   */
+  public RouterBgpPeer setRouterApplianceInstance(java.lang.String routerApplianceInstance) {
+    this.routerApplianceInstance = routerApplianceInstance;
     return this;
   }
 

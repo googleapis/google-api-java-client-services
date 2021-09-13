@@ -78,6 +78,15 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String peerIpAddress;
 
   /**
+   * [Output only] URI of the VM instance that is used as third-party router appliances such as Next
+   * Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance is the peer side of the
+   * BGP session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routerApplianceInstance;
+
+  /**
    * BGP state as specified in RFC1771.
    * The value may be {@code null}.
    */
@@ -205,6 +214,27 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * [Output only] URI of the VM instance that is used as third-party router appliances such as Next
+   * Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance is the peer side of the
+   * BGP session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouterApplianceInstance() {
+    return routerApplianceInstance;
+  }
+
+  /**
+   * [Output only] URI of the VM instance that is used as third-party router appliances such as Next
+   * Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance is the peer side of the
+   * BGP session.
+   * @param routerApplianceInstance routerApplianceInstance or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setRouterApplianceInstance(java.lang.String routerApplianceInstance) {
+    this.routerApplianceInstance = routerApplianceInstance;
     return this;
   }
 

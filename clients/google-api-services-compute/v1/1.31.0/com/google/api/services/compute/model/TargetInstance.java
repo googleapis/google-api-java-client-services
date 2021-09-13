@@ -90,6 +90,14 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
   private java.lang.String natPolicy;
 
   /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -238,6 +246,25 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    */
   public TargetInstance setNatPolicy(java.lang.String natPolicy) {
     this.natPolicy = natPolicy;
+    return this;
+  }
+
+  /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * The URL of the network this target instance uses to forward traffic. If not specified, the
+   * traffic will be forwarded to the network that the default network interface belongs to.
+   * @param network network or {@code null} for none
+   */
+  public TargetInstance setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

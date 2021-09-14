@@ -119,6 +119,13 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private UploadRef uploadReference;
 
   /**
+   * Time when the image was uploaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String uploadTime;
+
+  /**
    * Output only. View count of the photo.
    * The value may be {@code null}.
    */
@@ -319,6 +326,23 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   public Photo setUploadReference(UploadRef uploadReference) {
     this.uploadReference = uploadReference;
+    return this;
+  }
+
+  /**
+   * Time when the image was uploaded.
+   * @return value or {@code null} for none
+   */
+  public String getUploadTime() {
+    return uploadTime;
+  }
+
+  /**
+   * Time when the image was uploaded.
+   * @param uploadTime uploadTime or {@code null} for none
+   */
+  public Photo setUploadTime(String uploadTime) {
+    this.uploadTime = uploadTime;
     return this;
   }
 

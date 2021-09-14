@@ -73,7 +73,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Long advertisedRoutePriority;
 
   /**
-   * BFD configuration for the BGP peering. Not currently available publicly.
+   * BFD configuration for the BGP peering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,7 +256,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * BFD configuration for the BGP peering. Not currently available publicly.
+   * BFD configuration for the BGP peering.
    * @return value or {@code null} for none
    */
   public RouterBgpPeerBfd getBfd() {
@@ -264,7 +264,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * BFD configuration for the BGP peering. Not currently available publicly.
+   * BFD configuration for the BGP peering.
    * @param bfd bfd or {@code null} for none
    */
   public RouterBgpPeer setBfd(RouterBgpPeerBfd bfd) {

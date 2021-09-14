@@ -184,7 +184,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String serviceAccount;
 
   /**
-   * Stanby policy for stopped and suspended instances.
+   * Standby policy for stopped and suspended instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -662,7 +662,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Stanby policy for stopped and suspended instances.
+   * Standby policy for stopped and suspended instances.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStandbyPolicy getStandbyPolicy() {
@@ -670,7 +670,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Stanby policy for stopped and suspended instances.
+   * Standby policy for stopped and suspended instances.
    * @param standbyPolicy standbyPolicy or {@code null} for none
    */
   public InstanceGroupManager setStandbyPolicy(InstanceGroupManagerStandbyPolicy standbyPolicy) {

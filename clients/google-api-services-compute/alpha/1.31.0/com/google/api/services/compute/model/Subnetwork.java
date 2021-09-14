@@ -207,8 +207,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network to which this subnetwork belongs, provided by the client when initially
-   * creating the subnetwork. Only networks that are in the distributed mode can have subnetworks.
-   * This field can be set only at resource creation time.
+   * creating the subnetwork. This field can be set only at resource creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -776,8 +775,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network to which this subnetwork belongs, provided by the client when initially
-   * creating the subnetwork. Only networks that are in the distributed mode can have subnetworks.
-   * This field can be set only at resource creation time.
+   * creating the subnetwork. This field can be set only at resource creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -786,8 +784,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network to which this subnetwork belongs, provided by the client when initially
-   * creating the subnetwork. Only networks that are in the distributed mode can have subnetworks.
-   * This field can be set only at resource creation time.
+   * creating the subnetwork. This field can be set only at resource creation time.
    * @param network network or {@code null} for none
    */
   public Subnetwork setNetwork(java.lang.String network) {

@@ -45,6 +45,13 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private PartitionConfig partitionConfig;
 
   /**
+   * The settings for this topic's Reservation usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationConfig reservationConfig;
+
+  /**
    * The settings for this topic's message retention.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setPartitionConfig(PartitionConfig partitionConfig) {
     this.partitionConfig = partitionConfig;
+    return this;
+  }
+
+  /**
+   * The settings for this topic's Reservation usage.
+   * @return value or {@code null} for none
+   */
+  public ReservationConfig getReservationConfig() {
+    return reservationConfig;
+  }
+
+  /**
+   * The settings for this topic's Reservation usage.
+   * @param reservationConfig reservationConfig or {@code null} for none
+   */
+  public Topic setReservationConfig(ReservationConfig reservationConfig) {
+    this.reservationConfig = reservationConfig;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The [SafetyNet attestation
+   * Required. The [SafetyNet attestation
    * response](https://developer.android.com/training/safetynet/attestation#request-attestation-
    * step) issued to your app.
    * The value may be {@code null}.
@@ -40,7 +40,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest ext
   private java.lang.String safetyNetToken;
 
   /**
-   * The [SafetyNet attestation
+   * Required. The [SafetyNet attestation
    * response](https://developer.android.com/training/safetynet/attestation#request-attestation-
    * step) issued to your app.
    * @return value or {@code null} for none
@@ -50,7 +50,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest ext
   }
 
   /**
-   * The [SafetyNet attestation
+   * Required. The [SafetyNet attestation
    * response](https://developer.android.com/training/safetynet/attestation#request-attestation-
    * step) issued to your app.
    * @param safetyNetToken safetyNetToken or {@code null} for none

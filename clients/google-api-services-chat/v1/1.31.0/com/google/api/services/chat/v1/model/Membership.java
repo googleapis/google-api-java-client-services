@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents a membership relation in Hangouts Chat.
+ * Represents a membership relation in Google Chat.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * A User in Hangout Chat
+   * A user in Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A User in Hangout Chat
+   * A user in Google Chat.
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -85,7 +85,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A User in Hangout Chat
+   * A user in Google Chat.
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {

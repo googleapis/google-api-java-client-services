@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * An asset identify in Google Cloud which contains its name, type and ancestors. An asset can be
+ * An asset identifier in Google Cloud which contains its name, type and ancestors. An asset can be
  * any resource in the Google Cloud [resource hierarchy](https://cloud.google.com/resource-
  * manager/docs/cloud-platform-resource-hierarchy), a resource outside the Google Cloud resource
  * hierarchy (such as Google Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM

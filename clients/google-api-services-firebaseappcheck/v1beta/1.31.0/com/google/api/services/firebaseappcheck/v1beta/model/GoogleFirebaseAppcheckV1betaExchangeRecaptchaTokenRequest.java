@@ -31,7 +31,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
+   * Required. The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
    * API](https://developers.google.com/recaptcha/docs/v3).
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest ext
   private java.lang.String recaptchaToken;
 
   /**
-   * The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
+   * Required. The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
    * API](https://developers.google.com/recaptcha/docs/v3).
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest ext
   }
 
   /**
-   * The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
+   * Required. The reCAPTCHA token as returned by the [reCAPTCHA v3 JavaScript
    * API](https://developers.google.com/recaptcha/docs/v3).
    * @param recaptchaToken recaptchaToken or {@code null} for none
    */

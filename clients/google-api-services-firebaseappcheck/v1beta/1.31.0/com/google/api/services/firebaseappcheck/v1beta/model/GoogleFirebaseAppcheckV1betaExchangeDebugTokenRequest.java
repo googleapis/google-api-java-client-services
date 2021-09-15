@@ -31,16 +31,16 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A debug token secret. This string must match a debug token secret previously created using
-   * CreateDebugToken.
+   * Required. A debug token secret. This string must match a debug token secret previously created
+   * using CreateDebugToken.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String debugToken;
 
   /**
-   * A debug token secret. This string must match a debug token secret previously created using
-   * CreateDebugToken.
+   * Required. A debug token secret. This string must match a debug token secret previously created
+   * using CreateDebugToken.
    * @return value or {@code null} for none
    */
   public java.lang.String getDebugToken() {
@@ -48,8 +48,8 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest extends
   }
 
   /**
-   * A debug token secret. This string must match a debug token secret previously created using
-   * CreateDebugToken.
+   * Required. A debug token secret. This string must match a debug token secret previously created
+   * using CreateDebugToken.
    * @param debugToken debugToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest setDebugToken(java.lang.String debugToken) {

@@ -31,14 +31,14 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A custom token signed using your project's Admin SDK service account credentials.
+   * Required. A custom token signed using your project's Admin SDK service account credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customToken;
 
   /**
-   * A custom token signed using your project's Admin SDK service account credentials.
+   * Required. A custom token signed using your project's Admin SDK service account credentials.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomToken() {
@@ -46,7 +46,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
   }
 
   /**
-   * A custom token signed using your project's Admin SDK service account credentials.
+   * Required. A custom token signed using your project's Admin SDK service account credentials.
    * @param customToken customToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest setCustomToken(java.lang.String customToken) {

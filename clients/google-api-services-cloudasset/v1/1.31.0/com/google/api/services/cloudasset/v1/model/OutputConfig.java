@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * Destination on BigQuery. The output table stores the fields in asset Protobuf as columns in
    * BigQuery.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
   private GcsDestination gcsDestination;
 
   /**
-   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * Destination on BigQuery. The output table stores the fields in asset Protobuf as columns in
    * BigQuery.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Destination on BigQuery. The output table stores the fields in asset proto as columns in
+   * Destination on BigQuery. The output table stores the fields in asset Protobuf as columns in
    * BigQuery.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */

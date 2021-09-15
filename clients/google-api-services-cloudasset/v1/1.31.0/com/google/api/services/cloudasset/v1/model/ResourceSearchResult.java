@@ -73,7 +73,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * Protobuf contains it. To search against `create_time`: * use a field query. - value in seconds
    * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
    * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
    * "2021-01-01T00:00:00"`
@@ -84,7 +84,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
-   * bytes. This field is available only when the resource's proto contains it. To search against
+   * bytes. This field is available only when the resource's Protobuf contains it. To search against
    * the `description`: * use a field query. Example: `description:"important instance"` * use a
    * free text query. Example: `"important instance"`
    * The value may be {@code null}.
@@ -93,7 +93,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * The display name of this resource. This field is available only when the resource's proto
+   * The display name of this resource. This field is available only when the resource's Protobuf
    * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * The value may be {@code null}.
@@ -115,7 +115,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * only when the resource's Protobuf contains it. To search against the `kms_key`: * use a field
    * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * The value may be {@code null}.
    */
@@ -126,10 +126,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `labels`: * use a field query: - query on any label's
-   * key or value. Example: `labels:prod` - query by a given label. Example: `labels.env:prod` -
-   * query by a given label's existence. Example: `labels.env:*` * use a free text query. Example:
-   * `prod`
+   * Protobuf contains it. To search against the `labels`: * use a field query: - query on any
+   * label's key or value. Example: `labels:prod` - query by a given label. Example:
+   * `labels.env:prod` - query by a given label's existence. Example: `labels.env:*` * use a free
+   * text query. Example: `prod`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
-   * available only when the resource's proto contains it. To search against the `location`: * use a
-   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
+   * available only when the resource's Protobuf contains it. To search against the `location`: *
+   * use a field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `network_tags`: * use a field query. Example:
+   * Protobuf contains it. To search against the `network_tags`: * use a field query. Example:
    * `networkTags:internal` * use a free text query. Example: `internal`
    * The value may be {@code null}.
    */
@@ -227,7 +227,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The state of this resource. Different resources types have different state definitions that are
    * mapped from various fields of different resource types. This field is available only when the
-   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * resource's Protobuf contains it. Example: If the resource is an instance provided by Compute
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
@@ -244,8 +244,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
-   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * when the resource's Protobuf contains it. To search against `update_time`: * use a field query.
+   * - value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
    * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
    * `updateTime < "2021-01-01T00:00:00"`
    * The value may be {@code null}.
@@ -345,7 +345,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * Protobuf contains it. To search against `create_time`: * use a field query. - value in seconds
    * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
    * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
    * "2021-01-01T00:00:00"`
@@ -358,7 +358,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The create timestamp of this resource, at which the resource was created. The granularity is in
    * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
-   * proto contains it. To search against `create_time`: * use a field query. - value in seconds
+   * Protobuf contains it. To search against `create_time`: * use a field query. - value in seconds
    * since unix epoch. Example: `createTime > 1609459200` - value in date string. Example:
    * `createTime > 2021-01-01` - value in date-time string (must be quoted). Example: `createTime >
    * "2021-01-01T00:00:00"`
@@ -371,7 +371,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
-   * bytes. This field is available only when the resource's proto contains it. To search against
+   * bytes. This field is available only when the resource's Protobuf contains it. To search against
    * the `description`: * use a field query. Example: `description:"important instance"` * use a
    * free text query. Example: `"important instance"`
    * @return value or {@code null} for none
@@ -382,7 +382,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
-   * bytes. This field is available only when the resource's proto contains it. To search against
+   * bytes. This field is available only when the resource's Protobuf contains it. To search against
    * the `description`: * use a field query. Example: `description:"important instance"` * use a
    * free text query. Example: `"important instance"`
    * @param description description or {@code null} for none
@@ -393,7 +393,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display name of this resource. This field is available only when the resource's proto
+   * The display name of this resource. This field is available only when the resource's Protobuf
    * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * @return value or {@code null} for none
@@ -403,7 +403,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * The display name of this resource. This field is available only when the resource's proto
+   * The display name of this resource. This field is available only when the resource's Protobuf
    * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * @param displayName displayName or {@code null} for none
@@ -440,7 +440,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * only when the resource's Protobuf contains it. To search against the `kms_key`: * use a field
    * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @return value or {@code null} for none
    */
@@ -452,7 +452,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
    * s.keyRings.cryptoKeys) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/reference/r
    * est/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) name. This field is available
-   * only when the resource's proto contains it. To search against the `kms_key`: * use a field
+   * only when the resource's Protobuf contains it. To search against the `kms_key`: * use a field
    * query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @param kmsKey kmsKey or {@code null} for none
    */
@@ -465,10 +465,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `labels`: * use a field query: - query on any label's
-   * key or value. Example: `labels:prod` - query by a given label. Example: `labels.env:prod` -
-   * query by a given label's existence. Example: `labels.env:*` * use a free text query. Example:
-   * `prod`
+   * Protobuf contains it. To search against the `labels`: * use a field query: - query on any
+   * label's key or value. Example: `labels:prod` - query by a given label. Example:
+   * `labels.env:prod` - query by a given label's existence. Example: `labels.env:*` * use a free
+   * text query. Example: `prod`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -479,10 +479,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `labels`: * use a field query: - query on any label's
-   * key or value. Example: `labels:prod` - query by a given label. Example: `labels.env:prod` -
-   * query by a given label's existence. Example: `labels.env:*` * use a free text query. Example:
-   * `prod`
+   * Protobuf contains it. To search against the `labels`: * use a field query: - query on any
+   * label's key or value. Example: `labels:prod` - query by a given label. Example:
+   * `labels.env:prod` - query by a given label's existence. Example: `labels.env:*` * use a free
+   * text query. Example: `prod`
    * @param labels labels or {@code null} for none
    */
   public ResourceSearchResult setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -492,8 +492,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
-   * available only when the resource's proto contains it. To search against the `location`: * use a
-   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
+   * available only when the resource's Protobuf contains it. To search against the `location`: *
+   * use a field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -502,8 +502,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
-   * available only when the resource's proto contains it. To search against the `location`: * use a
-   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
+   * available only when the resource's Protobuf contains it. To search against the `location`: *
+   * use a field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * @param location location or {@code null} for none
    */
   public ResourceSearchResult setLocation(java.lang.String location) {
@@ -541,7 +541,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `network_tags`: * use a field query. Example:
+   * Protobuf contains it. To search against the `network_tags`: * use a field query. Example:
    * `networkTags:internal` * use a free text query. Example: `internal`
    * @return value or {@code null} for none
    */
@@ -554,7 +554,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
-   * proto contains it. To search against the `network_tags`: * use a field query. Example:
+   * Protobuf contains it. To search against the `network_tags`: * use a field query. Example:
    * `networkTags:internal` * use a free text query. Example: `internal`
    * @param networkTags networkTags or {@code null} for none
    */
@@ -683,7 +683,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The state of this resource. Different resources types have different state definitions that are
    * mapped from various fields of different resource types. This field is available only when the
-   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * resource's Protobuf contains it. Example: If the resource is an instance provided by Compute
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
@@ -701,7 +701,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The state of this resource. Different resources types have different state definitions that are
    * mapped from various fields of different resource types. This field is available only when the
-   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * resource's Protobuf contains it. Example: If the resource is an instance provided by Compute
    * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
    * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
@@ -720,8 +720,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
-   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * when the resource's Protobuf contains it. To search against `update_time`: * use a field query.
+   * - value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
    * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
    * `updateTime < "2021-01-01T00:00:00"`
    * @return value or {@code null} for none
@@ -733,8 +733,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The last update timestamp of this resource, at which the resource was last modified or deleted.
    * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
-   * when the resource's proto contains it. To search against `update_time`: * use a field query. -
-   * value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
+   * when the resource's Protobuf contains it. To search against `update_time`: * use a field query.
+   * - value in seconds since unix epoch. Example: `updateTime < 1609459200` - value in date string.
    * Example: `updateTime < 2021-01-01` - value in date-time string (must be quoted). Example:
    * `updateTime < "2021-01-01T00:00:00"`
    * @param updateTime updateTime or {@code null} for none

@@ -31,7 +31,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `device_token` as returned by Apple's client-side [DeviceCheck
+   * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
    * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * The value may be {@code null}.
@@ -40,7 +40,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
   private java.lang.String deviceToken;
 
   /**
-   * The `device_token` as returned by Apple's client-side [DeviceCheck
+   * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
    * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * @return value or {@code null} for none
@@ -50,7 +50,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
   }
 
   /**
-   * The `device_token` as returned by Apple's client-side [DeviceCheck
+   * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
    * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * @param deviceToken deviceToken or {@code null} for none

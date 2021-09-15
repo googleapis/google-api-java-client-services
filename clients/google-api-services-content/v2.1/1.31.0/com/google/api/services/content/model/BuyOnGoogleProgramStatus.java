@@ -31,11 +31,40 @@ package com.google.api.services.content.model;
 public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The business models in which merchant participates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> businessModel;
+
+  /**
    * The customer service pending email. After verification this field becomes empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerServicePendingEmail;
+
+  /**
+   * The pending phone number specified for BuyOnGoogle program. It might be different than account
+   * level phone number. In order to update this field the
+   * customer_service_pending_phone_region_code must also be set. After verification this field
+   * becomes empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerServicePendingPhoneNumber;
+
+  /**
+   * Two letter country code for the pending phone number, for example `CA` for Canadian numbers.
+   * See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes. In order to update this field the
+   * customer_service_pending_phone_number must also be set. After verification this field becomes
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerServicePendingPhoneRegionCode;
 
   /**
    * Output only. The customer service verified email.
@@ -45,11 +74,53 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   private java.lang.String customerServiceVerifiedEmail;
 
   /**
+   * Output only. The verified phone number specified for BuyOnGoogle program. It might be different
+   * than account level phone number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerServiceVerifiedPhoneNumber;
+
+  /**
+   * Output only. Two letter country code for the verified phone number, for example `CA` for
+   * Canadian numbers. See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerServiceVerifiedPhoneRegionCode;
+
+  /**
+   * The channels through which the merchant is selling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String onlineSalesChannel;
+
+  /**
    * Output only. The current participation stage for the program.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participationStage;
+
+  /**
+   * The business models in which merchant participates.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBusinessModel() {
+    return businessModel;
+  }
+
+  /**
+   * The business models in which merchant participates.
+   * @param businessModel businessModel or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setBusinessModel(java.util.List<java.lang.String> businessModel) {
+    this.businessModel = businessModel;
+    return this;
+  }
 
   /**
    * The customer service pending email. After verification this field becomes empty.
@@ -69,6 +140,56 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
   }
 
   /**
+   * The pending phone number specified for BuyOnGoogle program. It might be different than account
+   * level phone number. In order to update this field the
+   * customer_service_pending_phone_region_code must also be set. After verification this field
+   * becomes empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerServicePendingPhoneNumber() {
+    return customerServicePendingPhoneNumber;
+  }
+
+  /**
+   * The pending phone number specified for BuyOnGoogle program. It might be different than account
+   * level phone number. In order to update this field the
+   * customer_service_pending_phone_region_code must also be set. After verification this field
+   * becomes empty.
+   * @param customerServicePendingPhoneNumber customerServicePendingPhoneNumber or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setCustomerServicePendingPhoneNumber(java.lang.String customerServicePendingPhoneNumber) {
+    this.customerServicePendingPhoneNumber = customerServicePendingPhoneNumber;
+    return this;
+  }
+
+  /**
+   * Two letter country code for the pending phone number, for example `CA` for Canadian numbers.
+   * See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes. In order to update this field the
+   * customer_service_pending_phone_number must also be set. After verification this field becomes
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerServicePendingPhoneRegionCode() {
+    return customerServicePendingPhoneRegionCode;
+  }
+
+  /**
+   * Two letter country code for the pending phone number, for example `CA` for Canadian numbers.
+   * See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes. In order to update this field the
+   * customer_service_pending_phone_number must also be set. After verification this field becomes
+   * empty.
+   * @param customerServicePendingPhoneRegionCode customerServicePendingPhoneRegionCode or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setCustomerServicePendingPhoneRegionCode(java.lang.String customerServicePendingPhoneRegionCode) {
+    this.customerServicePendingPhoneRegionCode = customerServicePendingPhoneRegionCode;
+    return this;
+  }
+
+  /**
    * Output only. The customer service verified email.
    * @return value or {@code null} for none
    */
@@ -82,6 +203,65 @@ public final class BuyOnGoogleProgramStatus extends com.google.api.client.json.G
    */
   public BuyOnGoogleProgramStatus setCustomerServiceVerifiedEmail(java.lang.String customerServiceVerifiedEmail) {
     this.customerServiceVerifiedEmail = customerServiceVerifiedEmail;
+    return this;
+  }
+
+  /**
+   * Output only. The verified phone number specified for BuyOnGoogle program. It might be different
+   * than account level phone number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerServiceVerifiedPhoneNumber() {
+    return customerServiceVerifiedPhoneNumber;
+  }
+
+  /**
+   * Output only. The verified phone number specified for BuyOnGoogle program. It might be different
+   * than account level phone number.
+   * @param customerServiceVerifiedPhoneNumber customerServiceVerifiedPhoneNumber or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setCustomerServiceVerifiedPhoneNumber(java.lang.String customerServiceVerifiedPhoneNumber) {
+    this.customerServiceVerifiedPhoneNumber = customerServiceVerifiedPhoneNumber;
+    return this;
+  }
+
+  /**
+   * Output only. Two letter country code for the verified phone number, for example `CA` for
+   * Canadian numbers. See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerServiceVerifiedPhoneRegionCode() {
+    return customerServiceVerifiedPhoneRegionCode;
+  }
+
+  /**
+   * Output only. Two letter country code for the verified phone number, for example `CA` for
+   * Canadian numbers. See the [ISO 3166-1
+   * alpha-2](https://wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+   * officially assigned codes.
+   * @param customerServiceVerifiedPhoneRegionCode customerServiceVerifiedPhoneRegionCode or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setCustomerServiceVerifiedPhoneRegionCode(java.lang.String customerServiceVerifiedPhoneRegionCode) {
+    this.customerServiceVerifiedPhoneRegionCode = customerServiceVerifiedPhoneRegionCode;
+    return this;
+  }
+
+  /**
+   * The channels through which the merchant is selling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOnlineSalesChannel() {
+    return onlineSalesChannel;
+  }
+
+  /**
+   * The channels through which the merchant is selling.
+   * @param onlineSalesChannel onlineSalesChannel or {@code null} for none
+   */
+  public BuyOnGoogleProgramStatus setOnlineSalesChannel(java.lang.String onlineSalesChannel) {
+    this.onlineSalesChannel = onlineSalesChannel;
     return this;
   }
 

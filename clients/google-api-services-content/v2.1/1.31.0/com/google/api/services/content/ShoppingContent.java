@@ -2020,7 +2020,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Validates verification code to verify phone number for the account.
+     * Validates verification code to verify phone number for the account. If successful this will
+     * overwrite the value of `accounts.businessinformation.phoneNumber`. Only verified phone number
+     * will replace an existing verified phone number.
      *
      * Create a request for the method "accounts.verifyphonenumber".
      *
@@ -2045,7 +2047,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accounts/{accountId}/verifyphonenumber";
 
       /**
-       * Validates verification code to verify phone number for the account.
+       * Validates verification code to verify phone number for the account. If successful this will
+       * overwrite the value of `accounts.businessinformation.phoneNumber`. Only verified phone number
+       * will replace an existing verified phone number.
        *
        * Create a request for the method "accounts.verifyphonenumber".
        *
@@ -4568,8 +4572,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
      *
      * @param merchantId Required. The ID of the account.
-     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+     * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
      * @param content the {@link com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest}
      * @return the request
      */
@@ -4597,8 +4602,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId Required. The ID of the account.
-       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+       * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
        * @param content the {@link com.google.api.services.content.model.ActivateBuyOnGoogleProgramRequest}
        * @since 1.13
        */
@@ -4680,21 +4686,21 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     Currently only US is available.
+      /** Required. The program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public Activate setRegionCode(java.lang.String regionCode) {
@@ -4716,8 +4722,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId Required. The ID of the account.
-     * @param regionCode The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+     * @param regionCode Required. The Program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
      * @return the request
      */
     public Get get(java.lang.Long merchantId, java.lang.String regionCode) throws java.io.IOException {
@@ -4741,8 +4748,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId Required. The ID of the account.
-       * @param regionCode The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+       * @param regionCode Required. The Program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
        * @since 1.13
        */
       protected Get(java.lang.Long merchantId, java.lang.String regionCode) {
@@ -4833,21 +4841,21 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The Program region code [ISO 3166-1
+       * Required. The Program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     Currently only US is available.
+      /** Required. The Program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * The Program region code [ISO 3166-1
+       * Required. The Program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public Get setRegionCode(java.lang.String regionCode) {
@@ -4873,8 +4881,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Onboard#execute()} method to invoke the remote operation.
      *
      * @param merchantId Required. The ID of the account.
-     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+     * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
      * @param content the {@link com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest}
      * @return the request
      */
@@ -4904,8 +4913,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId Required. The ID of the account.
-       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+       * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
        * @param content the {@link com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest}
        * @since 1.13
        */
@@ -4987,21 +4997,21 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     Currently only US is available.
+      /** Required. The program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public Onboard setRegionCode(java.lang.String regionCode) {
@@ -5015,6 +5025,179 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Updates the status of the BoG program for your Merchant Center account.
+     *
+     * Create a request for the method "buyongoogleprograms.patch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
+     * @param content the {@link com.google.api.services.content.model.BuyOnGoogleProgramStatus}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.BuyOnGoogleProgramStatus content) throws java.io.IOException {
+      Patch result = new Patch(merchantId, regionCode, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.BuyOnGoogleProgramStatus> {
+
+      private static final String REST_PATH = "{merchantId}/buyongoogleprograms/{regionCode}";
+
+      /**
+       * Updates the status of the BoG program for your Merchant Center account.
+       *
+       * Create a request for the method "buyongoogleprograms.patch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
+       * @param content the {@link com.google.api.services.content.model.BuyOnGoogleProgramStatus}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.BuyOnGoogleProgramStatus content) {
+        super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.BuyOnGoogleProgramStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Patch setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** Required. The program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * Required. The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Patch setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      /**
+       * The list of fields to update. If the update mask is not provided, then all the fields set
+       * in buyOnGoogleProgramStatus will be updated. Clearing fields is only possible if update
+       * mask is provided.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The list of fields to update. If the update mask is not provided, then all the fields set in
+     buyOnGoogleProgramStatus will be updated. Clearing fields is only possible if update mask is
+     provided.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * The list of fields to update. If the update mask is not provided, then all the fields set
+       * in buyOnGoogleProgramStatus will be updated. Clearing fields is only possible if update
+       * mask is provided.
+       */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
      * Pauses the BoG program in your Merchant Center account. Important: This method is only
      * whitelisted for selected merchants.
      *
@@ -5024,8 +5207,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
      *
      * @param merchantId Required. The ID of the account.
-     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+     * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
      * @param content the {@link com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest}
      * @return the request
      */
@@ -5051,8 +5235,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId Required. The ID of the account.
-       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+       * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
        * @param content the {@link com.google.api.services.content.model.PauseBuyOnGoogleProgramRequest}
        * @since 1.13
        */
@@ -5134,21 +5319,21 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     Currently only US is available.
+      /** Required. The program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public Pause setRegionCode(java.lang.String regionCode) {
@@ -5172,8 +5357,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Requestreview#execute()} method to invoke the remote operation.
      *
      * @param merchantId Required. The ID of the account.
-     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+     * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
      * @param content the {@link com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest}
      * @return the request
      */
@@ -5201,8 +5387,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * </p>
        *
        * @param merchantId Required. The ID of the account.
-       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     *        Currently only US is available.
+       * @param regionCode Required. The program region code [ISO 3166-1
+     *        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is
+     *        available.
        * @param content the {@link com.google.api.services.content.model.RequestReviewBuyOnGoogleProgramRequest}
        * @since 1.13
        */
@@ -5284,21 +5471,21 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-     Currently only US is available.
+      /** Required. The program region code [ISO 3166-1
+     alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * The program region code [ISO 3166-1
+       * Required. The program region code [ISO 3166-1
        * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
        */
       public Requestreview setRegionCode(java.lang.String regionCode) {

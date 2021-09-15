@@ -31,14 +31,16 @@ package com.google.api.services.content.model;
 public final class VerifyPhoneNumberResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Verified phone number if verification is successful.
+   * Verified phone number if verification is successful. This phone number can only be replaced by
+   * another verified phone number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String verifiedPhoneNumber;
 
   /**
-   * Verified phone number if verification is successful.
+   * Verified phone number if verification is successful. This phone number can only be replaced by
+   * another verified phone number.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerifiedPhoneNumber() {
@@ -46,7 +48,8 @@ public final class VerifyPhoneNumberResponse extends com.google.api.client.json.
   }
 
   /**
-   * Verified phone number if verification is successful.
+   * Verified phone number if verification is successful. This phone number can only be replaced by
+   * another verified phone number.
    * @param verifiedPhoneNumber verifiedPhoneNumber or {@code null} for none
    */
   public VerifyPhoneNumberResponse setVerifiedPhoneNumber(java.lang.String verifiedPhoneNumber) {

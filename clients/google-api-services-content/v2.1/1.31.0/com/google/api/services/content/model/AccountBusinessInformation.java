@@ -45,6 +45,15 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   private AccountCustomerService customerService;
 
   /**
+   * The 10-digit [Korean business registration
+   * number](https://support.google.com/merchants/answer/9037766) separated with dashes in the
+   * format: XXX-XX-XXXXX. This field will only be updated if explicitly set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String koreanBusinessRegistrationNumber;
+
+  /**
    * The phone number of the business.
    * The value may be {@code null}.
    */
@@ -82,6 +91,27 @@ public final class AccountBusinessInformation extends com.google.api.client.json
    */
   public AccountBusinessInformation setCustomerService(AccountCustomerService customerService) {
     this.customerService = customerService;
+    return this;
+  }
+
+  /**
+   * The 10-digit [Korean business registration
+   * number](https://support.google.com/merchants/answer/9037766) separated with dashes in the
+   * format: XXX-XX-XXXXX. This field will only be updated if explicitly set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKoreanBusinessRegistrationNumber() {
+    return koreanBusinessRegistrationNumber;
+  }
+
+  /**
+   * The 10-digit [Korean business registration
+   * number](https://support.google.com/merchants/answer/9037766) separated with dashes in the
+   * format: XXX-XX-XXXXX. This field will only be updated if explicitly set.
+   * @param koreanBusinessRegistrationNumber koreanBusinessRegistrationNumber or {@code null} for none
+   */
+  public AccountBusinessInformation setKoreanBusinessRegistrationNumber(java.lang.String koreanBusinessRegistrationNumber) {
+    this.koreanBusinessRegistrationNumber = koreanBusinessRegistrationNumber;
     return this;
   }
 

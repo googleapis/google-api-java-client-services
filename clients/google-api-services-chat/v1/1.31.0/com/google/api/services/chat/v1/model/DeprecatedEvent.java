@@ -84,7 +84,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private Message message;
 
   /**
-   * The room or DM in which the event occurred.
+   * The space in which the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +251,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The room or DM in which the event occurred.
+   * The space in which the event occurred.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -259,7 +259,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The room or DM in which the event occurred.
+   * The space in which the event occurred.
    * @param space space or {@code null} for none
    */
   public DeprecatedEvent setSpace(Space space) {

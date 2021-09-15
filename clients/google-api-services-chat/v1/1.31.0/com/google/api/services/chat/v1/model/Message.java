@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A message in Hangouts Chat.
+ * A message in Google Chat.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -85,7 +85,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was created in Hangouts Chat server.
+   * Output only. The time at which the message was created in Google Chat server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String fallbackText;
 
   /**
-   * Output only. The time at which the message was last updated in Hangouts Chat server. If the
+   * Output only. The time at which the message was last updated in Google Chat server. If the
    * message was never updated, this field will be same as create_time.
    * The value may be {@code null}.
    */
@@ -246,7 +246,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was created in Hangouts Chat server.
+   * Output only. The time at which the message was created in Google Chat server.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -254,7 +254,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was created in Hangouts Chat server.
+   * Output only. The time at which the message was created in Google Chat server.
    * @param createTime createTime or {@code null} for none
    */
   public Message setCreateTime(String createTime) {
@@ -282,7 +282,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was last updated in Hangouts Chat server. If the
+   * Output only. The time at which the message was last updated in Google Chat server. If the
    * message was never updated, this field will be same as create_time.
    * @return value or {@code null} for none
    */
@@ -291,7 +291,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was last updated in Hangouts Chat server. If the
+   * Output only. The time at which the message was last updated in Google Chat server. If the
    * message was never updated, this field will be same as create_time.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */

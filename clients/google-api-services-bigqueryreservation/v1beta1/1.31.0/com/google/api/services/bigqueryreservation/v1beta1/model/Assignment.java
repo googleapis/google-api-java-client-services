@@ -17,7 +17,7 @@
 package com.google.api.services.bigqueryreservation.v1beta1.model;
 
 /**
- * A Assignment allows a project to submit jobs of a certain type using slots from the specified
+ * An assignment allows a project to submit jobs of a certain type using slots from the specified
  * reservation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

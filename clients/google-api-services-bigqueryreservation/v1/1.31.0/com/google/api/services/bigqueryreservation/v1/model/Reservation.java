@@ -40,7 +40,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * If false, any query or pipeline job using this reservation will use idle slots from other
    * reservations within the same admin project. If true, a query or pipeline job using this
-   * reservation will execute with the slot capacity specified above at most.
+   * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * If false, any query or pipeline job using this reservation will use idle slots from other
    * reservations within the same admin project. If true, a query or pipeline job using this
-   * reservation will execute with the slot capacity specified above at most.
+   * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreIdleSlots() {
@@ -102,7 +102,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * If false, any query or pipeline job using this reservation will use idle slots from other
    * reservations within the same admin project. If true, a query or pipeline job using this
-   * reservation will execute with the slot capacity specified above at most.
+   * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * @param ignoreIdleSlots ignoreIdleSlots or {@code null} for none
    */
   public Reservation setIgnoreIdleSlots(java.lang.Boolean ignoreIdleSlots) {

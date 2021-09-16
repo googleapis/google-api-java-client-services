@@ -52,6 +52,14 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentTerminator;
 
   /**
+   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
+   * given. This field is immutable after store creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * Determines whether messages with no header are allowed.
    * @return value or {@code null} for none
    */
@@ -131,6 +139,25 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
    */
   public ParserConfig encodeSegmentTerminator(byte[] segmentTerminator) {
     this.segmentTerminator = com.google.api.client.util.Base64.encodeBase64URLSafeString(segmentTerminator);
+    return this;
+  }
+
+  /**
+   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
+   * given. This field is immutable after store creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Immutable. Determines the version of the unschematized parser to be used when `schema` is not
+   * given. This field is immutable after store creation.
+   * @param version version or {@code null} for none
+   */
+  public ParserConfig setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

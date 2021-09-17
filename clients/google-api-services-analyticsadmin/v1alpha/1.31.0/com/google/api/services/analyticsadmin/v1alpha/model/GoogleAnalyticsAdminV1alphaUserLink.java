@@ -32,9 +32,9 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
 
   /**
    * Roles directly assigned to this user for this account or property. Valid values:
-   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/manage-
-   * users Excludes roles that are inherited from a higher-level entity, group, or organization
-   * admin role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
+   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/admin
+   * Excludes roles that are inherited from a higher-level entity, group, or organization admin
+   * role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +56,9 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
 
   /**
    * Roles directly assigned to this user for this account or property. Valid values:
-   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/manage-
-   * users Excludes roles that are inherited from a higher-level entity, group, or organization
-   * admin role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
+   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/admin
+   * Excludes roles that are inherited from a higher-level entity, group, or organization admin
+   * role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDirectRoles() {
@@ -67,9 +67,9 @@ public final class GoogleAnalyticsAdminV1alphaUserLink extends com.google.api.cl
 
   /**
    * Roles directly assigned to this user for this account or property. Valid values:
-   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/manage-
-   * users Excludes roles that are inherited from a higher-level entity, group, or organization
-   * admin role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
+   * predefinedRoles/read predefinedRoles/collaborate predefinedRoles/edit predefinedRoles/admin
+   * Excludes roles that are inherited from a higher-level entity, group, or organization admin
+   * role. A UserLink that is updated to have an empty list of direct_roles will be deleted.
    * @param directRoles directRoles or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaUserLink setDirectRoles(java.util.List<java.lang.String> directRoles) {

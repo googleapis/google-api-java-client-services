@@ -53,6 +53,13 @@ public final class InstanceStatus extends com.google.api.client.json.GenericJson
   private java.lang.Integer index;
 
   /**
+   * Optional. Result of the last attempt of this instance. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceAttemptResult lastAttemptResult;
+
+  /**
    * Optional. Last exit code seen for this instance. +optional
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class InstanceStatus extends com.google.api.client.json.GenericJson
    */
   public InstanceStatus setIndex(java.lang.Integer index) {
     this.index = index;
+    return this;
+  }
+
+  /**
+   * Optional. Result of the last attempt of this instance. +optional
+   * @return value or {@code null} for none
+   */
+  public InstanceAttemptResult getLastAttemptResult() {
+    return lastAttemptResult;
+  }
+
+  /**
+   * Optional. Result of the last attempt of this instance. +optional
+   * @param lastAttemptResult lastAttemptResult or {@code null} for none
+   */
+  public InstanceStatus setLastAttemptResult(InstanceAttemptResult lastAttemptResult) {
+    this.lastAttemptResult = lastAttemptResult;
     return this;
   }
 

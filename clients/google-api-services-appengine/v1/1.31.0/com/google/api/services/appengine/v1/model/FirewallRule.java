@@ -38,7 +38,7 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
-   * An optional string description of this rule. This field has a maximum length of 100 characters.
+   * An optional string description of this rule. This field has a maximum length of 400 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional string description of this rule. This field has a maximum length of 100 characters.
+   * An optional string description of this rule. This field has a maximum length of 400 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -93,7 +93,7 @@ public final class FirewallRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional string description of this rule. This field has a maximum length of 100 characters.
+   * An optional string description of this rule. This field has a maximum length of 400 characters.
    * @param description description or {@code null} for none
    */
   public FirewallRule setDescription(java.lang.String description) {

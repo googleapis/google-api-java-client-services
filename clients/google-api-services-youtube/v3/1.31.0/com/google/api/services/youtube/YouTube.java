@@ -13332,6 +13332,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Channel ID to which changes should be applied, for delegation. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalChannelId;
+
+      /** Channel ID to which changes should be applied, for delegation.
+       */
+      public java.lang.String getExternalChannelId() {
+        return externalChannelId;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      public Delete setExternalChannelId(java.lang.String externalChannelId) {
+        this.externalChannelId = externalChannelId;
+        return this;
+      }
+
       /** Do not use. Required for compatibility. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
@@ -13474,6 +13490,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Channel ID to which changes should be applied, for delegation. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalChannelId;
+
+      /** Channel ID to which changes should be applied, for delegation.
+       */
+      public java.lang.String getExternalChannelId() {
+        return externalChannelId;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      public Insert setExternalChannelId(java.lang.String externalChannelId) {
+        this.externalChannelId = externalChannelId;
+        return this;
+      }
+
       @Override
       public Insert set(String parameterName, Object value) {
         return (Insert) super.set(parameterName, value);
@@ -13605,6 +13637,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPart(java.util.List<java.lang.String> part) {
         this.part = part;
+        return this;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalChannelId;
+
+      /** Channel ID to which changes should be applied, for delegation.
+       */
+      public java.lang.String getExternalChannelId() {
+        return externalChannelId;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      public List setExternalChannelId(java.lang.String externalChannelId) {
+        this.externalChannelId = externalChannelId;
         return this;
       }
 
@@ -13763,6 +13811,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       public Update setPart(java.util.List<java.lang.String> part) {
         this.part = part;
+        return this;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      @com.google.api.client.util.Key
+      private java.lang.String externalChannelId;
+
+      /** Channel ID to which changes should be applied, for delegation.
+       */
+      public java.lang.String getExternalChannelId() {
+        return externalChannelId;
+      }
+
+      /** Channel ID to which changes should be applied, for delegation. */
+      public Update setExternalChannelId(java.lang.String externalChannelId) {
+        this.externalChannelId = externalChannelId;
         return this;
       }
 

@@ -1023,6 +1023,1023 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
         }
       }
+      /**
+       * An accessor for creating requests from the OsPolicyAssignments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.OsPolicyAssignments.List request = osconfig.osPolicyAssignments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public OsPolicyAssignments osPolicyAssignments() {
+        return new OsPolicyAssignments();
+      }
+
+      /**
+       * The "osPolicyAssignments" collection of methods.
+       */
+      public class OsPolicyAssignments {
+
+        /**
+         * Create an OS policy assignment. This method also creates the first revision of the OS policy
+         * assignment. This method returns a long running operation (LRO) that contains the rollout details.
+         * The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.l
+         * ocations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/re
+         * st/v1/projects.locations.osPolicyAssignments.operations/cancel).
+         *
+         * Create a request for the method "osPolicyAssignments.create".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.osconfig.v1.model.OSPolicyAssignment content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/osPolicyAssignments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create an OS policy assignment. This method also creates the first revision of the OS policy
+           * assignment. This method returns a long running operation (LRO) that contains the rollout
+           * details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method:
+           * projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs
+           * /osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+           *
+           * Create a request for the method "osPolicyAssignments.create".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name in the form: projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.osconfig.v1.model.OSPolicyAssignment content) {
+            super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name in the form: projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name in the form: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name in the form: projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The logical name of the OS policy assignment in the project with the
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-63 characters. * Must end with a number
+           * or a letter. * Must be unique within the project.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String osPolicyAssignmentId;
+
+          /** Required. The logical name of the OS policy assignment in the project with the following
+         restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+         letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique
+         within the project.
+           */
+          public java.lang.String getOsPolicyAssignmentId() {
+            return osPolicyAssignmentId;
+          }
+
+          /**
+           * Required. The logical name of the OS policy assignment in the project with the
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-63 characters. * Must end with a number
+           * or a letter. * Must be unique within the project.
+           */
+          public Create setOsPolicyAssignmentId(java.lang.String osPolicyAssignmentId) {
+            this.osPolicyAssignmentId = osPolicyAssignmentId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete the OS policy assignment. This method creates a new revision of the OS policy assignment.
+         * This method returns a long running operation (LRO) that contains the rollout details. The rollout
+         * can be cancelled by cancelling the LRO. If the LRO completes and is not cancelled, all revisions
+         * associated with the OS policy assignment are deleted. For more information, see [Method: projects
+         * .locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/
+         * rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+         *
+         * Create a request for the method "osPolicyAssignments.delete".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the OS policy assignment to be deleted
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+
+          /**
+           * Delete the OS policy assignment. This method creates a new revision of the OS policy
+           * assignment. This method returns a long running operation (LRO) that contains the rollout
+           * details. The rollout can be cancelled by cancelling the LRO. If the LRO completes and is not
+           * cancelled, all revisions associated with the OS policy assignment are deleted. For more
+           * information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://clo
+           * ud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/c
+           * ancel).
+           *
+           * Create a request for the method "osPolicyAssignments.delete".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the OS policy assignment to be deleted
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(OSConfig.this, "DELETE", REST_PATH, null, com.google.api.services.osconfig.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the OS policy assignment to be deleted */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the OS policy assignment to be deleted
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the OS policy assignment to be deleted */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve an existing OS policy assignment. This method always returns the latest revision. In
+         * order to retrieve a previous revision of the assignment, also provide the revision ID in the
+         * `name` parameter.
+         *
+         * Create a request for the method "osPolicyAssignments.get".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of OS policy assignment. Format:
+         *        `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revis
+         *        ionId}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends OSConfigRequest<com.google.api.services.osconfig.v1.model.OSPolicyAssignment> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+
+          /**
+           * Retrieve an existing OS policy assignment. This method always returns the latest revision. In
+           * order to retrieve a previous revision of the assignment, also provide the revision ID in the
+           * `name` parameter.
+           *
+           * Create a request for the method "osPolicyAssignments.get".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of OS policy assignment. Format:
+         *        `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revis
+         *        ionId}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.OSPolicyAssignment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of OS policy assignment. Format: `projects/{project}/locati
+           * ons/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of OS policy assignment. Format:
+         `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of OS policy assignment. Format: `projects/{project}/locati
+           * ons/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List the OS policy assignments under the parent resource. For each OS policy assignment, the
+         * latest revision is returned.
+         *
+         * Create a request for the method "osPolicyAssignments.list".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/osPolicyAssignments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List the OS policy assignments under the parent resource. For each OS policy assignment, the
+           * latest revision is returned.
+           *
+           * Create a request for the method "osPolicyAssignments.list".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource name. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of assignments to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of assignments to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of assignments to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A pagination token returned from a previous call to `ListOSPolicyAssignments` that
+           * indicates where this listing should continue from.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A pagination token returned from a previous call to `ListOSPolicyAssignments` that indicates where
+         this listing should continue from.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A pagination token returned from a previous call to `ListOSPolicyAssignments` that
+           * indicates where this listing should continue from.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List the OS policy assignment revisions for a given OS policy assignment.
+         *
+         * Create a request for the method "osPolicyAssignments.listRevisions".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the OS policy assignment to list revisions for.
+         * @return the request
+         */
+        public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
+          ListRevisions result = new ListRevisions(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ListRevisions extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentRevisionsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:listRevisions";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+
+          /**
+           * List the OS policy assignment revisions for a given OS policy assignment.
+           *
+           * Create a request for the method "osPolicyAssignments.listRevisions".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link ListRevisions#execute()} method to invoke the remote
+           * operation. <p> {@link ListRevisions#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The name of the OS policy assignment to list revisions for.
+           * @since 1.13
+           */
+          protected ListRevisions(java.lang.String name) {
+            super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentRevisionsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListRevisions set$Xgafv(java.lang.String $Xgafv) {
+            return (ListRevisions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListRevisions setAccessToken(java.lang.String accessToken) {
+            return (ListRevisions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListRevisions setAlt(java.lang.String alt) {
+            return (ListRevisions) super.setAlt(alt);
+          }
+
+          @Override
+          public ListRevisions setCallback(java.lang.String callback) {
+            return (ListRevisions) super.setCallback(callback);
+          }
+
+          @Override
+          public ListRevisions setFields(java.lang.String fields) {
+            return (ListRevisions) super.setFields(fields);
+          }
+
+          @Override
+          public ListRevisions setKey(java.lang.String key) {
+            return (ListRevisions) super.setKey(key);
+          }
+
+          @Override
+          public ListRevisions setOauthToken(java.lang.String oauthToken) {
+            return (ListRevisions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListRevisions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListRevisions setQuotaUser(java.lang.String quotaUser) {
+            return (ListRevisions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListRevisions setUploadType(java.lang.String uploadType) {
+            return (ListRevisions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListRevisions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the OS policy assignment to list revisions for. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the OS policy assignment to list revisions for.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the OS policy assignment to list revisions for. */
+          public ListRevisions setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The maximum number of revisions to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of revisions to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of revisions to return. */
+          public ListRevisions setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A pagination token returned from a previous call to `ListOSPolicyAssignmentRevisions`
+           * that indicates where this listing should continue from.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A pagination token returned from a previous call to `ListOSPolicyAssignmentRevisions` that
+         indicates where this listing should continue from.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A pagination token returned from a previous call to `ListOSPolicyAssignmentRevisions`
+           * that indicates where this listing should continue from.
+           */
+          public ListRevisions setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListRevisions set(String parameterName, Object value) {
+            return (ListRevisions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update an existing OS policy assignment. This method creates a new revision of the OS policy
+         * assignment. This method returns a long running operation (LRO) that contains the rollout details.
+         * The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.l
+         * ocations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/re
+         * st/v1/projects.locations.osPolicyAssignments.operations/cancel).
+         *
+         * Create a request for the method "osPolicyAssignments.patch".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name. Format:
+         *        `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_
+         *        id}` This field is ignored when you create an OS policy assignment.
+         * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.osconfig.v1.model.OSPolicyAssignment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+
+          /**
+           * Update an existing OS policy assignment. This method creates a new revision of the OS policy
+           * assignment. This method returns a long running operation (LRO) that contains the rollout
+           * details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method:
+           * projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs
+           * /osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+           *
+           * Create a request for the method "osPolicyAssignments.patch".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name. Format:
+         *        `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_
+         *        id}` This field is ignored when you create an OS policy assignment.
+           * @param content the {@link com.google.api.services.osconfig.v1.model.OSPolicyAssignment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.osconfig.v1.model.OSPolicyAssignment content) {
+            super(OSConfig.this, "PATCH", REST_PATH, content, com.google.api.services.osconfig.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignme
+           * nts/{os_policy_assignment_id}` This field is ignored when you create an OS policy
+           * assignment.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name. Format:
+         `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This
+         field is ignored when you create an OS policy assignment.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignme
+           * nts/{os_policy_assignment_id}` This field is ignored when you create an OS policy
+           * assignment.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask that controls which fields of the assignment should be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask that controls which fields of the assignment should be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask that controls which fields of the assignment should be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the PatchDeployments collection.

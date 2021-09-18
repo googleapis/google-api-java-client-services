@@ -62,6 +62,13 @@ public final class InventorySoftwarePackage extends com.google.api.client.json.G
   private InventoryWindowsQuickFixEngineeringPackage qfePackage;
 
   /**
+   * Details of Windows Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InventoryWindowsApplication windowsApplication;
+
+  /**
    * Details of a Windows Update package. See https://docs.microsoft.com/en-
    * us/windows/win32/api/_wua/ for information about Windows Update.
    * The value may be {@code null}.
@@ -167,6 +174,23 @@ public final class InventorySoftwarePackage extends com.google.api.client.json.G
    */
   public InventorySoftwarePackage setQfePackage(InventoryWindowsQuickFixEngineeringPackage qfePackage) {
     this.qfePackage = qfePackage;
+    return this;
+  }
+
+  /**
+   * Details of Windows Application.
+   * @return value or {@code null} for none
+   */
+  public InventoryWindowsApplication getWindowsApplication() {
+    return windowsApplication;
+  }
+
+  /**
+   * Details of Windows Application.
+   * @param windowsApplication windowsApplication or {@code null} for none
+   */
+  public InventorySoftwarePackage setWindowsApplication(InventoryWindowsApplication windowsApplication) {
+    this.windowsApplication = windowsApplication;
     return this;
   }
 

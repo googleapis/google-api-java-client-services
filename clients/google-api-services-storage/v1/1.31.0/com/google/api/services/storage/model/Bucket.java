@@ -194,6 +194,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private RetentionPolicy retentionPolicy;
 
   /**
+   * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo
+   * Replication on a bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rpo;
+
+  /**
    * Reserved for future use.
    * The value may be {@code null}.
    */
@@ -628,6 +636,25 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setRetentionPolicy(RetentionPolicy retentionPolicy) {
     this.retentionPolicy = retentionPolicy;
+    return this;
+  }
+
+  /**
+   * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo
+   * Replication on a bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRpo() {
+    return rpo;
+  }
+
+  /**
+   * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo
+   * Replication on a bucket.
+   * @param rpo rpo or {@code null} for none
+   */
+  public Bucket setRpo(java.lang.String rpo) {
+    this.rpo = rpo;
     return this;
   }
 

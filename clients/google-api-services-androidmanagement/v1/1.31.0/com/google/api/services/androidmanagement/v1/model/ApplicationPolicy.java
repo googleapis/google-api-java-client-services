@@ -79,6 +79,14 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disabled;
 
   /**
+   * Configuration to enable this app as an extension app, with the capability of interacting with
+   * Android Device Policy offline.This field can be set for at most one app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExtensionConfig extensionConfig;
+
+  /**
    * The type of installation to perform.
    * The value may be {@code null}.
    */
@@ -249,6 +257,25 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Configuration to enable this app as an extension app, with the capability of interacting with
+   * Android Device Policy offline.This field can be set for at most one app.
+   * @return value or {@code null} for none
+   */
+  public ExtensionConfig getExtensionConfig() {
+    return extensionConfig;
+  }
+
+  /**
+   * Configuration to enable this app as an extension app, with the capability of interacting with
+   * Android Device Policy offline.This field can be set for at most one app.
+   * @param extensionConfig extensionConfig or {@code null} for none
+   */
+  public ApplicationPolicy setExtensionConfig(ExtensionConfig extensionConfig) {
+    this.extensionConfig = extensionConfig;
     return this;
   }
 

@@ -2759,17 +2759,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Required. The list of fields update. */
+          /** Required. The list of fields to update. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The list of fields update.
+          /** Required. The list of fields to update.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required. The list of fields update. */
+          /** Required. The list of fields to update. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

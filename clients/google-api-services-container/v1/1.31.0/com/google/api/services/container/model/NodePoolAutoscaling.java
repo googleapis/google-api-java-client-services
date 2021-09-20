@@ -46,15 +46,15 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
-   * Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough
-   * quota to scale up the cluster.
+   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * to be enough quota to scale up the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxNodeCount;
 
   /**
-   * Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough
-   * quota to scale up the cluster.
+   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * to be enough quota to scale up the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxNodeCount() {
@@ -104,8 +104,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough
-   * quota to scale up the cluster.
+   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * to be enough quota to scale up the cluster.
    * @param maxNodeCount maxNodeCount or {@code null} for none
    */
   public NodePoolAutoscaling setMaxNodeCount(java.lang.Integer maxNodeCount) {
@@ -114,7 +114,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCount() {
@@ -122,7 +122,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
    * @param minNodeCount minNodeCount or {@code null} for none
    */
   public NodePoolAutoscaling setMinNodeCount(java.lang.Integer minNodeCount) {

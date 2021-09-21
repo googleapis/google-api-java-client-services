@@ -80,12 +80,11 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
    * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. For transfers involving PosixFilesystem, this name must start with
-   * 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with
-   * 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-
-   * PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem
-   * example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the
-   * enforcement of naming requirements involving OPI. Invalid job names fail with an
-   * INVALID_ARGUMENT error.
+   * `transferJobs/OPI` specifically. For all other transfer types, this name must not start with
+   * `transferJobs/OPI`. Non-PosixFilesystem example:
+   * `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example:
+   * `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement
+   * of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,12 +243,11 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
    * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. For transfers involving PosixFilesystem, this name must start with
-   * 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with
-   * 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-
-   * PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem
-   * example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the
-   * enforcement of naming requirements involving OPI. Invalid job names fail with an
-   * INVALID_ARGUMENT error.
+   * `transferJobs/OPI` specifically. For all other transfer types, this name must not start with
+   * `transferJobs/OPI`. Non-PosixFilesystem example:
+   * `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example:
+   * `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement
+   * of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -263,12 +261,11 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    * a job, the creation request fails with an ALREADY_EXISTS error. This name must start with
    * `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
    * characters. For transfers involving PosixFilesystem, this name must start with
-   * 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with
-   * 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-
-   * PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem
-   * example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the
-   * enforcement of naming requirements involving OPI. Invalid job names fail with an
-   * INVALID_ARGUMENT error.
+   * `transferJobs/OPI` specifically. For all other transfer types, this name must not start with
+   * `transferJobs/OPI`. Non-PosixFilesystem example:
+   * `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example:
+   * `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement
+   * of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
    * @param name name or {@code null} for none
    */
   public TransferJob setName(java.lang.String name) {

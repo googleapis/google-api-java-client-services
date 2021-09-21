@@ -70,8 +70,13 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   private java.lang.String proximityRadiusUnit;
 
   /**
-   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
-   * existing assigned_targeting_option_id.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`. Accepted
+   * POI targeting option IDs can be retrieved using SearchTargetingOptions. If targeting a specific
+   * latitude/longitude coordinate removed from an address or POI name, you can generate the
+   * necessary targeting option ID by rounding the desired coordinate values to the 6th decimal
+   * place, removing the decimals, and concatenating the string values separated by a semicolon. For
+   * example, you can target the latitude/longitude pair of 40.7414691, -74.003387 using the
+   * targeting option ID "40741469;-74003387".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +174,13 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
-   * existing assigned_targeting_option_id.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`. Accepted
+   * POI targeting option IDs can be retrieved using SearchTargetingOptions. If targeting a specific
+   * latitude/longitude coordinate removed from an address or POI name, you can generate the
+   * necessary targeting option ID by rounding the desired coordinate values to the 6th decimal
+   * place, removing the decimals, and concatenating the string values separated by a semicolon. For
+   * example, you can target the latitude/longitude pair of 40.7414691, -74.003387 using the
+   * targeting option ID "40741469;-74003387".
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingOptionId() {
@@ -178,8 +188,13 @@ public final class PoiAssignedTargetingOptionDetails extends com.google.api.clie
   }
 
   /**
-   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI` or reuse an
-   * existing assigned_targeting_option_id.
+   * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_POI`. Accepted
+   * POI targeting option IDs can be retrieved using SearchTargetingOptions. If targeting a specific
+   * latitude/longitude coordinate removed from an address or POI name, you can generate the
+   * necessary targeting option ID by rounding the desired coordinate values to the 6th decimal
+   * place, removing the decimals, and concatenating the string values separated by a semicolon. For
+   * example, you can target the latitude/longitude pair of 40.7414691, -74.003387 using the
+   * targeting option ID "40741469;-74003387".
    * @param targetingOptionId targetingOptionId or {@code null} for none
    */
   public PoiAssignedTargetingOptionDetails setTargetingOptionId(java.lang.String targetingOptionId) {

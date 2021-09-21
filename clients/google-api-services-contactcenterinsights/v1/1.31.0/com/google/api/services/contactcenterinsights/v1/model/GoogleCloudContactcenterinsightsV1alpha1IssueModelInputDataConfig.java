@@ -31,7 +31,15 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
+   * A filter to reduce the conversations used for training the model to a specific subset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
+   * Medium of conversations used in training data. This field is being deprecated. To specify the
+   * medium to be used in training a new issue model, set the `medium` field on `filter`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +53,25 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataCo
   private java.lang.Long trainingConversationsCount;
 
   /**
-   * Required.
+   * A filter to reduce the conversations used for training the model to a specific subset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * A filter to reduce the conversations used for training the model to a specific subset.
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig setFilter(java.lang.String filter) {
+    this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Medium of conversations used in training data. This field is being deprecated. To specify the
+   * medium to be used in training a new issue model, set the `medium` field on `filter`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -53,7 +79,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataCo
   }
 
   /**
-   * Required.
+   * Medium of conversations used in training data. This field is being deprecated. To specify the
+   * medium to be used in training a new issue model, set the `medium` field on `filter`.
    * @param medium medium or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig setMedium(java.lang.String medium) {

@@ -48,6 +48,13 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipant ext
   private java.lang.String dialogflowParticipantName;
 
   /**
+   * Obfuscated user ID from Dialogflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String obfuscatedExternalUserId;
+
+  /**
    * The role of the participant.
    * The value may be {@code null}.
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipant ext
    */
   public GoogleCloudContactcenterinsightsV1ConversationParticipant setDialogflowParticipantName(java.lang.String dialogflowParticipantName) {
     this.dialogflowParticipantName = dialogflowParticipantName;
+    return this;
+  }
+
+  /**
+   * Obfuscated user ID from Dialogflow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getObfuscatedExternalUserId() {
+    return obfuscatedExternalUserId;
+  }
+
+  /**
+   * Obfuscated user ID from Dialogflow.
+   * @param obfuscatedExternalUserId obfuscatedExternalUserId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationParticipant setObfuscatedExternalUserId(java.lang.String obfuscatedExternalUserId) {
+    this.obfuscatedExternalUserId = obfuscatedExternalUserId;
     return this;
   }
 

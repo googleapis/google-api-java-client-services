@@ -30,15 +30,15 @@ package com.google.api.services.sqladmin.model;
 public final class AclEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when this access control entry expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when this access control entry expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expirationTime;
 
   /**
-   * This is always *sql#aclEntry*.
+   * This is always **sql#aclEntry**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The time when this access control entry expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when this access control entry expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -68,8 +68,8 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when this access control entry expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when this access control entry expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public AclEntry setExpirationTime(String expirationTime) {
@@ -78,7 +78,7 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#aclEntry*.
+   * This is always **sql#aclEntry**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -86,7 +86,7 @@ public final class AclEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#aclEntry*.
+   * This is always **sql#aclEntry**.
    * @param kind kind or {@code null} for none
    */
   public AclEntry setKind(java.lang.String kind) {

@@ -51,16 +51,16 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   private java.lang.String commonName;
 
   /**
-   * The time when the certificate was created in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*
+   * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The time when the certificate expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * This is always *sql#sslCert*.
+   * This is always **sql#sslCert**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +146,8 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the certificate was created in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*
+   * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -155,8 +155,8 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the certificate was created in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*
+   * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * @param createTime createTime or {@code null} for none
    */
   public SslCert setCreateTime(String createTime) {
@@ -165,8 +165,8 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the certificate expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -174,8 +174,8 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the certificate expires in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339)
+   * format, for example **2012-11-15T16:19:00.094Z**.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public SslCert setExpirationTime(String expirationTime) {
@@ -201,7 +201,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#sslCert*.
+   * This is always **sql#sslCert**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -209,7 +209,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#sslCert*.
+   * This is always **sql#sslCert**.
    * @param kind kind or {@code null} for none
    */
   public SslCert setKind(java.lang.String kind) {

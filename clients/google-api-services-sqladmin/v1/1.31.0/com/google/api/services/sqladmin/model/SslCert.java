@@ -74,7 +74,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * This is always sql#sslCert.
+   * This is always **sql#sslCert**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +201,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#sslCert.
+   * This is always **sql#sslCert**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -209,7 +209,7 @@ public final class SslCert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#sslCert.
+   * This is always **sql#sslCert**.
    * @param kind kind or {@code null} for none
    */
   public SslCert setKind(java.lang.String kind) {

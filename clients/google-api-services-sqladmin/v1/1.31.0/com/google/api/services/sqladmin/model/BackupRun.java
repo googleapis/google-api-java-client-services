@@ -58,16 +58,16 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private DiskEncryptionStatus diskEncryptionStatus;
 
   /**
-   * The time the backup operation completed in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation completed in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The time the run was enqueued in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the run was enqueued in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * The time the backup operation actually started in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation actually started in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * The start time of the backup window during which this the backup was attempted in RFC 3339
-   * format, for example *2012-11-15T16:19:00.094Z*.
+   * The start time of the backup window during which this the backup was attempted in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,8 +216,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the backup operation completed in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation completed in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -225,8 +225,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the backup operation completed in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation completed in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @param endTime endTime or {@code null} for none
    */
   public BackupRun setEndTime(String endTime) {
@@ -235,8 +235,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the run was enqueued in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the run was enqueued in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getEnqueuedTime() {
@@ -244,8 +244,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the run was enqueued in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the run was enqueued in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @param enqueuedTime enqueuedTime or {@code null} for none
    */
   public BackupRun setEnqueuedTime(String enqueuedTime) {
@@ -358,8 +358,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the backup operation actually started in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation actually started in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -367,8 +367,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the backup operation actually started in UTC timezone in RFC 3339 format, for example
-   * *2012-11-15T16:19:00.094Z*.
+   * The time the backup operation actually started in UTC timezone in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @param startTime startTime or {@code null} for none
    */
   public BackupRun setStartTime(String startTime) {
@@ -413,8 +413,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of the backup window during which this the backup was attempted in RFC 3339
-   * format, for example *2012-11-15T16:19:00.094Z*.
+   * The start time of the backup window during which this the backup was attempted in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getWindowStartTime() {
@@ -422,8 +422,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start time of the backup window during which this the backup was attempted in RFC 3339
-   * format, for example *2012-11-15T16:19:00.094Z*.
+   * The start time of the backup window during which this the backup was attempted in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example **2012-11-15T16:19:00.094Z**.
    * @param windowStartTime windowStartTime or {@code null} for none
    */
   public BackupRun setWindowStartTime(String windowStartTime) {

@@ -90,9 +90,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The type of the operation. Valid values are: **CREATE** **DELETE** **UPDATE** **RESTART**
-   * **IMPORT** **EXPORT** **BACKUP_VOLUME** **RESTORE_VOLUME** **CREATE_USER** **DELETE_USER**
-   * **CREATE_DATABASE** **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
+   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
+   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * The status of an operation. Valid values are: **PENDING** **RUNNING** **DONE**
+   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
    * **SQL_OPERATION_STATUS_UNSPECIFIED**
    * The value may be {@code null}.
    */
@@ -291,9 +291,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are: **CREATE** **DELETE** **UPDATE** **RESTART**
-   * **IMPORT** **EXPORT** **BACKUP_VOLUME** **RESTORE_VOLUME** **CREATE_USER** **DELETE_USER**
-   * **CREATE_DATABASE** **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
+   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
+   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -301,9 +301,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are: **CREATE** **DELETE** **UPDATE** **RESTART**
-   * **IMPORT** **EXPORT** **BACKUP_VOLUME** **RESTORE_VOLUME** **CREATE_USER** **DELETE_USER**
-   * **CREATE_DATABASE** **DELETE_DATABASE**
+   * The type of the operation. Valid values are: * **CREATE** * **DELETE** * **UPDATE** *
+   * **RESTART** * **IMPORT** * **EXPORT** * **BACKUP_VOLUME** * **RESTORE_VOLUME** *
+   * **CREATE_USER** * **DELETE_USER** * **CREATE_DATABASE** * **DELETE_DATABASE**
    * @param operationType operationType or {@code null} for none
    */
   public Operation setOperationType(java.lang.String operationType) {
@@ -348,7 +348,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of an operation. Valid values are: **PENDING** **RUNNING** **DONE**
+   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
    * **SQL_OPERATION_STATUS_UNSPECIFIED**
    * @return value or {@code null} for none
    */
@@ -357,7 +357,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of an operation. Valid values are: **PENDING** **RUNNING** **DONE**
+   * The status of an operation. Valid values are: * **PENDING** * **RUNNING** * **DONE** *
    * **SQL_OPERATION_STATUS_UNSPECIFIED**
    * @param status status or {@code null} for none
    */

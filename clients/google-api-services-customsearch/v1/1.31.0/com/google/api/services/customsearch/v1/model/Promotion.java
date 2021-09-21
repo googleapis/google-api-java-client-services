@@ -30,8 +30,7 @@ package com.google.api.services.customsearch.v1.model;
 public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of block objects for this promotion. See [Google WebSearch Protocol
-   * reference](https://developers.google.com/custom-search/docs/xml_results) for more information.
+   * An array of block objects for this promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +78,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * An array of block objects for this promotion. See [Google WebSearch Protocol
-   * reference](https://developers.google.com/custom-search/docs/xml_results) for more information.
+   * An array of block objects for this promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<BodyLines> getBodyLines() {
@@ -88,8 +86,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of block objects for this promotion. See [Google WebSearch Protocol
-   * reference](https://developers.google.com/custom-search/docs/xml_results) for more information.
+   * An array of block objects for this promotion.
    * @param bodyLines bodyLines or {@code null} for none
    */
   public Promotion setBodyLines(java.util.List<BodyLines> bodyLines) {

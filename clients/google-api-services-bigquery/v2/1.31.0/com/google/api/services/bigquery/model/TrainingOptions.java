@@ -58,11 +58,46 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long batchSize;
 
   /**
+   * Booster type for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String boosterType;
+
+  /**
    * If true, clean spikes and dips in the input time series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cleanSpikesAndDips;
+
+  /**
+   * Subsample ratio of columns for each level for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double colsampleBylevel;
+
+  /**
+   * Subsample ratio of columns for each node(split) for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double colsampleBynode;
+
+  /**
+   * Subsample ratio of columns when constructing each tree for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double colsampleBytree;
+
+  /**
+   * Type of normalization algorithm for boosted tree models using dart booster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dartNormalizeType;
 
   /**
    * The data frequency of a time series.
@@ -274,6 +309,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double minSplitLoss;
 
   /**
+   * Minimum sum of instance weight needed in a child for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minTreeChildWeight;
+
+  /**
    * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * The value may be {@code null}.
@@ -302,6 +344,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numFactors;
+
+  /**
+   * Number of parallel trees constructed during each iteration for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numParallelTree;
 
   /**
    * Optimization strategy for training linear regression models.
@@ -354,6 +403,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String timeSeriesTimestampColumn;
+
+  /**
+   * Tree construction algorithm for boosted tree models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String treeMethod;
 
   /**
    * User column specified for matrix factorization models.
@@ -445,6 +501,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Booster type for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBoosterType() {
+    return boosterType;
+  }
+
+  /**
+   * Booster type for boosted tree models.
+   * @param boosterType boosterType or {@code null} for none
+   */
+  public TrainingOptions setBoosterType(java.lang.String boosterType) {
+    this.boosterType = boosterType;
+    return this;
+  }
+
+  /**
    * If true, clean spikes and dips in the input time series.
    * @return value or {@code null} for none
    */
@@ -458,6 +531,74 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setCleanSpikesAndDips(java.lang.Boolean cleanSpikesAndDips) {
     this.cleanSpikesAndDips = cleanSpikesAndDips;
+    return this;
+  }
+
+  /**
+   * Subsample ratio of columns for each level for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getColsampleBylevel() {
+    return colsampleBylevel;
+  }
+
+  /**
+   * Subsample ratio of columns for each level for boosted tree models.
+   * @param colsampleBylevel colsampleBylevel or {@code null} for none
+   */
+  public TrainingOptions setColsampleBylevel(java.lang.Double colsampleBylevel) {
+    this.colsampleBylevel = colsampleBylevel;
+    return this;
+  }
+
+  /**
+   * Subsample ratio of columns for each node(split) for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getColsampleBynode() {
+    return colsampleBynode;
+  }
+
+  /**
+   * Subsample ratio of columns for each node(split) for boosted tree models.
+   * @param colsampleBynode colsampleBynode or {@code null} for none
+   */
+  public TrainingOptions setColsampleBynode(java.lang.Double colsampleBynode) {
+    this.colsampleBynode = colsampleBynode;
+    return this;
+  }
+
+  /**
+   * Subsample ratio of columns when constructing each tree for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getColsampleBytree() {
+    return colsampleBytree;
+  }
+
+  /**
+   * Subsample ratio of columns when constructing each tree for boosted tree models.
+   * @param colsampleBytree colsampleBytree or {@code null} for none
+   */
+  public TrainingOptions setColsampleBytree(java.lang.Double colsampleBytree) {
+    this.colsampleBytree = colsampleBytree;
+    return this;
+  }
+
+  /**
+   * Type of normalization algorithm for boosted tree models using dart booster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDartNormalizeType() {
+    return dartNormalizeType;
+  }
+
+  /**
+   * Type of normalization algorithm for boosted tree models using dart booster.
+   * @param dartNormalizeType dartNormalizeType or {@code null} for none
+   */
+  public TrainingOptions setDartNormalizeType(java.lang.String dartNormalizeType) {
+    this.dartNormalizeType = dartNormalizeType;
     return this;
   }
 
@@ -964,6 +1105,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Minimum sum of instance weight needed in a child for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinTreeChildWeight() {
+    return minTreeChildWeight;
+  }
+
+  /**
+   * Minimum sum of instance weight needed in a child for boosted tree models.
+   * @param minTreeChildWeight minTreeChildWeight or {@code null} for none
+   */
+  public TrainingOptions setMinTreeChildWeight(java.lang.Long minTreeChildWeight) {
+    this.minTreeChildWeight = minTreeChildWeight;
+    return this;
+  }
+
+  /**
    * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * @return value or {@code null} for none
@@ -1032,6 +1190,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setNumFactors(java.lang.Long numFactors) {
     this.numFactors = numFactors;
+    return this;
+  }
+
+  /**
+   * Number of parallel trees constructed during each iteration for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumParallelTree() {
+    return numParallelTree;
+  }
+
+  /**
+   * Number of parallel trees constructed during each iteration for boosted tree models.
+   * @param numParallelTree numParallelTree or {@code null} for none
+   */
+  public TrainingOptions setNumParallelTree(java.lang.Long numParallelTree) {
+    this.numParallelTree = numParallelTree;
     return this;
   }
 
@@ -1157,6 +1332,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setTimeSeriesTimestampColumn(java.lang.String timeSeriesTimestampColumn) {
     this.timeSeriesTimestampColumn = timeSeriesTimestampColumn;
+    return this;
+  }
+
+  /**
+   * Tree construction algorithm for boosted tree models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTreeMethod() {
+    return treeMethod;
+  }
+
+  /**
+   * Tree construction algorithm for boosted tree models.
+   * @param treeMethod treeMethod or {@code null} for none
+   */
+  public TrainingOptions setTreeMethod(java.lang.String treeMethod) {
+    this.treeMethod = treeMethod;
     return this;
   }
 

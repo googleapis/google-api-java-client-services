@@ -17,10 +17,9 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Preferred location. This specifies where a Cloud SQL instance is located, either in a specific
- * Compute Engine zone, or co-located with an App Engine application. Note that if the preferred
- * location is not available, the instance will be located as close as possible within the region.
- * Only one location may be specified.
+ * Preferred location. This specifies where a Cloud SQL instance is located. Note that if the
+ * preferred location is not available, the instance will be located as close as possible within the
+ * region. Only one location may be specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -40,7 +39,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   private java.lang.String followGaeApplication;
 
   /**
-   * This is always *sql#locationPreference*.
+   * This is always **sql#locationPreference**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +78,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always *sql#locationPreference*.
+   * This is always **sql#locationPreference**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -87,7 +86,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always *sql#locationPreference*.
+   * This is always **sql#locationPreference**.
    * @param kind kind or {@code null} for none
    */
   public LocationPreference setKind(java.lang.String kind) {

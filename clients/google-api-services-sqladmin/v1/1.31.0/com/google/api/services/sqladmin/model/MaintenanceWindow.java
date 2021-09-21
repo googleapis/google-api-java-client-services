@@ -52,8 +52,8 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   private java.lang.String kind;
 
   /**
-   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more]
-   * (https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn
+   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +111,8 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more]
-   * (https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn
+   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTrack() {
@@ -120,8 +120,8 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn more]
-   * (https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing setting: **canary** (Earlier) or **stable** (Later). [Learn
+   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
    * @param updateTrack updateTrack or {@code null} for none
    */
   public MaintenanceWindow setUpdateTrack(java.lang.String updateTrack) {

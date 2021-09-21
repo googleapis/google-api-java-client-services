@@ -38,14 +38,15 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> allowedIntValues;
 
   /**
-   * For *STRING* flags, a list of strings that the value can be set to.
+   * For **STRING** flags, a list of strings that the value can be set to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedStringValues;
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
+   * The database version this flag applies to. Can be **MYSQL_8_0**, **MYSQL_5_6**, or
+   * **MYSQL_5_7**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,21 +60,21 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean inBeta;
 
   /**
-   * This is always *sql#flag*.
+   * This is always **sql#flag**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * For *INTEGER* flags, the maximum allowed value.
+   * For **INTEGER** flags, the maximum allowed value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxValue;
 
   /**
-   * For *INTEGER* flags, the minimum allowed value.
+   * For **INTEGER** flags, the minimum allowed value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -81,22 +82,23 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
-   * *max_allowed_packet*
+   * **max_allowed_packet**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Indicates whether changing this flag will trigger a database restart.
+   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
+   * Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requiresRestart;
 
   /**
-   * The type of the flag. Flags are typed to being *BOOLEAN*, *STRING*, *INTEGER* or *NONE*. *NONE*
-   * is used for flags which do not take a value, such as *skip_grant_tables*.
+   * The type of the flag. Flags are typed to being **BOOLEAN**, **STRING**, **INTEGER** or
+   * **NONE**. **NONE** is used for flags which do not take a value, such as **skip_grant_tables**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +124,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *STRING* flags, a list of strings that the value can be set to.
+   * For **STRING** flags, a list of strings that the value can be set to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedStringValues() {
@@ -130,7 +132,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *STRING* flags, a list of strings that the value can be set to.
+   * For **STRING** flags, a list of strings that the value can be set to.
    * @param allowedStringValues allowedStringValues or {@code null} for none
    */
   public Flag setAllowedStringValues(java.util.List<java.lang.String> allowedStringValues) {
@@ -139,7 +141,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
+   * The database version this flag applies to. Can be **MYSQL_8_0**, **MYSQL_5_6**, or
+   * **MYSQL_5_7**.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAppliesTo() {
@@ -147,7 +150,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
+   * The database version this flag applies to. Can be **MYSQL_8_0**, **MYSQL_5_6**, or
+   * **MYSQL_5_7**.
    * @param appliesTo appliesTo or {@code null} for none
    */
   public Flag setAppliesTo(java.util.List<java.lang.String> appliesTo) {
@@ -173,7 +177,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#flag*.
+   * This is always **sql#flag**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -181,7 +185,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#flag*.
+   * This is always **sql#flag**.
    * @param kind kind or {@code null} for none
    */
   public Flag setKind(java.lang.String kind) {
@@ -190,7 +194,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *INTEGER* flags, the maximum allowed value.
+   * For **INTEGER** flags, the maximum allowed value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxValue() {
@@ -198,7 +202,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *INTEGER* flags, the maximum allowed value.
+   * For **INTEGER** flags, the maximum allowed value.
    * @param maxValue maxValue or {@code null} for none
    */
   public Flag setMaxValue(java.lang.Long maxValue) {
@@ -207,7 +211,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *INTEGER* flags, the minimum allowed value.
+   * For **INTEGER** flags, the minimum allowed value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinValue() {
@@ -215,7 +219,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For *INTEGER* flags, the minimum allowed value.
+   * For **INTEGER** flags, the minimum allowed value.
    * @param minValue minValue or {@code null} for none
    */
   public Flag setMinValue(java.lang.Long minValue) {
@@ -225,7 +229,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
-   * *max_allowed_packet*
+   * **max_allowed_packet**
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -234,7 +238,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * This is the name of the flag. Flag names always use underscores, not hyphens, for example:
-   * *max_allowed_packet*
+   * **max_allowed_packet**
    * @param name name or {@code null} for none
    */
   public Flag setName(java.lang.String name) {
@@ -243,7 +247,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether changing this flag will trigger a database restart.
+   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
+   * Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequiresRestart() {
@@ -251,7 +256,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether changing this flag will trigger a database restart.
+   * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
+   * Generation instances.
    * @param requiresRestart requiresRestart or {@code null} for none
    */
   public Flag setRequiresRestart(java.lang.Boolean requiresRestart) {
@@ -260,8 +266,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the flag. Flags are typed to being *BOOLEAN*, *STRING*, *INTEGER* or *NONE*. *NONE*
-   * is used for flags which do not take a value, such as *skip_grant_tables*.
+   * The type of the flag. Flags are typed to being **BOOLEAN**, **STRING**, **INTEGER** or
+   * **NONE**. **NONE** is used for flags which do not take a value, such as **skip_grant_tables**.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -269,8 +275,8 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the flag. Flags are typed to being *BOOLEAN*, *STRING*, *INTEGER* or *NONE*. *NONE*
-   * is used for flags which do not take a value, such as *skip_grant_tables*.
+   * The type of the flag. Flags are typed to being **BOOLEAN**, **STRING**, **INTEGER** or
+   * **NONE**. **NONE** is used for flags which do not take a value, such as **skip_grant_tables**.
    * @param type type or {@code null} for none
    */
   public Flag setType(java.lang.String type) {

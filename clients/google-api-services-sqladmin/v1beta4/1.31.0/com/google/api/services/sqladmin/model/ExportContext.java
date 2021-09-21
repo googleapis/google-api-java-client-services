@@ -30,28 +30,29 @@ package com.google.api.services.sqladmin.model;
 public final class ExportContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
+   * Options for exporting data as CSV. **MySQL** and **PostgreSQL** instances only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CsvExportOptions csvExportOptions;
 
   /**
-   * Databases to be exported. *MySQL instances:* If *fileType* is *SQL* and no database is
-   * specified, all databases are exported, except for the *mysql* system database. If *fileType* is
-   * *CSV*, you can specify one database, either by using this property or by using the
-   * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
-   * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
-   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
+   * Databases to be exported. * **MySQL instances:** If **fileType** is **SQL** and no database is
+   * specified, all databases are exported, except for the **mysql** system database. If
+   * **fileType** is **CSV**, you can specify one database, either by using this property or by
+   * using the **csvExportOptions.selectQuery** property, which takes precedence over this property.
+   * * **PostgreSQL instances:** You must specify one database to be exported. If **fileType** is
+   * **CSV**, this database must match the one specified in the **csvExportOptions.selectQuery**
+   * property. * **SQL Server instances:** You must specify one database to be exported, and the
+   * **fileType** must be **BAK**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> databases;
 
   /**
-   * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
+   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +81,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
-   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
+   * form **gs://bucketName/fileName**. If the file already exists, the request succeeds, but the
+   * operation fails. If **fileType** is **SQL** and the filename ends with .gz, the contents are
    * compressed.
    * The value may be {@code null}.
    */
@@ -89,7 +90,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String uri;
 
   /**
-   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
+   * Options for exporting data as CSV. **MySQL** and **PostgreSQL** instances only.
    * @return value or {@code null} for none
    */
   public CsvExportOptions getCsvExportOptions() {
@@ -97,7 +98,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
+   * Options for exporting data as CSV. **MySQL** and **PostgreSQL** instances only.
    * @param csvExportOptions csvExportOptions or {@code null} for none
    */
   public ExportContext setCsvExportOptions(CsvExportOptions csvExportOptions) {
@@ -106,13 +107,14 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Databases to be exported. *MySQL instances:* If *fileType* is *SQL* and no database is
-   * specified, all databases are exported, except for the *mysql* system database. If *fileType* is
-   * *CSV*, you can specify one database, either by using this property or by using the
-   * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
-   * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
-   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
+   * Databases to be exported. * **MySQL instances:** If **fileType** is **SQL** and no database is
+   * specified, all databases are exported, except for the **mysql** system database. If
+   * **fileType** is **CSV**, you can specify one database, either by using this property or by
+   * using the **csvExportOptions.selectQuery** property, which takes precedence over this property.
+   * * **PostgreSQL instances:** You must specify one database to be exported. If **fileType** is
+   * **CSV**, this database must match the one specified in the **csvExportOptions.selectQuery**
+   * property. * **SQL Server instances:** You must specify one database to be exported, and the
+   * **fileType** must be **BAK**.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDatabases() {
@@ -120,13 +122,14 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Databases to be exported. *MySQL instances:* If *fileType* is *SQL* and no database is
-   * specified, all databases are exported, except for the *mysql* system database. If *fileType* is
-   * *CSV*, you can specify one database, either by using this property or by using the
-   * *csvExportOptions.selectQuery* property, which takes precedence over this property. *PostgreSQL
-   * instances:* You must specify one database to be exported. If *fileType* is *CSV*, this database
-   * must match the one specified in the *csvExportOptions.selectQuery* property. *SQL Server
-   * instances:* You must specify one database to be exported, and the *fileType* must be *BAK*.
+   * Databases to be exported. * **MySQL instances:** If **fileType** is **SQL** and no database is
+   * specified, all databases are exported, except for the **mysql** system database. If
+   * **fileType** is **CSV**, you can specify one database, either by using this property or by
+   * using the **csvExportOptions.selectQuery** property, which takes precedence over this property.
+   * * **PostgreSQL instances:** You must specify one database to be exported. If **fileType** is
+   * **CSV**, this database must match the one specified in the **csvExportOptions.selectQuery**
+   * property. * **SQL Server instances:** You must specify one database to be exported, and the
+   * **fileType** must be **BAK**.
    * @param databases databases or {@code null} for none
    */
   public ExportContext setDatabases(java.util.List<java.lang.String> databases) {
@@ -135,8 +138,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
+   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -144,8 +147,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
+   * The file type for the specified uri. * **SQL**: The file contains SQL statements. * **CSV**:
+   * The file contains CSV data. * **BAK**: The file contains backup data for a SQL Server instance.
    * @param fileType fileType or {@code null} for none
    */
   public ExportContext setFileType(java.lang.String fileType) {
@@ -206,8 +209,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
-   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
+   * form **gs://bucketName/fileName**. If the file already exists, the request succeeds, but the
+   * operation fails. If **fileType** is **SQL** and the filename ends with .gz, the contents are
    * compressed.
    * @return value or {@code null} for none
    */
@@ -217,8 +220,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
-   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
+   * form **gs://bucketName/fileName**. If the file already exists, the request succeeds, but the
+   * operation fails. If **fileType** is **SQL** and the filename ends with .gz, the contents are
    * compressed.
    * @param uri uri or {@code null} for none
    */
@@ -238,7 +241,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
+   * Options for exporting data as CSV. **MySQL** and **PostgreSQL** instances only.
    */
   public static final class CsvExportOptions extends com.google.api.client.json.GenericJson {
 
@@ -473,20 +476,22 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     public static final class MysqlExportOptions extends com.google.api.client.json.GenericJson {
 
       /**
-       * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
-       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
-       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
+       * Option to include SQL statement required to set up replication. * If set to **1**, the dump
+       * file includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-
+       * purged is set to ON. * If set to **2**, the CHANGE MASTER TO statement is written as a SQL
+       * comment and has no effect. * If set to any value other than **1**, --set-gtid-purged is set to
+       * OFF.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer masterData;
 
       /**
-       * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
-       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
-       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
+       * Option to include SQL statement required to set up replication. * If set to **1**, the dump
+       * file includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-
+       * purged is set to ON. * If set to **2**, the CHANGE MASTER TO statement is written as a SQL
+       * comment and has no effect. * If set to any value other than **1**, --set-gtid-purged is set to
+       * OFF.
        * @return value or {@code null} for none
        */
       public java.lang.Integer getMasterData() {
@@ -494,10 +499,11 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
       }
 
       /**
-       * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
-       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
-       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
+       * Option to include SQL statement required to set up replication. * If set to **1**, the dump
+       * file includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-
+       * purged is set to ON. * If set to **2**, the CHANGE MASTER TO statement is written as a SQL
+       * comment and has no effect. * If set to any value other than **1**, --set-gtid-purged is set to
+       * OFF.
        * @param masterData masterData or {@code null} for none
        */
       public MysqlExportOptions setMasterData(java.lang.Integer masterData) {

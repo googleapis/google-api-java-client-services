@@ -38,7 +38,8 @@ public final class Reschedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Timestamp when the maintenance shall be rescheduled to if
-   * reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.
+   * reschedule_type=SPECIFIC_TIME, in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for
+   * example **2012-11-15T16:19:00.094Z**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +64,8 @@ public final class Reschedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Timestamp when the maintenance shall be rescheduled to if
-   * reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.
+   * reschedule_type=SPECIFIC_TIME, in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for
+   * example **2012-11-15T16:19:00.094Z**.
    * @return value or {@code null} for none
    */
   public String getScheduleTime() {
@@ -72,7 +74,8 @@ public final class Reschedule extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Timestamp when the maintenance shall be rescheduled to if
-   * reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for example *2012-11-15T16:19:00.094Z*.
+   * reschedule_type=SPECIFIC_TIME, in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for
+   * example **2012-11-15T16:19:00.094Z**.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public Reschedule setScheduleTime(String scheduleTime) {

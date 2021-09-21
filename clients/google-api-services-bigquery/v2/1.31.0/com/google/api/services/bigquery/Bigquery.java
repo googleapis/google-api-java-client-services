@@ -1111,17 +1111,18 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Requests that a job is deleted. This call will return when the job is deleted. This method is
-     * available in limited preview.
+     * Requests the deletion of the metadata of a job. This call returns when the job's metadata is
+     * deleted.
      *
      * Create a request for the method "jobs.delete".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId Required. Project ID of the job to be deleted.
-     * @param jobId Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
-     *        jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+     * @param projectId Required. Project ID of the job for which metadata is to be deleted.
+     * @param jobId Required. Job ID of the job for which metadata is to be deleted. If this is a parent job which has
+     *        child jobs, the metadata from all child jobs will be deleted as well. Direct deletion of
+     *        the metadata of child jobs is not allowed.
      * @return the request
      */
     public Delete delete(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
@@ -1141,8 +1142,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Requests that a job is deleted. This call will return when the job is deleted. This method is
-       * available in limited preview.
+       * Requests the deletion of the metadata of a job. This call returns when the job's metadata is
+       * deleted.
        *
        * Create a request for the method "jobs.delete".
        *
@@ -1152,9 +1153,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId Required. Project ID of the job to be deleted.
-       * @param jobId Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
-     *        jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       * @param projectId Required. Project ID of the job for which metadata is to be deleted.
+       * @param jobId Required. Job ID of the job for which metadata is to be deleted. If this is a parent job which has
+     *        child jobs, the metadata from all child jobs will be deleted as well. Direct deletion of
+     *        the metadata of child jobs is not allowed.
        * @since 1.13
        */
       protected Delete(java.lang.String projectId, java.lang.String jobId) {
@@ -1208,17 +1210,17 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return (Delete) super.setUserIp(userIp);
       }
 
-      /** Required. Project ID of the job to be deleted. */
+      /** Required. Project ID of the job for which metadata is to be deleted. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** Required. Project ID of the job to be deleted.
+      /** Required. Project ID of the job for which metadata is to be deleted.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** Required. Project ID of the job to be deleted. */
+      /** Required. Project ID of the job for which metadata is to be deleted. */
       public Delete setProjectId(java.lang.String projectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
@@ -1230,22 +1232,25 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Job ID of the job to be deleted. If this is a parent job which has child jobs,
-       * all child jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       * Required. Job ID of the job for which metadata is to be deleted. If this is a parent job
+       * which has child jobs, the metadata from all child jobs will be deleted as well. Direct
+       * deletion of the metadata of child jobs is not allowed.
        */
       @com.google.api.client.util.Key
       private java.lang.String jobId;
 
-      /** Required. Job ID of the job to be deleted. If this is a parent job which has child jobs, all child
-     jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+      /** Required. Job ID of the job for which metadata is to be deleted. If this is a parent job which has
+     child jobs, the metadata from all child jobs will be deleted as well. Direct deletion of the
+     metadata of child jobs is not allowed.
        */
       public java.lang.String getJobId() {
         return jobId;
       }
 
       /**
-       * Required. Job ID of the job to be deleted. If this is a parent job which has child jobs,
-       * all child jobs will be deleted as well. Deletion of child jobs directly is not allowed.
+       * Required. Job ID of the job for which metadata is to be deleted. If this is a parent job
+       * which has child jobs, the metadata from all child jobs will be deleted as well. Direct
+       * deletion of the metadata of child jobs is not allowed.
        */
       public Delete setJobId(java.lang.String jobId) {
         if (!getSuppressPatternChecks()) {

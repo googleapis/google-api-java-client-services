@@ -58,6 +58,7 @@ public final class BusinessChainAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * Accepted business chain targeting option IDs can be retrieved using SearchTargetingOptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,6 +125,7 @@ public final class BusinessChainAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * Accepted business chain targeting option IDs can be retrieved using SearchTargetingOptions.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingOptionId() {
@@ -132,6 +134,7 @@ public final class BusinessChainAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_BUSINESS_CHAIN`.
+   * Accepted business chain targeting option IDs can be retrieved using SearchTargetingOptions.
    * @param targetingOptionId targetingOptionId or {@code null} for none
    */
   public BusinessChainAssignedTargetingOptionDetails setTargetingOptionId(java.lang.String targetingOptionId) {

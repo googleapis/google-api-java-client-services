@@ -89,8 +89,12 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   private java.lang.Long partnerId;
 
   /**
-   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
-   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -237,8 +241,12 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
-   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getSharedAdvertiserIds() {
@@ -246,8 +254,12 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IDs of the advertisers who have access to this algorithm. This field will not be set if the
-   * algorithm owner is a partner and is being retrieved using an advertiser accessor.
+   * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
+   * is a partner and is being retrieved using an advertiser [`accessor`](/display-
+   * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
    * @param sharedAdvertiserIds sharedAdvertiserIds or {@code null} for none
    */
   public CustomBiddingAlgorithm setSharedAdvertiserIds(java.util.List<java.lang.Long> sharedAdvertiserIds) {

@@ -377,12 +377,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -409,8 +409,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -446,10 +446,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -457,9 +458,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
@@ -486,11 +487,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -570,8 +571,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -602,8 +603,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
@@ -696,12 +697,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -710,12 +711,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public NextPage setCr(java.lang.String cr) {
@@ -769,8 +770,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -779,8 +780,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public NextPage setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -855,10 +856,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -867,10 +869,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public NextPage setFilter(java.lang.String filter) {
@@ -880,9 +883,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
@@ -892,9 +895,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
@@ -945,11 +948,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -960,11 +963,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public NextPage setHl(java.lang.String hl) {
@@ -1144,8 +1147,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -1155,8 +1158,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public NextPage setOrTerms(java.lang.String orTerms) {
@@ -1221,8 +1224,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
@@ -1232,8 +1235,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */
@@ -1428,12 +1431,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1460,8 +1463,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1497,10 +1500,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1508,9 +1512,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
@@ -1537,11 +1541,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1621,8 +1625,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -1653,8 +1657,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
@@ -1747,12 +1751,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -1761,12 +1765,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public PreviousPage setCr(java.lang.String cr) {
@@ -1820,8 +1824,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -1830,8 +1834,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public PreviousPage setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -1906,10 +1910,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -1918,10 +1923,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public PreviousPage setFilter(java.lang.String filter) {
@@ -1931,9 +1937,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
@@ -1943,9 +1949,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
@@ -1996,11 +2002,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -2011,11 +2017,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public PreviousPage setHl(java.lang.String hl) {
@@ -2195,8 +2201,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -2206,8 +2212,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public PreviousPage setOrTerms(java.lang.String orTerms) {
@@ -2272,8 +2278,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
@@ -2283,8 +2289,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */
@@ -2479,12 +2485,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2511,8 +2517,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2548,10 +2554,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2559,9 +2566,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * The value may be {@code null}.
        */
@@ -2588,11 +2595,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2672,8 +2679,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -2704,8 +2711,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * The value may be {@code null}.
        */
@@ -2798,12 +2805,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @return value or {@code null} for none
        */
       public java.lang.String getCr() {
@@ -2812,12 +2819,12 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Restricts search results to documents originating in a particular country. You may use [Boolean
-       * operators](https://developers.google.com/custom-search/docs/xml_results#booleanOperators) in
-       * the `cr` parameter's value. Google WebSearch determines the country of a document by analyzing
-       * the following: * The top-level domain (TLD) of the document's URL. * The geographic location of
-       * the web server's IP address. See [Country (cr) Parameter Values](https://developers.google.com
-       * /custom-search/docs/xml_results#countryCollections) for a list of valid values for this
-       * parameter.
+       * operators](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch)
+       * in the `cr` parameter's value. Google WebSearch determines the country of a document by
+       * analyzing the following: * The top-level domain (TLD) of the document's URL. * The geographic
+       * location of the web server's IP address. See [Country (cr) Parameter
+       * Values](https://developers.google.com/custom-search/docs/json_api_reference#countryCollections)
+       * for a list of valid values for this parameter.
        * @param cr cr or {@code null} for none
        */
       public Request setCr(java.lang.String cr) {
@@ -2871,8 +2878,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @return value or {@code null} for none
        */
       public java.lang.String getDisableCnTwTranslation() {
@@ -2881,8 +2888,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Enables or disables the [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch) feature.
-       * Supported values are: * `0`: enabled (default) * `1`: disabled
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch)
+       * feature. Supported values are: * `0`: enabled (default) * `1`: disabled
        * @param disableCnTwTranslation disableCnTwTranslation or {@code null} for none
        */
       public Request setDisableCnTwTranslation(java.lang.String disableCnTwTranslation) {
@@ -2957,10 +2964,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @return value or {@code null} for none
        */
       public java.lang.String getFilter() {
@@ -2969,10 +2977,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Activates or deactivates the automatic filtering of Google search results. See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       * more information about Google's search results filters. Valid values for this parameter are: *
-       * `0`: Disabled * `1`: Enabled (default) **Note**: By default, Google applies filtering to all
-       * search results to improve the quality of those results.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's search
+       * results filters. Valid values for this parameter are: * `0`: Disabled * `1`: Enabled (default)
+       * **Note**: By default, Google applies filtering to all search results to improve the quality of
+       * those results.
        * @param filter filter or {@code null} for none
        */
       public Request setFilter(java.lang.String filter) {
@@ -2982,9 +2991,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @return value or {@code null} for none
        */
@@ -2994,9 +3003,9 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Boosts search results whose country of origin matches the parameter value. See [Country
-       * Codes](https://developers.google.com/custom-search/docs/xml_results#countryCodes) for a list of
-       * valid values. Specifying a `gl` parameter value in WebSearch requests should improve the
-       * relevance of results. This is particularly true for international customers and, even more
+       * Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes) for a
+       * list of valid values. Specifying a `gl` parameter value in WebSearch requests should improve
+       * the relevance of results. This is particularly true for international customers and, even more
        * specifically, for customers in English-speaking countries other than the United States.
        * @param gl gl or {@code null} for none
        */
@@ -3047,11 +3056,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @return value or {@code null} for none
        */
       public java.lang.String getHl() {
@@ -3062,11 +3071,11 @@ public final class Search extends com.google.api.client.json.GenericJson {
        * Specifies the interface language (host language) of your user interface. Explicitly setting
        * this parameter improves the performance and the quality of your search results. See the
        * [Interface Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
        * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and [Supported Interface
-       * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages) for a list of supported languages.
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        * @param hl hl or {@code null} for none
        */
       public Request setHl(java.lang.String hl) {
@@ -3246,8 +3255,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @return value or {@code null} for none
        */
       public java.lang.String getOrTerms() {
@@ -3257,8 +3266,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
       /**
        * Provides additional search terms to check for in a document, where each document in the search
        * results must contain at least one of the additional search terms. You can also use the [Boolean
-       * OR](https://developers.google.com/custom-search/docs/xml_results#BooleanOrqt) query term for
-       * this type of query.
+       * OR](https://developers.google.com/custom-search/docs/json_api_reference#BooleanOrSearch) query
+       * term for this type of query.
        * @param orTerms orTerms or {@code null} for none
        */
       public Request setOrTerms(java.lang.String orTerms) {
@@ -3323,8 +3332,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @return value or {@code null} for none
        */
@@ -3334,8 +3343,8 @@ public final class Search extends com.google.api.client.json.GenericJson {
 
       /**
        * Specifies the [SafeSearch level](https://developers.google.com/custom-
-       * search/docs/xml_results#safeSearchLevels) used for filtering out adult results. This is a
-       * custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
+       * search/docs/json_api_reference#safeSearchLevels) used for filtering out adult results. This is
+       * a custom property not defined in the OpenSearch spec. Valid parameter values are: * `"off"`:
        * Disable SafeSearch * `"active"`: Enable SafeSearch
        * @param safe safe or {@code null} for none
        */

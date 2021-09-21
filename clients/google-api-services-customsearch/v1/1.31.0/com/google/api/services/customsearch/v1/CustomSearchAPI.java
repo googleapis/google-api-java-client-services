@@ -257,16 +257,17 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * Enables or disables [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
-       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch).
+       * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
        * Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       @com.google.api.client.util.Key
       private java.lang.String c2coff;
 
       /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
-     /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
-     meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
+     /custom-search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+     (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled
+     (default)
        */
       public java.lang.String getC2coff() {
         return c2coff;
@@ -274,8 +275,8 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * Enables or disables [Simplified and Traditional Chinese
-       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
-       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch).
+       * The default value for this parameter is 0 (zero), meaning that the feature is enabled.
        * Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       public List setC2coff(java.lang.String c2coff) {
@@ -286,23 +287,23 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
       /**
        * Restricts search results to documents originating in a particular country. You may use
        * [Boolean operators](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
-       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
-       * the document's URL * the geographic location of the Web server's IP address See the
-       * [Country Parameter Values](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
-       * this parameter.
+       * search/docs/json_api_reference#booleanOperators) in the cr parameter's value. Google Search
+       * determines the country of a document by analyzing: * the top-level domain (TLD) of the
+       * document's URL * the geographic location of the Web server's IP address See the [Country
+       * Parameter Values](https://developers.google.com/custom-
+       * search/docs/json_api_reference#countryCollections) page for a list of valid values for this
+       * parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String cr;
 
       /** Restricts search results to documents originating in a particular country. You may use [Boolean
-     operators](https://developers.google.com/custom-
-     search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
-     determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
-     URL * the geographic location of the Web server's IP address See the [Country Parameter
-     Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
-     page for a list of valid values for this parameter.
+     operators](https://developers.google.com/custom-search/docs/json_api_reference#booleanOperators) in
+     the cr parameter's value. Google Search determines the country of a document by analyzing: * the
+     top-level domain (TLD) of the document's URL * the geographic location of the Web server's IP
+     address See the [Country Parameter Values](https://developers.google.com/custom-
+     search/docs/json_api_reference#countryCollections) page for a list of valid values for this
+     parameter.
        */
       public java.lang.String getCr() {
         return cr;
@@ -311,12 +312,12 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
       /**
        * Restricts search results to documents originating in a particular country. You may use
        * [Boolean operators](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
-       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
-       * the document's URL * the geographic location of the Web server's IP address See the
-       * [Country Parameter Values](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
-       * this parameter.
+       * search/docs/json_api_reference#booleanOperators) in the cr parameter's value. Google Search
+       * determines the country of a document by analyzing: * the top-level domain (TLD) of the
+       * document's URL * the geographic location of the Web server's IP address See the [Country
+       * Parameter Values](https://developers.google.com/custom-
+       * search/docs/json_api_reference#countryCollections) page for a list of valid values for this
+       * parameter.
        */
       public List setCr(java.lang.String cr) {
         this.cr = cr;
@@ -431,20 +432,21 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * Controls turning on or off the duplicate content filter. * See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
-       * for more information about Google's search results filters. Note that host crowding
-       * filtering applies only to multi-site searches. * By default, Google applies filtering to
-       * all search results to improve the quality of those results. Acceptable values are: * `0`:
-       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's
+       * search results filters. Note that host crowding filtering applies only to multi-site
+       * searches. * By default, Google applies filtering to all search results to improve the
+       * quality of those results. Acceptable values are: * `0`: Turns off duplicate content filter.
+       * * `1`: Turns on duplicate content filter.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Controls turning on or off the duplicate content filter. * See [Automatic
-     Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-     more information about Google's search results filters. Note that host crowding filtering applies
-     only to multi-site searches. * By default, Google applies filtering to all search results to
-     improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+     Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+     for more information about Google's search results filters. Note that host crowding filtering
+     applies only to multi-site searches. * By default, Google applies filtering to all search results
+     to improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
      filter. * `1`: Turns on duplicate content filter.
        */
       public java.lang.String getFilter() {
@@ -453,11 +455,12 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * Controls turning on or off the duplicate content filter. * See [Automatic
-       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
-       * for more information about Google's search results filters. Note that host crowding
-       * filtering applies only to multi-site searches. * By default, Google applies filtering to
-       * all search results to improve the quality of those results. Acceptable values are: * `0`:
-       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
+       * Filtering](https://developers.google.com/custom-
+       * search/docs/json_api_reference#automaticFiltering) for more information about Google's
+       * search results filters. Note that host crowding filtering applies only to multi-site
+       * searches. * By default, Google applies filtering to all search results to improve the
+       * quality of those results. Acceptable values are: * `0`: Turns off duplicate content filter.
+       * * `1`: Turns on duplicate content filter.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -468,21 +471,20 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
        * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
        * parameter boosts search results whose country of origin matches the parameter value. See
        * the [Country Codes](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
-       * Specifying a `gl` parameter value should lead to more relevant results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English- speaking countries other than the United States.
+       * search/docs/json_api_reference#countryCodes) page for a list of valid values. * Specifying
+       * a `gl` parameter value should lead to more relevant results. This is particularly true for
+       * international customers and, even more specifically, for customers in English- speaking
+       * countries other than the United States.
        */
       @com.google.api.client.util.Key
       private java.lang.String gl;
 
       /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
      parameter boosts search results whose country of origin matches the parameter value. See the
-     [Country Codes](https://developers.google.com/custom-
-     search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
-     `gl` parameter value should lead to more relevant results. This is particularly true for
-     international customers and, even more specifically, for customers in English- speaking countries
-     other than the United States.
+     [Country Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes)
+     page for a list of valid values. * Specifying a `gl` parameter value should lead to more relevant
+     results. This is particularly true for international customers and, even more specifically, for
+     customers in English- speaking countries other than the United States.
        */
       public java.lang.String getGl() {
         return gl;
@@ -492,10 +494,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
        * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
        * parameter boosts search results whose country of origin matches the parameter value. See
        * the [Country Codes](https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
-       * Specifying a `gl` parameter value should lead to more relevant results. This is
-       * particularly true for international customers and, even more specifically, for customers in
-       * English- speaking countries other than the United States.
+       * search/docs/json_api_reference#countryCodes) page for a list of valid values. * Specifying
+       * a `gl` parameter value should lead to more relevant results. This is particularly true for
+       * international customers and, even more specifically, for customers in English- speaking
+       * countries other than the United States.
        */
       public List setGl(java.lang.String gl) {
         this.gl = gl;
@@ -554,22 +556,22 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
        * Sets the user interface language. * Explicitly setting this parameter improves the
        * performance and the quality of your search results. * See the [Interface
        * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-       * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
-       * Interface Languages)[https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+       * and Results Presentation](https://developers.google.com/custom-
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
       /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
      the quality of your search results. * See the [Interface Languages](https://developers.google.com
-     /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-     Results Presentation](https://developers.google.com/custom-
-     search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
-     Languages)[https://developers.google.com/custom-
-     search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+     /custom-search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+     and Results Presentation](https://developers.google.com/custom-
+     search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported Interface
+     Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+     for a list of supported languages.
        */
       public java.lang.String getHl() {
         return hl;
@@ -579,11 +581,11 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
        * Sets the user interface language. * Explicitly setting this parameter improves the
        * performance and the quality of your search results. * See the [Interface
        * Languages](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-       * Results Presentation](https://developers.google.com/custom-
-       * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
-       * Interface Languages)[https://developers.google.com/custom-
-       * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+       * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+       * and Results Presentation](https://developers.google.com/custom-
+       * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+       * Interface Languages](https://developers.google.com/custom-
+       * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
        */
       public List setHl(java.lang.String hl) {
         this.hl = hl;
@@ -1188,16 +1190,18 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * Enables or disables [Simplified and Traditional Chinese
-         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
-         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
-         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+         * Search](https://developers.google.com/custom-
+         * search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+         * (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`:
+         * Enabled (default)
          */
         @com.google.api.client.util.Key
         private java.lang.String c2coff;
 
         /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
-       /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
-       meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
+       /custom-search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+       (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled
+       (default)
          */
         public java.lang.String getC2coff() {
           return c2coff;
@@ -1205,9 +1209,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * Enables or disables [Simplified and Traditional Chinese
-         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
-         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
-         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+         * Search](https://developers.google.com/custom-
+         * search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+         * (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`:
+         * Enabled (default)
          */
         public List setC2coff(java.lang.String c2coff) {
           this.c2coff = c2coff;
@@ -1217,23 +1222,23 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         /**
          * Restricts search results to documents originating in a particular country. You may use
          * [Boolean operators](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * search/docs/json_api_reference#booleanOperators) in the cr parameter's value. Google
          * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
          * the document's URL * the geographic location of the Web server's IP address See the
          * [Country Parameter Values](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
-         * for this parameter.
+         * search/docs/json_api_reference#countryCollections) page for a list of valid values for
+         * this parameter.
          */
         @com.google.api.client.util.Key
         private java.lang.String cr;
 
         /** Restricts search results to documents originating in a particular country. You may use [Boolean
-       operators](https://developers.google.com/custom-
-       search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
-       determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
-       URL * the geographic location of the Web server's IP address See the [Country Parameter
-       Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
-       page for a list of valid values for this parameter.
+       operators](https://developers.google.com/custom-search/docs/json_api_reference#booleanOperators) in
+       the cr parameter's value. Google Search determines the country of a document by analyzing: * the
+       top-level domain (TLD) of the document's URL * the geographic location of the Web server's IP
+       address See the [Country Parameter Values](https://developers.google.com/custom-
+       search/docs/json_api_reference#countryCollections) page for a list of valid values for this
+       parameter.
          */
         public java.lang.String getCr() {
           return cr;
@@ -1242,12 +1247,12 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         /**
          * Restricts search results to documents originating in a particular country. You may use
          * [Boolean operators](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * search/docs/json_api_reference#booleanOperators) in the cr parameter's value. Google
          * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
          * the document's URL * the geographic location of the Web server's IP address See the
          * [Country Parameter Values](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
-         * for this parameter.
+         * search/docs/json_api_reference#countryCollections) page for a list of valid values for
+         * this parameter.
          */
         public List setCr(java.lang.String cr) {
           this.cr = cr;
@@ -1367,20 +1372,20 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         /**
          * Controls turning on or off the duplicate content filter. * See [Automatic
          * Filtering](https://developers.google.com/custom-
-         * search/docs/xml_results#automaticFiltering) for more information about Google's search
-         * results filters. Note that host crowding filtering applies only to multi-site searches. *
-         * By default, Google applies filtering to all search results to improve the quality of
-         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
-         * Turns on duplicate content filter.
+         * search/docs/json_api_reference#automaticFiltering) for more information about Google's
+         * search results filters. Note that host crowding filtering applies only to multi-site
+         * searches. * By default, Google applies filtering to all search results to improve the
+         * quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+         * filter. * `1`: Turns on duplicate content filter.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Controls turning on or off the duplicate content filter. * See [Automatic
-       Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
-       more information about Google's search results filters. Note that host crowding filtering applies
-       only to multi-site searches. * By default, Google applies filtering to all search results to
-       improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+       Filtering](https://developers.google.com/custom-search/docs/json_api_reference#automaticFiltering)
+       for more information about Google's search results filters. Note that host crowding filtering
+       applies only to multi-site searches. * By default, Google applies filtering to all search results
+       to improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
        filter. * `1`: Turns on duplicate content filter.
          */
         public java.lang.String getFilter() {
@@ -1390,11 +1395,11 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         /**
          * Controls turning on or off the duplicate content filter. * See [Automatic
          * Filtering](https://developers.google.com/custom-
-         * search/docs/xml_results#automaticFiltering) for more information about Google's search
-         * results filters. Note that host crowding filtering applies only to multi-site searches. *
-         * By default, Google applies filtering to all search results to improve the quality of
-         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
-         * Turns on duplicate content filter.
+         * search/docs/json_api_reference#automaticFiltering) for more information about Google's
+         * search results filters. Note that host crowding filtering applies only to multi-site
+         * searches. * By default, Google applies filtering to all search results to improve the
+         * quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+         * filter. * `1`: Turns on duplicate content filter.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -1405,7 +1410,7 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
          * `gl` parameter boosts search results whose country of origin matches the parameter value.
          * See the [Country Codes](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * search/docs/json_api_reference#countryCodes) page for a list of valid values. *
          * Specifying a `gl` parameter value should lead to more relevant results. This is
          * particularly true for international customers and, even more specifically, for customers
          * in English- speaking countries other than the United States.
@@ -1415,11 +1420,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
         /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
        parameter boosts search results whose country of origin matches the parameter value. See the
-       [Country Codes](https://developers.google.com/custom-
-       search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
-       `gl` parameter value should lead to more relevant results. This is particularly true for
-       international customers and, even more specifically, for customers in English- speaking countries
-       other than the United States.
+       [Country Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes)
+       page for a list of valid values. * Specifying a `gl` parameter value should lead to more relevant
+       results. This is particularly true for international customers and, even more specifically, for
+       customers in English- speaking countries other than the United States.
          */
         public java.lang.String getGl() {
           return gl;
@@ -1429,7 +1433,7 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
          * `gl` parameter boosts search results whose country of origin matches the parameter value.
          * See the [Country Codes](https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * search/docs/json_api_reference#countryCodes) page for a list of valid values. *
          * Specifying a `gl` parameter value should lead to more relevant results. This is
          * particularly true for international customers and, even more specifically, for customers
          * in English- speaking countries other than the United States.
@@ -1491,22 +1495,22 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          * Sets the user interface language. * Explicitly setting this parameter improves the
          * performance and the quality of your search results. * See the [Interface
          * Languages](https://developers.google.com/custom-
-         * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-         * Results Presentation](https://developers.google.com/custom-
-         * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
-         * Interface Languages)[https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+         * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing
+         * Queries and Results Presentation](https://developers.google.com/custom-
+         * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+         * Interface Languages](https://developers.google.com/custom-
+         * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
          */
         @com.google.api.client.util.Key
         private java.lang.String hl;
 
         /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
        the quality of your search results. * See the [Interface Languages](https://developers.google.com
-       /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-       Results Presentation](https://developers.google.com/custom-
-       search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
-       Languages)[https://developers.google.com/custom-
-       search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+       /custom-search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+       and Results Presentation](https://developers.google.com/custom-
+       search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported Interface
+       Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
+       for a list of supported languages.
          */
         public java.lang.String getHl() {
           return hl;
@@ -1516,11 +1520,11 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          * Sets the user interface language. * Explicitly setting this parameter improves the
          * performance and the quality of your search results. * See the [Interface
          * Languages](https://developers.google.com/custom-
-         * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
-         * Results Presentation](https://developers.google.com/custom-
-         * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
-         * Interface Languages)[https://developers.google.com/custom-
-         * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+         * search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing
+         * Queries and Results Presentation](https://developers.google.com/custom-
+         * search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported
+         * Interface Languages](https://developers.google.com/custom-
+         * search/docs/json_api_reference#interfaceLanguages) for a list of supported languages.
          */
         public List setHl(java.lang.String hl) {
           this.hl = hl;

@@ -93,8 +93,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
-   * search/docs/xml_results).
+   * Encapsulates all information about refinement labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,8 +295,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
-   * search/docs/xml_results).
+   * Encapsulates all information about refinement labels.
    * @return value or {@code null} for none
    */
   public java.util.List<Labels> getLabels() {
@@ -305,8 +303,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encapsulates all information about [refinement labels](https://developers.google.com/custom-
-   * search/docs/xml_results).
+   * Encapsulates all information about refinement labels.
    * @param labels labels or {@code null} for none
    */
   public Result setLabels(java.util.List<Labels> labels) {

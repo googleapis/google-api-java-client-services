@@ -105,6 +105,13 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatcher extends com.g
   private java.lang.String type;
 
   /**
+   * Output only. The most recent time at which the phrase matcher was updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The customized version tag to use for the phrase matcher. If not specified, it will default to
    * `revision_id`.
    * The value may be {@code null}.
@@ -272,6 +279,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatcher extends com.g
    */
   public GoogleCloudContactcenterinsightsV1PhraseMatcher setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. The most recent time at which the phrase matcher was updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The most recent time at which the phrase matcher was updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1PhraseMatcher setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

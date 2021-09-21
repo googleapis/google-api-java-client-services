@@ -1168,7 +1168,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
       public class Executions {
 
         /**
-         * Creates a new Scheduled Notebook in a given project and location.
+         * Creates a new Execution in a given project and location.
          *
          * Create a request for the method "executions.create".
          *
@@ -1193,7 +1193,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new Scheduled Notebook in a given project and location.
+           * Creates a new Execution in a given project and location.
            *
            * Create a request for the method "executions.create".
            *

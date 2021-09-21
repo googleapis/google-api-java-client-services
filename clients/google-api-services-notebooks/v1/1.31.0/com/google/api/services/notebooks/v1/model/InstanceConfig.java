@@ -30,7 +30,7 @@ package com.google.api.services.notebooks.v1.model;
 public final class InstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Verifies core internal services are running. More info: go/notebooks-health
+   * Verifies core internal services are running.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String notebookUpgradeSchedule;
 
   /**
-   * Verifies core internal services are running. More info: go/notebooks-health
+   * Verifies core internal services are running.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableHealthMonitoring() {
@@ -53,7 +53,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Verifies core internal services are running. More info: go/notebooks-health
+   * Verifies core internal services are running.
    * @param enableHealthMonitoring enableHealthMonitoring or {@code null} for none
    */
   public InstanceConfig setEnableHealthMonitoring(java.lang.Boolean enableHealthMonitoring) {

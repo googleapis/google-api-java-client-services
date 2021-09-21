@@ -54,7 +54,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{project_id}/{folder}/{notebook_file_name} Ex:
+   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
    * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
    * The value may be {@code null}.
    */
@@ -89,7 +89,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` -
    * `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally,
    * if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the
-   * [special configuration options for training with TPU.
+   * [special configuration options for training with TPU](https://cloud.google.com/ai-
+   * platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +98,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,6 +136,13 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Parameters used in Vertex AI JobType executions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VertexAIParameters vertexAiParameters;
 
   /**
    * Configuration (count and accelerator type) for hardware running notebook execution.
@@ -193,7 +201,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{project_id}/{folder}/{notebook_file_name} Ex:
+   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
    * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
    * @return value or {@code null} for none
    */
@@ -203,7 +211,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{project_id}/{folder}/{notebook_file_name} Ex:
+   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
    * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
    * @param inputNotebookFile inputNotebookFile or {@code null} for none
    */
@@ -262,7 +270,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` -
    * `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally,
    * if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the
-   * [special configuration options for training with TPU.
+   * [special configuration options for training with TPU](https://cloud.google.com/ai-
+   * platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterType() {
@@ -281,7 +290,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` -
    * `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally,
    * if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the
-   * [special configuration options for training with TPU.
+   * [special configuration options for training with TPU](https://cloud.google.com/ai-
+   * platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
    * @param masterType masterType or {@code null} for none
    */
   public ExecutionTemplate setMasterType(java.lang.String masterType) {
@@ -291,7 +301,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputNotebookFolder() {
@@ -300,7 +310,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{project_id}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
    * @param outputNotebookFolder outputNotebookFolder or {@code null} for none
    */
   public ExecutionTemplate setOutputNotebookFolder(java.lang.String outputNotebookFolder) {
@@ -383,6 +393,23 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Parameters used in Vertex AI JobType executions.
+   * @return value or {@code null} for none
+   */
+  public VertexAIParameters getVertexAiParameters() {
+    return vertexAiParameters;
+  }
+
+  /**
+   * Parameters used in Vertex AI JobType executions.
+   * @param vertexAiParameters vertexAiParameters or {@code null} for none
+   */
+  public ExecutionTemplate setVertexAiParameters(VertexAIParameters vertexAiParameters) {
+    this.vertexAiParameters = vertexAiParameters;
     return this;
   }
 

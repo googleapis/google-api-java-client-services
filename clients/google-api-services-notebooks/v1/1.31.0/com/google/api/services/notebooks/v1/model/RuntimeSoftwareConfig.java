@@ -54,7 +54,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   private java.lang.Boolean idleShutdown;
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
+   * Time in minutes to wait before shutting down runtime. Default: 180 minutes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
+   * Time in minutes to wait before shutting down runtime. Default: 180 minutes
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleShutdownTimeout() {
@@ -145,7 +145,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time in minutes to wait before shuting down runtime. Default: 180 minutes
+   * Time in minutes to wait before shutting down runtime. Default: 180 minutes
    * @param idleShutdownTimeout idleShutdownTimeout or {@code null} for none
    */
   public RuntimeSoftwareConfig setIdleShutdownTimeout(java.lang.Integer idleShutdownTimeout) {

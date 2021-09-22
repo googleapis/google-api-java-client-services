@@ -39,6 +39,13 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   private java.lang.String action;
 
   /**
+   * Additional information required for `eCommercePlatform` link type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ECommercePlatformLinkInfo eCommercePlatformLinkInfo;
+
+  /**
    * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
    * "`eCommercePlatform`" - "`paymentServiceProvider`"
    * The value may be {@code null}.
@@ -85,6 +92,23 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
    */
   public AccountsLinkRequest setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Additional information required for `eCommercePlatform` link type.
+   * @return value or {@code null} for none
+   */
+  public ECommercePlatformLinkInfo getECommercePlatformLinkInfo() {
+    return eCommercePlatformLinkInfo;
+  }
+
+  /**
+   * Additional information required for `eCommercePlatform` link type.
+   * @param eCommercePlatformLinkInfo eCommercePlatformLinkInfo or {@code null} for none
+   */
+  public AccountsLinkRequest setECommercePlatformLinkInfo(ECommercePlatformLinkInfo eCommercePlatformLinkInfo) {
+    this.eCommercePlatformLinkInfo = eCommercePlatformLinkInfo;
     return this;
   }
 

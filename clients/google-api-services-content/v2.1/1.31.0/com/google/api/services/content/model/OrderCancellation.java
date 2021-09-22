@@ -64,7 +64,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" - "`noInventory`" -
    * "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" - "`priceError`" -
    * "`returnRefundAbuse`" - "`shippingPriceError`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`"
+   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`failedToCaptureFunds`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" - "`noInventory`" -
    * "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" - "`priceError`" -
    * "`returnRefundAbuse`" - "`shippingPriceError`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`"
+   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`failedToCaptureFunds`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -161,7 +161,7 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
    * "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" - "`noInventory`" -
    * "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" - "`priceError`" -
    * "`returnRefundAbuse`" - "`shippingPriceError`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`"
+   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`failedToCaptureFunds`"
    * @param reason reason or {@code null} for none
    */
   public OrderCancellation setReason(java.lang.String reason) {

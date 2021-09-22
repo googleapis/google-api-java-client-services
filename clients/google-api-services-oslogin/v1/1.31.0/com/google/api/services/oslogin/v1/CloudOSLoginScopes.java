@@ -26,8 +26,14 @@ public class CloudOSLoginScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** View your data across Google Cloud services and see the email address of your Google Account. */
+  public static final String CLOUD_PLATFORM_READ_ONLY = "https://www.googleapis.com/auth/cloud-platform.read-only";
+
   /** View and manage your Google Compute Engine resources. */
   public static final String COMPUTE = "https://www.googleapis.com/auth/compute";
+
+  /** View your Google Compute Engine resources. */
+  public static final String COMPUTE_READONLY = "https://www.googleapis.com/auth/compute.readonly";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -37,7 +43,9 @@ public class CloudOSLoginScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(CLOUD_PLATFORM_READ_ONLY);
     set.add(COMPUTE);
+    set.add(COMPUTE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

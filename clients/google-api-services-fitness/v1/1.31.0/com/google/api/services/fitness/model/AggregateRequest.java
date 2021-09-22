@@ -82,7 +82,8 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The end of a window of time. Data that intersects with this time window will be aggregated. The
-   * time is in milliseconds since epoch, inclusive.
+   * time is in milliseconds since epoch, inclusive. The maximum allowed difference between
+   * start_time_millis // and end_time_millis is 7776000000 (roughly 90 days).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -210,7 +211,8 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The end of a window of time. Data that intersects with this time window will be aggregated. The
-   * time is in milliseconds since epoch, inclusive.
+   * time is in milliseconds since epoch, inclusive. The maximum allowed difference between
+   * start_time_millis // and end_time_millis is 7776000000 (roughly 90 days).
    * @return value or {@code null} for none
    */
   public java.lang.Long getEndTimeMillis() {
@@ -219,7 +221,8 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The end of a window of time. Data that intersects with this time window will be aggregated. The
-   * time is in milliseconds since epoch, inclusive.
+   * time is in milliseconds since epoch, inclusive. The maximum allowed difference between
+   * start_time_millis // and end_time_millis is 7776000000 (roughly 90 days).
    * @param endTimeMillis endTimeMillis or {@code null} for none
    */
   public AggregateRequest setEndTimeMillis(java.lang.Long endTimeMillis) {

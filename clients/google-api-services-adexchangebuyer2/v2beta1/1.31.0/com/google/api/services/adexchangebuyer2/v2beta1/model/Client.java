@@ -44,7 +44,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Name used to represent this client to publishers. You may have multiple clients that map to the
    * same entity, but for each client the combination of `clientName` and entity must be unique. You
-   * can specify this field as empty.
+   * can specify this field as empty. Maximum length of 255 characters is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Name used to represent this client to publishers. You may have multiple clients that map to the
    * same entity, but for each client the combination of `clientName` and entity must be unique. You
-   * can specify this field as empty.
+   * can specify this field as empty. Maximum length of 255 characters is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientName() {
@@ -146,7 +146,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   /**
    * Name used to represent this client to publishers. You may have multiple clients that map to the
    * same entity, but for each client the combination of `clientName` and entity must be unique. You
-   * can specify this field as empty.
+   * can specify this field as empty. Maximum length of 255 characters is allowed.
    * @param clientName clientName or {@code null} for none
    */
   public Client setClientName(java.lang.String clientName) {

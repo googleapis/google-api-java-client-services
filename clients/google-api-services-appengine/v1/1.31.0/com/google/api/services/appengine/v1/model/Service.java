@@ -41,6 +41,20 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * A set of labels to apply to this service. Labels are key/value pairs that describe the service
+   * and all resources that belong to it (e.g., versions). The labels can be used to search and
+   * group resources, and are propagated to the usage and billing reports, enabling fine-grain
+   * analysis of costs. An example of using labels is to tag resources belonging to different
+   * environments (e.g., "env=prod", "env=qa"). Label keys and values can be no longer than 63
+   * characters, can only contain lowercase letters, numeric characters, underscores, dashes, and
+   * international characters. Label keys must start with a lowercase letter or an international
+   * character. Each service can have at most 32 labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Full path to the Service resource in the API. Example: apps/myapp/services/default.@OutputOnly
    * The value may be {@code null}.
    */
@@ -76,6 +90,37 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * A set of labels to apply to this service. Labels are key/value pairs that describe the service
+   * and all resources that belong to it (e.g., versions). The labels can be used to search and
+   * group resources, and are propagated to the usage and billing reports, enabling fine-grain
+   * analysis of costs. An example of using labels is to tag resources belonging to different
+   * environments (e.g., "env=prod", "env=qa"). Label keys and values can be no longer than 63
+   * characters, can only contain lowercase letters, numeric characters, underscores, dashes, and
+   * international characters. Label keys must start with a lowercase letter or an international
+   * character. Each service can have at most 32 labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * A set of labels to apply to this service. Labels are key/value pairs that describe the service
+   * and all resources that belong to it (e.g., versions). The labels can be used to search and
+   * group resources, and are propagated to the usage and billing reports, enabling fine-grain
+   * analysis of costs. An example of using labels is to tag resources belonging to different
+   * environments (e.g., "env=prod", "env=qa"). Label keys and values can be no longer than 63
+   * characters, can only contain lowercase letters, numeric characters, underscores, dashes, and
+   * international characters. Label keys must start with a lowercase letter or an international
+   * character. Each service can have at most 32 labels.
+   * @param labels labels or {@code null} for none
+   */
+  public Service setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

@@ -34,7 +34,9 @@ public final class DynamicGroupQuery extends com.google.api.client.json.GenericJ
    * one `organizations.department` of engineering. `user.organizations.exists(org,
    * org.department=='engineering')` All users with at least one location that has `area` of `foo`
    * and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' &&
-   * loc.building_id=='bar')`
+   * loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive
+   * queries add `equalsIgnoreCase()` to the value being queried).
+   * `user.name.value.equalsIgnoreCase('jOhn DoE')`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +53,9 @@ public final class DynamicGroupQuery extends com.google.api.client.json.GenericJ
    * one `organizations.department` of engineering. `user.organizations.exists(org,
    * org.department=='engineering')` All users with at least one location that has `area` of `foo`
    * and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' &&
-   * loc.building_id=='bar')`
+   * loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive
+   * queries add `equalsIgnoreCase()` to the value being queried).
+   * `user.name.value.equalsIgnoreCase('jOhn DoE')`
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -63,7 +67,9 @@ public final class DynamicGroupQuery extends com.google.api.client.json.GenericJ
    * one `organizations.department` of engineering. `user.organizations.exists(org,
    * org.department=='engineering')` All users with at least one location that has `area` of `foo`
    * and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' &&
-   * loc.building_id=='bar')`
+   * loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive
+   * queries add `equalsIgnoreCase()` to the value being queried).
+   * `user.name.value.equalsIgnoreCase('jOhn DoE')`
    * @param query query or {@code null} for none
    */
   public DynamicGroupQuery setQuery(java.lang.String query) {

@@ -58,6 +58,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The bucket's custom placement configuration for Custom Dual Regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomPlacementConfig customPlacementConfig;
+
+  /**
    * The default value for event-based hold on newly created objects in this bucket. Event-based
    * hold is a way to retain objects indefinitely until an event occurs, signified by the hold's
    * release. After being released, such objects will be subject to bucket-level retention (if any).
@@ -256,16 +263,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private Website website;
 
   /**
-   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
-   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
-   * Bad Request response.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> zoneAffinity;
-
-  /**
    * Access controls on the bucket.
    * @return value or {@code null} for none
    */
@@ -313,6 +310,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setCors(java.util.List<Cors> cors) {
     this.cors = cors;
+    return this;
+  }
+
+  /**
+   * The bucket's custom placement configuration for Custom Dual Regions.
+   * @return value or {@code null} for none
+   */
+  public CustomPlacementConfig getCustomPlacementConfig() {
+    return customPlacementConfig;
+  }
+
+  /**
+   * The bucket's custom placement configuration for Custom Dual Regions.
+   * @param customPlacementConfig customPlacementConfig or {@code null} for none
+   */
+  public Bucket setCustomPlacementConfig(CustomPlacementConfig customPlacementConfig) {
+    this.customPlacementConfig = customPlacementConfig;
     return this;
   }
 
@@ -787,29 +801,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     return this;
   }
 
-  /**
-   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
-   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
-   * Bad Request response.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getZoneAffinity() {
-    return zoneAffinity;
-  }
-
-  /**
-   * The zone or zones from which the bucket is intended to use zonal quota. Requests for data from
-   * outside the specified affinities are still allowed but won't be able to use zonal quota. The
-   * zone or zones need to be within the bucket location otherwise the requests will fail with a 400
-   * Bad Request response.
-   * @param zoneAffinity zoneAffinity or {@code null} for none
-   */
-  public Bucket setZoneAffinity(java.util.List<java.lang.String> zoneAffinity) {
-    this.zoneAffinity = zoneAffinity;
-    return this;
-  }
-
   @Override
   public Bucket set(String fieldName, Object value) {
     return (Bucket) super.set(fieldName, value);
@@ -982,6 +973,47 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     @Override
     public Cors clone() {
       return (Cors) super.clone();
+    }
+
+  }
+
+  /**
+   * The bucket's custom placement configuration for Custom Dual Regions.
+   */
+  public static final class CustomPlacementConfig extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The list of regional locations in which data is placed.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> dataLocations;
+
+    /**
+     * The list of regional locations in which data is placed.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getDataLocations() {
+      return dataLocations;
+    }
+
+    /**
+     * The list of regional locations in which data is placed.
+     * @param dataLocations dataLocations or {@code null} for none
+     */
+    public CustomPlacementConfig setDataLocations(java.util.List<java.lang.String> dataLocations) {
+      this.dataLocations = dataLocations;
+      return this;
+    }
+
+    @Override
+    public CustomPlacementConfig set(String fieldName, Object value) {
+      return (CustomPlacementConfig) super.set(fieldName, value);
+    }
+
+    @Override
+    public CustomPlacementConfig clone() {
+      return (CustomPlacementConfig) super.clone();
     }
 
   }
@@ -2112,5 +2144,4 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
   }
-
 }

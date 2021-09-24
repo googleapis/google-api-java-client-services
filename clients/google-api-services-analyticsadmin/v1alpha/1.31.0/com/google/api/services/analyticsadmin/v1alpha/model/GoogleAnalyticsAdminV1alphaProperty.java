@@ -31,6 +31,14 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. The resource name of the parent account Format: accounts/{account_id} Example:
+   * "accounts/123"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String account;
+
+  /**
    * Output only. Time when the entity was originally created.
    * The value may be {@code null}.
    */
@@ -115,6 +123,25 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Immutable. The resource name of the parent account Format: accounts/{account_id} Example:
+   * "accounts/123"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccount() {
+    return account;
+  }
+
+  /**
+   * Immutable. The resource name of the parent account Format: accounts/{account_id} Example:
+   * "accounts/123"
+   * @param account account or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaProperty setAccount(java.lang.String account) {
+    this.account = account;
+    return this;
+  }
 
   /**
    * Output only. Time when the entity was originally created.

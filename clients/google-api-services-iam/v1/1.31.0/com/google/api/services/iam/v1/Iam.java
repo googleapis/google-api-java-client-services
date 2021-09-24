@@ -8219,7 +8219,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Disable a ServiceAccountKey. A disabled service account key can be enabled through
-         * EnableServiceAccountKey. The API is currently in preview phase.
+         * EnableServiceAccountKey.
          *
          * Create a request for the method "keys.disable".
          *
@@ -8248,7 +8248,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Disable a ServiceAccountKey. A disabled service account key can be enabled through
-           * EnableServiceAccountKey. The API is currently in preview phase.
+           * EnableServiceAccountKey.
            *
            * Create a request for the method "keys.disable".
            *
@@ -8370,7 +8370,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Enable a ServiceAccountKey. The API is currently in preview phase.
+         * Enable a ServiceAccountKey.
          *
          * Create a request for the method "keys.enable".
          *
@@ -8398,7 +8398,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
 
           /**
-           * Enable a ServiceAccountKey. The API is currently in preview phase.
+           * Enable a ServiceAccountKey.
            *
            * Create a request for the method "keys.enable".
            *

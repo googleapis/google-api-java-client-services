@@ -59,6 +59,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private Text text;
 
   /**
+   * A widget that displays time series data in a tabular format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeSeriesTable timeSeriesTable;
+
+  /**
    * Optional. The title of the widget.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setText(Text text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * A widget that displays time series data in a tabular format.
+   * @return value or {@code null} for none
+   */
+  public TimeSeriesTable getTimeSeriesTable() {
+    return timeSeriesTable;
+  }
+
+  /**
+   * A widget that displays time series data in a tabular format.
+   * @param timeSeriesTable timeSeriesTable or {@code null} for none
+   */
+  public Widget setTimeSeriesTable(TimeSeriesTable timeSeriesTable) {
+    this.timeSeriesTable = timeSeriesTable;
     return this;
   }
 

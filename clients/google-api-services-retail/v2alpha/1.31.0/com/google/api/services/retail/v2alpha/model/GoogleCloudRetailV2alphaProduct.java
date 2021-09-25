@@ -246,8 +246,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Immutable. Full resource name of the product, such as `projects/locations/global/catalogs/defau
-   * lt_catalog/branches/default_branch/products/product_id`. The branch ID must be
-   * "default_branch".
+   * lt_catalog/branches/default_branch/products/product_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -856,8 +855,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Immutable. Full resource name of the product, such as `projects/locations/global/catalogs/defau
-   * lt_catalog/branches/default_branch/products/product_id`. The branch ID must be
-   * "default_branch".
+   * lt_catalog/branches/default_branch/products/product_id`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -866,8 +864,7 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
 
   /**
    * Immutable. Full resource name of the product, such as `projects/locations/global/catalogs/defau
-   * lt_catalog/branches/default_branch/products/product_id`. The branch ID must be
-   * "default_branch".
+   * lt_catalog/branches/default_branch/products/product_id`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setName(java.lang.String name) {

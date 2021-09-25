@@ -2514,7 +2514,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *
              * @param name Immutable. Full resource name of the product, such as
              *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
-             *        ct_id`. The branch ID must be "default_branch".
+             *        ct_id`.
              * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Product}
              * @return the request
              */
@@ -2543,7 +2543,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                *
                * @param name Immutable. Full resource name of the product, such as
              *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
-             *        ct_id`. The branch ID must be "default_branch".
+             *        ct_id`.
                * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2Product}
                * @since 1.13
                */
@@ -2614,15 +2614,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
               /**
                * Immutable. Full resource name of the product, such as `projects/locations/global/ca
-               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
-               * must be "default_branch".
+               * talogs/default_catalog/branches/default_branch/products/product_id`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Full resource name of the product, such as
              `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
-             The branch ID must be "default_branch".
                */
               public java.lang.String getName() {
                 return name;
@@ -2630,8 +2628,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
               /**
                * Immutable. Full resource name of the product, such as `projects/locations/global/ca
-               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
-               * must be "default_branch".
+               * talogs/default_catalog/branches/default_branch/products/product_id`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -2887,7 +2884,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *
              * @param name Immutable. Full resource name of the product, such as
              *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
-             *        ct_id`. The branch ID must be "default_branch".
+             *        ct_id`.
              * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2SetInventoryRequest}
              * @return the request
              */
@@ -2932,7 +2929,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                *
                * @param name Immutable. Full resource name of the product, such as
              *        `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/produ
-             *        ct_id`. The branch ID must be "default_branch".
+             *        ct_id`.
                * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2SetInventoryRequest}
                * @since 1.13
                */
@@ -3003,15 +3000,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
               /**
                * Immutable. Full resource name of the product, such as `projects/locations/global/ca
-               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
-               * must be "default_branch".
+               * talogs/default_catalog/branches/default_branch/products/product_id`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Full resource name of the product, such as
              `projects/locations/global/catalogs/default_catalog/branches/default_branch/products/product_id`.
-             The branch ID must be "default_branch".
                */
               public java.lang.String getName() {
                 return name;
@@ -3019,8 +3014,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
               /**
                * Immutable. Full resource name of the product, such as `projects/locations/global/ca
-               * talogs/default_catalog/branches/default_branch/products/product_id`. The branch ID
-               * must be "default_branch".
+               * talogs/default_catalog/branches/default_branch/products/product_id`.
                */
               public SetInventory setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

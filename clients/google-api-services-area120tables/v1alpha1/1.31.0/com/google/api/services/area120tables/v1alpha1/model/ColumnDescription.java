@@ -80,6 +80,13 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Optional. Indicates that values for the column cannot be set by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readonly;
+
+  /**
    * Optional. Additional details about a relationship column. Specified when data_type is
    * relationship.
    * The value may be {@code null}.
@@ -202,6 +209,23 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
    */
   public ColumnDescription setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates that values for the column cannot be set by the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadonly() {
+    return readonly;
+  }
+
+  /**
+   * Optional. Indicates that values for the column cannot be set by the user.
+   * @param readonly readonly or {@code null} for none
+   */
+  public ColumnDescription setReadonly(java.lang.Boolean readonly) {
+    this.readonly = readonly;
     return this;
   }
 

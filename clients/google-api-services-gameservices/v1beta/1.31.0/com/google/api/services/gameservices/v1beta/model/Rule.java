@@ -65,8 +65,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> in;
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * The config returned to callers of CheckPolicy for any entries that match the LOG action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,8 +165,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * The config returned to callers of CheckPolicy for any entries that match the LOG action.
    * @return value or {@code null} for none
    */
   public java.util.List<LogConfig> getLogConfig() {
@@ -175,8 +173,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
-   * action.
+   * The config returned to callers of CheckPolicy for any entries that match the LOG action.
    * @param logConfig logConfig or {@code null} for none
    */
   public Rule setLogConfig(java.util.List<LogConfig> logConfig) {

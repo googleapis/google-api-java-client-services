@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementConfigSyncVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Version of the deployed admission_webhook pod
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String admissionWebhook;
+
+  /**
    * Version of the deployed git-sync pod
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String syncer;
+
+  /**
+   * Version of the deployed admission_webhook pod
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdmissionWebhook() {
+    return admissionWebhook;
+  }
+
+  /**
+   * Version of the deployed admission_webhook pod
+   * @param admissionWebhook admissionWebhook or {@code null} for none
+   */
+  public ConfigManagementConfigSyncVersion setAdmissionWebhook(java.lang.String admissionWebhook) {
+    this.admissionWebhook = admissionWebhook;
+    return this;
+  }
 
   /**
    * Version of the deployed git-sync pod

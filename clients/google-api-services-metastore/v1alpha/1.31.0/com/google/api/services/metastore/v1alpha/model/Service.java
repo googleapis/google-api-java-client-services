@@ -76,7 +76,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time.
+   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
+   * services with the SPANNER database type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,7 +272,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time.
+   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
+   * services with the SPANNER database type.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -280,7 +282,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time.
+   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
+   * services with the SPANNER database type.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public Service setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {

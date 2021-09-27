@@ -56,7 +56,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
    * submitted together with `pickupSla`. For accepted attribute values, see the local product
-   * inventory feed // specification.
+   * inventory feed specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
    * submitted together with `pickupSla`. For accepted attribute values, see the local product
-   * inventory feed // specification.
+   * inventory feed specification.
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupMethod() {
@@ -173,7 +173,7 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
    * submitted together with `pickupSla`. For accepted attribute values, see the local product
-   * inventory feed // specification.
+   * inventory feed specification.
    * @param pickupMethod pickupMethod or {@code null} for none
    */
   public LocalInventory setPickupMethod(java.lang.String pickupMethod) {

@@ -209,6 +209,20 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String productApplicability;
 
   /**
+   * Product filter by product type for the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> productType;
+
+  /**
+   * Product filter by product type exclusion for the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> productTypeExclusion;
+
+  /**
    * Destination ID for the promotion.
    * The value may be {@code null}.
    */
@@ -681,6 +695,40 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setProductApplicability(java.lang.String productApplicability) {
     this.productApplicability = productApplicability;
+    return this;
+  }
+
+  /**
+   * Product filter by product type for the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProductType() {
+    return productType;
+  }
+
+  /**
+   * Product filter by product type for the promotion.
+   * @param productType productType or {@code null} for none
+   */
+  public Promotion setProductType(java.util.List<java.lang.String> productType) {
+    this.productType = productType;
+    return this;
+  }
+
+  /**
+   * Product filter by product type exclusion for the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProductTypeExclusion() {
+    return productTypeExclusion;
+  }
+
+  /**
+   * Product filter by product type exclusion for the promotion.
+   * @param productTypeExclusion productTypeExclusion or {@code null} for none
+   */
+  public Promotion setProductTypeExclusion(java.util.List<java.lang.String> productTypeExclusion) {
+    this.productTypeExclusion = productTypeExclusion;
     return this;
   }
 

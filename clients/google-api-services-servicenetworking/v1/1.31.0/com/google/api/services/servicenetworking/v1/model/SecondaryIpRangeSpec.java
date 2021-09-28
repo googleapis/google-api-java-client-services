@@ -40,6 +40,15 @@ public final class SecondaryIpRangeSpec extends com.google.api.client.json.Gener
   private java.lang.Integer ipPrefixLength;
 
   /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this
+   * secondary IP range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outsideAllocationPublicIpRange;
+
+  /**
    * Required. A name for the secondary IP range. The name must be 1-63 characters long, and comply
    * with RFC1035. The name must be unique within the subnetwork.
    * The value may be {@code null}.
@@ -75,6 +84,27 @@ public final class SecondaryIpRangeSpec extends com.google.api.client.json.Gener
    */
   public SecondaryIpRangeSpec setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this
+   * secondary IP range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutsideAllocationPublicIpRange() {
+    return outsideAllocationPublicIpRange;
+  }
+
+  /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this
+   * secondary IP range.
+   * @param outsideAllocationPublicIpRange outsideAllocationPublicIpRange or {@code null} for none
+   */
+  public SecondaryIpRangeSpec setOutsideAllocationPublicIpRange(java.lang.String outsideAllocationPublicIpRange) {
+    this.outsideAllocationPublicIpRange = outsideAllocationPublicIpRange;
     return this;
   }
 

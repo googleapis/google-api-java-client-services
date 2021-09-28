@@ -32,7 +32,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
-   * to 100GB. Cannot be updated.
+   * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
+   * versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +56,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
    * location, and propagate that choice to both fields. If only one field (`location` or
    * `nodeConfig.machineType`) is specified, the location information from the specified field will
-   * be propagated to the unspecified field.
+   * be propagated to the unspecified field. This field is supported for Cloud Composer environments
+   * in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +76,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * information from the specified field will be propagated to the unspecified field. The
    * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
    * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
-   * "n1-standard-1".
+   * "n1-standard-1". This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +99,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
    * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +129,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +138,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
-   * to 100GB. Cannot be updated.
+   * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
+   * versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskSizeGb() {
@@ -141,7 +148,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults
-   * to 100GB. Cannot be updated.
+   * to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in
+   * versions composer-1.*.*-airflow-*.*.*.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public NodeConfig setDiskSizeGb(java.lang.Integer diskSizeGb) {
@@ -176,7 +184,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
    * location, and propagate that choice to both fields. If only one field (`location` or
    * `nodeConfig.machineType`) is specified, the location information from the specified field will
-   * be propagated to the unspecified field.
+   * be propagated to the unspecified field. This field is supported for Cloud Composer environments
+   * in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -193,7 +202,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
    * location, and propagate that choice to both fields. If only one field (`location` or
    * `nodeConfig.machineType`) is specified, the location information from the specified field will
-   * be propagated to the unspecified field.
+   * be propagated to the unspecified field. This field is supported for Cloud Composer environments
+   * in versions composer-1.*.*-airflow-*.*.*.
    * @param location location or {@code null} for none
    */
   public NodeConfig setLocation(java.lang.String location) {
@@ -214,7 +224,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * information from the specified field will be propagated to the unspecified field. The
    * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
    * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
-   * "n1-standard-1".
+   * "n1-standard-1". This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -234,7 +245,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * information from the specified field will be propagated to the unspecified field. The
    * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
    * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
-   * "n1-standard-1".
+   * "n1-standard-1". This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param machineType machineType or {@code null} for none
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
@@ -274,6 +286,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
    * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -283,6 +297,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
    * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public NodeConfig setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -339,7 +355,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -349,7 +366,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid
    * sources or targets for network firewalls. Each tag within the list must comply with
-   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated.
+   * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @param tags tags or {@code null} for none
    */
   public NodeConfig setTags(java.util.List<java.lang.String> tags) {

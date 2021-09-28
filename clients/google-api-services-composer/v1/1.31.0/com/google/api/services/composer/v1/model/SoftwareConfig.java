@@ -89,7 +89,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
    * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
-   * updated.
+   * updated. This field is only supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +233,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
    * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
-   * updated.
+   * updated. This field is only supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -242,7 +244,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
    * webserver processes. Can be set to '2' or '3'. If not specified, the default is '3'. Cannot be
-   * updated.
+   * updated. This field is only supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public SoftwareConfig setPythonVersion(java.lang.String pythonVersion) {

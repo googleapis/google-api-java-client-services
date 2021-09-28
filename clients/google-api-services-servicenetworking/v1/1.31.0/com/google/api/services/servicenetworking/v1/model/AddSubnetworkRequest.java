@@ -67,6 +67,15 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.Integer ipPrefixLength;
 
   /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this primary
+   * IP range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outsideAllocationPublicIpRange;
+
+  /**
    * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
    * the access types that can be set using this field, see
    * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
@@ -207,6 +216,27 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this primary
+   * IP range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutsideAllocationPublicIpRange() {
+    return outsideAllocationPublicIpRange;
+  }
+
+  /**
+   * Optional. Enable outside allocation using public IP addresses. Any public IP range may be
+   * specified. If this field is provided, we will not use customer reserved ranges for this primary
+   * IP range.
+   * @param outsideAllocationPublicIpRange outsideAllocationPublicIpRange or {@code null} for none
+   */
+  public AddSubnetworkRequest setOutsideAllocationPublicIpRange(java.lang.String outsideAllocationPublicIpRange) {
+    this.outsideAllocationPublicIpRange = outsideAllocationPublicIpRange;
     return this;
   }
 

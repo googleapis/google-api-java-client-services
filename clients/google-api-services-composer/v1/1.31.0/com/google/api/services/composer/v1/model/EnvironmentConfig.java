@@ -49,7 +49,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software.
+   * software. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated.
+   * Cannot be updated. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +81,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +111,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied.
+   * no network-level access restrictions will be applied. This field is supported for Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +162,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software.
+   * software. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public DatabaseConfig getDatabaseConfig() {
@@ -166,7 +172,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
-   * software.
+   * software. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param databaseConfig databaseConfig or {@code null} for none
    */
   public EnvironmentConfig setDatabaseConfig(DatabaseConfig databaseConfig) {
@@ -176,7 +183,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated.
+   * Cannot be updated. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public EncryptionConfig getEncryptionConfig() {
@@ -185,7 +193,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The encryption options for the Cloud Composer environment and its dependencies.
-   * Cannot be updated.
+   * Cannot be updated. This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public EnvironmentConfig setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -229,6 +238,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -237,6 +248,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment.
+   * This field is supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-*.*.*.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public EnvironmentConfig setNodeCount(java.lang.Integer nodeCount) {
@@ -297,7 +310,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied.
+   * no network-level access restrictions will be applied. This field is supported for Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @return value or {@code null} for none
    */
   public WebServerNetworkAccessControl getWebServerNetworkAccessControl() {
@@ -306,7 +320,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
-   * no network-level access restrictions will be applied.
+   * no network-level access restrictions will be applied. This field is supported for Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*.
    * @param webServerNetworkAccessControl webServerNetworkAccessControl or {@code null} for none
    */
   public EnvironmentConfig setWebServerNetworkAccessControl(WebServerNetworkAccessControl webServerNetworkAccessControl) {

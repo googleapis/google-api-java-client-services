@@ -17,7 +17,8 @@
 package com.google.api.services.composer.v1.model;
 
 /**
- * The configuration settings for the Airflow web server App Engine instance.
+ * The configuration settings for the Airflow web server App Engine instance. Supported for Cloud
+ * Composer environments in versions composer-1.*.*-airflow-*.*.*
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:

@@ -30,14 +30,14 @@ package com.google.api.services.composer.v1beta1.model;
 public final class IPAllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field
-   * is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. For Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only
+   * when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size.
+   * Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or
+   * `cluster_ipv4_cidr_block` but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,24 +45,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
-   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This
-   * field is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in
-   * versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is
-   * true.
+   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable
+   * only when `use_ip_aliases` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterSecondaryRangeName;
 
   /**
-   * Optional. The IP address range of the services IP addresses in this cluster. This field is
-   * applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+   * Optional. The IP address range of the services IP addresses in this cluster. For Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
+   * `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to
+   * /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or
+   * `services_ipv4_cidr_block` but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +70,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
-   * both. This field is applicable only when `use_ip_aliases` is true. For Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
-   * `use_ip_aliases` is true.
+   * both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is
+   * applicable only when `use_ip_aliases` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,14 +88,14 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean useIpAliases;
 
   /**
-   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field
-   * is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. For Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only
+   * when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size.
+   * Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or
+   * `cluster_ipv4_cidr_block` but not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterIpv4CidrBlock() {
@@ -105,14 +103,14 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. This field
-   * is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   * Optional. The IP address range used to allocate IP addresses to pods in the cluster. For Cloud
+   * Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only
+   * when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size.
+   * Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or
+   * `cluster_ipv4_cidr_block` but not both.
    * @param clusterIpv4CidrBlock clusterIpv4CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setClusterIpv4CidrBlock(java.lang.String clusterIpv4CidrBlock) {
@@ -122,10 +120,9 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
-   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This
-   * field is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in
-   * versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is
-   * true.
+   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable
+   * only when `use_ip_aliases` is true.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterSecondaryRangeName() {
@@ -134,10 +131,9 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
-   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. This
-   * field is applicable only when `use_ip_aliases` is true. For Cloud Composer environments in
-   * versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is
-   * true.
+   * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For
+   * Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable
+   * only when `use_ip_aliases` is true.
    * @param clusterSecondaryRangeName clusterSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setClusterSecondaryRangeName(java.lang.String clusterSecondaryRangeName) {
@@ -146,14 +142,14 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The IP address range of the services IP addresses in this cluster. This field is
-   * applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+   * Optional. The IP address range of the services IP addresses in this cluster. For Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
+   * `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to
+   * /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or
+   * `services_ipv4_cidr_block` but not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getServicesIpv4CidrBlock() {
@@ -161,14 +157,14 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The IP address range of the services IP addresses in this cluster. This field is
-   * applicable only when `use_ip_aliases` is true. For Cloud Composer environments in versions
-   * composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set
-   * to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have
-   * GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
+   * Optional. The IP address range of the services IP addresses in this cluster. For Cloud Composer
+   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
+   * `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to
+   * /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or
+   * `services_ipv4_cidr_block` but not both.
    * @param servicesIpv4CidrBlock servicesIpv4CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setServicesIpv4CidrBlock(java.lang.String servicesIpv4CidrBlock) {
@@ -179,9 +175,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
-   * both. This field is applicable only when `use_ip_aliases` is true. For Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
-   * `use_ip_aliases` is true.
+   * both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is
+   * applicable only when `use_ip_aliases` is true.
    * @return value or {@code null} for none
    */
   public java.lang.String getServicesSecondaryRangeName() {
@@ -191,9 +186,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
-   * both. This field is applicable only when `use_ip_aliases` is true. For Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when
-   * `use_ip_aliases` is true.
+   * both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is
+   * applicable only when `use_ip_aliases` is true.
    * @param servicesSecondaryRangeName servicesSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setServicesSecondaryRangeName(java.lang.String servicesSecondaryRangeName) {

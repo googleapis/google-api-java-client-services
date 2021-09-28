@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
    * object (or or a document.) `datetime` - the entity is a date or time value. `money` - the
    * entity represents a money value amount. `number` - the entity is a number - integer or floating
    * point. `string` - the entity is a string value. `boolean` - the entity is a boolean value.
-   * `address` - the entity is a location address.
+   * `address` - the entity is a location address. `duration` - the entity is a duration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
    * object (or or a document.) `datetime` - the entity is a date or time value. `money` - the
    * entity represents a money value amount. `number` - the entity is a number - integer or floating
    * point. `string` - the entity is a string value. `boolean` - the entity is a boolean value.
-   * `address` - the entity is a location address.
+   * `address` - the entity is a location address. `duration` - the entity is a duration.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseType() {
@@ -108,7 +108,7 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
    * object (or or a document.) `datetime` - the entity is a date or time value. `money` - the
    * entity represents a money value amount. `number` - the entity is a number - integer or floating
    * point. `string` - the entity is a string value. `boolean` - the entity is a boolean value.
-   * `address` - the entity is a location address.
+   * `address` - the entity is a location address. `duration` - the entity is a duration.
    * @param baseType baseType or {@code null} for none
    */
   public GoogleCloudDocumentaiV1SchemaEntityType setBaseType(java.lang.String baseType) {

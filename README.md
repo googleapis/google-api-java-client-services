@@ -27,7 +27,6 @@ packages on [Maven Central][maven-search].
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
 | Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |
 | Access Context Manager API | [v1](clients/google-api-services-accesscontextmanager/v1), [v1beta](clients/google-api-services-accesscontextmanager/v1beta) |
-| Ad Exchange Buyer API | [v1.2](clients/google-api-services-adexchangebuyer/v1.2), [v1.3](clients/google-api-services-adexchangebuyer/v1.3), [v1.4](clients/google-api-services-adexchangebuyer/v1.4) |
 | Ad Exchange Buyer API II | [v2beta1](clients/google-api-services-adexchangebuyer2/v2beta1) |
 | Ad Experience Report API | [v1](clients/google-api-services-adexperiencereport/v1) |
 | AdMob API | [v1](clients/google-api-services-admob/v1), [v1beta](clients/google-api-services-admob/v1beta) |
@@ -192,7 +191,7 @@ packages on [Maven Central][maven-search].
 | My Business Notifications API | [v1](clients/google-api-services-mybusinessnotifications/v1) |
 | My Business Place Actions API | [v1](clients/google-api-services-mybusinessplaceactions/v1) |
 | My Business Verifications API | [v1](clients/google-api-services-mybusinessverifications/v1) |
-| Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
+| Network Connectivity API | [v1](clients/google-api-services-networkconnectivity/v1), [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Network Security API | [v1](clients/google-api-services-networksecurity/v1), [v1beta1](clients/google-api-services-networksecurity/v1beta1) |
 | Network Services API | [v1](clients/google-api-services-networkservices/v1), [v1beta1](clients/google-api-services-networkservices/v1beta1) |

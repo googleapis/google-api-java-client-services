@@ -70,7 +70,8 @@ public final class GoogleCloudContactcenterinsightsV1CalculateStatsResponse exte
 
   /**
    * A map associating each issue resource name with its respective number of matches in the set of
-   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * conversations. Key has the format: `projects//locations//issueModels//issues/` Deprecated, use
+   * `issue_matches_stats` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +178,8 @@ public final class GoogleCloudContactcenterinsightsV1CalculateStatsResponse exte
 
   /**
    * A map associating each issue resource name with its respective number of matches in the set of
-   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * conversations. Key has the format: `projects//locations//issueModels//issues/` Deprecated, use
+   * `issue_matches_stats` field instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Integer> getIssueMatches() {
@@ -186,7 +188,8 @@ public final class GoogleCloudContactcenterinsightsV1CalculateStatsResponse exte
 
   /**
    * A map associating each issue resource name with its respective number of matches in the set of
-   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * conversations. Key has the format: `projects//locations//issueModels//issues/` Deprecated, use
+   * `issue_matches_stats` field instead.
    * @param issueMatches issueMatches or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1CalculateStatsResponse setIssueMatches(java.util.Map<String, java.lang.Integer> issueMatches) {

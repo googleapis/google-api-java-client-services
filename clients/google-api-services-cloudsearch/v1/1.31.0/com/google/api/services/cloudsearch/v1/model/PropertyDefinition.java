@@ -105,9 +105,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
-   * repeatable. Cannot be true for properties whose type is object or user identifier. IsReturnable
-   * must be true to set this option. Only supported for Boolean, Date, Double, Integer, and
-   * Timestamp properties.
+   * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
+   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -340,9 +339,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
-   * repeatable. Cannot be true for properties whose type is object or user identifier. IsReturnable
-   * must be true to set this option. Only supported for Boolean, Date, Double, Integer, and
-   * Timestamp properties.
+   * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
+   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSortable() {
@@ -351,9 +349,8 @@ public final class PropertyDefinition extends com.google.api.client.json.Generic
 
   /**
    * Indicates that the property can be used for sorting. Cannot be true for properties that are
-   * repeatable. Cannot be true for properties whose type is object or user identifier. IsReturnable
-   * must be true to set this option. Only supported for Boolean, Date, Double, Integer, and
-   * Timestamp properties.
+   * repeatable. Cannot be true for properties whose type is object. IsReturnable must be true to
+   * set this option. Only supported for Boolean, Date, Double, Integer, and Timestamp properties.
    * @param isSortable isSortable or {@code null} for none
    */
   public PropertyDefinition setIsSortable(java.lang.Boolean isSortable) {

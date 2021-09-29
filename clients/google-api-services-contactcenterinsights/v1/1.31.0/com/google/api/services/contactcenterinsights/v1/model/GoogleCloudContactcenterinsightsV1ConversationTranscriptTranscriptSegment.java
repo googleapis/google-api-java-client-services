@@ -48,6 +48,13 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
   private java.lang.Float confidence;
 
   /**
+   * CCAI metadata relating to the current transcript segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata dialogflowSegmentMetadata;
+
+  /**
    * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
    * language tag. Example: "en-US".
    * The value may be {@code null}.
@@ -56,11 +63,25 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
   private java.lang.String languageCode;
 
   /**
+   * The time that the message occurred, if provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String messageTime;
+
+  /**
    * The participant of this segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1ConversationParticipant segmentParticipant;
+
+  /**
+   * The sentiment for this transcript segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SentimentData sentiment;
 
   /**
    * The text of this segment.
@@ -117,6 +138,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
   }
 
   /**
+   * CCAI metadata relating to the current transcript segment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata getDialogflowSegmentMetadata() {
+    return dialogflowSegmentMetadata;
+  }
+
+  /**
+   * CCAI metadata relating to the current transcript segment.
+   * @param dialogflowSegmentMetadata dialogflowSegmentMetadata or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment setDialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata dialogflowSegmentMetadata) {
+    this.dialogflowSegmentMetadata = dialogflowSegmentMetadata;
+    return this;
+  }
+
+  /**
    * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
    * language tag. Example: "en-US".
    * @return value or {@code null} for none
@@ -136,6 +174,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
   }
 
   /**
+   * The time that the message occurred, if provided.
+   * @return value or {@code null} for none
+   */
+  public String getMessageTime() {
+    return messageTime;
+  }
+
+  /**
+   * The time that the message occurred, if provided.
+   * @param messageTime messageTime or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment setMessageTime(String messageTime) {
+    this.messageTime = messageTime;
+    return this;
+  }
+
+  /**
    * The participant of this segment.
    * @return value or {@code null} for none
    */
@@ -149,6 +204,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
    */
   public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment setSegmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipant segmentParticipant) {
     this.segmentParticipant = segmentParticipant;
+    return this;
+  }
+
+  /**
+   * The sentiment for this transcript segment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SentimentData getSentiment() {
+    return sentiment;
+  }
+
+  /**
+   * The sentiment for this transcript segment.
+   * @param sentiment sentiment or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment setSentiment(GoogleCloudContactcenterinsightsV1SentimentData sentiment) {
+    this.sentiment = sentiment;
     return this;
   }
 

@@ -65,7 +65,8 @@ public final class Schema extends com.google.api.client.json.GenericJson {
   private java.lang.String schemaId;
 
   /**
-   * The schema's name.
+   * The schema's name. Each `schema_name` must be unique within a customer. Reusing a name results
+   * in a `409: Entity already exists` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +158,8 @@ public final class Schema extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The schema's name.
+   * The schema's name. Each `schema_name` must be unique within a customer. Reusing a name results
+   * in a `409: Entity already exists` error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaName() {
@@ -165,7 +167,8 @@ public final class Schema extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The schema's name.
+   * The schema's name. Each `schema_name` must be unique within a customer. Reusing a name results
+   * in a `409: Entity already exists` error.
    * @param schemaName schemaName or {@code null} for none
    */
   public Schema setSchemaName(java.lang.String schemaName) {

@@ -86,6 +86,19 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String bootMode;
 
   /**
+   * Information regarding CPU specs in the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CpuInfo> cpuInfo;
+
+  static {
+    // hack to force ProGuard to consider CpuInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CpuInfo.class);
+  }
+
+  /**
    * Reports of CPU utilization and temperature (Read-only)
    * The value may be {@code null}.
    */
@@ -479,6 +492,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setBootMode(java.lang.String bootMode) {
     this.bootMode = bootMode;
+    return this;
+  }
+
+  /**
+   * Information regarding CPU specs in the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CpuInfo> getCpuInfo() {
+    return cpuInfo;
+  }
+
+  /**
+   * Information regarding CPU specs in the device.
+   * @param cpuInfo cpuInfo or {@code null} for none
+   */
+  public ChromeOsDevice setCpuInfo(java.util.List<CpuInfo> cpuInfo) {
+    this.cpuInfo = cpuInfo;
     return this;
   }
 
@@ -1130,6 +1160,311 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
       return (ActiveTimeRanges) super.clone();
     }
 
+  }
+
+  /**
+   * CPU specs for a CPU.
+   */
+  public static final class CpuInfo extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The CPU architecture.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String architecture;
+
+    /**
+     * Information for the Logical CPUs
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<LogicalCpus> logicalCpus;
+
+    static {
+      // hack to force ProGuard to consider LogicalCpus used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(LogicalCpus.class);
+    }
+
+    /**
+     * The max CPU clock speed in kHz.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Integer maxClockSpeedKhz;
+
+    /**
+     * The CPU model name.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String model;
+
+    /**
+     * The CPU architecture.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getArchitecture() {
+      return architecture;
+    }
+
+    /**
+     * The CPU architecture.
+     * @param architecture architecture or {@code null} for none
+     */
+    public CpuInfo setArchitecture(java.lang.String architecture) {
+      this.architecture = architecture;
+      return this;
+    }
+
+    /**
+     * Information for the Logical CPUs
+     * @return value or {@code null} for none
+     */
+    public java.util.List<LogicalCpus> getLogicalCpus() {
+      return logicalCpus;
+    }
+
+    /**
+     * Information for the Logical CPUs
+     * @param logicalCpus logicalCpus or {@code null} for none
+     */
+    public CpuInfo setLogicalCpus(java.util.List<LogicalCpus> logicalCpus) {
+      this.logicalCpus = logicalCpus;
+      return this;
+    }
+
+    /**
+     * The max CPU clock speed in kHz.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Integer getMaxClockSpeedKhz() {
+      return maxClockSpeedKhz;
+    }
+
+    /**
+     * The max CPU clock speed in kHz.
+     * @param maxClockSpeedKhz maxClockSpeedKhz or {@code null} for none
+     */
+    public CpuInfo setMaxClockSpeedKhz(java.lang.Integer maxClockSpeedKhz) {
+      this.maxClockSpeedKhz = maxClockSpeedKhz;
+      return this;
+    }
+
+    /**
+     * The CPU model name.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getModel() {
+      return model;
+    }
+
+    /**
+     * The CPU model name.
+     * @param model model or {@code null} for none
+     */
+    public CpuInfo setModel(java.lang.String model) {
+      this.model = model;
+      return this;
+    }
+
+    @Override
+    public CpuInfo set(String fieldName, Object value) {
+      return (CpuInfo) super.set(fieldName, value);
+    }
+
+    @Override
+    public CpuInfo clone() {
+      return (CpuInfo) super.clone();
+    }
+
+    /**
+     * Status of a single logical CPU.
+     */
+    public static final class LogicalCpus extends com.google.api.client.json.GenericJson {
+
+      /**
+       * C-States indicate the power consumption state of the CPU. For more information look at
+       * documentation published by the CPU maker.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<CStates> cStates;
+
+      static {
+        // hack to force ProGuard to consider CStates used, since otherwise it would be stripped out
+        // see https://github.com/google/google-api-java-client/issues/543
+        com.google.api.client.util.Data.nullOf(CStates.class);
+      }
+
+      /**
+       * Current frequency the CPU is running at.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer currentScalingFrequencyKhz;
+
+      /**
+       * Idle time since last boot.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private String idleDuration;
+
+      /**
+       * Maximum frequency the CPU is allowed to run at, by policy.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxScalingFrequencyKhz;
+
+      /**
+       * C-States indicate the power consumption state of the CPU. For more information look at
+       * documentation published by the CPU maker.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<CStates> getCStates() {
+        return cStates;
+      }
+
+      /**
+       * C-States indicate the power consumption state of the CPU. For more information look at
+       * documentation published by the CPU maker.
+       * @param cStates cStates or {@code null} for none
+       */
+      public LogicalCpus setCStates(java.util.List<CStates> cStates) {
+        this.cStates = cStates;
+        return this;
+      }
+
+      /**
+       * Current frequency the CPU is running at.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Integer getCurrentScalingFrequencyKhz() {
+        return currentScalingFrequencyKhz;
+      }
+
+      /**
+       * Current frequency the CPU is running at.
+       * @param currentScalingFrequencyKhz currentScalingFrequencyKhz or {@code null} for none
+       */
+      public LogicalCpus setCurrentScalingFrequencyKhz(java.lang.Integer currentScalingFrequencyKhz) {
+        this.currentScalingFrequencyKhz = currentScalingFrequencyKhz;
+        return this;
+      }
+
+      /**
+       * Idle time since last boot.
+       * @return value or {@code null} for none
+       */
+      public String getIdleDuration() {
+        return idleDuration;
+      }
+
+      /**
+       * Idle time since last boot.
+       * @param idleDuration idleDuration or {@code null} for none
+       */
+      public LogicalCpus setIdleDuration(String idleDuration) {
+        this.idleDuration = idleDuration;
+        return this;
+      }
+
+      /**
+       * Maximum frequency the CPU is allowed to run at, by policy.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Integer getMaxScalingFrequencyKhz() {
+        return maxScalingFrequencyKhz;
+      }
+
+      /**
+       * Maximum frequency the CPU is allowed to run at, by policy.
+       * @param maxScalingFrequencyKhz maxScalingFrequencyKhz or {@code null} for none
+       */
+      public LogicalCpus setMaxScalingFrequencyKhz(java.lang.Integer maxScalingFrequencyKhz) {
+        this.maxScalingFrequencyKhz = maxScalingFrequencyKhz;
+        return this;
+      }
+
+      @Override
+      public LogicalCpus set(String fieldName, Object value) {
+        return (LogicalCpus) super.set(fieldName, value);
+      }
+
+      @Override
+      public LogicalCpus clone() {
+        return (LogicalCpus) super.clone();
+      }
+
+      /**
+       * Status of a single C-state. C-states are various modes the CPU can transition to in order to use
+       * more or less power.
+       */
+      public static final class CStates extends com.google.api.client.json.GenericJson {
+
+        /**
+         * Name of the state.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String displayName;
+
+        /**
+         * Time spent in the state since the last reboot.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private String sessionDuration;
+
+        /**
+         * Name of the state.
+         * @return value or {@code null} for none
+         */
+        public java.lang.String getDisplayName() {
+          return displayName;
+        }
+
+        /**
+         * Name of the state.
+         * @param displayName displayName or {@code null} for none
+         */
+        public CStates setDisplayName(java.lang.String displayName) {
+          this.displayName = displayName;
+          return this;
+        }
+
+        /**
+         * Time spent in the state since the last reboot.
+         * @return value or {@code null} for none
+         */
+        public String getSessionDuration() {
+          return sessionDuration;
+        }
+
+        /**
+         * Time spent in the state since the last reboot.
+         * @param sessionDuration sessionDuration or {@code null} for none
+         */
+        public CStates setSessionDuration(String sessionDuration) {
+          this.sessionDuration = sessionDuration;
+          return this;
+        }
+
+        @Override
+        public CStates set(String fieldName, Object value) {
+          return (CStates) super.set(fieldName, value);
+        }
+
+        @Override
+        public CStates clone() {
+          return (CStates) super.clone();
+        }
+
+      }
+    }
   }
 
   /**

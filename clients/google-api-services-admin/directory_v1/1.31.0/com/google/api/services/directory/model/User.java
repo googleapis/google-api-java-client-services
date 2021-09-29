@@ -78,7 +78,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime creationTime;
 
   /**
-   * Custom fields of the user.
+   * Custom fields of the user. The key is a `schema_name` and its values are `'field_name':
+   * 'field_value'`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -501,7 +502,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom fields of the user.
+   * Custom fields of the user. The key is a `schema_name` and its values are `'field_name':
+   * 'field_value'`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.util.Map<String, java.lang.Object>> getCustomSchemas() {
@@ -509,7 +511,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom fields of the user.
+   * Custom fields of the user. The key is a `schema_name` and its values are `'field_name':
+   * 'field_value'`.
    * @param customSchemas customSchemas or {@code null} for none
    */
   public User setCustomSchemas(java.util.Map<String, java.util.Map<String, java.lang.Object>> customSchemas) {

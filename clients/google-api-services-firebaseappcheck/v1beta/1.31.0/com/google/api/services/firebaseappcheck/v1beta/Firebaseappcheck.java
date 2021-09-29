@@ -4617,7 +4617,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+       *        `firestore.googleapis.com` (Cloud Firestore)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4647,7 +4648,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+       *        `firestore.googleapis.com` (Cloud Firestore)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4730,7 +4732,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
          * must be a supported service ID. Currently, the following service IDs are supported: *
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+         * `firestore.googleapis.com` (Cloud Firestore)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -4739,7 +4742,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
        supported service ID. Currently, the following service IDs are supported: *
        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database)
+       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
          */
         public java.lang.String getName() {
           return name;
@@ -4750,7 +4753,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
          * must be a supported service ID. Currently, the following service IDs are supported: *
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+         * `firestore.googleapis.com` (Cloud Firestore)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4985,7 +4989,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+       *        `firestore.googleapis.com` (Cloud Firestore)
        * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaService}
        * @return the request
        */
@@ -5017,7 +5022,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+       *        `firestore.googleapis.com` (Cloud Firestore)
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaService}
          * @since 1.13
          */
@@ -5091,7 +5097,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id`
          * element must be a supported service ID. Currently, the following service IDs are
          * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+         * `firestore.googleapis.com` (Cloud Firestore)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -5100,7 +5107,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
        supported service ID. Currently, the following service IDs are supported: *
        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database)
+       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
          */
         public java.lang.String getName() {
           return name;
@@ -5111,7 +5118,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id`
          * element must be a supported service ID. Currently, the following service IDs are
          * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database)
+         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+         * `firestore.googleapis.com` (Cloud Firestore)
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

@@ -2497,7 +2497,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists entries.
+           * Lists entries. Note: Currently, this method can list only custom entries. To get a list of both
+           * custom and automatically created entries, use SearchCatalog.
            *
            * Create a request for the method "entries.list".
            *
@@ -2522,7 +2523,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists entries.
+             * Lists entries. Note: Currently, this method can list only custom entries. To get a list of both
+             * custom and automatically created entries, use SearchCatalog.
              *
              * Create a request for the method "entries.list".
              *

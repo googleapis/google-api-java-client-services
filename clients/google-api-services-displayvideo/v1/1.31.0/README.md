@@ -1,6 +1,6 @@
 # Display &amp; Video 360 API Client Library for Java
 
-Display & Video 360 API allows users to manage and create campaigns and reports.
+Display & Video 360 API allows users to automate complex Display & Video 360 workflows, such as creating insertion orders and setting targeting options for individual line items.
 
 This page contains information about getting started with the Display &amp; Video 360 API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-displayvideo</artifactId>
-      <version>v1-rev20210920-1.32.1</version>
+      <version>v1-rev20210930-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-displayvideo:v1-rev20210920-1.32.1'
+  compile 'com.google.apis:google-api-services-displayvideo:v1-rev20210930-1.32.1'
 }
 ```
 

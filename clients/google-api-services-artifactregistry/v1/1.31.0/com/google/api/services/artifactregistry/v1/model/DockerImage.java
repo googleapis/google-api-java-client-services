@@ -35,8 +35,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   /**
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
-   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
+   * easily used with the JavaScript Date constructor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +96,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   /**
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
-   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
+   * easily used with the JavaScript Date constructor.
    * @return value or {@code null} for none
    */
   public String getBuildTime() {
@@ -108,8 +106,7 @@ public final class DockerImage extends com.google.api.client.json.GenericJson {
   /**
    * The time this image was built. This field is returned as the 'metadata.buildTime' field in the
    * Version resource. The build time is returned to the client as an RFC 3339 string, which can be
-   * easily used with the JavaScript Date constructor and keeps the Version timestamps returned via
-   * OnePlatform consistent, as JSON marshals google.protobuf.Timestamp into an RFC 3339 string.
+   * easily used with the JavaScript Date constructor.
    * @param buildTime buildTime or {@code null} for none
    */
   public DockerImage setBuildTime(String buildTime) {

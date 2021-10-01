@@ -46,7 +46,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   private String endTime;
 
   /**
-   * Output only. Specifies the duration of the free trial of the subscription.
+   * Optional. Specifies the duration of the free trial of the subscription when promotion_type is
+   * PROMOTION_TYPE_FREE_TRIAL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   }
 
   /**
-   * Output only. Specifies the duration of the free trial of the subscription.
+   * Optional. Specifies the duration of the free trial of the subscription when promotion_type is
+   * PROMOTION_TYPE_FREE_TRIAL
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Duration getFreeTrialDuration() {
@@ -128,7 +130,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   }
 
   /**
-   * Output only. Specifies the duration of the free trial of the subscription.
+   * Optional. Specifies the duration of the free trial of the subscription when promotion_type is
+   * PROMOTION_TYPE_FREE_TRIAL
    * @param freeTrialDuration freeTrialDuration or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Promotion setFreeTrialDuration(GoogleCloudPaymentsResellerSubscriptionV1Duration freeTrialDuration) {

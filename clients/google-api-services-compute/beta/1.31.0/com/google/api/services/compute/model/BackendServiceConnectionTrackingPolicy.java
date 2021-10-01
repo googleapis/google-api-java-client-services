@@ -46,7 +46,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   private java.lang.String connectionPersistenceOnUnhealthyBackends;
 
   /**
-   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +55,9 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
-   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
-   * if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
+   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
+   * be supported only if the Connection Tracking key is less than 5-tuple.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStrongAffinity() {
@@ -116,7 +118,8 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   }
 
   /**
-   * Enable Strong Session Affinity. This is only available in External TCP/UDP load balancer.
+   * Enable Strong Session Affinity for Network Load Balancing. This option is not available
+   * publicly.
    * @param enableStrongAffinity enableStrongAffinity or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setEnableStrongAffinity(java.lang.Boolean enableStrongAffinity) {
@@ -126,9 +129,9 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
-   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
-   * if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
+   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
+   * be supported only if the Connection Tracking key is less than 5-tuple.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIdleTimeoutSec() {
@@ -137,9 +140,9 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
 
   /**
    * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
-   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For NLB the
-   * minimum(default) is 60 seconds and the maximum is 16 hours. This field will be supported only
-   * if the Connection Tracking key is less than 5-tuple.
+   * seconds). For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours. For Network
+   * Load Balancer the default is 60 seconds. This option is not available publicly. This field will
+   * be supported only if the Connection Tracking key is less than 5-tuple.
    * @param idleTimeoutSec idleTimeoutSec or {@code null} for none
    */
   public BackendServiceConnectionTrackingPolicy setIdleTimeoutSec(java.lang.Integer idleTimeoutSec) {

@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManager extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerAllInstancesConfig allInstancesConfig;
+
+  /**
    * The autohealing policy for this managed instance group. You can specify only one value.
    * The value may be {@code null}.
    */
@@ -265,6 +272,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerAllInstancesConfig getAllInstancesConfig() {
+    return allInstancesConfig;
+  }
+
+  /**
+   * Specifies the instances configs overrides that should be applied for all instances in the MIG.
+   * @param allInstancesConfig allInstancesConfig or {@code null} for none
+   */
+  public InstanceGroupManager setAllInstancesConfig(InstanceGroupManagerAllInstancesConfig allInstancesConfig) {
+    this.allInstancesConfig = allInstancesConfig;
+    return this;
+  }
 
   /**
    * The autohealing policy for this managed instance group. You can specify only one value.

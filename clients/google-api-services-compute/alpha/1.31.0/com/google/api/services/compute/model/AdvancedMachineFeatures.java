@@ -40,6 +40,13 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
+   * Whether to enable UEFI networking for instance creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableUefiNetworking;
+
+  /**
    * The number of vNUMA nodes.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
     this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * Whether to enable UEFI networking for instance creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableUefiNetworking() {
+    return enableUefiNetworking;
+  }
+
+  /**
+   * Whether to enable UEFI networking for instance creation.
+   * @param enableUefiNetworking enableUefiNetworking or {@code null} for none
+   */
+  public AdvancedMachineFeatures setEnableUefiNetworking(java.lang.Boolean enableUefiNetworking) {
+    this.enableUefiNetworking = enableUefiNetworking;
     return this;
   }
 

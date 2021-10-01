@@ -95,6 +95,13 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> natIps;
 
   /**
+   * A list of rules associated with this NAT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterNatRule> rules;
+
+  /**
    * Specify the Nat option, which can take one of the following values: -
    * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. -
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
@@ -122,6 +129,14 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer tcpEstablishedIdleTimeoutSec;
+
+  /**
+   * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer tcpTimeWaitTimeoutSec;
 
   /**
    * Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
@@ -286,6 +301,23 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of rules associated with this NAT.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterNatRule> getRules() {
+    return rules;
+  }
+
+  /**
+   * A list of rules associated with this NAT.
+   * @param rules rules or {@code null} for none
+   */
+  public RouterNat setRules(java.util.List<RouterNatRule> rules) {
+    this.rules = rules;
+    return this;
+  }
+
+  /**
    * Specify the Nat option, which can take one of the following values: -
    * ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. -
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
@@ -349,6 +381,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setTcpEstablishedIdleTimeoutSec(java.lang.Integer tcpEstablishedIdleTimeoutSec) {
     this.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
+    return this;
+  }
+
+  /**
+   * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not
+   * set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTcpTimeWaitTimeoutSec() {
+    return tcpTimeWaitTimeoutSec;
+  }
+
+  /**
+   * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not
+   * set.
+   * @param tcpTimeWaitTimeoutSec tcpTimeWaitTimeoutSec or {@code null} for none
+   */
+  public RouterNat setTcpTimeWaitTimeoutSec(java.lang.Integer tcpTimeWaitTimeoutSec) {
+    this.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
     return this;
   }
 

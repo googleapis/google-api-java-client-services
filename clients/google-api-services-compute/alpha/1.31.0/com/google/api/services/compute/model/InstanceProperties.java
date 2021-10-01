@@ -144,7 +144,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -462,7 +462,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -470,7 +470,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance.(will be deprecated soon)
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public InstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {

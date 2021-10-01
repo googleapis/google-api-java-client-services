@@ -41,6 +41,13 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowConflictingSubnetworks;
 
   /**
+   * [Output Only] AS path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouteAsPath> asPaths;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -180,6 +187,16 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.Long priority;
 
   /**
+   * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
+   * a transit route that this router learned from another Cloud Router and will readvertise to one
+   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
+   * from a BGP peer of this router - 'STATIC' for a static route
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routeType;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -232,6 +249,23 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setAllowConflictingSubnetworks(java.lang.Boolean allowConflictingSubnetworks) {
     this.allowConflictingSubnetworks = allowConflictingSubnetworks;
+    return this;
+  }
+
+  /**
+   * [Output Only] AS path.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouteAsPath> getAsPaths() {
+    return asPaths;
+  }
+
+  /**
+   * [Output Only] AS path.
+   * @param asPaths asPaths or {@code null} for none
+   */
+  public Route setAsPaths(java.util.List<RouteAsPath> asPaths) {
+    this.asPaths = asPaths;
     return this;
   }
 
@@ -561,6 +595,29 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setPriority(java.lang.Long priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
+   * a transit route that this router learned from another Cloud Router and will readvertise to one
+   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
+   * from a BGP peer of this router - 'STATIC' for a static route
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouteType() {
+    return routeType;
+  }
+
+  /**
+   * [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for
+   * a transit route that this router learned from another Cloud Router and will readvertise to one
+   * of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned
+   * from a BGP peer of this router - 'STATIC' for a static route
+   * @param routeType routeType or {@code null} for none
+   */
+  public Route setRouteType(java.lang.String routeType) {
+    this.routeType = routeType;
     return this;
   }
 

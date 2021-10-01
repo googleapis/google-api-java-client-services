@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Upcoming Maintenance notification information.
+ * Upcoming Maintenance notification information. TODO(b/196881882) Deprecate this proto once it's
+ * fully migrated to be under proto ResourceStatus.UpcomingMaintenance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

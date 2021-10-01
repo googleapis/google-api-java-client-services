@@ -331,29 +331,6 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceImageId;
 
   /**
-   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/inPlaceSnapshots/inPlaceSnapshots -
-   * projects/project/global/inPlaceSnapshots/inPlaceSnapshots -
-   * global/inPlaceSnapshots/inPlaceSnapshots
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sourceInPlaceSnapshot;
-
-  /**
-   * Deprecated The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sourceInPlaceSnapshotId;
-
-  /**
    * The source instant snapshot used to create this disk. You can provide this as a partial or full
    * URL to the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project/zones/zone
@@ -1188,58 +1165,6 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceImageId(java.lang.String sourceImageId) {
     this.sourceImageId = sourceImageId;
-    return this;
-  }
-
-  /**
-   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/inPlaceSnapshots/inPlaceSnapshots -
-   * projects/project/global/inPlaceSnapshots/inPlaceSnapshots -
-   * global/inPlaceSnapshots/inPlaceSnapshots
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSourceInPlaceSnapshot() {
-    return sourceInPlaceSnapshot;
-  }
-
-  /**
-   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
-   * partial or full URL to the resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project
-   * /global/inPlaceSnapshots/inPlaceSnapshots -
-   * projects/project/global/inPlaceSnapshots/inPlaceSnapshots -
-   * global/inPlaceSnapshots/inPlaceSnapshots
-   * @param sourceInPlaceSnapshot sourceInPlaceSnapshot or {@code null} for none
-   */
-  public Disk setSourceInPlaceSnapshot(java.lang.String sourceInPlaceSnapshot) {
-    this.sourceInPlaceSnapshot = sourceInPlaceSnapshot;
-    return this;
-  }
-
-  /**
-   * Deprecated The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSourceInPlaceSnapshotId() {
-    return sourceInPlaceSnapshotId;
-  }
-
-  /**
-   * Deprecated The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
-   * @param sourceInPlaceSnapshotId sourceInPlaceSnapshotId or {@code null} for none
-   */
-  public Disk setSourceInPlaceSnapshotId(java.lang.String sourceInPlaceSnapshotId) {
-    this.sourceInPlaceSnapshotId = sourceInPlaceSnapshotId;
     return this;
   }
 

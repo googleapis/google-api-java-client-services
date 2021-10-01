@@ -145,7 +145,7 @@ packages on [Maven Central][maven-search].
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
-| Gmail Postmain Tools API | [v1](clients/google-api-services-gmailpostmaintools/v1), [v1beta1](clients/google-api-services-gmailpostmaintools/v1beta1) |
+| Gmail Postmaster Tools API | [v1](clients/google-api-services-gmailpostmastertools/v1), [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Analytics Admin API | [v1alpha](clients/google-api-services-analyticsadmin/v1alpha) |
 | Google Analytics Data API | [v1beta](clients/google-api-services-analyticsdata/v1beta) |
@@ -217,7 +217,7 @@ packages on [Maven Central][maven-search].
 | SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
-| Search Console API | [v3](clients/google-api-services-webmains/v3) |
+| Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2) |
 | Security Token Service API | [v1](clients/google-api-services-sts/v1), [v1beta](clients/google-api-services-sts/v1beta) |

@@ -2881,7 +2881,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Deletes a view on a log bucket.
+           * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+           * is not in a state where it can delete the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.delete".
            *
@@ -2907,7 +2909,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Deletes a view on a log bucket.
+             * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+             * is not in a state where it can delete the view. If this occurs, please try again in a few
+             * minutes.
              *
              * Create a request for the method "views.delete".
              *
@@ -3225,7 +3229,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter.
+           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+           * system is not in a state where it can update the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -3253,7 +3259,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter.
+             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+             * system is not in a state where it can update the view. If this occurs, please try again in a
+             * few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -9417,7 +9425,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Deletes a view on a log bucket.
+           * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+           * is not in a state where it can delete the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.delete".
            *
@@ -9443,7 +9453,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Deletes a view on a log bucket.
+             * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+             * is not in a state where it can delete the view. If this occurs, please try again in a few
+             * minutes.
              *
              * Create a request for the method "views.delete".
              *
@@ -9913,7 +9925,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter.
+           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+           * system is not in a state where it can update the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -9941,7 +9955,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter.
+             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+             * system is not in a state where it can update the view. If this occurs, please try again in a
+             * few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -13861,7 +13877,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Deletes a view on a log bucket.
+         * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+         * is not in a state where it can delete the view. If this occurs, please try again in a few
+         * minutes.
          *
          * Create a request for the method "views.delete".
          *
@@ -13887,7 +13905,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
           /**
-           * Deletes a view on a log bucket.
+           * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+           * is not in a state where it can delete the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.delete".
            *
@@ -14357,7 +14377,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Updates a view on a log bucket. This method replaces the following fields in the existing view
-         * with values from the new view: filter.
+         * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+         * system is not in a state where it can update the view. If this occurs, please try again in a few
+         * minutes.
          *
          * Create a request for the method "views.patch".
          *
@@ -14385,7 +14407,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter.
+           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+           * system is not in a state where it can update the view. If this occurs, please try again in a
+           * few minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -18570,7 +18594,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Deletes a view on a log bucket.
+           * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+           * is not in a state where it can delete the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.delete".
            *
@@ -18596,7 +18622,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Deletes a view on a log bucket.
+             * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+             * is not in a state where it can delete the view. If this occurs, please try again in a few
+             * minutes.
              *
              * Create a request for the method "views.delete".
              *
@@ -19066,7 +19094,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter.
+           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+           * system is not in a state where it can update the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -19094,7 +19124,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter.
+             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+             * system is not in a state where it can update the view. If this occurs, please try again in a
+             * few minutes.
              *
              * Create a request for the method "views.patch".
              *
@@ -23923,7 +23955,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Deletes a view on a log bucket.
+           * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+           * is not in a state where it can delete the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.delete".
            *
@@ -23949,7 +23983,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Deletes a view on a log bucket.
+             * Deletes a view on a log bucket. If an UNAVAILABLE error is returned, this indicates that system
+             * is not in a state where it can delete the view. If this occurs, please try again in a few
+             * minutes.
              *
              * Create a request for the method "views.delete".
              *
@@ -24419,7 +24455,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Updates a view on a log bucket. This method replaces the following fields in the existing view
-           * with values from the new view: filter.
+           * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+           * system is not in a state where it can update the view. If this occurs, please try again in a few
+           * minutes.
            *
            * Create a request for the method "views.patch".
            *
@@ -24447,7 +24485,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Updates a view on a log bucket. This method replaces the following fields in the existing view
-             * with values from the new view: filter.
+             * with values from the new view: filter. If an UNAVAILABLE error is returned, this indicates that
+             * system is not in a state where it can update the view. If this occurs, please try again in a
+             * few minutes.
              *
              * Create a request for the method "views.patch".
              *

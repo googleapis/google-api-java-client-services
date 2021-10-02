@@ -38,7 +38,8 @@ public final class CustomerEncryptionKeyProtectedDisk extends com.google.api.cli
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is
-   * only applicable for persistent disks.
+   * only applicable for persistent disks. For example: "source":
+   * "/compute/v1/projects/project_id/zones/zone/disks/ disk_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +64,8 @@ public final class CustomerEncryptionKeyProtectedDisk extends com.google.api.cli
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is
-   * only applicable for persistent disks.
+   * only applicable for persistent disks. For example: "source":
+   * "/compute/v1/projects/project_id/zones/zone/disks/ disk_name
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -72,7 +74,8 @@ public final class CustomerEncryptionKeyProtectedDisk extends com.google.api.cli
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is
-   * only applicable for persistent disks.
+   * only applicable for persistent disks. For example: "source":
+   * "/compute/v1/projects/project_id/zones/zone/disks/ disk_name
    * @param source source or {@code null} for none
    */
   public CustomerEncryptionKeyProtectedDisk setSource(java.lang.String source) {

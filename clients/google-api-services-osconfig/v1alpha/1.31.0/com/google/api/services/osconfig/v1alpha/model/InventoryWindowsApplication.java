@@ -17,10 +17,8 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * Contains information about a Windows application as retrieved from the Windows Registry. For more
- * information about these fields, see [Windows Installer Properties for the Uninstall
- * Registry](https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key){:
- * class="external" }
+ * Contains information about a Windows application that is retrieved from the Windows Registry. For
+ * more information about these fields, see Windows Installer Properties for the Uninstall Registry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

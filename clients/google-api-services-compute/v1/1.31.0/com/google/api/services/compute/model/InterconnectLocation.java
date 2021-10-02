@@ -148,6 +148,14 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String status;
 
   /**
+   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
+   * false if the field is not present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsPzs;
+
+  /**
    * [Output Only] The postal address of the Point of Presence, each line in the address is
    * separated by a newline character.
    * @return value or {@code null} for none
@@ -421,6 +429,25 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
+   * false if the field is not present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsPzs() {
+    return supportsPzs;
+  }
+
+  /**
+   * [Output Only] Set to true for locations that support physical zone separation. Defaults to
+   * false if the field is not present.
+   * @param supportsPzs supportsPzs or {@code null} for none
+   */
+  public InterconnectLocation setSupportsPzs(java.lang.Boolean supportsPzs) {
+    this.supportsPzs = supportsPzs;
     return this;
   }
 

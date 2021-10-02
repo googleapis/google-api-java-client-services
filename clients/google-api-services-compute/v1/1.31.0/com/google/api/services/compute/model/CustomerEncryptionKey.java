@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class CustomerEncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS.
+   * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName":
+   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,7 +39,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used.
+   * Compute Engine default service account is used. For example: "kmsKeyServiceAccount":
+   * "name@project_id.iam.gserviceaccount.com/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +48,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource.
+   * encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For
+   * example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,11 +57,15 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. The key must meet the following requirements before
-   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
-   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
-   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
-   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * either encrypt or decrypt this resource. You can provide either the rawKey or the
+   * rsaEncryptedKey. For example: "rsaEncryptedKey":
+   * "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
+   * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
+   * D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the
+   * following requirements before you can provide it to Compute Engine: 1. The key is wrapped using
+   * a RSA public key certificate provided by Google. 2. After being wrapped, the key must be
+   * encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at:
+   * https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +80,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String sha256;
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS.
+   * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName":
+   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -81,7 +89,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the encryption key that is stored in Google Cloud KMS.
+   * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName":
+   * "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public CustomerEncryptionKey setKmsKeyName(java.lang.String kmsKeyName) {
@@ -91,7 +100,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used.
+   * Compute Engine default service account is used. For example: "kmsKeyServiceAccount":
+   * "name@project_id.iam.gserviceaccount.com/
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyServiceAccount() {
@@ -100,7 +110,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * The service account being used for the encryption request for the given KMS key. If absent, the
-   * Compute Engine default service account is used.
+   * Compute Engine default service account is used. For example: "kmsKeyServiceAccount":
+   * "name@project_id.iam.gserviceaccount.com/
    * @param kmsKeyServiceAccount kmsKeyServiceAccount or {@code null} for none
    */
   public CustomerEncryptionKey setKmsKeyServiceAccount(java.lang.String kmsKeyServiceAccount) {
@@ -110,7 +121,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource.
+   * encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For
+   * example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * @return value or {@code null} for none
    */
   public java.lang.String getRawKey() {
@@ -119,7 +131,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource.
+   * encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For
+   * example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * @param rawKey rawKey or {@code null} for none
    */
   public CustomerEncryptionKey setRawKey(java.lang.String rawKey) {
@@ -129,11 +142,15 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. The key must meet the following requirements before
-   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
-   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
-   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
-   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * either encrypt or decrypt this resource. You can provide either the rawKey or the
+   * rsaEncryptedKey. For example: "rsaEncryptedKey":
+   * "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
+   * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
+   * D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the
+   * following requirements before you can provide it to Compute Engine: 1. The key is wrapped using
+   * a RSA public key certificate provided by Google. 2. After being wrapped, the key must be
+   * encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at:
+   * https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
    * @return value or {@code null} for none
    */
   public java.lang.String getRsaEncryptedKey() {
@@ -142,11 +159,15 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. The key must meet the following requirements before
-   * you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate
-   * provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64
-   * encoding. Gets the RSA public key certificate provided by Google at: https://cloud-
-   * certs.storage.googleapis.com/google-cloud-csek-ingress.pem
+   * either encrypt or decrypt this resource. You can provide either the rawKey or the
+   * rsaEncryptedKey. For example: "rsaEncryptedKey":
+   * "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
+   * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
+   * D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the
+   * following requirements before you can provide it to Compute Engine: 1. The key is wrapped using
+   * a RSA public key certificate provided by Google. 2. After being wrapped, the key must be
+   * encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at:
+   * https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
    * @param rsaEncryptedKey rsaEncryptedKey or {@code null} for none
    */
   public CustomerEncryptionKey setRsaEncryptedKey(java.lang.String rsaEncryptedKey) {

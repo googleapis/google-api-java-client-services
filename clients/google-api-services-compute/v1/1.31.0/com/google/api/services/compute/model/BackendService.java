@@ -350,6 +350,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String sessionAffinity;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Subsetting subsetting;
+
+  /**
    * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
    * proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
    * The value may be {@code null}.
@@ -1098,6 +1104,21 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {
     this.sessionAffinity = sessionAffinity;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public Subsetting getSubsetting() {
+    return subsetting;
+  }
+
+  /**
+   * @param subsetting subsetting or {@code null} for none
+   */
+  public BackendService setSubsetting(Subsetting subsetting) {
+    this.subsetting = subsetting;
     return this;
   }
 

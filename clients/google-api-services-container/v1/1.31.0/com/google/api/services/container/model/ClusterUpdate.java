@@ -157,6 +157,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredMasterVersion;
 
   /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MeshCertificates desiredMeshCertificates;
+
+  /**
    * The desired monitoring configuration.
    * The value may be {@code null}.
    */
@@ -556,6 +563,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredMasterVersion(java.lang.String desiredMasterVersion) {
     this.desiredMasterVersion = desiredMasterVersion;
+    return this;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @return value or {@code null} for none
+   */
+  public MeshCertificates getDesiredMeshCertificates() {
+    return desiredMeshCertificates;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @param desiredMeshCertificates desiredMeshCertificates or {@code null} for none
+   */
+  public ClusterUpdate setDesiredMeshCertificates(MeshCertificates desiredMeshCertificates) {
+    this.desiredMeshCertificates = desiredMeshCertificates;
     return this;
   }
 

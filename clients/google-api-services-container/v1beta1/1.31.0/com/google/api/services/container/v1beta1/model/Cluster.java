@@ -339,6 +339,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String masterIpv4CidrBlock;
 
   /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MeshCertificates meshCertificates;
+
+  /**
    * Monitoring configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -1298,6 +1305,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMasterIpv4CidrBlock(java.lang.String masterIpv4CidrBlock) {
     this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @return value or {@code null} for none
+   */
+  public MeshCertificates getMeshCertificates() {
+    return meshCertificates;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @param meshCertificates meshCertificates or {@code null} for none
+   */
+  public Cluster setMeshCertificates(MeshCertificates meshCertificates) {
+    this.meshCertificates = meshCertificates;
     return this;
   }
 

@@ -308,6 +308,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig;
 
   /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MeshCertificates meshCertificates;
+
+  /**
    * Monitoring configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -1155,6 +1162,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {
     this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @return value or {@code null} for none
+   */
+  public MeshCertificates getMeshCertificates() {
+    return meshCertificates;
+  }
+
+  /**
+   * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+   * @param meshCertificates meshCertificates or {@code null} for none
+   */
+  public Cluster setMeshCertificates(MeshCertificates meshCertificates) {
+    this.meshCertificates = meshCertificates;
     return this;
   }
 

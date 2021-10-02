@@ -6867,6 +6867,154 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Creates or adds data to one or more service time series. A service time series is a time series
+       * for a metric from a Google Cloud service. The response is empty if all time series in the request
+       * were written. If any time series could not be written, a corresponding failure message is
+       * included in the error response. This endpoint rejects writes to user-defined metrics. This method
+       * is only for use by Google Cloud services. Use projects.timeSeries.create instead.
+       *
+       * Create a request for the method "timeSeries.createService".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link CreateService#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+       * @param content the {@link com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest}
+       * @return the request
+       */
+      public CreateService createService(java.lang.String name, com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest content) throws java.io.IOException {
+        CreateService result = new CreateService(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CreateService extends MonitoringRequest<com.google.api.services.monitoring.v3.model.Empty> {
+
+        private static final String REST_PATH = "v3/{+name}/timeSeries:createService";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates or adds data to one or more service time series. A service time series is a time series
+         * for a metric from a Google Cloud service. The response is empty if all time series in the
+         * request were written. If any time series could not be written, a corresponding failure message
+         * is included in the error response. This endpoint rejects writes to user-defined metrics. This
+         * method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
+         *
+         * Create a request for the method "timeSeries.createService".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link CreateService#execute()} method to invoke the remote
+         * operation. <p> {@link CreateService#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       *        the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         * @param content the {@link com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest}
+         * @since 1.13
+         */
+        protected CreateService(java.lang.String name, com.google.api.services.monitoring.v3.model.CreateTimeSeriesRequest content) {
+          super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v3.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public CreateService set$Xgafv(java.lang.String $Xgafv) {
+          return (CreateService) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CreateService setAccessToken(java.lang.String accessToken) {
+          return (CreateService) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CreateService setAlt(java.lang.String alt) {
+          return (CreateService) super.setAlt(alt);
+        }
+
+        @Override
+        public CreateService setCallback(java.lang.String callback) {
+          return (CreateService) super.setCallback(callback);
+        }
+
+        @Override
+        public CreateService setFields(java.lang.String fields) {
+          return (CreateService) super.setFields(fields);
+        }
+
+        @Override
+        public CreateService setKey(java.lang.String key) {
+          return (CreateService) super.setKey(key);
+        }
+
+        @Override
+        public CreateService setOauthToken(java.lang.String oauthToken) {
+          return (CreateService) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CreateService setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CreateService) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CreateService setQuotaUser(java.lang.String quotaUser) {
+          return (CreateService) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CreateService setUploadType(java.lang.String uploadType) {
+          return (CreateService) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CreateService setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CreateService) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute
+       the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name) on which
+         * to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
+         */
+        public CreateService setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public CreateService set(String parameterName, Object value) {
+          return (CreateService) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists time series that match a filter. This method does not require a Workspace.
        *
        * Create a request for the method "timeSeries.list".

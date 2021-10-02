@@ -631,6 +631,486 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
 
         }
         /**
+         * An accessor for creating requests from the OsPolicyAssignments collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.OsPolicyAssignments.List request = osconfig.osPolicyAssignments().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public OsPolicyAssignments osPolicyAssignments() {
+          return new OsPolicyAssignments();
+        }
+
+        /**
+         * The "osPolicyAssignments" collection of methods.
+         */
+        public class OsPolicyAssignments {
+
+          /**
+           * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+           *
+           * Create a request for the method "osPolicyAssignments.getReport".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link GetReport#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
+           *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
+           *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
+           *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
+           *        the OSPolicyAssignment id must be provided.
+           * @return the request
+           */
+          public GetReport getReport(java.lang.String name) throws java.io.IOException {
+            GetReport result = new GetReport(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetReport extends OSConfigRequest<com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+
+            /**
+             * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+             *
+             * Create a request for the method "osPolicyAssignments.getReport".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link GetReport#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetReport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
+           *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
+           *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
+           *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
+           *        the OSPolicyAssignment id must be provided.
+             * @since 1.13
+             */
+            protected GetReport(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetReport set$Xgafv(java.lang.String $Xgafv) {
+              return (GetReport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetReport setAccessToken(java.lang.String accessToken) {
+              return (GetReport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetReport setAlt(java.lang.String alt) {
+              return (GetReport) super.setAlt(alt);
+            }
+
+            @Override
+            public GetReport setCallback(java.lang.String callback) {
+              return (GetReport) super.setCallback(callback);
+            }
+
+            @Override
+            public GetReport setFields(java.lang.String fields) {
+              return (GetReport) super.setFields(fields);
+            }
+
+            @Override
+            public GetReport setKey(java.lang.String key) {
+              return (GetReport) super.setKey(key);
+            }
+
+            @Override
+            public GetReport setOauthToken(java.lang.String oauthToken) {
+              return (GetReport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetReport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetReport setQuotaUser(java.lang.String quotaUser) {
+              return (GetReport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetReport setUploadType(java.lang.String uploadType) {
+              return (GetReport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetReport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetReport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. API resource name for OS policy assignment report. Format: `/projects/{proj
+             * ect}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/repor
+             * t` For `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
+             * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations
+           /{location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`, either
+           `project-number` or `project-id` can be provided. For `{instance_id}`, either Compute Engine
+           `instance-id` or `instance-name` can be provided. For `{assignment_id}`, the OSPolicyAssignment id
+           must be provided.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. API resource name for OS policy assignment report. Format: `/projects/{proj
+             * ect}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/repor
+             * t` For `{project}`, either `project-number` or `project-id` can be provided. For
+             * `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
+             * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+             */
+            public GetReport setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetReport set(String parameterName, Object value) {
+              return (GetReport) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Reports collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code OSConfig osconfig = new OSConfig(...);}
+           *   {@code OSConfig.Reports.List request = osconfig.reports().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Reports reports() {
+            return new Reports();
+          }
+
+          /**
+           * The "reports" collection of methods.
+           */
+          public class Reports {
+
+            /**
+             * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
+             *
+             * Create a request for the method "reports.list".
+             *
+             * This request holds the parameters needed by the osconfig server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/{inst
+             *        ance}/osPolicyAssignments/{assignment}/reports` For `{project}`, either `project-number`
+             *        or `project-id` can be provided. For `{instance}`, either `instance-name`, `instance-id`,
+             *        or `-` can be provided. If '-' is provided, the response will include
+             *        OSPolicyAssignmentReports for all instances in the project/location. For `{assignment}`,
+             *        either `assignment-id` or `-` can be provided. If '-' is provided, the response will
+             *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
+             *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
+             *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
+             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
+             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
+             *        instances.
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+             *        returns all the reports for all assignments across all instances.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentReportsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/reports";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+$");
+
+              /**
+               * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
+               *
+               * Create a request for the method "reports.list".
+               *
+               * This request holds the parameters needed by the the osconfig server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/{inst
+             *        ance}/osPolicyAssignments/{assignment}/reports` For `{project}`, either `project-number`
+             *        or `project-id` can be provided. For `{instance}`, either `instance-name`, `instance-id`,
+             *        or `-` can be provided. If '-' is provided, the response will include
+             *        OSPolicyAssignmentReports for all instances in the project/location. For `{assignment}`,
+             *        either `assignment-id` or `-` can be provided. If '-' is provided, the response will
+             *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
+             *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
+             *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
+             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
+             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
+             *        instances.
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+             *        returns all the reports for all assignments across all instances.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ListOSPolicyAssignmentReportsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource name. Format: `projects/{project}/locations/{location
+               * }/instances/{instance}/osPolicyAssignments/{assignment}/reports` For `{project}`,
+               * either `project-number` or `project-id` can be provided. For `{instance}`, either
+               * `instance-name`, `instance-id`, or `-` can be provided. If '-' is provided, the
+               * response will include OSPolicyAssignmentReports for all instances in the
+               * project/location. For `{assignment}`, either `assignment-id` or `-` can be
+               * provided. If '-' is provided, the response will include OSPolicyAssignmentReports
+               * for all OSPolicyAssignments in the project/location. Either {instance} or
+               * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
+               * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
+               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
+               * /{assignment-id}/reports` returns all the reports for the given assignment across
+               * all instances.
+               * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+               * returns all the reports for all assignments across all instances.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource name. Format: `projects/{project}/locations/{location}/instances/{ins
+             tance}/osPolicyAssignments/{assignment}/reports` For `{project}`, either `project-number` or
+             `project-id` can be provided. For `{instance}`, either `instance-name`, `instance-id`, or `-` can
+             be provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all
+             instances in the project/location. For `{assignment}`, either `assignment-id` or `-` can be
+             provided. If '-' is provided, the response will include OSPolicyAssignmentReports for all
+             OSPolicyAssignments in the project/location. Either {instance} or {assignment} must be `-`. For
+             example:
+             `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+             returns all reports for the instance
+             `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+             returns all the reports for the given assignment across all instances.
+             `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports` returns all the
+             reports for all assignments across all instances.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource name. Format: `projects/{project}/locations/{location
+               * }/instances/{instance}/osPolicyAssignments/{assignment}/reports` For `{project}`,
+               * either `project-number` or `project-id` can be provided. For `{instance}`, either
+               * `instance-name`, `instance-id`, or `-` can be provided. If '-' is provided, the
+               * response will include OSPolicyAssignmentReports for all instances in the
+               * project/location. For `{assignment}`, either `assignment-id` or `-` can be
+               * provided. If '-' is provided, the response will include OSPolicyAssignmentReports
+               * for all OSPolicyAssignments in the project/location. Either {instance} or
+               * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
+               * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
+               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
+               * /{assignment-id}/reports` returns all the reports for the given assignment across
+               * all instances.
+               * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+               * returns all the reports for all assignments across all instances.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * If provided, this field specifies the criteria that must be met by the
+               * `OSPolicyAssignmentReport` API resource that is included in the response.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** If provided, this field specifies the criteria that must be met by the `OSPolicyAssignmentReport`
+             API resource that is included in the response.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * If provided, this field specifies the criteria that must be met by the
+               * `OSPolicyAssignmentReport` API resource that is included in the response.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** The maximum number of results to return. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of results to return.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** The maximum number of results to return. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A pagination token returned from a previous call to the
+               * `ListOSPolicyAssignmentReports` method that indicates where this listing should
+               * continue from.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A pagination token returned from a previous call to the `ListOSPolicyAssignmentReports` method that
+             indicates where this listing should continue from.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A pagination token returned from a previous call to the
+               * `ListOSPolicyAssignmentReports` method that indicates where this listing should
+               * continue from.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
          * An accessor for creating requests from the VulnerabilityReports collection.
          *
          * <p>The typical use is:</p>
@@ -2039,6 +2519,311 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
         }
 
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.Operations.List request = osconfig.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.osconfig.v1.model.CancelOperationRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.osconfig.v1.model.CancelOperationRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+
+            /**
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @param content the {@link com.google.api.services.osconfig.v1.model.CancelOperationRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.osconfig.v1.model.CancelOperationRequest content) {
+              super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be cancelled.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
     /**

@@ -255,6 +255,14 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String router;
 
   /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -813,6 +821,25 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setRouter(java.lang.String router) {
     this.router = router;
+    return this;
+  }
+
+  /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public InterconnectAttachment setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

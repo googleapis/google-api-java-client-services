@@ -198,6 +198,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.Integer requestedLinkCount;
 
   /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -605,6 +613,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setRequestedLinkCount(java.lang.Integer requestedLinkCount) {
     this.requestedLinkCount = requestedLinkCount;
+    return this;
+  }
+
+  /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Set to true if the resource satisfies the zone separation organization policy
+   * constraints and false otherwise. Defaults to false if the field is not present.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Interconnect setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

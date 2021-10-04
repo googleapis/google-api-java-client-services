@@ -2181,6 +2181,241 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * Lists Memberships of admin clusters in a given project and location. **This method is only used
+         * internally**.
+         *
+         * Create a request for the method "memberships.listAdmin".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ListAdmin#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent (project and location) where the Memberships of admin cluster will be listed.
+         *        Specified in the format `projects/locations`.
+         * @return the request
+         */
+        public ListAdmin listAdmin(java.lang.String parent) throws java.io.IOException {
+          ListAdmin result = new ListAdmin(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListAdmin extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ListAdminClusterMembershipsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/memberships:listAdmin";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Memberships of admin clusters in a given project and location. **This method is only used
+           * internally**.
+           *
+           * Create a request for the method "memberships.listAdmin".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ListAdmin#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * ListAdmin#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent (project and location) where the Memberships of admin cluster will be listed.
+         *        Specified in the format `projects/locations`.
+           * @since 1.13
+           */
+          protected ListAdmin(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.ListAdminClusterMembershipsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListAdmin set$Xgafv(java.lang.String $Xgafv) {
+            return (ListAdmin) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListAdmin setAccessToken(java.lang.String accessToken) {
+            return (ListAdmin) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListAdmin setAlt(java.lang.String alt) {
+            return (ListAdmin) super.setAlt(alt);
+          }
+
+          @Override
+          public ListAdmin setCallback(java.lang.String callback) {
+            return (ListAdmin) super.setCallback(callback);
+          }
+
+          @Override
+          public ListAdmin setFields(java.lang.String fields) {
+            return (ListAdmin) super.setFields(fields);
+          }
+
+          @Override
+          public ListAdmin setKey(java.lang.String key) {
+            return (ListAdmin) super.setKey(key);
+          }
+
+          @Override
+          public ListAdmin setOauthToken(java.lang.String oauthToken) {
+            return (ListAdmin) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListAdmin setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListAdmin) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListAdmin setQuotaUser(java.lang.String quotaUser) {
+            return (ListAdmin) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListAdmin setUploadType(java.lang.String uploadType) {
+            return (ListAdmin) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListAdmin setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListAdmin) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships of admin cluster will
+           * be listed. Specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent (project and location) where the Memberships of admin cluster will be listed.
+         Specified in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships of admin cluster will
+           * be listed. Specified in the format `projects/locations`.
+           */
+          public ListAdmin setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Lists Memberships of admin clusters that match the filter expression. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists Memberships of admin clusters that match the filter expression.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Lists Memberships of admin clusters that match the filter expression. */
+          public ListAdmin setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. One or more fields to compare and use to sort the output. See
+           * https://google.aip.dev/132#ordering.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. One or more fields to compare and use to sort the output. See
+         https://google.aip.dev/132#ordering.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. One or more fields to compare and use to sort the output. See
+           * https://google.aip.dev/132#ordering.
+           */
+          public ListAdmin setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. When requesting a 'page' of resources, `page_size` specifies number of resources to
+         return. If unspecified or set to 0, all resources will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          public ListAdmin setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListAdminClusterMemberships` which
+           * specifies the position in the list from where to continue listing the resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token returned by previous call to `ListAdminClusterMemberships` which specifies the
+         position in the list from where to continue listing the resources.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListAdminClusterMemberships` which
+           * specifies the position in the list from where to continue listing the resources.
+           */
+          public ListAdmin setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListAdmin set(String parameterName, Object value) {
+            return (ListAdmin) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *

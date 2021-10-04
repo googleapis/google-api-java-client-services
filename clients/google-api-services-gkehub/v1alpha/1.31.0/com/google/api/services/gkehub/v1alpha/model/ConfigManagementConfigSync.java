@@ -30,6 +30,16 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementConfigSync extends com.google.api.client.json.GenericJson {
 
   /**
+   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
+   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
+   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
+   * will be managed depends on the presence of git field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabled;
+
+  /**
    * Git repo configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -37,18 +47,34 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private ConfigManagementGitConfig git;
 
   /**
-   * Specifies CPU and memory limits for containers, keyed by container name
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, ConfigManagementContainerResourceRequirements> resourceRequirements;
-
-  /**
    * Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceFormat;
+
+  /**
+   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
+   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
+   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
+   * will be managed depends on the presence of git field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabled() {
+    return enabled;
+  }
+
+  /**
+   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
+   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
+   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
+   * will be managed depends on the presence of git field.
+   * @param enabled enabled or {@code null} for none
+   */
+  public ConfigManagementConfigSync setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
+    return this;
+  }
 
   /**
    * Git repo configuration for the cluster.
@@ -64,23 +90,6 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setGit(ConfigManagementGitConfig git) {
     this.git = git;
-    return this;
-  }
-
-  /**
-   * Specifies CPU and memory limits for containers, keyed by container name
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, ConfigManagementContainerResourceRequirements> getResourceRequirements() {
-    return resourceRequirements;
-  }
-
-  /**
-   * Specifies CPU and memory limits for containers, keyed by container name
-   * @param resourceRequirements resourceRequirements or {@code null} for none
-   */
-  public ConfigManagementConfigSync setResourceRequirements(java.util.Map<String, ConfigManagementContainerResourceRequirements> resourceRequirements) {
-    this.resourceRequirements = resourceRequirements;
     return this;
   }
 

@@ -44,13 +44,6 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   private java.lang.String httpsProxy;
 
   /**
-   * Enable or disable the SSL certificate verification Default: false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean noSslVerify;
-
-  /**
    * The path within the Git repository that represents the top level of the repo to sync. Default:
    * the root directory of the repository.
    * The value may be {@code null}.
@@ -71,13 +64,6 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncBranch;
-
-  /**
-   * The depth of git commits synced by the git-sync container.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long syncDepth;
 
   /**
    * The URL of the Git repository to use as the source of truth.
@@ -135,23 +121,6 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Enable or disable the SSL certificate verification Default: false.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getNoSslVerify() {
-    return noSslVerify;
-  }
-
-  /**
-   * Enable or disable the SSL certificate verification Default: false.
-   * @param noSslVerify noSslVerify or {@code null} for none
-   */
-  public ConfigManagementGitConfig setNoSslVerify(java.lang.Boolean noSslVerify) {
-    this.noSslVerify = noSslVerify;
-    return this;
-  }
-
-  /**
    * The path within the Git repository that represents the top level of the repo to sync. Default:
    * the root directory of the repository.
    * @return value or {@code null} for none
@@ -201,23 +170,6 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
    */
   public ConfigManagementGitConfig setSyncBranch(java.lang.String syncBranch) {
     this.syncBranch = syncBranch;
-    return this;
-  }
-
-  /**
-   * The depth of git commits synced by the git-sync container.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getSyncDepth() {
-    return syncDepth;
-  }
-
-  /**
-   * The depth of git commits synced by the git-sync container.
-   * @param syncDepth syncDepth or {@code null} for none
-   */
-  public ConfigManagementGitConfig setSyncDepth(java.lang.Long syncDepth) {
-    this.syncDepth = syncDepth;
     return this;
   }
 

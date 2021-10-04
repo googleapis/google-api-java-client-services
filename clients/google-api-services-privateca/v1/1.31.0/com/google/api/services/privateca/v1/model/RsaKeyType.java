@@ -31,24 +31,24 @@ package com.google.api.services.privateca.v1.model;
 public final class RsaKeyType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service will not enforce an explicit upper bound on RSA modulus sizes.
+   * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxModulusSize;
 
   /**
-   * Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service-level min RSA modulus size will continue to apply.
+   * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service-level min RSA modulus size will continue to apply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minModulusSize;
 
   /**
-   * Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service will not enforce an explicit upper bound on RSA modulus sizes.
+   * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxModulusSize() {
@@ -56,8 +56,8 @@ public final class RsaKeyType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service will not enforce an explicit upper bound on RSA modulus sizes.
+   * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
    * @param maxModulusSize maxModulusSize or {@code null} for none
    */
   public RsaKeyType setMaxModulusSize(java.lang.Long maxModulusSize) {
@@ -66,8 +66,8 @@ public final class RsaKeyType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service-level min RSA modulus size will continue to apply.
+   * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service-level min RSA modulus size will continue to apply.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinModulusSize() {
@@ -75,8 +75,8 @@ public final class RsaKeyType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The minimum allowed RSA modulus size, in bits. If this is not set, or if set to zero,
-   * the service-level min RSA modulus size will continue to apply.
+   * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if
+   * set to zero, the service-level min RSA modulus size will continue to apply.
    * @param minModulusSize minModulusSize or {@code null} for none
    */
   public RsaKeyType setMinModulusSize(java.lang.Long minModulusSize) {

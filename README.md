@@ -111,6 +111,7 @@ packages on [Maven Central][maven-search].
 | Cloud Video Intelligence API | [v1](clients/google-api-services-videointelligence/v1), [v1beta2](clients/google-api-services-videointelligence/v1beta2), [v1p1beta1](clients/google-api-services-videointelligence/v1p1beta1), [v1p2beta1](clients/google-api-services-videointelligence/v1p2beta1), [v1p3beta1](clients/google-api-services-videointelligence/v1p3beta1) |
 | Cloud Vision API | [v1](clients/google-api-services-vision/v1), [v1p1beta1](clients/google-api-services-vision/v1p1beta1), [v1p2beta1](clients/google-api-services-vision/v1p2beta1) |
 | Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |
+| Connectors API | [v1](clients/google-api-services-connectors/v1) |
 | Contact Center AI Insights API | [v1](clients/google-api-services-contactcenterinsights/v1) |
 | Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |

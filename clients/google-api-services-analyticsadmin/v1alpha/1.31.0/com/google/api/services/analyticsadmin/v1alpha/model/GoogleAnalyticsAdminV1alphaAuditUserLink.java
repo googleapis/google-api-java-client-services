@@ -31,7 +31,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * Roles directly assigned to this user for this entity. Format: predefinedRoles/read Excludes
+   * Roles directly assigned to this user for this entity. Format: predefinedRoles/viewer Excludes
    * roles that are inherited from an account (if this is for a property), group, or organization
    * admin role.
    * The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.a
 
   /**
    * Union of all permissions a user has at this account or property (includes direct permissions,
-   * group-inherited permissions, etc.). Format: predefinedRoles/read
+   * group-inherited permissions, etc.). Format: predefinedRoles/viewer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.a
   private java.lang.String name;
 
   /**
-   * Roles directly assigned to this user for this entity. Format: predefinedRoles/read Excludes
+   * Roles directly assigned to this user for this entity. Format: predefinedRoles/viewer Excludes
    * roles that are inherited from an account (if this is for a property), group, or organization
    * admin role.
    * @return value or {@code null} for none
@@ -72,7 +72,7 @@ public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.a
   }
 
   /**
-   * Roles directly assigned to this user for this entity. Format: predefinedRoles/read Excludes
+   * Roles directly assigned to this user for this entity. Format: predefinedRoles/viewer Excludes
    * roles that are inherited from an account (if this is for a property), group, or organization
    * admin role.
    * @param directRoles directRoles or {@code null} for none
@@ -84,7 +84,7 @@ public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.a
 
   /**
    * Union of all permissions a user has at this account or property (includes direct permissions,
-   * group-inherited permissions, etc.). Format: predefinedRoles/read
+   * group-inherited permissions, etc.). Format: predefinedRoles/viewer
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEffectiveRoles() {
@@ -93,7 +93,7 @@ public final class GoogleAnalyticsAdminV1alphaAuditUserLink extends com.google.a
 
   /**
    * Union of all permissions a user has at this account or property (includes direct permissions,
-   * group-inherited permissions, etc.). Format: predefinedRoles/read
+   * group-inherited permissions, etc.). Format: predefinedRoles/viewer
    * @param effectiveRoles effectiveRoles or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAuditUserLink setEffectiveRoles(java.util.List<java.lang.String> effectiveRoles) {

@@ -156,8 +156,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
    * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
-   * Merchant Center property
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
+   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
+   * thrown. Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * The value may be {@code null}.
    */
@@ -677,8 +678,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
    * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
-   * Merchant Center property
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
+   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
+   * thrown. Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @return value or {@code null} for none
    */
@@ -689,8 +691,9 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   /**
    * The timestamp when this product becomes unavailable for SearchService.Search. If it is set, the
    * Product is not available for SearchService.Search after expire_time. However, the product can
-   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. Google
-   * Merchant Center property
+   * still be retrieved by ProductService.GetProduct and ProductService.ListProducts. expire_time
+   * must be later than available_time and publish_time, otherwise an INVALID_ARGUMENT error is
+   * thrown. Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * @param expireTime expireTime or {@code null} for none
    */

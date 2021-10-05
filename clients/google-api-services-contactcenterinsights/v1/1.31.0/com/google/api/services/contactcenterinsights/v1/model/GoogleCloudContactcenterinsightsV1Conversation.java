@@ -104,7 +104,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private GoogleCloudContactcenterinsightsV1Analysis latestAnalysis;
 
   /**
-   * Immutable. The conversation medium.
+   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,7 +338,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   }
 
   /**
-   * Immutable. The conversation medium.
+   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -346,7 +346,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   }
 
   /**
-   * Immutable. The conversation medium.
+   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
    * @param medium medium or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1Conversation setMedium(java.lang.String medium) {

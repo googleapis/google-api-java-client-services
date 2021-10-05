@@ -17,7 +17,7 @@
 package com.google.api.services.policytroubleshooter.v1.model;
 
 /**
- * Information about the member, resource, and permission to check.
+ * Information about the principal, resource, and permission to check.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Troubleshooter API. For a detailed explanation
@@ -41,7 +41,7 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   private java.lang.String fullResourceName;
 
   /**
-   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * Required. The IAM permission to check for the specified principal and resource. For a complete
    * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
    * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
@@ -51,10 +51,10 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   private java.lang.String permission;
 
   /**
-   * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * Required. The principal whose access you want to check, in the form of the email address that
+   * represents that principal. For example, `alice@example.com` or `my-service-account@my-
+   * project.iam.gserviceaccount.com`. The principal must be a Google Account or a service account.
+   * Other types of principals are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   }
 
   /**
-   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * Required. The IAM permission to check for the specified principal and resource. For a complete
    * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
    * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
@@ -95,7 +95,7 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   }
 
   /**
-   * Required. The IAM permission to check for the specified member and resource. For a complete
+   * Required. The IAM permission to check for the specified principal and resource. For a complete
    * list of IAM permissions, see https://cloud.google.com/iam/help/permissions/reference. For a
    * complete list of predefined IAM roles and the permissions in each role, see
    * https://cloud.google.com/iam/help/roles/reference.
@@ -107,10 +107,10 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   }
 
   /**
-   * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * Required. The principal whose access you want to check, in the form of the email address that
+   * represents that principal. For example, `alice@example.com` or `my-service-account@my-
+   * project.iam.gserviceaccount.com`. The principal must be a Google Account or a service account.
+   * Other types of principals are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -118,10 +118,10 @@ public final class GoogleCloudPolicytroubleshooterV1AccessTuple extends com.goog
   }
 
   /**
-   * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * Required. The principal whose access you want to check, in the form of the email address that
+   * represents that principal. For example, `alice@example.com` or `my-service-account@my-
+   * project.iam.gserviceaccount.com`. The principal must be a Google Account or a service account.
+   * Other types of principals are not supported.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1AccessTuple setPrincipal(java.lang.String principal) {

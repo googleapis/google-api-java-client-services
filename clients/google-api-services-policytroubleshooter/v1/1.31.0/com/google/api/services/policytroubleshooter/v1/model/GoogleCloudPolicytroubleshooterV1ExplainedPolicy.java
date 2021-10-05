@@ -31,10 +31,10 @@ package com.google.api.services.policytroubleshooter.v1.model;
 public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
@@ -42,8 +42,8 @@ public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.
   private java.lang.String access;
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the sender of the request does not have access to the
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the sender of the request does not have access to the
    * policy, this field is omitted.
    * The value may be {@code null}.
    */
@@ -84,10 +84,10 @@ public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.
   private java.lang.String relevance;
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
@@ -96,10 +96,10 @@ public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.
   }
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
@@ -109,8 +109,8 @@ public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.
   }
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the sender of the request does not have access to the
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the sender of the request does not have access to the
    * policy, this field is omitted.
    * @return value or {@code null} for none
    */
@@ -119,8 +119,8 @@ public final class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends com.
   }
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the sender of the request does not have access to the
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the sender of the request does not have access to the
    * policy, this field is omitted.
    * @param bindingExplanations bindingExplanations or {@code null} for none
    */

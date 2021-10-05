@@ -31,14 +31,14 @@ package com.google.api.services.policytroubleshooter.v1.model;
 public final class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The information to use for checking whether a member has a permission for a resource.
+   * The information to use for checking whether a principal has a permission for a resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicytroubleshooterV1AccessTuple accessTuple;
 
   /**
-   * The information to use for checking whether a member has a permission for a resource.
+   * The information to use for checking whether a principal has a permission for a resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1AccessTuple getAccessTuple() {
@@ -46,7 +46,7 @@ public final class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest
   }
 
   /**
-   * The information to use for checking whether a member has a permission for a resource.
+   * The information to use for checking whether a principal has a permission for a resource.
    * @param accessTuple accessTuple or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest setAccessTuple(GoogleCloudPolicytroubleshooterV1AccessTuple accessTuple) {

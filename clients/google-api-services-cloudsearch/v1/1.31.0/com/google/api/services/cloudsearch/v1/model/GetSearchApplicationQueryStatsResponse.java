@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Model definition for GetSearchApplicationQueryStatsResponse.
+ * Response format for getting query stats at a search application level between given dates.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GetSearchApplicationQueryStatsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Search application level query stats per date
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SearchApplicationQueryStats> stats;
 
   /**
+   * Search application level query stats per date
    * @return value or {@code null} for none
    */
   public java.util.List<SearchApplicationQueryStats> getStats() {
@@ -43,6 +45,7 @@ public final class GetSearchApplicationQueryStatsResponse extends com.google.api
   }
 
   /**
+   * Search application level query stats per date
    * @param stats stats or {@code null} for none
    */
   public GetSearchApplicationQueryStatsResponse setStats(java.util.List<SearchApplicationQueryStats> stats) {

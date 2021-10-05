@@ -699,13 +699,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListCreativesResponse.nextPageToken returned from the previous call to the
-         * 'ListCreatives' method.
+         * 'ListCreatives' method. Page tokens for continued pages are valid for up to five hours,
+         * counting from the call to 'ListCreatives' for the first page.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** A token identifying a page of results the server should return. Typically, this is the value of
        ListCreativesResponse.nextPageToken returned from the previous call to the 'ListCreatives' method.
+       Page tokens for continued pages are valid for up to five hours, counting from the call to
+       'ListCreatives' for the first page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -714,7 +717,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListCreativesResponse.nextPageToken returned from the previous call to the
-         * 'ListCreatives' method.
+         * 'ListCreatives' method. Page tokens for continued pages are valid for up to five hours,
+         * counting from the call to 'ListCreatives' for the first page.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -4249,13 +4253,16 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListCreativesResponse.nextPageToken returned from the previous call to the
-         * 'ListCreatives' method.
+         * 'ListCreatives' method. Page tokens for continued pages are valid for up to five hours,
+         * counting from the call to 'ListCreatives' for the first page.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** A token identifying a page of results the server should return. Typically, this is the value of
        ListCreativesResponse.nextPageToken returned from the previous call to the 'ListCreatives' method.
+       Page tokens for continued pages are valid for up to five hours, counting from the call to
+       'ListCreatives' for the first page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -4264,7 +4271,8 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListCreativesResponse.nextPageToken returned from the previous call to the
-         * 'ListCreatives' method.
+         * 'ListCreatives' method. Page tokens for continued pages are valid for up to five hours,
+         * counting from the call to 'ListCreatives' for the first page.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

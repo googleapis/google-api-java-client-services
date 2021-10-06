@@ -2892,6 +2892,142 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
   public class Properties {
 
     /**
+     * Acknowledges the terms of user data collection for the specified property. This acknowledgement
+     * must be completed (either in the Google Analytics UI or via this API) before
+     * MeasurementProtocolSecret resources may be created.
+     *
+     * Create a request for the method "properties.acknowledgeUserDataCollection".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link AcknowledgeUserDataCollection#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param property Required. The property for which to acknowledge user data collection.
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest}
+     * @return the request
+     */
+    public AcknowledgeUserDataCollection acknowledgeUserDataCollection(java.lang.String property, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest content) throws java.io.IOException {
+      AcknowledgeUserDataCollection result = new AcknowledgeUserDataCollection(property, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AcknowledgeUserDataCollection extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+property}:acknowledgeUserDataCollection";
+
+      private final java.util.regex.Pattern PROPERTY_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+      /**
+       * Acknowledges the terms of user data collection for the specified property. This acknowledgement
+       * must be completed (either in the Google Analytics UI or via this API) before
+       * MeasurementProtocolSecret resources may be created.
+       *
+       * Create a request for the method "properties.acknowledgeUserDataCollection".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link AcknowledgeUserDataCollection#execute()} method to invoke
+       * the remote operation. <p> {@link AcknowledgeUserDataCollection#initialize(com.google.api.client
+       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param property Required. The property for which to acknowledge user data collection.
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest}
+       * @since 1.13
+       */
+      protected AcknowledgeUserDataCollection(java.lang.String property, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse.class);
+        this.property = com.google.api.client.util.Preconditions.checkNotNull(property, "Required parameter property must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection set$Xgafv(java.lang.String $Xgafv) {
+        return (AcknowledgeUserDataCollection) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setAccessToken(java.lang.String accessToken) {
+        return (AcknowledgeUserDataCollection) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setAlt(java.lang.String alt) {
+        return (AcknowledgeUserDataCollection) super.setAlt(alt);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setCallback(java.lang.String callback) {
+        return (AcknowledgeUserDataCollection) super.setCallback(callback);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setFields(java.lang.String fields) {
+        return (AcknowledgeUserDataCollection) super.setFields(fields);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setKey(java.lang.String key) {
+        return (AcknowledgeUserDataCollection) super.setKey(key);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setOauthToken(java.lang.String oauthToken) {
+        return (AcknowledgeUserDataCollection) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AcknowledgeUserDataCollection) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setQuotaUser(java.lang.String quotaUser) {
+        return (AcknowledgeUserDataCollection) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setUploadType(java.lang.String uploadType) {
+        return (AcknowledgeUserDataCollection) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AcknowledgeUserDataCollection) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The property for which to acknowledge user data collection. */
+      @com.google.api.client.util.Key
+      private java.lang.String property;
+
+      /** Required. The property for which to acknowledge user data collection.
+       */
+      public java.lang.String getProperty() {
+        return property;
+      }
+
+      /** Required. The property for which to acknowledge user data collection. */
+      public AcknowledgeUserDataCollection setProperty(java.lang.String property) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.property = property;
+        return this;
+      }
+
+      @Override
+      public AcknowledgeUserDataCollection set(String parameterName, Object value) {
+        return (AcknowledgeUserDataCollection) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates an "GA4" property with the specified location and attributes.
      *
      * Create a request for the method "properties.create".

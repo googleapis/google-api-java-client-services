@@ -29,7 +29,7 @@ package com.google.api.services.documentai.v1.model;
  * For example, users can call either the 'US' or 'EU' endpoint to feach processor types. In the
  * return, we will have an 'invoice parsing' processor with 'available_locations' field only
  * containing 'US'. So the user can try to create an 'invoice parsing' processor under the location
- * 'US'. Such attempt of creating under the location 'EU' will fail. Next ID: 8.
+ * 'US'. Such attempt of creating under the location 'EU' will fail. Next ID: 9.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -65,6 +65,13 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   private java.lang.String category;
 
   /**
+   * Launch stage of the processor type
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStage;
+
+  /**
    * The resource name of the processor type. Format:
    * projects/{project}/processorTypes/{processor_type}
    * The value may be {@code null}.
@@ -73,7 +80,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * The type of the processor, e.g, "invoice_parsing".
+   * The type of the processor, e.g., "invoice_parsing".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,6 +140,23 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   }
 
   /**
+   * Launch stage of the processor type
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStage() {
+    return launchStage;
+  }
+
+  /**
+   * Launch stage of the processor type
+   * @param launchStage launchStage or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessorType setLaunchStage(java.lang.String launchStage) {
+    this.launchStage = launchStage;
+    return this;
+  }
+
+  /**
    * The resource name of the processor type. Format:
    * projects/{project}/processorTypes/{processor_type}
    * @return value or {@code null} for none
@@ -152,7 +176,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   }
 
   /**
-   * The type of the processor, e.g, "invoice_parsing".
+   * The type of the processor, e.g., "invoice_parsing".
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -160,7 +184,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   }
 
   /**
-   * The type of the processor, e.g, "invoice_parsing".
+   * The type of the processor, e.g., "invoice_parsing".
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorType setType(java.lang.String type) {

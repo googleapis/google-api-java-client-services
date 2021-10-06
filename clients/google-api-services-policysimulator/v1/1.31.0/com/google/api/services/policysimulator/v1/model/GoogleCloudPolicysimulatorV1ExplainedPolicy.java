@@ -30,10 +30,10 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
@@ -41,9 +41,9 @@ public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.googl
   private java.lang.String access;
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the user who created the Replay does not have access to the
-   * policy, this field is omitted.
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the user who created the Replay does not have access to
+   * the policy, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,10 +83,10 @@ public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.googl
   private java.lang.String relevance;
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
@@ -95,10 +95,10 @@ public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.googl
   }
 
   /**
-   * Indicates whether _this policy_ provides the specified permission to the specified member for
-   * the specified resource. This field does _not_ indicate whether the member actually has the
-   * permission for the resource. There might be another policy that overrides this policy. To
-   * determine whether the member actually has the permission, use the `access` field in the
+   * Indicates whether _this policy_ provides the specified permission to the specified principal
+   * for the specified resource. This field does _not_ indicate whether the principal actually has
+   * the permission for the resource. There might be another policy that overrides this policy. To
+   * determine whether the principal actually has the permission, use the `access` field in the
    * TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
@@ -108,9 +108,9 @@ public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.googl
   }
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the user who created the Replay does not have access to the
-   * policy, this field is omitted.
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the user who created the Replay does not have access to
+   * the policy, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1BindingExplanation> getBindingExplanations() {
@@ -118,9 +118,9 @@ public final class GoogleCloudPolicysimulatorV1ExplainedPolicy extends com.googl
   }
 
   /**
-   * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the user who created the Replay does not have access to the
-   * policy, this field is omitted.
+   * Details about how each binding in the policy affects the principal's ability, or inability, to
+   * use the permission for the resource. If the user who created the Replay does not have access to
+   * the policy, this field is omitted.
    * @param bindingExplanations bindingExplanations or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1ExplainedPolicy setBindingExplanations(java.util.List<GoogleCloudPolicysimulatorV1BindingExplanation> bindingExplanations) {

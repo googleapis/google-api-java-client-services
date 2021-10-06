@@ -17,7 +17,7 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * Details about how a binding in a policy affects a member's ability to use a permission.
+ * Details about how a binding in a policy affects a principal's ability to use a permission.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -31,10 +31,10 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * Required. Indicates whether _this binding_ provides the specified permission to the specified
-   * member for the specified resource. This field does _not_ indicate whether the member actually
-   * has the permission for the resource. There might be another binding that overrides this
-   * binding. To determine whether the member actually has the permission, use the `access` field in
-   * the TroubleshootIamPolicyResponse.
+   * principal for the specified resource. This field does _not_ indicate whether the principal
+   * actually has the permission for the resource. There might be another binding that overrides
+   * this binding. To determine whether the principal actually has the permission, use the `access`
+   * field in the TroubleshootIamPolicyResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,15 +50,16 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
   private GoogleTypeExpr condition;
 
   /**
-   * Indicates whether each member in the binding includes the member specified in the request,
-   * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
-   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
-   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
-   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
-   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * Indicates whether each principal in the binding includes the principal specified in the
+   * request, either directly or indirectly. Each key identifies a principal in the binding, and
+   * each value indicates whether the principal in the binding includes the principal in the
+   * request. For example, suppose that a binding includes the following principals: *
+   * `user:alice@example.com` * `group:product-eng@example.com` The principal in the replayed access
+   * tuple is `user:bob@example.com`. This user is a principal of the group `group:product-
+   * eng@example.com`. For the first principal in the binding, the key is `user:alice@example.com`,
+   * and the `membership` field in the value is set to `MEMBERSHIP_NOT_INCLUDED`. For the second
+   * principal in the binding, the key is `group:product-eng@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_INCLUDED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,10 +98,10 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * Required. Indicates whether _this binding_ provides the specified permission to the specified
-   * member for the specified resource. This field does _not_ indicate whether the member actually
-   * has the permission for the resource. There might be another binding that overrides this
-   * binding. To determine whether the member actually has the permission, use the `access` field in
-   * the TroubleshootIamPolicyResponse.
+   * principal for the specified resource. This field does _not_ indicate whether the principal
+   * actually has the permission for the resource. There might be another binding that overrides
+   * this binding. To determine whether the principal actually has the permission, use the `access`
+   * field in the TroubleshootIamPolicyResponse.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccess() {
@@ -109,10 +110,10 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * Required. Indicates whether _this binding_ provides the specified permission to the specified
-   * member for the specified resource. This field does _not_ indicate whether the member actually
-   * has the permission for the resource. There might be another binding that overrides this
-   * binding. To determine whether the member actually has the permission, use the `access` field in
-   * the TroubleshootIamPolicyResponse.
+   * principal for the specified resource. This field does _not_ indicate whether the principal
+   * actually has the permission for the resource. There might be another binding that overrides
+   * this binding. To determine whether the principal actually has the permission, use the `access`
+   * field in the TroubleshootIamPolicyResponse.
    * @param access access or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1BindingExplanation setAccess(java.lang.String access) {
@@ -142,15 +143,16 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
   }
 
   /**
-   * Indicates whether each member in the binding includes the member specified in the request,
-   * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
-   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
-   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
-   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
-   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * Indicates whether each principal in the binding includes the principal specified in the
+   * request, either directly or indirectly. Each key identifies a principal in the binding, and
+   * each value indicates whether the principal in the binding includes the principal in the
+   * request. For example, suppose that a binding includes the following principals: *
+   * `user:alice@example.com` * `group:product-eng@example.com` The principal in the replayed access
+   * tuple is `user:bob@example.com`. This user is a principal of the group `group:product-
+   * eng@example.com`. For the first principal in the binding, the key is `user:alice@example.com`,
+   * and the `membership` field in the value is set to `MEMBERSHIP_NOT_INCLUDED`. For the second
+   * principal in the binding, the key is `group:product-eng@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership> getMemberships() {
@@ -158,15 +160,16 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
   }
 
   /**
-   * Indicates whether each member in the binding includes the member specified in the request,
-   * either directly or indirectly. Each key identifies a member in the binding, and each value
-   * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
-   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
-   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
-   * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
-   * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
+   * Indicates whether each principal in the binding includes the principal specified in the
+   * request, either directly or indirectly. Each key identifies a principal in the binding, and
+   * each value indicates whether the principal in the binding includes the principal in the
+   * request. For example, suppose that a binding includes the following principals: *
+   * `user:alice@example.com` * `group:product-eng@example.com` The principal in the replayed access
+   * tuple is `user:bob@example.com`. This user is a principal of the group `group:product-
+   * eng@example.com`. For the first principal in the binding, the key is `user:alice@example.com`,
+   * and the `membership` field in the value is set to `MEMBERSHIP_NOT_INCLUDED`. For the second
+   * principal in the binding, the key is `group:product-eng@example.com`, and the `membership`
+   * field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @param memberships memberships or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1BindingExplanation setMemberships(java.util.Map<String, GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership> memberships) {

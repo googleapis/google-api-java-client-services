@@ -31,7 +31,7 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1ExplainedAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the member in the access tuple has permission to access the resource in the access
+   * Whether the principal in the access tuple has permission to access the resource in the access
    * tuple under the given policies.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudPolicysimulatorV1ExplainedAccess extends com.googl
   private java.util.List<GoogleCloudPolicysimulatorV1ExplainedPolicy> policies;
 
   /**
-   * Whether the member in the access tuple has permission to access the resource in the access
+   * Whether the principal in the access tuple has permission to access the resource in the access
    * tuple under the given policies.
    * @return value or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class GoogleCloudPolicysimulatorV1ExplainedAccess extends com.googl
   }
 
   /**
-   * Whether the member in the access tuple has permission to access the resource in the access
+   * Whether the principal in the access tuple has permission to access the resource in the access
    * tuple under the given policies.
    * @param accessState accessState or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.policysimulator.v1.model;
 
 /**
- * A summary and comparison of the member's access under the current (baseline) policies and the
+ * A summary and comparison of the principal's access under the current (baseline) policies and the
  * proposed (simulated) policies for a single access tuple.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,7 +31,7 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1AccessStateDiff extends com.google.api.client.json.GenericJson {
 
   /**
-   * How the member's access, specified in the AccessState field, changed between the current
+   * How the principal's access, specified in the AccessState field, changed between the current
    * (baseline) policies and proposed (simulated) policies.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudPolicysimulatorV1AccessStateDiff extends com.googl
   private GoogleCloudPolicysimulatorV1ExplainedAccess simulated;
 
   /**
-   * How the member's access, specified in the AccessState field, changed between the current
+   * How the principal's access, specified in the AccessState field, changed between the current
    * (baseline) policies and proposed (simulated) policies.
    * @return value or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class GoogleCloudPolicysimulatorV1AccessStateDiff extends com.googl
   }
 
   /**
-   * How the member's access, specified in the AccessState field, changed between the current
+   * How the principal's access, specified in the AccessState field, changed between the current
    * (baseline) policies and proposed (simulated) policies.
    * @param accessChange accessChange or {@code null} for none
    */

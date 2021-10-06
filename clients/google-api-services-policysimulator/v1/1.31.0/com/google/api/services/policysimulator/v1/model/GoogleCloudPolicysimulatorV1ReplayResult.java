@@ -30,18 +30,18 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1ReplayResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access tuple that was replayed. This field includes information about the member, resource,
-   * and permission that were involved in the access attempt.
+   * The access tuple that was replayed. This field includes information about the principal,
+   * resource, and permission that were involved in the access attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1AccessTuple accessTuple;
 
   /**
-   * The difference between the member's access under the current (baseline) policies and the
-   * member's access under the proposed (simulated) policies. This field is only included for access
-   * tuples that were successfully replayed and had different results under the current policies and
-   * the proposed policies.
+   * The difference between the principal's access under the current (baseline) policies and the
+   * principal's access under the proposed (simulated) policies. This field is only included for
+   * access tuples that were successfully replayed and had different results under the current
+   * policies and the proposed policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class GoogleCloudPolicysimulatorV1ReplayResult extends com.google.a
   private java.lang.String parent;
 
   /**
-   * The access tuple that was replayed. This field includes information about the member, resource,
-   * and permission that were involved in the access attempt.
+   * The access tuple that was replayed. This field includes information about the principal,
+   * resource, and permission that were involved in the access attempt.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1AccessTuple getAccessTuple() {
@@ -90,8 +90,8 @@ public final class GoogleCloudPolicysimulatorV1ReplayResult extends com.google.a
   }
 
   /**
-   * The access tuple that was replayed. This field includes information about the member, resource,
-   * and permission that were involved in the access attempt.
+   * The access tuple that was replayed. This field includes information about the principal,
+   * resource, and permission that were involved in the access attempt.
    * @param accessTuple accessTuple or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1ReplayResult setAccessTuple(GoogleCloudPolicysimulatorV1AccessTuple accessTuple) {
@@ -100,10 +100,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayResult extends com.google.a
   }
 
   /**
-   * The difference between the member's access under the current (baseline) policies and the
-   * member's access under the proposed (simulated) policies. This field is only included for access
-   * tuples that were successfully replayed and had different results under the current policies and
-   * the proposed policies.
+   * The difference between the principal's access under the current (baseline) policies and the
+   * principal's access under the proposed (simulated) policies. This field is only included for
+   * access tuples that were successfully replayed and had different results under the current
+   * policies and the proposed policies.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1ReplayDiff getDiff() {
@@ -111,10 +111,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayResult extends com.google.a
   }
 
   /**
-   * The difference between the member's access under the current (baseline) policies and the
-   * member's access under the proposed (simulated) policies. This field is only included for access
-   * tuples that were successfully replayed and had different results under the current policies and
-   * the proposed policies.
+   * The difference between the principal's access under the current (baseline) policies and the
+   * principal's access under the proposed (simulated) policies. This field is only included for
+   * access tuples that were successfully replayed and had different results under the current
+   * policies and the proposed policies.
    * @param diff diff or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1ReplayResult setDiff(GoogleCloudPolicysimulatorV1ReplayDiff diff) {

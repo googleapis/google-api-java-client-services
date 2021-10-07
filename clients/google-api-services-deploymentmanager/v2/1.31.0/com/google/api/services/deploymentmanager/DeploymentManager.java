@@ -1158,11 +1158,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -1175,10 +1178,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
-     field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
+     field name, an operator, and the value that you want to use for filtering. The value must be a
+     string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     `example-instance` by specifying `name != example-instance`. The `:` operator can be used with
+     string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The
+     `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For
      example, you could specify `scheduling.automaticRestart = false` to include instances only if they
      are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
      resource labels. To filter on multiple expressions, provide each separate expression within
@@ -1193,11 +1199,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -2728,11 +2737,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -2745,10 +2757,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
-     field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
+     field name, an operator, and the value that you want to use for filtering. The value must be a
+     string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     `example-instance` by specifying `name != example-instance`. The `:` operator can be used with
+     string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The
+     `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For
      example, you could specify `scheduling.automaticRestart = false` to include instances only if they
      are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
      resource labels. To filter on multiple expressions, provide each separate expression within
@@ -2763,11 +2778,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -3190,11 +3208,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -3207,10 +3228,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
-     field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
+     field name, an operator, and the value that you want to use for filtering. The value must be a
+     string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     `example-instance` by specifying `name != example-instance`. The `:` operator can be used with
+     string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The
+     `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For
      example, you could specify `scheduling.automaticRestart = false` to include instances only if they
      are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
      resource labels. To filter on multiple expressions, provide each separate expression within
@@ -3225,11 +3249,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -3716,11 +3743,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -3733,10 +3763,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
-     field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
+     field name, an operator, and the value that you want to use for filtering. The value must be a
+     string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     `example-instance` by specifying `name != example-instance`. The `:` operator can be used with
+     string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The
+     `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For
      example, you could specify `scheduling.automaticRestart = false` to include instances only if they
      are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
      resource labels. To filter on multiple expressions, provide each separate expression within
@@ -3751,11 +3784,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -4020,11 +4056,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within
@@ -4037,10 +4076,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
-     field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
+     field name, an operator, and the value that you want to use for filtering. The value must be a
+     string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     `example-instance` by specifying `name != example-instance`. The `:` operator can be used with
+     string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The
+     `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For
      example, you could specify `scheduling.automaticRestart = false` to include instances only if they
      are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
      resource labels. To filter on multiple expressions, provide each separate expression within
@@ -4055,11 +4097,14 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * A filter expression that filters resources listed in the response. The expression must
-       * specify the field name, a comparison operator, and the value that you want to use for
-       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-       * instances, you can exclude instances named `example-instance` by specifying `name !=
-       * example-instance`. You can also filter nested fields. For example, you could specify
+       * specify the field name, an operator, and the value that you want to use for filtering. The
+       * value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`,
+       * `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can
+       * exclude instances named `example-instance` by specifying `name != example-instance`. The
+       * `:` operator can be used with string fields to match substrings. For non-string fields it
+       * is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key
+       * has been defined. For example, to find all objects with `owner` label use: ```
+       * labels.owner:* ``` You can also filter nested fields. For example, you could specify
        * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
        * for automatic restarts. You can use filtering on nested fields to filter based on resource
        * labels. To filter on multiple expressions, provide each separate expression within

@@ -133,171 +133,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
-   * An accessor for creating requests from the Applications collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
-   *   {@code AndroidPublisher.Applications.List request = androidpublisher.applications().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Applications applications() {
-    return new Applications();
-  }
-
-  /**
-   * The "applications" collection of methods.
-   */
-  public class Applications {
-
-    /**
-     * An accessor for creating requests from the Pricing collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
-     *   {@code AndroidPublisher.Pricing.List request = androidpublisher.pricing().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Pricing pricing() {
-      return new Pricing();
-    }
-
-    /**
-     * The "pricing" collection of methods.
-     */
-    public class Pricing {
-
-      /**
-       * Calculates the region prices, using today's exchange rate and country-specific pricing patterns,
-       * based on the price in the request for a set of regions.
-       *
-       * Create a request for the method "pricing.convertRegionPrices".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link ConvertRegionPrices#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param packageName Required. The app package name.
-       * @param content the {@link com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest}
-       * @return the request
-       */
-      public ConvertRegionPrices convertRegionPrices(java.lang.String packageName, com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest content) throws java.io.IOException {
-        ConvertRegionPrices result = new ConvertRegionPrices(packageName, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ConvertRegionPrices extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ConvertRegionPricesResponse> {
-
-        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices";
-
-        /**
-         * Calculates the region prices, using today's exchange rate and country-specific pricing
-         * patterns, based on the price in the request for a set of regions.
-         *
-         * Create a request for the method "pricing.convertRegionPrices".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link ConvertRegionPrices#execute()} method to invoke the remote
-         * operation. <p> {@link ConvertRegionPrices#initialize(com.google.api.client.googleapis.services.
-         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param packageName Required. The app package name.
-         * @param content the {@link com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest}
-         * @since 1.13
-         */
-        protected ConvertRegionPrices(java.lang.String packageName, com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest content) {
-          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.ConvertRegionPricesResponse.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-        }
-
-        @Override
-        public ConvertRegionPrices set$Xgafv(java.lang.String $Xgafv) {
-          return (ConvertRegionPrices) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ConvertRegionPrices setAccessToken(java.lang.String accessToken) {
-          return (ConvertRegionPrices) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ConvertRegionPrices setAlt(java.lang.String alt) {
-          return (ConvertRegionPrices) super.setAlt(alt);
-        }
-
-        @Override
-        public ConvertRegionPrices setCallback(java.lang.String callback) {
-          return (ConvertRegionPrices) super.setCallback(callback);
-        }
-
-        @Override
-        public ConvertRegionPrices setFields(java.lang.String fields) {
-          return (ConvertRegionPrices) super.setFields(fields);
-        }
-
-        @Override
-        public ConvertRegionPrices setKey(java.lang.String key) {
-          return (ConvertRegionPrices) super.setKey(key);
-        }
-
-        @Override
-        public ConvertRegionPrices setOauthToken(java.lang.String oauthToken) {
-          return (ConvertRegionPrices) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ConvertRegionPrices setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ConvertRegionPrices) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ConvertRegionPrices setQuotaUser(java.lang.String quotaUser) {
-          return (ConvertRegionPrices) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ConvertRegionPrices setUploadType(java.lang.String uploadType) {
-          return (ConvertRegionPrices) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ConvertRegionPrices setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ConvertRegionPrices) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The app package name. */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** Required. The app package name.
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /** Required. The app package name. */
-        public ConvertRegionPrices setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        @Override
-        public ConvertRegionPrices set(String parameterName, Object value) {
-          return (ConvertRegionPrices) super.set(parameterName, value);
-        }
-      }
-
-    }
-  }
-
-  /**
    * An accessor for creating requests from the Edits collection.
    *
    * <p>The typical use is:</p>
@@ -7648,6 +7483,150 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       @Override
       public Uploadbundle set(String parameterName, Object value) {
         return (Uploadbundle) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Monetization collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Monetization.List request = androidpublisher.monetization().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Monetization monetization() {
+    return new Monetization();
+  }
+
+  /**
+   * The "monetization" collection of methods.
+   */
+  public class Monetization {
+
+    /**
+     * Calculates the region prices, using today's exchange rate and country-specific pricing patterns,
+     * based on the price in the request for a set of regions.
+     *
+     * Create a request for the method "monetization.convertRegionPrices".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link ConvertRegionPrices#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Required. The app package name.
+     * @param content the {@link com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest}
+     * @return the request
+     */
+    public ConvertRegionPrices convertRegionPrices(java.lang.String packageName, com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest content) throws java.io.IOException {
+      ConvertRegionPrices result = new ConvertRegionPrices(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ConvertRegionPrices extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ConvertRegionPricesResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices";
+
+      /**
+       * Calculates the region prices, using today's exchange rate and country-specific pricing
+       * patterns, based on the price in the request for a set of regions.
+       *
+       * Create a request for the method "monetization.convertRegionPrices".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link ConvertRegionPrices#execute()} method to invoke the remote
+       * operation. <p> {@link ConvertRegionPrices#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param packageName Required. The app package name.
+       * @param content the {@link com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest}
+       * @since 1.13
+       */
+      protected ConvertRegionPrices(java.lang.String packageName, com.google.api.services.androidpublisher.model.ConvertRegionPricesRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.ConvertRegionPricesResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public ConvertRegionPrices set$Xgafv(java.lang.String $Xgafv) {
+        return (ConvertRegionPrices) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ConvertRegionPrices setAccessToken(java.lang.String accessToken) {
+        return (ConvertRegionPrices) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ConvertRegionPrices setAlt(java.lang.String alt) {
+        return (ConvertRegionPrices) super.setAlt(alt);
+      }
+
+      @Override
+      public ConvertRegionPrices setCallback(java.lang.String callback) {
+        return (ConvertRegionPrices) super.setCallback(callback);
+      }
+
+      @Override
+      public ConvertRegionPrices setFields(java.lang.String fields) {
+        return (ConvertRegionPrices) super.setFields(fields);
+      }
+
+      @Override
+      public ConvertRegionPrices setKey(java.lang.String key) {
+        return (ConvertRegionPrices) super.setKey(key);
+      }
+
+      @Override
+      public ConvertRegionPrices setOauthToken(java.lang.String oauthToken) {
+        return (ConvertRegionPrices) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ConvertRegionPrices setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ConvertRegionPrices) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ConvertRegionPrices setQuotaUser(java.lang.String quotaUser) {
+        return (ConvertRegionPrices) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ConvertRegionPrices setUploadType(java.lang.String uploadType) {
+        return (ConvertRegionPrices) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ConvertRegionPrices setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ConvertRegionPrices) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The app package name. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. The app package name.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. The app package name. */
+      public ConvertRegionPrices setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public ConvertRegionPrices set(String parameterName, Object value) {
+        return (ConvertRegionPrices) super.set(parameterName, value);
       }
     }
 

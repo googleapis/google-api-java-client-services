@@ -59,6 +59,13 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private PolicyDelegationSettings policyDelegationSettings;
 
   /**
+   * Settings to configure reauthentication policies in IAP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReauthSettings reauthSettings;
+
+  /**
    * Configuration to allow cross-origin requests via IAP.
    * @return value or {@code null} for none
    */
@@ -123,6 +130,23 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   public AccessSettings setPolicyDelegationSettings(PolicyDelegationSettings policyDelegationSettings) {
     this.policyDelegationSettings = policyDelegationSettings;
+    return this;
+  }
+
+  /**
+   * Settings to configure reauthentication policies in IAP.
+   * @return value or {@code null} for none
+   */
+  public ReauthSettings getReauthSettings() {
+    return reauthSettings;
+  }
+
+  /**
+   * Settings to configure reauthentication policies in IAP.
+   * @param reauthSettings reauthSettings or {@code null} for none
+   */
+  public AccessSettings setReauthSettings(ReauthSettings reauthSettings) {
+    this.reauthSettings = reauthSettings;
     return this;
   }
 

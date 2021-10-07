@@ -53,8 +53,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adjustVolumeDisabled;
 
   /**
-   * Security policies set to the most secure values by default. To maintain the security posture of
-   * a device, we don't recommend overriding any of the default values.
+   * Security policies set to secure values by default. To maintain the security posture of a
+   * device, we don't recommend overriding any of the default values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -767,8 +767,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security policies set to the most secure values by default. To maintain the security posture of
-   * a device, we don't recommend overriding any of the default values.
+   * Security policies set to secure values by default. To maintain the security posture of a
+   * device, we don't recommend overriding any of the default values.
    * @return value or {@code null} for none
    */
   public AdvancedSecurityOverrides getAdvancedSecurityOverrides() {
@@ -776,8 +776,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security policies set to the most secure values by default. To maintain the security posture of
-   * a device, we don't recommend overriding any of the default values.
+   * Security policies set to secure values by default. To maintain the security posture of a
+   * device, we don't recommend overriding any of the default values.
    * @param advancedSecurityOverrides advancedSecurityOverrides or {@code null} for none
    */
   public Policy setAdvancedSecurityOverrides(AdvancedSecurityOverrides advancedSecurityOverrides) {

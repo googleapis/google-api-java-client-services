@@ -17,8 +17,8 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Security policies set to the most secure values by default. To maintain the security posture of a
- * device, we don't recommend overriding any of the default values.
+ * Security policies set to secure values by default. To maintain the security posture of a device,
+ * we don't recommend overriding any of the default values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

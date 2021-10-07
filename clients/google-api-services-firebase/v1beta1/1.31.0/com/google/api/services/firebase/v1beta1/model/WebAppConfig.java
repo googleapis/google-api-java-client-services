@@ -76,7 +76,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    * `WebApp`. Firebase SDKs use this ID to interact with Google Analytics APIs. This field is only
    * present if the `WebApp` is linked to a web stream in a Google Analytics App + Web property.
    * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * documentation](https://support.google.com/analytics/answer/9304153). To generate a
    * `measurementId` and link the `WebApp` with a Google Analytics web stream, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics). For apps using the Firebase
    * JavaScript SDK v7.20.0 and later, Firebase dynamically fetches the `measurementId` when your
@@ -210,7 +210,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    * `WebApp`. Firebase SDKs use this ID to interact with Google Analytics APIs. This field is only
    * present if the `WebApp` is linked to a web stream in a Google Analytics App + Web property.
    * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * documentation](https://support.google.com/analytics/answer/9304153). To generate a
    * `measurementId` and link the `WebApp` with a Google Analytics web stream, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics). For apps using the Firebase
    * JavaScript SDK v7.20.0 and later, Firebase dynamically fetches the `measurementId` when your
@@ -227,7 +227,7 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    * `WebApp`. Firebase SDKs use this ID to interact with Google Analytics APIs. This field is only
    * present if the `WebApp` is linked to a web stream in a Google Analytics App + Web property.
    * Learn more about this ID and Google Analytics web streams in the [Analytics
-   * documentation](https://support.google.com/analytics/topic/9303475). To generate a
+   * documentation](https://support.google.com/analytics/answer/9304153). To generate a
    * `measurementId` and link the `WebApp` with a Google Analytics web stream, call
    * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics). For apps using the Firebase
    * JavaScript SDK v7.20.0 and later, Firebase dynamically fetches the `measurementId` when your

@@ -45,7 +45,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
    * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
    * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
    * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
-   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
+   * in the [Analytics documentation](https://support.google.com/analytics/answer/9304153).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
    * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
    * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
    * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
-   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
+   * in the [Analytics documentation](https://support.google.com/analytics/answer/9304153).
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementId() {
@@ -100,7 +100,7 @@ public final class StreamMapping extends com.google.api.client.json.GenericJson 
    * Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google
    * Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to
    * interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams
-   * in the [Analytics documentation](https://support.google.com/analytics/topic/9303475).
+   * in the [Analytics documentation](https://support.google.com/analytics/answer/9304153).
    * @param measurementId measurementId or {@code null} for none
    */
   public StreamMapping setMeasurementId(java.lang.String measurementId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * Resource representing a policy schema. Next ID: 10
+ * Resource representing a policy schema. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:
@@ -102,6 +102,13 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String supportUri;
+
+  /**
+   * Output only. Information about applicable target resources for the policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> validTargetResources;
 
   /**
    * Output only. Specific access restrictions related to this policy.
@@ -263,6 +270,23 @@ public final class GoogleChromePolicyV1PolicySchema extends com.google.api.clien
    */
   public GoogleChromePolicyV1PolicySchema setSupportUri(java.lang.String supportUri) {
     this.supportUri = supportUri;
+    return this;
+  }
+
+  /**
+   * Output only. Information about applicable target resources for the policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getValidTargetResources() {
+    return validTargetResources;
+  }
+
+  /**
+   * Output only. Information about applicable target resources for the policy.
+   * @param validTargetResources validTargetResources or {@code null} for none
+   */
+  public GoogleChromePolicyV1PolicySchema setValidTargetResources(java.util.List<java.lang.String> validTargetResources) {
+    this.validTargetResources = validTargetResources;
     return this;
   }
 

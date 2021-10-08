@@ -162,7 +162,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Cloud SQL instance ID. This does not include the project ID.
-     * @param id The ID of the backup run to delete. To find a backup run ID, use the list method.
+     * @param id The ID of the backup run to delete. To find a backup run ID, use the
+     *        [list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns/list)
+     *        method.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String instance, java.lang.Long id) throws java.io.IOException {
@@ -188,7 +190,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
-       * @param id The ID of the backup run to delete. To find a backup run ID, use the list method.
+       * @param id The ID of the backup run to delete. To find a backup run ID, use the
+     *        [list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns/list)
+     *        method.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String instance, java.lang.Long id) {
@@ -285,17 +289,26 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The ID of the backup run to delete. To find a backup run ID, use the list method. */
+      /**
+       * The ID of the backup run to delete. To find a backup run ID, use the
+       * [list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns/list)
+       * method.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** The ID of the backup run to delete. To find a backup run ID, use the list method.
+      /** The ID of the backup run to delete. To find a backup run ID, use the
+     [list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns/list) method.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** The ID of the backup run to delete. To find a backup run ID, use the list method. */
+      /**
+       * The ID of the backup run to delete. To find a backup run ID, use the
+       * [list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns/list)
+       * method.
+       */
       public Delete setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -2922,8 +2935,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
      * which becomes the primary instance. Users are then rerouted to the new primary. For more
-     * information, see the Overview of high availability page in the Cloud SQL documentation. If using
-     * Legacy HA (MySQL only), this causes the instance to failover to its failover replica instance.
+     * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
+     * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
+     * causes the instance to failover to its failover replica instance.
      *
      * Create a request for the method "instances.failover".
      *
@@ -2948,9 +2962,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
        * which becomes the primary instance. Users are then rerouted to the new primary. For more
-       * information, see the Overview of high availability page in the Cloud SQL documentation. If
-       * using Legacy HA (MySQL only), this causes the instance to failover to its failover replica
-       * instance.
+       * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
+       * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
+       * causes the instance to failover to its failover replica instance.
        *
        * Create a request for the method "instances.failover".
        *

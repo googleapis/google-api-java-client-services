@@ -30,17 +30,17 @@ package com.google.api.services.sqladmin.model;
 public final class ReplicaConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
-   * be designated as a failover replica. In case the primary instance fails, the replica instance
-   * will be promoted as the new primary instance. Only one replica can be specified as failover
-   * target, and the replica has to be in different zone with the primary instance.
+   * Specifies if the replica is the failover target. If the field is set to **true** the replica
+   * will be designated as a failover replica. In case the primary instance fails, the replica
+   * instance will be promoted as the new primary instance. Only one replica can be specified as
+   * failover target, and the replica has to be in different zone with the primary instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean failoverTarget;
 
   /**
-   * This is always *sql#replicaConfiguration*.
+   * This is always **sql#replicaConfiguration**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +58,10 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   private MySqlReplicaConfiguration mysqlReplicaConfiguration;
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
-   * be designated as a failover replica. In case the primary instance fails, the replica instance
-   * will be promoted as the new primary instance. Only one replica can be specified as failover
-   * target, and the replica has to be in different zone with the primary instance.
+   * Specifies if the replica is the failover target. If the field is set to **true** the replica
+   * will be designated as a failover replica. In case the primary instance fails, the replica
+   * instance will be promoted as the new primary instance. Only one replica can be specified as
+   * failover target, and the replica has to be in different zone with the primary instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFailoverTarget() {
@@ -69,10 +69,10 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
-   * be designated as a failover replica. In case the primary instance fails, the replica instance
-   * will be promoted as the new primary instance. Only one replica can be specified as failover
-   * target, and the replica has to be in different zone with the primary instance.
+   * Specifies if the replica is the failover target. If the field is set to **true** the replica
+   * will be designated as a failover replica. In case the primary instance fails, the replica
+   * instance will be promoted as the new primary instance. Only one replica can be specified as
+   * failover target, and the replica has to be in different zone with the primary instance.
    * @param failoverTarget failoverTarget or {@code null} for none
    */
   public ReplicaConfiguration setFailoverTarget(java.lang.Boolean failoverTarget) {
@@ -81,7 +81,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always *sql#replicaConfiguration*.
+   * This is always **sql#replicaConfiguration**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -89,7 +89,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always *sql#replicaConfiguration*.
+   * This is always **sql#replicaConfiguration**.
    * @param kind kind or {@code null} for none
    */
   public ReplicaConfiguration setKind(java.lang.String kind) {

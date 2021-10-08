@@ -34,6 +34,20 @@ package com.google.api.services.speech.v1.model;
 public final class LongRunningRecognizeResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Original output config if present in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TranscriptOutputConfig outputConfig;
+
+  /**
+   * If the transcript output fails this field contains the relevant error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status outputError;
+
+  /**
    * Sequential list of transcription results corresponding to sequential portions of audio.
    * The value may be {@code null}.
    */
@@ -46,6 +60,40 @@ public final class LongRunningRecognizeResponse extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private String totalBilledTime;
+
+  /**
+   * Original output config if present in the request.
+   * @return value or {@code null} for none
+   */
+  public TranscriptOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Original output config if present in the request.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public LongRunningRecognizeResponse setOutputConfig(TranscriptOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * If the transcript output fails this field contains the relevant error.
+   * @return value or {@code null} for none
+   */
+  public Status getOutputError() {
+    return outputError;
+  }
+
+  /**
+   * If the transcript output fails this field contains the relevant error.
+   * @param outputError outputError or {@code null} for none
+   */
+  public LongRunningRecognizeResponse setOutputError(Status outputError) {
+    this.outputError = outputError;
+    return this;
+  }
 
   /**
    * Sequential list of transcription results corresponding to sequential portions of audio.

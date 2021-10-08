@@ -37,8 +37,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
+   * The host name from which the user can connect. For **insert** operations, host defaults to an
+   * empty string. For **update** operations, host is specified as part of the request URL. The host
    * name cannot be updated after insertion.
    * The value may be {@code null}.
    */
@@ -47,22 +47,22 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for
-   * *update* since it is already specified on the URL.
+   * **update** since it is already specified on the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * This is always *sql#user*.
+   * This is always **sql#user**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The project ID of the project containing the Cloud SQL database. The Google apps domain is
-   * prefixed if applicable. Can be omitted for *update* since it is already specified on the URL.
+   * prefixed if applicable. Can be omitted for **update** since it is already specified on the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +115,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
+   * The host name from which the user can connect. For **insert** operations, host defaults to an
+   * empty string. For **update** operations, host is specified as part of the request URL. The host
    * name cannot be updated after insertion.
    * @return value or {@code null} for none
    */
@@ -125,8 +125,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The host name from which the user can connect. For *insert* operations, host defaults to an
-   * empty string. For *update* operations, host is specified as part of the request URL. The host
+   * The host name from which the user can connect. For **insert** operations, host defaults to an
+   * empty string. For **update** operations, host is specified as part of the request URL. The host
    * name cannot be updated after insertion.
    * @param host host or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for
-   * *update* since it is already specified on the URL.
+   * **update** since it is already specified on the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -146,7 +146,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for
-   * *update* since it is already specified on the URL.
+   * **update** since it is already specified on the URL.
    * @param instance instance or {@code null} for none
    */
   public User setInstance(java.lang.String instance) {
@@ -155,7 +155,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#user*.
+   * This is always **sql#user**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -163,7 +163,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#user*.
+   * This is always **sql#user**.
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {
@@ -172,8 +172,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -181,8 +181,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the user in the Cloud SQL instance. Can be omitted for *update* since it is already
-   * specified in the URL.
+   * The name of the user in the Cloud SQL instance. Can be omitted for **update** since it is
+   * already specified in the URL.
    * @param name name or {@code null} for none
    */
   public User setName(java.lang.String name) {
@@ -209,7 +209,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The project ID of the project containing the Cloud SQL database. The Google apps domain is
-   * prefixed if applicable. Can be omitted for *update* since it is already specified on the URL.
+   * prefixed if applicable. Can be omitted for **update** since it is already specified on the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -218,7 +218,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The project ID of the project containing the Cloud SQL database. The Google apps domain is
-   * prefixed if applicable. Can be omitted for *update* since it is already specified on the URL.
+   * prefixed if applicable. Can be omitted for **update** since it is already specified on the URL.
    * @param project project or {@code null} for none
    */
   public User setProject(java.lang.String project) {

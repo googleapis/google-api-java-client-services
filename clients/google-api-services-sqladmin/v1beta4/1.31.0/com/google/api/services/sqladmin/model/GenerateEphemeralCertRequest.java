@@ -51,6 +51,13 @@ public final class GenerateEphemeralCertRequest extends com.google.api.client.js
   private String readTime;
 
   /**
+   * Optional. If set, it will contain the cert valid duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String validDuration;
+
+  /**
    * Optional. Access token to include in the signed certificate.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GenerateEphemeralCertRequest extends com.google.api.client.js
    */
   public GenerateEphemeralCertRequest setReadTime(String readTime) {
     this.readTime = readTime;
+    return this;
+  }
+
+  /**
+   * Optional. If set, it will contain the cert valid duration.
+   * @return value or {@code null} for none
+   */
+  public String getValidDuration() {
+    return validDuration;
+  }
+
+  /**
+   * Optional. If set, it will contain the cert valid duration.
+   * @param validDuration validDuration or {@code null} for none
+   */
+  public GenerateEphemeralCertRequest setValidDuration(String validDuration) {
+    this.validDuration = validDuration;
     return this;
   }
 

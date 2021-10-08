@@ -280,7 +280,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * *gs://bucketName/fileName*. The instance must have write permissions to the bucket and read
+       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
        * access to the file.
        * The value may be {@code null}.
        */
@@ -325,7 +325,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * *gs://bucketName/fileName*. The instance must have write permissions to the bucket and read
+       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
        * access to the file.
        * @return value or {@code null} for none
        */
@@ -335,7 +335,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
-       * *gs://bucketName/fileName*. The instance must have write permissions to the bucket and read
+       * **gs://bucketName/fileName**. The instance must have write permissions to the bucket and read
        * access to the file.
        * @param pvkPath pvkPath or {@code null} for none
        */

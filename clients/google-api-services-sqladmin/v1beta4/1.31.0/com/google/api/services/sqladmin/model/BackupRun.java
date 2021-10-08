@@ -96,7 +96,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * This is always *sql#backupRun*.
+   * This is always **sql#backupRun**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,7 +307,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#backupRun*.
+   * This is always **sql#backupRun**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -315,7 +315,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always *sql#backupRun*.
+   * This is always **sql#backupRun**.
    * @param kind kind or {@code null} for none
    */
   public BackupRun setKind(java.lang.String kind) {

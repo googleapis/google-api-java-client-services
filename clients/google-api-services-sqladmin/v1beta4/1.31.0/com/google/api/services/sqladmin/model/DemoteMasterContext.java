@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class DemoteMasterContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always *sql#demoteMasterContext*.
+   * This is always **sql#demoteMasterContext**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   private java.lang.Boolean verifyGtidConsistency;
 
   /**
-   * This is always *sql#demoteMasterContext*.
+   * This is always **sql#demoteMasterContext**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -78,7 +78,7 @@ public final class DemoteMasterContext extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always *sql#demoteMasterContext*.
+   * This is always **sql#demoteMasterContext**.
    * @param kind kind or {@code null} for none
    */
   public DemoteMasterContext setKind(java.lang.String kind) {

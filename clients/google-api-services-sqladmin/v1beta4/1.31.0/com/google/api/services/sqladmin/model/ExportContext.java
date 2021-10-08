@@ -59,7 +59,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String fileType;
 
   /**
-   * This is always *sql#exportContext*.
+   * This is always **sql#exportContext**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always *sql#exportContext*.
+   * This is always **sql#exportContext**.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -165,7 +165,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * This is always *sql#exportContext*.
+   * This is always **sql#exportContext**.
    * @param kind kind or {@code null} for none
    */
   public ExportContext setKind(java.lang.String kind) {

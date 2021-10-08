@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-prod_tt_sasportal",
+    "version": "v1alpha1-rev20210903-1.32.1"
+  }
+}

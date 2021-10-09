@@ -40,6 +40,13 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
   private java.lang.String dataType;
 
   /**
+   * Optional. Additional details about a date column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DateDetails dateDetails;
+
+  /**
    * Internal id for a column.
    * The value may be {@code null}.
    */
@@ -114,6 +121,23 @@ public final class ColumnDescription extends com.google.api.client.json.GenericJ
    */
   public ColumnDescription setDataType(java.lang.String dataType) {
     this.dataType = dataType;
+    return this;
+  }
+
+  /**
+   * Optional. Additional details about a date column.
+   * @return value or {@code null} for none
+   */
+  public DateDetails getDateDetails() {
+    return dateDetails;
+  }
+
+  /**
+   * Optional. Additional details about a date column.
+   * @param dateDetails dateDetails or {@code null} for none
+   */
+  public ColumnDescription setDateDetails(DateDetails dateDetails) {
+    this.dateDetails = dateDetails;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.area120tables.v1alpha1.model;
 
 /**
- * A single table. NextId: 7
+ * A single table. NextId: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Area120 Tables API. For a detailed explanation see:
@@ -75,6 +75,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(SavedView.class);
   }
+
+  /**
+   * The time zone of the table. IANA Time Zone Database time zone, e.g. "America/New_York".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
 
   /**
    * Time when the table was last updated excluding updates to individual rows
@@ -165,6 +172,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setSavedViews(java.util.List<SavedView> savedViews) {
     this.savedViews = savedViews;
+    return this;
+  }
+
+  /**
+   * The time zone of the table. IANA Time Zone Database time zone, e.g. "America/New_York".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * The time zone of the table. IANA Time Zone Database time zone, e.g. "America/New_York".
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public Table setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

@@ -1319,11 +1319,13 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Deletes a `Registration` resource. For `Registration` resources , this method works if: * `state`
-         * is `EXPORTED` with `expire_time` in the past * `state` is `REGISTRATION_FAILED` When an active
-         * domain is successfully deleted, you can continue to use the domain in [Google
-         * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
-         * owner in Google Domains, and permissions for the domain are subsequently managed there. The
+         * Deletes a `Registration` resource. For `Registration` resources using usage billing, this method
+         * works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is
+         * `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` This method works on any `Registration`
+         * resource using subscription billing, provided that the resource was created at least 1 day in the
+         * past. When an active domain is successfully deleted, you can continue to use the domain in
+         * [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's
+         * sole owner in Google Domains, and permissions for the domain are subsequently managed there. The
          * domain will not renew automatically unless the new owner sets up billing in Google Domains.
          *
          * Create a request for the method "registrations.delete".
@@ -1349,12 +1351,15 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
 
           /**
-           * Deletes a `Registration` resource. For `Registration` resources , this method works if: *
-           * `state` is `EXPORTED` with `expire_time` in the past * `state` is `REGISTRATION_FAILED` When an
-           * active domain is successfully deleted, you can continue to use the domain in [Google
-           * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
-           * owner in Google Domains, and permissions for the domain are subsequently managed there. The
-           * domain will not renew automatically unless the new owner sets up billing in Google Domains.
+           * Deletes a `Registration` resource. For `Registration` resources using usage billing, this
+           * method works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is
+           * `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` This method works on any `Registration`
+           * resource using subscription billing, provided that the resource was created at least 1 day in
+           * the past. When an active domain is successfully deleted, you can continue to use the domain in
+           * [Google Domains](https://domains.google/) until it expires. The calling user becomes the
+           * domain's sole owner in Google Domains, and permissions for the domain are subsequently managed
+           * there. The domain will not renew automatically unless the new owner sets up billing in Google
+           * Domains.
            *
            * Create a request for the method "registrations.delete".
            *
@@ -2949,6 +2954,170 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
+         * domains managed by Google Domains, transferring to Cloud Domains is not yet supported. Use the
+         * returned values to call `TransferDomain`.
+         *
+         * Create a request for the method "registrations.retrieveTransferParameters".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RetrieveTransferParameters#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param location Required. The location. Must be in the format `projects/locations`.
+         * @return the request
+         */
+        public RetrieveTransferParameters retrieveTransferParameters(java.lang.String location) throws java.io.IOException {
+          RetrieveTransferParameters result = new RetrieveTransferParameters(location);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrieveTransferParameters extends CloudDomainsRequest<com.google.api.services.domains.v1alpha2.model.RetrieveTransferParametersResponse> {
+
+          private static final String REST_PATH = "v1alpha2/{+location}/registrations:retrieveTransferParameters";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
+           * domains managed by Google Domains, transferring to Cloud Domains is not yet supported. Use the
+           * returned values to call `TransferDomain`.
+           *
+           * Create a request for the method "registrations.retrieveTransferParameters".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RetrieveTransferParameters#execute()} method to invoke the remote
+           * operation. <p> {@link RetrieveTransferParameters#initialize(com.google.api.client.googleapis.se
+           * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param location Required. The location. Must be in the format `projects/locations`.
+           * @since 1.13
+           */
+          protected RetrieveTransferParameters(java.lang.String location) {
+            super(CloudDomains.this, "GET", REST_PATH, null, com.google.api.services.domains.v1alpha2.model.RetrieveTransferParametersResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrieveTransferParameters set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrieveTransferParameters) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrieveTransferParameters setAccessToken(java.lang.String accessToken) {
+            return (RetrieveTransferParameters) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrieveTransferParameters setAlt(java.lang.String alt) {
+            return (RetrieveTransferParameters) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrieveTransferParameters setCallback(java.lang.String callback) {
+            return (RetrieveTransferParameters) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrieveTransferParameters setFields(java.lang.String fields) {
+            return (RetrieveTransferParameters) super.setFields(fields);
+          }
+
+          @Override
+          public RetrieveTransferParameters setKey(java.lang.String key) {
+            return (RetrieveTransferParameters) super.setKey(key);
+          }
+
+          @Override
+          public RetrieveTransferParameters setOauthToken(java.lang.String oauthToken) {
+            return (RetrieveTransferParameters) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrieveTransferParameters setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrieveTransferParameters) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrieveTransferParameters setQuotaUser(java.lang.String quotaUser) {
+            return (RetrieveTransferParameters) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrieveTransferParameters setUploadType(java.lang.String uploadType) {
+            return (RetrieveTransferParameters) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrieveTransferParameters setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrieveTransferParameters) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The location. Must be in the format `projects/locations`. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. The location. Must be in the format `projects/locations`.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** Required. The location. Must be in the format `projects/locations`. */
+          public RetrieveTransferParameters setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          /**
+           * Required. The domain name. Unicode domain names must be expressed in Punycode format.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String domainName;
+
+          /** Required. The domain name. Unicode domain names must be expressed in Punycode format.
+           */
+          public java.lang.String getDomainName() {
+            return domainName;
+          }
+
+          /**
+           * Required. The domain name. Unicode domain names must be expressed in Punycode format.
+           */
+          public RetrieveTransferParameters setDomainName(java.lang.String domainName) {
+            this.domainName = domainName;
+            return this;
+          }
+
+          @Override
+          public RetrieveTransferParameters set(String parameterName, Object value) {
+            return (RetrieveTransferParameters) super.set(parameterName, value);
+          }
+        }
+        /**
          * Searches for available domain names similar to the provided query. Availability results from this
          * method are approximate; call `RetrieveRegisterParameters` on a domain before registering to
          * confirm availability.
@@ -3393,6 +3562,166 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
+         * Domains, transferring to Cloud Domains is not yet supported. Before calling this method, go to
+         * the domain's current registrar to unlock the domain for transfer and retrieve the domain's
+         * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is
+         * unlocked and to get values needed to build a call to this method. A successful call creates a
+         * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
+         * transfer process. The registrant can often speed up this process by approving the transfer
+         * through the current registrar, either by clicking a link in an email from the registrar or by
+         * visiting the registrar's website. A few minutes after transfer approval, the resource transitions
+         * to state `ACTIVE`, indicating that the transfer was successful. If the transfer is rejected or
+         * the request expires without being approved, the resource can end up in state `TRANSFER_FAILED`.
+         * If transfer fails, you can safely delete the resource and retry the transfer.
+         *
+         * Create a request for the method "registrations.transfer".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link Transfer#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the `Registration`. Must be in the format `projects/locations`.
+         * @param content the {@link com.google.api.services.domains.v1alpha2.model.TransferDomainRequest}
+         * @return the request
+         */
+        public Transfer transfer(java.lang.String parent, com.google.api.services.domains.v1alpha2.model.TransferDomainRequest content) throws java.io.IOException {
+          Transfer result = new Transfer(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Transfer extends CloudDomainsRequest<com.google.api.services.domains.v1alpha2.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha2/{+parent}/registrations:transfer";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
+           * Domains, transferring to Cloud Domains is not yet supported. Before calling this method, go to
+           * the domain's current registrar to unlock the domain for transfer and retrieve the domain's
+           * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain
+           * is unlocked and to get values needed to build a call to this method. A successful call creates
+           * a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
+           * transfer process. The registrant can often speed up this process by approving the transfer
+           * through the current registrar, either by clicking a link in an email from the registrar or by
+           * visiting the registrar's website. A few minutes after transfer approval, the resource
+           * transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is
+           * rejected or the request expires without being approved, the resource can end up in state
+           * `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the
+           * transfer.
+           *
+           * Create a request for the method "registrations.transfer".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link Transfer#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Transfer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the `Registration`. Must be in the format `projects/locations`.
+           * @param content the {@link com.google.api.services.domains.v1alpha2.model.TransferDomainRequest}
+           * @since 1.13
+           */
+          protected Transfer(java.lang.String parent, com.google.api.services.domains.v1alpha2.model.TransferDomainRequest content) {
+            super(CloudDomains.this, "POST", REST_PATH, content, com.google.api.services.domains.v1alpha2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Transfer set$Xgafv(java.lang.String $Xgafv) {
+            return (Transfer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Transfer setAccessToken(java.lang.String accessToken) {
+            return (Transfer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Transfer setAlt(java.lang.String alt) {
+            return (Transfer) super.setAlt(alt);
+          }
+
+          @Override
+          public Transfer setCallback(java.lang.String callback) {
+            return (Transfer) super.setCallback(callback);
+          }
+
+          @Override
+          public Transfer setFields(java.lang.String fields) {
+            return (Transfer) super.setFields(fields);
+          }
+
+          @Override
+          public Transfer setKey(java.lang.String key) {
+            return (Transfer) super.setKey(key);
+          }
+
+          @Override
+          public Transfer setOauthToken(java.lang.String oauthToken) {
+            return (Transfer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Transfer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Transfer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Transfer setQuotaUser(java.lang.String quotaUser) {
+            return (Transfer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Transfer setUploadType(java.lang.String uploadType) {
+            return (Transfer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Transfer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Transfer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the `Registration`. Must be in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the `Registration`. Must be in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the `Registration`. Must be in the format
+           * `projects/locations`.
+           */
+          public Transfer setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Transfer set(String parameterName, Object value) {
+            return (Transfer) super.set(parameterName, value);
           }
         }
 

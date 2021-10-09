@@ -1393,15 +1393,13 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
-       * filters supported at the moment are: `placeId`, `min_latitude`, `max_latitude`,
-       * `min_longitude`, and `max_longitude`.
+       * filters supported at the moment are: `placeId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The filters
-     supported at the moment are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, and
-     `max_longitude`.
+     supported at the moment are: `placeId`.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -1409,8 +1407,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
-       * filters supported at the moment are: `placeId`, `min_latitude`, `max_latitude`,
-       * `min_longitude`, and `max_longitude`.
+       * filters supported at the moment are: `placeId`.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

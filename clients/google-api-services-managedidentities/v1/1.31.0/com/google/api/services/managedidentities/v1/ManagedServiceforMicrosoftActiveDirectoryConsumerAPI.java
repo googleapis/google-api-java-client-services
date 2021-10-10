@@ -4135,17 +4135,24 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               return this;
             }
 
-            /** Required. Peering Id, unique name to identify peering. */
+            /**
+             * Required. Peering Id, unique name to identify peering. It should follow the regex
+             * format "^(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)$"
+             */
             @com.google.api.client.util.Key
             private java.lang.String peeringId;
 
-            /** Required. Peering Id, unique name to identify peering.
+            /** Required. Peering Id, unique name to identify peering. It should follow the regex format
+           "^(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)$"
              */
             public java.lang.String getPeeringId() {
               return peeringId;
             }
 
-            /** Required. Peering Id, unique name to identify peering. */
+            /**
+             * Required. Peering Id, unique name to identify peering. It should follow the regex
+             * format "^(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)$"
+             */
             public Create setPeeringId(java.lang.String peeringId) {
               this.peeringId = peeringId;
               return this;

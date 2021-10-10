@@ -25,7 +25,7 @@ package com.google.api.services.connectors.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.devsite.corp.google.com/apigee/docs/api-platform/connectors/about-connectors" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/apigee/docs/api-platform/connectors/about-connectors" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

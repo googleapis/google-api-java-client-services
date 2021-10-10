@@ -107,11 +107,18 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private java.lang.String releaseVersion;
 
   /**
-   * Output only. Role grant configuration for this config variable.
+   * Output only. Role grant configuration for this config variable. It will be DEPRECATED soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RoleGrant roleGrant;
+
+  /**
+   * Output only. Role grant configurations for this connector version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RoleGrant> roleGrants;
 
   /**
    * Output only. Information about the runtime features supported by the Connector.
@@ -285,7 +292,7 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Role grant configuration for this config variable.
+   * Output only. Role grant configuration for this config variable. It will be DEPRECATED soon.
    * @return value or {@code null} for none
    */
   public RoleGrant getRoleGrant() {
@@ -293,11 +300,28 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Role grant configuration for this config variable.
+   * Output only. Role grant configuration for this config variable. It will be DEPRECATED soon.
    * @param roleGrant roleGrant or {@code null} for none
    */
   public ConnectorVersion setRoleGrant(RoleGrant roleGrant) {
     this.roleGrant = roleGrant;
+    return this;
+  }
+
+  /**
+   * Output only. Role grant configurations for this connector version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RoleGrant> getRoleGrants() {
+    return roleGrants;
+  }
+
+  /**
+   * Output only. Role grant configurations for this connector version.
+   * @param roleGrants roleGrants or {@code null} for none
+   */
+  public ConnectorVersion setRoleGrants(java.util.List<RoleGrant> roleGrants) {
+    this.roleGrants = roleGrants;
     return this;
   }
 

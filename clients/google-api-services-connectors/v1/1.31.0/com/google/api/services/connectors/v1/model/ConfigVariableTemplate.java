@@ -58,6 +58,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.Boolean required;
 
   /**
+   * Role grant configuration for the config variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RoleGrant roleGrant;
+
+  /**
    * Regular expression in RE2 syntax used for validating the `value` of a `ConfigVariable`.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setRequired(java.lang.Boolean required) {
     this.required = required;
+    return this;
+  }
+
+  /**
+   * Role grant configuration for the config variable.
+   * @return value or {@code null} for none
+   */
+  public RoleGrant getRoleGrant() {
+    return roleGrant;
+  }
+
+  /**
+   * Role grant configuration for the config variable.
+   * @param roleGrant roleGrant or {@code null} for none
+   */
+  public ConfigVariableTemplate setRoleGrant(RoleGrant roleGrant) {
+    this.roleGrant = roleGrant;
     return this;
   }
 

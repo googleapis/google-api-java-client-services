@@ -148,6 +148,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Info per node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NodeInfo> nodes;
+
+  /**
    * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
    * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
    * so should be checked before each import/export operation.
@@ -162,6 +169,30 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Output only. Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only.
+   * Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes
+   * will exhibit some lag behind the primary. Write requests must target 'host'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readEndpoint;
+
+  /**
+   * Output only. The port number of the exposed readonly redis endpoint. Standard tier only. Write
+   * requests should target 'port'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer readEndpointPort;
+
+  /**
+   * Optional. Read replica mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readReplicasMode;
 
   /**
    * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
@@ -183,6 +214,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String redisVersion;
+
+  /**
+   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
+   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer replicaCount;
 
   /**
    * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for
@@ -508,6 +547,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Info per node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NodeInfo> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Output only. Info per node.
+   * @param nodes nodes or {@code null} for none
+   */
+  public Instance setNodes(java.util.List<NodeInfo> nodes) {
+    this.nodes = nodes;
+    return this;
+  }
+
+  /**
    * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
    * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
    * so should be checked before each import/export operation.
@@ -542,6 +598,63 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Output only. Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only.
+   * Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes
+   * will exhibit some lag behind the primary. Write requests must target 'host'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadEndpoint() {
+    return readEndpoint;
+  }
+
+  /**
+   * Output only. Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only.
+   * Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes
+   * will exhibit some lag behind the primary. Write requests must target 'host'.
+   * @param readEndpoint readEndpoint or {@code null} for none
+   */
+  public Instance setReadEndpoint(java.lang.String readEndpoint) {
+    this.readEndpoint = readEndpoint;
+    return this;
+  }
+
+  /**
+   * Output only. The port number of the exposed readonly redis endpoint. Standard tier only. Write
+   * requests should target 'port'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReadEndpointPort() {
+    return readEndpointPort;
+  }
+
+  /**
+   * Output only. The port number of the exposed readonly redis endpoint. Standard tier only. Write
+   * requests should target 'port'.
+   * @param readEndpointPort readEndpointPort or {@code null} for none
+   */
+  public Instance setReadEndpointPort(java.lang.Integer readEndpointPort) {
+    this.readEndpointPort = readEndpointPort;
+    return this;
+  }
+
+  /**
+   * Optional. Read replica mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadReplicasMode() {
+    return readReplicasMode;
+  }
+
+  /**
+   * Optional. Read replica mode.
+   * @param readReplicasMode readReplicasMode or {@code null} for none
+   */
+  public Instance setReadReplicasMode(java.lang.String readReplicasMode) {
+    this.readReplicasMode = readReplicasMode;
     return this;
   }
 
@@ -590,6 +703,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setRedisVersion(java.lang.String redisVersion) {
     this.redisVersion = redisVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
+   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReplicaCount() {
+    return replicaCount;
+  }
+
+  /**
+   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
+   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * @param replicaCount replicaCount or {@code null} for none
+   */
+  public Instance setReplicaCount(java.lang.Integer replicaCount) {
+    this.replicaCount = replicaCount;
     return this;
   }
 

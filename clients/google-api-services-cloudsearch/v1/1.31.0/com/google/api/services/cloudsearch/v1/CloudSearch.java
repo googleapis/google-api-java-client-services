@@ -8258,6 +8258,128 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+   *   {@code CloudSearch.V1.List request = cloudsearch.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * Initializes the customer. **Note:** This API requires an admin account to execute.
+     *
+     * Create a request for the method "v1.initializeCustomer".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link InitializeCustomer#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudsearch.v1.model.InitializeCustomerRequest}
+     * @return the request
+     */
+    public InitializeCustomer initializeCustomer(com.google.api.services.cloudsearch.v1.model.InitializeCustomerRequest content) throws java.io.IOException {
+      InitializeCustomer result = new InitializeCustomer(content);
+      initialize(result);
+      return result;
+    }
+
+    public class InitializeCustomer extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1:initializeCustomer";
+
+      /**
+       * Initializes the customer. **Note:** This API requires an admin account to execute.
+       *
+       * Create a request for the method "v1.initializeCustomer".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link InitializeCustomer#execute()} method to invoke the remote
+       * operation. <p> {@link InitializeCustomer#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.InitializeCustomerRequest}
+       * @since 1.13
+       */
+      protected InitializeCustomer(com.google.api.services.cloudsearch.v1.model.InitializeCustomerRequest content) {
+        super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.Operation.class);
+      }
+
+      @Override
+      public InitializeCustomer set$Xgafv(java.lang.String $Xgafv) {
+        return (InitializeCustomer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public InitializeCustomer setAccessToken(java.lang.String accessToken) {
+        return (InitializeCustomer) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public InitializeCustomer setAlt(java.lang.String alt) {
+        return (InitializeCustomer) super.setAlt(alt);
+      }
+
+      @Override
+      public InitializeCustomer setCallback(java.lang.String callback) {
+        return (InitializeCustomer) super.setCallback(callback);
+      }
+
+      @Override
+      public InitializeCustomer setFields(java.lang.String fields) {
+        return (InitializeCustomer) super.setFields(fields);
+      }
+
+      @Override
+      public InitializeCustomer setKey(java.lang.String key) {
+        return (InitializeCustomer) super.setKey(key);
+      }
+
+      @Override
+      public InitializeCustomer setOauthToken(java.lang.String oauthToken) {
+        return (InitializeCustomer) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public InitializeCustomer setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (InitializeCustomer) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public InitializeCustomer setQuotaUser(java.lang.String quotaUser) {
+        return (InitializeCustomer) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public InitializeCustomer setUploadType(java.lang.String uploadType) {
+        return (InitializeCustomer) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public InitializeCustomer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (InitializeCustomer) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public InitializeCustomer set(String parameterName, Object value) {
+        return (InitializeCustomer) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link CloudSearch}.
    *
    * <p>

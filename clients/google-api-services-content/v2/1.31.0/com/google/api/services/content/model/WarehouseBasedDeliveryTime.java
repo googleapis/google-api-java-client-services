@@ -48,21 +48,21 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   private java.lang.String carrierService;
 
   /**
-   * Required. Shipping origin's state.
+   * Shipping origin's state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originAdministrativeArea;
 
   /**
-   * Required. Shipping origin's city.
+   * Shipping origin's city.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originCity;
 
   /**
-   * Required. Shipping origin's country represented as a [CLDR territory
+   * Shipping origin's country represented as a [CLDR territory
    * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   private java.lang.String originCountry;
 
   /**
-   * Required. Shipping origin.
+   * Shipping origin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,6 +82,14 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String originStreetAddress;
+
+  /**
+   * The name of the warehouse. Warehouse name need to be matched with name. If warehouseName is
+   * set, the below fields will be ignored. The warehouse info will be read from warehouse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String warehouseName;
 
   /**
    * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported carriers can be
@@ -124,7 +132,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's state.
+   * Shipping origin's state.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginAdministrativeArea() {
@@ -132,7 +140,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's state.
+   * Shipping origin's state.
    * @param originAdministrativeArea originAdministrativeArea or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setOriginAdministrativeArea(java.lang.String originAdministrativeArea) {
@@ -141,7 +149,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's city.
+   * Shipping origin's city.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginCity() {
@@ -149,7 +157,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's city.
+   * Shipping origin's city.
    * @param originCity originCity or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setOriginCity(java.lang.String originCity) {
@@ -158,7 +166,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's country represented as a [CLDR territory
+   * Shipping origin's country represented as a [CLDR territory
    * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
    * @return value or {@code null} for none
    */
@@ -167,7 +175,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin's country represented as a [CLDR territory
+   * Shipping origin's country represented as a [CLDR territory
    * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml).
    * @param originCountry originCountry or {@code null} for none
    */
@@ -177,7 +185,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin.
+   * Shipping origin.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginPostalCode() {
@@ -185,7 +193,7 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Shipping origin.
+   * Shipping origin.
    * @param originPostalCode originPostalCode or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setOriginPostalCode(java.lang.String originPostalCode) {
@@ -207,6 +215,25 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
    */
   public WarehouseBasedDeliveryTime setOriginStreetAddress(java.lang.String originStreetAddress) {
     this.originStreetAddress = originStreetAddress;
+    return this;
+  }
+
+  /**
+   * The name of the warehouse. Warehouse name need to be matched with name. If warehouseName is
+   * set, the below fields will be ignored. The warehouse info will be read from warehouse.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWarehouseName() {
+    return warehouseName;
+  }
+
+  /**
+   * The name of the warehouse. Warehouse name need to be matched with name. If warehouseName is
+   * set, the below fields will be ignored. The warehouse info will be read from warehouse.
+   * @param warehouseName warehouseName or {@code null} for none
+   */
+  public WarehouseBasedDeliveryTime setWarehouseName(java.lang.String warehouseName) {
+    this.warehouseName = warehouseName;
     return this;
   }
 

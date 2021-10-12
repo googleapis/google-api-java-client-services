@@ -52,6 +52,13 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   private java.lang.String mpn;
 
   /**
+   * Plain text description of this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productDescription;
+
+  /**
    * Required. The Content API REST ID of the product, in the form
    * channel:contentLanguage:targetCountry:offerId.
    * The value may be {@code null}.
@@ -65,6 +72,20 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quantity;
+
+  /**
+   * Merchant SKU for this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sku;
+
+  /**
+   * Universal product code for this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String upc;
 
   /**
    * The Global Trade Item Number.
@@ -118,6 +139,23 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
+   * Plain text description of this product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductDescription() {
+    return productDescription;
+  }
+
+  /**
+   * Plain text description of this product.
+   * @param productDescription productDescription or {@code null} for none
+   */
+  public OrderTrackingSignalLineItemDetails setProductDescription(java.lang.String productDescription) {
+    this.productDescription = productDescription;
+    return this;
+  }
+
+  /**
    * Required. The Content API REST ID of the product, in the form
    * channel:contentLanguage:targetCountry:offerId.
    * @return value or {@code null} for none
@@ -150,6 +188,40 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
    */
   public OrderTrackingSignalLineItemDetails setQuantity(java.lang.Long quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * Merchant SKU for this item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSku() {
+    return sku;
+  }
+
+  /**
+   * Merchant SKU for this item.
+   * @param sku sku or {@code null} for none
+   */
+  public OrderTrackingSignalLineItemDetails setSku(java.lang.String sku) {
+    this.sku = sku;
+    return this;
+  }
+
+  /**
+   * Universal product code for this item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpc() {
+    return upc;
+  }
+
+  /**
+   * Universal product code for this item.
+   * @param upc upc or {@code null} for none
+   */
+  public OrderTrackingSignalLineItemDetails setUpc(java.lang.String upc) {
+    this.upc = upc;
     return this;
   }
 

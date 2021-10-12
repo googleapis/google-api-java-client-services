@@ -44,7 +44,7 @@ public final class GoogleCloudPolicytroubleshooterV1BindingExplanation extends c
   /**
    * A condition expression that prevents this binding from granting access unless the expression
    * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * https://cloud.google.com/iam/help/conditions/overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class GoogleCloudPolicytroubleshooterV1BindingExplanation extends c
   /**
    * A condition expression that prevents this binding from granting access unless the expression
    * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * https://cloud.google.com/iam/help/conditions/overview.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -135,7 +135,7 @@ public final class GoogleCloudPolicytroubleshooterV1BindingExplanation extends c
   /**
    * A condition expression that prevents this binding from granting access unless the expression
    * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * https://cloud.google.com/iam/help/conditions/overview.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1BindingExplanation setCondition(GoogleTypeExpr condition) {

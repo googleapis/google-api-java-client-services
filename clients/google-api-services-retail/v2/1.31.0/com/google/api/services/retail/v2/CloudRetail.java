@@ -3758,8 +3758,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *
            * @param placement Required. The resource name of the search engine placement, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the set of models that will be used to make the search. We currently
-           *        support one placement with the following ID: * `default_search`.
+           *        is used to identify the serving configuration name and the set of models that will be used
+           *        to make the search.
            * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2SearchRequest}
            * @return the request
            */
@@ -3790,8 +3790,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *
              * @param placement Required. The resource name of the search engine placement, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the set of models that will be used to make the search. We currently
-           *        support one placement with the following ID: * `default_search`.
+           *        is used to identify the serving configuration name and the set of models that will be used
+           *        to make the search.
              * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2SearchRequest}
              * @since 1.13
              */
@@ -3863,16 +3863,16 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The resource name of the search engine placement, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the set of models that will be used to make the search. We
-             * currently support one placement with the following ID: * `default_search`.
+             * field is used to identify the serving configuration name and the set of models that
+             * will be used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
 
             /** Required. The resource name of the search engine placement, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the set of models that will be used to make the search. We currently support one
-           placement with the following ID: * `default_search`.
+           to identify the serving configuration name and the set of models that will be used to make the
+           search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -3881,8 +3881,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             /**
              * Required. The resource name of the search engine placement, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the set of models that will be used to make the search. We
-             * currently support one placement with the following ID: * `default_search`.
+             * field is used to identify the serving configuration name and the set of models that
+             * will be used to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {

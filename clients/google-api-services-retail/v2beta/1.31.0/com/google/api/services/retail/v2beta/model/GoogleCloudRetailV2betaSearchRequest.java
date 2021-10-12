@@ -31,7 +31,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](https://cloud.google.com/retail/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
+   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
+   * from both places are evaluated. If a search request matches multiple boost conditions, the
+   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,20 +167,20 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * attributes.key, where key is any key in the Product.attributes map.
-   * * pickupInStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-
-   * in-store". * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "ship-to-store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
+   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +199,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](https://cloud.google.com/retail/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
+   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
+   * from both places are evaluated. If a search request matches multiple boost conditions, the
+   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestBoostSpec getBoostSpec() {
@@ -205,7 +211,10 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
 
   /**
    * Boost specification to boost certain products. See more details at this [user
-   * guide](https://cloud.google.com/retail/docs/boosting).
+   * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
+   * ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions
+   * from both places are evaluated. If a search request matches multiple boost conditions, the
+   * final boost score is equal to the sum of the boost scores from all matched boost conditions.
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setBoostSpec(GoogleCloudRetailV2betaSearchRequestBoostSpec boostSpec) {
@@ -499,20 +508,20 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * attributes.key, where key is any key in the Product.attributes map.
-   * * pickupInStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-
-   * in-store". * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "ship-to-store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
+   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVariantRollupKeys() {
@@ -526,20 +535,20 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * attributes.key, where key is any key in the Product.attributes map.
-   * * pickupInStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-
-   * in-store". * shipToStore.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "ship-to-store". * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "same-day-delivery". * nextDayDelivery.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "next-day-delivery". *
-   * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-1". * customFulfillment2.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-2". * customFulfillment3.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". * customFulfillment4.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-4". *
-   * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-5". If this field is set to an invalid value other than these, an INVALID_ARGUMENT
-   * error is returned.
+   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
+   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
+   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
+   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
+   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
+   * these, an INVALID_ARGUMENT error is returned.
    * @param variantRollupKeys variantRollupKeys or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setVariantRollupKeys(java.util.List<java.lang.String> variantRollupKeys) {

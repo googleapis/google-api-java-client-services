@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Response of the RemoveFulfillmentPlacesRequest. Currently empty because there is no meaningful
+ * Response of the AddFulfillmentPlacesRequest. Currently empty because there is no meaningful
  * response populated from the AddFulfillmentPlaces method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

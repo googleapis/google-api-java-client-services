@@ -66,6 +66,13 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. A list of warehouses which can be referred to in `services`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Warehouse> warehouses;
+
+  /**
    * The ID of the account to which these account shipping settings belong. Ignored upon update,
    * always present in get request responses.
    * @return value or {@code null} for none
@@ -115,6 +122,23 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
    */
   public ShippingSettings setServices(java.util.List<Service> services) {
     this.services = services;
+    return this;
+  }
+
+  /**
+   * Optional. A list of warehouses which can be referred to in `services`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Warehouse> getWarehouses() {
+    return warehouses;
+  }
+
+  /**
+   * Optional. A list of warehouses which can be referred to in `services`.
+   * @param warehouses warehouses or {@code null} for none
+   */
+  public ShippingSettings setWarehouses(java.util.List<Warehouse> warehouses) {
+    this.warehouses = warehouses;
     return this;
   }
 

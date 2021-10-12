@@ -17,9 +17,12 @@
 package com.google.api.services.content.model;
 
 /**
- * Represents a promotion. (1) https://support.google.com/merchants/answer/2906014 (2)
- * https://support.google.com/merchants/answer/10146130 (3)
- * https://support.google.com/merchants/answer/9173673
+ * The Promotions feature is currently in alpha and is not yet publicly available via Content API
+ * for Shopping. This documentation is provided for reference only may be subject to change.
+ * Represents a promotion. See the following articles for more details. * [Promotions feed
+ * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions feed
+ * specification](https://support.google.com/merchants/answer/10146130) * [Promotions on Buy on
+ * Google product data specification](https://support.google.com/merchants/answer/9173673)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -97,7 +100,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter.
+   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
+   * promotion is of the form channel:contentLanguage:targetCountry:promotionId The channel field
+   * will have a value of "online", "local", or "onlinelocal".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,7 +431,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter.
+   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
+   * promotion is of the form channel:contentLanguage:targetCountry:promotionId The channel field
+   * will have a value of "online", "local", or "onlinelocal".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -435,7 +442,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Output only. The REST promotion id to uniquely identify the promotion. Content API
-   * methods that operate on promotions take this as their promotionId parameter.
+   * methods that operate on promotions take this as their promotionId parameter. The REST ID for a
+   * promotion is of the form channel:contentLanguage:targetCountry:promotionId The channel field
+   * will have a value of "online", "local", or "onlinelocal".
    * @param id id or {@code null} for none
    */
   public Promotion setId(java.lang.String id) {

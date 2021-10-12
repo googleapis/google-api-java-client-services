@@ -54,13 +54,22 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   private java.lang.String koreanBusinessRegistrationNumber;
 
   /**
-   * ! The phone number of the business. This can only be updated if a verified ! phone number is
-   * not already set. To replace a verified phone number use ! the
-   * `Accounts.requestphoneverification` and ! `Accounts.verifyphonenumber`.
+   * The phone number of the business. This can only be updated if a verified phone number is not
+   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
+   * `Accounts.verifyphonenumber`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
+
+  /**
+   * Verification status of the phone number of the business. This status is read only and can be
+   * updated only by successful phone verification. Acceptable values are: - "`verified`" -
+   * "`unverified`" "`unspecified`" -
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phoneVerificationStatus;
 
   /**
    * The address of the business.
@@ -118,9 +127,9 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   }
 
   /**
-   * ! The phone number of the business. This can only be updated if a verified ! phone number is
-   * not already set. To replace a verified phone number use ! the
-   * `Accounts.requestphoneverification` and ! `Accounts.verifyphonenumber`.
+   * The phone number of the business. This can only be updated if a verified phone number is not
+   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
+   * `Accounts.verifyphonenumber`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -128,13 +137,34 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   }
 
   /**
-   * ! The phone number of the business. This can only be updated if a verified ! phone number is
-   * not already set. To replace a verified phone number use ! the
-   * `Accounts.requestphoneverification` and ! `Accounts.verifyphonenumber`.
+   * The phone number of the business. This can only be updated if a verified phone number is not
+   * already set. To replace a verified phone number use the `Accounts.requestphoneverification` and
+   * `Accounts.verifyphonenumber`.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public AccountBusinessInformation setPhoneNumber(java.lang.String phoneNumber) {
     this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  /**
+   * Verification status of the phone number of the business. This status is read only and can be
+   * updated only by successful phone verification. Acceptable values are: - "`verified`" -
+   * "`unverified`" "`unspecified`" -
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhoneVerificationStatus() {
+    return phoneVerificationStatus;
+  }
+
+  /**
+   * Verification status of the phone number of the business. This status is read only and can be
+   * updated only by successful phone verification. Acceptable values are: - "`verified`" -
+   * "`unverified`" "`unspecified`" -
+   * @param phoneVerificationStatus phoneVerificationStatus or {@code null} for none
+   */
+  public AccountBusinessInformation setPhoneVerificationStatus(java.lang.String phoneVerificationStatus) {
+    this.phoneVerificationStatus = phoneVerificationStatus;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class SearchTransitiveMembershipsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of transitive members satisfying the query.
+   * List of transitive memberships satisfying the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class SearchTransitiveMembershipsResponse extends com.google.api.cl
   private java.lang.String nextPageToken;
 
   /**
-   * List of transitive members satisfying the query.
+   * List of transitive memberships satisfying the query.
    * @return value or {@code null} for none
    */
   public java.util.List<MemberRelation> getMemberships() {
@@ -58,7 +58,7 @@ public final class SearchTransitiveMembershipsResponse extends com.google.api.cl
   }
 
   /**
-   * List of transitive members satisfying the query.
+   * List of transitive memberships satisfying the query.
    * @param memberships memberships or {@code null} for none
    */
   public SearchTransitiveMembershipsResponse setMemberships(java.util.List<MemberRelation> memberships) {

@@ -61,7 +61,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
    * * "attributes.key" * "pickupInStore" * "shipToStore" * "sameDayDelivery" * "nextDayDelivery" *
    * "customFulfillment1" * "customFulfillment2" * "customFulfillment3" * "customFulfillment4" *
    * "customFulfillment5" * numerical_field = * "price" * "discount" * "rating" * "ratingCount" *
-   * "attributes.key"
+   * "attributes.key" * "inventory(place_id,price)"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
    * * "attributes.key" * "pickupInStore" * "shipToStore" * "sameDayDelivery" * "nextDayDelivery" *
    * "customFulfillment1" * "customFulfillment2" * "customFulfillment3" * "customFulfillment4" *
    * "customFulfillment5" * numerical_field = * "price" * "discount" * "rating" * "ratingCount" *
-   * "attributes.key"
+   * "attributes.key" * "inventory(place_id,price)"
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -182,7 +182,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey extend
    * * "attributes.key" * "pickupInStore" * "shipToStore" * "sameDayDelivery" * "nextDayDelivery" *
    * "customFulfillment1" * "customFulfillment2" * "customFulfillment3" * "customFulfillment4" *
    * "customFulfillment5" * numerical_field = * "price" * "discount" * "rating" * "ratingCount" *
-   * "attributes.key"
+   * "attributes.key" * "inventory(place_id,price)"
    * @param key key or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKey setKey(java.lang.String key) {

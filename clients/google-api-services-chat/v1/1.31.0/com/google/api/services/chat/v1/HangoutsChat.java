@@ -2820,13 +2820,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to be updated, comma separated if there are multiple. Currently
-         * supported field paths: * text * cards
+         * supported field paths: * text * cards * gsuite_message_integration_render_data *
+         * attachment
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. The field paths to be updated, comma separated if there are multiple. Currently supported
-       field paths: * text * cards
+       field paths: * text * cards * gsuite_message_integration_render_data * attachment
          */
         public String getUpdateMask() {
           return updateMask;
@@ -2834,7 +2835,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to be updated, comma separated if there are multiple. Currently
-         * supported field paths: * text * cards
+         * supported field paths: * text * cards * gsuite_message_integration_render_data *
+         * attachment
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

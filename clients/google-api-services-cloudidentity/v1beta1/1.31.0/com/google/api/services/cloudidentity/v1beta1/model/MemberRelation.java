@@ -51,7 +51,7 @@ public final class MemberRelation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The relation between the group and the transitive member.
+   * The relation between the group and the transitive membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class MemberRelation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The relation between the group and the transitive member.
+   * The relation between the group and the transitive membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelationType() {
@@ -109,7 +109,7 @@ public final class MemberRelation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The relation between the group and the transitive member.
+   * The relation between the group and the transitive membership.
    * @param relationType relationType or {@code null} for none
    */
   public MemberRelation setRelationType(java.lang.String relationType) {

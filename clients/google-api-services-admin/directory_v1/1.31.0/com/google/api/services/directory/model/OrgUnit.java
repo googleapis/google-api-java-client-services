@@ -19,7 +19,8 @@ package com.google.api.services.directory.model;
 /**
  * Managing your account's organizational units allows you to configure your users' access to
  * services and custom settings. For more information about common organizational unit tasks, see
- * the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-org-units.html).
+ * the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-org-units.html). The customer's
+ * organizational unit hierarchy is limited to 35 levels of depth.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:

@@ -45,6 +45,13 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   private GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo;
 
   /**
+   * More information associated to only booking leads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsHomeservicesLocalservicesV1BookingLead bookingLead;
+
+  /**
    * Business name associated to the account.
    * The value may be {@code null}.
    */
@@ -166,6 +173,23 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
    */
   public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport setAggregatorInfo(GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo) {
     this.aggregatorInfo = aggregatorInfo;
+    return this;
+  }
+
+  /**
+   * More information associated to only booking leads.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1BookingLead getBookingLead() {
+    return bookingLead;
+  }
+
+  /**
+   * More information associated to only booking leads.
+   * @param bookingLead bookingLead or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport setBookingLead(GoogleAdsHomeservicesLocalservicesV1BookingLead bookingLead) {
+    this.bookingLead = bookingLead;
     return this;
   }
 

@@ -25,7 +25,7 @@ package com.google.api.services.adsense.v2;
  *
  * <p>
  * For more information about this service, see the
- * <a href="http://code.google.com/apis/adsense/management/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/adsense/management/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

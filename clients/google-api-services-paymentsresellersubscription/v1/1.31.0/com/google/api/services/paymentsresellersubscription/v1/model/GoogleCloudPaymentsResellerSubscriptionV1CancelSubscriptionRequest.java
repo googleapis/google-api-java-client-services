@@ -32,8 +32,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
 
   /**
    * Optional. If true, the subscription will be cancelled immediately. Otherwise, the subscription
-   * will be cancelled at the end of the current cycle, and therefore no prorated refund will be
-   * issued for the rest of the cycle.
+   * will be cancelled at renewal_time, and therefore no prorated refund will be issued for the rest
+   * of the cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
 
   /**
    * Optional. If true, the subscription will be cancelled immediately. Otherwise, the subscription
-   * will be cancelled at the end of the current cycle, and therefore no prorated refund will be
-   * issued for the rest of the cycle.
+   * will be cancelled at renewal_time, and therefore no prorated refund will be issued for the rest
+   * of the cycle.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelImmediately() {
@@ -58,8 +58,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
 
   /**
    * Optional. If true, the subscription will be cancelled immediately. Otherwise, the subscription
-   * will be cancelled at the end of the current cycle, and therefore no prorated refund will be
-   * issued for the rest of the cycle.
+   * will be cancelled at renewal_time, and therefore no prorated refund will be issued for the rest
+   * of the cycle.
    * @param cancelImmediately cancelImmediately or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest setCancelImmediately(java.lang.Boolean cancelImmediately) {

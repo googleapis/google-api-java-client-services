@@ -334,8 +334,8 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
          * Modify multiple policy values that are applied to a specific org unit so that they now inherit
          * the value from a parent (if applicable). All targets must have the same target format. That is to
          * say that they must point to the same target resource and must have the same keys specified in
-         * `additionalTargetKeyNames`. On failure the request will return the error details as part of the
-         * google.rpc.Status.
+         * `additionalTargetKeyNames`, though the values for those keys may be different. On failure the
+         * request will return the error details as part of the google.rpc.Status.
          *
          * Create a request for the method "orgunits.batchInherit".
          *
@@ -363,8 +363,8 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
            * Modify multiple policy values that are applied to a specific org unit so that they now inherit
            * the value from a parent (if applicable). All targets must have the same target format. That is
            * to say that they must point to the same target resource and must have the same keys specified
-           * in `additionalTargetKeyNames`. On failure the request will return the error details as part of
-           * the google.rpc.Status.
+           * in `additionalTargetKeyNames`, though the values for those keys may be different. On failure
+           * the request will return the error details as part of the google.rpc.Status.
            *
            * Create a request for the method "orgunits.batchInherit".
            *
@@ -478,8 +478,8 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
         /**
          * Modify multiple policy values that are applied to a specific org unit. All targets must have the
          * same target format. That is to say that they must point to the same target resource and must have
-         * the same keys specified in `additionalTargetKeyNames`. On failure the request will return the
-         * error details as part of the google.rpc.Status.
+         * the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be
+         * different. On failure the request will return the error details as part of the google.rpc.Status.
          *
          * Create a request for the method "orgunits.batchModify".
          *
@@ -506,8 +506,9 @@ public class ChromePolicy extends com.google.api.client.googleapis.services.json
           /**
            * Modify multiple policy values that are applied to a specific org unit. All targets must have
            * the same target format. That is to say that they must point to the same target resource and
-           * must have the same keys specified in `additionalTargetKeyNames`. On failure the request will
-           * return the error details as part of the google.rpc.Status.
+           * must have the same keys specified in `additionalTargetKeyNames`, though the values for those
+           * keys may be different. On failure the request will return the error details as part of the
+           * google.rpc.Status.
            *
            * Create a request for the method "orgunits.batchModify".
            *

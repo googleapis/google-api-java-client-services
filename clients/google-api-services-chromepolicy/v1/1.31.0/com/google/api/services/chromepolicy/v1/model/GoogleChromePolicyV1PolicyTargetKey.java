@@ -39,7 +39,7 @@ public final class GoogleChromePolicyV1PolicyTargetKey extends com.google.api.cl
 
   /**
    * The target resource on which this policy is applied. The following resources are supported: *
-   * Organizational Unit ("orgunits/{orgunit_id}")
+   * Organizational Unit ("orgunits/{orgunit_id}") * Group ("groups/{group_id}")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleChromePolicyV1PolicyTargetKey extends com.google.api.cl
 
   /**
    * The target resource on which this policy is applied. The following resources are supported: *
-   * Organizational Unit ("orgunits/{orgunit_id}")
+   * Organizational Unit ("orgunits/{orgunit_id}") * Group ("groups/{group_id}")
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetResource() {
@@ -75,7 +75,7 @@ public final class GoogleChromePolicyV1PolicyTargetKey extends com.google.api.cl
 
   /**
    * The target resource on which this policy is applied. The following resources are supported: *
-   * Organizational Unit ("orgunits/{orgunit_id}")
+   * Organizational Unit ("orgunits/{orgunit_id}") * Group ("groups/{group_id}")
    * @param targetResource targetResource or {@code null} for none
    */
   public GoogleChromePolicyV1PolicyTargetKey setTargetResource(java.lang.String targetResource) {

@@ -1263,6 +1263,171 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a bidder's endpoint.
+       *
+       * Create a request for the method "endpoints.patch".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Name of the endpoint resource that must follow the pattern
+       *        `bidders/{bidderAccountId}/endpoints/{endpointId}`, where {bidderAccountId} is the account
+       *        ID of the bidder who operates this endpoint, and {endpointId} is a unique ID assigned by
+       *        the server.
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.Endpoint}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.realtimebidding.v1.model.Endpoint content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Endpoint> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/endpoints/[^/]+$");
+
+        /**
+         * Updates a bidder's endpoint.
+         *
+         * Create a request for the method "endpoints.patch".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Name of the endpoint resource that must follow the pattern
+       *        `bidders/{bidderAccountId}/endpoints/{endpointId}`, where {bidderAccountId} is the account
+       *        ID of the bidder who operates this endpoint, and {endpointId} is a unique ID assigned by
+       *        the server.
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.Endpoint}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.realtimebidding.v1.model.Endpoint content) {
+          super(RealTimeBidding.this, "PATCH", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.Endpoint.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/endpoints/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Name of the endpoint resource that must follow the pattern
+         * `bidders/{bidderAccountId}/endpoints/{endpointId}`, where {bidderAccountId} is the
+         * account ID of the bidder who operates this endpoint, and {endpointId} is a unique ID
+         * assigned by the server.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Name of the endpoint resource that must follow the pattern
+       `bidders/{bidderAccountId}/endpoints/{endpointId}`, where {bidderAccountId} is the account ID of
+       the bidder who operates this endpoint, and {endpointId} is a unique ID assigned by the server.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Name of the endpoint resource that must follow the pattern
+         * `bidders/{bidderAccountId}/endpoints/{endpointId}`, where {bidderAccountId} is the
+         * account ID of the bidder who operates this endpoint, and {endpointId} is a unique ID
+         * assigned by the server.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/endpoints/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Field mask to use for partial in-place updates. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask to use for partial in-place updates.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Field mask to use for partial in-place updates. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

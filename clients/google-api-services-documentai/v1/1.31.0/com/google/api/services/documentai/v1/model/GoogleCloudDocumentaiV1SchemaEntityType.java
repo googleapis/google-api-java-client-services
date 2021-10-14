@@ -83,7 +83,16 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
   private java.lang.String source;
 
   /**
-   * Name of the type. It must be unique within the set of same level types.
+   * Name of the type. It must satisfy the following constraints: 1. Must be unique within the set
+   * of same level types (with case-insensitive match). 2. Maximum 50 characters. 3. Must start with
+   * a letter. 4. Allowed characters: ASCII letters [a-zA-Z], ASCII digits [0-9], or one of the
+   * following punctuation characters: * underscore '_' (recommended) * hyphen '-' (allowed, not
+   * recommended) * colon ':' (allowed, not recommended) NOTE: Whitespace characters are not
+   * allowed. 5. Cannot end with a punctuation character. 6. Cannot contain the following restricted
+   * strings: "google", "DocumentAI" (case-insensitive match). 7. A slash character '/' is reserved
+   * as a separator in flattened representations of nested entity types (e.g., "line_item/amount")
+   * in which case each part (e.g., "line_item", "amount") must comply with the rules defined above.
+   * We recommend using the snake case ("snake_case") in entity type names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +217,16 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
   }
 
   /**
-   * Name of the type. It must be unique within the set of same level types.
+   * Name of the type. It must satisfy the following constraints: 1. Must be unique within the set
+   * of same level types (with case-insensitive match). 2. Maximum 50 characters. 3. Must start with
+   * a letter. 4. Allowed characters: ASCII letters [a-zA-Z], ASCII digits [0-9], or one of the
+   * following punctuation characters: * underscore '_' (recommended) * hyphen '-' (allowed, not
+   * recommended) * colon ':' (allowed, not recommended) NOTE: Whitespace characters are not
+   * allowed. 5. Cannot end with a punctuation character. 6. Cannot contain the following restricted
+   * strings: "google", "DocumentAI" (case-insensitive match). 7. A slash character '/' is reserved
+   * as a separator in flattened representations of nested entity types (e.g., "line_item/amount")
+   * in which case each part (e.g., "line_item", "amount") must comply with the rules defined above.
+   * We recommend using the snake case ("snake_case") in entity type names.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -216,7 +234,16 @@ public final class GoogleCloudDocumentaiV1SchemaEntityType extends com.google.ap
   }
 
   /**
-   * Name of the type. It must be unique within the set of same level types.
+   * Name of the type. It must satisfy the following constraints: 1. Must be unique within the set
+   * of same level types (with case-insensitive match). 2. Maximum 50 characters. 3. Must start with
+   * a letter. 4. Allowed characters: ASCII letters [a-zA-Z], ASCII digits [0-9], or one of the
+   * following punctuation characters: * underscore '_' (recommended) * hyphen '-' (allowed, not
+   * recommended) * colon ':' (allowed, not recommended) NOTE: Whitespace characters are not
+   * allowed. 5. Cannot end with a punctuation character. 6. Cannot contain the following restricted
+   * strings: "google", "DocumentAI" (case-insensitive match). 7. A slash character '/' is reserved
+   * as a separator in flattened representations of nested entity types (e.g., "line_item/amount")
+   * in which case each part (e.g., "line_item", "amount") must comply with the rules defined above.
+   * We recommend using the snake case ("snake_case") in entity type names.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1SchemaEntityType setType(java.lang.String type) {

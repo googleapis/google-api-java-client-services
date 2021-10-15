@@ -31,6 +31,14 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class AnalyticsProperty extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The ID of the [Google Analytics account](https://www.google.com/analytics/) for
+   * the Google Analytics property associated with the specified FirebaseProject.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String analyticsAccountId;
+
+  /**
    * The display name of the Google Analytics property associated with the specified
    * `FirebaseProject`.
    * The value may be {@code null}.
@@ -48,6 +56,25 @@ public final class AnalyticsProperty extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * Output only. The ID of the [Google Analytics account](https://www.google.com/analytics/) for
+   * the Google Analytics property associated with the specified FirebaseProject.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnalyticsAccountId() {
+    return analyticsAccountId;
+  }
+
+  /**
+   * Output only. The ID of the [Google Analytics account](https://www.google.com/analytics/) for
+   * the Google Analytics property associated with the specified FirebaseProject.
+   * @param analyticsAccountId analyticsAccountId or {@code null} for none
+   */
+  public AnalyticsProperty setAnalyticsAccountId(java.lang.String analyticsAccountId) {
+    this.analyticsAccountId = analyticsAccountId;
+    return this;
+  }
 
   /**
    * The display name of the Google Analytics property associated with the specified

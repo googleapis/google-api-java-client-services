@@ -81,6 +81,13 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * The Apple Developer Team ID associated with the App in the App Store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String teamId;
+
+  /**
    * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier
    * should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
@@ -195,6 +202,23 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
    */
   public IosApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * The Apple Developer Team ID associated with the App in the App Store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTeamId() {
+    return teamId;
+  }
+
+  /**
+   * The Apple Developer Team ID associated with the App in the App Store.
+   * @param teamId teamId or {@code null} for none
+   */
+  public IosApp setTeamId(java.lang.String teamId) {
+    this.teamId = teamId;
     return this;
   }
 

@@ -43,7 +43,7 @@ packages on [Maven Central][maven-search].
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
 | Authorized Buyers Marketplace API | [v1](clients/google-api-services-authorizedbuyersmarketplace/v1) |
-| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1), [v1alpha1](clients/google-api-services-baremetalsolution/v1alpha1), [v2](clients/google-api-services-baremetalsolution/v2) |
+| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -238,6 +238,7 @@ packages on [Maven Central][maven-search].
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
 | Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
 | Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
+| Version History API | [v1](clients/google-api-services-versionhistory/v1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Risk API | [v1](clients/google-api-services-webrisk/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |

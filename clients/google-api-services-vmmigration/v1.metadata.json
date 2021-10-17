@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-vmmigration",
+    "version": "v1-rev20211001-1.32.1"
+  }
+}

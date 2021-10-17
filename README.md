@@ -238,6 +238,7 @@ packages on [Maven Central][maven-search].
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
 | Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
 | Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
+| VM Migration API | [v1](clients/google-api-services-vmmigration/v1), [v1alpha1](clients/google-api-services-vmmigration/v1alpha1) |
 | Version History API | [v1](clients/google-api-services-versionhistory/v1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Risk API | [v1](clients/google-api-services-webrisk/v1) |

@@ -40,7 +40,7 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * The relative resource name of the debug token, in the format: ```
+   * Required. The relative resource name of the debug token, in the format: ```
    * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
    * The value may be {@code null}.
    */
@@ -48,10 +48,11 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   private java.lang.String name;
 
   /**
-   * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a
-   * UUID4, case insensitive. This field is immutable once set, and cannot be provided during an
-   * UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to
-   * revoke it. For security reasons, this field will never be populated in any response.
+   * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
+   * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
+   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,7 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   }
 
   /**
-   * The relative resource name of the debug token, in the format: ```
+   * Required. The relative resource name of the debug token, in the format: ```
    * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
    * @return value or {@code null} for none
    */
@@ -84,7 +85,7 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   }
 
   /**
-   * The relative resource name of the debug token, in the format: ```
+   * Required. The relative resource name of the debug token, in the format: ```
    * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
    * @param name name or {@code null} for none
    */
@@ -94,10 +95,11 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   }
 
   /**
-   * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a
-   * UUID4, case insensitive. This field is immutable once set, and cannot be provided during an
-   * UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to
-   * revoke it. For security reasons, this field will never be populated in any response.
+   * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
+   * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
+   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -105,10 +107,11 @@ public final class GoogleFirebaseAppcheckV1betaDebugToken extends com.google.api
   }
 
   /**
-   * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a
-   * UUID4, case insensitive. This field is immutable once set, and cannot be provided during an
-   * UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to
-   * revoke it. For security reasons, this field will never be populated in any response.
+   * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
+   * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
+   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
+   * response.
    * @param token token or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaDebugToken setToken(java.lang.String token) {

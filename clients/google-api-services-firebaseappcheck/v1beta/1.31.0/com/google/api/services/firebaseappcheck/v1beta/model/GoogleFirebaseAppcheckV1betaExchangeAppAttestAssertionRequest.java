@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * Request message for ExchangeAppAttestAssertion
+ * Request message for the ExchangeAppAttestAssertion method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -31,28 +31,29 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The artifact previously returned by ExchangeAppAttestAttestation.
+   * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String artifact;
 
   /**
-   * The CBOR encoded assertion provided by the Apple App Attest SDK.
+   * Required. The CBOR-encoded assertion returned by the client-side App Attest API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assertion;
 
   /**
-   * A one time challenge returned by GenerateAppAttestChallenge.
+   * Required. A one-time challenge returned by an immediately prior call to
+   * GenerateAppAttestChallenge.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String challenge;
 
   /**
-   * The artifact previously returned by ExchangeAppAttestAttestation.
+   * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * @see #decodeArtifact()
    * @return value or {@code null} for none
    */
@@ -61,7 +62,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The artifact previously returned by ExchangeAppAttestAttestation.
+   * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * @see #getArtifact()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -72,7 +73,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The artifact previously returned by ExchangeAppAttestAttestation.
+   * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * @see #encodeArtifact()
    * @param artifact artifact or {@code null} for none
    */
@@ -82,7 +83,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The artifact previously returned by ExchangeAppAttestAttestation.
+   * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * @see #setArtifact()
    *
    * <p>
@@ -97,7 +98,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The CBOR encoded assertion provided by the Apple App Attest SDK.
+   * Required. The CBOR-encoded assertion returned by the client-side App Attest API.
    * @see #decodeAssertion()
    * @return value or {@code null} for none
    */
@@ -106,7 +107,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The CBOR encoded assertion provided by the Apple App Attest SDK.
+   * Required. The CBOR-encoded assertion returned by the client-side App Attest API.
    * @see #getAssertion()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -117,7 +118,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The CBOR encoded assertion provided by the Apple App Attest SDK.
+   * Required. The CBOR-encoded assertion returned by the client-side App Attest API.
    * @see #encodeAssertion()
    * @param assertion assertion or {@code null} for none
    */
@@ -127,7 +128,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * The CBOR encoded assertion provided by the Apple App Attest SDK.
+   * Required. The CBOR-encoded assertion returned by the client-side App Attest API.
    * @see #setAssertion()
    *
    * <p>
@@ -142,7 +143,8 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * A one time challenge returned by GenerateAppAttestChallenge.
+   * Required. A one-time challenge returned by an immediately prior call to
+   * GenerateAppAttestChallenge.
    * @see #decodeChallenge()
    * @return value or {@code null} for none
    */
@@ -151,7 +153,8 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * A one time challenge returned by GenerateAppAttestChallenge.
+   * Required. A one-time challenge returned by an immediately prior call to
+   * GenerateAppAttestChallenge.
    * @see #getChallenge()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -162,7 +165,8 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * A one time challenge returned by GenerateAppAttestChallenge.
+   * Required. A one-time challenge returned by an immediately prior call to
+   * GenerateAppAttestChallenge.
    * @see #encodeChallenge()
    * @param challenge challenge or {@code null} for none
    */
@@ -172,7 +176,8 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   }
 
   /**
-   * A one time challenge returned by GenerateAppAttestChallenge.
+   * Required. A one-time challenge returned by an immediately prior call to
+   * GenerateAppAttestChallenge.
    * @see #setChallenge()
    *
    * <p>

@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * Response message for ExchangeAppAttestAttestation and ExchangeAppAttestDebugAttestation
+ * Response message for the ExchangeAppAttestAttestation method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * An artifact that should be passed back during the Assertion flow.
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String artifact;
 
   /**
-   * An attestation token which can be used to access Firebase APIs.
+   * Encapsulates an App Check token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken;
 
   /**
-   * An artifact that should be passed back during the Assertion flow.
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * @see #decodeArtifact()
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * An artifact that should be passed back during the Assertion flow.
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * @see #getArtifact()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -65,7 +65,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * An artifact that should be passed back during the Assertion flow.
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * @see #encodeArtifact()
    * @param artifact artifact or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * An artifact that should be passed back during the Assertion flow.
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
    * @see #setArtifact()
    *
    * <p>
@@ -90,7 +90,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * An attestation token which can be used to access Firebase APIs.
+   * Encapsulates an App Check token.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaAttestationTokenResponse getAttestationToken() {
@@ -98,7 +98,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRespo
   }
 
   /**
-   * An attestation token which can be used to access Firebase APIs.
+   * Encapsulates an App Check token.
    * @param attestationToken attestationToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse setAttestationToken(GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken) {

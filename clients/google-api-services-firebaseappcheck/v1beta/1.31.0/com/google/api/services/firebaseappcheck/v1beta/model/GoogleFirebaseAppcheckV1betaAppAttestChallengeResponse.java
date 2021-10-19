@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * Response object for GenerateAppAttestChallenge
+ * Response message for the GenerateAppAttestChallenge method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -31,24 +31,23 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A one time use challenge for the client to pass to Apple's App Attest API.
+   * A one-time use challenge for the client to pass to the App Attest API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String challenge;
 
   /**
-   * The duration from the time this challenge is minted until it is expired. This field is intended
-   * to ease client-side token management, since the device may have clock skew, but is still able
-   * to accurately measure a duration. This expiration is intended to minimize the replay window
-   * within which a single challenge may be reused. See AIP 142 for naming of this field.
+   * The duration from the time this challenge is minted until its expiration. This field is
+   * intended to ease client-side token management, since the client may have clock skew, but is
+   * still able to accurately measure a duration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String ttl;
 
   /**
-   * A one time use challenge for the client to pass to Apple's App Attest API.
+   * A one-time use challenge for the client to pass to the App Attest API.
    * @see #decodeChallenge()
    * @return value or {@code null} for none
    */
@@ -57,7 +56,7 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extend
   }
 
   /**
-   * A one time use challenge for the client to pass to Apple's App Attest API.
+   * A one-time use challenge for the client to pass to the App Attest API.
    * @see #getChallenge()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -68,7 +67,7 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extend
   }
 
   /**
-   * A one time use challenge for the client to pass to Apple's App Attest API.
+   * A one-time use challenge for the client to pass to the App Attest API.
    * @see #encodeChallenge()
    * @param challenge challenge or {@code null} for none
    */
@@ -78,7 +77,7 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extend
   }
 
   /**
-   * A one time use challenge for the client to pass to Apple's App Attest API.
+   * A one-time use challenge for the client to pass to the App Attest API.
    * @see #setChallenge()
    *
    * <p>
@@ -93,10 +92,9 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extend
   }
 
   /**
-   * The duration from the time this challenge is minted until it is expired. This field is intended
-   * to ease client-side token management, since the device may have clock skew, but is still able
-   * to accurately measure a duration. This expiration is intended to minimize the replay window
-   * within which a single challenge may be reused. See AIP 142 for naming of this field.
+   * The duration from the time this challenge is minted until its expiration. This field is
+   * intended to ease client-side token management, since the client may have clock skew, but is
+   * still able to accurately measure a duration.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -104,10 +102,9 @@ public final class GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse extend
   }
 
   /**
-   * The duration from the time this challenge is minted until it is expired. This field is intended
-   * to ease client-side token management, since the device may have clock skew, but is still able
-   * to accurately measure a duration. This expiration is intended to minimize the replay window
-   * within which a single challenge may be reused. See AIP 142 for naming of this field.
+   * The duration from the time this challenge is minted until its expiration. This field is
+   * intended to ease client-side token management, since the client may have clock skew, but is
+   * still able to accurately measure a duration.
    * @param ttl ttl or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse setTtl(String ttl) {

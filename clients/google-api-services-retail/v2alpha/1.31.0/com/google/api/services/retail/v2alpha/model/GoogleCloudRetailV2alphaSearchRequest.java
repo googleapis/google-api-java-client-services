@@ -164,6 +164,14 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String relevanceThreshold;
 
   /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchMode;
+
+  /**
    * User information.
    * The value may be {@code null}.
    */
@@ -514,6 +522,25 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
    */
   public GoogleCloudRetailV2alphaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
     this.relevanceThreshold = relevanceThreshold;
+    return this;
+  }
+
+  /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchMode() {
+    return searchMode;
+  }
+
+  /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * @param searchMode searchMode or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setSearchMode(java.lang.String searchMode) {
+    this.searchMode = searchMode;
     return this;
   }
 

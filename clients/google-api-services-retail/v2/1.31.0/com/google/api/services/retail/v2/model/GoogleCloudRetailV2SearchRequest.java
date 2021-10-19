@@ -154,6 +154,14 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private GoogleCloudRetailV2SearchRequestQueryExpansionSpec queryExpansionSpec;
 
   /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchMode;
+
+  /**
    * User information.
    * The value may be {@code null}.
    */
@@ -481,6 +489,25 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
    */
   public GoogleCloudRetailV2SearchRequest setQueryExpansionSpec(GoogleCloudRetailV2SearchRequestQueryExpansionSpec queryExpansionSpec) {
     this.queryExpansionSpec = queryExpansionSpec;
+    return this;
+  }
+
+  /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchMode() {
+    return searchMode;
+  }
+
+  /**
+   * The search mode of the search request. If not specified, a single search request triggers both
+   * product search and faceted search.
+   * @param searchMode searchMode or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequest setSearchMode(java.lang.String searchMode) {
+    this.searchMode = searchMode;
     return this;
   }
 

@@ -39,7 +39,7 @@ public final class AccountSuspensionDetails extends com.google.api.client.json.G
 
   /**
    * The name of the product being abused. This is restricted to only the following values: "Gmail"
-   * "Payments" "Voice" "Workspace" "Other"
+   * "Google Workspace" "Payments" "Voice" "YouTube" "Other"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AccountSuspensionDetails extends com.google.api.client.json.G
 
   /**
    * The name of the product being abused. This is restricted to only the following values: "Gmail"
-   * "Payments" "Voice" "Workspace" "Other"
+   * "Google Workspace" "Payments" "Voice" "YouTube" "Other"
    * @return value or {@code null} for none
    */
   public java.lang.String getProductName() {
@@ -73,7 +73,7 @@ public final class AccountSuspensionDetails extends com.google.api.client.json.G
 
   /**
    * The name of the product being abused. This is restricted to only the following values: "Gmail"
-   * "Payments" "Voice" "Workspace" "Other"
+   * "Google Workspace" "Payments" "Voice" "YouTube" "Other"
    * @param productName productName or {@code null} for none
    */
   public AccountSuspensionDetails setProductName(java.lang.String productName) {

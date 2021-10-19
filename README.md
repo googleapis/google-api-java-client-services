@@ -114,7 +114,7 @@ packages on [Maven Central][maven-search].
 | Compute Engine API | [alpha](clients/google-api-services-compute/alpha), [beta](clients/google-api-services-compute/beta), [v1](clients/google-api-services-compute/v1) |
 | Connectors API | [v1](clients/google-api-services-connectors/v1) |
 | Contact Center AI Insights API | [v1](clients/google-api-services-contactcenterinsights/v1) |
-| Container Analysis API | [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
+| Container Analysis API | [v1](clients/google-api-services-containeranalysis/v1), [v1alpha1](clients/google-api-services-containeranalysis/v1alpha1), [v1beta1](clients/google-api-services-containeranalysis/v1beta1) |
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | Data Labeling API | [v1beta1](clients/google-api-services-datalabeling/v1beta1) |
@@ -204,7 +204,6 @@ packages on [Maven Central][maven-search].
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
 | Payments Reseller Subscription API | [v1](clients/google-api-services-paymentsresellersubscription/v1) |
 | People API | [v1](clients/google-api-services-people/v1) |
-| Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
 | Policy Analyzer API | [v1](clients/google-api-services-policyanalyzer/v1), [v1beta1](clients/google-api-services-policyanalyzer/v1beta1) |
 | Policy Simulator API | [v1](clients/google-api-services-policysimulator/v1), [v1beta1](clients/google-api-services-policysimulator/v1beta1) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
@@ -223,7 +222,6 @@ packages on [Maven Central][maven-search].
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2) |
 | Security Token Service API | [v1](clients/google-api-services-sts/v1), [v1beta](clients/google-api-services-sts/v1beta) |
-| Semantic Tile API | [v1](clients/google-api-services-vectortile/v1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1), [v2](clients/google-api-services-servicecontrol/v2) |
 | Service Directory API | [v1](clients/google-api-services-servicedirectory/v1), [v1beta1](clients/google-api-services-servicedirectory/v1beta1) |

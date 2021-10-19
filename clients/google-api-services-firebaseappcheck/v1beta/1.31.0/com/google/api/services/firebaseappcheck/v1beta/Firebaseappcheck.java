@@ -20,7 +20,7 @@ package com.google.api.services.firebaseappcheck.v1beta;
  * Service definition for Firebaseappcheck (v1beta).
  *
  * <p>
- * App Check works alongside other Firebase services to help protect your backend resources from abuse, such as billing fraud or phishing. With App Check, devices running your app will use an app or device attestation provider that attests to one or both of the following: * Requests originate from your authentic app * Requests originate from an authentic, untampered device This attestation is attached to every request your app makes to your Firebase backend resources. The Firebase App Check REST API allows you to manage your App Check configurations programmatically. It also allows you to exchange attestation material for App Check tokens directly without using a Firebase SDK. Finally, it allows you to obtain the public key set necessary to validate an App Check token yourself. [Learn more about App Check](https://firebase.google.com/docs/app-check).
+ * Firebase App Check works alongside other Firebase services to help protect your backend resources from abuse, such as billing fraud or phishing.
  * </p>
  *
  * <p>
@@ -347,9 +347,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
     public class Apps {
 
       /**
-       * Accepts a AppAttest Artifact and Assertion, and uses the developer's preconfigured auth token to
-       * verify the token with Apple. Returns an AttestationToken with the App ID as specified by the
-       * `app` field included as attested claims.
+       * Accepts an App Attest assertion and an artifact previously obtained from
+       * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an App Check token
+       * encapsulated in an AttestationTokenResponse.
        *
        * Create a request for the method "apps.exchangeAppAttestAssertion".
        *
@@ -357,7 +357,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link ExchangeAppAttestAssertion#execute()} method to invoke the
        * remote operation.
        *
-       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
        * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
        * @return the request
        */
@@ -375,9 +378,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Accepts a AppAttest Artifact and Assertion, and uses the developer's preconfigured auth token
-         * to verify the token with Apple. Returns an AttestationToken with the App ID as specified by the
-         * `app` field included as attested claims.
+         * Accepts an App Attest assertion and an artifact previously obtained from
+         * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an App Check
+         * token encapsulated in an AttestationTokenResponse.
          *
          * Create a request for the method "apps.exchangeAppAttestAssertion".
          *
@@ -387,7 +390,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
          * @since 1.13
          */
@@ -457,21 +463,28 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
 
-        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+        /** Required. The relative resource name of the iOS app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public java.lang.String getApp() {
           return app;
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public ExchangeAppAttestAssertion setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -489,9 +502,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Accepts a AppAttest CBOR Attestation, and uses the developer's preconfigured team and bundle IDs
-       * to verify the token with Apple. Returns an Attestation Artifact that can later be exchanged for
-       * an AttestationToken in ExchangeAppAttestAssertion.
+       * Accepts an App Attest CBOR attestation and verifies it with Apple using the developer's
+       * preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be
+       * exchanged for an AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and
+       * performance, this method's response object will also contain an App Check token encapsulated in
+       * an AttestationTokenResponse (if the verification is successful).
        *
        * Create a request for the method "apps.exchangeAppAttestAttestation".
        *
@@ -499,7 +514,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link ExchangeAppAttestAttestation#execute()} method to invoke the
        * remote operation.
        *
-       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
        * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
        * @return the request
        */
@@ -517,9 +535,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Accepts a AppAttest CBOR Attestation, and uses the developer's preconfigured team and bundle
-         * IDs to verify the token with Apple. Returns an Attestation Artifact that can later be exchanged
-         * for an AttestationToken in ExchangeAppAttestAssertion.
+         * Accepts an App Attest CBOR attestation and verifies it with Apple using the developer's
+         * preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be
+         * exchanged for an AttestationTokenResponse using ExchangeAppAttestAssertion. For convenience and
+         * performance, this method's response object will also contain an App Check token encapsulated in
+         * an AttestationTokenResponse (if the verification is successful).
          *
          * Create a request for the method "apps.exchangeAppAttestAttestation".
          *
@@ -529,7 +549,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
          * @since 1.13
          */
@@ -599,21 +622,28 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
 
-        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+        /** Required. The relative resource name of the iOS app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public java.lang.String getApp() {
           return app;
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public ExchangeAppAttestAttestation setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -1403,8 +1433,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Initiates the App Attest flow by generating a challenge which will be used as a type of nonce for
-       * this attestation.
+       * Generates a challenge that protects the integrity of an immediately following call to
+       * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for
+       * multiple calls.
        *
        * Create a request for the method "apps.generateAppAttestChallenge".
        *
@@ -1412,7 +1443,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        * optional parameters, call the {@link GenerateAppAttestChallenge#execute()} method to invoke the
        * remote operation.
        *
-       * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
        * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
        * @return the request
        */
@@ -1430,8 +1464,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Initiates the App Attest flow by generating a challenge which will be used as a type of nonce
-         * for this attestation.
+         * Generates a challenge that protects the integrity of an immediately following call to
+         * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused
+         * for multiple calls.
          *
          * Create a request for the method "apps.generateAppAttestChallenge".
          *
@@ -1441,7 +1476,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param app Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+         * @param app Required. The relative resource name of the iOS app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
          * @since 1.13
          */
@@ -1511,21 +1549,28 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
 
-        /** Required. The full resource name to the iOS App. Format: "projects/{project_id}/apps/{app_id}"
+        /** Required. The relative resource name of the iOS app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public java.lang.String getApp() {
           return app;
         }
 
         /**
-         * Required. The full resource name to the iOS App. Format:
-         * "projects/{project_id}/apps/{app_id}"
+         * Required. The relative resource name of the iOS app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
          */
         public GenerateAppAttestChallenge setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -2728,7 +2773,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of the debug token, in the format: ```
+         * @param name Required. The relative resource name of the debug token, in the format: ```
          *        projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaDebugToken}
          * @return the request
@@ -2759,7 +2804,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of the debug token, in the format: ```
+           * @param name Required. The relative resource name of the debug token, in the format: ```
          *        projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
            * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaDebugToken}
            * @since 1.13
@@ -2830,13 +2875,13 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * The relative resource name of the debug token, in the format: ```
+           * Required. The relative resource name of the debug token, in the format: ```
            * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the debug token, in the format: ```
+          /** Required. The relative resource name of the debug token, in the format: ```
          projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
            */
           public java.lang.String getName() {
@@ -2844,7 +2889,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * The relative resource name of the debug token, in the format: ```
+           * Required. The relative resource name of the debug token, in the format: ```
            * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
            */
           public Patch setName(java.lang.String name) {

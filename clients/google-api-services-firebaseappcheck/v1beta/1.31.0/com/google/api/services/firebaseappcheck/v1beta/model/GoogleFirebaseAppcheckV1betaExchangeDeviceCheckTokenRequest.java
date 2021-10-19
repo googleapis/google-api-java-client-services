@@ -32,7 +32,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
 
   /**
    * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
-   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
+   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * The value may be {@code null}.
    */
@@ -41,7 +41,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
 
   /**
    * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
-   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
+   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * @return value or {@code null} for none
    */
@@ -51,7 +51,7 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
 
   /**
    * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
-   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the Base64
+   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
    * @param deviceToken deviceToken or {@code null} for none
    */

@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-vectortile",
-    "version": "v1-rev20210817-1.32.1"
-  }
-}

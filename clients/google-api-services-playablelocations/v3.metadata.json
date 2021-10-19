@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-playablelocations",
-    "version": "v3-rev20210421-1.32.1"
-  }
-}

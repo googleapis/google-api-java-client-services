@@ -115,6 +115,20 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
   private java.lang.Long directoriesSuccessfullyListedFromSource;
 
   /**
+   * Number of successfully cleaned up intermediate objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long intermediateObjectsCleanedUp;
+
+  /**
+   * Number of intermediate objects failed cleaned up.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long intermediateObjectsFailedCleanedUp;
+
+  /**
    * Objects that are copied to the data sink.
    * The value may be {@code null}.
    */
@@ -373,6 +387,40 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
    */
   public TransferCounters setDirectoriesSuccessfullyListedFromSource(java.lang.Long directoriesSuccessfullyListedFromSource) {
     this.directoriesSuccessfullyListedFromSource = directoriesSuccessfullyListedFromSource;
+    return this;
+  }
+
+  /**
+   * Number of successfully cleaned up intermediate objects.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIntermediateObjectsCleanedUp() {
+    return intermediateObjectsCleanedUp;
+  }
+
+  /**
+   * Number of successfully cleaned up intermediate objects.
+   * @param intermediateObjectsCleanedUp intermediateObjectsCleanedUp or {@code null} for none
+   */
+  public TransferCounters setIntermediateObjectsCleanedUp(java.lang.Long intermediateObjectsCleanedUp) {
+    this.intermediateObjectsCleanedUp = intermediateObjectsCleanedUp;
+    return this;
+  }
+
+  /**
+   * Number of intermediate objects failed cleaned up.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIntermediateObjectsFailedCleanedUp() {
+    return intermediateObjectsFailedCleanedUp;
+  }
+
+  /**
+   * Number of intermediate objects failed cleaned up.
+   * @param intermediateObjectsFailedCleanedUp intermediateObjectsFailedCleanedUp or {@code null} for none
+   */
+  public TransferCounters setIntermediateObjectsFailedCleanedUp(java.lang.Long intermediateObjectsFailedCleanedUp) {
+    this.intermediateObjectsFailedCleanedUp = intermediateObjectsFailedCleanedUp;
     return this;
   }
 

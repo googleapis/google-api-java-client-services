@@ -87,16 +87,16 @@ public final class Options extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean expandRoles;
 
   /**
-   * Optional. If true, the result will output group identity edges, starting from the binding's
-   * group members, to any expanded identities. Default is false.
+   * Optional. If true, the result will output the relevant membership relationships between groups
+   * and other groups, and between groups and principals. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean outputGroupEdges;
 
   /**
-   * Optional. If true, the result will output resource edges, starting from the policy attached
-   * resource, to any expanded resources. Default is false.
+   * Optional. If true, the result will output the relevant parent/child relationships between
+   * resources. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +229,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the result will output group identity edges, starting from the binding's
-   * group members, to any expanded identities. Default is false.
+   * Optional. If true, the result will output the relevant membership relationships between groups
+   * and other groups, and between groups and principals. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOutputGroupEdges() {
@@ -238,8 +238,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the result will output group identity edges, starting from the binding's
-   * group members, to any expanded identities. Default is false.
+   * Optional. If true, the result will output the relevant membership relationships between groups
+   * and other groups, and between groups and principals. Default is false.
    * @param outputGroupEdges outputGroupEdges or {@code null} for none
    */
   public Options setOutputGroupEdges(java.lang.Boolean outputGroupEdges) {
@@ -248,8 +248,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the result will output resource edges, starting from the policy attached
-   * resource, to any expanded resources. Default is false.
+   * Optional. If true, the result will output the relevant parent/child relationships between
+   * resources. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOutputResourceEdges() {
@@ -257,8 +257,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the result will output resource edges, starting from the policy attached
-   * resource, to any expanded resources. Default is false.
+   * Optional. If true, the result will output the relevant parent/child relationships between
+   * resources. Default is false.
    * @param outputResourceEdges outputResourceEdges or {@code null} for none
    */
   public Options setOutputResourceEdges(java.lang.Boolean outputResourceEdges) {

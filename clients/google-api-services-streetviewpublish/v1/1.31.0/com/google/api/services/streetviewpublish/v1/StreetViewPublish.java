@@ -697,7 +697,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the streetviewpublish server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param id Required. A unique identifier for a photo.
+     * @param id A unique identifier for a photo.
      * @param content the {@link com.google.api.services.streetviewpublish.v1.model.Photo}
      * @return the request
      */
@@ -728,7 +728,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id Required. A unique identifier for a photo.
+       * @param id A unique identifier for a photo.
        * @param content the {@link com.google.api.services.streetviewpublish.v1.model.Photo}
        * @since 1.13
        */
@@ -792,17 +792,17 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. A unique identifier for a photo. */
+      /** A unique identifier for a photo. */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
-      /** Required. A unique identifier for a photo.
+      /** A unique identifier for a photo.
        */
       public java.lang.String getId() {
         return id;
       }
 
-      /** Required. A unique identifier for a photo. */
+      /** A unique identifier for a photo. */
       public Update setId(java.lang.String id) {
         this.id = id;
         return this;

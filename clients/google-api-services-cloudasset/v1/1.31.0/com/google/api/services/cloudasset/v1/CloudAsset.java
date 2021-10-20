@@ -1677,7 +1677,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. The identity appear in the form of members in [IAM policy
+       * Required. The identity appear in the form of principals in [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
        * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
        * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
@@ -1686,7 +1686,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       @com.google.api.client.util.Key("analysisQuery.identitySelector.identity")
       private java.lang.String analysisQueryIdentitySelectorIdentity;
 
-      /** Required. The identity appear in the form of members in [IAM policy
+      /** Required. The identity appear in the form of principals in [IAM policy
      binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms
      are: "user:mike@example.com", "group:admins@example.com", "domain:google.com", "serviceAccount:my-
      project-id@appspot.gserviceaccount.com". Notice that wildcard characters (such as * and ?) are not
@@ -1697,7 +1697,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. The identity appear in the form of members in [IAM policy
+       * Required. The identity appear in the form of principals in [IAM policy
        * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
        * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
        * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
@@ -1877,22 +1877,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. If true, the result will output group identity edges, starting from the binding's
-       * group members, to any expanded identities. Default is false.
+       * Optional. If true, the result will output the relevant membership relationships between
+       * groups and other groups, and between groups and principals. Default is false.
        */
       @com.google.api.client.util.Key("analysisQuery.options.outputGroupEdges")
       private java.lang.Boolean analysisQueryOptionsOutputGroupEdges;
 
-      /** Optional. If true, the result will output group identity edges, starting from the binding's group
-     members, to any expanded identities. Default is false.
+      /** Optional. If true, the result will output the relevant membership relationships between groups and
+     other groups, and between groups and principals. Default is false.
        */
       public java.lang.Boolean getAnalysisQueryOptionsOutputGroupEdges() {
         return analysisQueryOptionsOutputGroupEdges;
       }
 
       /**
-       * Optional. If true, the result will output group identity edges, starting from the binding's
-       * group members, to any expanded identities. Default is false.
+       * Optional. If true, the result will output the relevant membership relationships between
+       * groups and other groups, and between groups and principals. Default is false.
        */
       public AnalyzeIamPolicy setAnalysisQueryOptionsOutputGroupEdges(java.lang.Boolean analysisQueryOptionsOutputGroupEdges) {
         this.analysisQueryOptionsOutputGroupEdges = analysisQueryOptionsOutputGroupEdges;
@@ -1900,22 +1900,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. If true, the result will output resource edges, starting from the policy attached
-       * resource, to any expanded resources. Default is false.
+       * Optional. If true, the result will output the relevant parent/child relationships between
+       * resources. Default is false.
        */
       @com.google.api.client.util.Key("analysisQuery.options.outputResourceEdges")
       private java.lang.Boolean analysisQueryOptionsOutputResourceEdges;
 
-      /** Optional. If true, the result will output resource edges, starting from the policy attached
-     resource, to any expanded resources. Default is false.
+      /** Optional. If true, the result will output the relevant parent/child relationships between
+     resources. Default is false.
        */
       public java.lang.Boolean getAnalysisQueryOptionsOutputResourceEdges() {
         return analysisQueryOptionsOutputResourceEdges;
       }
 
       /**
-       * Optional. If true, the result will output resource edges, starting from the policy attached
-       * resource, to any expanded resources. Default is false.
+       * Optional. If true, the result will output the relevant parent/child relationships between
+       * resources. Default is false.
        */
       public AnalyzeIamPolicy setAnalysisQueryOptionsOutputResourceEdges(java.lang.Boolean analysisQueryOptionsOutputResourceEdges) {
         this.analysisQueryOptionsOutputResourceEdges = analysisQueryOptionsOutputResourceEdges;
@@ -3143,7 +3143,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
        * specified `scope`. Note that the query string is compared against each Cloud IAM policy
-       * binding, including its members, roles, and Cloud IAM conditions. The returned Cloud IAM
+       * binding, including its principals, roles, and Cloud IAM conditions. The returned Cloud IAM
        * policies will only contain the bindings that match your query. To learn more about the IAM
        * policy structure, see [IAM policy
        * doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
@@ -3165,7 +3165,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy
        * bindings that are set on resources "instance1" or "instance2" and also specify user "amy".
        * * `roles:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `memberTypes:user` to find IAM policy bindings that contain the "user" member type.
+       * role. * `memberTypes:user` to find IAM policy bindings that contain the principal type
+       * "user".
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -3173,8 +3174,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
      inventory/docs/searching-iam-policies#how_to_construct_a_query) for more information. If not
      specified or empty, it will search all the IAM policies within the specified `scope`. Note that the
-     query string is compared against each Cloud IAM policy binding, including its members, roles, and
-     Cloud IAM conditions. The returned Cloud IAM policies will only contain the bindings that match
+     query string is compared against each Cloud IAM policy binding, including its principals, roles,
+     and Cloud IAM conditions. The returned Cloud IAM policies will only contain the bindings that match
      your query. To learn more about the IAM policy structure, see [IAM policy
      doc](https://cloud.google.com/iam/docs/policies#structure). Examples: * `policy:amy@gmail.com` to
      find IAM policy bindings that specify user "amy@gmail.com". * `policy:roles/compute.admin` to find
@@ -3194,7 +3195,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings that are
      set on resources "instance1" or "instance2" and also specify user "amy". *
      `roles:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. *
-     `memberTypes:user` to find IAM policy bindings that contain the "user" member type.
+     `memberTypes:user` to find IAM policy bindings that contain the principal type "user".
        */
       public java.lang.String getQuery() {
         return query;
@@ -3205,7 +3206,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
        * specified `scope`. Note that the query string is compared against each Cloud IAM policy
-       * binding, including its members, roles, and Cloud IAM conditions. The returned Cloud IAM
+       * binding, including its principals, roles, and Cloud IAM conditions. The returned Cloud IAM
        * policies will only contain the bindings that match your query. To learn more about the IAM
        * policy structure, see [IAM policy
        * doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
@@ -3227,7 +3228,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy
        * bindings that are set on resources "instance1" or "instance2" and also specify user "amy".
        * * `roles:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `memberTypes:user` to find IAM policy bindings that contain the "user" member type.
+       * role. * `memberTypes:user` to find IAM policy bindings that contain the principal type
+       * "user".
        */
       public SearchAllIamPolicies setQuery(java.lang.String query) {
         this.query = query;

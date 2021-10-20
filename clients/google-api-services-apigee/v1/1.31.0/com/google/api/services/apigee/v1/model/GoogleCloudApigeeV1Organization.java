@@ -141,6 +141,13 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String name;
 
   /**
+   * Configuration for the Portals settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean portalDisabled;
+
+  /**
    * Output only. Project ID associated with the Apigee organization.
    * The value may be {@code null}.
    */
@@ -489,6 +496,23 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configuration for the Portals settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPortalDisabled() {
+    return portalDisabled;
+  }
+
+  /**
+   * Configuration for the Portals settings.
+   * @param portalDisabled portalDisabled or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setPortalDisabled(java.lang.Boolean portalDisabled) {
+    this.portalDisabled = portalDisabled;
     return this;
   }
 

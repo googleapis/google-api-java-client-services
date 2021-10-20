@@ -300,6 +300,844 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storagetransfer storagetransfer = new Storagetransfer(...);}
+   *   {@code Storagetransfer.Projects.List request = storagetransfer.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the AgentPools collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Storagetransfer storagetransfer = new Storagetransfer(...);}
+     *   {@code Storagetransfer.AgentPools.List request = storagetransfer.agentPools().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AgentPools agentPools() {
+      return new AgentPools();
+    }
+
+    /**
+     * The "agentPools" collection of methods.
+     */
+    public class AgentPools {
+
+      /**
+       * Creates an agent pool resource.
+       *
+       * Create a request for the method "agentPools.create".
+       *
+       * This request holds the parameters needed by the storagetransfer server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+       * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
+       * @return the request
+       */
+      public Create create(java.lang.String projectId, com.google.api.services.storagetransfer.v1.model.AgentPool content) throws java.io.IOException {
+        Create result = new Create(projectId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.AgentPool> {
+
+        private static final String REST_PATH = "v1/projects/{+projectId}/agentPools";
+
+        private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates an agent pool resource.
+         *
+         * Create a request for the method "agentPools.create".
+         *
+         * This request holds the parameters needed by the the storagetransfer server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+         * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
+         * @since 1.13
+         */
+        protected Create(java.lang.String projectId, com.google.api.services.storagetransfer.v1.model.AgentPool content) {
+          super(Storagetransfer.this, "POST", REST_PATH, content, com.google.api.services.storagetransfer.v1.model.AgentPool.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                "Parameter projectId must conform to the pattern " +
+                "^[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /**
+         * Required. The ID of the Google Cloud Platform Console project that owns the agent pool.
+         */
+        public Create setProjectId(java.lang.String projectId) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                "Parameter projectId must conform to the pattern " +
+                "^[^/]+$");
+          }
+          this.projectId = projectId;
+          return this;
+        }
+
+        /**
+         * Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less
+         * than or equal to 128 characters, and satisfy the following regex:
+         * "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also, agent pool names cannot start with the string
+         * "goog".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String agentPoolId;
+
+        /** Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less than or
+       equal to 128 characters, and satisfy the following regex: "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also,
+       agent pool names cannot start with the string "goog".
+         */
+        public java.lang.String getAgentPoolId() {
+          return agentPoolId;
+        }
+
+        /**
+         * Required. The id of the agent pool to create. The agent_pool_id must be non-empty, less
+         * than or equal to 128 characters, and satisfy the following regex:
+         * "^[a-z]([a-z0-9-._~]*[a-z0-9])?$". Also, agent pool names cannot start with the string
+         * "goog".
+         */
+        public Create setAgentPoolId(java.lang.String agentPoolId) {
+          this.agentPoolId = agentPoolId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an agent pool.
+       *
+       * Create a request for the method "agentPools.delete".
+       *
+       * This request holds the parameters needed by the storagetransfer server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The agent pool name to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/agentPools/[^/]+$");
+
+        /**
+         * Deletes an agent pool.
+         *
+         * Create a request for the method "agentPools.delete".
+         *
+         * This request holds the parameters needed by the the storagetransfer server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The agent pool name to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Storagetransfer.this, "DELETE", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The agent pool name to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The agent pool name to delete.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The agent pool name to delete. */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets an agent pool.
+       *
+       * Create a request for the method "agentPools.get".
+       *
+       * This request holds the parameters needed by the storagetransfer server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The agent pool to get.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.AgentPool> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/agentPools/[^/]+$");
+
+        /**
+         * Gets an agent pool.
+         *
+         * Create a request for the method "agentPools.get".
+         *
+         * This request holds the parameters needed by the the storagetransfer server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The agent pool to get.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Storagetransfer.this, "GET", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.AgentPool.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The agent pool to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The agent pool to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The agent pool to get. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists agent pools.
+       *
+       * Create a request for the method "agentPools.list".
+       *
+       * This request holds the parameters needed by the storagetransfer server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+       * @return the request
+       */
+      public List list(java.lang.String projectId) throws java.io.IOException {
+        List result = new List(projectId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.ListAgentPoolsResponse> {
+
+        private static final String REST_PATH = "v1/projects/{+projectId}/agentPools";
+
+        private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists agent pools.
+         *
+         * Create a request for the method "agentPools.list".
+         *
+         * This request holds the parameters needed by the the storagetransfer server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
+         * @since 1.13
+         */
+        protected List(java.lang.String projectId) {
+          super(Storagetransfer.this, "GET", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.ListAgentPoolsResponse.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                "Parameter projectId must conform to the pattern " +
+                "^[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Required. The ID of the Google Cloud Platform Console project that owns the job.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Required. The ID of the Google Cloud Platform Console project that owns the job. */
+        public List setProjectId(java.lang.String projectId) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+                "Parameter projectId must conform to the pattern " +
+                "^[^/]+$");
+          }
+          this.projectId = projectId;
+          return this;
+        }
+
+        /**
+         * A list of optional query parameters specified as JSON text in the form of:
+         * `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support
+         * multiple values, its values must be specified with array notation. `agentPoolNames` is an
+         * optional field. The list returns all agent pools for the project when the filter is not
+         * provided or empty.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A list of optional query parameters specified as JSON text in the form of:
+       `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support multiple
+       values, its values must be specified with array notation. `agentPoolNames` is an optional field.
+       The list returns all agent pools for the project when the filter is not provided or empty.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A list of optional query parameters specified as JSON text in the form of:
+         * `{"agentPoolNames":["agentpool1","agentpool2",...]}` Since `agentPoolNames` support
+         * multiple values, its values must be specified with array notation. `agentPoolNames` is an
+         * optional field. The list returns all agent pools for the project when the filter is not
+         * provided or empty.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The list page size. The max allowed value is 256. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The list page size. The max allowed value is 256.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The list page size. The max allowed value is 256. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an existing agent pool resource.
+       *
+       * Create a request for the method "agentPools.patch".
+       *
+       * This request holds the parameters needed by the storagetransfer server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Specifies a unique string that identifies the agent pool. Format:
+       *        projects/{project_id}/agentPools/{agent_pool_id}
+       * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.storagetransfer.v1.model.AgentPool content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.AgentPool> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/agentPools/[^/]+$");
+
+        /**
+         * Updates an existing agent pool resource.
+         *
+         * Create a request for the method "agentPools.patch".
+         *
+         * This request holds the parameters needed by the the storagetransfer server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Specifies a unique string that identifies the agent pool. Format:
+       *        projects/{project_id}/agentPools/{agent_pool_id}
+         * @param content the {@link com.google.api.services.storagetransfer.v1.model.AgentPool}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.storagetransfer.v1.model.AgentPool content) {
+          super(Storagetransfer.this, "PATCH", REST_PATH, content, com.google.api.services.storagetransfer.v1.model.AgentPool.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Specifies a unique string that identifies the agent pool. Format:
+         * projects/{project_id}/agentPools/{agent_pool_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Specifies a unique string that identifies the agent pool. Format:
+       projects/{project_id}/agentPools/{agent_pool_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Specifies a unique string that identifies the agent pool. Format:
+         * projects/{project_id}/agentPools/{agent_pool_id}
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/agentPools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The field mask of the fields in `agentPool` that are to be updated in this request.
+         * Fields in `agentPool` that can be updated are: display_name, bandwidth_limit,
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The field mask of the fields in `agentPool` that are to be updated in this request. Fields in
+       `agentPool` that can be updated are: display_name, bandwidth_limit,
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The field mask of the fields in `agentPool` that are to be updated in this request.
+         * Fields in `agentPool` that can be updated are: display_name, bandwidth_limit,
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the TransferJobs collection.
    *
    * <p>The typical use is:</p>

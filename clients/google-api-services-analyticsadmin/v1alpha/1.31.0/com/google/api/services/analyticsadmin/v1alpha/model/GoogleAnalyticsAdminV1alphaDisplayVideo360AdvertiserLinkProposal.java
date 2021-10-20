@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A proposal for a link between an GA4 property and a Display & Video 360 advertiser. A proposal is
+ * A proposal for a link between a GA4 property and a Display & Video 360 advertiser. A proposal is
  * converted to a DisplayVideo360AdvertiserLink once approved. Google Analytics admins approve
  * inbound proposals while Display & Video 360 admins approve outbound proposals.
  *

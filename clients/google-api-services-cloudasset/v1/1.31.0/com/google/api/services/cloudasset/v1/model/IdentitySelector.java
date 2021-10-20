@@ -31,7 +31,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class IdentitySelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identity appear in the form of members in [IAM policy
+   * Required. The identity appear in the form of principals in [IAM policy
    * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
    * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
    * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
@@ -42,7 +42,7 @@ public final class IdentitySelector extends com.google.api.client.json.GenericJs
   private java.lang.String identity;
 
   /**
-   * Required. The identity appear in the form of members in [IAM policy
+   * Required. The identity appear in the form of principals in [IAM policy
    * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
    * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
    * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
@@ -54,7 +54,7 @@ public final class IdentitySelector extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The identity appear in the form of members in [IAM policy
+   * Required. The identity appear in the form of principals in [IAM policy
    * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
    * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
    * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters

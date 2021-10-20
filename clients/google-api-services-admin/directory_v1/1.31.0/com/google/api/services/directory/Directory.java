@@ -1221,6 +1221,29 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
+      /**
+       * Return devices from all child orgunits, as well as the specified org unit. If this is set
+       * to true 'orgUnitPath' must be provided.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeChildOrgunits;
+
+      /** Return devices from all child orgunits, as well as the specified org unit. If this is set to true
+     'orgUnitPath' must be provided.
+       */
+      public java.lang.Boolean getIncludeChildOrgunits() {
+        return includeChildOrgunits;
+      }
+
+      /**
+       * Return devices from all child orgunits, as well as the specified org unit. If this is set
+       * to true 'orgUnitPath' must be provided.
+       */
+      public List setIncludeChildOrgunits(java.lang.Boolean includeChildOrgunits) {
+        this.includeChildOrgunits = includeChildOrgunits;
+        return this;
+      }
+
       /** Maximum number of results to return. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;

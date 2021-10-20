@@ -42,6 +42,13 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends com.g
   private java.lang.String dataset;
 
   /**
+   * Output only. BigQuery resource name of the latest shard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestShardResource;
+
+  /**
    * Output only. Total number of shards.
    * The value may be {@code null}.
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends com.g
    */
   public GoogleCloudDatacatalogV1BigQueryDateShardedSpec setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Output only. BigQuery resource name of the latest shard.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestShardResource() {
+    return latestShardResource;
+  }
+
+  /**
+   * Output only. BigQuery resource name of the latest shard.
+   * @param latestShardResource latestShardResource or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1BigQueryDateShardedSpec setLatestShardResource(java.lang.String latestShardResource) {
+    this.latestShardResource = latestShardResource;
     return this;
   }
 

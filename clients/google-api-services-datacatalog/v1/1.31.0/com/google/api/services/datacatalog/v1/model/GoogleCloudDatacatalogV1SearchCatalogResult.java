@@ -32,6 +32,21 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1SearchCatalogResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Entry description that can consist of several sentences or paragraphs that describe entry
+   * contents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * The display name of the result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Fully qualified name (FQN) of the resource. FQNs take two forms: * For non-regionalized
    * resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized
    * resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example
@@ -97,6 +112,42 @@ public final class GoogleCloudDatacatalogV1SearchCatalogResult extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String userSpecifiedSystem;
+
+  /**
+   * Entry description that can consist of several sentences or paragraphs that describe entry
+   * contents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Entry description that can consist of several sentences or paragraphs that describe entry
+   * contents.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SearchCatalogResult setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * The display name of the result.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The display name of the result.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SearchCatalogResult setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Fully qualified name (FQN) of the resource. FQNs take two forms: * For non-regionalized

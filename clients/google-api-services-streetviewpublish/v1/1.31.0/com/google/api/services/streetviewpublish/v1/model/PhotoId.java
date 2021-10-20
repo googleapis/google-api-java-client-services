@@ -31,14 +31,14 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class PhotoId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A unique identifier for a photo.
+   * A unique identifier for a photo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. A unique identifier for a photo.
+   * A unique identifier for a photo.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -46,7 +46,7 @@ public final class PhotoId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A unique identifier for a photo.
+   * A unique identifier for a photo.
    * @param id id or {@code null} for none
    */
   public PhotoId setId(java.lang.String id) {

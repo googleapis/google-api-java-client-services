@@ -1864,6 +1864,397 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * An accessor for creating requests from the Changelogs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Changelogs.List request = dialogflow.changelogs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Changelogs changelogs() {
+          return new Changelogs();
+        }
+
+        /**
+         * The "changelogs" collection of methods.
+         */
+        public class Changelogs {
+
+          /**
+           * Retrieves the specified Changelog.
+           *
+           * Create a request for the method "changelogs.get".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Changelog> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/changelogs/[^/]+$");
+
+            /**
+             * Retrieves the specified Changelog.
+             *
+             * Create a request for the method "changelogs.get".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Changelog.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/changelogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the changelog to get. Format:
+             * `projects//locations//agents//changelogs/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the changelog to get. Format:
+             * `projects//locations//agents//changelogs/`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/changelogs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns the list of Changelogs.
+           *
+           * Create a request for the method "changelogs.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListChangelogsResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/changelogs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Returns the list of Changelogs.
+             *
+             * Create a request for the method "changelogs.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListChangelogsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent containing the changelogs. Format:
+             * `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent containing the changelogs. Format:
+             * `projects//locations//agents/`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter string. Supports filter by user_email, resource, type and create_time.
+             * Some examples: 1. By user email: user_email = "someone@google.com" 2. By resource
+             * name: resource = "projects/123/locations/global/agents/456/flows/789" 3. By resource
+             * display name: display_name = "my agent" 4. By action: action = "Create" 5. By type:
+             * type = "flows" 6. By create time. Currently predicates on `create_time` and
+             * `create_time_epoch_seconds` are supported: create_time_epoch_seconds > 1551790877 AND
+             * create_time <= 2017-01-15T01:30:15.01Z 7. Combination of above filters: resource =
+             * "projects/123/locations/global/agents/456/flows/789" AND user_email =
+             * "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter string. Supports filter by user_email, resource, type and create_time. Some examples: 1.
+           By user email: user_email = "someone@google.com" 2. By resource name: resource =
+           "projects/123/locations/global/agents/456/flows/789" 3. By resource display name: display_name =
+           "my agent" 4. By action: action = "Create" 5. By type: type = "flows" 6. By create time. Currently
+           predicates on `create_time` and `create_time_epoch_seconds` are supported:
+           create_time_epoch_seconds > 1551790877 AND create_time <= 2017-01-15T01:30:15.01Z 7. Combination of
+           above filters: resource = "projects/123/locations/global/agents/456/flows/789" AND user_email =
+           "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter string. Supports filter by user_email, resource, type and create_time.
+             * Some examples: 1. By user email: user_email = "someone@google.com" 2. By resource
+             * name: resource = "projects/123/locations/global/agents/456/flows/789" 3. By resource
+             * display name: display_name = "my agent" 4. By action: action = "Create" 5. By type:
+             * type = "flows" 6. By create time. Currently predicates on `create_time` and
+             * `create_time_epoch_seconds` are supported: create_time_epoch_seconds > 1551790877 AND
+             * create_time <= 2017-01-15T01:30:15.01Z 7. Combination of above filters: resource =
+             * "projects/123/locations/global/agents/456/flows/789" AND user_email =
+             * "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the EntityTypes collection.
          *
          * <p>The typical use is:</p>
@@ -10849,6 +11240,151 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            */
           public class Versions {
 
+            /**
+             * Compares the specified base version with target version.
+             *
+             * Create a request for the method "versions.compareVersions".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link CompareVersions#execute()} method to invoke the remote operation.
+             *
+             * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
+             *        indicate the draft version of the specified flow. Format:
+             *        `projects//locations//agents//flows//versions/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
+             * @return the request
+             */
+            public CompareVersions compareVersions(java.lang.String baseVersion, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest content) throws java.io.IOException {
+              CompareVersions result = new CompareVersions(baseVersion, content);
+              initialize(result);
+              return result;
+            }
+
+            public class CompareVersions extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsResponse> {
+
+              private static final String REST_PATH = "v3/{+baseVersion}:compareVersions";
+
+              private final java.util.regex.Pattern BASE_VERSION_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
+
+              /**
+               * Compares the specified base version with target version.
+               *
+               * Create a request for the method "versions.compareVersions".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link CompareVersions#execute()} method to invoke the remote
+               * operation. <p> {@link CompareVersions#initialize(com.google.api.client.googleapis.services.Abst
+               * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
+             *        indicate the draft version of the specified flow. Format:
+             *        `projects//locations//agents//flows//versions/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
+               * @since 1.13
+               */
+              protected CompareVersions(java.lang.String baseVersion, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsResponse.class);
+                this.baseVersion = com.google.api.client.util.Preconditions.checkNotNull(baseVersion, "Required parameter baseVersion must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(BASE_VERSION_PATTERN.matcher(baseVersion).matches(),
+                      "Parameter baseVersion must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public CompareVersions set$Xgafv(java.lang.String $Xgafv) {
+                return (CompareVersions) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public CompareVersions setAccessToken(java.lang.String accessToken) {
+                return (CompareVersions) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public CompareVersions setAlt(java.lang.String alt) {
+                return (CompareVersions) super.setAlt(alt);
+              }
+
+              @Override
+              public CompareVersions setCallback(java.lang.String callback) {
+                return (CompareVersions) super.setCallback(callback);
+              }
+
+              @Override
+              public CompareVersions setFields(java.lang.String fields) {
+                return (CompareVersions) super.setFields(fields);
+              }
+
+              @Override
+              public CompareVersions setKey(java.lang.String key) {
+                return (CompareVersions) super.setKey(key);
+              }
+
+              @Override
+              public CompareVersions setOauthToken(java.lang.String oauthToken) {
+                return (CompareVersions) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public CompareVersions setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (CompareVersions) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public CompareVersions setQuotaUser(java.lang.String quotaUser) {
+                return (CompareVersions) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public CompareVersions setUploadType(java.lang.String uploadType) {
+                return (CompareVersions) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public CompareVersions setUploadProtocol(java.lang.String uploadProtocol) {
+                return (CompareVersions) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the base flow version to compare with the target version. Use
+               * version ID `0` to indicate the draft version of the specified flow. Format:
+               * `projects//locations//agents//flows//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String baseVersion;
+
+              /** Required. Name of the base flow version to compare with the target version. Use version ID `0` to
+             indicate the draft version of the specified flow. Format:
+             `projects//locations//agents//flows//versions/`.
+               */
+              public java.lang.String getBaseVersion() {
+                return baseVersion;
+              }
+
+              /**
+               * Required. Name of the base flow version to compare with the target version. Use
+               * version ID `0` to indicate the draft version of the specified flow. Format:
+               * `projects//locations//agents//flows//versions/`.
+               */
+              public CompareVersions setBaseVersion(java.lang.String baseVersion) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(BASE_VERSION_PATTERN.matcher(baseVersion).matches(),
+                      "Parameter baseVersion must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
+                }
+                this.baseVersion = baseVersion;
+                return this;
+              }
+
+              @Override
+              public CompareVersions set(String parameterName, Object value) {
+                return (CompareVersions) super.set(parameterName, value);
+              }
+            }
             /**
              * Creates a Version in the specified Flow. This method is a [long-running
              * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned

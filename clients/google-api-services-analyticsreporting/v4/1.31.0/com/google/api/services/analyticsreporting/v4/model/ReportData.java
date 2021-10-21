@@ -39,6 +39,13 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
   private String dataLastRefreshed;
 
   /**
+   * If empty reason is specified, the report is empty for this reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emptyReason;
+
+  /**
    * Indicates if response to this request is golden or not. Data is golden when the exact same
    * request will not produce any new results if asked at a later point in time.
    * The value may be {@code null}.
@@ -141,6 +148,23 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
    */
   public ReportData setDataLastRefreshed(String dataLastRefreshed) {
     this.dataLastRefreshed = dataLastRefreshed;
+    return this;
+  }
+
+  /**
+   * If empty reason is specified, the report is empty for this reason.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmptyReason() {
+    return emptyReason;
+  }
+
+  /**
+   * If empty reason is specified, the report is empty for this reason.
+   * @param emptyReason emptyReason or {@code null} for none
+   */
+  public ReportData setEmptyReason(java.lang.String emptyReason) {
+    this.emptyReason = emptyReason;
     return this;
   }
 

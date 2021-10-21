@@ -51,6 +51,13 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   private java.lang.Boolean dataLossFromOtherRow;
 
   /**
+   * If empty reason is specified, the report is empty for this reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emptyReason;
+
+  /**
    * The property's current timezone. Intended to be used to interpret time-based dimensions like
    * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
    * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
@@ -102,6 +109,23 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    */
   public ResponseMetaData setDataLossFromOtherRow(java.lang.Boolean dataLossFromOtherRow) {
     this.dataLossFromOtherRow = dataLossFromOtherRow;
+    return this;
+  }
+
+  /**
+   * If empty reason is specified, the report is empty for this reason.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmptyReason() {
+    return emptyReason;
+  }
+
+  /**
+   * If empty reason is specified, the report is empty for this reason.
+   * @param emptyReason emptyReason or {@code null} for none
+   */
+  public ResponseMetaData setEmptyReason(java.lang.String emptyReason) {
+    this.emptyReason = emptyReason;
     return this;
   }
 

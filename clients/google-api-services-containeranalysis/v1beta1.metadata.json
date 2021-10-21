@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-containeranalysis",
-    "version": "v1beta1-rev20210913-1.32.1"
+    "version": "v1beta1-rev20211015-1.32.1"
   }
 }

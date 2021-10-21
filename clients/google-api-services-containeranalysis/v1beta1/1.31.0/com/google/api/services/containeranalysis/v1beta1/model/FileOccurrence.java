@@ -76,20 +76,12 @@ public final class FileOccurrence extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
-   * This field provides a place for the SPDX file creator to record any relevant background
-   * references or analysis that went in to arriving at the Concluded License for a file
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String licenseComments;
-
-  /**
    * This field contains the license the SPDX file creator has concluded as governing the file or
    * alternative values if the governing license cannot be determined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String licenseConcluded;
+  private License licenseConcluded;
 
   /**
    * This field provides a place for the SPDX file creator to record license notices or other such
@@ -206,30 +198,11 @@ public final class FileOccurrence extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field provides a place for the SPDX file creator to record any relevant background
-   * references or analysis that went in to arriving at the Concluded License for a file
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLicenseComments() {
-    return licenseComments;
-  }
-
-  /**
-   * This field provides a place for the SPDX file creator to record any relevant background
-   * references or analysis that went in to arriving at the Concluded License for a file
-   * @param licenseComments licenseComments or {@code null} for none
-   */
-  public FileOccurrence setLicenseComments(java.lang.String licenseComments) {
-    this.licenseComments = licenseComments;
-    return this;
-  }
-
-  /**
    * This field contains the license the SPDX file creator has concluded as governing the file or
    * alternative values if the governing license cannot be determined
    * @return value or {@code null} for none
    */
-  public java.lang.String getLicenseConcluded() {
+  public License getLicenseConcluded() {
     return licenseConcluded;
   }
 
@@ -238,7 +211,7 @@ public final class FileOccurrence extends com.google.api.client.json.GenericJson
    * alternative values if the governing license cannot be determined
    * @param licenseConcluded licenseConcluded or {@code null} for none
    */
-  public FileOccurrence setLicenseConcluded(java.lang.String licenseConcluded) {
+  public FileOccurrence setLicenseConcluded(License licenseConcluded) {
     this.licenseConcluded = licenseConcluded;
     return this;
   }

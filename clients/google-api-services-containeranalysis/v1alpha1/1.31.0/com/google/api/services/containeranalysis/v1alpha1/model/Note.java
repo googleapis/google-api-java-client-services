@@ -156,7 +156,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PackageNote spdxPackage;
+  private PackageInfoNote spdxPackage;
 
   /**
    * A note describing a relationship between SPDX elements.
@@ -484,7 +484,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
    * A note describing an SPDX Package.
    * @return value or {@code null} for none
    */
-  public PackageNote getSpdxPackage() {
+  public PackageInfoNote getSpdxPackage() {
     return spdxPackage;
   }
 
@@ -492,7 +492,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
    * A note describing an SPDX Package.
    * @param spdxPackage spdxPackage or {@code null} for none
    */
-  public Note setSpdxPackage(PackageNote spdxPackage) {
+  public Note setSpdxPackage(PackageInfoNote spdxPackage) {
     this.spdxPackage = spdxPackage;
     return this;
   }

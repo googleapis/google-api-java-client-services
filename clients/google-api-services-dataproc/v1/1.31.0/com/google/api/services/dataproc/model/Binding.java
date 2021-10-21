@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Associates members with a role.
+ * Associates members, or principals, with a role.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -33,7 +33,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * The condition that is associated with this binding.If the condition evaluates to true, then
    * this binding applies to the current request.If the condition evaluates to false, then this
    * binding does not apply to the current request. However, a different role binding might grant
-   * the same role to one or more of the members in this binding.To learn which resources support
+   * the same role to one or more of the principals in this binding.To learn which resources support
    * conditions in their IAM policies, see the IAM documentation
    * (https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
@@ -42,7 +42,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private Expr condition;
 
   /**
-   * Specifies the identities requesting access for a Cloud Platform resource. members can have the
+   * Specifies the principals requesting access for a Cloud Platform resource. members can have the
    * following values: allUsers: A special identifier that represents anyone who is on the internet;
    * with or without a Google account. allAuthenticatedUsers: A special identifier that represents
    * anyone who is authenticated with a Google account or a service account. user:{emailid}: An
@@ -69,7 +69,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> members;
 
   /**
-   * Role that is assigned to members. For example, roles/viewer, roles/editor, or roles/owner.
+   * Role that is assigned to the list of members, or principals. For example, roles/viewer,
+   * roles/editor, or roles/owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +80,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * The condition that is associated with this binding.If the condition evaluates to true, then
    * this binding applies to the current request.If the condition evaluates to false, then this
    * binding does not apply to the current request. However, a different role binding might grant
-   * the same role to one or more of the members in this binding.To learn which resources support
+   * the same role to one or more of the principals in this binding.To learn which resources support
    * conditions in their IAM policies, see the IAM documentation
    * (https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
@@ -92,7 +93,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * The condition that is associated with this binding.If the condition evaluates to true, then
    * this binding applies to the current request.If the condition evaluates to false, then this
    * binding does not apply to the current request. However, a different role binding might grant
-   * the same role to one or more of the members in this binding.To learn which resources support
+   * the same role to one or more of the principals in this binding.To learn which resources support
    * conditions in their IAM policies, see the IAM documentation
    * (https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param condition condition or {@code null} for none
@@ -103,7 +104,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the identities requesting access for a Cloud Platform resource. members can have the
+   * Specifies the principals requesting access for a Cloud Platform resource. members can have the
    * following values: allUsers: A special identifier that represents anyone who is on the internet;
    * with or without a Google account. allAuthenticatedUsers: A special identifier that represents
    * anyone who is authenticated with a Google account or a service account. user:{emailid}: An
@@ -131,7 +132,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the identities requesting access for a Cloud Platform resource. members can have the
+   * Specifies the principals requesting access for a Cloud Platform resource. members can have the
    * following values: allUsers: A special identifier that represents anyone who is on the internet;
    * with or without a Google account. allAuthenticatedUsers: A special identifier that represents
    * anyone who is authenticated with a Google account or a service account. user:{emailid}: An
@@ -160,7 +161,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Role that is assigned to members. For example, roles/viewer, roles/editor, or roles/owner.
+   * Role that is assigned to the list of members, or principals. For example, roles/viewer,
+   * roles/editor, or roles/owner.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -168,7 +170,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Role that is assigned to members. For example, roles/viewer, roles/editor, or roles/owner.
+   * Role that is assigned to the list of members, or principals. For example, roles/viewer,
+   * roles/editor, or roles/owner.
    * @param role role or {@code null} for none
    */
   public Binding setRole(java.lang.String role) {

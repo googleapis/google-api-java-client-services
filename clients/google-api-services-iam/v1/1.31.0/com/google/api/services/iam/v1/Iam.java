@@ -364,6 +364,394 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
   }
 
   /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Iam iam = new Iam(...);}
+   *   {@code Iam.Locations.List request = iam.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * An accessor for creating requests from the WorkforcePools collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Iam iam = new Iam(...);}
+     *   {@code Iam.WorkforcePools.List request = iam.workforcePools().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public WorkforcePools workforcePools() {
+      return new WorkforcePools();
+    }
+
+    /**
+     * The "workforcePools" collection of methods.
+     */
+    public class WorkforcePools {
+
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Iam iam = new Iam(...);}
+       *   {@code Iam.Operations.List request = iam.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/workforcePools/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/workforcePools/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Providers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Iam iam = new Iam(...);}
+       *   {@code Iam.Providers.List request = iam.providers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Providers providers() {
+        return new Providers();
+      }
+
+      /**
+       * The "providers" collection of methods.
+       */
+      public class Providers {
+
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Iam iam = new Iam(...);}
+         *   {@code Iam.Operations.List request = iam.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>
@@ -598,11 +986,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Deletes a custom Role. When you delete a custom role, the following changes occur immediately: *
-       * You cannot bind a member to the custom role in an IAM Policy. * Existing bindings to the custom
-       * role are not changed, but they have no effect. * By default, the response from ListRoles does not
-       * include the custom role. You have 7 days to undelete the custom role. After 7 days, the following
-       * changes occur: * The custom role is permanently deleted and cannot be recovered. * If an IAM
-       * policy contains a binding to the custom role, the binding is permanently removed.
+       * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
+       * custom role are not changed, but they have no effect. * By default, the response from ListRoles
+       * does not include the custom role. You have 7 days to undelete the custom role. After 7 days, the
+       * following changes occur: * The custom role is permanently deleted and cannot be recovered. * If
+       * an IAM policy contains a binding to the custom role, the binding is permanently removed.
        *
        * Create a request for the method "roles.delete".
        *
@@ -642,7 +1030,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Deletes a custom Role. When you delete a custom role, the following changes occur immediately:
-         * * You cannot bind a member to the custom role in an IAM Policy. * Existing bindings to the
+         * * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
          * custom role are not changed, but they have no effect. * By default, the response from ListRoles
          * does not include the custom role. You have 7 days to undelete the custom role. After 7 days,
          * the following changes occur: * The custom role is permanently deleted and cannot be recovered.
@@ -1829,7 +2217,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
     /**
      * Lists every permission that you can test on a resource. A permission is testable if you can check
-     * whether a member has that permission on the resource.
+     * whether a principal has that permission on the resource.
      *
      * Create a request for the method "permissions.queryTestablePermissions".
      *
@@ -1852,7 +2240,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Lists every permission that you can test on a resource. A permission is testable if you can
-       * check whether a member has that permission on the resource.
+       * check whether a principal has that permission on the resource.
        *
        * Create a request for the method "permissions.queryTestablePermissions".
        *
@@ -4384,11 +4772,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Deletes a custom Role. When you delete a custom role, the following changes occur immediately: *
-       * You cannot bind a member to the custom role in an IAM Policy. * Existing bindings to the custom
-       * role are not changed, but they have no effect. * By default, the response from ListRoles does not
-       * include the custom role. You have 7 days to undelete the custom role. After 7 days, the following
-       * changes occur: * The custom role is permanently deleted and cannot be recovered. * If an IAM
-       * policy contains a binding to the custom role, the binding is permanently removed.
+       * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
+       * custom role are not changed, but they have no effect. * By default, the response from ListRoles
+       * does not include the custom role. You have 7 days to undelete the custom role. After 7 days, the
+       * following changes occur: * The custom role is permanently deleted and cannot be recovered. * If
+       * an IAM policy contains a binding to the custom role, the binding is permanently removed.
        *
        * Create a request for the method "roles.delete".
        *
@@ -4428,7 +4816,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Deletes a custom Role. When you delete a custom role, the following changes occur immediately:
-         * * You cannot bind a member to the custom role in an IAM Policy. * Existing bindings to the
+         * * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
          * custom role are not changed, but they have no effect. * By default, the response from ListRoles
          * does not include the custom role. You have 7 days to undelete the custom role. After 7 days,
          * the following changes occur: * The custom role is permanently deleted and cannot be recovered.
@@ -6390,12 +6778,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets the IAM policy that is attached to a ServiceAccount. This IAM policy specifies which members
-       * have access to the service account. This method does not tell you whether the service account has
-       * been granted any roles on other resources. To check whether a service account has role grants on
-       * a resource, use the `getIamPolicy` method for that resource. For example, to view the role grants
-       * for a project, call the Resource Manager API's [`projects.getIamPolicy`](https://cloud.google.com
-       * /resource-manager/reference/rest/v1/projects/getIamPolicy) method.
+       * Gets the IAM policy that is attached to a ServiceAccount. This IAM policy specifies which
+       * principals have access to the service account. This method does not tell you whether the service
+       * account has been granted any roles on other resources. To check whether a service account has
+       * role grants on a resource, use the `getIamPolicy` method for that resource. For example, to view
+       * the role grants for a project, call the Resource Manager API's
+       * [`projects.getIamPolicy`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects/getIamPolicy) method.
        *
        * Create a request for the method "serviceAccounts.getIamPolicy".
        *
@@ -6421,10 +6810,10 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Gets the IAM policy that is attached to a ServiceAccount. This IAM policy specifies which
-         * members have access to the service account. This method does not tell you whether the service
-         * account has been granted any roles on other resources. To check whether a service account has
-         * role grants on a resource, use the `getIamPolicy` method for that resource. For example, to
-         * view the role grants for a project, call the Resource Manager API's
+         * principals have access to the service account. This method does not tell you whether the
+         * service account has been granted any roles on other resources. To check whether a service
+         * account has role grants on a resource, use the `getIamPolicy` method for that resource. For
+         * example, to view the role grants for a project, call the Resource Manager API's
          * [`projects.getIamPolicy`](https://cloud.google.com/resource-
          * manager/reference/rest/v1/projects/getIamPolicy) method.
          *
@@ -6944,14 +7333,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Sets the IAM policy that is attached to a ServiceAccount. Use this method to grant or revoke
-       * access to the service account. For example, you could grant a member the ability to impersonate
-       * the service account. This method does not enable the service account to access other resources.
-       * To grant roles to a service account on a resource, follow these steps: 1. Call the resource's
-       * `getIamPolicy` method to get its current IAM policy. 2. Edit the policy so that it binds the
-       * service account to an IAM role for the resource. 3. Call the resource's `setIamPolicy` method to
-       * update its IAM policy. For detailed instructions, see [Granting roles to a service account for
-       * specific resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-
-       * service-accounts).
+       * access to the service account. For example, you could grant a principal the ability to
+       * impersonate the service account. This method does not enable the service account to access other
+       * resources. To grant roles to a service account on a resource, follow these steps: 1. Call the
+       * resource's `getIamPolicy` method to get its current IAM policy. 2. Edit the policy so that it
+       * binds the service account to an IAM role for the resource. 3. Call the resource's `setIamPolicy`
+       * method to update its IAM policy. For detailed instructions, see [Manage access to project,
+       * folders, and organizations](https://cloud.google.com/iam/help/service-accounts/granting-access-
+       * to-service-accounts) or [Manage access to other
+       * resources](https://cloud.google.com/iam/help/access/manage-other-resources).
        *
        * Create a request for the method "serviceAccounts.setIamPolicy".
        *
@@ -6978,14 +7368,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Sets the IAM policy that is attached to a ServiceAccount. Use this method to grant or revoke
-         * access to the service account. For example, you could grant a member the ability to impersonate
-         * the service account. This method does not enable the service account to access other resources.
-         * To grant roles to a service account on a resource, follow these steps: 1. Call the resource's
-         * `getIamPolicy` method to get its current IAM policy. 2. Edit the policy so that it binds the
-         * service account to an IAM role for the resource. 3. Call the resource's `setIamPolicy` method
-         * to update its IAM policy. For detailed instructions, see [Granting roles to a service account
-         * for specific resources](https://cloud.google.com/iam/help/service-accounts/granting-access-to-
-         * service-accounts).
+         * access to the service account. For example, you could grant a principal the ability to
+         * impersonate the service account. This method does not enable the service account to access
+         * other resources. To grant roles to a service account on a resource, follow these steps: 1. Call
+         * the resource's `getIamPolicy` method to get its current IAM policy. 2. Edit the policy so that
+         * it binds the service account to an IAM role for the resource. 3. Call the resource's
+         * `setIamPolicy` method to update its IAM policy. For detailed instructions, see [Manage access
+         * to project, folders, and organizations](https://cloud.google.com/iam/help/service-accounts
+         * /granting-access-to-service-accounts) or [Manage access to other
+         * resources](https://cloud.google.com/iam/help/access/manage-other-resources).
          *
          * Create a request for the method "serviceAccounts.setIamPolicy".
          *

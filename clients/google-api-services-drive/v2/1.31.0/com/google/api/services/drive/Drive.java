@@ -5661,8 +5661,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Exports a Google Doc to the requested MIME type and returns the exported content. Please note
-     * that the exported content is limited to 10MB.
+     * Exports a Google Workspace document to the requested MIME type and returns exported byte content.
+     * Note that the exported content is limited to 10MB.
      *
      * Create a request for the method "files.export".
      *
@@ -5684,8 +5684,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/export";
 
       /**
-       * Exports a Google Doc to the requested MIME type and returns the exported content. Please note
-       * that the exported content is limited to 10MB.
+       * Exports a Google Workspace document to the requested MIME type and returns exported byte
+       * content. Note that the exported content is limited to 10MB.
        *
        * Create a request for the method "files.export".
        *

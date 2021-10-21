@@ -56,7 +56,7 @@ public final class RelationshipOccurrence extends com.google.api.client.json.Gen
   private java.lang.String target;
 
   /**
-   * The type of relationship between the source and target SPDX elements
+   * Output only. The type of relationship between the source and target SPDX elements
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,7 @@ public final class RelationshipOccurrence extends com.google.api.client.json.Gen
   }
 
   /**
-   * The type of relationship between the source and target SPDX elements
+   * Output only. The type of relationship between the source and target SPDX elements
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -128,7 +128,7 @@ public final class RelationshipOccurrence extends com.google.api.client.json.Gen
   }
 
   /**
-   * The type of relationship between the source and target SPDX elements
+   * Output only. The type of relationship between the source and target SPDX elements
    * @param type type or {@code null} for none
    */
   public RelationshipOccurrence setType(java.lang.String type) {

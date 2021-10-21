@@ -17,8 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7
- * -relationships-between-SPDX-elements/
+ * License information: https://spdx.github.io/spdx-spec/3-package-information/#315-declared-license
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -29,40 +28,64 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RelationshipNote extends com.google.api.client.json.GenericJson {
+public final class License extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of relationship between the source and target SPDX elements
+   * Comments
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String comments;
 
   /**
-   * The type of relationship between the source and target SPDX elements
+   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expression;
+
+  /**
+   * Comments
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getComments() {
+    return comments;
   }
 
   /**
-   * The type of relationship between the source and target SPDX elements
-   * @param type type or {@code null} for none
+   * Comments
+   * @param comments comments or {@code null} for none
    */
-  public RelationshipNote setType(java.lang.String type) {
-    this.type = type;
+  public License setComments(java.lang.String comments) {
+    this.comments = comments;
+    return this;
+  }
+
+  /**
+   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpression() {
+    return expression;
+  }
+
+  /**
+   * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+   * @param expression expression or {@code null} for none
+   */
+  public License setExpression(java.lang.String expression) {
+    this.expression = expression;
     return this;
   }
 
   @Override
-  public RelationshipNote set(String fieldName, Object value) {
-    return (RelationshipNote) super.set(fieldName, value);
+  public License set(String fieldName, Object value) {
+    return (License) super.set(fieldName, value);
   }
 
   @Override
-  public RelationshipNote clone() {
-    return (RelationshipNote) super.clone();
+  public License clone() {
+    return (License) super.clone();
   }
 
 }

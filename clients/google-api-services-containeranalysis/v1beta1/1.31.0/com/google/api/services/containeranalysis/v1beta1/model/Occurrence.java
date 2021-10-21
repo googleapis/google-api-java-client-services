@@ -125,7 +125,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private Resource resource;
 
   /**
-   * Describes a specific SPDX Document.
+   * Describes a specific software bill of materials document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PackageOccurrence spdxPackage;
+  private PackageInfoOccurrence spdxPackage;
 
   /**
    * Describes a specific SPDX Relationship.
@@ -394,7 +394,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes a specific SPDX Document.
+   * Describes a specific software bill of materials document.
    * @return value or {@code null} for none
    */
   public DocumentOccurrence getSbom() {
@@ -402,7 +402,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describes a specific SPDX Document.
+   * Describes a specific software bill of materials document.
    * @param sbom sbom or {@code null} for none
    */
   public Occurrence setSbom(DocumentOccurrence sbom) {
@@ -431,7 +431,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    * Describes a specific SPDX Package.
    * @return value or {@code null} for none
    */
-  public PackageOccurrence getSpdxPackage() {
+  public PackageInfoOccurrence getSpdxPackage() {
     return spdxPackage;
   }
 
@@ -439,7 +439,7 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    * Describes a specific SPDX Package.
    * @param spdxPackage spdxPackage or {@code null} for none
    */
-  public Occurrence setSpdxPackage(PackageOccurrence spdxPackage) {
+  public Occurrence setSpdxPackage(PackageInfoOccurrence spdxPackage) {
     this.spdxPackage = spdxPackage;
     return this;
   }

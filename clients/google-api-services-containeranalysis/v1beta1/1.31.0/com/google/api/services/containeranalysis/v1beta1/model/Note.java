@@ -130,7 +130,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.util.List<RelatedUrl> relatedUrl;
 
   /**
-   * A note describing SPDX Document which represents SBOM.
+   * A note describing a software bill of materials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,21 +144,21 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.lang.String shortDescription;
 
   /**
-   * A note describing SPDX File.
+   * A note describing an SPDX File.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileNote spdxFile;
 
   /**
-   * A note describing SPDX Package.
+   * A note describing an SPDX Package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PackageNote spdxPackage;
+  private PackageInfoNote spdxPackage;
 
   /**
-   * A note describing SPDX Relationship.
+   * A note describing an SPDX File.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,7 +420,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX Document which represents SBOM.
+   * A note describing a software bill of materials.
    * @return value or {@code null} for none
    */
   public DocumentNote getSbom() {
@@ -428,7 +428,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX Document which represents SBOM.
+   * A note describing a software bill of materials.
    * @param sbom sbom or {@code null} for none
    */
   public Note setSbom(DocumentNote sbom) {
@@ -454,7 +454,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX File.
+   * A note describing an SPDX File.
    * @return value or {@code null} for none
    */
   public FileNote getSpdxFile() {
@@ -462,7 +462,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX File.
+   * A note describing an SPDX File.
    * @param spdxFile spdxFile or {@code null} for none
    */
   public Note setSpdxFile(FileNote spdxFile) {
@@ -471,24 +471,24 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX Package.
+   * A note describing an SPDX Package.
    * @return value or {@code null} for none
    */
-  public PackageNote getSpdxPackage() {
+  public PackageInfoNote getSpdxPackage() {
     return spdxPackage;
   }
 
   /**
-   * A note describing SPDX Package.
+   * A note describing an SPDX Package.
    * @param spdxPackage spdxPackage or {@code null} for none
    */
-  public Note setSpdxPackage(PackageNote spdxPackage) {
+  public Note setSpdxPackage(PackageInfoNote spdxPackage) {
     this.spdxPackage = spdxPackage;
     return this;
   }
 
   /**
-   * A note describing SPDX Relationship.
+   * A note describing an SPDX File.
    * @return value or {@code null} for none
    */
   public RelationshipNote getSpdxRelationship() {
@@ -496,7 +496,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A note describing SPDX Relationship.
+   * A note describing an SPDX File.
    * @param spdxRelationship spdxRelationship or {@code null} for none
    */
   public Note setSpdxRelationship(RelationshipNote spdxRelationship) {

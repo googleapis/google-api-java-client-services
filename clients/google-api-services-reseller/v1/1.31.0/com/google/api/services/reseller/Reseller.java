@@ -163,9 +163,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @return the request
      */
     public Get get(java.lang.String customerId) throws java.io.IOException {
@@ -191,9 +192,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @since 1.13
        */
       protected Get(java.lang.String customerId) {
@@ -267,25 +269,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -462,9 +467,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param content the {@link com.google.api.services.reseller.model.Customer}
      * @return the request
      */
@@ -492,9 +498,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param content the {@link com.google.api.services.reseller.model.Customer}
        * @since 1.13
        */
@@ -559,25 +566,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -600,9 +610,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param content the {@link com.google.api.services.reseller.model.Customer}
      * @return the request
      */
@@ -630,9 +641,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param content the {@link com.google.api.services.reseller.model.Customer}
        * @since 1.13
        */
@@ -697,25 +709,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1116,9 +1131,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1148,9 +1164,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1219,25 +1236,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Activate setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1290,9 +1310,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link ChangePlan#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1325,9 +1346,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * ChangePlan#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1397,25 +1419,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public ChangePlan setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1467,9 +1492,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link ChangeRenewalSettings#execute()} method to invoke the remote
      * operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1500,9 +1526,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1572,25 +1599,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public ChangeRenewalSettings setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1641,9 +1671,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link ChangeSeats#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1674,9 +1705,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * ChangeSeats#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1746,25 +1778,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public ChangeSeats setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1813,9 +1848,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1845,9 +1881,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -1919,25 +1956,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -2012,9 +2052,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2045,9 +2086,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2126,25 +2168,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -2202,9 +2247,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param content the {@link com.google.api.services.reseller.model.Subscription}
      * @return the request
      */
@@ -2239,9 +2285,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param content the {@link com.google.api.services.reseller.model.Subscription}
        * @since 1.13
        */
@@ -2306,25 +2353,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Insert setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -2506,25 +2556,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -2623,9 +2676,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link StartPaidService#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2656,9 +2710,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2727,25 +2782,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public StartPaidService setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -2801,9 +2859,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+     * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
      * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2838,9 +2897,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Suspend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     *        name, we do not recommend using a `customerId` as a key for persistent data. If the domain
-     *        name for a `customerId` is changed, the Google system automatically updates.
+       * @param customerId This can be either the customer's primary domain name or the customer's unique identifier. If the
+     *        domain name for a customer changes, the old domain name cannot be used to access the
+     *        customer, but the customer's unique identifier (as returned by the API) can always be
+     *        used. We recommend storing the unique identifier in your systems where applicable.
        * @param subscriptionId This is a required property. The `subscriptionId` is the subscription identifier and is unique for
      *        each customer. Since a `subscriptionId` changes when a subscription is updated, we
      *        recommend to not use this ID as a key for persistent data. And the `subscriptionId` can be
@@ -2909,25 +2969,28 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
-     name, we do not recommend using a `customerId` as a key for persistent data. If the domain name for
-     a `customerId` is changed, the Google system automatically updates.
+      /** This can be either the customer's primary domain name or the customer's unique identifier. If the
+     domain name for a customer changes, the old domain name cannot be used to access the customer, but
+     the customer's unique identifier (as returned by the API) can always be used. We recommend storing
+     the unique identifier in your systems where applicable.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Either the customer's primary domain name or the customer's unique identifier. If using the
-       * domain name, we do not recommend using a `customerId` as a key for persistent data. If the
-       * domain name for a `customerId` is changed, the Google system automatically updates.
+       * This can be either the customer's primary domain name or the customer's unique identifier.
+       * If the domain name for a customer changes, the old domain name cannot be used to access the
+       * customer, but the customer's unique identifier (as returned by the API) can always be used.
+       * We recommend storing the unique identifier in your systems where applicable.
        */
       public Suspend setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;

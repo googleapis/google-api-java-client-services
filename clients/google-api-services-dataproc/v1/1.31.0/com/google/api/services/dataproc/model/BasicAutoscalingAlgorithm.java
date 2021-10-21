@@ -38,6 +38,13 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   private String cooldownPeriod;
 
   /**
+   * Optional. Spark Standalone autoscaling configuration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkStandaloneAutoscalingConfig sparkStandaloneConfig;
+
+  /**
    * Optional. YARN autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
    */
   public BasicAutoscalingAlgorithm setCooldownPeriod(String cooldownPeriod) {
     this.cooldownPeriod = cooldownPeriod;
+    return this;
+  }
+
+  /**
+   * Optional. Spark Standalone autoscaling configuration
+   * @return value or {@code null} for none
+   */
+  public SparkStandaloneAutoscalingConfig getSparkStandaloneConfig() {
+    return sparkStandaloneConfig;
+  }
+
+  /**
+   * Optional. Spark Standalone autoscaling configuration
+   * @param sparkStandaloneConfig sparkStandaloneConfig or {@code null} for none
+   */
+  public BasicAutoscalingAlgorithm setSparkStandaloneConfig(SparkStandaloneAutoscalingConfig sparkStandaloneConfig) {
+    this.sparkStandaloneConfig = sparkStandaloneConfig;
     return this;
   }
 

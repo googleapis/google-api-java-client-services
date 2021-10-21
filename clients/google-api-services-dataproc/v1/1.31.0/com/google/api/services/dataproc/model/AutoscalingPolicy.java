@@ -45,6 +45,17 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
+   * Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63
+   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
+   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an
+   * autoscaling policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. The "resource name" of the autoscaling policy, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies,
    * the resource name of the policy has the following format:
@@ -103,6 +114,31 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63
+   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
+   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an
+   * autoscaling policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63
+   * characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values
+   * may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an
+   * autoscaling policy.
+   * @param labels labels or {@code null} for none
+   */
+  public AutoscalingPolicy setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

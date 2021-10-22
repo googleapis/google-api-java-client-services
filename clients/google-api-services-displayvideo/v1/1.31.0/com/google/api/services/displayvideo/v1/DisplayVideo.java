@@ -16034,6 +16034,107 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   public class CustomBiddingAlgorithms {
 
     /**
+     * Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if
+     * successful.
+     *
+     * Create a request for the method "customBiddingAlgorithms.create".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+     * @return the request
+     */
+    public Create create(com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms";
+
+      /**
+       * Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if
+       * successful.
+       *
+       * Create a request for the method "customBiddingAlgorithms.create".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets a custom bidding algorithm.
      *
      * Create a request for the method "customBiddingAlgorithms.get".
@@ -16474,7 +16575,933 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
+     * successful.
+     *
+     * Create a request for the method "customBiddingAlgorithms.patch".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param customBiddingAlgorithmId Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) throws java.io.IOException {
+      Patch result = new Patch(customBiddingAlgorithmId, content);
+      initialize(result);
+      return result;
+    }
 
+    public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}";
+
+      private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
+       * successful.
+       *
+       * Create a request for the method "customBiddingAlgorithms.patch".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param customBiddingAlgorithmId Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm content) {
+        super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.CustomBiddingAlgorithm.class);
+        this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system. */
+      @com.google.api.client.util.Key
+      private java.lang.Long customBiddingAlgorithmId;
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system.
+       */
+      public java.lang.Long getCustomBiddingAlgorithmId() {
+        return customBiddingAlgorithmId;
+      }
+
+      /** Output only. The unique ID of the custom bidding algorithm. Assigned by the system. */
+      public Patch setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+        this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+        return this;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The mask to control which fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The mask to control which fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a custom bidding script reference object for a script file. The resulting reference
+     * object provides a resource path to which the script file should be uploaded. This reference
+     * object should be included in when creating a new custom bidding script object.
+     *
+     * Create a request for the method "customBiddingAlgorithms.uploadScript".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link UploadScript#execute()} method to invoke the remote operation.
+     *
+     * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+     * @return the request
+     */
+    public UploadScript uploadScript(java.lang.Long customBiddingAlgorithmId) throws java.io.IOException {
+      UploadScript result = new UploadScript(customBiddingAlgorithmId);
+      initialize(result);
+      return result;
+    }
+
+    public class UploadScript extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingScriptRef> {
+
+      private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}:uploadScript";
+
+      private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Creates a custom bidding script reference object for a script file. The resulting reference
+       * object provides a resource path to which the script file should be uploaded. This reference
+       * object should be included in when creating a new custom bidding script object.
+       *
+       * Create a request for the method "customBiddingAlgorithms.uploadScript".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link UploadScript#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * UploadScript#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+       * @since 1.13
+       */
+      protected UploadScript(java.lang.Long customBiddingAlgorithmId) {
+        super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.CustomBiddingScriptRef.class);
+        this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public UploadScript set$Xgafv(java.lang.String $Xgafv) {
+        return (UploadScript) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UploadScript setAccessToken(java.lang.String accessToken) {
+        return (UploadScript) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UploadScript setAlt(java.lang.String alt) {
+        return (UploadScript) super.setAlt(alt);
+      }
+
+      @Override
+      public UploadScript setCallback(java.lang.String callback) {
+        return (UploadScript) super.setCallback(callback);
+      }
+
+      @Override
+      public UploadScript setFields(java.lang.String fields) {
+        return (UploadScript) super.setFields(fields);
+      }
+
+      @Override
+      public UploadScript setKey(java.lang.String key) {
+        return (UploadScript) super.setKey(key);
+      }
+
+      @Override
+      public UploadScript setOauthToken(java.lang.String oauthToken) {
+        return (UploadScript) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UploadScript setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UploadScript) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UploadScript setQuotaUser(java.lang.String quotaUser) {
+        return (UploadScript) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UploadScript setUploadType(java.lang.String uploadType) {
+        return (UploadScript) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UploadScript setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UploadScript) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the custom bidding algorithm owns the script. */
+      @com.google.api.client.util.Key
+      private java.lang.Long customBiddingAlgorithmId;
+
+      /** Required. The ID of the custom bidding algorithm owns the script.
+       */
+      public java.lang.Long getCustomBiddingAlgorithmId() {
+        return customBiddingAlgorithmId;
+      }
+
+      /** Required. The ID of the custom bidding algorithm owns the script. */
+      public UploadScript setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+        this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+        return this;
+      }
+
+      /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+      @com.google.api.client.util.Key
+      private java.lang.Long advertiserId;
+
+      /** The ID of the advertiser that owns the parent custom bidding algorithm.
+       */
+      public java.lang.Long getAdvertiserId() {
+        return advertiserId;
+      }
+
+      /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+      public UploadScript setAdvertiserId(java.lang.Long advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+      }
+
+      /**
+       * The ID of the partner that owns the parent custom bidding algorithm. Only this partner will
+       * have write access to this custom bidding script.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long partnerId;
+
+      /** The ID of the partner that owns the parent custom bidding algorithm. Only this partner will have
+     write access to this custom bidding script.
+       */
+      public java.lang.Long getPartnerId() {
+        return partnerId;
+      }
+
+      /**
+       * The ID of the partner that owns the parent custom bidding algorithm. Only this partner will
+       * have write access to this custom bidding script.
+       */
+      public UploadScript setPartnerId(java.lang.Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+      }
+
+      @Override
+      public UploadScript set(String parameterName, Object value) {
+        return (UploadScript) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Scripts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.Scripts.List request = displayvideo.scripts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Scripts scripts() {
+      return new Scripts();
+    }
+
+    /**
+     * The "scripts" collection of methods.
+     */
+    public class Scripts {
+
+      /**
+       * Creates a new custom bidding script. Returns the newly created script if successful.
+       *
+       * Create a request for the method "scripts.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm that owns the script.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingScript}
+       * @return the request
+       */
+      public Create create(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingScript content) throws java.io.IOException {
+        Create result = new Create(customBiddingAlgorithmId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingScript> {
+
+        private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}/scripts";
+
+        private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new custom bidding script. Returns the newly created script if successful.
+         *
+         * Create a request for the method "scripts.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm that owns the script.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.CustomBiddingScript}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long customBiddingAlgorithmId, com.google.api.services.displayvideo.v1.model.CustomBiddingScript content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.CustomBiddingScript.class);
+          this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the custom bidding algorithm that owns the script. */
+        @com.google.api.client.util.Key
+        private java.lang.Long customBiddingAlgorithmId;
+
+        /** Required. The ID of the custom bidding algorithm that owns the script.
+         */
+        public java.lang.Long getCustomBiddingAlgorithmId() {
+          return customBiddingAlgorithmId;
+        }
+
+        /** Required. The ID of the custom bidding algorithm that owns the script. */
+        public Create setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+          this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+          return this;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the parent custom bidding algorithm. Only this partner will have
+       write access to this custom bidding script.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        public Create setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a custom bidding script.
+       *
+       * Create a request for the method "scripts.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+       * @param customBiddingScriptId Required. The ID of the custom bidding script to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long customBiddingAlgorithmId, java.lang.Long customBiddingScriptId) throws java.io.IOException {
+        Get result = new Get(customBiddingAlgorithmId, customBiddingScriptId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.CustomBiddingScript> {
+
+        private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}/scripts/{+customBiddingScriptId}";
+
+        private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern CUSTOM_BIDDING_SCRIPT_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a custom bidding script.
+         *
+         * Create a request for the method "scripts.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+         * @param customBiddingScriptId Required. The ID of the custom bidding script to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long customBiddingAlgorithmId, java.lang.Long customBiddingScriptId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.CustomBiddingScript.class);
+          this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+          this.customBiddingScriptId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingScriptId, "Required parameter customBiddingScriptId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the custom bidding algorithm owns the script. */
+        @com.google.api.client.util.Key
+        private java.lang.Long customBiddingAlgorithmId;
+
+        /** Required. The ID of the custom bidding algorithm owns the script.
+         */
+        public java.lang.Long getCustomBiddingAlgorithmId() {
+          return customBiddingAlgorithmId;
+        }
+
+        /** Required. The ID of the custom bidding algorithm owns the script. */
+        public Get setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+          this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+          return this;
+        }
+
+        /** Required. The ID of the custom bidding script to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long customBiddingScriptId;
+
+        /** Required. The ID of the custom bidding script to fetch.
+         */
+        public java.lang.Long getCustomBiddingScriptId() {
+          return customBiddingScriptId;
+        }
+
+        /** Required. The ID of the custom bidding script to fetch. */
+        public Get setCustomBiddingScriptId(java.lang.Long customBiddingScriptId) {
+          this.customBiddingScriptId = customBiddingScriptId;
+          return this;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        public Get setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the parent custom bidding algorithm. Only this partner will have
+       write access to this custom bidding script.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        public Get setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists custom bidding scripts that belong to the given algorithm. The order is defined by the
+       * order_by parameter.
+       *
+       * Create a request for the method "scripts.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+       * @return the request
+       */
+      public List list(java.lang.Long customBiddingAlgorithmId) throws java.io.IOException {
+        List result = new List(customBiddingAlgorithmId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListCustomBiddingScriptsResponse> {
+
+        private static final String REST_PATH = "v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}/scripts";
+
+        private final java.util.regex.Pattern CUSTOM_BIDDING_ALGORITHM_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists custom bidding scripts that belong to the given algorithm. The order is defined by the
+         * order_by parameter.
+         *
+         * Create a request for the method "scripts.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param customBiddingAlgorithmId Required. The ID of the custom bidding algorithm owns the script.
+         * @since 1.13
+         */
+        protected List(java.lang.Long customBiddingAlgorithmId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListCustomBiddingScriptsResponse.class);
+          this.customBiddingAlgorithmId = com.google.api.client.util.Preconditions.checkNotNull(customBiddingAlgorithmId, "Required parameter customBiddingAlgorithmId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the custom bidding algorithm owns the script. */
+        @com.google.api.client.util.Key
+        private java.lang.Long customBiddingAlgorithmId;
+
+        /** Required. The ID of the custom bidding algorithm owns the script.
+         */
+        public java.lang.Long getCustomBiddingAlgorithmId() {
+          return customBiddingAlgorithmId;
+        }
+
+        /** Required. The ID of the custom bidding algorithm owns the script. */
+        public List setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {
+          this.customBiddingAlgorithmId = customBiddingAlgorithmId;
+          return this;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** The ID of the advertiser that owns the parent custom bidding algorithm. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `createTime desc` (default) The
+         * default sorting order is descending. To specify ascending order for a field, the suffix
+         * "desc" should be removed. Example: `createTime`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `createTime desc` (default) The default
+       sorting order is descending. To specify ascending order for a field, the suffix "desc" should be
+       removed. Example: `createTime`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `createTime desc` (default) The
+         * default sorting order is descending. To specify ascending order for a field, the suffix
+         * "desc" should be removed. Example: `createTime`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+       error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         * Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListCustomBiddingScripts`
+         * method. If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListCustomBiddingScripts` method. If not
+       specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListCustomBiddingScripts`
+         * method. If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** The ID of the partner that owns the parent custom bidding algorithm. Only this partner will have
+       write access to this custom bidding script.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /**
+         * The ID of the partner that owns the parent custom bidding algorithm. Only this partner
+         * will have write access to this custom bidding script.
+         */
+        public List setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -20433,6 +21460,195 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       @Override
       public Download set(String parameterName, Object value) {
         return (Download) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Uploads media. Upload is supported on the URI
+     * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+     * successful without including `upload_type=media` query string.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the displayvideo server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia}
+     * @return the request
+     */
+    public Upload upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content) throws java.io.IOException {
+      Upload result = new Upload(resourceName, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Uploads media. Upload is supported on the URI
+     * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+     * successful without including `upload_type=media` query string.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the displayvideo server.  After setting any
+     * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+     * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(resourceName, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia> {
+
+      private static final String REST_PATH = "media/{+resourceName}";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.*$");
+
+      /**
+       * Uploads media. Upload is supported on the URI
+       * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+       * successful without including `upload_type=media` query string.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia}
+       * @since 1.13
+       */
+      protected Upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content) {
+        super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+      }
+
+      /**
+       * Uploads media. Upload is supported on the URI
+       * `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be
+       * successful without including `upload_type=media` query string.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the displayvideo server.  After setting any
+       * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Upload(java.lang.String resourceName, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(DisplayVideo.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.displayvideo.v1.model.GoogleBytestreamMedia.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      public Upload setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
       }
     }
 

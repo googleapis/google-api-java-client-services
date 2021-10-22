@@ -31,6 +31,17 @@ package com.google.api.services.speech.v1.model;
 public final class WordInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float confidence;
+
+  /**
    * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken
    * word. This field is only set if `enable_word_time_offsets=true` and only in the top hypothesis.
    * This is an experimental feature and the accuracy of the time offset can vary.
@@ -64,6 +75,31 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String word;
+
+  /**
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getConfidence() {
+    return confidence;
+  }
+
+  /**
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
+   * likelihood that the recognized words are correct. This field is set only for the top
+   * alternative of a non-streaming result or, of a streaming result where `is_final=true`. This
+   * field is not guaranteed to be accurate and users should not rely on it to be always provided.
+   * The default of 0.0 is a sentinel value indicating `confidence` was not set.
+   * @param confidence confidence or {@code null} for none
+   */
+  public WordInfo setConfidence(java.lang.Float confidence) {
+    this.confidence = confidence;
+    return this;
+  }
 
   /**
    * Time offset relative to the beginning of the audio, and corresponding to the end of the spoken

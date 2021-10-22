@@ -279,6 +279,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique request ID for this message. If a message has already been created in the space
+     with this request ID, the subsequent request will return the existing message and no new message
+     will be created.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      public Messages setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      /**
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
@@ -441,6 +467,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^dms/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique request ID for this message. If a message has already been created in the space
+     with this request ID, the subsequent request will return the existing message and no new message
+     will be created.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      public Webhooks setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
         return this;
       }
 
@@ -628,6 +680,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^dms/[^/]+/conversations/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String requestId;
+
+        /** Optional. A unique request ID for this message. If a message has already been created in the space
+       with this request ID, the subsequent request will return the existing message and no new message
+       will be created.
+         */
+        public java.lang.String getRequestId() {
+          return requestId;
+        }
+
+        /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        public Messages setRequestId(java.lang.String requestId) {
+          this.requestId = requestId;
           return this;
         }
 
@@ -1000,6 +1078,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique request ID for this message. If a message has already been created in the space
+     with this request ID, the subsequent request will return the existing message and no new message
+     will be created.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      public Messages setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      /**
        * Optional. Opaque thread identifier string that can be specified to group messages into a
        * single thread. If this is the first message with a given thread identifier, a new thread is
        * created. Subsequent messages with the same thread identifier will be posted into the same
@@ -1162,6 +1266,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^rooms/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique request ID for this message. If a message has already been created in the space
+     with this request ID, the subsequent request will return the existing message and no new message
+     will be created.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      public Webhooks setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
         return this;
       }
 
@@ -1353,6 +1483,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String requestId;
+
+        /** Optional. A unique request ID for this message. If a message has already been created in the space
+       with this request ID, the subsequent request will return the existing message and no new message
+       will be created.
+         */
+        public java.lang.String getRequestId() {
+          return requestId;
+        }
+
+        /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        public Messages setRequestId(java.lang.String requestId) {
+          this.requestId = requestId;
+          return this;
+        }
+
+        /**
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
@@ -1424,7 +1580,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1450,7 +1606,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1529,19 +1685,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
+      /** Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAAAAAAAAA
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1826,6 +1982,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^spaces/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique request ID for this message. If a message has already been created in the space
+     with this request ID, the subsequent request will return the existing message and no new message
+     will be created.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique request ID for this message. If a message has already been created in
+       * the space with this request ID, the subsequent request will return the existing message and
+       * no new message will be created.
+       */
+      public Webhooks setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
         return this;
       }
 
@@ -2371,6 +2553,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String requestId;
+
+        /** Optional. A unique request ID for this message. If a message has already been created in the space
+       with this request ID, the subsequent request will return the existing message and no new message
+       will be created.
+         */
+        public java.lang.String getRequestId() {
+          return requestId;
+        }
+
+        /**
+         * Optional. A unique request ID for this message. If a message has already been created in
+         * the space with this request ID, the subsequent request will return the existing message
+         * and no new message will be created.
+         */
+        public Create setRequestId(java.lang.String requestId) {
+          this.requestId = requestId;
+          return this;
+        }
+
+        /**
          * Optional. Opaque thread identifier string that can be specified to group messages into a
          * single thread. If this is the first message with a given thread identifier, a new thread
          * is created. Subsequent messages with the same thread identifier will be posted into the
@@ -2702,7 +2910,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name
+       * @param name Resource name in the form `spaces/messages`. Example:
+       *        `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2729,7 +2938,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name
+         * @param name Resource name in the form `spaces/messages`. Example:
+       *        `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -2798,16 +3008,24 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
+        /**
+         * Resource name in the form `spaces/messages`. Example:
+         * `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /**
-
+        /** Resource name in the form `spaces/messages`. Example:
+       `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
          */
         public java.lang.String getName() {
           return name;
         }
 
+        /**
+         * Resource name in the form `spaces/messages`. Example:
+         * `spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4`
+         */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

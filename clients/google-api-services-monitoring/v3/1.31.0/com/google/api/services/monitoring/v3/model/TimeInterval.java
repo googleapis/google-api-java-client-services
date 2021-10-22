@@ -30,7 +30,7 @@ package com.google.api.services.monitoring.v3.model;
  * the previous interval. For DELTA metrics, the start time and end time must specify a non-zero
  * interval, with subsequent points specifying contiguous and non-overlapping intervals. For DELTA
  * metrics, the start time of the next interval must be at least a millisecond after the end time of
- * the previous interval. For CUMULATIVE metrics, the start time and end time must specify a a non-
+ * the previous interval. For CUMULATIVE metrics, the start time and end time must specify a non-
  * zero interval, with subsequent points specifying the same start time and increasing end times,
  * until an event resets the cumulative value to zero and sets a new start time for the following
  * points. The new start time must be at least a millisecond after the end time of the previous

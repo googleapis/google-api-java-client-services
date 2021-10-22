@@ -31,6 +31,20 @@ package com.google.api.services.speech.v1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
+   * tags, listing possible alternative languages of the supplied audio. See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes. If alternative languages are listed, recognition result will contain
+   * recognition in the most likely language detected including the main language_code. The
+   * recognition result will include the language tag of the language detected in the audio. Note:
+   * This feature is only supported for Voice Command and Voice Search use cases and performance may
+   * vary for other use cases (e.g., phone call transcription).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> alternativeLanguageCodes;
+
+  /**
    * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
    * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
    * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
@@ -73,6 +87,14 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSeparateRecognitionPerChannel;
+
+  /**
+   * If `true`, the top result includes a list of words and the confidence for those words. If
+   * `false`, no word-level confidence information is returned. The default is `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWordConfidence;
 
   /**
    * If `true`, the top result includes a list of words and the start and end time offsets
@@ -174,6 +196,37 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean useEnhanced;
 
   /**
+   * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
+   * tags, listing possible alternative languages of the supplied audio. See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes. If alternative languages are listed, recognition result will contain
+   * recognition in the most likely language detected including the main language_code. The
+   * recognition result will include the language tag of the language detected in the audio. Note:
+   * This feature is only supported for Voice Command and Voice Search use cases and performance may
+   * vary for other use cases (e.g., phone call transcription).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAlternativeLanguageCodes() {
+    return alternativeLanguageCodes;
+  }
+
+  /**
+   * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
+   * tags, listing possible alternative languages of the supplied audio. See [Language
+   * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
+   * supported language codes. If alternative languages are listed, recognition result will contain
+   * recognition in the most likely language detected including the main language_code. The
+   * recognition result will include the language tag of the language detected in the audio. Note:
+   * This feature is only supported for Voice Command and Voice Search use cases and performance may
+   * vary for other use cases (e.g., phone call transcription).
+   * @param alternativeLanguageCodes alternativeLanguageCodes or {@code null} for none
+   */
+  public RecognitionConfig setAlternativeLanguageCodes(java.util.List<java.lang.String> alternativeLanguageCodes) {
+    this.alternativeLanguageCodes = alternativeLanguageCodes;
+    return this;
+  }
+
+  /**
    * The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition.
    * Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are '1'-'254'. Valid
    * value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted,
@@ -270,6 +323,25 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setEnableSeparateRecognitionPerChannel(java.lang.Boolean enableSeparateRecognitionPerChannel) {
     this.enableSeparateRecognitionPerChannel = enableSeparateRecognitionPerChannel;
+    return this;
+  }
+
+  /**
+   * If `true`, the top result includes a list of words and the confidence for those words. If
+   * `false`, no word-level confidence information is returned. The default is `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWordConfidence() {
+    return enableWordConfidence;
+  }
+
+  /**
+   * If `true`, the top result includes a list of words and the confidence for those words. If
+   * `false`, no word-level confidence information is returned. The default is `false`.
+   * @param enableWordConfidence enableWordConfidence or {@code null} for none
+   */
+  public RecognitionConfig setEnableWordConfidence(java.lang.Boolean enableWordConfidence) {
+    this.enableWordConfidence = enableWordConfidence;
     return this;
   }
 

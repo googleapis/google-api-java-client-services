@@ -38,6 +38,13 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private AppliedLicense appliedLicense;
 
   /**
+   * Output only. The VM Boot Option, as set in the source vm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootOption;
+
+  /**
    * Compute instance scheduling information (if empty default is used).
    * The value may be {@code null}.
    */
@@ -80,6 +87,13 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.String machineTypeSeries;
 
   /**
+   * The metadata key/value pairs to assign to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> metadata;
+
+  /**
    * List of NICs connected to this VM.
    * The value may be {@code null}.
    */
@@ -92,6 +106,14 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> networkTags;
+
+  /**
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * boot option is EFI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean secureBoot;
 
   /**
    * The service account to associate the VM with.
@@ -136,6 +158,23 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setAppliedLicense(AppliedLicense appliedLicense) {
     this.appliedLicense = appliedLicense;
+    return this;
+  }
+
+  /**
+   * Output only. The VM Boot Option, as set in the source vm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootOption() {
+    return bootOption;
+  }
+
+  /**
+   * Output only. The VM Boot Option, as set in the source vm.
+   * @param bootOption bootOption or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setBootOption(java.lang.String bootOption) {
+    this.bootOption = bootOption;
     return this;
   }
 
@@ -242,6 +281,23 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
+   * The metadata key/value pairs to assign to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * The metadata key/value pairs to assign to the VM.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
    * List of NICs connected to this VM.
    * @return value or {@code null} for none
    */
@@ -272,6 +328,25 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setNetworkTags(java.util.List<java.lang.String> networkTags) {
     this.networkTags = networkTags;
+    return this;
+  }
+
+  /**
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * boot option is EFI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSecureBoot() {
+    return secureBoot;
+  }
+
+  /**
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * boot option is EFI.
+   * @param secureBoot secureBoot or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setSecureBoot(java.lang.Boolean secureBoot) {
+    this.secureBoot = secureBoot;
     return this;
   }
 

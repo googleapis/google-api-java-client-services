@@ -39,17 +39,17 @@ public final class DestinationTableProperties extends com.google.api.client.json
   private java.lang.String description;
 
   /**
-   * [Optional] The expiration timestamp for the destination table. If this field is set: For a new
-   * table, it will set the table's expiration time (even if there is a dataset level default table
-   * expiration time). For an existing table, it will update the table's expiration time. If this
-   * field is not set: For a new table, if dataset level default table expiration time is present,
-   * that will be applied. For an existing table, no change is made to the table's expiration time.
-   * Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or
-   * data is overwritten to a table (WRITE_TRUNCATE).
+   * [Optional] The destination table expiration time. If this field is set: For a new table, it
+   * will set the table's expiration time (even if there is a dataset level default table expiration
+   * time). For an existing table, it will update the table's expiration time. If this field is not
+   * set: For a new table, if dataset level default table expiration time is present, that will be
+   * applied. For an existing table, no change is made to the table's expiration time. Additionally
+   * this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is
+   * overwritten to a table (WRITE_TRUNCATE).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long expirationTimestampMillis;
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime expirationTime;
 
   /**
    * [Optional] The friendly name for the destination table. This will only be used if the
@@ -91,31 +91,31 @@ public final class DestinationTableProperties extends com.google.api.client.json
   }
 
   /**
-   * [Optional] The expiration timestamp for the destination table. If this field is set: For a new
-   * table, it will set the table's expiration time (even if there is a dataset level default table
-   * expiration time). For an existing table, it will update the table's expiration time. If this
-   * field is not set: For a new table, if dataset level default table expiration time is present,
-   * that will be applied. For an existing table, no change is made to the table's expiration time.
-   * Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or
-   * data is overwritten to a table (WRITE_TRUNCATE).
+   * [Optional] The destination table expiration time. If this field is set: For a new table, it
+   * will set the table's expiration time (even if there is a dataset level default table expiration
+   * time). For an existing table, it will update the table's expiration time. If this field is not
+   * set: For a new table, if dataset level default table expiration time is present, that will be
+   * applied. For an existing table, no change is made to the table's expiration time. Additionally
+   * this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is
+   * overwritten to a table (WRITE_TRUNCATE).
    * @return value or {@code null} for none
    */
-  public java.lang.Long getExpirationTimestampMillis() {
-    return expirationTimestampMillis;
+  public com.google.api.client.util.DateTime getExpirationTime() {
+    return expirationTime;
   }
 
   /**
-   * [Optional] The expiration timestamp for the destination table. If this field is set: For a new
-   * table, it will set the table's expiration time (even if there is a dataset level default table
-   * expiration time). For an existing table, it will update the table's expiration time. If this
-   * field is not set: For a new table, if dataset level default table expiration time is present,
-   * that will be applied. For an existing table, no change is made to the table's expiration time.
-   * Additionally this field is only applied when data is written to an empty table (WRITE_EMPTY) or
-   * data is overwritten to a table (WRITE_TRUNCATE).
-   * @param expirationTimestampMillis expirationTimestampMillis or {@code null} for none
+   * [Optional] The destination table expiration time. If this field is set: For a new table, it
+   * will set the table's expiration time (even if there is a dataset level default table expiration
+   * time). For an existing table, it will update the table's expiration time. If this field is not
+   * set: For a new table, if dataset level default table expiration time is present, that will be
+   * applied. For an existing table, no change is made to the table's expiration time. Additionally
+   * this field is only applied when data is written to an empty table (WRITE_EMPTY) or data is
+   * overwritten to a table (WRITE_TRUNCATE).
+   * @param expirationTime expirationTime or {@code null} for none
    */
-  public DestinationTableProperties setExpirationTimestampMillis(java.lang.Long expirationTimestampMillis) {
-    this.expirationTimestampMillis = expirationTimestampMillis;
+  public DestinationTableProperties setExpirationTime(com.google.api.client.util.DateTime expirationTime) {
+    this.expirationTime = expirationTime;
     return this;
   }
 

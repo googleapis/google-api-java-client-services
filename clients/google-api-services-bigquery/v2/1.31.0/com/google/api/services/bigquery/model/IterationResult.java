@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Information about a single iteration of the training run.
+ * Model definition for IterationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -28,25 +28,6 @@ package com.google.api.services.bigquery.model;
  */
 @SuppressWarnings("javadoc")
 public final class IterationResult extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ArimaResult arimaResult;
-
-  /**
-   * Information about top clusters for clustering models.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ClusterInfo> clusterInfos;
-
-  static {
-    // hack to force ProGuard to consider ClusterInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ClusterInfo.class);
-  }
 
   /**
    * Time taken to run the iteration in milliseconds.
@@ -82,38 +63,6 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Double trainingLoss;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ArimaResult getArimaResult() {
-    return arimaResult;
-  }
-
-  /**
-   * @param arimaResult arimaResult or {@code null} for none
-   */
-  public IterationResult setArimaResult(ArimaResult arimaResult) {
-    this.arimaResult = arimaResult;
-    return this;
-  }
-
-  /**
-   * Information about top clusters for clustering models.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ClusterInfo> getClusterInfos() {
-    return clusterInfos;
-  }
-
-  /**
-   * Information about top clusters for clustering models.
-   * @param clusterInfos clusterInfos or {@code null} for none
-   */
-  public IterationResult setClusterInfos(java.util.List<ClusterInfo> clusterInfos) {
-    this.clusterInfos = clusterInfos;
-    return this;
-  }
 
   /**
    * Time taken to run the iteration in milliseconds.

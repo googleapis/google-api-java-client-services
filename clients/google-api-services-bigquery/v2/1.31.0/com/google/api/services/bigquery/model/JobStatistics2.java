@@ -124,6 +124,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long estimatedBytesProcessed;
 
   /**
+   * [Output-only] Statistics of a BigQuery ML training job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MlStatistics mlStatistics;
+
+  /**
    * [Output-only, Beta] Information about create model query job progress.
    * The value may be {@code null}.
    */
@@ -496,6 +503,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setEstimatedBytesProcessed(java.lang.Long estimatedBytesProcessed) {
     this.estimatedBytesProcessed = estimatedBytesProcessed;
+    return this;
+  }
+
+  /**
+   * [Output-only] Statistics of a BigQuery ML training job.
+   * @return value or {@code null} for none
+   */
+  public MlStatistics getMlStatistics() {
+    return mlStatistics;
+  }
+
+  /**
+   * [Output-only] Statistics of a BigQuery ML training job.
+   * @param mlStatistics mlStatistics or {@code null} for none
+   */
+  public JobStatistics2 setMlStatistics(MlStatistics mlStatistics) {
+    this.mlStatistics = mlStatistics;
     return this;
   }
 

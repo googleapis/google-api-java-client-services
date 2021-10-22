@@ -65,7 +65,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
 
   /**
    * Immutable. Enables the import of cost data from Display & Video 360. This can only be enabled
-   * if campaign_data_import_enabled is enabled. If this field is not set on create, it will be
+   * if campaign_data_sharing_enabled is enabled. If this field is not set on create, it will be
    * defaulted to true.
    * The value may be {@code null}.
    */
@@ -175,7 +175,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
 
   /**
    * Immutable. Enables the import of cost data from Display & Video 360. This can only be enabled
-   * if campaign_data_import_enabled is enabled. If this field is not set on create, it will be
+   * if campaign_data_sharing_enabled is enabled. If this field is not set on create, it will be
    * defaulted to true.
    * @return value or {@code null} for none
    */
@@ -185,7 +185,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
 
   /**
    * Immutable. Enables the import of cost data from Display & Video 360. This can only be enabled
-   * if campaign_data_import_enabled is enabled. If this field is not set on create, it will be
+   * if campaign_data_sharing_enabled is enabled. If this field is not set on create, it will be
    * defaulted to true.
    * @param costDataSharingEnabled costDataSharingEnabled or {@code null} for none
    */

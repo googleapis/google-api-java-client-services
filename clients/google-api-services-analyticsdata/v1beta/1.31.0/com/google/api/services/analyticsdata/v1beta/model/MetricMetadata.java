@@ -38,6 +38,17 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String apiName;
 
   /**
+   * If reasons are specified, your access is blocked to this metric for this property. API requests
+   * from you to this property for this metric will succeed; however, the report will contain only
+   * zeros for this metric. API requests with metric filters on blocked metrics will fail. If
+   * reasons are empty, you have access to this metric. To learn more, see [Access and data-
+   * restriction management](https://support.google.com/analytics/answer/10851388).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> blockedReasons;
+
+  /**
    * The display name of the category that this metrics belongs to. Similar dimensions and metrics
    * are categorized together.
    * The value may be {@code null}.
@@ -105,6 +116,31 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
    */
   public MetricMetadata setApiName(java.lang.String apiName) {
     this.apiName = apiName;
+    return this;
+  }
+
+  /**
+   * If reasons are specified, your access is blocked to this metric for this property. API requests
+   * from you to this property for this metric will succeed; however, the report will contain only
+   * zeros for this metric. API requests with metric filters on blocked metrics will fail. If
+   * reasons are empty, you have access to this metric. To learn more, see [Access and data-
+   * restriction management](https://support.google.com/analytics/answer/10851388).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBlockedReasons() {
+    return blockedReasons;
+  }
+
+  /**
+   * If reasons are specified, your access is blocked to this metric for this property. API requests
+   * from you to this property for this metric will succeed; however, the report will contain only
+   * zeros for this metric. API requests with metric filters on blocked metrics will fail. If
+   * reasons are empty, you have access to this metric. To learn more, see [Access and data-
+   * restriction management](https://support.google.com/analytics/answer/10851388).
+   * @param blockedReasons blockedReasons or {@code null} for none
+   */
+  public MetricMetadata setBlockedReasons(java.util.List<java.lang.String> blockedReasons) {
+    this.blockedReasons = blockedReasons;
     return this;
   }
 

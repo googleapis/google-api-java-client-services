@@ -77,6 +77,14 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
   private java.lang.String name;
 
   /**
+   * The tiers that support this notification channel; the project service tier must be one of the
+   * supported_tiers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedTiers;
+
+  /**
    * The type of notification channel, such as "email" and "sms". To view the full list of channels,
    * see Channel descriptors (https://cloud.google.com/monitoring/alerts/using-channels-api#ncd).
    * Notification channel types are globally unique.
@@ -177,6 +185,25 @@ public final class NotificationChannelDescriptor extends com.google.api.client.j
    */
   public NotificationChannelDescriptor setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The tiers that support this notification channel; the project service tier must be one of the
+   * supported_tiers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedTiers() {
+    return supportedTiers;
+  }
+
+  /**
+   * The tiers that support this notification channel; the project service tier must be one of the
+   * supported_tiers.
+   * @param supportedTiers supportedTiers or {@code null} for none
+   */
+  public NotificationChannelDescriptor setSupportedTiers(java.util.List<java.lang.String> supportedTiers) {
+    this.supportedTiers = supportedTiers;
     return this;
   }
 

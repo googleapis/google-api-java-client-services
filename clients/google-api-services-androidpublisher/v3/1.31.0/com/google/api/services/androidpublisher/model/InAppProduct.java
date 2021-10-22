@@ -64,6 +64,13 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, InAppProductListing> listings;
 
   /**
+   * Details about taxes and legal compliance. Only applicable to managed products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedProductTaxAndComplianceSettings managedProductTaxesAndComplianceSettings;
+
+  /**
    * Package name of the parent app.
    * The value may be {@code null}.
    */
@@ -106,6 +113,13 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriptionPeriod;
+
+  /**
+   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubscriptionTaxAndComplianceSettings subscriptionTaxesAndComplianceSettings;
 
   /**
    * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
@@ -190,6 +204,23 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
    */
   public InAppProduct setListings(java.util.Map<String, InAppProductListing> listings) {
     this.listings = listings;
+    return this;
+  }
+
+  /**
+   * Details about taxes and legal compliance. Only applicable to managed products.
+   * @return value or {@code null} for none
+   */
+  public ManagedProductTaxAndComplianceSettings getManagedProductTaxesAndComplianceSettings() {
+    return managedProductTaxesAndComplianceSettings;
+  }
+
+  /**
+   * Details about taxes and legal compliance. Only applicable to managed products.
+   * @param managedProductTaxesAndComplianceSettings managedProductTaxesAndComplianceSettings or {@code null} for none
+   */
+  public InAppProduct setManagedProductTaxesAndComplianceSettings(ManagedProductTaxAndComplianceSettings managedProductTaxesAndComplianceSettings) {
+    this.managedProductTaxesAndComplianceSettings = managedProductTaxesAndComplianceSettings;
     return this;
   }
 
@@ -296,6 +327,23 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
    */
   public InAppProduct setSubscriptionPeriod(java.lang.String subscriptionPeriod) {
     this.subscriptionPeriod = subscriptionPeriod;
+    return this;
+  }
+
+  /**
+   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * @return value or {@code null} for none
+   */
+  public SubscriptionTaxAndComplianceSettings getSubscriptionTaxesAndComplianceSettings() {
+    return subscriptionTaxesAndComplianceSettings;
+  }
+
+  /**
+   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * @param subscriptionTaxesAndComplianceSettings subscriptionTaxesAndComplianceSettings or {@code null} for none
+   */
+  public InAppProduct setSubscriptionTaxesAndComplianceSettings(SubscriptionTaxAndComplianceSettings subscriptionTaxesAndComplianceSettings) {
+    this.subscriptionTaxesAndComplianceSettings = subscriptionTaxesAndComplianceSettings;
     return this;
   }
 

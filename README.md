@@ -101,7 +101,7 @@ packages on [Maven Central][maven-search].
 | Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta1](clients/google-api-services-speech/v2beta1) |
 | Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1) |
 | Cloud Storage for Firebase API | [v1beta](clients/google-api-services-firebasestorage/v1beta) |
-| Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
+| Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1), [v2alpha1](clients/google-api-services-tpu/v2alpha1) |
 | Cloud Talent Solution API | [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1), [v4](clients/google-api-services-jobs/v4) |
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |
 | Cloud Testing API | [v1](clients/google-api-services-testing/v1) |

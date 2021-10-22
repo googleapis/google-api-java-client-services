@@ -58,6 +58,14 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   private java.lang.String emptyReason;
 
   /**
+   * Describes the schema restrictions actively enforced in creating this report. To learn more, see
+   * [Access and data-restriction management](https://support.google.com/analytics/answer/10851388).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaRestrictionResponse schemaRestrictionResponse;
+
+  /**
    * The property's current timezone. Intended to be used to interpret time-based dimensions like
    * `hour` and `minute`. Formatted as strings from the IANA Time Zone database
    * (https://www.iana.org/time-zones); for example "America/New_York" or "Asia/Tokyo".
@@ -126,6 +134,25 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    */
   public ResponseMetaData setEmptyReason(java.lang.String emptyReason) {
     this.emptyReason = emptyReason;
+    return this;
+  }
+
+  /**
+   * Describes the schema restrictions actively enforced in creating this report. To learn more, see
+   * [Access and data-restriction management](https://support.google.com/analytics/answer/10851388).
+   * @return value or {@code null} for none
+   */
+  public SchemaRestrictionResponse getSchemaRestrictionResponse() {
+    return schemaRestrictionResponse;
+  }
+
+  /**
+   * Describes the schema restrictions actively enforced in creating this report. To learn more, see
+   * [Access and data-restriction management](https://support.google.com/analytics/answer/10851388).
+   * @param schemaRestrictionResponse schemaRestrictionResponse or {@code null} for none
+   */
+  public ResponseMetaData setSchemaRestrictionResponse(SchemaRestrictionResponse schemaRestrictionResponse) {
+    this.schemaRestrictionResponse = schemaRestrictionResponse;
     return this;
   }
 

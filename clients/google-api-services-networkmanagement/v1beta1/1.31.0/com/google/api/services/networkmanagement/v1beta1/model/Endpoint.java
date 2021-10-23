@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * A [Cloud function](https://cloud.google.com/functions).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudFunctionEndpoint cloudFunction;
+
+  /**
    * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * A [Cloud function](https://cloud.google.com/functions).
+   * @return value or {@code null} for none
+   */
+  public CloudFunctionEndpoint getCloudFunction() {
+    return cloudFunction;
+  }
+
+  /**
+   * A [Cloud function](https://cloud.google.com/functions).
+   * @param cloudFunction cloudFunction or {@code null} for none
+   */
+  public Endpoint setCloudFunction(CloudFunctionEndpoint cloudFunction) {
+    this.cloudFunction = cloudFunction;
+    return this;
+  }
 
   /**
    * A [Cloud SQL](https://cloud.google.com/sql) instance URI.

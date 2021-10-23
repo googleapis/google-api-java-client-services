@@ -651,170 +651,6 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
         public class OsPolicyAssignments {
 
           /**
-           * Get the OS policy asssignment report for the specified Compute Engine VM instance.
-           *
-           * Create a request for the method "osPolicyAssignments.getReport".
-           *
-           * This request holds the parameters needed by the osconfig server.  After setting any optional
-           * parameters, call the {@link GetReport#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
-           *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
-           *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
-           *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
-           *        the OSPolicyAssignment id must be provided.
-           * @return the request
-           */
-          public GetReport getReport(java.lang.String name) throws java.io.IOException {
-            GetReport result = new GetReport(name);
-            initialize(result);
-            return result;
-          }
-
-          public class GetReport extends OSConfigRequest<com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport> {
-
-            private static final String REST_PATH = "v1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
-
-            /**
-             * Get the OS policy asssignment report for the specified Compute Engine VM instance.
-             *
-             * Create a request for the method "osPolicyAssignments.getReport".
-             *
-             * This request holds the parameters needed by the the osconfig server.  After setting any
-             * optional parameters, call the {@link GetReport#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * GetReport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
-           *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
-           *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
-           *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
-           *        the OSPolicyAssignment id must be provided.
-             * @since 1.13
-             */
-            protected GetReport(java.lang.String name) {
-              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public GetReport set$Xgafv(java.lang.String $Xgafv) {
-              return (GetReport) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public GetReport setAccessToken(java.lang.String accessToken) {
-              return (GetReport) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public GetReport setAlt(java.lang.String alt) {
-              return (GetReport) super.setAlt(alt);
-            }
-
-            @Override
-            public GetReport setCallback(java.lang.String callback) {
-              return (GetReport) super.setCallback(callback);
-            }
-
-            @Override
-            public GetReport setFields(java.lang.String fields) {
-              return (GetReport) super.setFields(fields);
-            }
-
-            @Override
-            public GetReport setKey(java.lang.String key) {
-              return (GetReport) super.setKey(key);
-            }
-
-            @Override
-            public GetReport setOauthToken(java.lang.String oauthToken) {
-              return (GetReport) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public GetReport setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (GetReport) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public GetReport setQuotaUser(java.lang.String quotaUser) {
-              return (GetReport) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public GetReport setUploadType(java.lang.String uploadType) {
-              return (GetReport) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public GetReport setUploadProtocol(java.lang.String uploadProtocol) {
-              return (GetReport) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. API resource name for OS policy assignment report. Format: `/projects/{proj
-             * ect}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/repor
-             * t` For `{project}`, either `project-number` or `project-id` can be provided. For
-             * `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
-             * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations
-           /{location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`, either
-           `project-number` or `project-id` can be provided. For `{instance_id}`, either Compute Engine
-           `instance-id` or `instance-name` can be provided. For `{assignment_id}`, the OSPolicyAssignment id
-           must be provided.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. API resource name for OS policy assignment report. Format: `/projects/{proj
-             * ect}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/repor
-             * t` For `{project}`, either `project-number` or `project-id` can be provided. For
-             * `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
-             * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
-             */
-            public GetReport setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public GetReport set(String parameterName, Object value) {
-              return (GetReport) super.set(parameterName, value);
-            }
-          }
-
-          /**
            * An accessor for creating requests from the Reports collection.
            *
            * <p>The typical use is:</p>
@@ -834,6 +670,168 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            */
           public class Reports {
 
+            /**
+             * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+             *
+             * Create a request for the method "reports.get".
+             *
+             * This request holds the parameters needed by the osconfig server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
+             *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
+             *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
+             *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
+             *        the OSPolicyAssignment id must be provided.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends OSConfigRequest<com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+
+              /**
+               * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+               *
+               * Create a request for the method "reports.get".
+               *
+               * This request holds the parameters needed by the the osconfig server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations/
+             *        {location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`,
+             *        either `project-number` or `project-id` can be provided. For `{instance_id}`, either
+             *        Compute Engine `instance-id` or `instance-name` can be provided. For `{assignment_id}`,
+             *        the OSPolicyAssignment id must be provided.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.OSPolicyAssignmentReport.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. API resource name for OS policy assignment report. Format: `/projects/{pr
+               * oject}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/r
+               * eport` For `{project}`, either `project-number` or `project-id` can be provided.
+               * For `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
+               * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. API resource name for OS policy assignment report. Format: `/projects/{project}/locations
+             /{location}/instances/{instance}/osPolicyAssignments/{assignment}/report` For `{project}`, either
+             `project-number` or `project-id` can be provided. For `{instance_id}`, either Compute Engine
+             `instance-id` or `instance-name` can be provided. For `{assignment_id}`, the OSPolicyAssignment id
+             must be provided.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. API resource name for OS policy assignment report. Format: `/projects/{pr
+               * oject}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/r
+               * eport` For `{project}`, either `project-number` or `project-id` can be provided.
+               * For `{instance_id}`, either Compute Engine `instance-id` or `instance-name` can be
+               * provided. For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
             /**
              * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
              *

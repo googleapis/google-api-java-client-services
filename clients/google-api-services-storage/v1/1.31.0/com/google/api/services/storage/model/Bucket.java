@@ -38,6 +38,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.util.List<BucketAccessControl> acl;
 
   /**
+   * The bucket's Autoclass configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Autoclass autoclass;
+
+  /**
    * The bucket's billing configuration.
    * The value may be {@code null}.
    */
@@ -276,6 +283,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setAcl(java.util.List<BucketAccessControl> acl) {
     this.acl = acl;
+    return this;
+  }
+
+  /**
+   * The bucket's Autoclass configuration.
+   * @return value or {@code null} for none
+   */
+  public Autoclass getAutoclass() {
+    return autoclass;
+  }
+
+  /**
+   * The bucket's Autoclass configuration.
+   * @param autoclass autoclass or {@code null} for none
+   */
+  public Bucket setAutoclass(Autoclass autoclass) {
+    this.autoclass = autoclass;
     return this;
   }
 
@@ -809,6 +833,74 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   @Override
   public Bucket clone() {
     return (Bucket) super.clone();
+  }
+
+  /**
+   * The bucket's Autoclass configuration.
+   */
+  public static final class Autoclass extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Whether or not Autoclass is enabled on this bucket
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean enabled;
+
+    /**
+     * A date and time in RFC 3339 format representing the instant at which "enabled" was last
+     * toggled.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private com.google.api.client.util.DateTime toggleTime;
+
+    /**
+     * Whether or not Autoclass is enabled on this bucket
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getEnabled() {
+      return enabled;
+    }
+
+    /**
+     * Whether or not Autoclass is enabled on this bucket
+     * @param enabled enabled or {@code null} for none
+     */
+    public Autoclass setEnabled(java.lang.Boolean enabled) {
+      this.enabled = enabled;
+      return this;
+    }
+
+    /**
+     * A date and time in RFC 3339 format representing the instant at which "enabled" was last
+     * toggled.
+     * @return value or {@code null} for none
+     */
+    public com.google.api.client.util.DateTime getToggleTime() {
+      return toggleTime;
+    }
+
+    /**
+     * A date and time in RFC 3339 format representing the instant at which "enabled" was last
+     * toggled.
+     * @param toggleTime toggleTime or {@code null} for none
+     */
+    public Autoclass setToggleTime(com.google.api.client.util.DateTime toggleTime) {
+      this.toggleTime = toggleTime;
+      return this;
+    }
+
+    @Override
+    public Autoclass set(String fieldName, Object value) {
+      return (Autoclass) super.set(fieldName, value);
+    }
+
+    @Override
+    public Autoclass clone() {
+      return (Autoclass) super.clone();
+    }
+
   }
 
   /**

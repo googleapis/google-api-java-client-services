@@ -133,6 +133,211 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+   *   {@code Texttospeech.Projects.List request = texttospeech.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+     *   {@code Texttospeech.Locations.List request = texttospeech.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Datasets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Texttospeech texttospeech = new Texttospeech(...);}
+       *   {@code Texttospeech.Datasets.List request = texttospeech.datasets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Datasets datasets() {
+        return new Datasets();
+      }
+
+      /**
+       * The "datasets" collection of methods.
+       */
+      public class Datasets {
+
+        /**
+         * Imports audio+text data for training custom voice.
+         *
+         * Create a request for the method "datasets.import".
+         *
+         * This request holds the parameters needed by the texttospeech server.  After setting any optional
+         * parameters, call the {@link TexttospeechImport#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the Dataset resource. Format:
+         *        `projects/{project}/locations/{location}/datasets/{dataset}`
+         * @param content the {@link com.google.api.services.texttospeech.v1.model.ImportDataRequest}
+         * @return the request
+         */
+        public TexttospeechImport texttospeechImport(java.lang.String name, com.google.api.services.texttospeech.v1.model.ImportDataRequest content) throws java.io.IOException {
+          TexttospeechImport result = new TexttospeechImport(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TexttospeechImport extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:import";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+          /**
+           * Imports audio+text data for training custom voice.
+           *
+           * Create a request for the method "datasets.import".
+           *
+           * This request holds the parameters needed by the the texttospeech server.  After setting any
+           * optional parameters, call the {@link TexttospeechImport#execute()} method to invoke the remote
+           * operation. <p> {@link TexttospeechImport#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name The name of the Dataset resource. Format:
+         *        `projects/{project}/locations/{location}/datasets/{dataset}`
+           * @param content the {@link com.google.api.services.texttospeech.v1.model.ImportDataRequest}
+           * @since 1.13
+           */
+          protected TexttospeechImport(java.lang.String name, com.google.api.services.texttospeech.v1.model.ImportDataRequest content) {
+            super(Texttospeech.this, "POST", REST_PATH, content, com.google.api.services.texttospeech.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+          }
+
+          @Override
+          public TexttospeechImport set$Xgafv(java.lang.String $Xgafv) {
+            return (TexttospeechImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TexttospeechImport setAccessToken(java.lang.String accessToken) {
+            return (TexttospeechImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TexttospeechImport setAlt(java.lang.String alt) {
+            return (TexttospeechImport) super.setAlt(alt);
+          }
+
+          @Override
+          public TexttospeechImport setCallback(java.lang.String callback) {
+            return (TexttospeechImport) super.setCallback(callback);
+          }
+
+          @Override
+          public TexttospeechImport setFields(java.lang.String fields) {
+            return (TexttospeechImport) super.setFields(fields);
+          }
+
+          @Override
+          public TexttospeechImport setKey(java.lang.String key) {
+            return (TexttospeechImport) super.setKey(key);
+          }
+
+          @Override
+          public TexttospeechImport setOauthToken(java.lang.String oauthToken) {
+            return (TexttospeechImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TexttospeechImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TexttospeechImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TexttospeechImport setQuotaUser(java.lang.String quotaUser) {
+            return (TexttospeechImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TexttospeechImport setUploadType(java.lang.String uploadType) {
+            return (TexttospeechImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TexttospeechImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TexttospeechImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the Dataset resource. Format:
+           * `projects/{project}/locations/{location}/datasets/{dataset}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the Dataset resource. Format:
+         `projects/{project}/locations/{location}/datasets/{dataset}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the Dataset resource. Format:
+           * `projects/{project}/locations/{location}/datasets/{dataset}`
+           */
+          public TexttospeechImport setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public TexttospeechImport set(String parameterName, Object value) {
+            return (TexttospeechImport) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Text collection.
    *
    * <p>The typical use is:</p>

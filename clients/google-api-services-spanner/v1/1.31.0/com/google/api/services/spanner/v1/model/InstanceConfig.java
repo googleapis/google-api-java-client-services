@@ -38,7 +38,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
-   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * Allowed values of the "default_leader" schema option for databases in instances that use this
    * instance configuration.
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * Allowed values of the "default_leader" schema option for databases in instances that use this
    * instance configuration.
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Allowed values of the “default_leader” schema option for databases in instances that use this
+   * Allowed values of the "default_leader" schema option for databases in instances that use this
    * instance configuration.
    * @param leaderOptions leaderOptions or {@code null} for none
    */

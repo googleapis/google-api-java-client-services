@@ -121,6 +121,7 @@ packages on [Maven Central][maven-search].
 | Database Migration API | [v1](clients/google-api-services-datamigration/v1), [v1beta1](clients/google-api-services-datamigration/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dataproc Metastore API | [v1alpha](clients/google-api-services-metastore/v1alpha), [v1beta](clients/google-api-services-metastore/v1beta) |
+| Datastream API | [v1alpha1](clients/google-api-services-datastream/v1alpha1) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3](clients/google-api-services-dialogflow/v3), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
 | Display & Video 360 API | [v1](clients/google-api-services-displayvideo/v1) |

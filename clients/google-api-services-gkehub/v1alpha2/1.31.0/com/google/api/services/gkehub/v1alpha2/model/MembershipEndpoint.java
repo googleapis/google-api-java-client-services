@@ -63,7 +63,8 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   private MultiCloudCluster multiCloudCluster;
 
   /**
-   * Optional. Specific information for a GKE On-Prem cluster.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no
+   * resourceLink is not allowed to use this field, it should have a nil "type" instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +147,8 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Specific information for a GKE On-Prem cluster.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no
+   * resourceLink is not allowed to use this field, it should have a nil "type" instead.
    * @return value or {@code null} for none
    */
   public OnPremCluster getOnPremCluster() {
@@ -154,7 +156,8 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Specific information for a GKE On-Prem cluster.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no
+   * resourceLink is not allowed to use this field, it should have a nil "type" instead.
    * @param onPremCluster onPremCluster or {@code null} for none
    */
   public MembershipEndpoint setOnPremCluster(OnPremCluster onPremCluster) {

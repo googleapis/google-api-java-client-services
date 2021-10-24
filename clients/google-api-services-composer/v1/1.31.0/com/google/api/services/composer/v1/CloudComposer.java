@@ -963,16 +963,18 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * the environment. An integer greater than or equal to 3 must be provided in the
            * `config.nodeCount` field. Supported for Cloud Composer environments in versions
            * composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` * Replace the
-           * environment's current `WebServerNetworkAccessControl`. * `config.databaseConfig`
-           * Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. *
-           * Replace the environment's current `DatabaseConfig`. *
-           * `config.webServerConfig.machineType` * Machine type on which Airflow web server is
-           * running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or
-           * composer-n1-webserver-8. Supported for Cloud Composer environments in versions
-           * composer-1.*.*-airflow-*.*.*. * `config.softwareConfig.airflowConfigOverrides` *
-           * Replace all Apache Airflow config overrides. If a replacement config overrides map is
-           * not included in `environment`, all config overrides are cleared. It is an error to
-           * provide both this mask and a mask specifying one or more individual config overrides. *
+           * environment's current `WebServerNetworkAccessControl`. *
+           * `config.databaseConfig.machineType` * Cloud SQL machine type used by Airflow database.
+           * It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or
+           * db-n1-standard-16. Supported for Cloud Composer environments in versions
+           * composer-1.*.*-airflow-*.*.*. * `config.webServerConfig.machineType` * Machine type on
+           * which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+           * composer-n1-webserver-4 or composer-n1-webserver-8. Supported for Cloud Composer
+           * environments in versions composer-1.*.*-airflow-*.*.*. *
+           * `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config
+           * overrides. If a replacement config overrides map is not included in `environment`, all
+           * config overrides are cleared. It is an error to provide both this mask and a mask
+           * specifying one or more individual config overrides. *
            * `config.softwareConfig.airflowConfigOverrides.`section-name * Override the Apache
            * Airflow config property *name* in the section named *section*, preserving other
            * properties. To delete the property override, include it in `updateMask` and omit its
@@ -1033,18 +1035,19 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          `config.nodeCount` * Horizontally scale the number of nodes in the environment. An integer greater
          than or equal to 3 must be provided in the `config.nodeCount` field. Supported for Cloud Composer
          environments in versions composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` *
-         Replace the environment's current `WebServerNetworkAccessControl`. * `config.databaseConfig`
-         Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. * Replace the
-         environment's current `DatabaseConfig`. * `config.webServerConfig.machineType` * Machine type on
-         which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
-         composer-n1-webserver-4 or composer-n1-webserver-8. Supported for Cloud Composer environments in
-         versions composer-1.*.*-airflow-*.*.*. * `config.softwareConfig.airflowConfigOverrides` * Replace
-         all Apache Airflow config overrides. If a replacement config overrides map is not included in
-         `environment`, all config overrides are cleared. It is an error to provide both this mask and a
-         mask specifying one or more individual config overrides. *
-         `config.softwareConfig.airflowConfigOverrides.`section-name * Override the Apache Airflow config
-         property *name* in the section named *section*, preserving other properties. To delete the property
-         override, include it in `updateMask` and omit its mapping in
+         Replace the environment's current `WebServerNetworkAccessControl`. *
+         `config.databaseConfig.machineType` * Cloud SQL machine type used by Airflow database. It has to be
+         one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. Supported for
+         Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. *
+         `config.webServerConfig.machineType` * Machine type on which Airflow web server is running. It has
+         to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8.
+         Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. *
+         `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config overrides. If a
+         replacement config overrides map is not included in `environment`, all config overrides are
+         cleared. It is an error to provide both this mask and a mask specifying one or more individual
+         config overrides. * `config.softwareConfig.airflowConfigOverrides.`section-name * Override the
+         Apache Airflow config property *name* in the section named *section*, preserving other properties.
+         To delete the property override, include it in `updateMask` and omit its mapping in
          `environment.config.softwareConfig.airflowConfigOverrides`. It is an error to provide both a mask
          of this form and the `config.softwareConfig.airflowConfigOverrides` mask. *
          `config.softwareConfig.envVariables` * Replace all environment variables. If a replacement
@@ -1106,16 +1109,18 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * the environment. An integer greater than or equal to 3 must be provided in the
            * `config.nodeCount` field. Supported for Cloud Composer environments in versions
            * composer-1.*.*-airflow-*.*.*. * `config.webServerNetworkAccessControl` * Replace the
-           * environment's current `WebServerNetworkAccessControl`. * `config.databaseConfig`
-           * Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. *
-           * Replace the environment's current `DatabaseConfig`. *
-           * `config.webServerConfig.machineType` * Machine type on which Airflow web server is
-           * running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or
-           * composer-n1-webserver-8. Supported for Cloud Composer environments in versions
-           * composer-1.*.*-airflow-*.*.*. * `config.softwareConfig.airflowConfigOverrides` *
-           * Replace all Apache Airflow config overrides. If a replacement config overrides map is
-           * not included in `environment`, all config overrides are cleared. It is an error to
-           * provide both this mask and a mask specifying one or more individual config overrides. *
+           * environment's current `WebServerNetworkAccessControl`. *
+           * `config.databaseConfig.machineType` * Cloud SQL machine type used by Airflow database.
+           * It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or
+           * db-n1-standard-16. Supported for Cloud Composer environments in versions
+           * composer-1.*.*-airflow-*.*.*. * `config.webServerConfig.machineType` * Machine type on
+           * which Airflow web server is running. It has to be one of: composer-n1-webserver-2,
+           * composer-n1-webserver-4 or composer-n1-webserver-8. Supported for Cloud Composer
+           * environments in versions composer-1.*.*-airflow-*.*.*. *
+           * `config.softwareConfig.airflowConfigOverrides` * Replace all Apache Airflow config
+           * overrides. If a replacement config overrides map is not included in `environment`, all
+           * config overrides are cleared. It is an error to provide both this mask and a mask
+           * specifying one or more individual config overrides. *
            * `config.softwareConfig.airflowConfigOverrides.`section-name * Override the Apache
            * Airflow config property *name* in the section named *section*, preserving other
            * properties. To delete the property override, include it in `updateMask` and omit its

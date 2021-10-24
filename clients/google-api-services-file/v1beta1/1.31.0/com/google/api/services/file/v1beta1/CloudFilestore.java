@@ -2428,6 +2428,145 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             return (Restore) super.set(parameterName, value);
           }
         }
+        /**
+         * Revert an existing instance's file system to a specified snapshot.
+         *
+         * Create a request for the method "instances.revert".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. projects/{project_id}/locations/{location_id}/instances/{instance_id}. The resource name
+         *        of the instance, in the format
+         * @param content the {@link com.google.api.services.file.v1beta1.model.RevertInstanceRequest}
+         * @return the request
+         */
+        public Revert revert(java.lang.String name, com.google.api.services.file.v1beta1.model.RevertInstanceRequest content) throws java.io.IOException {
+          Revert result = new Revert(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Revert extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:revert";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Revert an existing instance's file system to a specified snapshot.
+           *
+           * Create a request for the method "instances.revert".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link Revert#execute()} method to invoke the remote operation. <p> {@link
+           * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. projects/{project_id}/locations/{location_id}/instances/{instance_id}. The resource name
+         *        of the instance, in the format
+           * @param content the {@link com.google.api.services.file.v1beta1.model.RevertInstanceRequest}
+           * @since 1.13
+           */
+          protected Revert(java.lang.String name, com.google.api.services.file.v1beta1.model.RevertInstanceRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Revert set$Xgafv(java.lang.String $Xgafv) {
+            return (Revert) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Revert setAccessToken(java.lang.String accessToken) {
+            return (Revert) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Revert setAlt(java.lang.String alt) {
+            return (Revert) super.setAlt(alt);
+          }
+
+          @Override
+          public Revert setCallback(java.lang.String callback) {
+            return (Revert) super.setCallback(callback);
+          }
+
+          @Override
+          public Revert setFields(java.lang.String fields) {
+            return (Revert) super.setFields(fields);
+          }
+
+          @Override
+          public Revert setKey(java.lang.String key) {
+            return (Revert) super.setKey(key);
+          }
+
+          @Override
+          public Revert setOauthToken(java.lang.String oauthToken) {
+            return (Revert) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Revert setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Revert) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Revert setQuotaUser(java.lang.String quotaUser) {
+            return (Revert) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Revert setUploadType(java.lang.String uploadType) {
+            return (Revert) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Revert) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. projects/{project_id}/locations/{location_id}/instances/{instance_id}. The
+           * resource name of the instance, in the format
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. projects/{project_id}/locations/{location_id}/instances/{instance_id}. The resource name
+         of the instance, in the format
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. projects/{project_id}/locations/{location_id}/instances/{instance_id}. The
+           * resource name of the instance, in the format
+           */
+          public Revert setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Revert set(String parameterName, Object value) {
+            return (Revert) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Snapshots collection.

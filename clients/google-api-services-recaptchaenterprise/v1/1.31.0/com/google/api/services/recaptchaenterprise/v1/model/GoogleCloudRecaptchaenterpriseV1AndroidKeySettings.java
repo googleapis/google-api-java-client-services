@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, it means allowed_package_names will not be enforced.
+   * If set to true, allowed_package_names are not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
   private java.util.List<java.lang.String> allowedPackageNames;
 
   /**
-   * If set to true, it means allowed_package_names will not be enforced.
+   * If set to true, allowed_package_names are not enforced.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAllPackageNames() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
   }
 
   /**
-   * If set to true, it means allowed_package_names will not be enforced.
+   * If set to true, allowed_package_names are not enforced.
    * @param allowAllPackageNames allowAllPackageNames or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings setAllowAllPackageNames(java.lang.Boolean allowAllPackageNames) {

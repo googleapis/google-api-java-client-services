@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * If set to true, allowed_bundle_ids are not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   private java.util.List<java.lang.String> allowedBundleIds;
 
   /**
-   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * If set to true, allowed_bundle_ids are not enforced.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAllBundleIds() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * If set to true, it means allowed_bundle_ids will not be enforced.
+   * If set to true, allowed_bundle_ids are not enforced.
    * @param allowAllBundleIds allowAllBundleIds or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowAllBundleIds(java.lang.Boolean allowAllBundleIds) {

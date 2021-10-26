@@ -33,8 +33,9 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SourceCrowdingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of results allowed from a source. No limits will be set on results if this value
-   * is less than or equal to 0.
+   * Maximum number of results allowed from a datasource in a result page as long as results from
+   * other sources are not exhausted. Value specified must not be negative. A default value is used
+   * if this value is equal to 0. To disable crowding, set the value greater than 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +50,9 @@ public final class SourceCrowdingConfig extends com.google.api.client.json.Gener
   private java.lang.Integer numSuggestions;
 
   /**
-   * Maximum number of results allowed from a source. No limits will be set on results if this value
-   * is less than or equal to 0.
+   * Maximum number of results allowed from a datasource in a result page as long as results from
+   * other sources are not exhausted. Value specified must not be negative. A default value is used
+   * if this value is equal to 0. To disable crowding, set the value greater than 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumResults() {
@@ -58,8 +60,9 @@ public final class SourceCrowdingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Maximum number of results allowed from a source. No limits will be set on results if this value
-   * is less than or equal to 0.
+   * Maximum number of results allowed from a datasource in a result page as long as results from
+   * other sources are not exhausted. Value specified must not be negative. A default value is used
+   * if this value is equal to 0. To disable crowding, set the value greater than 100.
    * @param numResults numResults or {@code null} for none
    */
   public SourceCrowdingConfig setNumResults(java.lang.Integer numResults) {

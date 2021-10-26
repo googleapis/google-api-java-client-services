@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class OrderTrackingSignalLineItemDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Brand of the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String brand;
+
+  /**
    * The Global Trade Item Number.
    * The value may be {@code null}.
    */
@@ -52,7 +59,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   private java.lang.String mpn;
 
   /**
-   * Plain text description of this product.
+   * Plain text description of this product (deprecated: Please use product_title instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +74,13 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   private java.lang.String productId;
 
   /**
+   * Plain text title of this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTitle;
+
+  /**
    * Required. The quantity of the line item in the order.
    * The value may be {@code null}.
    */
@@ -74,18 +88,35 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   private java.lang.Long quantity;
 
   /**
-   * Merchant SKU for this item.
+   * Merchant SKU for this item (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sku;
 
   /**
-   * Universal product code for this item.
+   * Universal product code for this item (deprecated: Please use GTIN instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String upc;
+
+  /**
+   * Brand of the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBrand() {
+    return brand;
+  }
+
+  /**
+   * Brand of the product.
+   * @param brand brand or {@code null} for none
+   */
+  public OrderTrackingSignalLineItemDetails setBrand(java.lang.String brand) {
+    this.brand = brand;
+    return this;
+  }
 
   /**
    * The Global Trade Item Number.
@@ -139,7 +170,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Plain text description of this product.
+   * Plain text description of this product (deprecated: Please use product_title instead).
    * @return value or {@code null} for none
    */
   public java.lang.String getProductDescription() {
@@ -147,7 +178,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Plain text description of this product.
+   * Plain text description of this product (deprecated: Please use product_title instead).
    * @param productDescription productDescription or {@code null} for none
    */
   public OrderTrackingSignalLineItemDetails setProductDescription(java.lang.String productDescription) {
@@ -175,6 +206,23 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
+   * Plain text title of this product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTitle() {
+    return productTitle;
+  }
+
+  /**
+   * Plain text title of this product.
+   * @param productTitle productTitle or {@code null} for none
+   */
+  public OrderTrackingSignalLineItemDetails setProductTitle(java.lang.String productTitle) {
+    this.productTitle = productTitle;
+    return this;
+  }
+
+  /**
    * Required. The quantity of the line item in the order.
    * @return value or {@code null} for none
    */
@@ -192,7 +240,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Merchant SKU for this item.
+   * Merchant SKU for this item (deprecated).
    * @return value or {@code null} for none
    */
   public java.lang.String getSku() {
@@ -200,7 +248,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Merchant SKU for this item.
+   * Merchant SKU for this item (deprecated).
    * @param sku sku or {@code null} for none
    */
   public OrderTrackingSignalLineItemDetails setSku(java.lang.String sku) {
@@ -209,7 +257,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Universal product code for this item.
+   * Universal product code for this item (deprecated: Please use GTIN instead).
    * @return value or {@code null} for none
    */
   public java.lang.String getUpc() {
@@ -217,7 +265,7 @@ public final class OrderTrackingSignalLineItemDetails extends com.google.api.cli
   }
 
   /**
-   * Universal product code for this item.
+   * Universal product code for this item (deprecated: Please use GTIN instead).
    * @param upc upc or {@code null} for none
    */
   public OrderTrackingSignalLineItemDetails setUpc(java.lang.String upc) {

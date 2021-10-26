@@ -41,6 +41,13 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
   private java.lang.String name;
 
   /**
+   * Optional version name for this InfoType.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
    * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
    * one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when
    * specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names
@@ -60,6 +67,23 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
    */
   public GooglePrivacyDlpV2InfoType setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional version name for this InfoType.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Optional version name for this InfoType.
+   * @param version version or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoType setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

@@ -1865,17 +1865,24 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Required. Mask of fields from Node to update. Supported fields: None. */
+          /**
+           * Required. Mask of fields from Node to update. Supported fields: [description, tags,
+           * labels, metadata, network_config.enable_external_ips].
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask of fields from Node to update. Supported fields: None.
+          /** Required. Mask of fields from Node to update. Supported fields: [description, tags, labels,
+         metadata, network_config.enable_external_ips].
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required. Mask of fields from Node to update. Supported fields: None. */
+          /**
+           * Required. Mask of fields from Node to update. Supported fields: [description, tags,
+           * labels, metadata, network_config.enable_external_ips].
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

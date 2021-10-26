@@ -38,8 +38,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   private java.lang.Boolean allowAllDomains;
 
   /**
-   * Required. Whether this key can be used on AMP (Accelerated Mobile Pages) websites. This can
-   * only be set for the SCORE integration type.
+   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
+   * supported only for the SCORE integration type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +87,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Required. Whether this key can be used on AMP (Accelerated Mobile Pages) websites. This can
-   * only be set for the SCORE integration type.
+   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
+   * supported only for the SCORE integration type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAmpTraffic() {
@@ -96,8 +96,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
   }
 
   /**
-   * Required. Whether this key can be used on AMP (Accelerated Mobile Pages) websites. This can
-   * only be set for the SCORE integration type.
+   * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is
+   * supported only for the SCORE integration type.
    * @param allowAmpTraffic allowAmpTraffic or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setAllowAmpTraffic(java.lang.Boolean allowAmpTraffic) {

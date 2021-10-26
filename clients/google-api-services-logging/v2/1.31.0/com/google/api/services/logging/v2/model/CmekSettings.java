@@ -19,8 +19,8 @@ package com.google.api.services.logging.v2.model;
 /**
  * Describes the customer-managed encryption key (CMEK) settings associated with a project, folder,
  * organization, billing account, or flexible resource.Note: CMEK for the Logs Router can currently
- * only be configured for GCP organizations. Once configured, it applies to all projects and folders
- * in the GCP organization.See Enabling CMEK for Logs Router
+ * only be configured for Google Cloud organizations. Once configured, it applies to all projects
+ * and folders in the Google Cloud organization.See Enabling CMEK for Logs Router
  * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -65,7 +65,7 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   /**
    * Verification status of the phone number of the business. This status is read only and can be
    * updated only by successful phone verification. Acceptable values are: - "`verified`" -
-   * "`unverified`" "`unspecified`" -
+   * "`unverified`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   /**
    * Verification status of the phone number of the business. This status is read only and can be
    * updated only by successful phone verification. Acceptable values are: - "`verified`" -
-   * "`unverified`" "`unspecified`" -
+   * "`unverified`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneVerificationStatus() {
@@ -160,7 +160,7 @@ public final class AccountBusinessInformation extends com.google.api.client.json
   /**
    * Verification status of the phone number of the business. This status is read only and can be
    * updated only by successful phone verification. Acceptable values are: - "`verified`" -
-   * "`unverified`" "`unspecified`" -
+   * "`unverified`"
    * @param phoneVerificationStatus phoneVerificationStatus or {@code null} for none
    */
   public AccountBusinessInformation setPhoneVerificationStatus(java.lang.String phoneVerificationStatus) {

@@ -81,6 +81,14 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
   private java.util.Map<String, java.lang.String> entityMetaDataAsProperties;
 
   /**
+   * List of IntegrationEndpoints in the '/integration-endpoints' directory of the API proxy. This
+   * is a 'manifest' setting designed to provide visibility into the contents of the API proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> integrationEndpoints;
+
+  /**
    * Time that the API proxy revision was last modified in milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -312,6 +320,25 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
    */
   public GoogleCloudApigeeV1ApiProxyRevision setEntityMetaDataAsProperties(java.util.Map<String, java.lang.String> entityMetaDataAsProperties) {
     this.entityMetaDataAsProperties = entityMetaDataAsProperties;
+    return this;
+  }
+
+  /**
+   * List of IntegrationEndpoints in the '/integration-endpoints' directory of the API proxy. This
+   * is a 'manifest' setting designed to provide visibility into the contents of the API proxy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIntegrationEndpoints() {
+    return integrationEndpoints;
+  }
+
+  /**
+   * List of IntegrationEndpoints in the '/integration-endpoints' directory of the API proxy. This
+   * is a 'manifest' setting designed to provide visibility into the contents of the API proxy.
+   * @param integrationEndpoints integrationEndpoints or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProxyRevision setIntegrationEndpoints(java.util.List<java.lang.String> integrationEndpoints) {
+    this.integrationEndpoints = integrationEndpoints;
     return this;
   }
 

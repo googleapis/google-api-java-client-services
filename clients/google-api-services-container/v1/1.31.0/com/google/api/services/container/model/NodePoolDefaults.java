@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.container.v1beta1.model;
+package com.google.api.services.container.model;
 
 /**
- * Subset of NodeConfig message that has defaults.
+ * Subset of Nodepool message that has defaults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class NodeConfigDefaults extends com.google.api.client.json.GenericJson {
+public final class NodePoolDefaults extends com.google.api.client.json.GenericJson {
 
   /**
-   * GCFS (Google Container File System, a.k.a Riptide) options.
+   * Subset of NodeConfig message that has defaults.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GcfsConfig gcfsConfig;
+  private NodeConfigDefaults nodeConfigDefaults;
 
   /**
-   * GCFS (Google Container File System, a.k.a Riptide) options.
+   * Subset of NodeConfig message that has defaults.
    * @return value or {@code null} for none
    */
-  public GcfsConfig getGcfsConfig() {
-    return gcfsConfig;
+  public NodeConfigDefaults getNodeConfigDefaults() {
+    return nodeConfigDefaults;
   }
 
   /**
-   * GCFS (Google Container File System, a.k.a Riptide) options.
-   * @param gcfsConfig gcfsConfig or {@code null} for none
+   * Subset of NodeConfig message that has defaults.
+   * @param nodeConfigDefaults nodeConfigDefaults or {@code null} for none
    */
-  public NodeConfigDefaults setGcfsConfig(GcfsConfig gcfsConfig) {
-    this.gcfsConfig = gcfsConfig;
+  public NodePoolDefaults setNodeConfigDefaults(NodeConfigDefaults nodeConfigDefaults) {
+    this.nodeConfigDefaults = nodeConfigDefaults;
     return this;
   }
 
   @Override
-  public NodeConfigDefaults set(String fieldName, Object value) {
-    return (NodeConfigDefaults) super.set(fieldName, value);
+  public NodePoolDefaults set(String fieldName, Object value) {
+    return (NodePoolDefaults) super.set(fieldName, value);
   }
 
   @Override
-  public NodeConfigDefaults clone() {
-    return (NodeConfigDefaults) super.clone();
+  public NodePoolDefaults clone() {
+    return (NodePoolDefaults) super.clone();
   }
 
 }

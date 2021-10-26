@@ -80,6 +80,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private EphemeralStorageConfig ephemeralStorageConfig;
 
   /**
+   * GCFS (Google Container File System) configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcfsConfig gcfsConfig;
+
+  /**
    * Enable or disable gvnic on the node pool.
    * The value may be {@code null}.
    */
@@ -357,6 +364,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setEphemeralStorageConfig(EphemeralStorageConfig ephemeralStorageConfig) {
     this.ephemeralStorageConfig = ephemeralStorageConfig;
+    return this;
+  }
+
+  /**
+   * GCFS (Google Container File System) configs.
+   * @return value or {@code null} for none
+   */
+  public GcfsConfig getGcfsConfig() {
+    return gcfsConfig;
+  }
+
+  /**
+   * GCFS (Google Container File System) configs.
+   * @param gcfsConfig gcfsConfig or {@code null} for none
+   */
+  public NodeConfig setGcfsConfig(GcfsConfig gcfsConfig) {
+    this.gcfsConfig = gcfsConfig;
     return this;
   }
 

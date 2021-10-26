@@ -46,13 +46,6 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
 
   /**
-   * The desired Autopilot configuration for the cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Autopilot desiredAutopilot;
-
-  /**
    * The desired configuration options for the Binary Authorization feature.
    * The value may be {@code null}.
    */
@@ -86,6 +79,20 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private DefaultSnatStatus desiredDefaultSnatStatus;
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DNSConfig desiredDnsConfig;
+
+  /**
+   * The desired GCFS config for the cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcfsConfig desiredGcfsConfig;
 
   /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
@@ -303,23 +310,6 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired Autopilot configuration for the cluster.
-   * @return value or {@code null} for none
-   */
-  public Autopilot getDesiredAutopilot() {
-    return desiredAutopilot;
-  }
-
-  /**
-   * The desired Autopilot configuration for the cluster.
-   * @param desiredAutopilot desiredAutopilot or {@code null} for none
-   */
-  public ClusterUpdate setDesiredAutopilot(Autopilot desiredAutopilot) {
-    this.desiredAutopilot = desiredAutopilot;
-    return this;
-  }
-
-  /**
    * The desired configuration options for the Binary Authorization feature.
    * @return value or {@code null} for none
    */
@@ -401,6 +391,40 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
     this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
+    return this;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @return value or {@code null} for none
+   */
+  public DNSConfig getDesiredDnsConfig() {
+    return desiredDnsConfig;
+  }
+
+  /**
+   * DNSConfig contains clusterDNS config for this cluster.
+   * @param desiredDnsConfig desiredDnsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
+    this.desiredDnsConfig = desiredDnsConfig;
+    return this;
+  }
+
+  /**
+   * The desired GCFS config for the cluster
+   * @return value or {@code null} for none
+   */
+  public GcfsConfig getDesiredGcfsConfig() {
+    return desiredGcfsConfig;
+  }
+
+  /**
+   * The desired GCFS config for the cluster
+   * @param desiredGcfsConfig desiredGcfsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredGcfsConfig(GcfsConfig desiredGcfsConfig) {
+    this.desiredGcfsConfig = desiredGcfsConfig;
     return this;
   }
 

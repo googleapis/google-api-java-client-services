@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudkms",
-    "version": "v1-rev20210928-1.32.1"
+    "version": "v1-rev20211018-1.32.1"
   }
 }

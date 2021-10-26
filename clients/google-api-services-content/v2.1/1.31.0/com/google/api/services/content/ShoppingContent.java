@@ -18689,6 +18689,150 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Create) super.set(parameterName, value);
       }
     }
+    /**
+     * Retrieves a promotion from your Merchant Center account.
+     *
+     * Create a request for the method "promotions.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection.
+     * @param id Required. REST ID of the promotion to retrieve.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String id) throws java.io.IOException {
+      Get result = new Get(merchantId, id);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Promotion> {
+
+      private static final String REST_PATH = "{merchantId}/promotions/{id}";
+
+      /**
+       * Retrieves a promotion from your Merchant Center account.
+       *
+       * Create a request for the method "promotions.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection.
+       * @param id Required. REST ID of the promotion to retrieve.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String id) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.Promotion.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. REST ID of the promotion to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String id;
+
+      /** Required. REST ID of the promotion to retrieve.
+       */
+      public java.lang.String getId() {
+        return id;
+      }
+
+      /** Required. REST ID of the promotion to retrieve. */
+      public Get setId(java.lang.String id) {
+        this.id = id;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
 
   }
 

@@ -39,6 +39,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String clusterId;
 
   /**
+   * GCFS config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcfsConfig gcfsConfig;
+
+  /**
    * Enable or disable gvnic on the node pool.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setClusterId(java.lang.String clusterId) {
     this.clusterId = clusterId;
+    return this;
+  }
+
+  /**
+   * GCFS config.
+   * @return value or {@code null} for none
+   */
+  public GcfsConfig getGcfsConfig() {
+    return gcfsConfig;
+  }
+
+  /**
+   * GCFS config.
+   * @param gcfsConfig gcfsConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setGcfsConfig(GcfsConfig gcfsConfig) {
+    this.gcfsConfig = gcfsConfig;
     return this;
   }
 

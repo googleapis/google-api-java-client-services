@@ -72,6 +72,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Google Container File System (image streaming) configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcfsConfig gcfsConfig;
+
+  /**
    * Enable or disable gvnic in the node pool.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Google Container File System (image streaming) configs.
+   * @return value or {@code null} for none
+   */
+  public GcfsConfig getGcfsConfig() {
+    return gcfsConfig;
+  }
+
+  /**
+   * Google Container File System (image streaming) configs.
+   * @param gcfsConfig gcfsConfig or {@code null} for none
+   */
+  public NodeConfig setGcfsConfig(GcfsConfig gcfsConfig) {
+    this.gcfsConfig = gcfsConfig;
     return this;
   }
 

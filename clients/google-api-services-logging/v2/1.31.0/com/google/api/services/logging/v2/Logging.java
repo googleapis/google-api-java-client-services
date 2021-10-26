@@ -536,8 +536,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Exclusions {
 
       /**
-       * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-       * resource can be excluded. You can have up to 10 exclusions in a resource.
+       * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+       * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
        *
        * Create a request for the method "exclusions.create".
        *
@@ -564,8 +564,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-         * resource can be excluded. You can have up to 10 exclusions in a resource.
+         * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+         * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
          *
          * Create a request for the method "exclusions.create".
          *
@@ -684,7 +684,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes an exclusion.
+       * Deletes an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.delete".
        *
@@ -713,7 +713,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Deletes an exclusion.
+         * Deletes an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.delete".
          *
@@ -841,7 +841,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Gets the description of an exclusion.
+       * Gets the description of an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.get".
        *
@@ -870,7 +870,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Gets the description of an exclusion.
+         * Gets the description of an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.get".
          *
@@ -1008,7 +1008,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists all the exclusions in a parent resource.
+       * Lists all the exclusions on the _Default sink in a parent resource.
        *
        * Create a request for the method "exclusions.list".
        *
@@ -1034,7 +1034,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Lists all the exclusions in a parent resource.
+         * Lists all the exclusions on the _Default sink in a parent resource.
          *
          * Create a request for the method "exclusions.list".
          *
@@ -1211,7 +1211,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Changes one or more properties of an existing exclusion.
+       * Changes one or more properties of an existing exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.patch".
        *
@@ -1241,7 +1241,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Changes one or more properties of an existing exclusion.
+         * Changes one or more properties of an existing exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.patch".
          *
@@ -6007,8 +6007,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class Exclusions {
 
     /**
-     * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-     * resource can be excluded. You can have up to 10 exclusions in a resource.
+     * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+     * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
      *
      * Create a request for the method "exclusions.create".
      *
@@ -6035,8 +6035,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-       * resource can be excluded. You can have up to 10 exclusions in a resource.
+       * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+       * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
        *
        * Create a request for the method "exclusions.create".
        *
@@ -6153,7 +6153,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Deletes an exclusion.
+     * Deletes an exclusion in the _Default sink.
      *
      * Create a request for the method "exclusions.delete".
      *
@@ -6182,7 +6182,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/exclusions/[^/]+$");
 
       /**
-       * Deletes an exclusion.
+       * Deletes an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.delete".
        *
@@ -6310,7 +6310,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Gets the description of an exclusion.
+     * Gets the description of an exclusion in the _Default sink.
      *
      * Create a request for the method "exclusions.get".
      *
@@ -6339,7 +6339,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/exclusions/[^/]+$");
 
       /**
-       * Gets the description of an exclusion.
+       * Gets the description of an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.get".
        *
@@ -6477,7 +6477,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Lists all the exclusions in a parent resource.
+     * Lists all the exclusions on the _Default sink in a parent resource.
      *
      * Create a request for the method "exclusions.list".
      *
@@ -6503,7 +6503,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Lists all the exclusions in a parent resource.
+       * Lists all the exclusions on the _Default sink in a parent resource.
        *
        * Create a request for the method "exclusions.list".
        *
@@ -6680,7 +6680,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Changes one or more properties of an existing exclusion.
+     * Changes one or more properties of an existing exclusion in the _Default sink.
      *
      * Create a request for the method "exclusions.patch".
      *
@@ -6710,7 +6710,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/exclusions/[^/]+$");
 
       /**
-       * Changes one or more properties of an existing exclusion.
+       * Changes one or more properties of an existing exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.patch".
        *
@@ -6913,8 +6913,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Exclusions {
 
       /**
-       * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-       * resource can be excluded. You can have up to 10 exclusions in a resource.
+       * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+       * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
        *
        * Create a request for the method "exclusions.create".
        *
@@ -6941,8 +6941,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-         * resource can be excluded. You can have up to 10 exclusions in a resource.
+         * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+         * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
          *
          * Create a request for the method "exclusions.create".
          *
@@ -7061,7 +7061,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes an exclusion.
+       * Deletes an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.delete".
        *
@@ -7090,7 +7090,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Deletes an exclusion.
+         * Deletes an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.delete".
          *
@@ -7218,7 +7218,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Gets the description of an exclusion.
+       * Gets the description of an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.get".
        *
@@ -7247,7 +7247,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Gets the description of an exclusion.
+         * Gets the description of an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.get".
          *
@@ -7385,7 +7385,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists all the exclusions in a parent resource.
+       * Lists all the exclusions on the _Default sink in a parent resource.
        *
        * Create a request for the method "exclusions.list".
        *
@@ -7411,7 +7411,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists all the exclusions in a parent resource.
+         * Lists all the exclusions on the _Default sink in a parent resource.
          *
          * Create a request for the method "exclusions.list".
          *
@@ -7588,7 +7588,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Changes one or more properties of an existing exclusion.
+       * Changes one or more properties of an existing exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.patch".
        *
@@ -7618,7 +7618,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Changes one or more properties of an existing exclusion.
+         * Changes one or more properties of an existing exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.patch".
          *
@@ -15692,8 +15692,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-     * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.See Enabling CMEK for Logs Router
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.See Enabling CMEK for Logs Router
      * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.getCmekSettings".
@@ -15705,8 +15705,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
      * @return the request
      */
     public GetCmekSettings getCmekSettings(java.lang.String name) throws java.io.IOException {
@@ -15724,8 +15724,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-       * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.See Enabling CMEK for Logs Router
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Logs Router
        * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.getCmekSettings".
@@ -15740,8 +15740,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
        * @since 1.13
        */
       protected GetCmekSettings(java.lang.String name) {
@@ -15824,8 +15824,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -15833,8 +15833,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
-     all projects and folders in the GCP organization.
+     Logs Router can currently only be configured for Google Cloud organizations. Once configured, it
+     applies to all projects and folders in the Google Cloud organization.
        */
       public java.lang.String getName() {
         return name;
@@ -15845,8 +15845,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -15865,9 +15865,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-     * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
-     * or 2) the associated service account does not have the required
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
+     * kms_key_name is invalid, or 2) the associated service account does not have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
      * disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -15881,8 +15881,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
      * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
      * @return the request
      */
@@ -15901,9 +15901,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-       * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
-       * or 2) the associated service account does not have the required
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
+       * kms_key_name is invalid, or 2) the associated service account does not have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
        * is disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -15920,8 +15920,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
        * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
        * @since 1.13
        */
@@ -15995,8 +15995,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -16004,8 +16004,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
-     all projects and folders in the GCP organization.
+     Logs Router can currently only be configured for Google Cloud organizations. Once configured, it
+     applies to all projects and folders in the Google Cloud organization.
        */
       public java.lang.String getName() {
         return name;
@@ -16016,8 +16016,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       public UpdateCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -16082,8 +16082,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Exclusions {
 
       /**
-       * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-       * resource can be excluded. You can have up to 10 exclusions in a resource.
+       * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+       * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
        *
        * Create a request for the method "exclusions.create".
        *
@@ -16110,8 +16110,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-         * resource can be excluded. You can have up to 10 exclusions in a resource.
+         * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+         * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
          *
          * Create a request for the method "exclusions.create".
          *
@@ -16230,7 +16230,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes an exclusion.
+       * Deletes an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.delete".
        *
@@ -16259,7 +16259,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Deletes an exclusion.
+         * Deletes an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.delete".
          *
@@ -16387,7 +16387,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Gets the description of an exclusion.
+       * Gets the description of an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.get".
        *
@@ -16416,7 +16416,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Gets the description of an exclusion.
+         * Gets the description of an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.get".
          *
@@ -16554,7 +16554,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists all the exclusions in a parent resource.
+       * Lists all the exclusions on the _Default sink in a parent resource.
        *
        * Create a request for the method "exclusions.list".
        *
@@ -16580,7 +16580,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists all the exclusions in a parent resource.
+         * Lists all the exclusions on the _Default sink in a parent resource.
          *
          * Create a request for the method "exclusions.list".
          *
@@ -16757,7 +16757,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Changes one or more properties of an existing exclusion.
+       * Changes one or more properties of an existing exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.patch".
        *
@@ -16787,7 +16787,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Changes one or more properties of an existing exclusion.
+         * Changes one or more properties of an existing exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.patch".
          *
@@ -21443,8 +21443,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Exclusions {
 
       /**
-       * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-       * resource can be excluded. You can have up to 10 exclusions in a resource.
+       * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+       * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
        *
        * Create a request for the method "exclusions.create".
        *
@@ -21471,8 +21471,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new exclusion in a specified parent resource. Only log entries belonging to that
-         * resource can be excluded. You can have up to 10 exclusions in a resource.
+         * Creates a new exclusion in the _Default sink in a specified parent resource. Only log entries
+         * belonging to that resource can be excluded. You can have up to 10 exclusions in a resource.
          *
          * Create a request for the method "exclusions.create".
          *
@@ -21591,7 +21591,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes an exclusion.
+       * Deletes an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.delete".
        *
@@ -21620,7 +21620,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Deletes an exclusion.
+         * Deletes an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.delete".
          *
@@ -21748,7 +21748,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Gets the description of an exclusion.
+       * Gets the description of an exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.get".
        *
@@ -21777,7 +21777,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Gets the description of an exclusion.
+         * Gets the description of an exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.get".
          *
@@ -21915,7 +21915,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists all the exclusions in a parent resource.
+       * Lists all the exclusions on the _Default sink in a parent resource.
        *
        * Create a request for the method "exclusions.list".
        *
@@ -21941,7 +21941,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists all the exclusions in a parent resource.
+         * Lists all the exclusions on the _Default sink in a parent resource.
          *
          * Create a request for the method "exclusions.list".
          *
@@ -22118,7 +22118,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Changes one or more properties of an existing exclusion.
+       * Changes one or more properties of an existing exclusion in the _Default sink.
        *
        * Create a request for the method "exclusions.patch".
        *
@@ -22148,7 +22148,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/exclusions/[^/]+$");
 
         /**
-         * Changes one or more properties of an existing exclusion.
+         * Changes one or more properties of an existing exclusion in the _Default sink.
          *
          * Create a request for the method "exclusions.patch".
          *
@@ -28520,8 +28520,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-     * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.See Enabling CMEK for Logs Router
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.See Enabling CMEK for Logs Router
      * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.getCmekSettings".
@@ -28533,8 +28533,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
      * @return the request
      */
     public GetCmekSettings getCmekSettings(java.lang.String name) throws java.io.IOException {
@@ -28552,8 +28552,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Gets the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-       * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.See Enabling CMEK for Logs Router
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.See Enabling CMEK for Logs Router
        * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.getCmekSettings".
@@ -28568,8 +28568,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
        * @since 1.13
        */
       protected GetCmekSettings(java.lang.String name) {
@@ -28652,8 +28652,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -28661,8 +28661,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource for which to retrieve CMEK settings. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
-     all projects and folders in the GCP organization.
+     Logs Router can currently only be configured for Google Cloud organizations. Once configured, it
+     applies to all projects and folders in the Google Cloud organization.
        */
       public java.lang.String getName() {
         return name;
@@ -28673,8 +28673,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       public GetCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -28693,9 +28693,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-     * currently only be configured for GCP organizations. Once configured, it applies to all projects
-     * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
-     * or 2) the associated service account does not have the required
+     * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+     * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
+     * kms_key_name is invalid, or 2) the associated service account does not have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key is
      * disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
      * /managed-encryption) for more information.
@@ -28709,8 +28709,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
      * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
      * @return the request
      */
@@ -28729,9 +28729,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates the Logs Router CMEK settings for the given resource.Note: CMEK for the Logs Router can
-       * currently only be configured for GCP organizations. Once configured, it applies to all projects
-       * and folders in the GCP organization.UpdateCmekSettings will fail if 1) kms_key_name is invalid,
-       * or 2) the associated service account does not have the required
+       * currently only be configured for Google Cloud organizations. Once configured, it applies to all
+       * projects and folders in the Google Cloud organization.UpdateCmekSettings will fail if 1)
+       * kms_key_name is invalid, or 2) the associated service account does not have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key, or 3) access to the key
        * is disabled.See Enabling CMEK for Logs Router (https://cloud.google.com/logging/docs/routing
        * /managed-encryption) for more information.
@@ -28748,8 +28748,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        "organizations/[ORGANIZATION_ID]/cmekSettings"
      *        "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
      *        example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently
-     *        only be configured for GCP organizations. Once configured, it applies to all projects and
-     *        folders in the GCP organization.
+     *        only be configured for Google Cloud organizations. Once configured, it applies to all
+     *        projects and folders in the Google Cloud organization.
        * @param content the {@link com.google.api.services.logging.v2.model.CmekSettings}
        * @since 1.13
        */
@@ -28823,8 +28823,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -28832,8 +28832,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /** Required. The resource name for the CMEK settings to update. "projects/[PROJECT_ID]/cmekSettings"
      "organizations/[ORGANIZATION_ID]/cmekSettings" "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
      "folders/[FOLDER_ID]/cmekSettings" For example:"organizations/12345/cmekSettings"Note: CMEK for the
-     Logs Router can currently only be configured for GCP organizations. Once configured, it applies to
-     all projects and folders in the GCP organization.
+     Logs Router can currently only be configured for Google Cloud organizations. Once configured, it
+     applies to all projects and folders in the Google Cloud organization.
        */
       public java.lang.String getName() {
         return name;
@@ -28844,8 +28844,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/cmekSettings" "organizations/[ORGANIZATION_ID]/cmekSettings"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings" "folders/[FOLDER_ID]/cmekSettings" For
        * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can currently only
-       * be configured for GCP organizations. Once configured, it applies to all projects and
-       * folders in the GCP organization.
+       * be configured for Google Cloud organizations. Once configured, it applies to all projects
+       * and folders in the Google Cloud organization.
        */
       public UpdateCmekSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

@@ -31,6 +31,30 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AsymmetricSignRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
+   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
+   * and then encrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String data;
+
+  /**
+   * Optional. An optional CRC32C checksum of the AsymmetricSignRequest.data. If specified,
+   * KeyManagementService will verify the integrity of the received AsymmetricSignRequest.data using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(AsymmetricSignRequest.data)
+   * is equal to AsymmetricSignRequest.data_crc32c, and if so, perform a limited number of retries.
+   * A persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dataCrc32c;
+
+  /**
    * Optional. The digest of the data to sign. The digest must be produced with the same digest
    * algorithm as specified by the key version's algorithm.
    * The value may be {@code null}.
@@ -53,6 +77,92 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long digestCrc32c;
+
+  /**
+   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
+   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
+   * and then encrypted.
+   * @see #decodeData()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getData() {
+    return data;
+  }
+
+  /**
+   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
+   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
+   * and then encrypted.
+   * @see #getData()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeData() {
+    return com.google.api.client.util.Base64.decodeBase64(data);
+  }
+
+  /**
+   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
+   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
+   * and then encrypted.
+   * @see #encodeData()
+   * @param data data or {@code null} for none
+   */
+  public AsymmetricSignRequest setData(java.lang.String data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Optional. This field will only be honored for RAW_PKCS1 keys. The data to sign. A digest is
+   * computed over the data that will be signed, PKCS #1 padding is applied to the digest directly
+   * and then encrypted.
+   * @see #setData()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public AsymmetricSignRequest encodeData(byte[] data) {
+    this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
+    return this;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the AsymmetricSignRequest.data. If specified,
+   * KeyManagementService will verify the integrity of the received AsymmetricSignRequest.data using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(AsymmetricSignRequest.data)
+   * is equal to AsymmetricSignRequest.data_crc32c, and if so, perform a limited number of retries.
+   * A persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDataCrc32c() {
+    return dataCrc32c;
+  }
+
+  /**
+   * Optional. An optional CRC32C checksum of the AsymmetricSignRequest.data. If specified,
+   * KeyManagementService will verify the integrity of the received AsymmetricSignRequest.data using
+   * this checksum. KeyManagementService will report an error if the checksum verification fails. If
+   * you receive a checksum error, your client should verify that CRC32C(AsymmetricSignRequest.data)
+   * is equal to AsymmetricSignRequest.data_crc32c, and if so, perform a limited number of retries.
+   * A persistent mismatch may indicate an issue in your computation of the CRC32C checksum. Note:
+   * This field is defined as int64 for reasons of compatibility across different languages.
+   * However, it is a non-negative integer, which will never exceed 2^32-1, and can be safely
+   * downconverted to uint32 in languages that support this type.
+   * @param dataCrc32c dataCrc32c or {@code null} for none
+   */
+  public AsymmetricSignRequest setDataCrc32c(java.lang.Long dataCrc32c) {
+    this.dataCrc32c = dataCrc32c;
+    return this;
+  }
 
   /**
    * Optional. The digest of the data to sign. The digest must be produced with the same digest

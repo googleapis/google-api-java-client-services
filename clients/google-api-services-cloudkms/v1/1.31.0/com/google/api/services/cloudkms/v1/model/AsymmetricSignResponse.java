@@ -68,6 +68,18 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
   private java.lang.Long signatureCrc32c;
 
   /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.data_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the data. A false
+   * value of this field indicates either that AsymmetricSignRequest.data_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.data_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifiedDataCrc32c;
+
+  /**
    * Integrity verification field. A flag indicating whether AsymmetricSignRequest.digest_crc32c was
    * received by KeyManagementService and used for the integrity verification of the digest. A false
    * value of this field indicates either that AsymmetricSignRequest.digest_crc32c was left unset or
@@ -190,6 +202,33 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    */
   public AsymmetricSignResponse setSignatureCrc32c(java.lang.Long signatureCrc32c) {
     this.signatureCrc32c = signatureCrc32c;
+    return this;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.data_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the data. A false
+   * value of this field indicates either that AsymmetricSignRequest.data_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.data_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifiedDataCrc32c() {
+    return verifiedDataCrc32c;
+  }
+
+  /**
+   * Integrity verification field. A flag indicating whether AsymmetricSignRequest.data_crc32c was
+   * received by KeyManagementService and used for the integrity verification of the data. A false
+   * value of this field indicates either that AsymmetricSignRequest.data_crc32c was left unset or
+   * that it was not delivered to KeyManagementService. If you've set
+   * AsymmetricSignRequest.data_crc32c but this field is still false, discard the response and
+   * perform a limited number of retries.
+   * @param verifiedDataCrc32c verifiedDataCrc32c or {@code null} for none
+   */
+  public AsymmetricSignResponse setVerifiedDataCrc32c(java.lang.Boolean verifiedDataCrc32c) {
+    this.verifiedDataCrc32c = verifiedDataCrc32c;
     return this;
   }
 

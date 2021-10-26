@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta3CommonOperationMetadata extends c
   private String createTime;
 
   /**
+   * A related resource to this operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resource;
+
+  /**
    * The state of the operation.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class GoogleCloudDocumentaiV1beta3CommonOperationMetadata extends c
    */
   public GoogleCloudDocumentaiV1beta3CommonOperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * A related resource to this operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResource() {
+    return resource;
+  }
+
+  /**
+   * A related resource to this operation.
+   * @param resource resource or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3CommonOperationMetadata setResource(java.lang.String resource) {
+    this.resource = resource;
     return this;
   }
 

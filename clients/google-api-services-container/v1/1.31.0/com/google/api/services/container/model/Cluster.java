@@ -389,6 +389,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nodeIpv4CidrSize;
 
   /**
+   * Default NodePool settings for the entire cluster. These settings are overridden if specified on
+   * the specific NodePool object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolDefaults nodePoolDefaults;
+
+  /**
    * The node pools associated with this cluster. This field should not be set if "node_config" or
    * "initial_node_count" are specified.
    * The value may be {@code null}.
@@ -1351,6 +1359,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodeIpv4CidrSize(java.lang.Integer nodeIpv4CidrSize) {
     this.nodeIpv4CidrSize = nodeIpv4CidrSize;
+    return this;
+  }
+
+  /**
+   * Default NodePool settings for the entire cluster. These settings are overridden if specified on
+   * the specific NodePool object.
+   * @return value or {@code null} for none
+   */
+  public NodePoolDefaults getNodePoolDefaults() {
+    return nodePoolDefaults;
+  }
+
+  /**
+   * Default NodePool settings for the entire cluster. These settings are overridden if specified on
+   * the specific NodePool object.
+   * @param nodePoolDefaults nodePoolDefaults or {@code null} for none
+   */
+  public Cluster setNodePoolDefaults(NodePoolDefaults nodePoolDefaults) {
+    this.nodePoolDefaults = nodePoolDefaults;
     return this;
   }
 

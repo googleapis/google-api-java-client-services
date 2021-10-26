@@ -61,8 +61,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
-   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
-   * day).
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 31,622,400s
+   * (1 year).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,8 +224,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
-   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
-   * day).
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 31,622,400s
+   * (1 year).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getClientTtl() {
@@ -239,8 +239,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
    * specified), or else sets the response max-age directive to the lesser of the client_ttl and
    * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
-   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
-   * day).
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 31,622,400s
+   * (1 year).
    * @param clientTtl clientTtl or {@code null} for none
    */
   public BackendBucketCdnPolicy setClientTtl(java.lang.Integer clientTtl) {

@@ -43,6 +43,12 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BfdStatus bfdStatus;
+
+  /**
    * IP address of the local BGP interface.
    * The value may be {@code null}.
    */
@@ -129,6 +135,21 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setAdvertisedRoutes(java.util.List<Route> advertisedRoutes) {
     this.advertisedRoutes = advertisedRoutes;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public BfdStatus getBfdStatus() {
+    return bfdStatus;
+  }
+
+  /**
+   * @param bfdStatus bfdStatus or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setBfdStatus(BfdStatus bfdStatus) {
+    this.bfdStatus = bfdStatus;
     return this;
   }
 

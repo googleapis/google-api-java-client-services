@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-compute",
-    "version": "beta-rev20210920-1.32.1"
+    "version": "beta-rev20211019-1.32.1"
   }
 }

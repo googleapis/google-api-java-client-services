@@ -1409,17 +1409,24 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** When set, the target document must exist and have been last updated at that time. */
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           * Timestamp must be microsecond aligned.
+           */
           @com.google.api.client.util.Key("currentDocument.updateTime")
           private String currentDocumentUpdateTime;
 
-          /** When set, the target document must exist and have been last updated at that time.
+          /** When set, the target document must exist and have been last updated at that time. Timestamp must be
+         microsecond aligned.
            */
           public String getCurrentDocumentUpdateTime() {
             return currentDocumentUpdateTime;
           }
 
-          /** When set, the target document must exist and have been last updated at that time. */
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           * Timestamp must be microsecond aligned.
+           */
           public Delete setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
             return this;
@@ -2548,17 +2555,24 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** When set, the target document must exist and have been last updated at that time. */
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           * Timestamp must be microsecond aligned.
+           */
           @com.google.api.client.util.Key("currentDocument.updateTime")
           private String currentDocumentUpdateTime;
 
-          /** When set, the target document must exist and have been last updated at that time.
+          /** When set, the target document must exist and have been last updated at that time. Timestamp must be
+         microsecond aligned.
            */
           public String getCurrentDocumentUpdateTime() {
             return currentDocumentUpdateTime;
           }
 
-          /** When set, the target document must exist and have been last updated at that time. */
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           * Timestamp must be microsecond aligned.
+           */
           public Patch setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
             return this;

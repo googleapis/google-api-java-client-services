@@ -38,7 +38,8 @@ public final class Precondition extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean exists;
 
   /**
-   * When set, the target document must exist and have been last updated at that time.
+   * When set, the target document must exist and have been last updated at that time. Timestamp
+   * must be microsecond aligned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class Precondition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the target document must exist and have been last updated at that time.
+   * When set, the target document must exist and have been last updated at that time. Timestamp
+   * must be microsecond aligned.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -72,7 +74,8 @@ public final class Precondition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the target document must exist and have been last updated at that time.
+   * When set, the target document must exist and have been last updated at that time. Timestamp
+   * must be microsecond aligned.
    * @param updateTime updateTime or {@code null} for none
    */
   public Precondition setUpdateTime(String updateTime) {

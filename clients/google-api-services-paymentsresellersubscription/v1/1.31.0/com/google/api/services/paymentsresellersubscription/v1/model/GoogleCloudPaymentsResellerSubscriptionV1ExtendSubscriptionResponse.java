@@ -48,6 +48,17 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRe
   private String freeTrialEndTime;
 
   /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String renewalTime;
+
+  /**
    * The time at which the subscription is expected to be extended, in ISO 8061 format. UTC
    * timezone. Example, "cycleEndTime":"2019-08-31T17:28:54.564Z"
    * @return value or {@code null} for none
@@ -84,6 +95,31 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRe
    */
   public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse setFreeTrialEndTime(String freeTrialEndTime) {
     this.freeTrialEndTime = freeTrialEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * @return value or {@code null} for none
+   */
+  public String getRenewalTime() {
+    return renewalTime;
+  }
+
+  /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * @param renewalTime renewalTime or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse setRenewalTime(String renewalTime) {
+    this.renewalTime = renewalTime;
     return this;
   }
 

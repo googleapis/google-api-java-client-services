@@ -254,8 +254,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.lang.String key;
 
     /**
-     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
-     * Workspace user.
+     * The unique Google Workspace profile ID of the actor. This value might be absent if the actor is
+     * not a Google Workspace user, or may be the number 105250506097979753968 which acts as a
+     * placeholder ID.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -317,8 +318,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
-     * Workspace user.
+     * The unique Google Workspace profile ID of the actor. This value might be absent if the actor is
+     * not a Google Workspace user, or may be the number 105250506097979753968 which acts as a
+     * placeholder ID.
      * @return value or {@code null} for none
      */
     public java.lang.String getProfileId() {
@@ -326,8 +328,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
-     * Workspace user.
+     * The unique Google Workspace profile ID of the actor. This value might be absent if the actor is
+     * not a Google Workspace user, or may be the number 105250506097979753968 which acts as a
+     * placeholder ID.
      * @param profileId profileId or {@code null} for none
      */
     public Actor setProfileId(java.lang.String profileId) {

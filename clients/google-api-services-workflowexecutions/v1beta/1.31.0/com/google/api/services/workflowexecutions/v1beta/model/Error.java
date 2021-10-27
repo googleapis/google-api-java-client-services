@@ -31,7 +31,7 @@ package com.google.api.services.workflowexecutions.v1beta.model;
 public final class Error extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable stack trace string.
+   * Human-readable stack trace string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Error extends com.google.api.client.json.GenericJson {
   private StackTrace stackTrace;
 
   /**
-   * Human readable stack trace string.
+   * Human-readable stack trace string.
    * @return value or {@code null} for none
    */
   public java.lang.String getContext() {
@@ -60,7 +60,7 @@ public final class Error extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable stack trace string.
+   * Human-readable stack trace string.
    * @param context context or {@code null} for none
    */
   public Error setContext(java.lang.String context) {

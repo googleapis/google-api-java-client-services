@@ -31,7 +31,7 @@ package com.google.api.services.workflowexecutions.v1.model;
 public final class StackTraceElement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The source position information of the stacktrace element.
+   * The source position information of the stack trace element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class StackTraceElement extends com.google.api.client.json.GenericJ
   private java.lang.String step;
 
   /**
-   * The source position information of the stacktrace element.
+   * The source position information of the stack trace element.
    * @return value or {@code null} for none
    */
   public Position getPosition() {
@@ -60,7 +60,7 @@ public final class StackTraceElement extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The source position information of the stacktrace element.
+   * The source position information of the stack trace element.
    * @param position position or {@code null} for none
    */
   public StackTraceElement setPosition(Position position) {

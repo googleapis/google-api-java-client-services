@@ -31,14 +31,14 @@ package com.google.api.services.workflowexecutions.v1beta.model;
 public final class StackTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of Stack elements.
+   * An array of stack elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StackTraceElement> elements;
 
   /**
-   * An array of Stack elements.
+   * An array of stack elements.
    * @return value or {@code null} for none
    */
   public java.util.List<StackTraceElement> getElements() {
@@ -46,7 +46,7 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of Stack elements.
+   * An array of stack elements.
    * @param elements elements or {@code null} for none
    */
   public StackTrace setElements(java.util.List<StackTraceElement> elements) {

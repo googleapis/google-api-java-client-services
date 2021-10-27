@@ -39,8 +39,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   private java.lang.Long column;
 
   /**
-   * The length in bytes of text in this character group, e.g. digits of a number, string length, or
-   * AST (abstract syntax tree) node.
+   * The number of bytes of source code making up this stack trace element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,8 +70,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length in bytes of text in this character group, e.g. digits of a number, string length, or
-   * AST (abstract syntax tree) node.
+   * The number of bytes of source code making up this stack trace element.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLength() {
@@ -80,8 +78,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length in bytes of text in this character group, e.g. digits of a number, string length, or
-   * AST (abstract syntax tree) node.
+   * The number of bytes of source code making up this stack trace element.
    * @param length length or {@code null} for none
    */
   public Position setLength(java.lang.Long length) {

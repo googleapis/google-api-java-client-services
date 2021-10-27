@@ -43,7 +43,7 @@ packages on [Maven Central][maven-search].
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
 | Authorized Buyers Marketplace API | [v1](clients/google-api-services-authorizedbuyersmarketplace/v1) |
-| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1) |
+| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1), [v1alpha1](clients/google-api-services-baremetalsolution/v1alpha1), [v2](clients/google-api-services-baremetalsolution/v2) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -118,6 +118,7 @@ packages on [Maven Central][maven-search].
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | Data Labeling API | [v1beta1](clients/google-api-services-datalabeling/v1beta1) |
+| Data pipelines API | [v1](clients/google-api-services-datapipelines/v1) |
 | Database Migration API | [v1](clients/google-api-services-datamigration/v1), [v1beta1](clients/google-api-services-datamigration/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dataproc Metastore API | [v1alpha](clients/google-api-services-metastore/v1alpha), [v1beta](clients/google-api-services-metastore/v1beta) |

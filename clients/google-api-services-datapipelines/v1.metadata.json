@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-datapipelines",
+    "version": "v1-rev20211018-1.32.1"
+  }
+}

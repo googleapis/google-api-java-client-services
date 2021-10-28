@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * ture, run once a day.
+   * true, run once a day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * ture, run once a day.
+   * true, run once a day.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableContinuousRun() {
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * ture, run once a day.
+   * true, run once a day.
    * @param enableContinuousRun enableContinuousRun or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig setEnableContinuousRun(java.lang.Boolean enableContinuousRun) {

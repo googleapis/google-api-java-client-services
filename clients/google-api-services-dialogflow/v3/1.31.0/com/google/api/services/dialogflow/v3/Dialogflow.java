@@ -11249,8 +11249,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * parameters, call the {@link CompareVersions#execute()} method to invoke the remote operation.
              *
              * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+             *        indicate the draft version of the specified flow. Format: `projects//locations//agents/
+             *        /flows//versions/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
              * @return the request
              */
@@ -11279,8 +11279,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * the constructor. </p>
                *
                * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+             *        indicate the draft version of the specified flow. Format: `projects//locations//agents/
+             *        /flows//versions/`.
                * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
                * @since 1.13
                */
@@ -11352,14 +11352,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. Name of the base flow version to compare with the target version. Use
                * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents//flows//versions/`.
+               * `projects//locations//agents/ /flows//versions/`.
                */
               @com.google.api.client.util.Key
               private java.lang.String baseVersion;
 
               /** Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             indicate the draft version of the specified flow. Format:
-             `projects//locations//agents//flows//versions/`.
+             indicate the draft version of the specified flow. Format: `projects//locations//agents/
+             /flows//versions/`.
                */
               public java.lang.String getBaseVersion() {
                 return baseVersion;
@@ -11368,7 +11368,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. Name of the base flow version to compare with the target version. Use
                * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents//flows//versions/`.
+               * `projects//locations//agents/ /flows//versions/`.
                */
               public CompareVersions setBaseVersion(java.lang.String baseVersion) {
                 if (!getSuppressPatternChecks()) {

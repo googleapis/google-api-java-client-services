@@ -30,6 +30,39 @@ package com.google.api.services.container.model;
 @SuppressWarnings("javadoc")
 public final class MeshCertificates extends com.google.api.client.json.GenericJson {
 
+  /**
+   * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload
+   * Identity Certificates controller and node agent will be deployed in the cluster, which can then
+   * be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload
+   * Identity (workload_pool must be non-empty).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableCertificates;
+
+  /**
+   * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload
+   * Identity Certificates controller and node agent will be deployed in the cluster, which can then
+   * be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload
+   * Identity (workload_pool must be non-empty).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableCertificates() {
+    return enableCertificates;
+  }
+
+  /**
+   * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload
+   * Identity Certificates controller and node agent will be deployed in the cluster, which can then
+   * be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload
+   * Identity (workload_pool must be non-empty).
+   * @param enableCertificates enableCertificates or {@code null} for none
+   */
+  public MeshCertificates setEnableCertificates(java.lang.Boolean enableCertificates) {
+    this.enableCertificates = enableCertificates;
+    return this;
+  }
+
   @Override
   public MeshCertificates set(String fieldName, Object value) {
     return (MeshCertificates) super.set(fieldName, value);

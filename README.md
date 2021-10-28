@@ -43,7 +43,7 @@ packages on [Maven Central][maven-search].
 | Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
 | Authorized Buyers Marketplace API | [v1](clients/google-api-services-authorizedbuyersmarketplace/v1) |
-| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1), [v1alpha1](clients/google-api-services-baremetalsolution/v1alpha1), [v2](clients/google-api-services-baremetalsolution/v2) |
+| Bare Metal Solution API | [v1](clients/google-api-services-baremetalsolution/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |

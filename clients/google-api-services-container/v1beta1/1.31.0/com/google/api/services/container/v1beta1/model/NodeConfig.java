@@ -45,6 +45,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Advanced features for the Compute Engine VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedMachineFeatures advancedMachineFeatures;
+
+  /**
    * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
@@ -282,6 +289,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * Advanced features for the Compute Engine VM.
+   * @return value or {@code null} for none
+   */
+  public AdvancedMachineFeatures getAdvancedMachineFeatures() {
+    return advancedMachineFeatures;
+  }
+
+  /**
+   * Advanced features for the Compute Engine VM.
+   * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
+   */
+  public NodeConfig setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
+    this.advancedMachineFeatures = advancedMachineFeatures;
     return this;
   }
 

@@ -173,6 +173,227 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
     public class Apps {
 
       /**
+       * Generate summary of app installation requests.
+       *
+       * Create a request for the method "apps.countChromeAppRequests".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeAppRequests#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+       * @return the request
+       */
+      public CountChromeAppRequests countChromeAppRequests(java.lang.String customer) throws java.io.IOException {
+        CountChromeAppRequests result = new CountChromeAppRequests(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeAppRequests extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeAppRequestsResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/apps:countChromeAppRequests";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Generate summary of app installation requests.
+         *
+         * Create a request for the method "apps.countChromeAppRequests".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeAppRequests#execute()} method to invoke the
+         * remote operation. <p> {@link CountChromeAppRequests#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+         * @since 1.13
+         */
+        protected CountChromeAppRequests(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeAppRequestsResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeAppRequests set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeAppRequests) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeAppRequests setAccessToken(java.lang.String accessToken) {
+          return (CountChromeAppRequests) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeAppRequests setAlt(java.lang.String alt) {
+          return (CountChromeAppRequests) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeAppRequests setCallback(java.lang.String callback) {
+          return (CountChromeAppRequests) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeAppRequests setFields(java.lang.String fields) {
+          return (CountChromeAppRequests) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeAppRequests setKey(java.lang.String key) {
+          return (CountChromeAppRequests) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeAppRequests setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeAppRequests) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeAppRequests setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeAppRequests) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeAppRequests setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeAppRequests) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeAppRequests setUploadType(java.lang.String uploadType) {
+          return (CountChromeAppRequests) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeAppRequests setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeAppRequests) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Customer id or "my_customer" to use the customer associated to the account making the
+       request.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        public CountChromeAppRequests setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Field used to order results. Supported fields: * request_count * latest_request_time */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field used to order results. Supported fields: * request_count * latest_request_time
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /** Field used to order results. Supported fields: * request_count * latest_request_time */
+        public CountChromeAppRequests setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** The ID of the organizational unit. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** The ID of the organizational unit.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** The ID of the organizational unit. */
+        public CountChromeAppRequests setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /**
+         * Maximum number of results to return. Maximum and default are 50, anything above will be
+         * coerced to 50.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of results to return. Maximum and default are 50, anything above will be coerced to
+       50.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of results to return. Maximum and default are 50, anything above will be
+         * coerced to 50.
+         */
+        public CountChromeAppRequests setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Token to specify the page of the request to be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token to specify the page of the request to be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Token to specify the page of the request to be returned. */
+        public CountChromeAppRequests setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public CountChromeAppRequests set(String parameterName, Object value) {
+          return (CountChromeAppRequests) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Android collection.
        *
        * <p>The typical use is:</p>

@@ -89,6 +89,27 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableSeparateRecognitionPerChannel;
 
   /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSpokenEmojis;
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSpokenPunctuation;
+
+  /**
    * If `true`, the top result includes a list of words and the confidence for those words. If
    * `false`, no word-level confidence information is returned. The default is `false`.
    * The value may be {@code null}.
@@ -323,6 +344,54 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setEnableSeparateRecognitionPerChannel(java.lang.Boolean enableSeparateRecognitionPerChannel) {
     this.enableSeparateRecognitionPerChannel = enableSeparateRecognitionPerChannel;
+    return this;
+  }
+
+  /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSpokenEmojis() {
+    return enableSpokenEmojis;
+  }
+
+  /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * @param enableSpokenEmojis enableSpokenEmojis or {@code null} for none
+   */
+  public RecognitionConfig setEnableSpokenEmojis(java.lang.Boolean enableSpokenEmojis) {
+    this.enableSpokenEmojis = enableSpokenEmojis;
+    return this;
+  }
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSpokenPunctuation() {
+    return enableSpokenPunctuation;
+  }
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * @param enableSpokenPunctuation enableSpokenPunctuation or {@code null} for none
+   */
+  public RecognitionConfig setEnableSpokenPunctuation(java.lang.Boolean enableSpokenPunctuation) {
+    this.enableSpokenPunctuation = enableSpokenPunctuation;
     return this;
   }
 

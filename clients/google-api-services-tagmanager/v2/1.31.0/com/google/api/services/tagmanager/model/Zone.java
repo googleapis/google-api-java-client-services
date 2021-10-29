@@ -80,6 +80,19 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String notes;
 
   /**
+   * Additional parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Parameter> parameter;
+
+  static {
+    // hack to force ProGuard to consider Parameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Parameter.class);
+  }
+
+  /**
    * GTM Zone's API relative path.
    * The value may be {@code null}.
    */
@@ -232,6 +245,23 @@ public final class Zone extends com.google.api.client.json.GenericJson {
    */
   public Zone setNotes(java.lang.String notes) {
     this.notes = notes;
+    return this;
+  }
+
+  /**
+   * Additional parameters.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Parameter> getParameter() {
+    return parameter;
+  }
+
+  /**
+   * Additional parameters.
+   * @param parameter parameter or {@code null} for none
+   */
+  public Zone setParameter(java.util.List<Parameter> parameter) {
+    this.parameter = parameter;
     return this;
   }
 

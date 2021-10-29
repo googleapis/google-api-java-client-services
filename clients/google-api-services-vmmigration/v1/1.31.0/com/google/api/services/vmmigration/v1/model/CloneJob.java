@@ -43,14 +43,6 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
   private ComputeEngineTargetDetails computeEngineTargetDetails;
 
   /**
-   * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details
-   * instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TargetVMDetails computeEngineVmDetails;
-
-  /**
    * Output only. The time the clone job was created (as an API call, not when it was actually
    * created in the target).
    * The value may be {@code null}.
@@ -100,25 +92,6 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
    */
   public CloneJob setComputeEngineTargetDetails(ComputeEngineTargetDetails computeEngineTargetDetails) {
     this.computeEngineTargetDetails = computeEngineTargetDetails;
-    return this;
-  }
-
-  /**
-   * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details
-   * instead.
-   * @return value or {@code null} for none
-   */
-  public TargetVMDetails getComputeEngineVmDetails() {
-    return computeEngineVmDetails;
-  }
-
-  /**
-   * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details
-   * instead.
-   * @param computeEngineVmDetails computeEngineVmDetails or {@code null} for none
-   */
-  public CloneJob setComputeEngineVmDetails(TargetVMDetails computeEngineVmDetails) {
-    this.computeEngineVmDetails = computeEngineVmDetails;
     return this;
   }
 

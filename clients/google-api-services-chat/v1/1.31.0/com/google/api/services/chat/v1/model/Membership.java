@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time of the membership a.k.a the time at which the member joined the space, if
+   * The creation time of the membership a.k.a. the time at which the member joined the space, if
    * applicable.
    * The value may be {@code null}.
    */
@@ -58,7 +58,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * The creation time of the membership a.k.a the time at which the member joined the space, if
+   * The creation time of the membership a.k.a. the time at which the member joined the space, if
    * applicable.
    * @return value or {@code null} for none
    */
@@ -67,7 +67,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creation time of the membership a.k.a the time at which the member joined the space, if
+   * The creation time of the membership a.k.a. the time at which the member joined the space, if
    * applicable.
    * @param createTime createTime or {@code null} for none
    */

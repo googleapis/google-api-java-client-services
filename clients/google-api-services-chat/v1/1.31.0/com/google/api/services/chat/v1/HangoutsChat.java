@@ -2081,7 +2081,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       *        spaces/AAAAMpdlehY/members/105115627578887013105
+       *        spaces/AAAAAAAAAAAA/members/111111111111111111111
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2108,7 +2108,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       *        spaces/AAAAMpdlehY/members/105115627578887013105
+       *        spaces/AAAAAAAAAAAA/members/111111111111111111111
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2188,13 +2188,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         * Example: spaces/AAAAMpdlehY/members/105115627578887013105
+         * Example: spaces/AAAAAAAAAAAA/members/111111111111111111111
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
-       spaces/AAAAMpdlehY/members/105115627578887013105
+       spaces/AAAAAAAAAAAA/members/111111111111111111111
          */
         public java.lang.String getName() {
           return name;
@@ -2202,7 +2202,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         * Example: spaces/AAAAMpdlehY/members/105115627578887013105
+         * Example: spaces/AAAAAAAAAAAA/members/111111111111111111111
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2228,7 +2228,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
-       *        "spaces". Example: spaces/AAAAMpdlehY
+       *        "spaces". Example: spaces/AAAAAAAAAAAA
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2255,7 +2255,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
-       *        "spaces". Example: spaces/AAAAMpdlehY
+       *        "spaces". Example: spaces/AAAAAAAAAAAA
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2335,13 +2335,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces". Example: spaces/AAAAMpdlehY
+         * the form "spaces". Example: spaces/AAAAAAAAAAAA
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The resource name of the space for which membership list is to be fetched, in the form
-       "spaces". Example: spaces/AAAAMpdlehY
+       "spaces". Example: spaces/AAAAAAAAAAAA
          */
         public java.lang.String getParent() {
           return parent;
@@ -2349,7 +2349,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces". Example: spaces/AAAAMpdlehY
+         * the form "spaces". Example: spaces/AAAAAAAAAAAA
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

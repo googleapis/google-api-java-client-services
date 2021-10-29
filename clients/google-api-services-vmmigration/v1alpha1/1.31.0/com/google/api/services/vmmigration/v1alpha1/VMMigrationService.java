@@ -4838,6 +4838,22 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
               return this;
             }
 
+            /** Optional. The level of details of the migrating VM. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The level of details of the migrating VM.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Optional. The level of details of the migrating VM. */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -5057,6 +5073,22 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Optional. The level of details of each migrating VM. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The level of details of each migrating VM.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Optional. The level of details of each migrating VM. */
+            public List setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 

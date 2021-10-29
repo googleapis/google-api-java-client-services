@@ -119,7 +119,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
-   * last completed clone job and the vm's running clone job, if one exists.
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +135,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
-   * last completed cutover job and the vm's running cutover job, if one exists.
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,7 +398,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
-   * last completed clone job and the vm's running clone job, if one exists.
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<CloneJob> getRecentCloneJobs() {
@@ -403,7 +409,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
-   * last completed clone job and the vm's running clone job, if one exists.
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * @param recentCloneJobs recentCloneJobs or {@code null} for none
    */
   public MigratingVm setRecentCloneJobs(java.util.List<CloneJob> recentCloneJobs) {
@@ -413,7 +421,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
-   * last completed cutover job and the vm's running cutover job, if one exists.
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<CutoverJob> getRecentCutoverJobs() {
@@ -422,7 +432,9 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
-   * last completed cutover job and the vm's running cutover job, if one exists.
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
    * @param recentCutoverJobs recentCutoverJobs or {@code null} for none
    */
   public MigratingVm setRecentCutoverJobs(java.util.List<CutoverJob> recentCutoverJobs) {

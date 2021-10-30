@@ -672,6 +672,158 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
 
     }
     /**
+     * An accessor for creating requests from the SshPublicKey collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
+     *   {@code CloudOSLogin.SshPublicKey.List request = oslogin.sshPublicKey().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SshPublicKey sshPublicKey() {
+      return new SshPublicKey();
+    }
+
+    /**
+     * The "sshPublicKey" collection of methods.
+     */
+    public class SshPublicKey {
+
+      /**
+       * Create an SSH public key
+       *
+       * Create a request for the method "sshPublicKey.create".
+       *
+       * This request holds the parameters needed by the oslogin server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The unique ID for the user in format `users/{user}`.
+       * @param content the {@link com.google.api.services.oslogin.v1beta.model.SshPublicKey}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.oslogin.v1beta.model.SshPublicKey content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudOSLoginRequest<com.google.api.services.oslogin.v1beta.model.SshPublicKey> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/sshPublicKey";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+$");
+
+        /**
+         * Create an SSH public key
+         *
+         * Create a request for the method "sshPublicKey.create".
+         *
+         * This request holds the parameters needed by the the oslogin server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The unique ID for the user in format `users/{user}`.
+         * @param content the {@link com.google.api.services.oslogin.v1beta.model.SshPublicKey}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.oslogin.v1beta.model.SshPublicKey content) {
+          super(CloudOSLogin.this, "POST", REST_PATH, content, com.google.api.services.oslogin.v1beta.model.SshPublicKey.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The unique ID for the user in format `users/{user}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The unique ID for the user in format `users/{user}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The unique ID for the user in format `users/{user}`. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the SshPublicKeys collection.
      *
      * <p>The typical use is:</p>

@@ -1981,14 +1981,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Instance: *
-           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
          of the repeated paths field may only include these fields from Instance: * `displayName` * `labels`
-         * `memorySizeGb` * `redisConfig`
+         * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1997,7 +1997,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Instance: *
-           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

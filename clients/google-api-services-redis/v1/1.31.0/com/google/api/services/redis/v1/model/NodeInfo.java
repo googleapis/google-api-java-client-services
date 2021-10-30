@@ -31,21 +31,21 @@ package com.google.api.services.redis.v1.model;
 public final class NodeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Output Only. Node identifying string. e.g. 'node-0', 'node-1'
+   * Output only. Node identifying string. e.g. 'node-0', 'node-1'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Output only. Output Only. Location of the node.
+   * Output only. Location of the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Output only. Output Only. Node identifying string. e.g. 'node-0', 'node-1'
+   * Output only. Node identifying string. e.g. 'node-0', 'node-1'
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +53,7 @@ public final class NodeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output Only. Node identifying string. e.g. 'node-0', 'node-1'
+   * Output only. Node identifying string. e.g. 'node-0', 'node-1'
    * @param id id or {@code null} for none
    */
   public NodeInfo setId(java.lang.String id) {
@@ -62,7 +62,7 @@ public final class NodeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output Only. Location of the node.
+   * Output only. Location of the node.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -70,7 +70,7 @@ public final class NodeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output Only. Location of the node.
+   * Output only. Location of the node.
    * @param zone zone or {@code null} for none
    */
   public NodeInfo setZone(java.lang.String zone) {

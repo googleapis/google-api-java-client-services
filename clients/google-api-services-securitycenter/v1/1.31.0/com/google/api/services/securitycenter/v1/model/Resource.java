@@ -31,6 +31,13 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The human readable name of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Contains a Folder message for each folder in the assets ancestry. The first folder is the
    * deepest nested folder, and the last folder is the folder directly under the Organization.
    * The value may be {@code null}.
@@ -79,6 +86,30 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectName;
+
+  /**
+   * The full resource type of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * The human readable name of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The human readable name of the resource.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Resource setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Contains a Folder message for each folder in the assets ancestry. The first folder is the
@@ -183,6 +214,23 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   public Resource setProjectName(java.lang.String projectName) {
     this.projectName = projectName;
+    return this;
+  }
+
+  /**
+   * The full resource type of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * The full resource type of the resource.
+   * @param type type or {@code null} for none
+   */
+  public Resource setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

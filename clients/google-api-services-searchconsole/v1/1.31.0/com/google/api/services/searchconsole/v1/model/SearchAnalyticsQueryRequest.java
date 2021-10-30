@@ -116,6 +116,14 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
   private java.lang.Integer startRow;
 
   /**
+   * Optional. [Optional; Default is \"web\"] Type of report: search type, or either Discover or
+   * Gnews.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * [Optional; Default is \"auto\"] How data is aggregated. If aggregated by property, all data for
    * the same property is aggregated; if aggregated by page, all data is aggregated by canonical
    * URI. If you filter or group by page, choose AUTO; otherwise you can aggregate either by
@@ -297,6 +305,25 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
    */
   public SearchAnalyticsQueryRequest setStartRow(java.lang.Integer startRow) {
     this.startRow = startRow;
+    return this;
+  }
+
+  /**
+   * Optional. [Optional; Default is \"web\"] Type of report: search type, or either Discover or
+   * Gnews.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. [Optional; Default is \"web\"] Type of report: search type, or either Discover or
+   * Gnews.
+   * @param type type or {@code null} for none
+   */
+  public SearchAnalyticsQueryRequest setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

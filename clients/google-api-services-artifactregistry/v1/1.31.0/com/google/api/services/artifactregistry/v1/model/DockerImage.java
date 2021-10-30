@@ -18,8 +18,8 @@ package com.google.api.services.artifactregistry.v1.model;
 
 /**
  * DockerImage represents a docker artifact. The following fields are returned as untyped metadata
- * in the Version resource, using camelcase keys (i.e. metadata.imageSizeBytes): - imageSizeBytes -
- * mediaType - buildTime
+ * in the Version resource, using camelcase keys (i.e. metadata.imageSizeBytes): * imageSizeBytes *
+ * mediaType * buildTime
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation

@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * A Google Cloud Redis instance. next id = 37
+ * A Google Cloud Redis instance. next id = 38
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -31,9 +31,10 @@ package com.google.api.services.redis.v1beta1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
-   * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in location_id.
+   * Optional. If specified, at least one node will be provisioned in this zone in addition to the
+   * zone specified in location_id. Only applicable to standard tier. If provided, it must be a
+   * different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will
+   * be placed in zones selected by the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,10 +73,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the location_id provided by the user at creation time. For
-   * Standard Tier instances, this can be either location_id or alternative_location_id and can
-   * change after a failover event.
+   * Output only. The current zone where the Redis primary node is located. In basic tier, this will
+   * always be the same as [location_id]. In standard tier, this can be the zone of any node in the
+   * instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +105,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone from the specified region for the instance. For standard tier, instances will be
-   * created across two zones for protection against zonal failures. If [alternative_location_id] is
-   * also provided, it must be different from [location_id].
+   * choose a zone from the specified region for the instance. For standard tier, additional nodes
+   * will be added across multiple zones for protection against zonal failures. If specified, at
+   * least one node will be provisioned in this zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,6 +153,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<NodeInfo> nodes;
+
+  /**
+   * Optional. Persistence configuration parameters
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PersistenceConfig persistenceConfig;
 
   /**
    * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
@@ -217,7 +224,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * 2. Valid value for basic tier is 0 and defaults to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +235,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
    * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
    * associated with this private service access connection. If not provided, the service will
-   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For
+   * READ_REPLICAS_ENABLED the default block size is /28.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,9 +279,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String transitEncryptionMode;
 
   /**
-   * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
-   * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in location_id.
+   * Optional. If specified, at least one node will be provisioned in this zone in addition to the
+   * zone specified in location_id. Only applicable to standard tier. If provided, it must be a
+   * different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will
+   * be placed in zones selected by the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternativeLocationId() {
@@ -281,9 +290,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
-   * failures by provisioning it across two zones. If provided, it must be a different zone from the
-   * one provided in location_id.
+   * Optional. If specified, at least one node will be provisioned in this zone in addition to the
+   * zone specified in location_id. Only applicable to standard tier. If provided, it must be a
+   * different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will
+   * be placed in zones selected by the service.
    * @param alternativeLocationId alternativeLocationId or {@code null} for none
    */
   public Instance setAlternativeLocationId(java.lang.String alternativeLocationId) {
@@ -368,10 +378,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the location_id provided by the user at creation time. For
-   * Standard Tier instances, this can be either location_id or alternative_location_id and can
-   * change after a failover event.
+   * Output only. The current zone where the Redis primary node is located. In basic tier, this will
+   * always be the same as [location_id]. In standard tier, this can be the zone of any node in the
+   * instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentLocationId() {
@@ -379,10 +388,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The current zone where the Redis endpoint is placed. For Basic Tier instances,
-   * this will always be the same as the location_id provided by the user at creation time. For
-   * Standard Tier instances, this can be either location_id or alternative_location_id and can
-   * change after a failover event.
+   * Output only. The current zone where the Redis primary node is located. In basic tier, this will
+   * always be the same as [location_id]. In standard tier, this can be the zone of any node in the
+   * instance.
    * @param currentLocationId currentLocationId or {@code null} for none
    */
   public Instance setCurrentLocationId(java.lang.String currentLocationId) {
@@ -445,9 +453,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone from the specified region for the instance. For standard tier, instances will be
-   * created across two zones for protection against zonal failures. If [alternative_location_id] is
-   * also provided, it must be different from [location_id].
+   * choose a zone from the specified region for the instance. For standard tier, additional nodes
+   * will be added across multiple zones for protection against zonal failures. If specified, at
+   * least one node will be provisioned in this zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -456,9 +464,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The zone where the instance will be provisioned. If not provided, the service will
-   * choose a zone from the specified region for the instance. For standard tier, instances will be
-   * created across two zones for protection against zonal failures. If [alternative_location_id] is
-   * also provided, it must be different from [location_id].
+   * choose a zone from the specified region for the instance. For standard tier, additional nodes
+   * will be added across multiple zones for protection against zonal failures. If specified, at
+   * least one node will be provisioned in this zone.
    * @param locationId locationId or {@code null} for none
    */
   public Instance setLocationId(java.lang.String locationId) {
@@ -560,6 +568,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<NodeInfo> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Optional. Persistence configuration parameters
+   * @return value or {@code null} for none
+   */
+  public PersistenceConfig getPersistenceConfig() {
+    return persistenceConfig;
+  }
+
+  /**
+   * Optional. Persistence configuration parameters
+   * @param persistenceConfig persistenceConfig or {@code null} for none
+   */
+  public Instance setPersistenceConfig(PersistenceConfig persistenceConfig) {
+    this.persistenceConfig = persistenceConfig;
     return this;
   }
 
@@ -708,7 +733,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * 2. Valid value for basic tier is 0 and defaults to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReplicaCount() {
@@ -717,7 +742,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 1. Valid value for basic tier is 0 and defaults to 0.
+   * 2. Valid value for basic tier is 0 and defaults to 0.
    * @param replicaCount replicaCount or {@code null} for none
    */
   public Instance setReplicaCount(java.lang.Integer replicaCount) {
@@ -730,7 +755,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
    * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
    * associated with this private service access connection. If not provided, the service will
-   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For
+   * READ_REPLICAS_ENABLED the default block size is /28.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedIpRange() {
@@ -742,7 +768,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * this instance. Range must be unique and non-overlapping with existing subnets in an authorized
    * network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
    * associated with this private service access connection. If not provided, the service will
-   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29.
+   * choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For
+   * READ_REPLICAS_ENABLED the default block size is /28.
    * @param reservedIpRange reservedIpRange or {@code null} for none
    */
   public Instance setReservedIpRange(java.lang.String reservedIpRange) {

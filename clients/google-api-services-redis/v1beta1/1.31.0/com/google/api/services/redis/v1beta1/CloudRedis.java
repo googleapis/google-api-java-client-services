@@ -537,9 +537,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * Creates a Redis instance based on the specified tier and memory size. By default, the instance is
          * accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The
          * creation is executed asynchronously and callers may check the returned operation to track its
-         * progress. Once the operation is completed the Redis instance will be fully functional. Completed
-         * longrunning.Operation will contain the new instance object in the response field. The returned
-         * operation is automatically deleted after a few hours, so there is no need to call
+         * progress. Once the operation is completed the Redis instance will be fully functional. The
+         * completed longrunning.Operation will contain the new instance object in the response field. The
+         * returned operation is automatically deleted after a few hours, so there is no need to call
          * DeleteOperation.
          *
          * Create a request for the method "instances.create".
@@ -570,8 +570,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Creates a Redis instance based on the specified tier and memory size. By default, the instance
            * is accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The
            * creation is executed asynchronously and callers may check the returned operation to track its
-           * progress. Once the operation is completed the Redis instance will be fully functional.
-           * Completed longrunning.Operation will contain the new instance object in the response field. The
+           * progress. Once the operation is completed the Redis instance will be fully functional. The
+           * completed longrunning.Operation will contain the new instance object in the response field. The
            * returned operation is automatically deleted after a few hours, so there is no need to call
            * DeleteOperation.
            *
@@ -1981,14 +1981,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Instance: *
-           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
          of the repeated paths field may only include these fields from Instance: * `displayName` * `labels`
-         * `memorySizeGb` * `redisConfig`
+         * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1997,7 +1997,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Instance: *
-           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig` * `replica_count`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

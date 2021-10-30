@@ -45,7 +45,8 @@ public final class MaintenanceSchedule extends com.google.api.client.json.Generi
   private String endTime;
 
   /**
-   * Output only. The time deadline any schedule start time cannot go beyond, including reschedule.
+   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
+   * reschedule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,8 @@ public final class MaintenanceSchedule extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The time deadline any schedule start time cannot go beyond, including reschedule.
+   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
+   * reschedule.
    * @return value or {@code null} for none
    */
   public String getScheduleDeadlineTime() {
@@ -101,7 +103,8 @@ public final class MaintenanceSchedule extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The time deadline any schedule start time cannot go beyond, including reschedule.
+   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
+   * reschedule.
    * @param scheduleDeadlineTime scheduleDeadlineTime or {@code null} for none
    */
   public MaintenanceSchedule setScheduleDeadlineTime(String scheduleDeadlineTime) {

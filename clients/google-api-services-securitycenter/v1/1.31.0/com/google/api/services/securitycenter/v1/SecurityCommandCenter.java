@@ -1650,7 +1650,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1673,7 +1673,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
          resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
          resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:`
+         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1701,7 +1701,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -6855,7 +6855,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -6878,7 +6878,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
          resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
          resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:`
+         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -6906,7 +6906,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -9081,7 +9081,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -9104,7 +9104,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
          resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
          resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:`
+         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -9132,7 +9132,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
            * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
            * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:`
+           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

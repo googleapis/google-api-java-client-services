@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1.model;
+package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * CommonFeatureSpec contains Hub-wide configuration information
+ * Status specifies state for the subcomponent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CommonFeatureSpec extends com.google.api.client.json.GenericJson {
+public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
-   * Appdevexperience specific spec.
+   * Code specifies AppDevExperienceFeature's subcomponent ready state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AppDevExperienceFeatureSpec appdevexperience;
+  private java.lang.String code;
 
   /**
-   * Multicluster Ingress-specific spec.
+   * Description is populated if Code is Failed, explaining why it has failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MultiClusterIngressFeatureSpec multiclusteringress;
+  private java.lang.String description;
 
   /**
-   * Appdevexperience specific spec.
+   * Code specifies AppDevExperienceFeature's subcomponent ready state.
    * @return value or {@code null} for none
    */
-  public AppDevExperienceFeatureSpec getAppdevexperience() {
-    return appdevexperience;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * Appdevexperience specific spec.
-   * @param appdevexperience appdevexperience or {@code null} for none
+   * Code specifies AppDevExperienceFeature's subcomponent ready state.
+   * @param code code or {@code null} for none
    */
-  public CommonFeatureSpec setAppdevexperience(AppDevExperienceFeatureSpec appdevexperience) {
-    this.appdevexperience = appdevexperience;
+  public Status setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Multicluster Ingress-specific spec.
+   * Description is populated if Code is Failed, explaining why it has failed.
    * @return value or {@code null} for none
    */
-  public MultiClusterIngressFeatureSpec getMulticlusteringress() {
-    return multiclusteringress;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Multicluster Ingress-specific spec.
-   * @param multiclusteringress multiclusteringress or {@code null} for none
+   * Description is populated if Code is Failed, explaining why it has failed.
+   * @param description description or {@code null} for none
    */
-  public CommonFeatureSpec setMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
-    this.multiclusteringress = multiclusteringress;
+  public Status setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   @Override
-  public CommonFeatureSpec set(String fieldName, Object value) {
-    return (CommonFeatureSpec) super.set(fieldName, value);
+  public Status set(String fieldName, Object value) {
+    return (Status) super.set(fieldName, value);
   }
 
   @Override
-  public CommonFeatureSpec clone() {
-    return (CommonFeatureSpec) super.clone();
+  public Status clone() {
+    return (Status) super.clone();
   }
 
 }

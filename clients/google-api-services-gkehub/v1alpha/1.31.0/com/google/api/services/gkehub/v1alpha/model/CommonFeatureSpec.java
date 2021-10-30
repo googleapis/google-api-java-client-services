@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class CommonFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Appdevexperience specific spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppDevExperienceFeatureSpec appdevexperience;
+
+  /**
    * Cloud Audit Logging-specific spec.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private MultiClusterIngressFeatureSpec multiclusteringress;
+
+  /**
+   * Appdevexperience specific spec.
+   * @return value or {@code null} for none
+   */
+  public AppDevExperienceFeatureSpec getAppdevexperience() {
+    return appdevexperience;
+  }
+
+  /**
+   * Appdevexperience specific spec.
+   * @param appdevexperience appdevexperience or {@code null} for none
+   */
+  public CommonFeatureSpec setAppdevexperience(AppDevExperienceFeatureSpec appdevexperience) {
+    this.appdevexperience = appdevexperience;
+    return this;
+  }
 
   /**
    * Cloud Audit Logging-specific spec.

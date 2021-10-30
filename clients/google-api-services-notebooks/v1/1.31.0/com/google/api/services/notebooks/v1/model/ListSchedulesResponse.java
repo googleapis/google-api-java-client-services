@@ -44,9 +44,9 @@ public final class ListSchedulesResponse extends com.google.api.client.json.Gene
   private java.util.List<Schedule> schedules;
 
   /**
-   * Schedules that could not be reached. For example,
+   * Schedules that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/schedules/monthly_digest',
-   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment'].
+   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment']
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class ListSchedulesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Schedules that could not be reached. For example,
+   * Schedules that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/schedules/monthly_digest',
-   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment'].
+   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment']
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -97,9 +97,9 @@ public final class ListSchedulesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Schedules that could not be reached. For example,
+   * Schedules that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/schedules/monthly_digest',
-   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment'].
+   * 'projects/{project_id}/location/{location}/schedules/weekly_sentiment']
    * @param unreachable unreachable or {@code null} for none
    */
   public ListSchedulesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

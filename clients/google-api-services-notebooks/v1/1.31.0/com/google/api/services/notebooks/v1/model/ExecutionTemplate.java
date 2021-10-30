@@ -54,8 +54,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
+   * `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex:
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +67,14 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String jobType;
+
+  /**
+   * Name of the kernel spec to use. This must be specified if the kernel spec name on the execution
+   * target does not match the name in the input notebook file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kernelSpec;
 
   /**
    * Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'.
@@ -98,7 +106,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +123,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * Parameters to be overridden in the notebook during execution. Ref
    * https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying
    * parameters in the input notebook and pass them here in an YAML file. Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,8 +209,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
+   * `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex:
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
    * @return value or {@code null} for none
    */
   public java.lang.String getInputNotebookFile() {
@@ -211,8 +219,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format:
-   * gs://{bucket_name}/{folder}/{notebook_file_name} Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb
+   * `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex:
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
    * @param inputNotebookFile inputNotebookFile or {@code null} for none
    */
   public ExecutionTemplate setInputNotebookFile(java.lang.String inputNotebookFile) {
@@ -234,6 +242,25 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setJobType(java.lang.String jobType) {
     this.jobType = jobType;
+    return this;
+  }
+
+  /**
+   * Name of the kernel spec to use. This must be specified if the kernel spec name on the execution
+   * target does not match the name in the input notebook file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKernelSpec() {
+    return kernelSpec;
+  }
+
+  /**
+   * Name of the kernel spec to use. This must be specified if the kernel spec name on the execution
+   * target does not match the name in the input notebook file.
+   * @param kernelSpec kernelSpec or {@code null} for none
+   */
+  public ExecutionTemplate setKernelSpec(java.lang.String kernelSpec) {
+    this.kernelSpec = kernelSpec;
     return this;
   }
 
@@ -301,7 +328,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputNotebookFolder() {
@@ -310,7 +337,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format:
-   * gs://{bucket_name}/{folder} Ex: gs://notebook_user/scheduled_notebooks
+   * `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
    * @param outputNotebookFolder outputNotebookFolder or {@code null} for none
    */
   public ExecutionTemplate setOutputNotebookFolder(java.lang.String outputNotebookFolder) {
@@ -339,7 +366,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * Parameters to be overridden in the notebook during execution. Ref
    * https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying
    * parameters in the input notebook and pass them here in an YAML file. Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
    * @return value or {@code null} for none
    */
   public java.lang.String getParamsYamlFile() {
@@ -350,7 +377,7 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    * Parameters to be overridden in the notebook during execution. Ref
    * https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying
    * parameters in the input notebook and pass them here in an YAML file. Ex:
-   * gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml
+   * `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
    * @param paramsYamlFile paramsYamlFile or {@code null} for none
    */
   public ExecutionTemplate setParamsYamlFile(java.lang.String paramsYamlFile) {

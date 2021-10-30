@@ -1469,7 +1469,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The name of this connection profile resource in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}.
+         *        projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
          * @param content the {@link com.google.api.services.datamigration.v1beta1.model.ConnectionProfile}
          * @return the request
          */
@@ -1498,7 +1498,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of this connection profile resource in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}.
+         *        projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
            * @param content the {@link com.google.api.services.datamigration.v1beta1.model.ConnectionProfile}
            * @since 1.13
            */
@@ -1569,13 +1569,13 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The name of this connection profile resource in the form of
-           * projects/{project}/locations/{location}/instances/{instance}.
+           * projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of this connection profile resource in the form of
-         projects/{project}/locations/{location}/instances/{instance}.
+         projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
            */
           public java.lang.String getName() {
             return name;
@@ -1583,7 +1583,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The name of this connection profile resource in the form of
-           * projects/{project}/locations/{location}/instances/{instance}.
+           * projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3037,7 +3037,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The name (URI) of this migration job resource, in the form of:
-         *        projects/{project}/locations/{location}/instances/{instance}.
+         *        projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
          * @param content the {@link com.google.api.services.datamigration.v1beta1.model.MigrationJob}
          * @return the request
          */
@@ -3066,7 +3066,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name (URI) of this migration job resource, in the form of:
-         *        projects/{project}/locations/{location}/instances/{instance}.
+         *        projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
            * @param content the {@link com.google.api.services.datamigration.v1beta1.model.MigrationJob}
            * @since 1.13
            */
@@ -3137,13 +3137,13 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The name (URI) of this migration job resource, in the form of:
-           * projects/{project}/locations/{location}/instances/{instance}.
+           * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (URI) of this migration job resource, in the form of:
-         projects/{project}/locations/{location}/instances/{instance}.
+         projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
            */
           public java.lang.String getName() {
             return name;
@@ -3151,7 +3151,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
 
           /**
            * The name (URI) of this migration job resource, in the form of:
-           * projects/{project}/locations/{location}/instances/{instance}.
+           * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class CommonFeatureState extends com.google.api.client.json.GenericJson {
 
   /**
+   * Appdevexperience specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppDevExperienceFeatureState appdevexperience;
+
+  /**
    * Service Mesh-specific state.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private FeatureState state;
+
+  /**
+   * Appdevexperience specific state.
+   * @return value or {@code null} for none
+   */
+  public AppDevExperienceFeatureState getAppdevexperience() {
+    return appdevexperience;
+  }
+
+  /**
+   * Appdevexperience specific state.
+   * @param appdevexperience appdevexperience or {@code null} for none
+   */
+  public CommonFeatureState setAppdevexperience(AppDevExperienceFeatureState appdevexperience) {
+    this.appdevexperience = appdevexperience;
+    return this;
+  }
 
   /**
    * Service Mesh-specific state.

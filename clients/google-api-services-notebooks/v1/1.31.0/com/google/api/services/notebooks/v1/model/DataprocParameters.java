@@ -31,7 +31,7 @@ public final class DataprocParameters extends com.google.api.client.json.Generic
 
   /**
    * URI for cluster used to run Dataproc execution. Format:
-   * 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}
+   * `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class DataprocParameters extends com.google.api.client.json.Generic
 
   /**
    * URI for cluster used to run Dataproc execution. Format:
-   * 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}
+   * `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -48,7 +48,7 @@ public final class DataprocParameters extends com.google.api.client.json.Generic
 
   /**
    * URI for cluster used to run Dataproc execution. Format:
-   * 'projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}
+   * `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
    * @param cluster cluster or {@code null} for none
    */
   public DataprocParameters setCluster(java.lang.String cluster) {

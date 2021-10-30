@@ -77,7 +77,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * @return value or {@code null} for none
    */
   public java.lang.String getPostStartupScript() {
@@ -200,7 +200,7 @@ public final class RuntimeSoftwareConfig extends com.google.api.client.json.Gene
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * @param postStartupScript postStartupScript or {@code null} for none
    */
   public RuntimeSoftwareConfig setPostStartupScript(java.lang.String postStartupScript) {

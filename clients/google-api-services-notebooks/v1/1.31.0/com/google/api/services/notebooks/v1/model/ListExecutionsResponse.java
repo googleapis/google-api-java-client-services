@@ -50,9 +50,9 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * Executions IDs that could not be reached. For example,
+   * Executions IDs that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/executions/imagenet_test1',
-   * 'projects/{project_id}/location/{location}/executions/classifier_train1'].
+   * 'projects/{project_id}/location/{location}/executions/classifier_train1']
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +93,9 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Executions IDs that could not be reached. For example,
+   * Executions IDs that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/executions/imagenet_test1',
-   * 'projects/{project_id}/location/{location}/executions/classifier_train1'].
+   * 'projects/{project_id}/location/{location}/executions/classifier_train1']
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -103,9 +103,9 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Executions IDs that could not be reached. For example,
+   * Executions IDs that could not be reached. For example:
    * ['projects/{project_id}/location/{location}/executions/imagenet_test1',
-   * 'projects/{project_id}/location/{location}/executions/classifier_train1'].
+   * 'projects/{project_id}/location/{location}/executions/classifier_train1']
    * @param unreachable unreachable or {@code null} for none
    */
   public ListExecutionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

@@ -30,6 +30,14 @@ package com.google.api.services.notebooks.v1.model;
 public final class VertexAIParameters extends com.google.api.client.json.GenericJson {
 
   /**
+   * Environment variables. At most 100 environment variables can be specified and unique. Example:
+   * GCP_BUCKET=gs://my-bucket/samples/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> env;
+
+  /**
    * The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to
    * which the Job should be peered. For example, `projects/12345/global/networks/myVPC`.
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the
@@ -40,6 +48,25 @@ public final class VertexAIParameters extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Environment variables. At most 100 environment variables can be specified and unique. Example:
+   * GCP_BUCKET=gs://my-bucket/samples/
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getEnv() {
+    return env;
+  }
+
+  /**
+   * Environment variables. At most 100 environment variables can be specified and unique. Example:
+   * GCP_BUCKET=gs://my-bucket/samples/
+   * @param env env or {@code null} for none
+   */
+  public VertexAIParameters setEnv(java.util.Map<String, java.lang.String> env) {
+    this.env = env;
+    return this;
+  }
 
   /**
    * The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to

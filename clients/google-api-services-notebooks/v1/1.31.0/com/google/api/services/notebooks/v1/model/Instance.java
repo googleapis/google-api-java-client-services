@@ -207,7 +207,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +252,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> serviceAccountScopes;
 
   /**
-   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
-   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM
+   * features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -711,7 +711,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * @return value or {@code null} for none
    */
   public java.lang.String getPostStartupScript() {
@@ -720,7 +720,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Path to a Bash script that automatically runs after a notebook instance fully boots up. The
-   * path must be a URL or Cloud Storage path (gs://path-to-file/file-name).
+   * path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
    * @param postStartupScript postStartupScript or {@code null} for none
    */
   public Instance setPostStartupScript(java.lang.String postStartupScript) {
@@ -817,8 +817,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
-   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM
+   * features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
    * @return value or {@code null} for none
    */
   public ShieldedInstanceConfig getShieldedInstanceConfig() {
@@ -826,8 +826,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
-   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM
+   * features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
    * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
    */
   public Instance setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {

@@ -77,7 +77,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
 
   /**
    * The name of this connection profile resource in the form of
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
 
   /**
    * The name of this connection profile resource in the form of
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -224,7 +224,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
 
   /**
    * The name of this connection profile resource in the form of
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
    * @param name name or {@code null} for none
    */
   public ConnectionProfile setName(java.lang.String name) {

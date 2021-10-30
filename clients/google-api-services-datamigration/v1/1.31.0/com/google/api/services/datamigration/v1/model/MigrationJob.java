@@ -100,7 +100,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name (URI) of this migration job resource, in the form of:
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,7 +335,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name (URI) of this migration job resource, in the form of:
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -344,7 +344,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
    * The name (URI) of this migration job resource, in the form of:
-   * projects/{project}/locations/{location}/instances/{instance}.
+   * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
    * @param name name or {@code null} for none
    */
   public MigrationJob setName(java.lang.String name) {

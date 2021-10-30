@@ -50,10 +50,10 @@ public final class AllowedSubjectAltNames extends com.google.api.client.json.Gen
 
   /**
    * Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To
-   * allow an explicit wildcard certificate, escape with backlash (i.e. ""). E.g. for globbed
-   * entries: '*bar.com' will allow 'foo.bar.com', but not '*.bar.com', unless the
-   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: '.bar.com' will allow
-   * '*.bar.com', but not 'foo.bar.com'.
+   * allow an explicit wildcard certificate, escape with backlash (i.e. ``). E.g. for globbed
+   * entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the
+   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `.bar.com` will allow
+   * `*.bar.com`, but not `foo.bar.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,10 +126,10 @@ public final class AllowedSubjectAltNames extends com.google.api.client.json.Gen
 
   /**
    * Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To
-   * allow an explicit wildcard certificate, escape with backlash (i.e. ""). E.g. for globbed
-   * entries: '*bar.com' will allow 'foo.bar.com', but not '*.bar.com', unless the
-   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: '.bar.com' will allow
-   * '*.bar.com', but not 'foo.bar.com'.
+   * allow an explicit wildcard certificate, escape with backlash (i.e. ``). E.g. for globbed
+   * entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the
+   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `.bar.com` will allow
+   * `*.bar.com`, but not `foo.bar.com`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedDnsNames() {
@@ -138,10 +138,10 @@ public final class AllowedSubjectAltNames extends com.google.api.client.json.Gen
 
   /**
    * Optional. Contains valid, fully-qualified host names. Glob patterns are also supported. To
-   * allow an explicit wildcard certificate, escape with backlash (i.e. ""). E.g. for globbed
-   * entries: '*bar.com' will allow 'foo.bar.com', but not '*.bar.com', unless the
-   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: '.bar.com' will allow
-   * '*.bar.com', but not 'foo.bar.com'.
+   * allow an explicit wildcard certificate, escape with backlash (i.e. ``). E.g. for globbed
+   * entries: `*bar.com` will allow `foo.bar.com`, but not `*.bar.com`, unless the
+   * allow_globbing_dns_wildcards field is set. E.g. for wildcard entries: `.bar.com` will allow
+   * `*.bar.com`, but not `foo.bar.com`.
    * @param allowedDnsNames allowedDnsNames or {@code null} for none
    */
   public AllowedSubjectAltNames setAllowedDnsNames(java.util.List<java.lang.String> allowedDnsNames) {

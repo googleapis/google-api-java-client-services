@@ -38,6 +38,17 @@ public final class CustomApp extends com.google.api.client.json.GenericJson {
   private java.lang.String languageCode;
 
   /**
+   * Organizations to which the custom app should be made available. If the request contains any
+   * organizations, then the app will be restricted to only these organizations. To support the
+   * organization linked to the developer account, the organization ID should be provided explicitly
+   * together with other organizations. If no organizations are provided, then the app is only
+   * available to the organization linked to the developer account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Organization> organizations;
+
+  /**
    * Output only. Package name of the created Android app. Only present in the API response.
    * The value may be {@code null}.
    */
@@ -65,6 +76,31 @@ public final class CustomApp extends com.google.api.client.json.GenericJson {
    */
   public CustomApp setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Organizations to which the custom app should be made available. If the request contains any
+   * organizations, then the app will be restricted to only these organizations. To support the
+   * organization linked to the developer account, the organization ID should be provided explicitly
+   * together with other organizations. If no organizations are provided, then the app is only
+   * available to the organization linked to the developer account.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Organization> getOrganizations() {
+    return organizations;
+  }
+
+  /**
+   * Organizations to which the custom app should be made available. If the request contains any
+   * organizations, then the app will be restricted to only these organizations. To support the
+   * organization linked to the developer account, the organization ID should be provided explicitly
+   * together with other organizations. If no organizations are provided, then the app is only
+   * available to the organization linked to the developer account.
+   * @param organizations organizations or {@code null} for none
+   */
+  public CustomApp setOrganizations(java.util.List<Organization> organizations) {
+    this.organizations = organizations;
     return this;
   }
 

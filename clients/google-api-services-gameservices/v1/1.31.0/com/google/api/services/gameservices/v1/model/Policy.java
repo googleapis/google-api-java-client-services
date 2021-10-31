@@ -18,21 +18,22 @@ package com.google.api.services.gameservices.v1.model;
 
 /**
  * An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud
- * resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a
- * single `role`. Members can be user accounts, service accounts, Google groups, and domains (such
- * as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role
- * or a user-created custom role. For some types of Google Cloud resources, a `binding` can also
- * specify a `condition`, which is a logical expression that allows access to a resource only if the
- * expression evaluates to `true`. A condition can add constraints based on attributes of the
- * request, the resource, or both. To learn which resources support conditions in their IAM
- * policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-
- * policies). **JSON example:** { "bindings": [ { "role": "roles/resourcemanager.organizationAdmin",
- * "members": [ "user:mike@example.com", "group:admins@example.com", "domain:google.com",
- * "serviceAccount:my-project-id@appspot.gserviceaccount.com" ] }, { "role":
- * "roles/resourcemanager.organizationViewer", "members": [ "user:eve@example.com" ], "condition": {
- * "title": "expirable access", "description": "Does not grant access after Sep 2020", "expression":
- * "request.time < timestamp('2020-10-01T00:00:00.000Z')", } } ], "etag": "BwWWja0YfJA=", "version":
- * 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com -
+ * resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members`, or
+ * principals, to a single `role`. Principals can be user accounts, service accounts, Google groups,
+ * and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM
+ * predefined role or a user-created custom role. For some types of Google Cloud resources, a
+ * `binding` can also specify a `condition`, which is a logical expression that allows access to a
+ * resource only if the expression evaluates to `true`. A condition can add constraints based on
+ * attributes of the request, the resource, or both. To learn which resources support conditions in
+ * their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+ * /resource-policies). **JSON example:** { "bindings": [ { "role":
+ * "roles/resourcemanager.organizationAdmin", "members": [ "user:mike@example.com",
+ * "group:admins@example.com", "domain:google.com", "serviceAccount:my-project-
+ * id@appspot.gserviceaccount.com" ] }, { "role": "roles/resourcemanager.organizationViewer",
+ * "members": [ "user:eve@example.com" ], "condition": { "title": "expirable access", "description":
+ * "Does not grant access after Sep 2020", "expression": "request.time <
+ * timestamp('2020-10-01T00:00:00.000Z')", } } ], "etag": "BwWWja0YfJA=", "version": 3 } **YAML
+ * example:** bindings: - members: - user:mike@example.com - group:admins@example.com -
  * domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role:
  * roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role:
  * roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not
@@ -64,9 +65,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
-   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
-   * least one member.
+   * Associates a list of `members`, or principals, with a `role`. Optionally, may specify a
+   * `condition` that determines how and when the `bindings` are applied. Each of the `bindings`
+   * must contain at least one principal. The `bindings` in a `Policy` can refer to up to 1,500
+   * principals; up to 250 of these principals can be Google groups. Each occurrence of a principal
+   * counts towards these limits. For example, if the `bindings` grant 50 different roles to
+   * `user:alice@example.com`, and not to any other principal, then you can add another 1,450
+   * principals to the `bindings` in the `Policy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,12 +97,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean iamOwned;
 
   /**
    * If more than one rule is specified, the rules are applied in the following manner: - All
@@ -146,9 +145,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
-   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
-   * least one member.
+   * Associates a list of `members`, or principals, with a `role`. Optionally, may specify a
+   * `condition` that determines how and when the `bindings` are applied. Each of the `bindings`
+   * must contain at least one principal. The `bindings` in a `Policy` can refer to up to 1,500
+   * principals; up to 250 of these principals can be Google groups. Each occurrence of a principal
+   * counts towards these limits. For example, if the `bindings` grant 50 different roles to
+   * `user:alice@example.com`, and not to any other principal, then you can add another 1,450
+   * principals to the `bindings` in the `Policy`.
    * @return value or {@code null} for none
    */
   public java.util.List<Binding> getBindings() {
@@ -156,9 +159,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
-   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
-   * least one member.
+   * Associates a list of `members`, or principals, with a `role`. Optionally, may specify a
+   * `condition` that determines how and when the `bindings` are applied. Each of the `bindings`
+   * must contain at least one principal. The `bindings` in a `Policy` can refer to up to 1,500
+   * principals; up to 250 of these principals can be Google groups. Each occurrence of a principal
+   * counts towards these limits. For example, if the `bindings` grant 50 different roles to
+   * `user:alice@example.com`, and not to any other principal, then you can add another 1,450
+   * principals to the `bindings` in the `Policy`.
    * @param bindings bindings or {@code null} for none
    */
   public Policy setBindings(java.util.List<Binding> bindings) {
@@ -240,21 +247,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy encodeEtag(byte[] etag) {
     this.etag = com.google.api.client.util.Base64.encodeBase64URLSafeString(etag);
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIamOwned() {
-    return iamOwned;
-  }
-
-  /**
-   * @param iamOwned iamOwned or {@code null} for none
-   */
-  public Policy setIamOwned(java.lang.Boolean iamOwned) {
-    this.iamOwned = iamOwned;
     return this;
   }
 

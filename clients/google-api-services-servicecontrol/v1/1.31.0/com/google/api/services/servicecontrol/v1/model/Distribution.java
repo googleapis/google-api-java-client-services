@@ -18,9 +18,9 @@ package com.google.api.services.servicecontrol.v1.model;
 
 /**
  * Distribution represents a frequency distribution of double-valued sample points. It contains the
- * size of the population of sample points plus additional optional information: - the arithmetic
- * mean of the samples - the minimum and maximum of the samples - the sum-squared-deviation of the
- * samples, used to compute variance - a histogram of the values of the sample points
+ * size of the population of sample points plus additional optional information: * the arithmetic
+ * mean of the samples * the minimum and maximum of the samples * the sum-squared-deviation of the
+ * samples, used to compute variance * a histogram of the values of the sample points
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:

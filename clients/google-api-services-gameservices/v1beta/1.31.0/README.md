@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-gameservices</artifactId>
-      <version>v1beta-rev20210929-1.32.1</version>
+      <version>v1beta-rev20211021-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-gameservices:v1beta-rev20210929-1.32.1'
+  compile 'com.google.apis:google-api-services-gameservices:v1beta-rev20211021-1.32.1'
 }
 ```
 

@@ -48,7 +48,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Immutable. The URI of the hub that this spoke is attached to.
+   * Immutable. The name of the hub that this spoke is attached to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The URI of the hub that this spoke is attached to.
+   * Immutable. The name of the hub that this spoke is attached to.
    * @return value or {@code null} for none
    */
   public java.lang.String getHub() {
@@ -157,7 +157,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The URI of the hub that this spoke is attached to.
+   * Immutable. The name of the hub that this spoke is attached to.
    * @param hub hub or {@code null} for none
    */
   public Spoke setHub(java.lang.String hub) {

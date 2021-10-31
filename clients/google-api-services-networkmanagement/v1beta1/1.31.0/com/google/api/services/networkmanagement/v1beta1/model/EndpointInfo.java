@@ -60,6 +60,13 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
+   * URI of the source telemetry agent this packet originates from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceAgentUri;
+
+  /**
    * Source IP address.
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
    */
   public EndpointInfo setProtocol(java.lang.String protocol) {
     this.protocol = protocol;
+    return this;
+  }
+
+  /**
+   * URI of the source telemetry agent this packet originates from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceAgentUri() {
+    return sourceAgentUri;
+  }
+
+  /**
+   * URI of the source telemetry agent this packet originates from.
+   * @param sourceAgentUri sourceAgentUri or {@code null} for none
+   */
+  public EndpointInfo setSourceAgentUri(java.lang.String sourceAgentUri) {
+    this.sourceAgentUri = sourceAgentUri;
     return this;
   }
 

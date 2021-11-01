@@ -712,6 +712,165 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
     public class Locations {
 
       /**
+       * Translates a large volume of document in asynchronous batch mode. This function provides real-
+       * time output as the inputs are being processed. If caller cancels a request, the partial results
+       * (for an input file, it's all or nothing) may still be available on the specified output location.
+       * This call returns immediately and you can use google.longrunning.Operation.name to poll the
+       * status of the call.
+       *
+       * Create a request for the method "locations.batchTranslateDocument".
+       *
+       * This request holds the parameters needed by the translate server.  After setting any optional
+       * parameters, call the {@link BatchTranslateDocument#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       *        Translation models or glossaries within the same region (have the same location-id) can be
+       *        used, otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param content the {@link com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest}
+       * @return the request
+       */
+      public BatchTranslateDocument batchTranslateDocument(java.lang.String parent, com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest content) throws java.io.IOException {
+        BatchTranslateDocument result = new BatchTranslateDocument(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchTranslateDocument extends TranslateRequest<com.google.api.services.translate.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+parent}:batchTranslateDocument";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Translates a large volume of document in asynchronous batch mode. This function provides real-
+         * time output as the inputs are being processed. If caller cancels a request, the partial results
+         * (for an input file, it's all or nothing) may still be available on the specified output
+         * location. This call returns immediately and you can use google.longrunning.Operation.name to
+         * poll the status of the call.
+         *
+         * Create a request for the method "locations.batchTranslateDocument".
+         *
+         * This request holds the parameters needed by the the translate server.  After setting any
+         * optional parameters, call the {@link BatchTranslateDocument#execute()} method to invoke the
+         * remote operation. <p> {@link BatchTranslateDocument#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       *        Translation models or glossaries within the same region (have the same location-id) can be
+       *        used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         * @param content the {@link com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest}
+         * @since 1.13
+         */
+        protected BatchTranslateDocument(java.lang.String parent, com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest content) {
+          super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchTranslateDocument set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchTranslateDocument) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchTranslateDocument setAccessToken(java.lang.String accessToken) {
+          return (BatchTranslateDocument) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchTranslateDocument setAlt(java.lang.String alt) {
+          return (BatchTranslateDocument) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchTranslateDocument setCallback(java.lang.String callback) {
+          return (BatchTranslateDocument) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchTranslateDocument setFields(java.lang.String fields) {
+          return (BatchTranslateDocument) super.setFields(fields);
+        }
+
+        @Override
+        public BatchTranslateDocument setKey(java.lang.String key) {
+          return (BatchTranslateDocument) super.setKey(key);
+        }
+
+        @Override
+        public BatchTranslateDocument setOauthToken(java.lang.String oauthToken) {
+          return (BatchTranslateDocument) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchTranslateDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchTranslateDocument) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchTranslateDocument setQuotaUser(java.lang.String quotaUser) {
+          return (BatchTranslateDocument) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchTranslateDocument setUploadType(java.lang.String uploadType) {
+          return (BatchTranslateDocument) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchTranslateDocument setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchTranslateDocument) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`. The `global` location is not supported for batch
+         * translation. Only AutoML Translation models or glossaries within the same region (have
+         * the same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       Translation models or glossaries within the same region (have the same location-id) can be used,
+       otherwise an INVALID_ARGUMENT (400) error is returned.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`. The `global` location is not supported for batch
+         * translation. Only AutoML Translation models or glossaries within the same region (have
+         * the same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         */
+        public BatchTranslateDocument setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchTranslateDocument set(String parameterName, Object value) {
+          return (BatchTranslateDocument) super.set(parameterName, value);
+        }
+      }
+      /**
        * Translates a large volume of text in asynchronous batch mode. This function provides real-time
        * output as the inputs are being processed. If caller cancels a request, the partial results (for
        * an input file, it's all or nothing) may still be available on the specified output location. This
@@ -1587,6 +1746,163 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Translates documents in synchronous mode.
+       *
+       * Create a request for the method "locations.translateDocument".
+       *
+       * This request holds the parameters needed by the translate server.  After setting any optional
+       * parameters, call the {@link TranslateDocument#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
+       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
+       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param content the {@link com.google.api.services.translate.v3.model.TranslateDocumentRequest}
+       * @return the request
+       */
+      public TranslateDocument translateDocument(java.lang.String parent, com.google.api.services.translate.v3.model.TranslateDocumentRequest content) throws java.io.IOException {
+        TranslateDocument result = new TranslateDocument(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class TranslateDocument extends TranslateRequest<com.google.api.services.translate.v3.model.TranslateDocumentResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}:translateDocument";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Translates documents in synchronous mode.
+         *
+         * Create a request for the method "locations.translateDocument".
+         *
+         * This request holds the parameters needed by the the translate server.  After setting any
+         * optional parameters, call the {@link TranslateDocument#execute()} method to invoke the remote
+         * operation. <p> {@link TranslateDocument#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
+       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
+       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+         * @param content the {@link com.google.api.services.translate.v3.model.TranslateDocumentRequest}
+         * @since 1.13
+         */
+        protected TranslateDocument(java.lang.String parent, com.google.api.services.translate.v3.model.TranslateDocumentRequest content) {
+          super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.TranslateDocumentResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public TranslateDocument set$Xgafv(java.lang.String $Xgafv) {
+          return (TranslateDocument) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public TranslateDocument setAccessToken(java.lang.String accessToken) {
+          return (TranslateDocument) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public TranslateDocument setAlt(java.lang.String alt) {
+          return (TranslateDocument) super.setAlt(alt);
+        }
+
+        @Override
+        public TranslateDocument setCallback(java.lang.String callback) {
+          return (TranslateDocument) super.setCallback(callback);
+        }
+
+        @Override
+        public TranslateDocument setFields(java.lang.String fields) {
+          return (TranslateDocument) super.setFields(fields);
+        }
+
+        @Override
+        public TranslateDocument setKey(java.lang.String key) {
+          return (TranslateDocument) super.setKey(key);
+        }
+
+        @Override
+        public TranslateDocument setOauthToken(java.lang.String oauthToken) {
+          return (TranslateDocument) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public TranslateDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (TranslateDocument) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public TranslateDocument setQuotaUser(java.lang.String quotaUser) {
+          return (TranslateDocument) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public TranslateDocument setUploadType(java.lang.String uploadType) {
+          return (TranslateDocument) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public TranslateDocument setUploadProtocol(java.lang.String uploadProtocol) {
+          return (TranslateDocument) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
+         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
+         * required for requests using AutoML models or custom glossaries. Models and glossaries
+         * must be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT
+         * (400) error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
+       `projects/{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       or custom glossaries. Models and glossaries must be within the same region (have the same location-
+       id), otherwise an INVALID_ARGUMENT (400) error is returned.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Location to make a regional call. Format: `projects/{project-number-or-
+         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
+         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
+         * required for requests using AutoML models or custom glossaries. Models and glossaries
+         * must be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT
+         * (400) error is returned.
+         */
+        public TranslateDocument setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public TranslateDocument set(String parameterName, Object value) {
+          return (TranslateDocument) super.set(parameterName, value);
         }
       }
       /**

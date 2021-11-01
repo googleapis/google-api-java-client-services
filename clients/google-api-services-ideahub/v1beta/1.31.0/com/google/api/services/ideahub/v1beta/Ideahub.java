@@ -20,7 +20,7 @@ package com.google.api.services.ideahub.v1beta;
  * Service definition for Ideahub (v1beta).
  *
  * <p>
- * 
+ * This is an invitation-only API.
  * </p>
  *
  * <p>

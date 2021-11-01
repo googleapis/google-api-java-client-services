@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.translate.v3beta1.model;
+package com.google.api.services.translate.v3.model;
 
 /**
  * The BatchTranslateDocument request.

@@ -1,6 +1,6 @@
 # Idea Hub API Client Library for Java
 
-
+This is an invitation-only API.
 
 This page contains information about getting started with the Idea Hub API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-ideahub</artifactId>
-      <version>v1alpha-rev20210827-1.32.1</version>
+      <version>v1alpha-rev20211029-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-ideahub:v1alpha-rev20210827-1.32.1'
+  compile 'com.google.apis:google-api-services-ideahub:v1alpha-rev20211029-1.32.1'
 }
 ```
 

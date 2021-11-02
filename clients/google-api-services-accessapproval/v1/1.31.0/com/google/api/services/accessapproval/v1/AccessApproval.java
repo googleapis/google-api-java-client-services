@@ -299,7 +299,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link GetAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Name of the AccessApprovalSettings to retrieve.
+     * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
      * @return the request
      */
     public GetAccessApprovalSettings getAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
@@ -326,7 +327,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Name of the AccessApprovalSettings to retrieve.
+       * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
        * @since 1.13
        */
       protected GetAccessApprovalSettings(java.lang.String name) {
@@ -404,17 +406,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         return (GetAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the AccessApprovalSettings to retrieve.
+      /** The name of the AccessApprovalSettings to retrieve. Format:
+     "{projects|folders|organizations}/{id}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       public GetAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -912,7 +921,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the approval request to retrieve.
+       * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -938,7 +948,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the approval request to retrieve.
+         * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1016,17 +1027,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the approval request to retrieve.
+        /** The name of the approval request to retrieve. Format:
+       "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1429,7 +1447,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link GetAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Name of the AccessApprovalSettings to retrieve.
+     * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
      * @return the request
      */
     public GetAccessApprovalSettings getAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
@@ -1456,7 +1475,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Name of the AccessApprovalSettings to retrieve.
+       * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
        * @since 1.13
        */
       protected GetAccessApprovalSettings(java.lang.String name) {
@@ -1534,17 +1554,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         return (GetAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the AccessApprovalSettings to retrieve.
+      /** The name of the AccessApprovalSettings to retrieve. Format:
+     "{projects|folders|organizations}/{id}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       public GetAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2042,7 +2069,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the approval request to retrieve.
+       * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2068,7 +2096,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the approval request to retrieve.
+         * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2146,17 +2175,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the approval request to retrieve.
+        /** The name of the approval request to retrieve. Format:
+       "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2559,7 +2595,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link GetAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Name of the AccessApprovalSettings to retrieve.
+     * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
      * @return the request
      */
     public GetAccessApprovalSettings getAccessApprovalSettings(java.lang.String name) throws java.io.IOException {
@@ -2586,7 +2623,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Name of the AccessApprovalSettings to retrieve.
+       * @param name The name of the AccessApprovalSettings to retrieve. Format:
+     *        "{projects|folders|organizations}/{id}/accessApprovalSettings"
        * @since 1.13
        */
       protected GetAccessApprovalSettings(java.lang.String name) {
@@ -2664,17 +2702,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         return (GetAccessApprovalSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the AccessApprovalSettings to retrieve.
+      /** The name of the AccessApprovalSettings to retrieve. Format:
+     "{projects|folders|organizations}/{id}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Name of the AccessApprovalSettings to retrieve. */
+      /**
+       * The name of the AccessApprovalSettings to retrieve. Format:
+       * "{projects|folders|organizations}/{id}/accessApprovalSettings"
+       */
       public GetAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3172,7 +3217,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the approval request to retrieve.
+       * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3198,7 +3244,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the approval request to retrieve.
+         * @param name The name of the approval request to retrieve. Format:
+       *        "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3276,17 +3323,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the approval request to retrieve.
+        /** The name of the approval request to retrieve. Format:
+       "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the approval request to retrieve. */
+        /**
+         * The name of the approval request to retrieve. Format:
+         * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}"
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

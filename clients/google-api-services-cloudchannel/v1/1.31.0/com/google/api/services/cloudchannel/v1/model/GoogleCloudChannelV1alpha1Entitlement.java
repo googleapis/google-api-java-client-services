@@ -103,8 +103,11 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   private java.lang.String offer;
 
   /**
-   * Extended entitlement parameters. When creating an entitlement, valid parameters' names and
-   * values are defined in the offer's parameter definitions.
+   * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
+   * are defined in the Offer.parameter_definitions. The response may include the following output-
+   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * maximum assignable units for a flexible offer. - num_units: The total commitment for
+   * commitment-based offers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -328,8 +331,11 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   }
 
   /**
-   * Extended entitlement parameters. When creating an entitlement, valid parameters' names and
-   * values are defined in the offer's parameter definitions.
+   * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
+   * are defined in the Offer.parameter_definitions. The response may include the following output-
+   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * maximum assignable units for a flexible offer. - num_units: The total commitment for
+   * commitment-based offers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1alpha1Parameter> getParameters() {
@@ -337,8 +343,11 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   }
 
   /**
-   * Extended entitlement parameters. When creating an entitlement, valid parameters' names and
-   * values are defined in the offer's parameter definitions.
+   * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
+   * are defined in the Offer.parameter_definitions. The response may include the following output-
+   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * maximum assignable units for a flexible offer. - num_units: The total commitment for
+   * commitment-based offers.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudChannelV1alpha1Entitlement setParameters(java.util.List<GoogleCloudChannelV1alpha1Parameter> parameters) {

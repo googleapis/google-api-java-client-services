@@ -30,7 +30,9 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ChangeParametersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Entitlement parameters to update. You can only change editable parameters.
+   * Required. Entitlement parameters to update. You can only change editable parameters. To view
+   * the available Parameters for a request, refer to the Offer.parameter_definitions from the
+   * desired offer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +59,9 @@ public final class GoogleCloudChannelV1ChangeParametersRequest extends com.googl
   private java.lang.String requestId;
 
   /**
-   * Required. Entitlement parameters to update. You can only change editable parameters.
+   * Required. Entitlement parameters to update. You can only change editable parameters. To view
+   * the available Parameters for a request, refer to the Offer.parameter_definitions from the
+   * desired offer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Parameter> getParameters() {
@@ -65,7 +69,9 @@ public final class GoogleCloudChannelV1ChangeParametersRequest extends com.googl
   }
 
   /**
-   * Required. Entitlement parameters to update. You can only change editable parameters.
+   * Required. Entitlement parameters to update. You can only change editable parameters. To view
+   * the available Parameters for a request, refer to the Offer.parameter_definitions from the
+   * desired offer.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudChannelV1ChangeParametersRequest setParameters(java.util.List<GoogleCloudChannelV1Parameter> parameters) {

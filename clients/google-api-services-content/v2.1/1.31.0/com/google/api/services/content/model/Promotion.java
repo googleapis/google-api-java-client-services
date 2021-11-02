@@ -242,11 +242,25 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String promotionDisplayDates;
 
   /**
+   * TimePeriod representation of the promotion display dates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimePeriod promotionDisplayTimePeriod;
+
+  /**
    * Required. String representation of the promotion effective dates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promotionEffectiveDates;
+
+  /**
+   * Required. TimePeriod representation of the promotion effective dates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimePeriod promotionEffectiveTimePeriod;
 
   /**
    * Required. The user provided promotion id to uniquely identify the promotion.
@@ -776,6 +790,23 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * TimePeriod representation of the promotion display dates.
+   * @return value or {@code null} for none
+   */
+  public TimePeriod getPromotionDisplayTimePeriod() {
+    return promotionDisplayTimePeriod;
+  }
+
+  /**
+   * TimePeriod representation of the promotion display dates.
+   * @param promotionDisplayTimePeriod promotionDisplayTimePeriod or {@code null} for none
+   */
+  public Promotion setPromotionDisplayTimePeriod(TimePeriod promotionDisplayTimePeriod) {
+    this.promotionDisplayTimePeriod = promotionDisplayTimePeriod;
+    return this;
+  }
+
+  /**
    * Required. String representation of the promotion effective dates.
    * @return value or {@code null} for none
    */
@@ -789,6 +820,23 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setPromotionEffectiveDates(java.lang.String promotionEffectiveDates) {
     this.promotionEffectiveDates = promotionEffectiveDates;
+    return this;
+  }
+
+  /**
+   * Required. TimePeriod representation of the promotion effective dates.
+   * @return value or {@code null} for none
+   */
+  public TimePeriod getPromotionEffectiveTimePeriod() {
+    return promotionEffectiveTimePeriod;
+  }
+
+  /**
+   * Required. TimePeriod representation of the promotion effective dates.
+   * @param promotionEffectiveTimePeriod promotionEffectiveTimePeriod or {@code null} for none
+   */
+  public Promotion setPromotionEffectiveTimePeriod(TimePeriod promotionEffectiveTimePeriod) {
+    this.promotionEffectiveTimePeriod = promotionEffectiveTimePeriod;
     return this;
   }
 

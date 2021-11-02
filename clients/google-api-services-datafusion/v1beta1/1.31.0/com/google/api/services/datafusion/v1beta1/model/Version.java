@@ -45,6 +45,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean defaultVersion;
 
   /**
+   * Type represents the release availability of the version
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * The version number of the Data Fusion instance, such as '6.0.1.0'.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setDefaultVersion(java.lang.Boolean defaultVersion) {
     this.defaultVersion = defaultVersion;
+    return this;
+  }
+
+  /**
+   * Type represents the release availability of the version
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type represents the release availability of the version
+   * @param type type or {@code null} for none
+   */
+  public Version setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

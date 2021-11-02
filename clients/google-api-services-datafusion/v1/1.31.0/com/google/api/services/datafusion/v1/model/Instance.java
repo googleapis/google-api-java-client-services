@@ -89,6 +89,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Output only. If the instance state is DISABLED, the reason for disabling the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disabledReason;
+
+  /**
    * Display name for an instance.
    * The value may be {@code null}.
    */
@@ -356,6 +363,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. If the instance state is DISABLED, the reason for disabling the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisabledReason() {
+    return disabledReason;
+  }
+
+  /**
+   * Output only. If the instance state is DISABLED, the reason for disabling the instance.
+   * @param disabledReason disabledReason or {@code null} for none
+   */
+  public Instance setDisabledReason(java.util.List<java.lang.String> disabledReason) {
+    this.disabledReason = disabledReason;
     return this;
   }
 

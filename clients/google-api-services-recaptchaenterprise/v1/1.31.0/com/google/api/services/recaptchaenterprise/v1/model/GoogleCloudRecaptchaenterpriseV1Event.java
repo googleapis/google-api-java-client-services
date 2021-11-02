@@ -39,6 +39,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.String expectedAction;
 
   /**
+   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
+   * ideally be hashed using sha256 with stable secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hashedAccountId;
+
+  /**
    * Optional. The site key that was used to invoke reCAPTCHA on your site and generate the token.
    * The value may be {@code null}.
    */
@@ -83,6 +91,55 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setExpectedAction(java.lang.String expectedAction) {
     this.expectedAction = expectedAction;
+    return this;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
+   * ideally be hashed using sha256 with stable secret.
+   * @see #decodeHashedAccountId()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHashedAccountId() {
+    return hashedAccountId;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
+   * ideally be hashed using sha256 with stable secret.
+   * @see #getHashedAccountId()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeHashedAccountId() {
+    return com.google.api.client.util.Base64.decodeBase64(hashedAccountId);
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
+   * ideally be hashed using sha256 with stable secret.
+   * @see #encodeHashedAccountId()
+   * @param hashedAccountId hashedAccountId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setHashedAccountId(java.lang.String hashedAccountId) {
+    this.hashedAccountId = hashedAccountId;
+    return this;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier for the request. The identifier should
+   * ideally be hashed using sha256 with stable secret.
+   * @see #setHashedAccountId()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event encodeHashedAccountId(byte[] hashedAccountId) {
+    this.hashedAccountId = com.google.api.client.util.Base64.encodeBase64URLSafeString(hashedAccountId);
     return this;
   }
 

@@ -39,7 +39,7 @@ public final class Seller extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Optional sub-account ID for the seller.
+   * Output only. Ad manager network code for the seller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class Seller extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional sub-account ID for the seller.
+   * Output only. Ad manager network code for the seller.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubAccountId() {
@@ -73,7 +73,7 @@ public final class Seller extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional sub-account ID for the seller.
+   * Output only. Ad manager network code for the seller.
    * @param subAccountId subAccountId or {@code null} for none
    */
   public Seller setSubAccountId(java.lang.String subAccountId) {

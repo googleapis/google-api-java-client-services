@@ -1522,6 +1522,612 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
       }
 
     }
+    /**
+     * An accessor for creating requests from the Relatedaccountgroupmemberships collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code RecaptchaEnterprise recaptchaenterprise = new RecaptchaEnterprise(...);}
+     *   {@code RecaptchaEnterprise.Relatedaccountgroupmemberships.List request = recaptchaenterprise.relatedaccountgroupmemberships().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Relatedaccountgroupmemberships relatedaccountgroupmemberships() {
+      return new Relatedaccountgroupmemberships();
+    }
+
+    /**
+     * The "relatedaccountgroupmemberships" collection of methods.
+     */
+    public class Relatedaccountgroupmemberships {
+
+      /**
+       * Search group memberships related to a given account.
+       *
+       * Create a request for the method "relatedaccountgroupmemberships.search".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project to search related account group memberships from, in the format
+       *        "projects/{project}".
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest}
+       * @return the request
+       */
+      public Search search(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest content) throws java.io.IOException {
+        Search result = new Search(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Search extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/relatedaccountgroupmemberships:search";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Search group memberships related to a given account.
+         *
+         * Create a request for the method "relatedaccountgroupmemberships.search".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link Search#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project to search related account group memberships from, in the format
+       *        "projects/{project}".
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest}
+         * @since 1.13
+         */
+        protected Search(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Search set$Xgafv(java.lang.String $Xgafv) {
+          return (Search) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Search setAccessToken(java.lang.String accessToken) {
+          return (Search) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Search setAlt(java.lang.String alt) {
+          return (Search) super.setAlt(alt);
+        }
+
+        @Override
+        public Search setCallback(java.lang.String callback) {
+          return (Search) super.setCallback(callback);
+        }
+
+        @Override
+        public Search setFields(java.lang.String fields) {
+          return (Search) super.setFields(fields);
+        }
+
+        @Override
+        public Search setKey(java.lang.String key) {
+          return (Search) super.setKey(key);
+        }
+
+        @Override
+        public Search setOauthToken(java.lang.String oauthToken) {
+          return (Search) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Search) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Search setQuotaUser(java.lang.String quotaUser) {
+          return (Search) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Search setUploadType(java.lang.String uploadType) {
+          return (Search) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Search setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Search) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project to search related account group memberships from, in
+         * the format "projects/{project}".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project to search related account group memberships from, in the format
+       "projects/{project}".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project to search related account group memberships from, in
+         * the format "projects/{project}".
+         */
+        public Search setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Search set(String parameterName, Object value) {
+          return (Search) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Relatedaccountgroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code RecaptchaEnterprise recaptchaenterprise = new RecaptchaEnterprise(...);}
+     *   {@code RecaptchaEnterprise.Relatedaccountgroups.List request = recaptchaenterprise.relatedaccountgroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Relatedaccountgroups relatedaccountgroups() {
+      return new Relatedaccountgroups();
+    }
+
+    /**
+     * The "relatedaccountgroups" collection of methods.
+     */
+    public class Relatedaccountgroups {
+
+      /**
+       * List groups of related accounts.
+       *
+       * Create a request for the method "relatedaccountgroups.list".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project to list related account groups from, in the format
+       *        "projects/{project}".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/relatedaccountgroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * List groups of related accounts.
+         *
+         * Create a request for the method "relatedaccountgroups.list".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project to list related account groups from, in the format
+       *        "projects/{project}".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(RecaptchaEnterprise.this, "GET", REST_PATH, null, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project to list related account groups from, in the format
+         * "projects/{project}".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project to list related account groups from, in the format
+       "projects/{project}".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project to list related account groups from, in the format
+         * "projects/{project}".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of groups to return. The service may return fewer than this
+         * value. If unspecified, at most 50 groups will be returned. The maximum value is 1000;
+         * values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of groups to return. The service may return fewer than this value. If
+       unspecified, at most 50 groups will be returned. The maximum value is 1000; values above 1000 will
+       be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of groups to return. The service may return fewer than this
+         * value. If unspecified, at most 50 groups will be returned. The maximum value is 1000;
+         * values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListRelatedAccountGroups` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListRelatedAccountGroups` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListRelatedAccountGroups` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListRelatedAccountGroups` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListRelatedAccountGroups` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListRelatedAccountGroups` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Memberships collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code RecaptchaEnterprise recaptchaenterprise = new RecaptchaEnterprise(...);}
+       *   {@code RecaptchaEnterprise.Memberships.List request = recaptchaenterprise.memberships().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Memberships memberships() {
+        return new Memberships();
+      }
+
+      /**
+       * The "memberships" collection of methods.
+       */
+      public class Memberships {
+
+        /**
+         * Get the memberships in a group of related accounts.
+         *
+         * Create a request for the method "memberships.list".
+         *
+         * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name for the related account group in the format
+         *        `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/memberships";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/relatedaccountgroups/[^/]+$");
+
+          /**
+           * Get the memberships in a group of related accounts.
+           *
+           * Create a request for the method "memberships.list".
+           *
+           * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name for the related account group in the format
+         *        `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(RecaptchaEnterprise.this, "GET", REST_PATH, null, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/relatedaccountgroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name for the related account group in the format
+           * `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name for the related account group in the format
+         `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name for the related account group in the format
+           * `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/relatedaccountgroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of accounts to return. The service may return fewer than
+           * this value. If unspecified, at most 50 accounts will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of accounts to return. The service may return fewer than this value.
+         If unspecified, at most 50 accounts will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of accounts to return. The service may return fewer than
+           * this value. If unspecified, at most 50 accounts will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships`
+           * call. When paginating, all other parameters provided to
+           * `ListRelatedAccountGroupMemberships` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships` call. When
+         paginating, all other parameters provided to `ListRelatedAccountGroupMemberships` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListRelatedAccountGroupMemberships`
+           * call. When paginating, all other parameters provided to
+           * `ListRelatedAccountGroupMemberships` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**

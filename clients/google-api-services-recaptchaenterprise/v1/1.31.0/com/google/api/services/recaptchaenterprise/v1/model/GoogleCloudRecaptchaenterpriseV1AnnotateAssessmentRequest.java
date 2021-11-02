@@ -40,6 +40,16 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.lang.String annotation;
 
   /**
+   * Optional. Optional unique stable hashed user identifier to apply to the assessment. This is an
+   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
+   * identifier is not yet known in the initial request. It is recommended that the identifier is
+   * hashed using hmac-sha256 with stable secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hashedAccountId;
+
+  /**
    * Optional. Optional reasons for the annotation that will be assigned to the Event.
    * The value may be {@code null}.
    */
@@ -64,6 +74,63 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
    */
   public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setAnnotation(java.lang.String annotation) {
     this.annotation = annotation;
+    return this;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier to apply to the assessment. This is an
+   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
+   * identifier is not yet known in the initial request. It is recommended that the identifier is
+   * hashed using hmac-sha256 with stable secret.
+   * @see #decodeHashedAccountId()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHashedAccountId() {
+    return hashedAccountId;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier to apply to the assessment. This is an
+   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
+   * identifier is not yet known in the initial request. It is recommended that the identifier is
+   * hashed using hmac-sha256 with stable secret.
+   * @see #getHashedAccountId()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeHashedAccountId() {
+    return com.google.api.client.util.Base64.decodeBase64(hashedAccountId);
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier to apply to the assessment. This is an
+   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
+   * identifier is not yet known in the initial request. It is recommended that the identifier is
+   * hashed using hmac-sha256 with stable secret.
+   * @see #encodeHashedAccountId()
+   * @param hashedAccountId hashedAccountId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest setHashedAccountId(java.lang.String hashedAccountId) {
+    this.hashedAccountId = hashedAccountId;
+    return this;
+  }
+
+  /**
+   * Optional. Optional unique stable hashed user identifier to apply to the assessment. This is an
+   * alternative to setting the hashed_account_id in CreateAssessment, for example when the account
+   * identifier is not yet known in the initial request. It is recommended that the identifier is
+   * hashed using hmac-sha256 with stable secret.
+   * @see #setHashedAccountId()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest encodeHashedAccountId(byte[] hashedAccountId) {
+    this.hashedAccountId = com.google.api.client.util.Base64.encodeBase64URLSafeString(hashedAccountId);
     return this;
   }
 

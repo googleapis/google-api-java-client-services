@@ -37,7 +37,8 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
   private java.lang.String offer;
 
   /**
-   * Optional. Parameters needed to purchase the Offer.
+   * Optional. Parameters needed to purchase the Offer. To view the available Parameters refer to
+   * the Offer.parameter_definitions from the desired offer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +82,8 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
   }
 
   /**
-   * Optional. Parameters needed to purchase the Offer.
+   * Optional. Parameters needed to purchase the Offer. To view the available Parameters refer to
+   * the Offer.parameter_definitions from the desired offer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Parameter> getParameters() {
@@ -89,7 +91,8 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
   }
 
   /**
-   * Optional. Parameters needed to purchase the Offer.
+   * Optional. Parameters needed to purchase the Offer. To view the available Parameters refer to
+   * the Offer.parameter_definitions from the desired offer.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudChannelV1ChangeOfferRequest setParameters(java.util.List<GoogleCloudChannelV1Parameter> parameters) {

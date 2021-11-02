@@ -74,6 +74,13 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private ObjectConditions objectConditions;
 
   /**
+   * A POSIX Filesystem data sink.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PosixFilesystem posixDataSink;
+
+  /**
    * A POSIX Filesystem data source.
    * The value may be {@code null}.
    */
@@ -191,6 +198,23 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setObjectConditions(ObjectConditions objectConditions) {
     this.objectConditions = objectConditions;
+    return this;
+  }
+
+  /**
+   * A POSIX Filesystem data sink.
+   * @return value or {@code null} for none
+   */
+  public PosixFilesystem getPosixDataSink() {
+    return posixDataSink;
+  }
+
+  /**
+   * A POSIX Filesystem data sink.
+   * @param posixDataSink posixDataSink or {@code null} for none
+   */
+  public TransferSpec setPosixDataSink(PosixFilesystem posixDataSink) {
+    this.posixDataSink = posixDataSink;
     return this;
   }
 

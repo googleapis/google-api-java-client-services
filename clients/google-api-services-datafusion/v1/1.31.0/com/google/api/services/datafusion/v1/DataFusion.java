@@ -557,7 +557,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
+         * @param parent Required. The instance's project and location in the format projects/{project}/locations/{location}.
          * @param content the {@link com.google.api.services.datafusion.v1.model.Instance}
          * @return the request
          */
@@ -585,7 +585,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
+           * @param parent Required. The instance's project and location in the format projects/{project}/locations/{location}.
            * @param content the {@link com.google.api.services.datafusion.v1.model.Instance}
            * @since 1.13
            */
@@ -655,20 +655,21 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The instance's project and location in the format
+           * Required. The instance's project and location in the format
            * projects/{project}/locations/{location}.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The instance's project and location in the format projects/{project}/locations/{location}.
+          /** Required. The instance's project and location in the format
+         projects/{project}/locations/{location}.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The instance's project and location in the format
+           * Required. The instance's project and location in the format
            * projects/{project}/locations/{location}.
            */
           public Create setParent(java.lang.String parent) {
@@ -681,17 +682,17 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** The name of the instance to create. */
+          /** Required. The name of the instance to create. */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
-          /** The name of the instance to create.
+          /** Required. The name of the instance to create.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
           }
 
-          /** The name of the instance to create. */
+          /** Required. The name of the instance to create. */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -710,7 +711,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The instance resource name in the format
+         * @param name Required. The instance resource name in the format
          *        projects/{project}/locations/{location}/instances/{instance}
          * @return the request
          */
@@ -738,7 +739,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The instance resource name in the format
+           * @param name Required. The instance resource name in the format
          *        projects/{project}/locations/{location}/instances/{instance}
            * @since 1.13
            */
@@ -808,13 +809,13 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The instance resource name in the format
+           * Required. The instance resource name in the format
            * projects/{project}/locations/{location}/instances/{instance}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The instance resource name in the format
+          /** Required. The instance resource name in the format
          projects/{project}/locations/{location}/instances/{instance}
            */
           public java.lang.String getName() {
@@ -822,7 +823,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The instance resource name in the format
+           * Required. The instance resource name in the format
            * projects/{project}/locations/{location}/instances/{instance}
            */
           public Delete setName(java.lang.String name) {
@@ -848,7 +849,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The instance resource name in the format
+         * @param name Required. The instance resource name in the format
          *        projects/{project}/locations/{location}/instances/{instance}.
          * @return the request
          */
@@ -875,7 +876,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The instance resource name in the format
+           * @param name Required. The instance resource name in the format
          *        projects/{project}/locations/{location}/instances/{instance}.
            * @since 1.13
            */
@@ -955,13 +956,13 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The instance resource name in the format
+           * Required. The instance resource name in the format
            * projects/{project}/locations/{location}/instances/{instance}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The instance resource name in the format
+          /** Required. The instance resource name in the format
          projects/{project}/locations/{location}/instances/{instance}.
            */
           public java.lang.String getName() {
@@ -969,7 +970,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The instance resource name in the format
+           * Required. The instance resource name in the format
            * projects/{project}/locations/{location}/instances/{instance}.
            */
           public Get setName(java.lang.String name) {
@@ -1179,7 +1180,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location for which to retrieve instance information in the format
+         * @param parent Required. The project and location for which to retrieve instance information in the format
          *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
          *        then all regions available to the project are queried, and the results are aggregated.
          * @return the request
@@ -1207,7 +1208,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location for which to retrieve instance information in the format
+           * @param parent Required. The project and location for which to retrieve instance information in the format
          *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
          *        then all regions available to the project are queried, and the results are aggregated.
            * @since 1.13
@@ -1288,15 +1289,15 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The project and location for which to retrieve instance information in the format
-           * projects/{project}/locations/{location}. If the location is specified as '-'
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}. If the location is specified as '-'
            * (wildcard), then all regions available to the project are queried, and the results are
            * aggregated.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The project and location for which to retrieve instance information in the format
+          /** Required. The project and location for which to retrieve instance information in the format
          projects/{project}/locations/{location}. If the location is specified as '-' (wildcard), then all
          regions available to the project are queried, and the results are aggregated.
            */
@@ -1305,8 +1306,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The project and location for which to retrieve instance information in the format
-           * projects/{project}/locations/{location}. If the location is specified as '-'
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}. If the location is specified as '-'
            * (wildcard), then all regions available to the project are queried, and the results are
            * aggregated.
            */
@@ -1574,7 +1575,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Restart#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Fusion instance which need to be restarted in the form of
+         * @param name Required. Name of the Data Fusion instance which need to be restarted in the form of
          *        projects/{project}/locations/{location}/instances/{instance}
          * @param content the {@link com.google.api.services.datafusion.v1.model.RestartInstanceRequest}
          * @return the request
@@ -1603,7 +1604,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * Restart#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Fusion instance which need to be restarted in the form of
+           * @param name Required. Name of the Data Fusion instance which need to be restarted in the form of
          *        projects/{project}/locations/{location}/instances/{instance}
            * @param content the {@link com.google.api.services.datafusion.v1.model.RestartInstanceRequest}
            * @since 1.13
@@ -1674,13 +1675,13 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Name of the Data Fusion instance which need to be restarted in the form of
+           * Required. Name of the Data Fusion instance which need to be restarted in the form of
            * projects/{project}/locations/{location}/instances/{instance}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Fusion instance which need to be restarted in the form of
+          /** Required. Name of the Data Fusion instance which need to be restarted in the form of
          projects/{project}/locations/{location}/instances/{instance}
            */
           public java.lang.String getName() {
@@ -1688,7 +1689,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Name of the Data Fusion instance which need to be restarted in the form of
+           * Required. Name of the Data Fusion instance which need to be restarted in the form of
            * projects/{project}/locations/{location}/instances/{instance}
            */
           public Restart setName(java.lang.String name) {

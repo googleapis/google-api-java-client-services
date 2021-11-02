@@ -30,10 +30,10 @@ package com.google.api.services.accessapproval.v1.model;
 public final class AccessApprovalSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
-   * method). If the field is true, that indicates that at least one service is enrolled for Access
-   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
-   * the organization since organizations do not have ancestors).
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that at least one service is enrolled for Access Approval in
+   * one or more ancestors of the Project or Folder (this field will always be unset for the
+   * organization since organizations do not have ancestors).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +71,10 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> notificationEmails;
 
   /**
-   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
-   * method). If the field is true, that indicates that at least one service is enrolled for Access
-   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
-   * the organization since organizations do not have ancestors).
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that at least one service is enrolled for Access Approval in
+   * one or more ancestors of the Project or Folder (this field will always be unset for the
+   * organization since organizations do not have ancestors).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnrolledAncestor() {
@@ -82,10 +82,10 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. This field is read only (not settable via UpdateAccessAccessApprovalSettings
-   * method). If the field is true, that indicates that at least one service is enrolled for Access
-   * Approval in one or more ancestors of the Project or Folder (this field will always be unset for
-   * the organization since organizations do not have ancestors).
+   * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
+   * the field is true, that indicates that at least one service is enrolled for Access Approval in
+   * one or more ancestors of the Project or Folder (this field will always be unset for the
+   * organization since organizations do not have ancestors).
    * @param enrolledAncestor enrolledAncestor or {@code null} for none
    */
   public AccessApprovalSettings setEnrolledAncestor(java.lang.Boolean enrolledAncestor) {

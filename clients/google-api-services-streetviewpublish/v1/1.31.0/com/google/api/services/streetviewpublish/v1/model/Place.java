@@ -31,7 +31,7 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class Place extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output-only. The language_code that the name is localized with. This should be the
+   * Output only. The language_code that the name is localized with. This should be the
    * language_code specified in the request, but may be a fallback.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class Place extends com.google.api.client.json.GenericJson {
   private java.lang.String languageCode;
 
   /**
-   * Output-only. The name of the place, localized to the language_code.
+   * Output only. The name of the place, localized to the language_code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class Place extends com.google.api.client.json.GenericJson {
   private java.lang.String placeId;
 
   /**
-   * Output-only. The language_code that the name is localized with. This should be the
+   * Output only. The language_code that the name is localized with. This should be the
    * language_code specified in the request, but may be a fallback.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class Place extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output-only. The language_code that the name is localized with. This should be the
+   * Output only. The language_code that the name is localized with. This should be the
    * language_code specified in the request, but may be a fallback.
    * @param languageCode languageCode or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Place extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output-only. The name of the place, localized to the language_code.
+   * Output only. The name of the place, localized to the language_code.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class Place extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output-only. The name of the place, localized to the language_code.
+   * Output only. The name of the place, localized to the language_code.
    * @param name name or {@code null} for none
    */
   public Place setName(java.lang.String name) {

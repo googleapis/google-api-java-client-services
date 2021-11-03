@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest extends c
    * Required. The IDs for this type, such as the store IDs for "pickup-in-store" or the region IDs
    * for "same-day-delivery" to be added for this type. Duplicate IDs will be automatically ignored.
    * At least 1 value is required, and a maximum of 2000 values are allowed. Each value must be a
-   * string with a length limit of 10 characters, matching the pattern [a-zA-Z0-9_-]+, such as
+   * string with a length limit of 10 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as
    * "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned. If the total number
    * of place IDs exceeds 2000 for this type after adding, then the update will be rejected.
    * The value may be {@code null}.
@@ -114,7 +114,7 @@ public final class GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest extends c
    * Required. The IDs for this type, such as the store IDs for "pickup-in-store" or the region IDs
    * for "same-day-delivery" to be added for this type. Duplicate IDs will be automatically ignored.
    * At least 1 value is required, and a maximum of 2000 values are allowed. Each value must be a
-   * string with a length limit of 10 characters, matching the pattern [a-zA-Z0-9_-]+, such as
+   * string with a length limit of 10 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as
    * "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned. If the total number
    * of place IDs exceeds 2000 for this type after adding, then the update will be rejected.
    * @return value or {@code null} for none
@@ -127,7 +127,7 @@ public final class GoogleCloudRetailV2alphaAddFulfillmentPlacesRequest extends c
    * Required. The IDs for this type, such as the store IDs for "pickup-in-store" or the region IDs
    * for "same-day-delivery" to be added for this type. Duplicate IDs will be automatically ignored.
    * At least 1 value is required, and a maximum of 2000 values are allowed. Each value must be a
-   * string with a length limit of 10 characters, matching the pattern [a-zA-Z0-9_-]+, such as
+   * string with a length limit of 10 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as
    * "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned. If the total number
    * of place IDs exceeds 2000 for this type after adding, then the update will be rejected.
    * @param placeIds placeIds or {@code null} for none

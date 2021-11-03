@@ -376,17 +376,17 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The device type context for completion suggestions. It is useful to apply different
-           * suggestions on different device types, e.g. DESKTOP, MOBILE. If it is empty, the
-           * suggestions are across all device types. Supported formats: * UNKNOWN_DEVICE_TYPE *
-           * DESKTOP * MOBILE * A customized string starts with OTHER_, e.g. OTHER_IPHONE.
+           * suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the
+           * suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` *
+           * `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String deviceType;
 
           /** The device type context for completion suggestions. It is useful to apply different suggestions on
-         different device types, e.g. DESKTOP, MOBILE. If it is empty, the suggestions are across all device
-         types. Supported formats: * UNKNOWN_DEVICE_TYPE * DESKTOP * MOBILE * A customized string starts
-         with OTHER_, e.g. OTHER_IPHONE.
+         different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all
+         device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized
+         string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           public java.lang.String getDeviceType() {
             return deviceType;
@@ -394,9 +394,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The device type context for completion suggestions. It is useful to apply different
-           * suggestions on different device types, e.g. DESKTOP, MOBILE. If it is empty, the
-           * suggestions are across all device types. Supported formats: * UNKNOWN_DEVICE_TYPE *
-           * DESKTOP * MOBILE * A customized string starts with OTHER_, e.g. OTHER_IPHONE.
+           * suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the
+           * suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` *
+           * `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
            */
           public CompleteQuery setDeviceType(java.lang.String deviceType) {
             this.deviceType = deviceType;

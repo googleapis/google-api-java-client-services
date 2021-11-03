@@ -40,7 +40,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
    * KEY_1_LIKE_THIS.
    * The value may be {@code null}.
    */
@@ -418,7 +418,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
    * KEY_1_LIKE_THIS.
    * @return value or {@code null} for none
    */
@@ -437,7 +437,7 @@ public final class GoogleCloudRetailV2betaProduct extends com.google.api.client.
    * {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all
    * below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. *
    * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable
-   * attribute, the key must match the pattern: a-zA-Z0-9*. For example, key0LikeThis or
+   * attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, key0LikeThis or
    * KEY_1_LIKE_THIS.
    * @param attributes attributes or {@code null} for none
    */

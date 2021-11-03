@@ -62,6 +62,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   private java.lang.String name;
 
   /**
+   * Output only. Output Only. Specifies the type of the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String promotionType;
+
+  /**
    * Output only. 2-letter ISO region code where the promotion is available in. Ex. "US" Please
    * refers to: https://en.wikipedia.org/wiki/ISO_3166-1
    * The value may be {@code null}.
@@ -155,6 +162,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Promotion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Output Only. Specifies the type of the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPromotionType() {
+    return promotionType;
+  }
+
+  /**
+   * Output only. Output Only. Specifies the type of the promotion.
+   * @param promotionType promotionType or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Promotion setPromotionType(java.lang.String promotionType) {
+    this.promotionType = promotionType;
     return this;
   }
 

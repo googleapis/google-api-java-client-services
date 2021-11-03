@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
   /**
    * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
    * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
    * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * The value may be {@code null}.
    */
@@ -158,7 +158,7 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
   /**
    * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
    * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
    * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * @return value or {@code null} for none
    */
@@ -169,7 +169,7 @@ public final class GoogleCloudRetailV2betaImportProductsRequest extends com.goog
   /**
    * Unique identifier provided by client, within the ancestor dataset scope. Ensures idempotency
    * and used for request deduplication. Server-generated if unspecified. Up to 128 characters long
-   * and must match the pattern: "[a-zA-Z0-9_]+". This is returned as Operation.name in
+   * and must match the pattern: `[a-zA-Z0-9_]+`. This is returned as Operation.name in
    * ImportMetadata. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
    * @param requestId requestId or {@code null} for none
    */

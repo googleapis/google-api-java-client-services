@@ -120,6 +120,15 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
   private GoogleCloudRecommenderV1beta1RecommendationStateInfo stateInfo;
 
   /**
+   * Corresponds to a mutually exclusive group ID within a recommender. A non-empty ID indicates
+   * that the recommendation belongs to a mutually exclusive group. This means that only one
+   * recommendation within the group is suggested to be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String xorGroupId;
+
+  /**
    * Optional set of additional impact that this recommendation may have when trying to optimize for
    * the primary category. These may be positive or negative.
    * @return value or {@code null} for none
@@ -315,6 +324,27 @@ public final class GoogleCloudRecommenderV1beta1Recommendation extends com.googl
    */
   public GoogleCloudRecommenderV1beta1Recommendation setStateInfo(GoogleCloudRecommenderV1beta1RecommendationStateInfo stateInfo) {
     this.stateInfo = stateInfo;
+    return this;
+  }
+
+  /**
+   * Corresponds to a mutually exclusive group ID within a recommender. A non-empty ID indicates
+   * that the recommendation belongs to a mutually exclusive group. This means that only one
+   * recommendation within the group is suggested to be applied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getXorGroupId() {
+    return xorGroupId;
+  }
+
+  /**
+   * Corresponds to a mutually exclusive group ID within a recommender. A non-empty ID indicates
+   * that the recommendation belongs to a mutually exclusive group. This means that only one
+   * recommendation within the group is suggested to be applied.
+   * @param xorGroupId xorGroupId or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Recommendation setXorGroupId(java.lang.String xorGroupId) {
+    this.xorGroupId = xorGroupId;
     return this;
   }
 

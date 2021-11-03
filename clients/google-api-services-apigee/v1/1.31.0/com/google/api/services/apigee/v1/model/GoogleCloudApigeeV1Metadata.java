@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates additional information about query execution.
+ * Encapsulates additional information about query execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -37,9 +37,9 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
   private java.util.List<java.lang.String> errors;
 
   /**
-   * List of additional information such as data source, if result was truncated etc. E.g "notices":
-   * [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-40de-
-   * 4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]
+   * List of additional information such as data source, if result was truncated. For example: ```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
+   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +63,9 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
   }
 
   /**
-   * List of additional information such as data source, if result was truncated etc. E.g "notices":
-   * [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-40de-
-   * 4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]
+   * List of additional information such as data source, if result was truncated. For example: ```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
+   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotices() {
@@ -73,9 +73,9 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
   }
 
   /**
-   * List of additional information such as data source, if result was truncated etc. E.g "notices":
-   * [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-40de-
-   * 4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]
+   * List of additional information such as data source, if result was truncated. For example: ```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
+   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * @param notices notices or {@code null} for none
    */
   public GoogleCloudApigeeV1Metadata setNotices(java.util.List<java.lang.String> notices) {

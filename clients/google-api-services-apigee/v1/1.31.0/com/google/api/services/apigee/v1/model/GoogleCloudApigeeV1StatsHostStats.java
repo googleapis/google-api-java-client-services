@@ -17,8 +17,8 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates the hostname wrapper: "hosts": [ { "metrics": [ { "name":
- * "sum(message_count)", "values": [ "2.52056245E8" ] } ], "name": "example.com" } ]
+ * Encapsulates the hostname wrapper: ``` "hosts": [ { "metrics": [ { "name": "sum(message_count)",
+ * "values": [ "2.52056245E8" ] } ], "name": "example.com" } ]```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,13 +45,13 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under hostnames which
-   * will contain metrics values and the dimension name. Example: "hosts": [ { "dimensions": [ {
+   * provided. If no dimensions are provided, then only the top-level metrics are provided. If
+   * dimensions are included, then there will be a top-level dimensions field under hostnames which
+   * will contain metrics values and the dimension name. Example: ``` "hosts": [ { "dimensions": [ {
    * "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
-   * "nit_proxy" } ], "name": "example.com" } ] OR "hosts": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ] This field
-   * contains the list of metric values.
+   * "nit_proxy" } ], "name": "example.com" } ]``` OR ```"hosts": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ]``` List of
+   * metric values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +64,14 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
   }
 
   /**
-   * This field contains the hostname used in query.
+   * Hostname used in query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1DimensionMetric> getDimensions() {
@@ -79,7 +79,7 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
   }
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * @param dimensions dimensions or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsHostStats setDimensions(java.util.List<GoogleCloudApigeeV1DimensionMetric> dimensions) {
@@ -89,13 +89,13 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under hostnames which
-   * will contain metrics values and the dimension name. Example: "hosts": [ { "dimensions": [ {
+   * provided. If no dimensions are provided, then only the top-level metrics are provided. If
+   * dimensions are included, then there will be a top-level dimensions field under hostnames which
+   * will contain metrics values and the dimension name. Example: ``` "hosts": [ { "dimensions": [ {
    * "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
-   * "nit_proxy" } ], "name": "example.com" } ] OR "hosts": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ] This field
-   * contains the list of metric values.
+   * "nit_proxy" } ], "name": "example.com" } ]``` OR ```"hosts": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ]``` List of
+   * metric values.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1Metric> getMetrics() {
@@ -104,13 +104,13 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under hostnames which
-   * will contain metrics values and the dimension name. Example: "hosts": [ { "dimensions": [ {
+   * provided. If no dimensions are provided, then only the top-level metrics are provided. If
+   * dimensions are included, then there will be a top-level dimensions field under hostnames which
+   * will contain metrics values and the dimension name. Example: ``` "hosts": [ { "dimensions": [ {
    * "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
-   * "nit_proxy" } ], "name": "example.com" } ] OR "hosts": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ] This field
-   * contains the list of metric values.
+   * "nit_proxy" } ], "name": "example.com" } ]``` OR ```"hosts": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "example.com" } ]``` List of
+   * metric values.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsHostStats setMetrics(java.util.List<GoogleCloudApigeeV1Metric> metrics) {
@@ -119,7 +119,7 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
   }
 
   /**
-   * This field contains the hostname used in query.
+   * Hostname used in query.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,7 +127,7 @@ public final class GoogleCloudApigeeV1StatsHostStats extends com.google.api.clie
   }
 
   /**
-   * This field contains the hostname used in query.
+   * Hostname used in query.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsHostStats setName(java.lang.String name) {

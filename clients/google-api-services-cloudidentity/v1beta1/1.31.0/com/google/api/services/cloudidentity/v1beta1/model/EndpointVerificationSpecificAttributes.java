@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * A request to send email for inviting target user corresponding to the UserInvitation.
+ * Resource representing the Endpoint Verification-specific attributes of a Device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.cloudidentity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SendUserInvitationRequest extends com.google.api.client.json.GenericJson {
+public final class EndpointVerificationSpecificAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. First admin invitation info for customers
+   * Details of certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FirstAdminInvitationInfo firstAdminInvitationInfo;
+  private java.util.List<CertificateInfo> certificateInfo;
 
-  /**
-   * Optional. First admin invitation info for customers
-   * @return value or {@code null} for none
-   */
-  public FirstAdminInvitationInfo getFirstAdminInvitationInfo() {
-    return firstAdminInvitationInfo;
+  static {
+    // hack to force ProGuard to consider CertificateInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CertificateInfo.class);
   }
 
   /**
-   * Optional. First admin invitation info for customers
-   * @param firstAdminInvitationInfo firstAdminInvitationInfo or {@code null} for none
+   * Details of certificates.
+   * @return value or {@code null} for none
    */
-  public SendUserInvitationRequest setFirstAdminInvitationInfo(FirstAdminInvitationInfo firstAdminInvitationInfo) {
-    this.firstAdminInvitationInfo = firstAdminInvitationInfo;
+  public java.util.List<CertificateInfo> getCertificateInfo() {
+    return certificateInfo;
+  }
+
+  /**
+   * Details of certificates.
+   * @param certificateInfo certificateInfo or {@code null} for none
+   */
+  public EndpointVerificationSpecificAttributes setCertificateInfo(java.util.List<CertificateInfo> certificateInfo) {
+    this.certificateInfo = certificateInfo;
     return this;
   }
 
   @Override
-  public SendUserInvitationRequest set(String fieldName, Object value) {
-    return (SendUserInvitationRequest) super.set(fieldName, value);
+  public EndpointVerificationSpecificAttributes set(String fieldName, Object value) {
+    return (EndpointVerificationSpecificAttributes) super.set(fieldName, value);
   }
 
   @Override
-  public SendUserInvitationRequest clone() {
-    return (SendUserInvitationRequest) super.clone();
+  public EndpointVerificationSpecificAttributes clone() {
+    return (EndpointVerificationSpecificAttributes) super.clone();
   }
 
 }

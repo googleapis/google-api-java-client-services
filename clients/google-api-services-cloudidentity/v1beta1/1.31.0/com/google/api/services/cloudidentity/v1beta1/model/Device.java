@@ -115,6 +115,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String encryptionState;
 
   /**
+   * Output only. Attributes specific to Endpoint Verification devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes;
+
+  /**
    * Output only. IMEI number of device if GSM device; empty otherwise.
    * The value may be {@code null}.
    */
@@ -431,6 +438,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setEncryptionState(java.lang.String encryptionState) {
     this.encryptionState = encryptionState;
+    return this;
+  }
+
+  /**
+   * Output only. Attributes specific to Endpoint Verification devices.
+   * @return value or {@code null} for none
+   */
+  public EndpointVerificationSpecificAttributes getEndpointVerificationSpecificAttributes() {
+    return endpointVerificationSpecificAttributes;
+  }
+
+  /**
+   * Output only. Attributes specific to Endpoint Verification devices.
+   * @param endpointVerificationSpecificAttributes endpointVerificationSpecificAttributes or {@code null} for none
+   */
+  public Device setEndpointVerificationSpecificAttributes(EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes) {
+    this.endpointVerificationSpecificAttributes = endpointVerificationSpecificAttributes;
     return this;
   }
 

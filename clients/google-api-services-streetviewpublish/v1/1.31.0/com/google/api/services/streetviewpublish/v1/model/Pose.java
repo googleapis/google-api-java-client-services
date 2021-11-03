@@ -48,8 +48,10 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   private java.lang.Double altitude;
 
   /**
-   * Compass heading, measured at the center of the photo in degrees clockwise from North. Value
-   * must be >=0 and <360. NaN indicates an unmeasured quantity.
+   * The following pose parameters pertain to the center of the photo. They match
+   * https://developers.google.com/streetview/spherical-metadata. Compass heading, measured at the
+   * center of the photo in degrees clockwise from North. Value must be >=0 and <360. NaN indicates
+   * an unmeasured quantity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,8 +133,10 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compass heading, measured at the center of the photo in degrees clockwise from North. Value
-   * must be >=0 and <360. NaN indicates an unmeasured quantity.
+   * The following pose parameters pertain to the center of the photo. They match
+   * https://developers.google.com/streetview/spherical-metadata. Compass heading, measured at the
+   * center of the photo in degrees clockwise from North. Value must be >=0 and <360. NaN indicates
+   * an unmeasured quantity.
    * @return value or {@code null} for none
    */
   public java.lang.Double getHeading() {
@@ -140,8 +144,10 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compass heading, measured at the center of the photo in degrees clockwise from North. Value
-   * must be >=0 and <360. NaN indicates an unmeasured quantity.
+   * The following pose parameters pertain to the center of the photo. They match
+   * https://developers.google.com/streetview/spherical-metadata. Compass heading, measured at the
+   * center of the photo in degrees clockwise from North. Value must be >=0 and <360. NaN indicates
+   * an unmeasured quantity.
    * @param heading heading or {@code null} for none
    */
   public Pose setHeading(java.lang.Double heading) {

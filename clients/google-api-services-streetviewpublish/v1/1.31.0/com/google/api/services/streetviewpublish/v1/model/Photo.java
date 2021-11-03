@@ -31,15 +31,16 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class Photo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Absolute time when the photo was captured. When the photo has no exif timestamp, this is used
-   * to set a timestamp in the photo metadata.
+   * Optional. Absolute time when the photo was captured. When the photo has no exif timestamp, this
+   * is used to set a timestamp in the photo metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String captureTime;
 
   /**
-   * Connections to other photos. A connection represents the link from this photo to another photo.
+   * Optional. Connections to other photos. A connection represents the link from this photo to
+   * another photo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,30 +61,29 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private java.lang.String downloadUrl;
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published or rejected. Not currently
-   * populated.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mapsPublishStatus;
 
   /**
-   * Required when updating a photo. Output only when creating a photo. Identifier for the photo,
-   * which is unique among all photos in Google.
+   * Required. Output only. Required when updating a photo. Output only when creating a photo.
+   * Identifier for the photo, which is unique among all photos in Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PhotoId photoId;
 
   /**
-   * Places where this photo belongs.
+   * Optional. Places where this photo belongs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Place> places;
 
   /**
-   * Pose of the photo.
+   * Optional. Pose of the photo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,15 +111,15 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private java.lang.String transferStatus;
 
   /**
-   * Required when creating a photo. Input only. The resource URL where the photo bytes are uploaded
-   * to.
+   * Input only. Required when creating a photo. Input only. The resource URL where the photo bytes
+   * are uploaded to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UploadRef uploadReference;
 
   /**
-   * Time when the image was uploaded.
+   * Output only. Time when the image was uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +133,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private java.lang.Long viewCount;
 
   /**
-   * Absolute time when the photo was captured. When the photo has no exif timestamp, this is used
-   * to set a timestamp in the photo metadata.
+   * Optional. Absolute time when the photo was captured. When the photo has no exif timestamp, this
+   * is used to set a timestamp in the photo metadata.
    * @return value or {@code null} for none
    */
   public String getCaptureTime() {
@@ -142,8 +142,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute time when the photo was captured. When the photo has no exif timestamp, this is used
-   * to set a timestamp in the photo metadata.
+   * Optional. Absolute time when the photo was captured. When the photo has no exif timestamp, this
+   * is used to set a timestamp in the photo metadata.
    * @param captureTime captureTime or {@code null} for none
    */
   public Photo setCaptureTime(String captureTime) {
@@ -152,7 +152,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Connections to other photos. A connection represents the link from this photo to another photo.
+   * Optional. Connections to other photos. A connection represents the link from this photo to
+   * another photo.
    * @return value or {@code null} for none
    */
   public java.util.List<Connection> getConnections() {
@@ -160,7 +161,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Connections to other photos. A connection represents the link from this photo to another photo.
+   * Optional. Connections to other photos. A connection represents the link from this photo to
+   * another photo.
    * @param connections connections or {@code null} for none
    */
   public Photo setConnections(java.util.List<Connection> connections) {
@@ -188,8 +190,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published or rejected. Not currently
-   * populated.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getMapsPublishStatus() {
@@ -197,8 +198,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published or rejected. Not currently
-   * populated.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * @param mapsPublishStatus mapsPublishStatus or {@code null} for none
    */
   public Photo setMapsPublishStatus(java.lang.String mapsPublishStatus) {
@@ -207,8 +207,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when updating a photo. Output only when creating a photo. Identifier for the photo,
-   * which is unique among all photos in Google.
+   * Required. Output only. Required when updating a photo. Output only when creating a photo.
+   * Identifier for the photo, which is unique among all photos in Google.
    * @return value or {@code null} for none
    */
   public PhotoId getPhotoId() {
@@ -216,8 +216,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when updating a photo. Output only when creating a photo. Identifier for the photo,
-   * which is unique among all photos in Google.
+   * Required. Output only. Required when updating a photo. Output only when creating a photo.
+   * Identifier for the photo, which is unique among all photos in Google.
    * @param photoId photoId or {@code null} for none
    */
   public Photo setPhotoId(PhotoId photoId) {
@@ -226,7 +226,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Places where this photo belongs.
+   * Optional. Places where this photo belongs.
    * @return value or {@code null} for none
    */
   public java.util.List<Place> getPlaces() {
@@ -234,7 +234,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Places where this photo belongs.
+   * Optional. Places where this photo belongs.
    * @param places places or {@code null} for none
    */
   public Photo setPlaces(java.util.List<Place> places) {
@@ -243,7 +243,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Pose of the photo.
+   * Optional. Pose of the photo.
    * @return value or {@code null} for none
    */
   public Pose getPose() {
@@ -251,7 +251,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Pose of the photo.
+   * Optional. Pose of the photo.
    * @param pose pose or {@code null} for none
    */
   public Photo setPose(Pose pose) {
@@ -311,8 +311,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when creating a photo. Input only. The resource URL where the photo bytes are uploaded
-   * to.
+   * Input only. Required when creating a photo. Input only. The resource URL where the photo bytes
+   * are uploaded to.
    * @return value or {@code null} for none
    */
   public UploadRef getUploadReference() {
@@ -320,8 +320,8 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when creating a photo. Input only. The resource URL where the photo bytes are uploaded
-   * to.
+   * Input only. Required when creating a photo. Input only. The resource URL where the photo bytes
+   * are uploaded to.
    * @param uploadReference uploadReference or {@code null} for none
    */
   public Photo setUploadReference(UploadRef uploadReference) {
@@ -330,7 +330,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time when the image was uploaded.
+   * Output only. Time when the image was uploaded.
    * @return value or {@code null} for none
    */
   public String getUploadTime() {
@@ -338,7 +338,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time when the image was uploaded.
+   * Output only. Time when the image was uploaded.
    * @param uploadTime uploadTime or {@code null} for none
    */
   public Photo setUploadTime(String uploadTime) {

@@ -39,8 +39,9 @@ public final class Level extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first level
-   * above ground level, -1 indicates the first level under ground level. Non-integer values are OK.
+   * Optional. Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first
+   * level above ground level, -1 indicates the first level under ground level. Non-integer values
+   * are OK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,9 @@ public final class Level extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first level
-   * above ground level, -1 indicates the first level under ground level. Non-integer values are OK.
+   * Optional. Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first
+   * level above ground level, -1 indicates the first level under ground level. Non-integer values
+   * are OK.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNumber() {
@@ -75,8 +77,9 @@ public final class Level extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first level
-   * above ground level, -1 indicates the first level under ground level. Non-integer values are OK.
+   * Optional. Floor number, used for ordering. 0 indicates the ground level, 1 indicates the first
+   * level above ground level, -1 indicates the first level under ground level. Non-integer values
+   * are OK.
    * @param number number or {@code null} for none
    */
   public Level setNumber(java.lang.Double number) {

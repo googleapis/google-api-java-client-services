@@ -17,11 +17,11 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates a data node as represented below: { "identifier": { "names": [
- * "apiproxy" ], "values": [ "sirjee" ] }, "metric": [ { "env": "prod", "name":
- * "sum(message_count)", "values": [ 36.0 ] } ] } OR { "env": "prod", "name": "sum(message_count)",
- * "values": [ 36.0 ] } Depending on whether a dimension is present in the query or not the data
- * node type can be a simple metric value or dimension identifier with list of metrics.
+ * Encapsulates a data node as represented below: ``` { "identifier": { "names": [ "apiproxy" ],
+ * "values": [ "sirjee" ] }, "metric": [ { "env": "prod", "name": "sum(message_count)", "values": [
+ * 36.0 ] } ] }``` or ``` { "env": "prod", "name": "sum(message_count)", "values": [ 36.0 ] }```
+ * Depending on whether a dimension is present in the query or not the data node type can be a
+ * simple metric value or dimension identifier with list of metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:

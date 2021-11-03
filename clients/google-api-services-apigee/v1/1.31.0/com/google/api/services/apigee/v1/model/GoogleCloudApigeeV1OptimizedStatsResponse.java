@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates a response format for Js Optimized Scenario.
+ * Encapsulates a response format for JavaScript Optimized Scenario.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field contains a list of time unit values. Time unit refers to an epoch timestamp value.
+   * List of time unit values. Time unit refers to an epoch timestamp value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("TimeUnit") @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> timeUnit;
 
   /**
-   * This field contains metadata information about the query executed
+   * Metadata information about the query executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1Metadata metaData;
 
   /**
-   * This ia a boolean field to indicate if the results were truncated based on the limit parameter.
+   * Boolean flag that indicates whether the results were truncated based on the limit parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean resultTruncated;
 
   /**
-   * This field contains a stats results.
+   * `stats` results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1OptimizedStatsNode stats;
 
   /**
-   * This field contains a list of time unit values. Time unit refers to an epoch timestamp value.
+   * List of time unit values. Time unit refers to an epoch timestamp value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getTimeUnit() {
@@ -66,7 +66,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This field contains a list of time unit values. Time unit refers to an epoch timestamp value.
+   * List of time unit values. Time unit refers to an epoch timestamp value.
    * @param timeUnit timeUnit or {@code null} for none
    */
   public GoogleCloudApigeeV1OptimizedStatsResponse setTimeUnit(java.util.List<java.lang.Long> timeUnit) {
@@ -75,7 +75,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This field contains metadata information about the query executed
+   * Metadata information about the query executed.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1Metadata getMetaData() {
@@ -83,7 +83,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This field contains metadata information about the query executed
+   * Metadata information about the query executed.
    * @param metaData metaData or {@code null} for none
    */
   public GoogleCloudApigeeV1OptimizedStatsResponse setMetaData(GoogleCloudApigeeV1Metadata metaData) {
@@ -92,7 +92,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This ia a boolean field to indicate if the results were truncated based on the limit parameter.
+   * Boolean flag that indicates whether the results were truncated based on the limit parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getResultTruncated() {
@@ -100,7 +100,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This ia a boolean field to indicate if the results were truncated based on the limit parameter.
+   * Boolean flag that indicates whether the results were truncated based on the limit parameter.
    * @param resultTruncated resultTruncated or {@code null} for none
    */
   public GoogleCloudApigeeV1OptimizedStatsResponse setResultTruncated(java.lang.Boolean resultTruncated) {
@@ -109,7 +109,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This field contains a stats results.
+   * `stats` results.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1OptimizedStatsNode getStats() {
@@ -117,7 +117,7 @@ public final class GoogleCloudApigeeV1OptimizedStatsResponse extends com.google.
   }
 
   /**
-   * This field contains a stats results.
+   * `stats` results.
    * @param stats stats or {@code null} for none
    */
   public GoogleCloudApigeeV1OptimizedStatsResponse setStats(GoogleCloudApigeeV1OptimizedStatsNode stats) {

@@ -47,7 +47,7 @@ public final class GoogleAnalyticsAdminV1alphaWebDataStream extends com.google.a
 
   /**
    * Required. Human-readable display name for the Data Stream. The max allowed display name length
-   * is 100 UTF-16 code units.
+   * is 255 UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class GoogleAnalyticsAdminV1alphaWebDataStream extends com.google.a
 
   /**
    * Required. Human-readable display name for the Data Stream. The max allowed display name length
-   * is 100 UTF-16 code units.
+   * is 255 UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -132,7 +132,7 @@ public final class GoogleAnalyticsAdminV1alphaWebDataStream extends com.google.a
 
   /**
    * Required. Human-readable display name for the Data Stream. The max allowed display name length
-   * is 100 UTF-16 code units.
+   * is 255 UTF-16 code units.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaWebDataStream setDisplayName(java.lang.String displayName) {

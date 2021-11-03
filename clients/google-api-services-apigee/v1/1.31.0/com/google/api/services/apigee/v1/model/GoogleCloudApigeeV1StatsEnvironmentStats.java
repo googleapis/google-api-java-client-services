@@ -17,8 +17,8 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates the environment wrapper: "environments": [ { "metrics": [ {
- * "name": "sum(message_count)", "values": [ "2.52056245E8" ] } ], "name": "prod" } ]
+ * Encapsulates the environment wrapper: ``` "environments": [ { "metrics": [ { "name":
+ * "sum(message_count)", "values": [ "2.52056245E8" ] } ], "name": "prod" } ]```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,13 +45,13 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under environments
-   * which will contain metrics values and the dimension name. Example: "environments": [ {
-   * "dimensions": [ { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] }
-   * ], "name": "nit_proxy" } ], "name": "prod" } ] OR "environments": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ] This field contains
-   * the list of metric values.
+   * provided. If no dimensions are provided, then only top-level metrics is provided. If dimensions
+   * are included, then there will be a top-level dimensions field under environments which will
+   * contain metrics values and the dimension name. Example: ``` "environments": [ { "dimensions": [
+   * { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
+   * "nit_proxy" } ], "name": "prod" } ]``` or ```"environments": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ]``` List of metric
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,13 +64,14 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
   }
 
   /**
+   * Name of the environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1DimensionMetric> getDimensions() {
@@ -78,7 +79,7 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
   }
 
   /**
-   * This field contains the list of metrics grouped under dimensions.
+   * List of metrics grouped under dimensions.
    * @param dimensions dimensions or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsEnvironmentStats setDimensions(java.util.List<GoogleCloudApigeeV1DimensionMetric> dimensions) {
@@ -88,13 +89,13 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under environments
-   * which will contain metrics values and the dimension name. Example: "environments": [ {
-   * "dimensions": [ { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] }
-   * ], "name": "nit_proxy" } ], "name": "prod" } ] OR "environments": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ] This field contains
-   * the list of metric values.
+   * provided. If no dimensions are provided, then only top-level metrics is provided. If dimensions
+   * are included, then there will be a top-level dimensions field under environments which will
+   * contain metrics values and the dimension name. Example: ``` "environments": [ { "dimensions": [
+   * { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
+   * "nit_proxy" } ], "name": "prod" } ]``` or ```"environments": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ]``` List of metric
+   * values.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1Metric> getMetrics() {
@@ -103,13 +104,13 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
 
   /**
    * In the final response, only one of the following fields will be present based on the dimensions
-   * provided. If no dimensions are provided, then only a top level metrics is provided. If
-   * dimensions are included, then there will be a top level dimensions field under environments
-   * which will contain metrics values and the dimension name. Example: "environments": [ {
-   * "dimensions": [ { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] }
-   * ], "name": "nit_proxy" } ], "name": "prod" } ] OR "environments": [ { "metrics": [ { "name":
-   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ] This field contains
-   * the list of metric values.
+   * provided. If no dimensions are provided, then only top-level metrics is provided. If dimensions
+   * are included, then there will be a top-level dimensions field under environments which will
+   * contain metrics values and the dimension name. Example: ``` "environments": [ { "dimensions": [
+   * { "metrics": [ { "name": "sum(message_count)", "values": [ "2.14049521E8" ] } ], "name":
+   * "nit_proxy" } ], "name": "prod" } ]``` or ```"environments": [ { "metrics": [ { "name":
+   * "sum(message_count)", "values": [ "2.19026331E8" ] } ], "name": "prod" } ]``` List of metric
+   * values.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsEnvironmentStats setMetrics(java.util.List<GoogleCloudApigeeV1Metric> metrics) {
@@ -118,6 +119,7 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
   }
 
   /**
+   * Name of the environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,6 +127,7 @@ public final class GoogleCloudApigeeV1StatsEnvironmentStats extends com.google.a
   }
 
   /**
+   * Name of the environment.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1StatsEnvironmentStats setName(java.lang.String name) {

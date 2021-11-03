@@ -17,9 +17,9 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates the metric data point. Example: { "name": "sum(message_count)",
- * "values" : [ { "timestamp": 1549004400000, "value": "39.0" }, { "timestamp" : 1548997200000,
- * "value" : "0.0" } ] } or { "name": "sum(message_count)", "values" : ["39.0"] }
+ * Encapsulates the metric data point. For example: ```{ "name": "sum(message_count)", "values" : [
+ * { "timestamp": 1549004400000, "value": "39.0" }, { "timestamp" : 1548997200000, "value" : "0.0" }
+ * ] }``` or ```{ "name": "sum(message_count)", "values" : ["39.0"] }```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -32,22 +32,22 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1Metric extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field contains the metric name.
+   * Metric name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * List of metric values. Possible value format: "values":["39.0"] or "values":[ { "value":
-   * "39.0", "timestamp": 1232434354} ]
+   * List of metric values. Possible value formats include: `"values":["39.0"]` or `"values":[ {
+   * "value": "39.0", "timestamp": 1232434354} ]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Object> values;
 
   /**
-   * This field contains the metric name.
+   * Metric name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1Metric extends com.google.api.client.json.
   }
 
   /**
-   * This field contains the metric name.
+   * Metric name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1Metric setName(java.lang.String name) {
@@ -64,8 +64,8 @@ public final class GoogleCloudApigeeV1Metric extends com.google.api.client.json.
   }
 
   /**
-   * List of metric values. Possible value format: "values":["39.0"] or "values":[ { "value":
-   * "39.0", "timestamp": 1232434354} ]
+   * List of metric values. Possible value formats include: `"values":["39.0"]` or `"values":[ {
+   * "value": "39.0", "timestamp": 1232434354} ]`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Object> getValues() {
@@ -73,8 +73,8 @@ public final class GoogleCloudApigeeV1Metric extends com.google.api.client.json.
   }
 
   /**
-   * List of metric values. Possible value format: "values":["39.0"] or "values":[ { "value":
-   * "39.0", "timestamp": 1232434354} ]
+   * List of metric values. Possible value formats include: `"values":["39.0"]` or `"values":[ {
+   * "value": "39.0", "timestamp": 1232434354} ]`
    * @param values values or {@code null} for none
    */
   public GoogleCloudApigeeV1Metric setValues(java.util.List<java.lang.Object> values) {

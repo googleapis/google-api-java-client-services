@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * This message type encapsulates a stats response.
+ * Encapsulates a `stats` response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field contains a list of query results on environment level.
+   * List of query results on the environment level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1StatsEnvironmentStats> environments;
 
   /**
-   * This field contains a list of query results grouped by host.
+   * List of query results grouped by host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1StatsHostStats> hosts;
 
   /**
-   * This field contains the metadata information.
+   * Metadata information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1Metadata metaData;
 
   /**
-   * This field contains a list of query results on environment level.
+   * List of query results on the environment level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1StatsEnvironmentStats> getEnvironments() {
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.G
   }
 
   /**
-   * This field contains a list of query results on environment level.
+   * List of query results on the environment level.
    * @param environments environments or {@code null} for none
    */
   public GoogleCloudApigeeV1Stats setEnvironments(java.util.List<GoogleCloudApigeeV1StatsEnvironmentStats> environments) {
@@ -68,7 +68,7 @@ public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.G
   }
 
   /**
-   * This field contains a list of query results grouped by host.
+   * List of query results grouped by host.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1StatsHostStats> getHosts() {
@@ -76,7 +76,7 @@ public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.G
   }
 
   /**
-   * This field contains a list of query results grouped by host.
+   * List of query results grouped by host.
    * @param hosts hosts or {@code null} for none
    */
   public GoogleCloudApigeeV1Stats setHosts(java.util.List<GoogleCloudApigeeV1StatsHostStats> hosts) {
@@ -85,7 +85,7 @@ public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.G
   }
 
   /**
-   * This field contains the metadata information.
+   * Metadata information.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1Metadata getMetaData() {
@@ -93,7 +93,7 @@ public final class GoogleCloudApigeeV1Stats extends com.google.api.client.json.G
   }
 
   /**
-   * This field contains the metadata information.
+   * Metadata information.
    * @param metaData metaData or {@code null} for none
    */
   public GoogleCloudApigeeV1Stats setMetaData(GoogleCloudApigeeV1Metadata metaData) {

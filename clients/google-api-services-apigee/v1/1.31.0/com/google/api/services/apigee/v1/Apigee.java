@@ -25088,20 +25088,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class OptimizedStats {
 
         /**
-         * This api is similar to GetStats except that the response is less verbose. In the current scheme,
-         * a query parameter _optimized instructs Edge Analytics to change the response but since this
-         * behavior is not possible with protocol buffer and since this parameter is predominantly used by
-         * Edge UI, we are introducing a separate api.
+         * Similar to GetStats except that the response is less verbose.
          *
          * Create a request for the method "optimizedStats.get".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-         *        `organizations/{organization_id}/environments/{environment_id/optimizedStats/{dimensions}`
-         *        Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The
-         *        value of dimensions should be comma separated list as shown below
+         * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+         *        in your request: `organizations/{org}/environments/{env}/optimizedStats/{dimensions}`
+         *        Dimensions let you view metrics in meaningful groupings, such as `apiproxy`,
+         *        `target_host`. The value of `dimensions` should be a comma-separated list as shown below:
          *        `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
          * @return the request
          */
@@ -25119,10 +25116,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/optimizedStats/.*$");
 
           /**
-           * This api is similar to GetStats except that the response is less verbose. In the current
-           * scheme, a query parameter _optimized instructs Edge Analytics to change the response but since
-           * this behavior is not possible with protocol buffer and since this parameter is predominantly
-           * used by Edge UI, we are introducing a separate api.
+           * Similar to GetStats except that the response is less verbose.
            *
            * Create a request for the method "optimizedStats.get".
            *
@@ -25131,10 +25125,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-         *        `organizations/{organization_id}/environments/{environment_id/optimizedStats/{dimensions}`
-         *        Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The
-         *        value of dimensions should be comma separated list as shown below
+           * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+         *        in your request: `organizations/{org}/environments/{env}/optimizedStats/{dimensions}`
+         *        Dimensions let you view metrics in meaningful groupings, such as `apiproxy`,
+         *        `target_host`. The value of `dimensions` should be a comma-separated list as shown below:
          *        `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
            * @since 1.13
            */
@@ -25214,19 +25208,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for which the interactive query will be executed. Must be
-           * of the form `organizations/{organization_id}/environments/{environment_id/optimizedStat
-           * s/{dimensions}` Dimensions let you view metrics in meaningful groupings. E.g. apiproxy,
-           * target_host. The value of dimensions should be comma separated list as shown below
+           * Required. Resource name for which the interactive query will be executed. Use the
+           * following format in your request:
+           * `organizations/{org}/environments/{env}/optimizedStats/{dimensions}` Dimensions let you
+           * view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+           * `dimensions` should be a comma-separated list as shown below:
            * `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name for which the interactive query will be executed. Must be of the form
-         `organizations/{organization_id}/environments/{environment_id/optimizedStats/{dimensions}`
-         Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of
-         dimensions should be comma separated list as shown below
+          /** Required. Resource name for which the interactive query will be executed. Use the following format
+         in your request: `organizations/{org}/environments/{env}/optimizedStats/{dimensions}` Dimensions
+         let you view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+         `dimensions` should be a comma-separated list as shown below:
          `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
            */
           public java.lang.String getName() {
@@ -25234,10 +25229,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for which the interactive query will be executed. Must be
-           * of the form `organizations/{organization_id}/environments/{environment_id/optimizedStat
-           * s/{dimensions}` Dimensions let you view metrics in meaningful groupings. E.g. apiproxy,
-           * target_host. The value of dimensions should be comma separated list as shown below
+           * Required. Resource name for which the interactive query will be executed. Use the
+           * following format in your request:
+           * `organizations/{org}/environments/{env}/optimizedStats/{dimensions}` Dimensions let you
+           * view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+           * `dimensions` should be a comma-separated list as shown below:
            * `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
            */
           public Get setName(java.lang.String name) {
@@ -25250,80 +25246,78 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           @com.google.api.client.util.Key
           private java.lang.String accuracy;
 
-          /** Legacy field: not used anymore.
+          /** No longer used by Apigee. Supported for backwards compatibility.
            */
           public java.lang.String getAccuracy() {
             return accuracy;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           public Get setAccuracy(java.lang.String accuracy) {
             this.accuracy = accuracy;
             return this;
           }
 
           /**
-           * If customers want to query custom aggregate tables, then this parameter can be used to
-           * specify the table name. If this parameter is skipped, then Edge Query will try to
-           * retrieve the data from fact tables which will be expensive.
+           * Table name used to query custom aggregate tables. If this parameter is skipped, then
+           * Apigee will try to retrieve the data from fact tables which will be expensive.
            */
           @com.google.api.client.util.Key
           private java.lang.String aggTable;
 
-          /** If customers want to query custom aggregate tables, then this parameter can be used to specify the
-         table name. If this parameter is skipped, then Edge Query will try to retrieve the data from fact
-         tables which will be expensive.
+          /** Table name used to query custom aggregate tables. If this parameter is skipped, then Apigee will
+         try to retrieve the data from fact tables which will be expensive.
            */
           public java.lang.String getAggTable() {
             return aggTable;
           }
 
           /**
-           * If customers want to query custom aggregate tables, then this parameter can be used to
-           * specify the table name. If this parameter is skipped, then Edge Query will try to
-           * retrieve the data from fact tables which will be expensive.
+           * Table name used to query custom aggregate tables. If this parameter is skipped, then
+           * Apigee will try to retrieve the data from fact tables which will be expensive.
            */
           public Get setAggTable(java.lang.String aggTable) {
             this.aggTable = aggTable;
             return this;
           }
 
-          /** Enables drill-down on specific dimension values. */
+          /** Filter that enables you to drill-down on specific dimension values. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Enables drill-down on specific dimension values.
+          /** Filter that enables you to drill-down on specific dimension values.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Enables drill-down on specific dimension values. */
+          /** Filter that enables you to drill-down on specific dimension values. */
           public Get setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * This parameter is used to limit the number of result items. Default and the max value
-           * is 14400.
+           * Maximum number of result items to return. The default and maximum value that can be
+           * returned is 14400.
            */
           @com.google.api.client.util.Key
           private java.lang.String limit;
 
-          /** This parameter is used to limit the number of result items. Default and the max value is 14400.
+          /** Maximum number of result items to return. The default and maximum value that can be returned is
+         14400.
            */
           public java.lang.String getLimit() {
             return limit;
           }
 
           /**
-           * This parameter is used to limit the number of result items. Default and the max value
-           * is 14400.
+           * Maximum number of result items to return. The default and maximum value that can be
+           * returned is 14400.
            */
           public Get setLimit(java.lang.String limit) {
             this.limit = limit;
@@ -25331,139 +25325,138 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Use offset with limit to enable pagination of results. For example, to display results
-           * 11-20, set limit to '10' and offset to '10'.
+           * Offset value. Use `offset` with `limit` to enable pagination of results. For example,
+           * to display results 11-20, set limit to `10` and offset to `10`.
            */
           @com.google.api.client.util.Key
           private java.lang.String offset;
 
-          /** Use offset with limit to enable pagination of results. For example, to display results 11-20, set
-         limit to '10' and offset to '10'.
+          /** Offset value. Use `offset` with `limit` to enable pagination of results. For example, to display
+         results 11-20, set limit to `10` and offset to `10`.
            */
           public java.lang.String getOffset() {
             return offset;
           }
 
           /**
-           * Use offset with limit to enable pagination of results. For example, to display results
-           * 11-20, set limit to '10' and offset to '10'.
+           * Offset value. Use `offset` with `limit` to enable pagination of results. For example,
+           * to display results 11-20, set limit to `10` and offset to `10`.
            */
           public Get setOffset(java.lang.String offset) {
             this.offset = offset;
             return this;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           @com.google.api.client.util.Key
           private java.lang.Boolean realtime;
 
-          /** Legacy field: not used anymore.
+          /** No longer used by Apigee. Supported for backwards compatibility.
            */
           public java.lang.Boolean getRealtime() {
             return realtime;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           public Get setRealtime(java.lang.Boolean realtime) {
             this.realtime = realtime;
             return this;
           }
 
           /**
-           * Required. The select parameter contains a comma separated list of metrics. E.g.
-           * sum(message_count),sum(error_count)
+           * Required. Comma-separated list of metrics. For example:
+           * `sum(message_count),sum(error_count)`
            */
           @com.google.api.client.util.Key
           private java.lang.String select;
 
-          /** Required. The select parameter contains a comma separated list of metrics. E.g.
-         sum(message_count),sum(error_count)
+          /** Required. Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
            */
           public java.lang.String getSelect() {
             return select;
           }
 
           /**
-           * Required. The select parameter contains a comma separated list of metrics. E.g.
-           * sum(message_count),sum(error_count)
+           * Required. Comma-separated list of metrics. For example:
+           * `sum(message_count),sum(error_count)`
            */
           public Get setSelect(java.lang.String select) {
             this.select = select;
             return this;
           }
 
-          /** This parameter routes the query to api monitoring service for last hour. */
+          /** Routes the query to API Monitoring for the last hour. */
           @com.google.api.client.util.Key
           private java.lang.Boolean sonar;
 
-          /** This parameter routes the query to api monitoring service for last hour.
+          /** Routes the query to API Monitoring for the last hour.
            */
           public java.lang.Boolean getSonar() {
             return sonar;
           }
 
-          /** This parameter routes the query to api monitoring service for last hour. */
+          /** Routes the query to API Monitoring for the last hour. */
           public Get setSonar(java.lang.Boolean sonar) {
             this.sonar = sonar;
             return this;
           }
 
           /**
-           * This parameter specifies if the sort order should be ascending or descending Supported
-           * values are DESC and ASC.
+           * Flag that specifies whether the sort order should be ascending or descending. Valid
+           * values include `DESC` and `ASC`.
            */
           @com.google.api.client.util.Key
           private java.lang.String sort;
 
-          /** This parameter specifies if the sort order should be ascending or descending Supported values are
-         DESC and ASC.
+          /** Flag that specifies whether the sort order should be ascending or descending. Valid values include
+         `DESC` and `ASC`.
            */
           public java.lang.String getSort() {
             return sort;
           }
 
           /**
-           * This parameter specifies if the sort order should be ascending or descending Supported
-           * values are DESC and ASC.
+           * Flag that specifies whether the sort order should be ascending or descending. Valid
+           * values include `DESC` and `ASC`.
            */
           public Get setSort(java.lang.String sort) {
             this.sort = sort;
             return this;
           }
 
-          /** Comma separated list of columns to sort the final result. */
+          /** Comma-separated list of columns to sort the final result. */
           @com.google.api.client.util.Key
           private java.lang.String sortby;
 
-          /** Comma separated list of columns to sort the final result.
+          /** Comma-separated list of columns to sort the final result.
            */
           public java.lang.String getSortby() {
             return sortby;
           }
 
-          /** Comma separated list of columns to sort the final result. */
+          /** Comma-separated list of columns to sort the final result. */
           public Get setSortby(java.lang.String sortby) {
             this.sortby = sortby;
             return this;
           }
 
           /**
-           * Required. Time interval for the interactive query. Time range is specified as start~end
-           * E.g. 04/15/2017 00:00~05/15/2017 23:59
+           * Required. Time interval for the interactive query. Time range is specified in GMT as
+           * `start~end`. For example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           @com.google.api.client.util.Key
           private java.lang.String timeRange;
 
-          /** Required. Time interval for the interactive query. Time range is specified as start~end E.g.
-         04/15/2017 00:00~05/15/2017 23:59
+          /** Required. Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+         For example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           public java.lang.String getTimeRange() {
             return timeRange;
           }
 
           /**
-           * Required. Time interval for the interactive query. Time range is specified as start~end
-           * E.g. 04/15/2017 00:00~05/15/2017 23:59
+           * Required. Time interval for the interactive query. Time range is specified in GMT as
+           * `start~end`. For example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           public Get setTimeRange(java.lang.String timeRange) {
             this.timeRange = timeRange;
@@ -25471,22 +25464,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity
-           * of metrics returned.
+           * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`,
+           * `day`, `week`, or `month`.
            */
           @com.google.api.client.util.Key
           private java.lang.String timeUnit;
 
-          /** A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of metrics
-         returned.
+          /** Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`, `week`,
+         or `month`.
            */
           public java.lang.String getTimeUnit() {
             return timeUnit;
           }
 
           /**
-           * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity
-           * of metrics returned.
+           * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`,
+           * `day`, `week`, or `month`.
            */
           public Get setTimeUnit(java.lang.String timeUnit) {
             this.timeUnit = timeUnit;
@@ -25494,19 +25487,21 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+           * Top number of results to return. For example, to return the top 5 results, set
+           * `topk=5`.
            */
           @com.google.api.client.util.Key
           private java.lang.String topk;
 
-          /** Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+          /** Top number of results to return. For example, to return the top 5 results, set `topk=5`.
            */
           public java.lang.String getTopk() {
             return topk;
           }
 
           /**
-           * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+           * Top number of results to return. For example, to return the top 5 results, set
+           * `topk=5`.
            */
           public Get setTopk(java.lang.String topk) {
             this.topk = topk;
@@ -25514,39 +25509,41 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Lists timestamps in ascending order if set to true. Recommend setting this value to
-           * true if you are using sortby with sort=DESC.
+           * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+           * (`false`) order. Apigee recommends setting this value to `true` if you are using
+           * `sortby` with `sort=DESC`.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean tsAscending;
 
-          /** Lists timestamps in ascending order if set to true. Recommend setting this value to true if you are
-         using sortby with sort=DESC.
+          /** Flag that specifies whether to list timestamps in ascending (`true`) or descending (`false`) order.
+         Apigee recommends setting this value to `true` if you are using `sortby` with `sort=DESC`.
            */
           public java.lang.Boolean getTsAscending() {
             return tsAscending;
           }
 
           /**
-           * Lists timestamps in ascending order if set to true. Recommend setting this value to
-           * true if you are using sortby with sort=DESC.
+           * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+           * (`false`) order. Apigee recommends setting this value to `true` if you are using
+           * `sortby` with `sort=DESC`.
            */
           public Get setTsAscending(java.lang.Boolean tsAscending) {
             this.tsAscending = tsAscending;
             return this;
           }
 
-          /** This parameters contains the timezone offset value. */
+          /** Timezone offset value. */
           @com.google.api.client.util.Key
           private java.lang.String tzo;
 
-          /** This parameters contains the timezone offset value.
+          /** Timezone offset value.
            */
           public java.lang.String getTzo() {
             return tzo;
           }
 
-          /** This parameters contains the timezone offset value. */
+          /** Timezone offset value. */
           public Get setTzo(java.lang.String tzo) {
             this.tzo = tzo;
             return this;
@@ -28708,19 +28705,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Retrieve metrics grouped by dimensions. The types of metrics you can retrieve include traffic,
          * message counts, API call latency, response size, and cache hits and counts. Dimensions let you
-         * view metrics in meaningful groups. The stats api does accept dimensions as path params. The
-         * dimensions are optional in which case the metrics are computed on the entire data for the given
-         * timerange.
+         * view metrics in meaningful groups. You can optionally pass dimensions as path parameters to the
+         * `stats` API. If dimensions are not specified, the metrics are computed on the entire set of data
+         * for the given time range.
          *
          * Create a request for the method "stats.get".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-         *        `organizations/{organization_id}/environments/{environment_id/stats/{dimensions}`
-         *        Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The
-         *        value of dimensions should be comma separated list as shown below
+         * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+         *        in your request: `organizations/{org}/environments/{env}/stats/{dimensions}` Dimensions
+         *        let you view metrics in meaningful groupings, such as `apiproxy` or `target_host`. The
+         *        value of dimensions should be a comma-separated list, as shown below:
          *        `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
          * @return the request
          */
@@ -28740,9 +28737,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Retrieve metrics grouped by dimensions. The types of metrics you can retrieve include traffic,
            * message counts, API call latency, response size, and cache hits and counts. Dimensions let you
-           * view metrics in meaningful groups. The stats api does accept dimensions as path params. The
-           * dimensions are optional in which case the metrics are computed on the entire data for the given
-           * timerange.
+           * view metrics in meaningful groups. You can optionally pass dimensions as path parameters to the
+           * `stats` API. If dimensions are not specified, the metrics are computed on the entire set of
+           * data for the given time range.
            *
            * Create a request for the method "stats.get".
            *
@@ -28751,10 +28748,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-         *        `organizations/{organization_id}/environments/{environment_id/stats/{dimensions}`
-         *        Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The
-         *        value of dimensions should be comma separated list as shown below
+           * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+         *        in your request: `organizations/{org}/environments/{env}/stats/{dimensions}` Dimensions
+         *        let you view metrics in meaningful groupings, such as `apiproxy` or `target_host`. The
+         *        value of dimensions should be a comma-separated list, as shown below:
          *        `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
            * @since 1.13
            */
@@ -28834,20 +28831,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for which the interactive query will be executed. Must be
-           * of the form
-           * `organizations/{organization_id}/environments/{environment_id/stats/{dimensions}`
-           * Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host.
-           * The value of dimensions should be comma separated list as shown below
+           * Required. Resource name for which the interactive query will be executed. Use the
+           * following format in your request:
+           * `organizations/{org}/environments/{env}/stats/{dimensions}` Dimensions let you view
+           * metrics in meaningful groupings, such as `apiproxy` or `target_host`. The value of
+           * dimensions should be a comma-separated list, as shown below:
            * `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name for which the interactive query will be executed. Must be of the form
-         `organizations/{organization_id}/environments/{environment_id/stats/{dimensions}` Dimensions let
-         you view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions
-         should be comma separated list as shown below
+          /** Required. Resource name for which the interactive query will be executed. Use the following format
+         in your request: `organizations/{org}/environments/{env}/stats/{dimensions}` Dimensions let you
+         view metrics in meaningful groupings, such as `apiproxy` or `target_host`. The value of dimensions
+         should be a comma-separated list, as shown below:
          `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
            */
           public java.lang.String getName() {
@@ -28855,11 +28852,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for which the interactive query will be executed. Must be
-           * of the form
-           * `organizations/{organization_id}/environments/{environment_id/stats/{dimensions}`
-           * Dimensions let you view metrics in meaningful groupings. E.g. apiproxy, target_host.
-           * The value of dimensions should be comma separated list as shown below
+           * Required. Resource name for which the interactive query will be executed. Use the
+           * following format in your request:
+           * `organizations/{org}/environments/{env}/stats/{dimensions}` Dimensions let you view
+           * metrics in meaningful groupings, such as `apiproxy` or `target_host`. The value of
+           * dimensions should be a comma-separated list, as shown below:
            * `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
            */
           public Get setName(java.lang.String name) {
@@ -28872,87 +28869,78 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /**
-           * Legacy field: not used anymore. This field is present to support UI calls which still
-           * use this parameter.
-           */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           @com.google.api.client.util.Key
           private java.lang.String accuracy;
 
-          /** Legacy field: not used anymore. This field is present to support UI calls which still use this
-         parameter.
+          /** No longer used by Apigee. Supported for backwards compatibility.
            */
           public java.lang.String getAccuracy() {
             return accuracy;
           }
 
-          /**
-           * Legacy field: not used anymore. This field is present to support UI calls which still
-           * use this parameter.
-           */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           public Get setAccuracy(java.lang.String accuracy) {
             this.accuracy = accuracy;
             return this;
           }
 
           /**
-           * If customers want to query custom aggregate tables, then this parameter can be used to
-           * specify the table name. If this parameter is skipped, then Edge Query will try to
-           * retrieve the data from fact tables which will be expensive.
+           * Table name used to query custom aggregate tables. If this parameter is skipped, then
+           * Apigee will try to retrieve the data from fact tables which will be expensive.
            */
           @com.google.api.client.util.Key
           private java.lang.String aggTable;
 
-          /** If customers want to query custom aggregate tables, then this parameter can be used to specify the
-         table name. If this parameter is skipped, then Edge Query will try to retrieve the data from fact
-         tables which will be expensive.
+          /** Table name used to query custom aggregate tables. If this parameter is skipped, then Apigee will
+         try to retrieve the data from fact tables which will be expensive.
            */
           public java.lang.String getAggTable() {
             return aggTable;
           }
 
           /**
-           * If customers want to query custom aggregate tables, then this parameter can be used to
-           * specify the table name. If this parameter is skipped, then Edge Query will try to
-           * retrieve the data from fact tables which will be expensive.
+           * Table name used to query custom aggregate tables. If this parameter is skipped, then
+           * Apigee will try to retrieve the data from fact tables which will be expensive.
            */
           public Get setAggTable(java.lang.String aggTable) {
             this.aggTable = aggTable;
             return this;
           }
 
-          /** Enables drill-down on specific dimension values */
+          /** Filter that enables you to drill down on specific dimension values. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Enables drill-down on specific dimension values
+          /** Filter that enables you to drill down on specific dimension values.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Enables drill-down on specific dimension values */
+          /** Filter that enables you to drill down on specific dimension values. */
           public Get setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * This parameter is used to limit the number of result items. Default and the max value
-           * is 14400.
+           * Maximum number of result items to return. The default and maximum value that can be
+           * returned is 14400.
            */
           @com.google.api.client.util.Key
           private java.lang.String limit;
 
-          /** This parameter is used to limit the number of result items. Default and the max value is 14400.
+          /** Maximum number of result items to return. The default and maximum value that can be returned is
+         14400.
            */
           public java.lang.String getLimit() {
             return limit;
           }
 
           /**
-           * This parameter is used to limit the number of result items. Default and the max value
-           * is 14400.
+           * Maximum number of result items to return. The default and maximum value that can be
+           * returned is 14400.
            */
           public Get setLimit(java.lang.String limit) {
             this.limit = limit;
@@ -28960,139 +28948,136 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Use offset with limit to enable pagination of results. For example, to display results
-           * 11-20, set limit to '10' and offset to '10'.
+           * Offset value. Use `offset` with `limit` to enable pagination of results. For example,
+           * to display results 11-20, set limit to `10` and offset to `10`.
            */
           @com.google.api.client.util.Key
           private java.lang.String offset;
 
-          /** Use offset with limit to enable pagination of results. For example, to display results 11-20, set
-         limit to '10' and offset to '10'.
+          /** Offset value. Use `offset` with `limit` to enable pagination of results. For example, to display
+         results 11-20, set limit to `10` and offset to `10`.
            */
           public java.lang.String getOffset() {
             return offset;
           }
 
           /**
-           * Use offset with limit to enable pagination of results. For example, to display results
-           * 11-20, set limit to '10' and offset to '10'.
+           * Offset value. Use `offset` with `limit` to enable pagination of results. For example,
+           * to display results 11-20, set limit to `10` and offset to `10`.
            */
           public Get setOffset(java.lang.String offset) {
             this.offset = offset;
             return this;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           @com.google.api.client.util.Key
           private java.lang.Boolean realtime;
 
-          /** Legacy field: not used anymore.
+          /** No longer used by Apigee. Supported for backwards compatibility.
            */
           public java.lang.Boolean getRealtime() {
             return realtime;
           }
 
-          /** Legacy field: not used anymore. */
+          /** No longer used by Apigee. Supported for backwards compatibility. */
           public Get setRealtime(java.lang.Boolean realtime) {
             this.realtime = realtime;
             return this;
           }
 
           /**
-           * The select parameter contains a comma separated list of metrics. E.g.
-           * sum(message_count),sum(error_count)
+           * Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
            */
           @com.google.api.client.util.Key
           private java.lang.String select;
 
-          /** The select parameter contains a comma separated list of metrics. E.g.
-         sum(message_count),sum(error_count)
+          /** Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
            */
           public java.lang.String getSelect() {
             return select;
           }
 
           /**
-           * The select parameter contains a comma separated list of metrics. E.g.
-           * sum(message_count),sum(error_count)
+           * Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
            */
           public Get setSelect(java.lang.String select) {
             this.select = select;
             return this;
           }
 
-          /** This parameter routes the query to api monitoring service for last hour. */
+          /** Routes the query to API Monitoring for the last hour. */
           @com.google.api.client.util.Key
           private java.lang.Boolean sonar;
 
-          /** This parameter routes the query to api monitoring service for last hour.
+          /** Routes the query to API Monitoring for the last hour.
            */
           public java.lang.Boolean getSonar() {
             return sonar;
           }
 
-          /** This parameter routes the query to api monitoring service for last hour. */
+          /** Routes the query to API Monitoring for the last hour. */
           public Get setSonar(java.lang.Boolean sonar) {
             this.sonar = sonar;
             return this;
           }
 
           /**
-           * This parameter specifies if the sort order should be ascending or descending Supported
-           * values are DESC and ASC.
+           * Flag that specifies whether the sort order should be ascending or descending. Valid
+           * values include: `DESC` and `ASC`.
            */
           @com.google.api.client.util.Key
           private java.lang.String sort;
 
-          /** This parameter specifies if the sort order should be ascending or descending Supported values are
-         DESC and ASC.
+          /** Flag that specifies whether the sort order should be ascending or descending. Valid values include:
+         `DESC` and `ASC`.
            */
           public java.lang.String getSort() {
             return sort;
           }
 
           /**
-           * This parameter specifies if the sort order should be ascending or descending Supported
-           * values are DESC and ASC.
+           * Flag that specifies whether the sort order should be ascending or descending. Valid
+           * values include: `DESC` and `ASC`.
            */
           public Get setSort(java.lang.String sort) {
             this.sort = sort;
             return this;
           }
 
-          /** Comma separated list of columns to sort the final result. */
+          /** Comma-separated list of columns to sort the final result. */
           @com.google.api.client.util.Key
           private java.lang.String sortby;
 
-          /** Comma separated list of columns to sort the final result.
+          /** Comma-separated list of columns to sort the final result.
            */
           public java.lang.String getSortby() {
             return sortby;
           }
 
-          /** Comma separated list of columns to sort the final result. */
+          /** Comma-separated list of columns to sort the final result. */
           public Get setSortby(java.lang.String sortby) {
             this.sortby = sortby;
             return this;
           }
 
           /**
-           * Time interval for the interactive query. Time range is specified as start~end E.g.
-           * 04/15/2017 00:00~05/15/2017 23:59
+           * Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+           * For example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           @com.google.api.client.util.Key
           private java.lang.String timeRange;
 
-          /** Time interval for the interactive query. Time range is specified as start~end E.g. 04/15/2017
-         00:00~05/15/2017 23:59
+          /** Time interval for the interactive query. Time range is specified in GMT as `start~end`. For
+         example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           public java.lang.String getTimeRange() {
             return timeRange;
           }
 
           /**
-           * Time interval for the interactive query. Time range is specified as start~end E.g.
-           * 04/15/2017 00:00~05/15/2017 23:59
+           * Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+           * For example: `04/15/2017 00:00~05/15/2017 23:59`
            */
           public Get setTimeRange(java.lang.String timeRange) {
             this.timeRange = timeRange;
@@ -29100,22 +29085,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity
-           * of metrics returned.
+           * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`,
+           * `day`, `week`, or` month`.
            */
           @com.google.api.client.util.Key
           private java.lang.String timeUnit;
 
-          /** A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of metrics
-         returned.
+          /** Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`, `week`,
+         or` month`.
            */
           public java.lang.String getTimeUnit() {
             return timeUnit;
           }
 
           /**
-           * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity
-           * of metrics returned.
+           * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`,
+           * `day`, `week`, or` month`.
            */
           public Get setTimeUnit(java.lang.String timeUnit) {
             this.timeUnit = timeUnit;
@@ -29123,19 +29108,21 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+           * Top number of results to return. For example, to return the top 5 results, set
+           * `topk=5`.
            */
           @com.google.api.client.util.Key
           private java.lang.String topk;
 
-          /** Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+          /** Top number of results to return. For example, to return the top 5 results, set `topk=5`.
            */
           public java.lang.String getTopk() {
             return topk;
           }
 
           /**
-           * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+           * Top number of results to return. For example, to return the top 5 results, set
+           * `topk=5`.
            */
           public Get setTopk(java.lang.String topk) {
             this.topk = topk;
@@ -29143,39 +29130,41 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Lists timestamps in ascending order if set to true. Recommend setting this value to
-           * true if you are using sortby with sort=DESC.
+           * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+           * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+           * `sortby` with `sort=DESC`.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean tsAscending;
 
-          /** Lists timestamps in ascending order if set to true. Recommend setting this value to true if you are
-         using sortby with sort=DESC.
+          /** Flag that specifies whether to list timestamps in ascending (`true`) or descending (`false`) order.
+         Apigee recommends that you set this value to `true` if you are using `sortby` with `sort=DESC`.
            */
           public java.lang.Boolean getTsAscending() {
             return tsAscending;
           }
 
           /**
-           * Lists timestamps in ascending order if set to true. Recommend setting this value to
-           * true if you are using sortby with sort=DESC.
+           * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+           * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+           * `sortby` with `sort=DESC`.
            */
           public Get setTsAscending(java.lang.Boolean tsAscending) {
             this.tsAscending = tsAscending;
             return this;
           }
 
-          /** This parameters contains the timezone offset value. */
+          /** Timezone offset value. */
           @com.google.api.client.util.Key
           private java.lang.String tzo;
 
-          /** This parameters contains the timezone offset value.
+          /** Timezone offset value.
            */
           public java.lang.String getTzo() {
             return tzo;
           }
 
-          /** This parameters contains the timezone offset value. */
+          /** Timezone offset value. */
           public Get setTzo(java.lang.String tzo) {
             this.tzo = tzo;
             return this;
@@ -31514,19 +31503,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Retrieve metrics grouped by dimensions in host level. The types of metrics you can retrieve
        * include traffic, message counts, API call latency, response size, and cache hits and counts.
-       * Dimensions let you view metrics in meaningful groups. The stats api does accept dimensions as
-       * path params. The dimensions are optional in which case the metrics are computed on the entire
-       * data for the given timerange.
+       * Dimensions let you view metrics in meaningful groups. You can optionally pass dimensions as path
+       * parameters to the `stats` API. If dimensions are not specified, the metrics are computed on the
+       * entire set of data for the given time range.
        *
        * Create a request for the method "hostStats.get".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-       *        `organizations/{organization_id}/hostStats/{dimensions}`. Dimensions let you view metrics
-       *        in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions should be
-       *        comma separated list as shown below `organizations/{org}/hostStats/apiproxy,request_verb`
+       * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+       *        in your request: `organizations/{org}/hostStats/{dimensions}` Dimensions let you view
+       *        metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+       *        dimensions should be a comma-separated list as shown below
+       *        `organizations/{org}/hostStats/apiproxy,request_verb`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -31545,9 +31535,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Retrieve metrics grouped by dimensions in host level. The types of metrics you can retrieve
          * include traffic, message counts, API call latency, response size, and cache hits and counts.
-         * Dimensions let you view metrics in meaningful groups. The stats api does accept dimensions as
-         * path params. The dimensions are optional in which case the metrics are computed on the entire
-         * data for the given timerange.
+         * Dimensions let you view metrics in meaningful groups. You can optionally pass dimensions as
+         * path parameters to the `stats` API. If dimensions are not specified, the metrics are computed
+         * on the entire set of data for the given time range.
          *
          * Create a request for the method "hostStats.get".
          *
@@ -31556,10 +31546,11 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-       *        `organizations/{organization_id}/hostStats/{dimensions}`. Dimensions let you view metrics
-       *        in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions should be
-       *        comma separated list as shown below `organizations/{org}/hostStats/apiproxy,request_verb`
+         * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+       *        in your request: `organizations/{org}/hostStats/{dimensions}` Dimensions let you view
+       *        metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+       *        dimensions should be a comma-separated list as shown below
+       *        `organizations/{org}/hostStats/apiproxy,request_verb`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -31638,29 +31629,29 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The resource name for which the interactive query will be executed. Must be of
-         * the form `organizations/{organization_id}/hostStats/{dimensions}`. Dimensions let you
-         * view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions
-         * should be comma separated list as shown below
+         * Required. Resource name for which the interactive query will be executed. Use the
+         * following format in your request: `organizations/{org}/hostStats/{dimensions}` Dimensions
+         * let you view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The
+         * value of dimensions should be a comma-separated list as shown below
          * `organizations/{org}/hostStats/apiproxy,request_verb`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name for which the interactive query will be executed. Must be of the form
-       `organizations/{organization_id}/hostStats/{dimensions}`. Dimensions let you view metrics in
-       meaningful groupings. E.g. apiproxy, target_host. The value of dimensions should be comma separated
-       list as shown below `organizations/{org}/hostStats/apiproxy,request_verb`
+        /** Required. Resource name for which the interactive query will be executed. Use the following format
+       in your request: `organizations/{org}/hostStats/{dimensions}` Dimensions let you view metrics in
+       meaningful groupings, such as `apiproxy`, `target_host`. The value of dimensions should be a comma-
+       separated list as shown below `organizations/{org}/hostStats/apiproxy,request_verb`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name for which the interactive query will be executed. Must be of
-         * the form `organizations/{organization_id}/hostStats/{dimensions}`. Dimensions let you
-         * view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions
-         * should be comma separated list as shown below
+         * Required. Resource name for which the interactive query will be executed. Use the
+         * following format in your request: `organizations/{org}/hostStats/{dimensions}` Dimensions
+         * let you view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The
+         * value of dimensions should be a comma-separated list as shown below
          * `organizations/{org}/hostStats/apiproxy,request_verb`
          */
         public Get setName(java.lang.String name) {
@@ -31673,70 +31664,71 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         @com.google.api.client.util.Key
         private java.lang.String accuracy;
 
-        /** Legacy field: not used anymore.
+        /** No longer used by Apigee. Supported for backwards compatibility.
          */
         public java.lang.String getAccuracy() {
           return accuracy;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         public Get setAccuracy(java.lang.String accuracy) {
           this.accuracy = accuracy;
           return this;
         }
 
-        /** Required. The hostname for which the interactive query will be executed. */
+        /** Required. Hostname for which the interactive query will be executed. */
         @com.google.api.client.util.Key
         private java.lang.String envgroupHostname;
 
-        /** Required. The hostname for which the interactive query will be executed.
+        /** Required. Hostname for which the interactive query will be executed.
          */
         public java.lang.String getEnvgroupHostname() {
           return envgroupHostname;
         }
 
-        /** Required. The hostname for which the interactive query will be executed. */
+        /** Required. Hostname for which the interactive query will be executed. */
         public Get setEnvgroupHostname(java.lang.String envgroupHostname) {
           this.envgroupHostname = envgroupHostname;
           return this;
         }
 
-        /** Enables drill-down on specific dimension values. */
+        /** Flag that enables drill-down on specific dimension values. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Enables drill-down on specific dimension values.
+        /** Flag that enables drill-down on specific dimension values.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** Enables drill-down on specific dimension values. */
+        /** Flag that enables drill-down on specific dimension values. */
         public Get setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
         /**
-         * This parameter is used to limit the number of result items. Default and the max value is
-         * 14400.
+         * Maximum number of result items to return. The default and maximum value that can be
+         * returned is 14400.
          */
         @com.google.api.client.util.Key
         private java.lang.String limit;
 
-        /** This parameter is used to limit the number of result items. Default and the max value is 14400.
+        /** Maximum number of result items to return. The default and maximum value that can be returned is
+       14400.
          */
         public java.lang.String getLimit() {
           return limit;
         }
 
         /**
-         * This parameter is used to limit the number of result items. Default and the max value is
-         * 14400.
+         * Maximum number of result items to return. The default and maximum value that can be
+         * returned is 14400.
          */
         public Get setLimit(java.lang.String limit) {
           this.limit = limit;
@@ -31744,123 +31736,116 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Use offset with limit to enable pagination of results. For example, to display results
-         * 11-20, set limit to '10' and offset to '10'.
+         * Offset value. Use `offset` with `limit` to enable pagination of results. For example, to
+         * display results 11-20, set limit to `10` and offset to `10`.
          */
         @com.google.api.client.util.Key
         private java.lang.String offset;
 
-        /** Use offset with limit to enable pagination of results. For example, to display results 11-20, set
-       limit to '10' and offset to '10'.
+        /** Offset value. Use `offset` with `limit` to enable pagination of results. For example, to display
+       results 11-20, set limit to `10` and offset to `10`.
          */
         public java.lang.String getOffset() {
           return offset;
         }
 
         /**
-         * Use offset with limit to enable pagination of results. For example, to display results
-         * 11-20, set limit to '10' and offset to '10'.
+         * Offset value. Use `offset` with `limit` to enable pagination of results. For example, to
+         * display results 11-20, set limit to `10` and offset to `10`.
          */
         public Get setOffset(java.lang.String offset) {
           this.offset = offset;
           return this;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         @com.google.api.client.util.Key
         private java.lang.Boolean realtime;
 
-        /** Legacy field: not used anymore.
+        /** No longer used by Apigee. Supported for backwards compatibility.
          */
         public java.lang.Boolean getRealtime() {
           return realtime;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         public Get setRealtime(java.lang.Boolean realtime) {
           this.realtime = realtime;
           return this;
         }
 
-        /**
-         * The select parameter contains a comma separated list of metrics. E.g.
-         * sum(message_count),sum(error_count)
-         */
+        /** Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)` */
         @com.google.api.client.util.Key
         private java.lang.String select;
 
-        /** The select parameter contains a comma separated list of metrics. E.g.
-       sum(message_count),sum(error_count)
+        /** Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
          */
         public java.lang.String getSelect() {
           return select;
         }
 
-        /**
-         * The select parameter contains a comma separated list of metrics. E.g.
-         * sum(message_count),sum(error_count)
-         */
+        /** Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)` */
         public Get setSelect(java.lang.String select) {
           this.select = select;
           return this;
         }
 
         /**
-         * This parameter specifies if the sort order should be ascending or descending Supported
-         * values are DESC and ASC.
+         * Flag that specifies if the sort order should be ascending or descending. Valid values are
+         * `DESC` and `ASC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String sort;
 
-        /** This parameter specifies if the sort order should be ascending or descending Supported values are
-       DESC and ASC.
+        /** Flag that specifies if the sort order should be ascending or descending. Valid values are `DESC`
+       and `ASC`.
          */
         public java.lang.String getSort() {
           return sort;
         }
 
         /**
-         * This parameter specifies if the sort order should be ascending or descending Supported
-         * values are DESC and ASC.
+         * Flag that specifies if the sort order should be ascending or descending. Valid values are
+         * `DESC` and `ASC`.
          */
         public Get setSort(java.lang.String sort) {
           this.sort = sort;
           return this;
         }
 
-        /** Comma separated list of columns to sort the final result. */
+        /** Comma-separated list of columns to sort the final result. */
         @com.google.api.client.util.Key
         private java.lang.String sortby;
 
-        /** Comma separated list of columns to sort the final result.
+        /** Comma-separated list of columns to sort the final result.
          */
         public java.lang.String getSortby() {
           return sortby;
         }
 
-        /** Comma separated list of columns to sort the final result. */
+        /** Comma-separated list of columns to sort the final result. */
         public Get setSortby(java.lang.String sortby) {
           this.sortby = sortby;
           return this;
         }
 
         /**
-         * Time interval for the interactive query. Time range is specified as start~end E.g.
-         * 04/15/2017 00:00~05/15/2017 23:59
+         * Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+         * For example: `04/15/2017 00:00~05/15/2017 23:59`
          */
         @com.google.api.client.util.Key
         private java.lang.String timeRange;
 
-        /** Time interval for the interactive query. Time range is specified as start~end E.g. 04/15/2017
-       00:00~05/15/2017 23:59
+        /** Time interval for the interactive query. Time range is specified in GMT as `start~end`. For
+       example: `04/15/2017 00:00~05/15/2017 23:59`
          */
         public java.lang.String getTimeRange() {
           return timeRange;
         }
 
         /**
-         * Time interval for the interactive query. Time range is specified as start~end E.g.
-         * 04/15/2017 00:00~05/15/2017 23:59
+         * Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+         * For example: `04/15/2017 00:00~05/15/2017 23:59`
          */
         public Get setTimeRange(java.lang.String timeRange) {
           this.timeRange = timeRange;
@@ -31868,22 +31853,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of
-         * metrics returned.
+         * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`,
+         * `week`, or `month`.
          */
         @com.google.api.client.util.Key
         private java.lang.String timeUnit;
 
-        /** A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of metrics
-       returned.
+        /** Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`, `week`,
+       or `month`.
          */
         public java.lang.String getTimeUnit() {
           return timeUnit;
         }
 
         /**
-         * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of
-         * metrics returned.
+         * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`,
+         * `week`, or `month`.
          */
         public Get setTimeUnit(java.lang.String timeUnit) {
           this.timeUnit = timeUnit;
@@ -31891,19 +31876,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+         * Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         @com.google.api.client.util.Key
         private java.lang.String topk;
 
-        /** Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+        /** Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         public java.lang.String getTopk() {
           return topk;
         }
 
         /**
-         * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+         * Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         public Get setTopk(java.lang.String topk) {
           this.topk = topk;
@@ -31911,39 +31896,41 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Lists timestamps in ascending order if set to true. Recommend setting this value to true
-         * if you are using sortby with sort=DESC.
+         * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+         * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+         * `sortby` with `sort=DESC`.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean tsAscending;
 
-        /** Lists timestamps in ascending order if set to true. Recommend setting this value to true if you are
-       using sortby with sort=DESC.
+        /** Flag that specifies whether to list timestamps in ascending (`true`) or descending (`false`) order.
+       Apigee recommends that you set this value to `true` if you are using `sortby` with `sort=DESC`.
          */
         public java.lang.Boolean getTsAscending() {
           return tsAscending;
         }
 
         /**
-         * Lists timestamps in ascending order if set to true. Recommend setting this value to true
-         * if you are using sortby with sort=DESC.
+         * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+         * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+         * `sortby` with `sort=DESC`.
          */
         public Get setTsAscending(java.lang.Boolean tsAscending) {
           this.tsAscending = tsAscending;
           return this;
         }
 
-        /** This parameters contains the timezone offset value. */
+        /** Timezone offset value. */
         @com.google.api.client.util.Key
         private java.lang.String tzo;
 
-        /** This parameters contains the timezone offset value.
+        /** Timezone offset value.
          */
         public java.lang.String getTzo() {
           return tzo;
         }
 
-        /** This parameters contains the timezone offset value. */
+        /** Timezone offset value. */
         public Get setTzo(java.lang.String tzo) {
           this.tzo = tzo;
           return this;
@@ -35291,17 +35278,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
     public class OptimizedHostStats {
 
       /**
-       * This api is similar to GetHostStats except that the response is less verbose.
+       * Similar to GetHostStats except that the response is less verbose.
        *
        * Create a request for the method "optimizedHostStats.get".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-       *        `organizations/{organization_id}/optimizedHostStats/{dimensions}`. Dimensions let you view
-       *        metrics in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions
-       *        should be comma separated list as shown below
+       * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+       *        in your request: `organizations/{organization_id}/optimizedHostStats/{dimensions}`
+       *        Dimensions let you view metrics in meaningful groupings, such as `apiproxy`,
+       *        `target_host`. The value of dimensions should be a comma-separated list as shown below:
        *        `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
        * @return the request
        */
@@ -35319,7 +35306,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/optimizedHostStats/.*$");
 
         /**
-         * This api is similar to GetHostStats except that the response is less verbose.
+         * Similar to GetHostStats except that the response is less verbose.
          *
          * Create a request for the method "optimizedHostStats.get".
          *
@@ -35328,10 +35315,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name for which the interactive query will be executed. Must be of the form
-       *        `organizations/{organization_id}/optimizedHostStats/{dimensions}`. Dimensions let you view
-       *        metrics in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions
-       *        should be comma separated list as shown below
+         * @param name Required. Resource name for which the interactive query will be executed. Use the following format
+       *        in your request: `organizations/{organization_id}/optimizedHostStats/{dimensions}`
+       *        Dimensions let you view metrics in meaningful groupings, such as `apiproxy`,
+       *        `target_host`. The value of dimensions should be a comma-separated list as shown below:
        *        `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
          * @since 1.13
          */
@@ -35411,29 +35398,32 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The resource name for which the interactive query will be executed. Must be of
-         * the form `organizations/{organization_id}/optimizedHostStats/{dimensions}`. Dimensions
-         * let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of
-         * dimensions should be comma separated list as shown below
+         * Required. Resource name for which the interactive query will be executed. Use the
+         * following format in your request:
+         * `organizations/{organization_id}/optimizedHostStats/{dimensions}` Dimensions let you view
+         * metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+         * dimensions should be a comma-separated list as shown below:
          * `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name for which the interactive query will be executed. Must be of the form
-       `organizations/{organization_id}/optimizedHostStats/{dimensions}`. Dimensions let you view metrics
-       in meaningful groupings. E.g. apiproxy, target_host. The value of dimensions should be comma
-       separated list as shown below `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
+        /** Required. Resource name for which the interactive query will be executed. Use the following format
+       in your request: `organizations/{organization_id}/optimizedHostStats/{dimensions}` Dimensions let
+       you view metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+       dimensions should be a comma-separated list as shown below:
+       `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name for which the interactive query will be executed. Must be of
-         * the form `organizations/{organization_id}/optimizedHostStats/{dimensions}`. Dimensions
-         * let you view metrics in meaningful groupings. E.g. apiproxy, target_host. The value of
-         * dimensions should be comma separated list as shown below
+         * Required. Resource name for which the interactive query will be executed. Use the
+         * following format in your request:
+         * `organizations/{organization_id}/optimizedHostStats/{dimensions}` Dimensions let you view
+         * metrics in meaningful groupings, such as `apiproxy`, `target_host`. The value of
+         * dimensions should be a comma-separated list as shown below:
          * `organizations/{org}/optimizedHostStats/apiproxy,request_verb`
          */
         public Get setName(java.lang.String name) {
@@ -35446,70 +35436,71 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         @com.google.api.client.util.Key
         private java.lang.String accuracy;
 
-        /** Legacy field: not used anymore.
+        /** No longer used by Apigee. Supported for backwards compatibility.
          */
         public java.lang.String getAccuracy() {
           return accuracy;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         public Get setAccuracy(java.lang.String accuracy) {
           this.accuracy = accuracy;
           return this;
         }
 
-        /** Required. The hostname for which the interactive query will be executed. */
+        /** Required. Hostname for which the interactive query will be executed. */
         @com.google.api.client.util.Key
         private java.lang.String envgroupHostname;
 
-        /** Required. The hostname for which the interactive query will be executed.
+        /** Required. Hostname for which the interactive query will be executed.
          */
         public java.lang.String getEnvgroupHostname() {
           return envgroupHostname;
         }
 
-        /** Required. The hostname for which the interactive query will be executed. */
+        /** Required. Hostname for which the interactive query will be executed. */
         public Get setEnvgroupHostname(java.lang.String envgroupHostname) {
           this.envgroupHostname = envgroupHostname;
           return this;
         }
 
-        /** Enables drill-down on specific dimension values. */
+        /** Filter that enables you to drill-down on specific dimension values. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Enables drill-down on specific dimension values.
+        /** Filter that enables you to drill-down on specific dimension values.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** Enables drill-down on specific dimension values. */
+        /** Filter that enables you to drill-down on specific dimension values. */
         public Get setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
         /**
-         * This parameter is used to limit the number of result items. Default and the max value is
-         * 14400.
+         * Maximum number of result items to return. The default and maximum value that can be
+         * returned is 14400.
          */
         @com.google.api.client.util.Key
         private java.lang.String limit;
 
-        /** This parameter is used to limit the number of result items. Default and the max value is 14400.
+        /** Maximum number of result items to return. The default and maximum value that can be returned is
+       14400.
          */
         public java.lang.String getLimit() {
           return limit;
         }
 
         /**
-         * This parameter is used to limit the number of result items. Default and the max value is
-         * 14400.
+         * Maximum number of result items to return. The default and maximum value that can be
+         * returned is 14400.
          */
         public Get setLimit(java.lang.String limit) {
           this.limit = limit;
@@ -35517,61 +35508,60 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Use offset with limit to enable pagination of results. For example, to display results
-         * 11-20, set limit to '10' and offset to '10'.
+         * Offset value. Use `offset` with `limit` to enable pagination of results. For example, to
+         * display results 11-20, set limit to `10` and offset to `10`.
          */
         @com.google.api.client.util.Key
         private java.lang.String offset;
 
-        /** Use offset with limit to enable pagination of results. For example, to display results 11-20, set
-       limit to '10' and offset to '10'.
+        /** Offset value. Use `offset` with `limit` to enable pagination of results. For example, to display
+       results 11-20, set limit to `10` and offset to `10`.
          */
         public java.lang.String getOffset() {
           return offset;
         }
 
         /**
-         * Use offset with limit to enable pagination of results. For example, to display results
-         * 11-20, set limit to '10' and offset to '10'.
+         * Offset value. Use `offset` with `limit` to enable pagination of results. For example, to
+         * display results 11-20, set limit to `10` and offset to `10`.
          */
         public Get setOffset(java.lang.String offset) {
           this.offset = offset;
           return this;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         @com.google.api.client.util.Key
         private java.lang.Boolean realtime;
 
-        /** Legacy field: not used anymore.
+        /** No longer used by Apigee. Supported for backwards compatibility.
          */
         public java.lang.Boolean getRealtime() {
           return realtime;
         }
 
-        /** Legacy field: not used anymore. */
+        /** No longer used by Apigee. Supported for backwards compatibility. */
         public Get setRealtime(java.lang.Boolean realtime) {
           this.realtime = realtime;
           return this;
         }
 
         /**
-         * Required. The select parameter contains a comma separated list of metrics. E.g.
-         * sum(message_count),sum(error_count)
+         * Required. Comma-separated list of metrics. For example:
+         * `sum(message_count),sum(error_count)`
          */
         @com.google.api.client.util.Key
         private java.lang.String select;
 
-        /** Required. The select parameter contains a comma separated list of metrics. E.g.
-       sum(message_count),sum(error_count)
+        /** Required. Comma-separated list of metrics. For example: `sum(message_count),sum(error_count)`
          */
         public java.lang.String getSelect() {
           return select;
         }
 
         /**
-         * Required. The select parameter contains a comma separated list of metrics. E.g.
-         * sum(message_count),sum(error_count)
+         * Required. Comma-separated list of metrics. For example:
+         * `sum(message_count),sum(error_count)`
          */
         public Get setSelect(java.lang.String select) {
           this.select = select;
@@ -35579,61 +35569,61 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * This parameter specifies if the sort order should be ascending or descending Supported
-         * values are DESC and ASC.
+         * Flag that specifies whether the sort order should be ascending or descending. Valid
+         * values include `DESC` and `ASC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String sort;
 
-        /** This parameter specifies if the sort order should be ascending or descending Supported values are
-       DESC and ASC.
+        /** Flag that specifies whether the sort order should be ascending or descending. Valid values include
+       `DESC` and `ASC`.
          */
         public java.lang.String getSort() {
           return sort;
         }
 
         /**
-         * This parameter specifies if the sort order should be ascending or descending Supported
-         * values are DESC and ASC.
+         * Flag that specifies whether the sort order should be ascending or descending. Valid
+         * values include `DESC` and `ASC`.
          */
         public Get setSort(java.lang.String sort) {
           this.sort = sort;
           return this;
         }
 
-        /** Comma separated list of columns to sort the final result. */
+        /** Comma-separated list of columns used to sort the final result. */
         @com.google.api.client.util.Key
         private java.lang.String sortby;
 
-        /** Comma separated list of columns to sort the final result.
+        /** Comma-separated list of columns used to sort the final result.
          */
         public java.lang.String getSortby() {
           return sortby;
         }
 
-        /** Comma separated list of columns to sort the final result. */
+        /** Comma-separated list of columns used to sort the final result. */
         public Get setSortby(java.lang.String sortby) {
           this.sortby = sortby;
           return this;
         }
 
         /**
-         * Required. Time interval for the interactive query. Time range is specified as start~end.
-         * E.g 04/15/2017 00:00~05/15/2017 23:59.
+         * Required. Time interval for the interactive query. Time range is specified in GMT as
+         * `start~end`. For example: `04/15/2017 00:00~05/15/2017 23:59`.
          */
         @com.google.api.client.util.Key
         private java.lang.String timeRange;
 
-        /** Required. Time interval for the interactive query. Time range is specified as start~end. E.g
-       04/15/2017 00:00~05/15/2017 23:59.
+        /** Required. Time interval for the interactive query. Time range is specified in GMT as `start~end`.
+       For example: `04/15/2017 00:00~05/15/2017 23:59`.
          */
         public java.lang.String getTimeRange() {
           return timeRange;
         }
 
         /**
-         * Required. Time interval for the interactive query. Time range is specified as start~end.
-         * E.g 04/15/2017 00:00~05/15/2017 23:59.
+         * Required. Time interval for the interactive query. Time range is specified in GMT as
+         * `start~end`. For example: `04/15/2017 00:00~05/15/2017 23:59`.
          */
         public Get setTimeRange(java.lang.String timeRange) {
           this.timeRange = timeRange;
@@ -35641,22 +35631,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of
-         * metrics returned.
+         * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`,
+         * `week`, or `month`.
          */
         @com.google.api.client.util.Key
         private java.lang.String timeUnit;
 
-        /** A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of metrics
-       returned.
+        /** Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`, `week`,
+       or `month`.
          */
         public java.lang.String getTimeUnit() {
           return timeUnit;
         }
 
         /**
-         * A value of second, minute, hour, day, week, month. Time Unit specifies the granularity of
-         * metrics returned.
+         * Granularity of metrics returned. Valid values include: `second`, `minute`, `hour`, `day`,
+         * `week`, or `month`.
          */
         public Get setTimeUnit(java.lang.String timeUnit) {
           this.timeUnit = timeUnit;
@@ -35664,19 +35654,19 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+         * Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         @com.google.api.client.util.Key
         private java.lang.String topk;
 
-        /** Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+        /** Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         public java.lang.String getTopk() {
           return topk;
         }
 
         /**
-         * Take 'top k' results from results, for example, to return the top 5 results 'topk=5'.
+         * Top number of results to return. For example, to return the top 5 results, set `topk=5`.
          */
         public Get setTopk(java.lang.String topk) {
           this.topk = topk;
@@ -35684,39 +35674,41 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Lists timestamps in ascending order if set to true. Recommend setting this value to true
-         * if you are using sortby with sort=DESC.
+         * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+         * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+         * `sortby` with `sort=DESC`.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean tsAscending;
 
-        /** Lists timestamps in ascending order if set to true. Recommend setting this value to true if you are
-       using sortby with sort=DESC.
+        /** Flag that specifies whether to list timestamps in ascending (`true`) or descending (`false`) order.
+       Apigee recommends that you set this value to `true` if you are using `sortby` with `sort=DESC`.
          */
         public java.lang.Boolean getTsAscending() {
           return tsAscending;
         }
 
         /**
-         * Lists timestamps in ascending order if set to true. Recommend setting this value to true
-         * if you are using sortby with sort=DESC.
+         * Flag that specifies whether to list timestamps in ascending (`true`) or descending
+         * (`false`) order. Apigee recommends that you set this value to `true` if you are using
+         * `sortby` with `sort=DESC`.
          */
         public Get setTsAscending(java.lang.Boolean tsAscending) {
           this.tsAscending = tsAscending;
           return this;
         }
 
-        /** This parameters contains the timezone offset value. */
+        /** Timezone offset value. */
         @com.google.api.client.util.Key
         private java.lang.String tzo;
 
-        /** This parameters contains the timezone offset value.
+        /** Timezone offset value.
          */
         public java.lang.String getTzo() {
           return tzo;
         }
 
-        /** This parameters contains the timezone offset value. */
+        /** Timezone offset value. */
         public Get setTzo(java.lang.String tzo) {
           this.tzo = tzo;
           return this;

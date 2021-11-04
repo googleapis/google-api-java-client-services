@@ -74,6 +74,16 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String deviceBasebandVersion;
 
   /**
+   * Output only. ID that uniquely identifies a personally-owned device in a particular
+   * organization. On the same physical device when enrolled with the same organization, this ID
+   * persists across setups and even factory resets. This ID is available on personally-owned
+   * devices with a work profile on devices running Android 12 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enterpriseSpecificId;
+
+  /**
    * GPU shutdown temperature thresholds in Celsius for each GPU on the device.
    * The value may be {@code null}.
    */
@@ -228,6 +238,29 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
    */
   public HardwareInfo setDeviceBasebandVersion(java.lang.String deviceBasebandVersion) {
     this.deviceBasebandVersion = deviceBasebandVersion;
+    return this;
+  }
+
+  /**
+   * Output only. ID that uniquely identifies a personally-owned device in a particular
+   * organization. On the same physical device when enrolled with the same organization, this ID
+   * persists across setups and even factory resets. This ID is available on personally-owned
+   * devices with a work profile on devices running Android 12 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnterpriseSpecificId() {
+    return enterpriseSpecificId;
+  }
+
+  /**
+   * Output only. ID that uniquely identifies a personally-owned device in a particular
+   * organization. On the same physical device when enrolled with the same organization, this ID
+   * persists across setups and even factory resets. This ID is available on personally-owned
+   * devices with a work profile on devices running Android 12 and above.
+   * @param enterpriseSpecificId enterpriseSpecificId or {@code null} for none
+   */
+  public HardwareInfo setEnterpriseSpecificId(java.lang.String enterpriseSpecificId) {
+    this.enterpriseSpecificId = enterpriseSpecificId;
     return this;
   }
 

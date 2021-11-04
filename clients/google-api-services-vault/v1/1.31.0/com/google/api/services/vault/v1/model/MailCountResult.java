@@ -63,8 +63,9 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   private java.lang.Long matchingAccountsCount;
 
   /**
-   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
-   * because they are not on hold. For other data scopes, this field is not set.
+   * When **DataScope** is **HELD_DATA** and when account emails are passed in explicitly, the list
+   * of accounts in the request that are not queried because they are not on hold in the matter. For
+   * other data scopes, this field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +130,9 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
-   * because they are not on hold. For other data scopes, this field is not set.
+   * When **DataScope** is **HELD_DATA** and when account emails are passed in explicitly, the list
+   * of accounts in the request that are not queried because they are not on hold in the matter. For
+   * other data scopes, this field is not set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNonQueryableAccounts() {
@@ -138,8 +140,9 @@ public final class MailCountResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * When **DataScope** is **HELD_DATA**, the number of accounts in the request that are not queried
-   * because they are not on hold. For other data scopes, this field is not set.
+   * When **DataScope** is **HELD_DATA** and when account emails are passed in explicitly, the list
+   * of accounts in the request that are not queried because they are not on hold in the matter. For
+   * other data scopes, this field is not set.
    * @param nonQueryableAccounts nonQueryableAccounts or {@code null} for none
    */
   public MailCountResult setNonQueryableAccounts(java.util.List<java.lang.String> nonQueryableAccounts) {

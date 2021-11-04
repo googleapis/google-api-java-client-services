@@ -32,7 +32,8 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class AnalyzePackagesRequestV1 extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to include OSV data in the scan.
+   * [DEPRECATED] Whether to include OSV data in the scan. For backwards compatibility reasons, this
+   * field can be neither removed nor renamed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class AnalyzePackagesRequestV1 extends com.google.api.client.json.G
   private java.lang.String resourceUri;
 
   /**
-   * Whether to include OSV data in the scan.
+   * [DEPRECATED] Whether to include OSV data in the scan. For backwards compatibility reasons, this
+   * field can be neither removed nor renamed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeOsvData() {
@@ -61,7 +63,8 @@ public final class AnalyzePackagesRequestV1 extends com.google.api.client.json.G
   }
 
   /**
-   * Whether to include OSV data in the scan.
+   * [DEPRECATED] Whether to include OSV data in the scan. For backwards compatibility reasons, this
+   * field can be neither removed nor renamed.
    * @param includeOsvData includeOsvData or {@code null} for none
    */
   public AnalyzePackagesRequestV1 setIncludeOsvData(java.lang.Boolean includeOsvData) {

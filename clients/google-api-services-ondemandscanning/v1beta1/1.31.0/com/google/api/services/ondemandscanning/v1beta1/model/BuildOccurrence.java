@@ -31,14 +31,24 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
 public final class BuildOccurrence extends com.google.api.client.json.GenericJson {
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InTotoProvenance intotoProvenance;
 
   /**
-   * Required. The actual provenance for the build.
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoStatement intotoStatement;
+
+  /**
+   * The actual provenance for the build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +68,8 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
   private java.lang.String provenanceBytes;
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * @return value or {@code null} for none
    */
   public InTotoProvenance getIntotoProvenance() {
@@ -66,7 +77,8 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * In-toto Provenance representation as defined in spec.
+   * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
+   * defined in spec.
    * @param intotoProvenance intotoProvenance or {@code null} for none
    */
   public BuildOccurrence setIntotoProvenance(InTotoProvenance intotoProvenance) {
@@ -75,7 +87,28 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The actual provenance for the build.
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * @return value or {@code null} for none
+   */
+  public InTotoStatement getIntotoStatement() {
+    return intotoStatement;
+  }
+
+  /**
+   * In-toto Statement representation as defined in spec. The intoto_statement can contain any type
+   * of provenance. The serialized payload of the statement can be stored and signed in the
+   * Occurrence's envelope.
+   * @param intotoStatement intotoStatement or {@code null} for none
+   */
+  public BuildOccurrence setIntotoStatement(InTotoStatement intotoStatement) {
+    this.intotoStatement = intotoStatement;
+    return this;
+  }
+
+  /**
+   * The actual provenance for the build.
    * @return value or {@code null} for none
    */
   public BuildProvenance getProvenance() {
@@ -83,7 +116,7 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The actual provenance for the build.
+   * The actual provenance for the build.
    * @param provenance provenance or {@code null} for none
    */
   public BuildOccurrence setProvenance(BuildProvenance provenance) {

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-cloudsupport",
+    "version": "v2beta-rev20211103-1.32.1"
+  }
+}

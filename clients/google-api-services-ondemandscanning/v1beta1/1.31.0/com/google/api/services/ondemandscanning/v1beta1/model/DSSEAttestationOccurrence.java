@@ -17,7 +17,8 @@
 package com.google.api.services.ondemandscanning.v1beta1.model;
 
 /**
- * Model definition for DSSEAttestationOccurrence.
+ * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the
+ * Occurrence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the On-Demand Scanning API. For a detailed explanation

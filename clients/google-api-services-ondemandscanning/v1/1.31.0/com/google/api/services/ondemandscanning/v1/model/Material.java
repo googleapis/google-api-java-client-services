@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.ondemandscanning.v1beta1.model;
+package com.google.api.services.ondemandscanning.v1.model;
 
 /**
- * Model definition for Subject.
+ * Model definition for Material.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the On-Demand Scanning API. For a detailed explanation
@@ -28,11 +28,9 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Subject extends com.google.api.client.json.GenericJson {
+public final class Material extends com.google.api.client.json.GenericJson {
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
-   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,11 +40,9 @@ public final class Subject extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String uri;
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
-   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDigest() {
@@ -54,11 +50,9 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
-   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @param digest digest or {@code null} for none
    */
-  public Subject setDigest(java.util.Map<String, java.lang.String> digest) {
+  public Material setDigest(java.util.Map<String, java.lang.String> digest) {
     this.digest = digest;
     return this;
   }
@@ -66,26 +60,26 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * @param name name or {@code null} for none
+   * @param uri uri or {@code null} for none
    */
-  public Subject setName(java.lang.String name) {
-    this.name = name;
+  public Material setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public Subject set(String fieldName, Object value) {
-    return (Subject) super.set(fieldName, value);
+  public Material set(String fieldName, Object value) {
+    return (Material) super.set(fieldName, value);
   }
 
   @Override
-  public Subject clone() {
-    return (Subject) super.clone();
+  public Material clone() {
+    return (Material) super.clone();
   }
 
 }

@@ -33,7 +33,14 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
 public final class InTotoStatement extends com.google.api.client.json.GenericJson {
 
   /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
+   * Always "https://in-toto.io/Statement/v0.1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_type")
+  private java.lang.String type;
+
+  /**
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,17 +56,33 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private SlsaProvenance slsaProvenance;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<Subject> subject;
 
   /**
    * Always "https://in-toto.io/Statement/v0.1".
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
+  public java.lang.String getType() {
+    return type;
+  }
 
   /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
+   * Always "https://in-toto.io/Statement/v0.1".
+   * @param type type or {@code null} for none
+   */
+  public InTotoStatement setType(java.lang.String type) {
+    this.type = type;
+    return this;
+  }
+
+  /**
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredicateType() {
@@ -67,7 +90,7 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
    * @param predicateType predicateType or {@code null} for none
    */
   public InTotoStatement setPredicateType(java.lang.String predicateType) {
@@ -93,6 +116,21 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
   /**
    * @return value or {@code null} for none
    */
+  public SlsaProvenance getSlsaProvenance() {
+    return slsaProvenance;
+  }
+
+  /**
+   * @param slsaProvenance slsaProvenance or {@code null} for none
+   */
+  public InTotoStatement setSlsaProvenance(SlsaProvenance slsaProvenance) {
+    this.slsaProvenance = slsaProvenance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.util.List<Subject> getSubject() {
     return subject;
   }
@@ -102,23 +140,6 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
    */
   public InTotoStatement setSubject(java.util.List<Subject> subject) {
     this.subject = subject;
-    return this;
-  }
-
-  /**
-   * Always "https://in-toto.io/Statement/v0.1".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Always "https://in-toto.io/Statement/v0.1".
-   * @param type type or {@code null} for none
-   */
-  public InTotoStatement setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

@@ -123,6 +123,13 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.util.List<StreamConfig> streamConfigs;
 
   /**
+   * Configuration for how to validate incoming FHIR resources against configured profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ValidationConfig validationConfig;
+
+  /**
    * Immutable. The FHIR specification version that this FHIR store supports natively. This field is
    * immutable after store creation. Requests are rejected if they contain FHIR resources of a
    * different version. Version is required for every FHIR store.
@@ -338,6 +345,23 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setStreamConfigs(java.util.List<StreamConfig> streamConfigs) {
     this.streamConfigs = streamConfigs;
+    return this;
+  }
+
+  /**
+   * Configuration for how to validate incoming FHIR resources against configured profiles.
+   * @return value or {@code null} for none
+   */
+  public ValidationConfig getValidationConfig() {
+    return validationConfig;
+  }
+
+  /**
+   * Configuration for how to validate incoming FHIR resources against configured profiles.
+   * @param validationConfig validationConfig or {@code null} for none
+   */
+  public FhirStore setValidationConfig(ValidationConfig validationConfig) {
+    this.validationConfig = validationConfig;
     return this;
   }
 

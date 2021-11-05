@@ -105,7 +105,7 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
    * are defined in the Offer.parameter_definitions. The response may include the following output-
-   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The
    * maximum assignable units for a flexible offer. - num_units: The total commitment for
    * commitment-based offers.
    * The value may be {@code null}.
@@ -333,7 +333,7 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
    * are defined in the Offer.parameter_definitions. The response may include the following output-
-   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The
    * maximum assignable units for a flexible offer. - num_units: The total commitment for
    * commitment-based offers.
    * @return value or {@code null} for none
@@ -345,7 +345,7 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   /**
    * Extended entitlement parameters. When creating an entitlement, valid parameter names and values
    * are defined in the Offer.parameter_definitions. The response may include the following output-
-   * only Parameters: - assigned_units: The number of licenses assigned to a user. - max_units: The
+   * only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The
    * maximum assignable units for a flexible offer. - num_units: The total commitment for
    * commitment-based offers.
    * @param parameters parameters or {@code null} for none

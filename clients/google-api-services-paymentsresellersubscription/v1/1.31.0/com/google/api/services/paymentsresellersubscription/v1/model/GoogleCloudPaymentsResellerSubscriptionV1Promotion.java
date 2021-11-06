@@ -54,6 +54,14 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   private GoogleCloudPaymentsResellerSubscriptionV1Duration freeTrialDuration;
 
   /**
+   * Optional. Specifies the introductory pricing details when the promotion_type is
+   * PROMOTION_TYPE_INTRODUCTORY_PRICING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails introductoryPricingDetails;
+
+  /**
    * Output only. Response only. Resource name of the subscription promotion. It will have the
    * format of "partners/{partner_id}/promotion/{promotion_id}"
    * The value may be {@code null}.
@@ -143,6 +151,25 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Promotion setFreeTrialDuration(GoogleCloudPaymentsResellerSubscriptionV1Duration freeTrialDuration) {
     this.freeTrialDuration = freeTrialDuration;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the introductory pricing details when the promotion_type is
+   * PROMOTION_TYPE_INTRODUCTORY_PRICING.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails getIntroductoryPricingDetails() {
+    return introductoryPricingDetails;
+  }
+
+  /**
+   * Optional. Specifies the introductory pricing details when the promotion_type is
+   * PROMOTION_TYPE_INTRODUCTORY_PRICING.
+   * @param introductoryPricingDetails introductoryPricingDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Promotion setIntroductoryPricingDetails(GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails introductoryPricingDetails) {
+    this.introductoryPricingDetails = introductoryPricingDetails;
     return this;
   }
 

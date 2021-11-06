@@ -153,6 +153,304 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
   public class Projects {
 
     /**
+     * Retrieves the Settings for the Project
+     *
+     * Create a request for the method "projects.getProjectSettings".
+     *
+     * This request holds the parameters needed by the artifactregistry server.  After setting any
+     * optional parameters, call the {@link GetProjectSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the projectSettings resource.
+     * @return the request
+     */
+    public GetProjectSettings getProjectSettings(java.lang.String name) throws java.io.IOException {
+      GetProjectSettings result = new GetProjectSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetProjectSettings extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
+
+      /**
+       * Retrieves the Settings for the Project
+       *
+       * Create a request for the method "projects.getProjectSettings".
+       *
+       * This request holds the parameters needed by the the artifactregistry server.  After setting any
+       * optional parameters, call the {@link GetProjectSettings#execute()} method to invoke the remote
+       * operation. <p> {@link GetProjectSettings#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the projectSettings resource.
+       * @since 1.13
+       */
+      protected GetProjectSettings(java.lang.String name) {
+        super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetProjectSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetProjectSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetProjectSettings setAccessToken(java.lang.String accessToken) {
+        return (GetProjectSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetProjectSettings setAlt(java.lang.String alt) {
+        return (GetProjectSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetProjectSettings setCallback(java.lang.String callback) {
+        return (GetProjectSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetProjectSettings setFields(java.lang.String fields) {
+        return (GetProjectSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetProjectSettings setKey(java.lang.String key) {
+        return (GetProjectSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetProjectSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetProjectSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetProjectSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetProjectSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetProjectSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetProjectSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetProjectSettings setUploadType(java.lang.String uploadType) {
+        return (GetProjectSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetProjectSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetProjectSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the projectSettings resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the projectSettings resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the projectSettings resource. */
+      public GetProjectSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetProjectSettings set(String parameterName, Object value) {
+        return (GetProjectSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the Settings for the Project
+     *
+     * Create a request for the method "projects.updateProjectSettings".
+     *
+     * This request holds the parameters needed by the artifactregistry server.  After setting any
+     * optional parameters, call the {@link UpdateProjectSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     *        update request: never set In response: always set
+     * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings}
+     * @return the request
+     */
+    public UpdateProjectSettings updateProjectSettings(java.lang.String name, com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings content) throws java.io.IOException {
+      UpdateProjectSettings result = new UpdateProjectSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateProjectSettings extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings> {
+
+      private static final String REST_PATH = "v1beta2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/projectSettings$");
+
+      /**
+       * Retrieves the Settings for the Project
+       *
+       * Create a request for the method "projects.updateProjectSettings".
+       *
+       * This request holds the parameters needed by the the artifactregistry server.  After setting any
+       * optional parameters, call the {@link UpdateProjectSettings#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateProjectSettings#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     *        update request: never set In response: always set
+       * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings}
+       * @since 1.13
+       */
+      protected UpdateProjectSettings(java.lang.String name, com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings content) {
+        super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1beta2.model.ProjectSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+      }
+
+      @Override
+      public UpdateProjectSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateProjectSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateProjectSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateProjectSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateProjectSettings setAlt(java.lang.String alt) {
+        return (UpdateProjectSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateProjectSettings setCallback(java.lang.String callback) {
+        return (UpdateProjectSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateProjectSettings setFields(java.lang.String fields) {
+        return (UpdateProjectSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateProjectSettings setKey(java.lang.String key) {
+        return (UpdateProjectSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateProjectSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateProjectSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateProjectSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateProjectSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateProjectSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateProjectSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateProjectSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateProjectSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateProjectSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateProjectSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The name of the project's settings. Always of the form: projects/{project-
+       * id}/projectSettings In update request: never set In response: always set
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the project's settings. Always of the form: projects/{project-id}/projectSettings In
+     update request: never set In response: always set
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The name of the project's settings. Always of the form: projects/{project-
+       * id}/projectSettings In update request: never set In response: always set
+       */
+      public UpdateProjectSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/projectSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Field mask to support partial updates. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Field mask to support partial updates.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Field mask to support partial updates. */
+      public UpdateProjectSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateProjectSettings set(String parameterName, Object value) {
+        return (UpdateProjectSettings) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>

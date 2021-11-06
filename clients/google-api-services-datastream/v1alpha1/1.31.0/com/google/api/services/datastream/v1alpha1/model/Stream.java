@@ -52,6 +52,15 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the
+   * data. If left blank, data will be encrypted using an internal Stream-specific encryption key
+   * provisioned through KMS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerManagedEncryptionKey;
+
+  /**
    * Required. Destination connection profile configuration.
    * The value may be {@code null}.
    */
@@ -163,6 +172,27 @@ public final class Stream extends com.google.api.client.json.GenericJson {
    */
   public Stream setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the
+   * data. If left blank, data will be encrypted using an internal Stream-specific encryption key
+   * provisioned through KMS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerManagedEncryptionKey() {
+    return customerManagedEncryptionKey;
+  }
+
+  /**
+   * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the
+   * data. If left blank, data will be encrypted using an internal Stream-specific encryption key
+   * provisioned through KMS.
+   * @param customerManagedEncryptionKey customerManagedEncryptionKey or {@code null} for none
+   */
+  public Stream setCustomerManagedEncryptionKey(java.lang.String customerManagedEncryptionKey) {
+    this.customerManagedEncryptionKey = customerManagedEncryptionKey;
     return this;
   }
 

@@ -88,6 +88,22 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private PosixFilesystem posixDataSource;
 
   /**
+   * Specifies the agent pool name associated with the posix data sink. When unspecified, the
+   * default name is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sinkAgentPoolName;
+
+  /**
+   * Specifies the agent pool name associated with the posix data source. When unspecified, the
+   * default name is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceAgentPoolName;
+
+  /**
    * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
    * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
@@ -232,6 +248,44 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setPosixDataSource(PosixFilesystem posixDataSource) {
     this.posixDataSource = posixDataSource;
+    return this;
+  }
+
+  /**
+   * Specifies the agent pool name associated with the posix data sink. When unspecified, the
+   * default name is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSinkAgentPoolName() {
+    return sinkAgentPoolName;
+  }
+
+  /**
+   * Specifies the agent pool name associated with the posix data sink. When unspecified, the
+   * default name is used.
+   * @param sinkAgentPoolName sinkAgentPoolName or {@code null} for none
+   */
+  public TransferSpec setSinkAgentPoolName(java.lang.String sinkAgentPoolName) {
+    this.sinkAgentPoolName = sinkAgentPoolName;
+    return this;
+  }
+
+  /**
+   * Specifies the agent pool name associated with the posix data source. When unspecified, the
+   * default name is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceAgentPoolName() {
+    return sourceAgentPoolName;
+  }
+
+  /**
+   * Specifies the agent pool name associated with the posix data source. When unspecified, the
+   * default name is used.
+   * @param sourceAgentPoolName sourceAgentPoolName or {@code null} for none
+   */
+  public TransferSpec setSourceAgentPoolName(java.lang.String sourceAgentPoolName) {
+    this.sourceAgentPoolName = sourceAgentPoolName;
     return this;
   }
 

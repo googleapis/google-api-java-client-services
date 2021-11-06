@@ -21,7 +21,7 @@ package com.google.api.services.storagetransfer.v1.model;
  * as S3, Azure, and Cloud Storage. The "last modification time" refers to the time of the last
  * change to the object's content or metadata — specifically, this is the `updated` property of
  * Cloud Storage objects, the `LastModified` field of S3 objects, and the `Last-Modified` header of
- * Azure blobs. Transfers that use PosixFilesystem and have a Cloud Storage source don't support
+ * Azure blobs. Transfers with a PosixFilesystem source or destination don't support
  * `ObjectConditions`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

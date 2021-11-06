@@ -17,10 +17,7 @@
 package com.google.api.services.memcache.v1beta2.model;
 
 /**
- * The unique ID associated with this set of parameters. Users can use this id to determine if the
- * parameters associated with the instance differ from the parameters associated with the nodes. A
- * discrepancy between parameter ids can inform users that they may need to take action to apply
- * parameters on nodes.
+ * Model definition for MemcacheParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Memorystore for Memcached API. For a detailed
@@ -34,7 +31,10 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class MemcacheParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only.
+   * Output only. The unique ID associated with this set of parameters. Users can use this id to
+   * determine if the parameters associated with the instance differ from the parameters associated
+   * with the nodes. A discrepancy between parameter ids can inform users that they may need to take
+   * action to apply parameters on nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,10 @@ public final class MemcacheParameters extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> params;
 
   /**
-   * Output only.
+   * Output only. The unique ID associated with this set of parameters. Users can use this id to
+   * determine if the parameters associated with the instance differ from the parameters associated
+   * with the nodes. A discrepancy between parameter ids can inform users that they may need to take
+   * action to apply parameters on nodes.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -56,7 +59,10 @@ public final class MemcacheParameters extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only.
+   * Output only. The unique ID associated with this set of parameters. Users can use this id to
+   * determine if the parameters associated with the instance differ from the parameters associated
+   * with the nodes. A discrepancy between parameter ids can inform users that they may need to take
+   * action to apply parameters on nodes.
    * @param id id or {@code null} for none
    */
   public MemcacheParameters setId(java.lang.String id) {

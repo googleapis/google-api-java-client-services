@@ -126,7 +126,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer nodeCount;
 
   /**
-   * Optional: User defined parameters to apply to the memcached process on each node.
+   * User defined parameters to apply to the memcached process on each node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,7 +389,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional: User defined parameters to apply to the memcached process on each node.
+   * User defined parameters to apply to the memcached process on each node.
    * @return value or {@code null} for none
    */
   public MemcacheParameters getParameters() {
@@ -397,7 +397,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional: User defined parameters to apply to the memcached process on each node.
+   * User defined parameters to apply to the memcached process on each node.
    * @param parameters parameters or {@code null} for none
    */
   public Instance setParameters(MemcacheParameters parameters) {

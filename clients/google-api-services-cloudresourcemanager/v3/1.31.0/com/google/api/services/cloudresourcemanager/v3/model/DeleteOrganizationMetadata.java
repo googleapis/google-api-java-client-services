@@ -17,7 +17,7 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * LINT.IfChange A status object which is used as the `metadata` field for the operation returned by
+ * A status object which is used as the `metadata` field for the operation returned by
  * DeleteOrganization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

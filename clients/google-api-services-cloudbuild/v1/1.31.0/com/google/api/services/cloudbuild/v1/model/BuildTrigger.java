@@ -74,6 +74,15 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
+   * Optional. EventType allows the user to explicitly set the type of event to which this
+   * BuildTrigger should respond. This field is optional but will be validated against the rest of
+   * the configuration if it is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventType;
+
+  /**
    * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
    * The value may be {@code null}.
    */
@@ -312,6 +321,27 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Optional. EventType allows the user to explicitly set the type of event to which this
+   * BuildTrigger should respond. This field is optional but will be validated against the rest of
+   * the configuration if it is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventType() {
+    return eventType;
+  }
+
+  /**
+   * Optional. EventType allows the user to explicitly set the type of event to which this
+   * BuildTrigger should respond. This field is optional but will be validated against the rest of
+   * the configuration if it is set.
+   * @param eventType eventType or {@code null} for none
+   */
+  public BuildTrigger setEventType(java.lang.String eventType) {
+    this.eventType = eventType;
     return this;
   }
 

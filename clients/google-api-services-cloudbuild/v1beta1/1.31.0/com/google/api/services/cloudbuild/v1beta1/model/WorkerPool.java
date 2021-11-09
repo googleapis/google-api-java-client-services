@@ -38,6 +38,14 @@ package com.google.api.services.cloudbuild.v1beta1.model;
 public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
+   * User specified annotations. See https://google.aip.dev/128#annotations for more details such as
+   * format and size limitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Output only. Time at which the request to create the `WorkerPool` was received.
    * The value may be {@code null}.
    */
@@ -50,6 +58,22 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String deleteTime;
+
+  /**
+   * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be
+   * 1-63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Output only. Checksum computed by the server. May be sent on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
    * Output only. The resource name of the `WorkerPool`, with format
@@ -76,6 +100,13 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. A unique identifier for the `WorkerPool`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. Time at which the request to update the `WorkerPool` was received.
    * The value may be {@code null}.
    */
@@ -88,6 +119,25 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkerConfig workerConfig;
+
+  /**
+   * User specified annotations. See https://google.aip.dev/128#annotations for more details such as
+   * format and size limitations.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * User specified annotations. See https://google.aip.dev/128#annotations for more details such as
+   * format and size limitations.
+   * @param annotations annotations or {@code null} for none
+   */
+  public WorkerPool setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Output only. Time at which the request to create the `WorkerPool` was received.
@@ -120,6 +170,44 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   public WorkerPool setDeleteTime(String deleteTime) {
     this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be
+   * 1-63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be
+   * 1-63 characters.
+   * @param displayName displayName or {@code null} for none
+   */
+  public WorkerPool setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Checksum computed by the server. May be sent on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Output only. Checksum computed by the server. May be sent on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public WorkerPool setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
@@ -177,6 +265,23 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   public WorkerPool setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. A unique identifier for the `WorkerPool`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. A unique identifier for the `WorkerPool`.
+   * @param uid uid or {@code null} for none
+   */
+  public WorkerPool setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

@@ -31,6 +31,12 @@ package com.google.api.services.dns.model;
 public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZoneCloudLoggingConfig cloudLoggingConfig;
+
+  /**
    * The time that this resource was created on the server. This is in RFC3339 text format. Output
    * only.
    * The value may be {@code null}.
@@ -153,6 +159,21 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String visibility;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ManagedZoneCloudLoggingConfig getCloudLoggingConfig() {
+    return cloudLoggingConfig;
+  }
+
+  /**
+   * @param cloudLoggingConfig cloudLoggingConfig or {@code null} for none
+   */
+  public ManagedZone setCloudLoggingConfig(ManagedZoneCloudLoggingConfig cloudLoggingConfig) {
+    this.cloudLoggingConfig = cloudLoggingConfig;
+    return this;
+  }
 
   /**
    * The time that this resource was created on the server. This is in RFC3339 text format. Output

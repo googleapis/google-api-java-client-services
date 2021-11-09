@@ -67,6 +67,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edgeSecurityPolicy;
+
+  /**
    * If true, enable Cloud CDN for this BackendBucket.
    * The value may be {@code null}.
    */
@@ -189,6 +197,25 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdgeSecurityPolicy() {
+    return edgeSecurityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * bucket.
+   * @param edgeSecurityPolicy edgeSecurityPolicy or {@code null} for none
+   */
+  public BackendBucket setEdgeSecurityPolicy(java.lang.String edgeSecurityPolicy) {
+    this.edgeSecurityPolicy = edgeSecurityPolicy;
     return this;
   }
 

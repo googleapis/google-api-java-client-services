@@ -83,6 +83,13 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
+   * KeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyRevocationActionType;
+
+  /**
    * Labels to apply to instances that are created from this machine image.
    * The value may be {@code null}.
    */
@@ -260,6 +267,23 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
    */
   public SourceInstanceProperties setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
     this.guestAccelerators = guestAccelerators;
+    return this;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyRevocationActionType() {
+    return keyRevocationActionType;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
+   */
+  public SourceInstanceProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
+    this.keyRevocationActionType = keyRevocationActionType;
     return this;
   }
 

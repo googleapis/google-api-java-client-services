@@ -52,7 +52,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean exchangeSubnetRoutes;
 
   /**
-   * Whether to export the custom routes to peer network.
+   * Whether to export the custom routes to peer network. The default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean exportSubnetRoutesWithPublicIp;
 
   /**
-   * Whether to import the custom routes from peer network.
+   * Whether to import the custom routes from peer network. The default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +171,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether to export the custom routes to peer network.
+   * Whether to export the custom routes to peer network. The default value is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExportCustomRoutes() {
@@ -179,7 +179,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether to export the custom routes to peer network.
+   * Whether to export the custom routes to peer network. The default value is false.
    * @param exportCustomRoutes exportCustomRoutes or {@code null} for none
    */
   public NetworkPeering setExportCustomRoutes(java.lang.Boolean exportCustomRoutes) {
@@ -209,7 +209,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether to import the custom routes from peer network.
+   * Whether to import the custom routes from peer network. The default value is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportCustomRoutes() {
@@ -217,7 +217,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether to import the custom routes from peer network.
+   * Whether to import the custom routes from peer network. The default value is false.
    * @param importCustomRoutes importCustomRoutes or {@code null} for none
    */
   public NetworkPeering setImportCustomRoutes(java.lang.Boolean importCustomRoutes) {

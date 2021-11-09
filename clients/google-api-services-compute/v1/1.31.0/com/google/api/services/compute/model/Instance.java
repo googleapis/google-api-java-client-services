@@ -240,6 +240,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPerformanceConfig networkPerformanceConfig;
+
+  /**
    * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK
    * as default.
    * The value may be {@code null}.
@@ -881,6 +887,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public Instance setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
     return this;
   }
 

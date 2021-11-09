@@ -168,6 +168,14 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.lang.Integer tcpTransitoryIdleTimeoutSec;
 
   /**
+   * Indicates whether this NAT is used for public or private IP translation. If unspecified, it
+   * defaults to PUBLIC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
    * The value may be {@code null}.
    */
@@ -489,6 +497,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setTcpTransitoryIdleTimeoutSec(java.lang.Integer tcpTransitoryIdleTimeoutSec) {
     this.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
+    return this;
+  }
+
+  /**
+   * Indicates whether this NAT is used for public or private IP translation. If unspecified, it
+   * defaults to PUBLIC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Indicates whether this NAT is used for public or private IP translation. If unspecified, it
+   * defaults to PUBLIC.
+   * @param type type or {@code null} for none
+   */
+  public RouterNat setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

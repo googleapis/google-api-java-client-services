@@ -38,8 +38,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, ShareSettingsFolderConfig> folderMap;
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ShareSettingsProjectConfig> getProjectMap() {
@@ -89,8 +89,8 @@ public final class ShareSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A map of project id and project config. Using map format to ease add-to/remove-from the Project
-   * list in PATCH command. In future we will deprecate (And later remove) the array one.
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
    * @param projectMap projectMap or {@code null} for none
    */
   public ShareSettings setProjectMap(java.util.Map<String, ShareSettingsProjectConfig> projectMap) {

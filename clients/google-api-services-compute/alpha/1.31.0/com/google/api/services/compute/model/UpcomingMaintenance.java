@@ -31,6 +31,13 @@ package com.google.api.services.compute.model;
 public final class UpcomingMaintenance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canReschedule;
+
+  /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
    * format. DEPRECATED: Use start_time_window instead.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanReschedule() {
+    return canReschedule;
+  }
+
+  /**
+   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * @param canReschedule canReschedule or {@code null} for none
+   */
+  public UpcomingMaintenance setCanReschedule(java.lang.Boolean canReschedule) {
+    this.canReschedule = canReschedule;
+    return this;
+  }
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text

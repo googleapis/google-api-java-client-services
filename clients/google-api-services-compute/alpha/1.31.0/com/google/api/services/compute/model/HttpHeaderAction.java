@@ -31,14 +31,14 @@ package com.google.api.services.compute.model;
 public final class HttpHeaderAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Headers to add to a matching request prior to forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to the backendService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HttpHeaderOption> requestHeadersToAdd;
 
   /**
-   * A list of header names for headers that need to be removed from the request prior to forwarding
+   * A list of header names for headers that need to be removed from the request before forwarding
    * the request to the backendService.
    * The value may be {@code null}.
    */
@@ -46,22 +46,22 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> requestHeadersToRemove;
 
   /**
-   * Headers to add the response prior to sending the response back to the client.
+   * Headers to add the response before sending the response back to the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HttpHeaderOption> responseHeadersToAdd;
 
   /**
-   * A list of header names for headers that need to be removed from the response prior to sending
-   * the response back to the client.
+   * A list of header names for headers that need to be removed from the response before sending the
+   * response back to the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> responseHeadersToRemove;
 
   /**
-   * Headers to add to a matching request prior to forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to the backendService.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpHeaderOption> getRequestHeadersToAdd() {
@@ -69,7 +69,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Headers to add to a matching request prior to forwarding the request to the backendService.
+   * Headers to add to a matching request before forwarding the request to the backendService.
    * @param requestHeadersToAdd requestHeadersToAdd or {@code null} for none
    */
   public HttpHeaderAction setRequestHeadersToAdd(java.util.List<HttpHeaderOption> requestHeadersToAdd) {
@@ -78,7 +78,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of header names for headers that need to be removed from the request prior to forwarding
+   * A list of header names for headers that need to be removed from the request before forwarding
    * the request to the backendService.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of header names for headers that need to be removed from the request prior to forwarding
+   * A list of header names for headers that need to be removed from the request before forwarding
    * the request to the backendService.
    * @param requestHeadersToRemove requestHeadersToRemove or {@code null} for none
    */
@@ -97,7 +97,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Headers to add the response prior to sending the response back to the client.
+   * Headers to add the response before sending the response back to the client.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpHeaderOption> getResponseHeadersToAdd() {
@@ -105,7 +105,7 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Headers to add the response prior to sending the response back to the client.
+   * Headers to add the response before sending the response back to the client.
    * @param responseHeadersToAdd responseHeadersToAdd or {@code null} for none
    */
   public HttpHeaderAction setResponseHeadersToAdd(java.util.List<HttpHeaderOption> responseHeadersToAdd) {
@@ -114,8 +114,8 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of header names for headers that need to be removed from the response prior to sending
-   * the response back to the client.
+   * A list of header names for headers that need to be removed from the response before sending the
+   * response back to the client.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResponseHeadersToRemove() {
@@ -123,8 +123,8 @@ public final class HttpHeaderAction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of header names for headers that need to be removed from the response prior to sending
-   * the response back to the client.
+   * A list of header names for headers that need to be removed from the response before sending the
+   * response back to the client.
    * @param responseHeadersToRemove responseHeadersToRemove or {@code null} for none
    */
   public HttpHeaderAction setResponseHeadersToRemove(java.util.List<java.lang.String> responseHeadersToRemove) {

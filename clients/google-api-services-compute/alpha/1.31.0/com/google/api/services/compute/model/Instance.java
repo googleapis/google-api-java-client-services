@@ -165,6 +165,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey instanceEncryptionKey;
 
   /**
+   * KeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyRevocationActionType;
+
+  /**
    * [Output Only] Type of the resource. Always compute#instance for instances.
    * The value may be {@code null}.
    */
@@ -769,6 +776,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setInstanceEncryptionKey(CustomerEncryptionKey instanceEncryptionKey) {
     this.instanceEncryptionKey = instanceEncryptionKey;
+    return this;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyRevocationActionType() {
+    return keyRevocationActionType;
+  }
+
+  /**
+   * KeyRevocationActionType of the instance.
+   * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
+   */
+  public Instance setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
+    this.keyRevocationActionType = keyRevocationActionType;
     return this;
   }
 

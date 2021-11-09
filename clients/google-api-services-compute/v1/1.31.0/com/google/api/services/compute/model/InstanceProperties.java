@@ -132,6 +132,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * Note that for MachineImage, this is not supported yet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPerformanceConfig networkPerformanceConfig;
+
+  /**
    * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as
    * default. Note that for MachineImage, this is not supported yet.
    * The value may be {@code null}.
@@ -397,6 +404,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * Note that for MachineImage, this is not supported yet.
+   * @return value or {@code null} for none
+   */
+  public NetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * Note that for MachineImage, this is not supported yet.
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public InstanceProperties setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
     return this;
   }
 

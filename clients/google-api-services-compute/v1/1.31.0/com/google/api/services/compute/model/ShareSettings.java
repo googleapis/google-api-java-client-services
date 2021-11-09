@@ -30,11 +30,38 @@ package com.google.api.services.compute.model;
 public final class ShareSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ShareSettingsProjectConfig> projectMap;
+
+  /**
    * Type of sharing for this shared-reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shareType;
+
+  /**
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ShareSettingsProjectConfig> getProjectMap() {
+    return projectMap;
+  }
+
+  /**
+   * A map of project id and project config. This is only valid when share_type's value is
+   * SPECIFIC_PROJECTS.
+   * @param projectMap projectMap or {@code null} for none
+   */
+  public ShareSettings setProjectMap(java.util.Map<String, ShareSettingsProjectConfig> projectMap) {
+    this.projectMap = projectMap;
+    return this;
+  }
 
   /**
    * Type of sharing for this shared-reservation

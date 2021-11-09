@@ -799,6 +799,29 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. If this is provided, it must match the server's etag on the workerpool for
+           * the request to be processed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If this is provided, it must match the server's etag on the workerpool for the request to
+         be processed.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If this is provided, it must match the server's etag on the workerpool for
+           * the request to be processed.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

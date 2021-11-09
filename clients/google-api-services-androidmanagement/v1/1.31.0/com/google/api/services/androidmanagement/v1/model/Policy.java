@@ -526,6 +526,17 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<PolicyEnforcementRule> policyEnforcementRules;
 
   /**
+   * Controls whether preferential network service is enabled on the work profile. For example, an
+   * organization may have an agreement with a carrier that all of the work data from its employees'
+   * devices will be sent via a network service dedicated for enterprise use. An example of a
+   * supported preferential network service is the enterprise slice on 5G networks. This has no
+   * effect on fully managed devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preferentialNetworkService;
+
+  /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
    * rules in ChoosePrivateKeyRules. For devices below Android P, setting this may leave enterprise
    * keys vulnerable.
@@ -1793,6 +1804,31 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setPolicyEnforcementRules(java.util.List<PolicyEnforcementRule> policyEnforcementRules) {
     this.policyEnforcementRules = policyEnforcementRules;
+    return this;
+  }
+
+  /**
+   * Controls whether preferential network service is enabled on the work profile. For example, an
+   * organization may have an agreement with a carrier that all of the work data from its employees'
+   * devices will be sent via a network service dedicated for enterprise use. An example of a
+   * supported preferential network service is the enterprise slice on 5G networks. This has no
+   * effect on fully managed devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreferentialNetworkService() {
+    return preferentialNetworkService;
+  }
+
+  /**
+   * Controls whether preferential network service is enabled on the work profile. For example, an
+   * organization may have an agreement with a carrier that all of the work data from its employees'
+   * devices will be sent via a network service dedicated for enterprise use. An example of a
+   * supported preferential network service is the enterprise slice on 5G networks. This has no
+   * effect on fully managed devices.
+   * @param preferentialNetworkService preferentialNetworkService or {@code null} for none
+   */
+  public Policy setPreferentialNetworkService(java.lang.String preferentialNetworkService) {
+    this.preferentialNetworkService = preferentialNetworkService;
     return this;
   }
 

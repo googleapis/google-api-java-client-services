@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudbuild",
-    "version": "v1alpha2-rev20210813-1.32.1"
+    "version": "v1alpha2-rev20211029-1.32.1"
   }
 }

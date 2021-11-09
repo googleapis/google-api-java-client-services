@@ -48,26 +48,12 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The most recently invoked evaluation for the processor version.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1EvaluationReference latestEvaluation;
-
-  /**
    * The resource name of the processor version. Format: projects/{project}/locations/{location}/pro
    * cessors/{processor}/processorVersions/{processor_version}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * The schema of the processor version. Describes the output.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1Schema schema;
 
   /**
    * The state of the processor version.
@@ -111,23 +97,6 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The most recently invoked evaluation for the processor version.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1EvaluationReference getLatestEvaluation() {
-    return latestEvaluation;
-  }
-
-  /**
-   * The most recently invoked evaluation for the processor version.
-   * @param latestEvaluation latestEvaluation or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1ProcessorVersion setLatestEvaluation(GoogleCloudDocumentaiV1EvaluationReference latestEvaluation) {
-    this.latestEvaluation = latestEvaluation;
-    return this;
-  }
-
-  /**
    * The resource name of the processor version. Format: projects/{project}/locations/{location}/pro
    * cessors/{processor}/processorVersions/{processor_version}
    * @return value or {@code null} for none
@@ -143,23 +112,6 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The schema of the processor version. Describes the output.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1Schema getSchema() {
-    return schema;
-  }
-
-  /**
-   * The schema of the processor version. Describes the output.
-   * @param schema schema or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1ProcessorVersion setSchema(GoogleCloudDocumentaiV1Schema schema) {
-    this.schema = schema;
     return this;
   }
 

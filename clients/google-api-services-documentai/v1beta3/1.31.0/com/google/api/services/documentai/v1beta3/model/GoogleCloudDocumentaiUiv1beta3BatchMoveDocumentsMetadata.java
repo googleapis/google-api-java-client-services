@@ -38,6 +38,20 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata exte
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * The destination dataset split type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destDatasetType;
+
+  /**
+   * The list of response details of each document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus> individualBatchMoveStatuses;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata exte
    */
   public GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * The destination dataset split type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestDatasetType() {
+    return destDatasetType;
+  }
+
+  /**
+   * The destination dataset split type.
+   * @param destDatasetType destDatasetType or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata setDestDatasetType(java.lang.String destDatasetType) {
+    this.destDatasetType = destDatasetType;
+    return this;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus> getIndividualBatchMoveStatuses() {
+    return individualBatchMoveStatuses;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @param individualBatchMoveStatuses individualBatchMoveStatuses or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata setIndividualBatchMoveStatuses(java.util.List<GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus> individualBatchMoveStatuses) {
+    this.individualBatchMoveStatuses = individualBatchMoveStatuses;
     return this;
   }
 

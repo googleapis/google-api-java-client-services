@@ -7787,21 +7787,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * ID of the data collector. Overrides any ID in the data collector resource. Must begin
-         * with `dc_`.
+         * ID of the data collector. Overrides any ID in the data collector resource. Must be a
+         * string beginning with `dc_` that contains only letters, numbers, and underscores.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataCollectorId;
 
-        /** ID of the data collector. Overrides any ID in the data collector resource. Must begin with `dc_`.
+        /** ID of the data collector. Overrides any ID in the data collector resource. Must be a string
+       beginning with `dc_` that contains only letters, numbers, and underscores.
          */
         public java.lang.String getDataCollectorId() {
           return dataCollectorId;
         }
 
         /**
-         * ID of the data collector. Overrides any ID in the data collector resource. Must begin
-         * with `dc_`.
+         * ID of the data collector. Overrides any ID in the data collector resource. Must be a
+         * string beginning with `dc_` that contains only letters, numbers, and underscores.
          */
         public Create setDataCollectorId(java.lang.String dataCollectorId) {
           this.dataCollectorId = dataCollectorId;

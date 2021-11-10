@@ -35,7 +35,8 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
    * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
    * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters.
+   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
+   * `searchable` field should be unset or set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
    * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
    * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters.
+   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
+   * `searchable` field should be unset or set to false.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> getAttributes() {
@@ -81,7 +83,8 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * UTF-8 encoded string with a length limit of 10 characters. * The key must match the pattern:
    * `a-zA-Z0-9*`. For example, key0LikeThis or KEY_1_LIKE_THIS. * The attribute values must be of
    * the same type (text or number). * The max number of values per attribute is 10. * For text
-   * values, the length limit is 10 UTF-8 characters.
+   * values, the length limit is 10 UTF-8 characters. * The attribute does not support search. The
+   * `searchable` field should be unset or set to false.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudRetailV2alphaLocalInventory setAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {

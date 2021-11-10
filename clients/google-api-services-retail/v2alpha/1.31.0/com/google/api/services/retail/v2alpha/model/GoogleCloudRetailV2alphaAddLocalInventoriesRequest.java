@@ -52,8 +52,8 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * If set to true, and the Product is not found, the local inventory will still be processed and
-   * retained for at most 1 day and processed once the Product is created. If set to false, an
-   * INVALID_ARGUMENT error is returned if the Product is not found.
+   * retained for at most 1 day and processed once the Product is created. If set to false, a
+   * NOT_FOUND error is returned if the Product is not found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * If set to true, and the Product is not found, the local inventory will still be processed and
-   * retained for at most 1 day and processed once the Product is created. If set to false, an
-   * INVALID_ARGUMENT error is returned if the Product is not found.
+   * retained for at most 1 day and processed once the Product is created. If set to false, a
+   * NOT_FOUND error is returned if the Product is not found.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowMissing() {
@@ -127,8 +127,8 @@ public final class GoogleCloudRetailV2alphaAddLocalInventoriesRequest extends co
 
   /**
    * If set to true, and the Product is not found, the local inventory will still be processed and
-   * retained for at most 1 day and processed once the Product is created. If set to false, an
-   * INVALID_ARGUMENT error is returned if the Product is not found.
+   * retained for at most 1 day and processed once the Product is created. If set to false, a
+   * NOT_FOUND error is returned if the Product is not found.
    * @param allowMissing allowMissing or {@code null} for none
    */
   public GoogleCloudRetailV2alphaAddLocalInventoriesRequest setAllowMissing(java.lang.Boolean allowMissing) {

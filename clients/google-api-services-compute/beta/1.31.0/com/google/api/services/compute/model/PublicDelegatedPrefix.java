@@ -129,7 +129,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of the public delegated prefix.
+   * [Output Only] The status of the public delegated prefix, which can be one of following values:
+   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
+   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
+   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
+   * delegated prefix is being deprovsioned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -400,7 +404,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The status of the public delegated prefix.
+   * [Output Only] The status of the public delegated prefix, which can be one of following values:
+   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
+   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
+   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
+   * delegated prefix is being deprovsioned.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -408,7 +416,11 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The status of the public delegated prefix.
+   * [Output Only] The status of the public delegated prefix, which can be one of following values:
+   * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
+   * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
+   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
+   * delegated prefix is being deprovsioned.
    * @param status status or {@code null} for none
    */
   public PublicDelegatedPrefix setStatus(java.lang.String status) {

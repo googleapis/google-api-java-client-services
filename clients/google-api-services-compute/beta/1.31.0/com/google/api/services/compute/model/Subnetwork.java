@@ -65,8 +65,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
-   * will not appear in get listings. If not set the default behavior is to disable flow logging.
-   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * will not appear in get listings. If not set the default behavior is determined by the org
+   * policy, if there is no org policy specified, then it will default to disabled. This field isn't
+   * supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,8 +327,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
-   * will not appear in get listings. If not set the default behavior is to disable flow logging.
-   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * will not appear in get listings. If not set the default behavior is determined by the org
+   * policy, if there is no org policy specified, then it will default to disabled. This field isn't
+   * supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFlowLogs() {
@@ -336,8 +338,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
-   * will not appear in get listings. If not set the default behavior is to disable flow logging.
-   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+   * will not appear in get listings. If not set the default behavior is determined by the org
+   * policy, if there is no org policy specified, then it will default to disabled. This field isn't
+   * supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @param enableFlowLogs enableFlowLogs or {@code null} for none
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {

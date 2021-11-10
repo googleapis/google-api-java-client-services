@@ -44,6 +44,22 @@ public final class AnalyzeIamPolicyLongrunningRequest extends com.google.api.cli
   private IamPolicyAnalysisOutputConfig outputConfig;
 
   /**
+   * Optional. The name of a saved query, which must be in the format of: *
+   * projects/project_number/savedQueries/saved_query_id *
+   * folders/folder_number/savedQueries/saved_query_id *
+   * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
+   * `saved_analysis_query` are provided, they will be merged together with the
+   * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
+   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
+   * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
+   * because we use proto3, which doesn't support field presence yet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String savedAnalysisQuery;
+
+  /**
    * Required. The request query.
    * @return value or {@code null} for none
    */
@@ -74,6 +90,41 @@ public final class AnalyzeIamPolicyLongrunningRequest extends com.google.api.cli
    */
   public AnalyzeIamPolicyLongrunningRequest setOutputConfig(IamPolicyAnalysisOutputConfig outputConfig) {
     this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The name of a saved query, which must be in the format of: *
+   * projects/project_number/savedQueries/saved_query_id *
+   * folders/folder_number/savedQueries/saved_query_id *
+   * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
+   * `saved_analysis_query` are provided, they will be merged together with the
+   * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
+   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
+   * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
+   * because we use proto3, which doesn't support field presence yet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSavedAnalysisQuery() {
+    return savedAnalysisQuery;
+  }
+
+  /**
+   * Optional. The name of a saved query, which must be in the format of: *
+   * projects/project_number/savedQueries/saved_query_id *
+   * folders/folder_number/savedQueries/saved_query_id *
+   * organizations/organization_number/savedQueries/saved_query_id If both `analysis_query` and
+   * `saved_analysis_query` are provided, they will be merged together with the
+   * `saved_analysis_query` as base and the `analysis_query` as overrides. For more details of the
+   * merge behavior, please refer to the [MergeFrom](https://developers.google.com/protocol-
+   * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details) doc. Note that
+   * you cannot override primitive fields with default value, such as 0 or empty string, etc.,
+   * because we use proto3, which doesn't support field presence yet.
+   * @param savedAnalysisQuery savedAnalysisQuery or {@code null} for none
+   */
+  public AnalyzeIamPolicyLongrunningRequest setSavedAnalysisQuery(java.lang.String savedAnalysisQuery) {
+    this.savedAnalysisQuery = savedAnalysisQuery;
     return this;
   }
 

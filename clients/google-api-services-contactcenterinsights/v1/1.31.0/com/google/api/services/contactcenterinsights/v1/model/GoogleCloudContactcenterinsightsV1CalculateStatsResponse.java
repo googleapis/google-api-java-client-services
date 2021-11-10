@@ -78,6 +78,14 @@ public final class GoogleCloudContactcenterinsightsV1CalculateStatsResponse exte
   private java.util.Map<String, java.lang.Integer> issueMatches;
 
   /**
+   * A map associating each issue resource name with its respective number of matches in the set of
+   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats> issueMatchesStats;
+
+  /**
    * A map associating each smart highlighter display name with its respective number of matches in
    * the set of conversations.
    * The value may be {@code null}.
@@ -194,6 +202,25 @@ public final class GoogleCloudContactcenterinsightsV1CalculateStatsResponse exte
    */
   public GoogleCloudContactcenterinsightsV1CalculateStatsResponse setIssueMatches(java.util.Map<String, java.lang.Integer> issueMatches) {
     this.issueMatches = issueMatches;
+    return this;
+  }
+
+  /**
+   * A map associating each issue resource name with its respective number of matches in the set of
+   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats> getIssueMatchesStats() {
+    return issueMatchesStats;
+  }
+
+  /**
+   * A map associating each issue resource name with its respective number of matches in the set of
+   * conversations. Key has the format: `projects//locations//issueModels//issues/`
+   * @param issueMatchesStats issueMatchesStats or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1CalculateStatsResponse setIssueMatchesStats(java.util.Map<String, GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats> issueMatchesStats) {
+    this.issueMatchesStats = issueMatchesStats;
     return this;
   }
 

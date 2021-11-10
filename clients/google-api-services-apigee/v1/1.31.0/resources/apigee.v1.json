@@ -1548,7 +1548,7 @@
        ],
        "parameters": {
         "dataCollectorId": {
-         "description": "ID of the data collector. Overrides any ID in the data collector resource. Must begin with `dc_`.",
+         "description": "ID of the data collector. Overrides any ID in the data collector resource. Must be a string beginning with `dc_` that contains only letters, numbers, and underscores.",
          "location": "query",
          "type": "string"
         },
@@ -7412,7 +7412,7 @@
    }
   }
  },
- "revision": "20211104",
+ "revision": "20211108",
  "rootUrl": "https://apigee.googleapis.com/",
  "schemas": {
   "EdgeConfigstoreBundleBadBundle": {

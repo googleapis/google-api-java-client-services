@@ -32,14 +32,13 @@ public final class GoogleCloudRetailV2alphaProductLevelConfig extends com.google
 
   /**
    * The type of Products allowed to be ingested into the catalog. Acceptable values are: *
-   * `primary` (default): You can only ingest Product.Type.PRIMARY Products. This means
-   * Product.primary_product_id can only be empty or set to the same value as Product.id. *
-   * `variant`: You can only ingest Product.Type.VARIANT Products. This means
-   * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
-   * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
-   * levels) for more details.
+   * `primary` (default): You can ingest Products of all types. When ingesting a Product, its type
+   * will default to Product.Type.PRIMARY if unset. * `variant`: You can only ingest
+   * Product.Type.VARIANT Products. This means Product.primary_product_id cannot be empty. If this
+   * field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned. If
+   * this field is `variant` and merchant_center_product_id_field is `itemGroupId`, an
+   * INVALID_ARGUMENT error is returned. See [Using product levels](https://cloud.google.com/retail
+   * /recommendations-ai/docs/catalog#product-levels) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +61,13 @@ public final class GoogleCloudRetailV2alphaProductLevelConfig extends com.google
 
   /**
    * The type of Products allowed to be ingested into the catalog. Acceptable values are: *
-   * `primary` (default): You can only ingest Product.Type.PRIMARY Products. This means
-   * Product.primary_product_id can only be empty or set to the same value as Product.id. *
-   * `variant`: You can only ingest Product.Type.VARIANT Products. This means
-   * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
-   * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
-   * levels) for more details.
+   * `primary` (default): You can ingest Products of all types. When ingesting a Product, its type
+   * will default to Product.Type.PRIMARY if unset. * `variant`: You can only ingest
+   * Product.Type.VARIANT Products. This means Product.primary_product_id cannot be empty. If this
+   * field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned. If
+   * this field is `variant` and merchant_center_product_id_field is `itemGroupId`, an
+   * INVALID_ARGUMENT error is returned. See [Using product levels](https://cloud.google.com/retail
+   * /recommendations-ai/docs/catalog#product-levels) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getIngestionProductType() {
@@ -78,14 +76,13 @@ public final class GoogleCloudRetailV2alphaProductLevelConfig extends com.google
 
   /**
    * The type of Products allowed to be ingested into the catalog. Acceptable values are: *
-   * `primary` (default): You can only ingest Product.Type.PRIMARY Products. This means
-   * Product.primary_product_id can only be empty or set to the same value as Product.id. *
-   * `variant`: You can only ingest Product.Type.VARIANT Products. This means
-   * Product.primary_product_id cannot be empty. If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned. If this field is `variant` and
-   * merchant_center_product_id_field is `itemGroupId`, an INVALID_ARGUMENT error is returned. See
-   * [Using product levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-
-   * levels) for more details.
+   * `primary` (default): You can ingest Products of all types. When ingesting a Product, its type
+   * will default to Product.Type.PRIMARY if unset. * `variant`: You can only ingest
+   * Product.Type.VARIANT Products. This means Product.primary_product_id cannot be empty. If this
+   * field is set to an invalid value other than these, an INVALID_ARGUMENT error is returned. If
+   * this field is `variant` and merchant_center_product_id_field is `itemGroupId`, an
+   * INVALID_ARGUMENT error is returned. See [Using product levels](https://cloud.google.com/retail
+   * /recommendations-ai/docs/catalog#product-levels) for more details.
    * @param ingestionProductType ingestionProductType or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProductLevelConfig setIngestionProductType(java.lang.String ingestionProductType) {

@@ -221,7 +221,6 @@ packages on [Maven Central][maven-search].
 | SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
-| Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
 | Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2) |
 | Security Token Service API | [v1](clients/google-api-services-sts/v1), [v1beta](clients/google-api-services-sts/v1beta) |

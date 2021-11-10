@@ -77,6 +77,14 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
+   * the corresponding sources during pipeline creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> pipelineSources;
+
+  /**
    * Internal scheduling information for a pipeline. If this information is provided, periodic jobs
    * will be created per the schedule. If not, users are responsible for creating jobs externally.
    * The value may be {@code null}.
@@ -222,6 +230,25 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    */
   public GoogleCloudDatapipelinesV1Pipeline setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
+   * the corresponding sources during pipeline creation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getPipelineSources() {
+    return pipelineSources;
+  }
+
+  /**
+   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
+   * the corresponding sources during pipeline creation.
+   * @param pipelineSources pipelineSources or {@code null} for none
+   */
+  public GoogleCloudDatapipelinesV1Pipeline setPipelineSources(java.util.Map<String, java.lang.String> pipelineSources) {
+    this.pipelineSources = pipelineSources;
     return this;
   }
 

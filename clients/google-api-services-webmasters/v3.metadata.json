@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-webmasters",
-    "version": "v3-rev20190428-1.32.1"
-  }
-}

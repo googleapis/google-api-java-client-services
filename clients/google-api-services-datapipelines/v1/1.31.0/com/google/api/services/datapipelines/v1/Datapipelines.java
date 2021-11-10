@@ -20,12 +20,12 @@ package com.google.api.services.datapipelines.v1;
  * Service definition for Datapipelines (v1).
  *
  * <p>
- * 
+ * Data Pipelines provides an interface for creating, updating, and managing recurring Data Analytics jobs.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/apis-explorer/#search/dataflow" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/dataflow/docs/guides/data-pipelines" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

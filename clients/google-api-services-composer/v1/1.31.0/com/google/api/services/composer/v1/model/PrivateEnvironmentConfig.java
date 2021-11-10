@@ -30,6 +30,25 @@ package com.google.api.services.composer.v1.model;
 public final class PrivateEnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will
+   * be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and
+   * cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudComposerNetworkIpv4CidrBlock;
+
+  /**
+   * Output only. The IP range reserved for the tenant project's Cloud Composer network. This field
+   * is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and
+   * newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudComposerNetworkIpv4ReservedRange;
+
+  /**
    * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL.
    * Needs to be disjoint from `web_server_ipv4_cidr_block`.
    * The value may be {@code null}.
@@ -71,6 +90,50 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String webServerIpv4ReservedRange;
+
+  /**
+   * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will
+   * be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and
+   * cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudComposerNetworkIpv4CidrBlock() {
+    return cloudComposerNetworkIpv4CidrBlock;
+  }
+
+  /**
+   * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will
+   * be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and
+   * cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions
+   * composer-2.*.*-airflow-*.*.* and newer.
+   * @param cloudComposerNetworkIpv4CidrBlock cloudComposerNetworkIpv4CidrBlock or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setCloudComposerNetworkIpv4CidrBlock(java.lang.String cloudComposerNetworkIpv4CidrBlock) {
+    this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Output only. The IP range reserved for the tenant project's Cloud Composer network. This field
+   * is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and
+   * newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudComposerNetworkIpv4ReservedRange() {
+    return cloudComposerNetworkIpv4ReservedRange;
+  }
+
+  /**
+   * Output only. The IP range reserved for the tenant project's Cloud Composer network. This field
+   * is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and
+   * newer.
+   * @param cloudComposerNetworkIpv4ReservedRange cloudComposerNetworkIpv4ReservedRange or {@code null} for none
+   */
+  public PrivateEnvironmentConfig setCloudComposerNetworkIpv4ReservedRange(java.lang.String cloudComposerNetworkIpv4ReservedRange) {
+    this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
+    return this;
+  }
 
   /**
    * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL.

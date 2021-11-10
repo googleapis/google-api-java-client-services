@@ -94,6 +94,15 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private MaintenanceWindow maintenanceWindow;
 
   /**
+   * Optional. The configuration options for GKE clusters master authorized networks. By default
+   * master authorized networks feature is: - in case of private environment: enabled with no
+   * external networks allowlisted. - in case of public environment: disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig;
+
+  /**
    * The configuration used for the Kubernetes Engine cluster.
    * The value may be {@code null}.
    */
@@ -296,6 +305,27 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration options for GKE clusters master authorized networks. By default
+   * master authorized networks feature is: - in case of private environment: enabled with no
+   * external networks allowlisted. - in case of public environment: disabled.
+   * @return value or {@code null} for none
+   */
+  public MasterAuthorizedNetworksConfig getMasterAuthorizedNetworksConfig() {
+    return masterAuthorizedNetworksConfig;
+  }
+
+  /**
+   * Optional. The configuration options for GKE clusters master authorized networks. By default
+   * master authorized networks feature is: - in case of private environment: enabled with no
+   * external networks allowlisted. - in case of public environment: disabled.
+   * @param masterAuthorizedNetworksConfig masterAuthorizedNetworksConfig or {@code null} for none
+   */
+  public EnvironmentConfig setMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {
+    this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
     return this;
   }
 

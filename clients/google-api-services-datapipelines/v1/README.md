@@ -1,6 +1,6 @@
 # Data pipelines API Client Library for Java
 
-
+Data Pipelines provides an interface for creating, updating, and managing recurring Data Analytics jobs.
 
 This page contains information about getting started with the Data pipelines API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-datapipelines</artifactId>
-      <version>v1-rev20211018-1.32.1</version>
+      <version>v1-rev20211029-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-datapipelines:v1-rev20211018-1.32.1'
+  compile 'com.google.apis:google-api-services-datapipelines:v1-rev20211029-1.32.1'
 }
 ```
 

@@ -31,6 +31,13 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Display name of the issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Issue resource. Format:
    * projects/{project}/locations/{location}/issueModels/{issue_model}/issues/{issue}
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueSt
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long labeledConversationsCount;
+
+  /**
+   * Display name of the issue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Display name of the issue.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Issue resource. Format:

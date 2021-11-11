@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Model definition for Subject.
+ * Subject refers to the subject of the intoto statement
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -31,20 +31,23 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class Subject extends com.google.api.client.json.GenericJson {
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> digest;
 
   /**
+   * name is the name of the Subject used here
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDigest() {
@@ -52,7 +55,8 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @param digest digest or {@code null} for none
    */
   public Subject setDigest(java.util.Map<String, java.lang.String> digest) {
@@ -61,6 +65,7 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * name is the name of the Subject used here
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -68,6 +73,7 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * name is the name of the Subject used here
    * @param name name or {@code null} for none
    */
   public Subject setName(java.lang.String name) {

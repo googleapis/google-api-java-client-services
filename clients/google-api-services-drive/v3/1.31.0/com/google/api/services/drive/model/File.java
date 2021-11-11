@@ -1612,6 +1612,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   public static final class Capabilities extends com.google.api.client.json.GenericJson {
 
     /**
+     * Whether the current user is the pending owner of the file. Not populated for shared drive
+     * files.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canAcceptOwnership;
+
+    /**
      * Whether the current user can add children to this folder. This is always false when the item is
      * not a folder.
      * The value may be {@code null}.
@@ -1877,6 +1885,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canUntrash;
+
+    /**
+     * Whether the current user is the pending owner of the file. Not populated for shared drive
+     * files.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanAcceptOwnership() {
+      return canAcceptOwnership;
+    }
+
+    /**
+     * Whether the current user is the pending owner of the file. Not populated for shared drive
+     * files.
+     * @param canAcceptOwnership canAcceptOwnership or {@code null} for none
+     */
+    public Capabilities setCanAcceptOwnership(java.lang.Boolean canAcceptOwnership) {
+      this.canAcceptOwnership = canAcceptOwnership;
+      return this;
+    }
 
     /**
      * Whether the current user can add children to this folder. This is always false when the item is

@@ -37,7 +37,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
    * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.
+   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
+   * SMART_REPLY, SMART_COMPOSE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
    * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.
+   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
+   * SMART_REPLY, SMART_COMPOSE.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidenceThreshold() {
@@ -103,7 +105,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
    * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION.
+   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
+   * SMART_REPLY, SMART_COMPOSE.
    * @param confidenceThreshold confidenceThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setConfidenceThreshold(java.lang.Float confidenceThreshold) {

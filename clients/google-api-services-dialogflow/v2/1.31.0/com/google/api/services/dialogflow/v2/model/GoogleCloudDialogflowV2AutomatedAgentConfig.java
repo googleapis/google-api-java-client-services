@@ -32,11 +32,12 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfig extends com.googl
   /**
    * Required. ID of the Dialogflow agent environment to use. This project needs to either be the
    * same project as the conversation or you need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project.
-   * Format: `projects//locations//agent/environments/`. If environment is not specified, the
-   * default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/
-   * rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more
-   * details.
+   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. -
+   * For ES agents, use format: `projects//locations//agent/environments/`. If environment is not
+   * specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/
+   * docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest)
+   * for more details. - For CX agents, use format `projects//locations//agents//environments/`. If
+   * environment is not specified, the default `draft` environment is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,11 +46,12 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfig extends com.googl
   /**
    * Required. ID of the Dialogflow agent environment to use. This project needs to either be the
    * same project as the conversation or you need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project.
-   * Format: `projects//locations//agent/environments/`. If environment is not specified, the
-   * default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/
-   * rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more
-   * details.
+   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. -
+   * For ES agents, use format: `projects//locations//agent/environments/`. If environment is not
+   * specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/
+   * docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest)
+   * for more details. - For CX agents, use format `projects//locations//agents//environments/`. If
+   * environment is not specified, the default `draft` environment is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -59,11 +61,12 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfig extends com.googl
   /**
    * Required. ID of the Dialogflow agent environment to use. This project needs to either be the
    * same project as the conversation or you need to grant `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project.
-   * Format: `projects//locations//agent/environments/`. If environment is not specified, the
-   * default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/docs/reference/
-   * rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest) for more
-   * details.
+   * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. -
+   * For ES agents, use format: `projects//locations//agent/environments/`. If environment is not
+   * specified, the default `draft` environment is used. Refer to [DetectIntentRequest](/dialogflow/
+   * docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest)
+   * for more details. - For CX agents, use format `projects//locations//agents//environments/`. If
+   * environment is not specified, the default `draft` environment is used.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentConfig setAgent(java.lang.String agent) {

@@ -111,6 +111,14 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Whether the account associated with this permission is a pending owner. Only populated for user
+   * type permissions for files that are not in a shared drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pendingOwner;
+
+  /**
    * Details of whether the permissions on this shared drive item are inherited or directly on this
    * item. This is an output-only field which is present only for shared drive items.
    * The value may be {@code null}.
@@ -380,6 +388,25 @@ public final class Permission extends com.google.api.client.json.GenericJson {
    */
   public Permission setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Whether the account associated with this permission is a pending owner. Only populated for user
+   * type permissions for files that are not in a shared drive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPendingOwner() {
+    return pendingOwner;
+  }
+
+  /**
+   * Whether the account associated with this permission is a pending owner. Only populated for user
+   * type permissions for files that are not in a shared drive.
+   * @param pendingOwner pendingOwner or {@code null} for none
+   */
+  public Permission setPendingOwner(java.lang.Boolean pendingOwner) {
+    this.pendingOwner = pendingOwner;
     return this;
   }
 

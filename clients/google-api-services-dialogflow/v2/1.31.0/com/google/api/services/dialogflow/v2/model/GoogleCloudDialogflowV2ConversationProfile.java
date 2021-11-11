@@ -66,9 +66,9 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   private GoogleCloudDialogflowV2HumanAgentHandoffConfig humanAgentHandoffConfig;
 
   /**
-   * Language which represents the conversationProfile. If unspecified, the default language code
-   * en-us applies. Users need to create a ConversationProfile for each language they want to
-   * support.
+   * Language code for the conversation profile. If not specified, the language is en-US. Language
+   * at ConversationProfile should be set for all non en-US languages. This should be a
+   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,11 +105,27 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   private GoogleCloudDialogflowV2NotificationConfig notificationConfig;
 
   /**
+   * Name of the CX SecuritySettings reference for the agent. Format:
+   * `projects//locations//securitySettings/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securitySettings;
+
+  /**
    * Settings for speech transcription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SpeechToTextConfig sttConfig;
+
+  /**
+   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
+   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
 
   /**
    * Output only. Update time of the conversation profile.
@@ -206,9 +222,9 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   }
 
   /**
-   * Language which represents the conversationProfile. If unspecified, the default language code
-   * en-us applies. Users need to create a ConversationProfile for each language they want to
-   * support.
+   * Language code for the conversation profile. If not specified, the language is en-US. Language
+   * at ConversationProfile should be set for all non en-US languages. This should be a
+   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -216,9 +232,9 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   }
 
   /**
-   * Language which represents the conversationProfile. If unspecified, the default language code
-   * en-us applies. Users need to create a ConversationProfile for each language they want to
-   * support.
+   * Language code for the conversation profile. If not specified, the language is en-US. Language
+   * at ConversationProfile should be set for all non en-US languages. This should be a
+   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationProfile setLanguageCode(java.lang.String languageCode) {
@@ -299,6 +315,25 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   }
 
   /**
+   * Name of the CX SecuritySettings reference for the agent. Format:
+   * `projects//locations//securitySettings/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecuritySettings() {
+    return securitySettings;
+  }
+
+  /**
+   * Name of the CX SecuritySettings reference for the agent. Format:
+   * `projects//locations//securitySettings/`.
+   * @param securitySettings securitySettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationProfile setSecuritySettings(java.lang.String securitySettings) {
+    this.securitySettings = securitySettings;
+    return this;
+  }
+
+  /**
    * Settings for speech transcription.
    * @return value or {@code null} for none
    */
@@ -312,6 +347,25 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
    */
   public GoogleCloudDialogflowV2ConversationProfile setSttConfig(GoogleCloudDialogflowV2SpeechToTextConfig sttConfig) {
     this.sttConfig = sttConfig;
+    return this;
+  }
+
+  /**
+   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
+   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
+   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationProfile setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

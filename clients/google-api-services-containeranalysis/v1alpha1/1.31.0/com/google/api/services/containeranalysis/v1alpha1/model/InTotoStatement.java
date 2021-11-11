@@ -33,77 +33,39 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class InTotoStatement extends com.google.api.client.json.GenericJson {
 
   /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
+   * Always "https://in-toto.io/Statement/v0.1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_type")
+  private java.lang.String type;
+
+  /**
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predicateType;
 
   /**
+   * provenance is a predicate of type intotoprovenance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InTotoProvenance provenance;
 
   /**
+   * slsa_provenance is a predicate of type slsaProvenance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SlsaProvenance slsaProvenance;
+
+  /**
+   * subject is the subjects of the intoto statement
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Subject> subject;
-
-  /**
-   * Always "https://in-toto.io/Statement/v0.1".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPredicateType() {
-    return predicateType;
-  }
-
-  /**
-   * "https://in-toto.io/Provenance/v0.1" for InTotoProvenance.
-   * @param predicateType predicateType or {@code null} for none
-   */
-  public InTotoStatement setPredicateType(java.lang.String predicateType) {
-    this.predicateType = predicateType;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public InTotoProvenance getProvenance() {
-    return provenance;
-  }
-
-  /**
-   * @param provenance provenance or {@code null} for none
-   */
-  public InTotoStatement setProvenance(InTotoProvenance provenance) {
-    this.provenance = provenance;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Subject> getSubject() {
-    return subject;
-  }
-
-  /**
-   * @param subject subject or {@code null} for none
-   */
-  public InTotoStatement setSubject(java.util.List<Subject> subject) {
-    this.subject = subject;
-    return this;
-  }
 
   /**
    * Always "https://in-toto.io/Statement/v0.1".
@@ -119,6 +81,74 @@ public final class InTotoStatement extends com.google.api.client.json.GenericJso
    */
   public InTotoStatement setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredicateType() {
+    return predicateType;
+  }
+
+  /**
+   * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
+   * @param predicateType predicateType or {@code null} for none
+   */
+  public InTotoStatement setPredicateType(java.lang.String predicateType) {
+    this.predicateType = predicateType;
+    return this;
+  }
+
+  /**
+   * provenance is a predicate of type intotoprovenance
+   * @return value or {@code null} for none
+   */
+  public InTotoProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * provenance is a predicate of type intotoprovenance
+   * @param provenance provenance or {@code null} for none
+   */
+  public InTotoStatement setProvenance(InTotoProvenance provenance) {
+    this.provenance = provenance;
+    return this;
+  }
+
+  /**
+   * slsa_provenance is a predicate of type slsaProvenance
+   * @return value or {@code null} for none
+   */
+  public SlsaProvenance getSlsaProvenance() {
+    return slsaProvenance;
+  }
+
+  /**
+   * slsa_provenance is a predicate of type slsaProvenance
+   * @param slsaProvenance slsaProvenance or {@code null} for none
+   */
+  public InTotoStatement setSlsaProvenance(SlsaProvenance slsaProvenance) {
+    this.slsaProvenance = slsaProvenance;
+    return this;
+  }
+
+  /**
+   * subject is the subjects of the intoto statement
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Subject> getSubject() {
+    return subject;
+  }
+
+  /**
+   * subject is the subjects of the intoto statement
+   * @param subject subject or {@code null} for none
+   */
+  public InTotoStatement setSubject(java.util.List<Subject> subject) {
+    this.subject = subject;
     return this;
   }
 

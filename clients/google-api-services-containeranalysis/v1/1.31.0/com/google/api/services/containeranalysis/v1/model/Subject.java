@@ -31,7 +31,8 @@ package com.google.api.services.containeranalysis.v1.model;
 public final class Subject extends com.google.api.client.json.GenericJson {
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDigest() {
@@ -52,7 +54,8 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * "": ""
+   * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-
+   * toto/attestation/blob/main/spec/field_types.md#DigestSet
    * @param digest digest or {@code null} for none
    */
   public Subject setDigest(java.util.Map<String, java.lang.String> digest) {

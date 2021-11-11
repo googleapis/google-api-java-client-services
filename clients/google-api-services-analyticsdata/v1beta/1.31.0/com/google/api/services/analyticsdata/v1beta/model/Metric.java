@@ -54,7 +54,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
    * string that you would like within the allowed character set. For example if `expression` is
    * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metric names
-   * that you choose must match the regular expression "^[a-zA-Z0-9_]$". Metrics are referenced by
+   * that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Metrics are referenced by
    * `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * The value may be {@code null}.
    */
@@ -107,7 +107,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
    * string that you would like within the allowed character set. For example if `expression` is
    * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metric names
-   * that you choose must match the regular expression "^[a-zA-Z0-9_]$". Metrics are referenced by
+   * that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Metrics are referenced by
    * `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * @return value or {@code null} for none
    */
@@ -121,7 +121,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
    * string that you would like within the allowed character set. For example if `expression` is
    * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metric names
-   * that you choose must match the regular expression "^[a-zA-Z0-9_]$". Metrics are referenced by
+   * that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Metrics are referenced by
    * `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * @param name name or {@code null} for none
    */

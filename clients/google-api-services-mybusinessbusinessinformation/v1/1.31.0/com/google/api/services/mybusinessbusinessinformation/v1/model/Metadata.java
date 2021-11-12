@@ -38,6 +38,13 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canDelete;
 
   /**
+   * Output only. Indicates if the listing is eligible for business calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canHaveBusinessCalls;
+
+  /**
    * Output only. Indicates if the listing is eligible for food menu.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setCanDelete(java.lang.Boolean canDelete) {
     this.canDelete = canDelete;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if the listing is eligible for business calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanHaveBusinessCalls() {
+    return canHaveBusinessCalls;
+  }
+
+  /**
+   * Output only. Indicates if the listing is eligible for business calls.
+   * @param canHaveBusinessCalls canHaveBusinessCalls or {@code null} for none
+   */
+  public Metadata setCanHaveBusinessCalls(java.lang.Boolean canHaveBusinessCalls) {
+    this.canHaveBusinessCalls = canHaveBusinessCalls;
     return this;
   }
 

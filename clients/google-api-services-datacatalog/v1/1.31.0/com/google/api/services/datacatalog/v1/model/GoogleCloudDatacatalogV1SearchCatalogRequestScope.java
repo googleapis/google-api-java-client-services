@@ -58,7 +58,7 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   /**
    * Optional. If `true`, include public tag templates in the search results. By default, they are
    * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
    * public tag templates and at least one of them is required.
    * The value may be {@code null}.
    */
@@ -139,7 +139,7 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   /**
    * Optional. If `true`, include public tag templates in the search results. By default, they are
    * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
    * public tag templates and at least one of them is required.
    * @return value or {@code null} for none
    */
@@ -150,7 +150,7 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends com
   /**
    * Optional. If `true`, include public tag templates in the search results. By default, they are
    * included only if you have explicit permissions on them to view them. For example, if you are
-   * the owner. Other scope fields, for example, ``include_org_ids``, still restrict the returned
+   * the owner. Other scope fields, for example, `include_org_ids`, still restrict the returned
    * public tag templates and at least one of them is required.
    * @param includePublicTagTemplates includePublicTagTemplates or {@code null} for none
    */

@@ -31,9 +31,10 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
-   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,9 +253,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean useEnhanced;
 
   /**
-   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
-   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
    * @return value or {@code null} for none
    */
   public SpeechAdaptation getAdaptation() {
@@ -262,9 +264,10 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
-   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
-   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/adaptation) documentation.
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
    * @param adaptation adaptation or {@code null} for none
    */
   public RecognitionConfig setAdaptation(SpeechAdaptation adaptation) {

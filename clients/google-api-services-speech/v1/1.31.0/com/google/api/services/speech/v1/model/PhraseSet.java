@@ -28,7 +28,7 @@ package com.google.api.services.speech.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SpeechContext extends com.google.api.client.json.GenericJson {
+public final class PhraseSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Hint Boost. Positive value will increase the probability that a specific phrase will be
@@ -36,26 +36,32 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * false positive recognition as well. Negative boost values would correspond to anti-biasing.
    * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
    * accept a wide range of positive values, most use cases are best served with values between 0
-   * and 20. We recommend using a binary search approach to finding the optimal value for your use
-   * case.
+   * (exclusive) and 20. We recommend using a binary search approach to finding the optimal value
+   * for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float boost;
 
   /**
-   * A list of strings containing words and phrases "hints" so that the speech recognition is more
-   * likely to recognize them. This can be used to improve the accuracy for specific words and
-   * phrases, for example, if specific commands are typically spoken by the user. This can also be
-   * used to add additional words to the vocabulary of the recognizer. See [usage
-   * limits](https://cloud.google.com/speech-to-text/quotas#content). List items can also be set to
-   * classes for groups of words that represent common concepts that occur in natural language. For
-   * example, rather than providing phrase hints for every month of the year, using the $MONTH class
-   * improves the likelihood of correctly transcribing audio that includes months.
+   * The resource name of the phrase set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> phrases;
+  private java.lang.String name;
+
+  /**
+   * A list of word and phrases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Phrase> phrases;
+
+  static {
+    // hack to force ProGuard to consider Phrase used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Phrase.class);
+  }
 
   /**
    * Hint Boost. Positive value will increase the probability that a specific phrase will be
@@ -63,8 +69,8 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * false positive recognition as well. Negative boost values would correspond to anti-biasing.
    * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
    * accept a wide range of positive values, most use cases are best served with values between 0
-   * and 20. We recommend using a binary search approach to finding the optimal value for your use
-   * case.
+   * (exclusive) and 20. We recommend using a binary search approach to finding the optimal value
+   * for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoost() {
@@ -77,54 +83,57 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * false positive recognition as well. Negative boost values would correspond to anti-biasing.
    * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
    * accept a wide range of positive values, most use cases are best served with values between 0
-   * and 20. We recommend using a binary search approach to finding the optimal value for your use
-   * case.
+   * (exclusive) and 20. We recommend using a binary search approach to finding the optimal value
+   * for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
    * @param boost boost or {@code null} for none
    */
-  public SpeechContext setBoost(java.lang.Float boost) {
+  public PhraseSet setBoost(java.lang.Float boost) {
     this.boost = boost;
     return this;
   }
 
   /**
-   * A list of strings containing words and phrases "hints" so that the speech recognition is more
-   * likely to recognize them. This can be used to improve the accuracy for specific words and
-   * phrases, for example, if specific commands are typically spoken by the user. This can also be
-   * used to add additional words to the vocabulary of the recognizer. See [usage
-   * limits](https://cloud.google.com/speech-to-text/quotas#content). List items can also be set to
-   * classes for groups of words that represent common concepts that occur in natural language. For
-   * example, rather than providing phrase hints for every month of the year, using the $MONTH class
-   * improves the likelihood of correctly transcribing audio that includes months.
+   * The resource name of the phrase set.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPhrases() {
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The resource name of the phrase set.
+   * @param name name or {@code null} for none
+   */
+  public PhraseSet setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * A list of word and phrases.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Phrase> getPhrases() {
     return phrases;
   }
 
   /**
-   * A list of strings containing words and phrases "hints" so that the speech recognition is more
-   * likely to recognize them. This can be used to improve the accuracy for specific words and
-   * phrases, for example, if specific commands are typically spoken by the user. This can also be
-   * used to add additional words to the vocabulary of the recognizer. See [usage
-   * limits](https://cloud.google.com/speech-to-text/quotas#content). List items can also be set to
-   * classes for groups of words that represent common concepts that occur in natural language. For
-   * example, rather than providing phrase hints for every month of the year, using the $MONTH class
-   * improves the likelihood of correctly transcribing audio that includes months.
+   * A list of word and phrases.
    * @param phrases phrases or {@code null} for none
    */
-  public SpeechContext setPhrases(java.util.List<java.lang.String> phrases) {
+  public PhraseSet setPhrases(java.util.List<Phrase> phrases) {
     this.phrases = phrases;
     return this;
   }
 
   @Override
-  public SpeechContext set(String fieldName, Object value) {
-    return (SpeechContext) super.set(fieldName, value);
+  public PhraseSet set(String fieldName, Object value) {
+    return (PhraseSet) super.set(fieldName, value);
   }
 
   @Override
-  public SpeechContext clone() {
-    return (SpeechContext) super.clone();
+  public PhraseSet clone() {
+    return (PhraseSet) super.clone();
   }
 
 }

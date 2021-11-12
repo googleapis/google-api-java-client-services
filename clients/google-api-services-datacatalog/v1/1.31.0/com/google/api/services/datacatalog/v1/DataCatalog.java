@@ -3071,8 +3071,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Creates a tag and assigns it to: * An Entry if the method name is
-             * ``projects.locations.entryGroups.entries.tags.create``. * Or EntryGroupif the method name is
-             * ``projects.locations.entryGroups.tags.create``. Note: The project identified by the `parent`
+             * `projects.locations.entryGroups.entries.tags.create`. * Or EntryGroupif the method name is
+             * `projects.locations.entryGroups.tags.create`. Note: The project identified by the `parent`
              * parameter for the [tag] (https://cloud.google.com/data-
              * catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-
              * parameters) and the [tag template] (https://cloud.google.com/data-
@@ -3105,8 +3105,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
               /**
                * Creates a tag and assigns it to: * An Entry if the method name is
-               * ``projects.locations.entryGroups.entries.tags.create``. * Or EntryGroupif the method name is
-               * ``projects.locations.entryGroups.tags.create``. Note: The project identified by the `parent`
+               * `projects.locations.entryGroups.entries.tags.create`. * Or EntryGroupif the method name is
+               * `projects.locations.entryGroups.tags.create`. Note: The project identified by the `parent`
                * parameter for the [tag] (https://cloud.google.com/data-
                * catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-
                * parameters) and the [tag template] (https://cloud.google.com/data-
@@ -3738,8 +3738,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Creates a tag and assigns it to: * An Entry if the method name is
-           * ``projects.locations.entryGroups.entries.tags.create``. * Or EntryGroupif the method name is
-           * ``projects.locations.entryGroups.tags.create``. Note: The project identified by the `parent`
+           * `projects.locations.entryGroups.entries.tags.create`. * Or EntryGroupif the method name is
+           * `projects.locations.entryGroups.tags.create`. Note: The project identified by the `parent`
            * parameter for the [tag] (https://cloud.google.com/data-
            * catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-
            * parameters) and the [tag template] (https://cloud.google.com/data-
@@ -3772,8 +3772,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Creates a tag and assigns it to: * An Entry if the method name is
-             * ``projects.locations.entryGroups.entries.tags.create``. * Or EntryGroupif the method name is
-             * ``projects.locations.entryGroups.tags.create``. Note: The project identified by the `parent`
+             * `projects.locations.entryGroups.entries.tags.create`. * Or EntryGroupif the method name is
+             * `projects.locations.entryGroups.tags.create`. Note: The project identified by the `parent`
              * parameter for the [tag] (https://cloud.google.com/data-
              * catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-
              * parameters) and the [tag template] (https://cloud.google.com/data-
@@ -5167,9 +5167,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * `display_name` and `is_publicly_readable` can be overwritten. If this parameter is
            * absent or empty, all modifiable fields are overwritten. If such fields are non-required
            * and omitted in the request body, their values are emptied. Note: Updating the
-           * ``is_publicly_readable`` field may require up to 12 hours to take effect in search
-           * results. Additionally, it also requires the ``tagTemplates.getIamPolicy`` and
-           * ``tagTemplates.setIamPolicy`` permissions.
+           * `is_publicly_readable` field may require up to 12 hours to take effect in search
+           * results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
+           * `tagTemplates.setIamPolicy` permissions.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -5177,9 +5177,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           /** Names of fields whose values to overwrite on a tag template. Currently, only `display_name` and
          `is_publicly_readable` can be overwritten. If this parameter is absent or empty, all modifiable
          fields are overwritten. If such fields are non-required and omitted in the request body, their
-         values are emptied. Note: Updating the ``is_publicly_readable`` field may require up to 12 hours to
-         take effect in search results. Additionally, it also requires the ``tagTemplates.getIamPolicy`` and
-         ``tagTemplates.setIamPolicy`` permissions.
+         values are emptied. Note: Updating the `is_publicly_readable` field may require up to 12 hours to
+         take effect in search results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
+         `tagTemplates.setIamPolicy` permissions.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5190,9 +5190,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * `display_name` and `is_publicly_readable` can be overwritten. If this parameter is
            * absent or empty, all modifiable fields are overwritten. If such fields are non-required
            * and omitted in the request body, their values are emptied. Note: Updating the
-           * ``is_publicly_readable`` field may require up to 12 hours to take effect in search
-           * results. Additionally, it also requires the ``tagTemplates.getIamPolicy`` and
-           * ``tagTemplates.setIamPolicy`` permissions.
+           * `is_publicly_readable` field may require up to 12 hours to take effect in search
+           * results. Additionally, it also requires the `tagTemplates.getIamPolicy` and
+           * `tagTemplates.setIamPolicy` permissions.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -6044,7 +6044,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Rename#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the tag template.
+           * @param name Required. The name of the tag template field.
            * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest}
            * @return the request
            */
@@ -6074,7 +6074,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the tag template.
+             * @param name Required. The name of the tag template field.
              * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest}
              * @since 1.13
              */
@@ -6143,17 +6143,17 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               return (Rename) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the tag template. */
+            /** Required. The name of the tag template field. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the tag template.
+            /** Required. The name of the tag template field.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the tag template. */
+            /** Required. The name of the tag template field. */
             public Rename setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -31,6 +31,16 @@ package com.google.api.services.speech.v1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeechAdaptation adaptation;
+
+  /**
    * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
    * tags, listing possible alternative languages of the supplied audio. See [Language
    * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
@@ -215,6 +225,29 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useEnhanced;
+
+  /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
+   * @return value or {@code null} for none
+   */
+  public SpeechAdaptation getAdaptation() {
+    return adaptation;
+  }
+
+  /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. For more
+   * information, see the [speech adaptation](https://cloud.google.com/speech-to-
+   * text/docs/adaptation) documentation. When speech adaptation is set it supersedes the
+   * `speech_contexts` field.
+   * @param adaptation adaptation or {@code null} for none
+   */
+  public RecognitionConfig setAdaptation(SpeechAdaptation adaptation) {
+    this.adaptation = adaptation;
+    return this;
+  }
 
   /**
    * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.speech.v1p1beta1.model;
+package com.google.api.services.speech.v1.model;
 
 /**
  * A phrases containing words and phrase "hints" so that the speech recognition is more likely to

@@ -64,6 +64,13 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   private java.lang.String languageCode;
 
   /**
+   * Time offset of the end of this result relative to the beginning of the audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String resultEndTime;
+
+  /**
    * May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
@@ -123,6 +130,23 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
    */
   public SpeechRecognitionResult setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Time offset of the end of this result relative to the beginning of the audio.
+   * @return value or {@code null} for none
+   */
+  public String getResultEndTime() {
+    return resultEndTime;
+  }
+
+  /**
+   * Time offset of the end of this result relative to the beginning of the audio.
+   * @param resultEndTime resultEndTime or {@code null} for none
+   */
+  public SpeechRecognitionResult setResultEndTime(String resultEndTime) {
+    this.resultEndTime = resultEndTime;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class ConfigureManagementSettingsRequest extends com.google.api.cli
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the transfer lock is being updated, the `update_mask` would be
+   * example, if only the transfer lock is being updated, the `update_mask` is
    * `"transfer_lock_state"`.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class ConfigureManagementSettingsRequest extends com.google.api.cli
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the transfer lock is being updated, the `update_mask` would be
+   * example, if only the transfer lock is being updated, the `update_mask` is
    * `"transfer_lock_state"`.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class ConfigureManagementSettingsRequest extends com.google.api.cli
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the transfer lock is being updated, the `update_mask` would be
+   * example, if only the transfer lock is being updated, the `update_mask` is
    * `"transfer_lock_state"`.
    * @param updateMask updateMask or {@code null} for none
    */

@@ -49,7 +49,7 @@ public final class TransferDomainRequest extends com.google.api.client.json.Gene
    * Required. The complete `Registration` resource to be created. You can leave
    * `registration.dns_settings` unset to import the domain's current DNS configuration from its
    * current registrar. Use this option only if you are sure that the domain's current DNS service
-   * will not cease upon transfer, as is often the case for DNS services provided for free by the
+   * does not cease upon transfer, as is often the case for DNS services provided for free by the
    * registrar.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class TransferDomainRequest extends com.google.api.client.json.Gene
    * Required. The complete `Registration` resource to be created. You can leave
    * `registration.dns_settings` unset to import the domain's current DNS configuration from its
    * current registrar. Use this option only if you are sure that the domain's current DNS service
-   * will not cease upon transfer, as is often the case for DNS services provided for free by the
+   * does not cease upon transfer, as is often the case for DNS services provided for free by the
    * registrar.
    * @return value or {@code null} for none
    */
@@ -125,7 +125,7 @@ public final class TransferDomainRequest extends com.google.api.client.json.Gene
    * Required. The complete `Registration` resource to be created. You can leave
    * `registration.dns_settings` unset to import the domain's current DNS configuration from its
    * current registrar. Use this option only if you are sure that the domain's current DNS service
-   * will not cease upon transfer, as is often the case for DNS services provided for free by the
+   * does not cease upon transfer, as is often the case for DNS services provided for free by the
    * registrar.
    * @param registration registration or {@code null} for none
    */

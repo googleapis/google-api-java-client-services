@@ -1319,14 +1319,15 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Deletes a `Registration` resource. For `Registration` resources using usage billing, this method
-         * works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is
-         * `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` This method works on any `Registration`
-         * resource using subscription billing, provided that the resource was created at least 1 day in the
-         * past. When an active domain is successfully deleted, you can continue to use the domain in
-         * [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's
-         * sole owner in Google Domains, and permissions for the domain are subsequently managed there. The
-         * domain will not renew automatically unless the new owner sets up billing in Google Domains.
+         * Deletes a `Registration` resource. This method works on any `Registration` resource using
+         * [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the resource
+         * was created at least 1 day in the past. For `Registration` resources using [Monthly
+         * billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with
+         * `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` When
+         * an active registration is successfully deleted, you can continue to use the domain in [Google
+         * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
+         * owner in Google Domains, and permissions for the domain are subsequently managed there. The
+         * domain does not renew automatically unless the new owner sets up billing in Google Domains.
          *
          * Create a request for the method "registrations.delete".
          *
@@ -1351,14 +1352,15 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
 
           /**
-           * Deletes a `Registration` resource. For `Registration` resources using usage billing, this
-           * method works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is
-           * `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` This method works on any `Registration`
-           * resource using subscription billing, provided that the resource was created at least 1 day in
-           * the past. When an active domain is successfully deleted, you can continue to use the domain in
+           * Deletes a `Registration` resource. This method works on any `Registration` resource using
+           * [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the
+           * resource was created at least 1 day in the past. For `Registration` resources using [Monthly
+           * billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with
+           * `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED`
+           * When an active registration is successfully deleted, you can continue to use the domain in
            * [Google Domains](https://domains.google/) until it expires. The calling user becomes the
            * domain's sole owner in Google Domains, and permissions for the domain are subsequently managed
-           * there. The domain will not renew automatically unless the new owner sets up billing in Google
+           * there. The domain does not renew automatically unless the new owner sets up billing in Google
            * Domains.
            *
            * Create a request for the method "registrations.delete".
@@ -1475,7 +1477,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
          * active domain is successfully exported, you can continue to use the domain in [Google
          * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
          * owner in Google Domains, and permissions for the domain are subsequently managed there. The
-         * domain will not renew automatically unless the new owner sets up billing in Google Domains.
+         * domain does not renew automatically unless the new owner sets up billing in Google Domains.
          *
          * Create a request for the method "registrations.export".
          *
@@ -1505,7 +1507,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
            * active domain is successfully exported, you can continue to use the domain in [Google
            * Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole
            * owner in Google Domains, and permissions for the domain are subsequently managed there. The
-           * domain will not renew automatically unless the new owner sets up billing in Google Domains.
+           * domain does not renew automatically unless the new owner sets up billing in Google Domains.
            *
            * Create a request for the method "registrations.export".
            *
@@ -1907,32 +1909,41 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
-         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
-         must specify version 3. Policies without any conditional bindings may specify any valid value or
-         leave the field unset. To learn which resources support conditions in their IAM policies, see the
-         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
-           * Requests specifying an invalid value will be rejected. Requests for policies with any
-           * conditional bindings must specify version 3. Policies without any conditional bindings
-           * may specify any valid value or leave the field unset. To learn which resources support
-           * conditions in their IAM policies, see the [IAM
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -2318,14 +2329,13 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The field mask describing which fields to update as a comma-separated list.
-           * For example, if only the labels are being updated, the `update_mask` would be
-           * `"labels"`.
+           * For example, if only the labels are being updated, the `update_mask` is `"labels"`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. The field mask describing which fields to update as a comma-separated list. For example,
-         if only the labels are being updated, the `update_mask` would be `"labels"`.
+         if only the labels are being updated, the `update_mask` is `"labels"`.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2333,8 +2343,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The field mask describing which fields to update as a comma-separated list.
-           * For example, if only the labels are being updated, the `update_mask` would be
-           * `"labels"`.
+           * For example, if only the labels are being updated, the `update_mask` is `"labels"`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2955,7 +2964,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         }
         /**
          * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
-         * domains managed by Google Domains, transferring to Cloud Domains is not yet supported. Use the
+         * domains managed by Google Domains, transferring to Cloud Domains is not supported. Use the
          * returned values to call `TransferDomain`.
          *
          * Create a request for the method "registrations.retrieveTransferParameters".
@@ -2982,7 +2991,7 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For
-           * domains managed by Google Domains, transferring to Cloud Domains is not yet supported. Use the
+           * domains managed by Google Domains, transferring to Cloud Domains is not supported. Use the
            * returned values to call `TransferDomain`.
            *
            * Create a request for the method "registrations.retrieveTransferParameters".
@@ -3566,10 +3575,10 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         }
         /**
          * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
-         * Domains, transferring to Cloud Domains is not yet supported. Before calling this method, go to
-         * the domain's current registrar to unlock the domain for transfer and retrieve the domain's
-         * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is
-         * unlocked and to get values needed to build a call to this method. A successful call creates a
+         * Domains, transferring to Cloud Domains is not supported. Before calling this method, go to the
+         * domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer
+         * authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked
+         * and to get values needed to build a call to this method. A successful call creates a
          * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
          * transfer process. The registrant can often speed up this process by approving the transfer
          * through the current registrar, either by clicking a link in an email from the registrar or by
@@ -3602,11 +3611,11 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Transfers a domain name from another registrar to Cloud Domains. For domains managed by Google
-           * Domains, transferring to Cloud Domains is not yet supported. Before calling this method, go to
-           * the domain's current registrar to unlock the domain for transfer and retrieve the domain's
-           * transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain
-           * is unlocked and to get values needed to build a call to this method. A successful call creates
-           * a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
+           * Domains, transferring to Cloud Domains is not supported. Before calling this method, go to the
+           * domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer
+           * authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is
+           * unlocked and to get values needed to build a call to this method. A successful call creates a
+           * `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the
            * transfer process. The registrant can often speed up this process by approving the transfer
            * through the current registrar, either by clicking a link in an email from the registrar or by
            * visiting the registrar's website. A few minutes after transfer approval, the resource

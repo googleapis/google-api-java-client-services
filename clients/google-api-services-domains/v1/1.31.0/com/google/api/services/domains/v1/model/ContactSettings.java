@@ -48,8 +48,8 @@ public final class ContactSettings extends com.google.api.client.json.GenericJso
   /**
    * Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this
    * email address, phone number, and/or postal address can take control of the domain.* *Warning:
-   * For new `Registration`s, the registrant will receive an email confirmation that they must
-   * complete within 15 days to avoid domain suspension.*
+   * For new `Registration`s, the registrant receives an email confirmation that they must complete
+   * within 15 days to avoid domain suspension.*
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +99,8 @@ public final class ContactSettings extends com.google.api.client.json.GenericJso
   /**
    * Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this
    * email address, phone number, and/or postal address can take control of the domain.* *Warning:
-   * For new `Registration`s, the registrant will receive an email confirmation that they must
-   * complete within 15 days to avoid domain suspension.*
+   * For new `Registration`s, the registrant receives an email confirmation that they must complete
+   * within 15 days to avoid domain suspension.*
    * @return value or {@code null} for none
    */
   public Contact getRegistrantContact() {
@@ -110,8 +110,8 @@ public final class ContactSettings extends com.google.api.client.json.GenericJso
   /**
    * Required. The registrant contact for the `Registration`. *Caution: Anyone with access to this
    * email address, phone number, and/or postal address can take control of the domain.* *Warning:
-   * For new `Registration`s, the registrant will receive an email confirmation that they must
-   * complete within 15 days to avoid domain suspension.*
+   * For new `Registration`s, the registrant receives an email confirmation that they must complete
+   * within 15 days to avoid domain suspension.*
    * @param registrantContact registrantContact or {@code null} for none
    */
   public ContactSettings setRegistrantContact(Contact registrantContact) {

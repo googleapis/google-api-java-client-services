@@ -45,6 +45,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private Empty blank;
 
   /**
+   * A widget that shows a stream of logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogsPanel logsPanel;
+
+  /**
    * A scorecard summarizing time series data.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setBlank(Empty blank) {
     this.blank = blank;
+    return this;
+  }
+
+  /**
+   * A widget that shows a stream of logs.
+   * @return value or {@code null} for none
+   */
+  public LogsPanel getLogsPanel() {
+    return logsPanel;
+  }
+
+  /**
+   * A widget that shows a stream of logs.
+   * @param logsPanel logsPanel or {@code null} for none
+   */
+  public Widget setLogsPanel(LogsPanel logsPanel) {
+    this.logsPanel = logsPanel;
     return this;
   }
 

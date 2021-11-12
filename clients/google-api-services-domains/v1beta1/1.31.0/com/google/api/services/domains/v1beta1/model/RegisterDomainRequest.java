@@ -53,7 +53,7 @@ public final class RegisterDomainRequest extends com.google.api.client.json.Gene
   private Registration registration;
 
   /**
-   * When true, only validation will be performed, without actually registering the domain. Follows:
+   * When true, only validation is performed, without actually registering the domain. Follows:
    * https://cloud.google.com/apis/design/design_patterns#request_validation
    * The value may be {@code null}.
    */
@@ -124,7 +124,7 @@ public final class RegisterDomainRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * When true, only validation will be performed, without actually registering the domain. Follows:
+   * When true, only validation is performed, without actually registering the domain. Follows:
    * https://cloud.google.com/apis/design/design_patterns#request_validation
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class RegisterDomainRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * When true, only validation will be performed, without actually registering the domain. Follows:
+   * When true, only validation is performed, without actually registering the domain. Follows:
    * https://cloud.google.com/apis/design/design_patterns#request_validation
    * @param validateOnly validateOnly or {@code null} for none
    */

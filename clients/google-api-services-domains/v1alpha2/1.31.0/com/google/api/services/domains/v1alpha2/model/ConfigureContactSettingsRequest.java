@@ -46,7 +46,7 @@ public final class ConfigureContactSettingsRequest extends com.google.api.client
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the registrant contact is being updated, the `update_mask` would be
+   * example, if only the registrant contact is being updated, the `update_mask` is
    * `"registrant_contact"`.
    * The value may be {@code null}.
    */
@@ -98,7 +98,7 @@ public final class ConfigureContactSettingsRequest extends com.google.api.client
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the registrant contact is being updated, the `update_mask` would be
+   * example, if only the registrant contact is being updated, the `update_mask` is
    * `"registrant_contact"`.
    * @return value or {@code null} for none
    */
@@ -108,7 +108,7 @@ public final class ConfigureContactSettingsRequest extends com.google.api.client
 
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
-   * example, if only the registrant contact is being updated, the `update_mask` would be
+   * example, if only the registrant contact is being updated, the `update_mask` is
    * `"registrant_contact"`.
    * @param updateMask updateMask or {@code null} for none
    */

@@ -39,10 +39,10 @@ public final class ConfigureDnsSettingsRequest extends com.google.api.client.jso
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
    * example, if only the name servers are being updated for an existing Custom DNS configuration,
-   * the `update_mask` would be `"custom_dns.name_servers"`. When changing the DNS provider from one
-   * type to another, pass the new provider's field name as part of the field mask. For example,
-   * when changing from a Google Domains DNS configuration to a Custom DNS configuration, the
-   * `update_mask` would be `"custom_dns"`. //
+   * the `update_mask` is `"custom_dns.name_servers"`. When changing the DNS provider from one type
+   * to another, pass the new provider's field name as part of the field mask. For example, when
+   * changing from a Google Domains DNS configuration to a Custom DNS configuration, the
+   * `update_mask` is `"custom_dns"`. //
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +75,10 @@ public final class ConfigureDnsSettingsRequest extends com.google.api.client.jso
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
    * example, if only the name servers are being updated for an existing Custom DNS configuration,
-   * the `update_mask` would be `"custom_dns.name_servers"`. When changing the DNS provider from one
-   * type to another, pass the new provider's field name as part of the field mask. For example,
-   * when changing from a Google Domains DNS configuration to a Custom DNS configuration, the
-   * `update_mask` would be `"custom_dns"`. //
+   * the `update_mask` is `"custom_dns.name_servers"`. When changing the DNS provider from one type
+   * to another, pass the new provider's field name as part of the field mask. For example, when
+   * changing from a Google Domains DNS configuration to a Custom DNS configuration, the
+   * `update_mask` is `"custom_dns"`. //
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -88,10 +88,10 @@ public final class ConfigureDnsSettingsRequest extends com.google.api.client.jso
   /**
    * Required. The field mask describing which fields to update as a comma-separated list. For
    * example, if only the name servers are being updated for an existing Custom DNS configuration,
-   * the `update_mask` would be `"custom_dns.name_servers"`. When changing the DNS provider from one
-   * type to another, pass the new provider's field name as part of the field mask. For example,
-   * when changing from a Google Domains DNS configuration to a Custom DNS configuration, the
-   * `update_mask` would be `"custom_dns"`. //
+   * the `update_mask` is `"custom_dns.name_servers"`. When changing the DNS provider from one type
+   * to another, pass the new provider's field name as part of the field mask. For example, when
+   * changing from a Google Domains DNS configuration to a Custom DNS configuration, the
+   * `update_mask` is `"custom_dns"`. //
    * @param updateMask updateMask or {@code null} for none
    */
   public ConfigureDnsSettingsRequest setUpdateMask(String updateMask) {

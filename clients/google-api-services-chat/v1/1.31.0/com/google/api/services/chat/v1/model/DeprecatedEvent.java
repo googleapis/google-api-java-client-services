@@ -62,7 +62,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String dialogEventType;
 
   /**
-   * The timestamp indicating when the event was dispatched.
+   * The timestamp indicating when the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +198,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The timestamp indicating when the event was dispatched.
+   * The timestamp indicating when the event occurred.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -206,7 +206,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The timestamp indicating when the event was dispatched.
+   * The timestamp indicating when the event occurred.
    * @param eventTime eventTime or {@code null} for none
    */
   public DeprecatedEvent setEventTime(String eventTime) {

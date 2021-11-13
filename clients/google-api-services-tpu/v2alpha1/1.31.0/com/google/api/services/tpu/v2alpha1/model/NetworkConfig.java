@@ -30,6 +30,14 @@ package com.google.api.services.tpu.v2alpha1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Allows the TPU node to send and receive packets with non-matching destination or source IPs.
+   * This is required if you plan to use the TPU workers to forward routes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canIpForward;
+
+  /**
    * Indicates that external IP addresses would be associated with the TPU workers. If set to false,
    * the specified subnetwork or network should have Private Google Access enabled.
    * The value may be {@code null}.
@@ -52,6 +60,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Allows the TPU node to send and receive packets with non-matching destination or source IPs.
+   * This is required if you plan to use the TPU workers to forward routes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanIpForward() {
+    return canIpForward;
+  }
+
+  /**
+   * Allows the TPU node to send and receive packets with non-matching destination or source IPs.
+   * This is required if you plan to use the TPU workers to forward routes.
+   * @param canIpForward canIpForward or {@code null} for none
+   */
+  public NetworkConfig setCanIpForward(java.lang.Boolean canIpForward) {
+    this.canIpForward = canIpForward;
+    return this;
+  }
 
   /**
    * Indicates that external IP addresses would be associated with the TPU workers. If set to false,

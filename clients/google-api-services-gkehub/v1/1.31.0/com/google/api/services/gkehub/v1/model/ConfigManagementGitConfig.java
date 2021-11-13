@@ -52,7 +52,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   private java.lang.String policyDir;
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
+   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +141,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
+   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretType() {
@@ -148,7 +150,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
+   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
    * @param secretType secretType or {@code null} for none
    */
   public ConfigManagementGitConfig setSecretType(java.lang.String secretType) {

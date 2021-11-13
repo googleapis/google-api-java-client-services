@@ -45,6 +45,17 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
   private KubernetesMetadata kubernetesMetadata;
 
   /**
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered
+   * cluster, in the steady state. These resources: * Ensure that the cluster is exclusively
+   * registered to one and only one Hub Membership. * Propagate Workload Pool Information available
+   * in the Membership Authority field. * Ensure proper initial configuration of default Hub
+   * Features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KubernetesResource kubernetesResource;
+
+  /**
    * Optional. Specific information for a GKE Multi-Cloud cluster.
    * The value may be {@code null}.
    */
@@ -90,6 +101,31 @@ public final class MembershipEndpoint extends com.google.api.client.json.Generic
    */
   public MembershipEndpoint setKubernetesMetadata(KubernetesMetadata kubernetesMetadata) {
     this.kubernetesMetadata = kubernetesMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered
+   * cluster, in the steady state. These resources: * Ensure that the cluster is exclusively
+   * registered to one and only one Hub Membership. * Propagate Workload Pool Information available
+   * in the Membership Authority field. * Ensure proper initial configuration of default Hub
+   * Features.
+   * @return value or {@code null} for none
+   */
+  public KubernetesResource getKubernetesResource() {
+    return kubernetesResource;
+  }
+
+  /**
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered
+   * cluster, in the steady state. These resources: * Ensure that the cluster is exclusively
+   * registered to one and only one Hub Membership. * Propagate Workload Pool Information available
+   * in the Membership Authority field. * Ensure proper initial configuration of default Hub
+   * Features.
+   * @param kubernetesResource kubernetesResource or {@code null} for none
+   */
+  public MembershipEndpoint setKubernetesResource(KubernetesResource kubernetesResource) {
+    this.kubernetesResource = kubernetesResource;
     return this;
   }
 

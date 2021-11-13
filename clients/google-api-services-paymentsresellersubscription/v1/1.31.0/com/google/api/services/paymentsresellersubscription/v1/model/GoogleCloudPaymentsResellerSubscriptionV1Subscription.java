@@ -122,6 +122,17 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String redirectUri;
 
   /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String renewalTime;
+
+  /**
    * Required. The location that the service is provided as indicated by the partner.
    * The value may be {@code null}.
    */
@@ -366,6 +377,31 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setRedirectUri(java.lang.String redirectUri) {
     this.redirectUri = redirectUri;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * @return value or {@code null} for none
+   */
+  public String getRenewalTime() {
+    return renewalTime;
+  }
+
+  /**
+   * Output only. The time at which the subscription is expected to be renewed by Google - a new
+   * charge will be incurred and the service entitlement will be renewed. A non-immediate
+   * cancellation will take place at this time too, before which, the service entitlement for the
+   * end user will remain valid. UTC timezone in ISO 8061 format. For example:
+   * "2019-08-31T17:28:54.564Z"
+   * @param renewalTime renewalTime or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setRenewalTime(String renewalTime) {
+    this.renewalTime = renewalTime;
     return this;
   }
 

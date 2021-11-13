@@ -87,7 +87,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
-   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * `spiffe:ns//sa/` or `/ns//sa/` e.g. `spiffe://example.com/ns/test-ns/sa/default`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
-   * 'some-namespace'
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: `[a-z.-]+`, e.g.
+   * `some-namespace`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
-   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * `namespace:serviceaccount`. e.g. `test-ns:default`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,7 +245,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
-   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * `spiffe:ns//sa/` or `/ns//sa/` e.g. `spiffe://example.com/ns/test-ns/sa/default`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AdmissionRule> getIstioServiceIdentityAdmissionRules() {
@@ -254,7 +254,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
-   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * `spiffe:ns//sa/` or `/ns//sa/` e.g. `spiffe://example.com/ns/test-ns/sa/default`
    * @param istioServiceIdentityAdmissionRules istioServiceIdentityAdmissionRules or {@code null} for none
    */
   public Policy setIstioServiceIdentityAdmissionRules(java.util.Map<String, AdmissionRule> istioServiceIdentityAdmissionRules) {
@@ -263,8 +263,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
-   * 'some-namespace'
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: `[a-z.-]+`, e.g.
+   * `some-namespace`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AdmissionRule> getKubernetesNamespaceAdmissionRules() {
@@ -272,8 +272,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
-   * 'some-namespace'
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: `[a-z.-]+`, e.g.
+   * `some-namespace`
    * @param kubernetesNamespaceAdmissionRules kubernetesNamespaceAdmissionRules or {@code null} for none
    */
   public Policy setKubernetesNamespaceAdmissionRules(java.util.Map<String, AdmissionRule> kubernetesNamespaceAdmissionRules) {
@@ -283,7 +283,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
-   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * `namespace:serviceaccount`. e.g. `test-ns:default`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AdmissionRule> getKubernetesServiceAccountAdmissionRules() {
@@ -292,7 +292,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
-   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * `namespace:serviceaccount`. e.g. `test-ns:default`
    * @param kubernetesServiceAccountAdmissionRules kubernetesServiceAccountAdmissionRules or {@code null} for none
    */
   public Policy setKubernetesServiceAccountAdmissionRules(java.util.Map<String, AdmissionRule> kubernetesServiceAccountAdmissionRules) {

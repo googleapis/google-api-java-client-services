@@ -47,6 +47,14 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private ConfigManagementGitConfig git;
 
   /**
+   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
+   * disables the Config Sync admission webhook and does not prevent drifts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preventDrift;
+
+  /**
    * Specifies whether the Config Sync Repo is in “hierarchical” or “unstructured” mode.
    * The value may be {@code null}.
    */
@@ -90,6 +98,25 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setGit(ConfigManagementGitConfig git) {
     this.git = git;
+    return this;
+  }
+
+  /**
+   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
+   * disables the Config Sync admission webhook and does not prevent drifts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreventDrift() {
+    return preventDrift;
+  }
+
+  /**
+   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
+   * disables the Config Sync admission webhook and does not prevent drifts.
+   * @param preventDrift preventDrift or {@code null} for none
+   */
+  public ConfigManagementConfigSync setPreventDrift(java.lang.Boolean preventDrift) {
+    this.preventDrift = preventDrift;
     return this;
   }
 

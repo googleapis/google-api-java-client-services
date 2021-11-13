@@ -1,6 +1,6 @@
 # Certificate Authority API Client Library for Java
 
-The Certificate Authority Service API is a highly-available, scalable service that enables you to simplify and automate the management of private certificate authorities (CAs) while staying in control of your private keys." 
+The Certificate Authority Service API is a highly-available, scalable service that enables you to simplify and automate the management of private certificate authorities (CAs) while staying in control of your private keys. 
 
 This page contains information about getting started with the Certificate Authority API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-privateca</artifactId>
-      <version>v1-rev20211101-1.32.1</version>
+      <version>v1-rev20211103-1.32.1</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-privateca:v1-rev20211101-1.32.1'
+  compile 'com.google.apis:google-api-services-privateca:v1-rev20211103-1.32.1'
 }
 ```
 

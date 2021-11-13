@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * A Google Cloud Redis instance. next id = 38
+ * A Google Cloud Redis instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -195,7 +195,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer readEndpointPort;
 
   /**
-   * Optional. Read replica mode.
+   * Optional. Read replica mode. Can only be specified when trying to create the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,8 +223,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String redisVersion;
 
   /**
-   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 2. Valid value for basic tier is 0 and defaults to 0.
+   * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas
+   * enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier
+   * instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0
+   * and the default is also 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -667,7 +669,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Read replica mode.
+   * Optional. Read replica mode. Can only be specified when trying to create the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadReplicasMode() {
@@ -675,7 +677,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Read replica mode.
+   * Optional. Read replica mode. Can only be specified when trying to create the instance.
    * @param readReplicasMode readReplicasMode or {@code null} for none
    */
   public Instance setReadReplicasMode(java.lang.String readReplicasMode) {
@@ -732,8 +734,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 2. Valid value for basic tier is 0 and defaults to 0.
+   * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas
+   * enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier
+   * instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0
+   * and the default is also 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReplicaCount() {
@@ -741,8 +745,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The number of replica nodes. Valid range for standard tier is [1-5] and defaults to
-   * 2. Valid value for basic tier is 0 and defaults to 0.
+   * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas
+   * enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier
+   * instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0
+   * and the default is also 0.
    * @param replicaCount replicaCount or {@code null} for none
    */
   public Instance setReplicaCount(java.lang.Integer replicaCount) {

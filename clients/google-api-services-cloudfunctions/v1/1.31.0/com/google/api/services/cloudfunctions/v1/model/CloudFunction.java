@@ -79,6 +79,20 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. If specified, deployments will use Artifact Registry. If unspecified and the
+   * deployment is eligible to use Artifact Registry, GCF will create and use a repository named
+   * 'gcf-artifacts' for every deployed region. This is the repository to which the function docker
+   * image will be pushed after it is built by Cloud Build. It must match the pattern
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
+   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * 'DOCKER'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dockerRepository;
+
+  /**
    * The name of the function (as defined in source code) that will be executed. Defaults to the
    * resource name suffix, if not specified. For backward compatibility, if function with given name
    * is not found, then the system will try to use function named "function". For Node.js this is
@@ -115,6 +129,28 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String ingressSettings;
+
+  /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If
+   * specified, you must also provide an artifact registry repository using the `docker_repository`
+   * field that was created with the same KMS crypto key. The following service accounts need to be
+   * granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter
+   * (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least
+   * access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-
+   * admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google
+   * Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com)
+   * - Required to protect the function's source code. If this service account does not exist,
+   * deploying a function without a KMS key or retrieving the service agent name provisions it. For
+   * more information, see https://cloud.google.com/storage/docs/projects#service-agents and
+   * https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions
+   * delegates access to service agents to protect function resources in internal projects that are
+   * not accessible by the end user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
 
   /**
    * Labels associated with this Cloud Function.
@@ -390,6 +426,37 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. If specified, deployments will use Artifact Registry. If unspecified and the
+   * deployment is eligible to use Artifact Registry, GCF will create and use a repository named
+   * 'gcf-artifacts' for every deployed region. This is the repository to which the function docker
+   * image will be pushed after it is built by Cloud Build. It must match the pattern
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
+   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * 'DOCKER'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDockerRepository() {
+    return dockerRepository;
+  }
+
+  /**
+   * User managed repository created in Artifact Registry optionally with a customer managed
+   * encryption key. If specified, deployments will use Artifact Registry. If unspecified and the
+   * deployment is eligible to use Artifact Registry, GCF will create and use a repository named
+   * 'gcf-artifacts' for every deployed region. This is the repository to which the function docker
+   * image will be pushed after it is built by Cloud Build. It must match the pattern
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
+   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * 'DOCKER'.
+   * @param dockerRepository dockerRepository or {@code null} for none
+   */
+  public CloudFunction setDockerRepository(java.lang.String dockerRepository) {
+    this.dockerRepository = dockerRepository;
+    return this;
+  }
+
+  /**
    * The name of the function (as defined in source code) that will be executed. Defaults to the
    * resource name suffix, if not specified. For backward compatibility, if function with given name
    * is not found, then the system will try to use function named "function". For Node.js this is
@@ -477,6 +544,53 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setIngressSettings(java.lang.String ingressSettings) {
     this.ingressSettings = ingressSettings;
+    return this;
+  }
+
+  /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If
+   * specified, you must also provide an artifact registry repository using the `docker_repository`
+   * field that was created with the same KMS crypto key. The following service accounts need to be
+   * granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter
+   * (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least
+   * access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-
+   * admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google
+   * Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com)
+   * - Required to protect the function's source code. If this service account does not exist,
+   * deploying a function without a KMS key or retrieving the service agent name provisions it. For
+   * more information, see https://cloud.google.com/storage/docs/projects#service-agents and
+   * https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions
+   * delegates access to service agents to protect function resources in internal projects that are
+   * not accessible by the end user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
+   * resources. It must match the pattern
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If
+   * specified, you must also provide an artifact registry repository using the `docker_repository`
+   * field that was created with the same KMS crypto key. The following service accounts need to be
+   * granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter
+   * (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least
+   * access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-
+   * admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google
+   * Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com)
+   * - Required to protect the function's source code. If this service account does not exist,
+   * deploying a function without a KMS key or retrieving the service agent name provisions it. For
+   * more information, see https://cloud.google.com/storage/docs/projects#service-agents and
+   * https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions
+   * delegates access to service agents to protect function resources in internal projects that are
+   * not accessible by the end user.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public CloudFunction setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

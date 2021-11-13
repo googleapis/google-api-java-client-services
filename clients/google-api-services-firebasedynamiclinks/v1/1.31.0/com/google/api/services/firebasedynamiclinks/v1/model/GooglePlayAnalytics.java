@@ -33,9 +33,7 @@ package com.google.api.services.firebasedynamiclinks.v1.model;
 public final class GooglePlayAnalytics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [AdWords autotagging parameter](https://support.google.com/analytics/answer/1033981?hl=en);
-   * used to measure Google AdWords ads. This value is generated dynamically and should never be
-   * modified.
+   * Deprecated; FDL SDK does not process nor log it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +77,7 @@ public final class GooglePlayAnalytics extends com.google.api.client.json.Generi
   private java.lang.String utmTerm;
 
   /**
-   * [AdWords autotagging parameter](https://support.google.com/analytics/answer/1033981?hl=en);
-   * used to measure Google AdWords ads. This value is generated dynamically and should never be
-   * modified.
+   * Deprecated; FDL SDK does not process nor log it.
    * @return value or {@code null} for none
    */
   public java.lang.String getGclid() {
@@ -89,9 +85,7 @@ public final class GooglePlayAnalytics extends com.google.api.client.json.Generi
   }
 
   /**
-   * [AdWords autotagging parameter](https://support.google.com/analytics/answer/1033981?hl=en);
-   * used to measure Google AdWords ads. This value is generated dynamically and should never be
-   * modified.
+   * Deprecated; FDL SDK does not process nor log it.
    * @param gclid gclid or {@code null} for none
    */
   public GooglePlayAnalytics setGclid(java.lang.String gclid) {

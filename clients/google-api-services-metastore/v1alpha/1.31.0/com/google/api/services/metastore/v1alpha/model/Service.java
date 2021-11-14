@@ -115,6 +115,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Immutable. The configuration specifying the network settings for the Dataproc Metastore
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkConfig networkConfig;
+
+  /**
    * The TCP port at which the metastore service is reached. Default: 9083.
    * The value may be {@code null}.
    */
@@ -362,6 +370,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Immutable. The configuration specifying the network settings for the Dataproc Metastore
+   * service.
+   * @return value or {@code null} for none
+   */
+  public NetworkConfig getNetworkConfig() {
+    return networkConfig;
+  }
+
+  /**
+   * Immutable. The configuration specifying the network settings for the Dataproc Metastore
+   * service.
+   * @param networkConfig networkConfig or {@code null} for none
+   */
+  public Service setNetworkConfig(NetworkConfig networkConfig) {
+    this.networkConfig = networkConfig;
     return this;
   }
 

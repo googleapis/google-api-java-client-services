@@ -35,7 +35,6 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
    * Optional. This field specifies the URL of AuthorizationPolicy resource that applies
    * authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization.
    * If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-   * Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +123,6 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
    * Optional. This field specifies the URL of AuthorizationPolicy resource that applies
    * authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization.
    * If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-   * Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizationPolicy() {
@@ -135,7 +133,6 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
    * Optional. This field specifies the URL of AuthorizationPolicy resource that applies
    * authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization.
    * If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
-   * Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * @param authorizationPolicy authorizationPolicy or {@code null} for none
    */
   public EndpointPolicy setAuthorizationPolicy(java.lang.String authorizationPolicy) {

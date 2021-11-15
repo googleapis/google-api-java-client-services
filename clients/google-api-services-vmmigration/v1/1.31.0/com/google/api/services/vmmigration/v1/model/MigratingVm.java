@@ -111,6 +111,38 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private SchedulePolicy policy;
 
   /**
+   * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloneJob> recentCloneJobs;
+
+  static {
+    // hack to force ProGuard to consider CloneJob used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CloneJob.class);
+  }
+
+  /**
+   * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CutoverJob> recentCutoverJobs;
+
+  static {
+    // hack to force ProGuard to consider CutoverJob used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CutoverJob.class);
+  }
+
+  /**
    * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not
    * the VM's name but rather its moRef id. This id is of the form vm-.
    * The value may be {@code null}.
@@ -329,6 +361,52 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setPolicy(SchedulePolicy policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloneJob> getRecentCloneJobs() {
+    return recentCloneJobs;
+  }
+
+  /**
+   * Output only. The recent clone jobs performed on the migrating VM. This field holds the vm's
+   * last completed clone job and the vm's running clone job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * @param recentCloneJobs recentCloneJobs or {@code null} for none
+   */
+  public MigratingVm setRecentCloneJobs(java.util.List<CloneJob> recentCloneJobs) {
+    this.recentCloneJobs = recentCloneJobs;
+    return this;
+  }
+
+  /**
+   * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CutoverJob> getRecentCutoverJobs() {
+    return recentCutoverJobs;
+  }
+
+  /**
+   * Output only. The recent cutover jobs performed on the migrating VM. This field holds the vm's
+   * last completed cutover job and the vm's running cutover job, if one exists. Note: To have this
+   * field populated you need to explicitly request it via the "view" parameter of the Get/List
+   * request.
+   * @param recentCutoverJobs recentCutoverJobs or {@code null} for none
+   */
+  public MigratingVm setRecentCutoverJobs(java.util.List<CutoverJob> recentCutoverJobs) {
+    this.recentCutoverJobs = recentCutoverJobs;
     return this;
   }
 

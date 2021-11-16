@@ -104,6 +104,15 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceAgentPoolName;
 
   /**
+   * A manifest file provides a list of objects to be transferred from the data source. This field
+   * points to the location of the manifest file. Otherwise, the entire source bucket is used.
+   * ObjectConditions still apply.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransferManifest transferManifest;
+
+  /**
    * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
    * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
@@ -286,6 +295,27 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
    */
   public TransferSpec setSourceAgentPoolName(java.lang.String sourceAgentPoolName) {
     this.sourceAgentPoolName = sourceAgentPoolName;
+    return this;
+  }
+
+  /**
+   * A manifest file provides a list of objects to be transferred from the data source. This field
+   * points to the location of the manifest file. Otherwise, the entire source bucket is used.
+   * ObjectConditions still apply.
+   * @return value or {@code null} for none
+   */
+  public TransferManifest getTransferManifest() {
+    return transferManifest;
+  }
+
+  /**
+   * A manifest file provides a list of objects to be transferred from the data source. This field
+   * points to the location of the manifest file. Otherwise, the entire source bucket is used.
+   * ObjectConditions still apply.
+   * @param transferManifest transferManifest or {@code null} for none
+   */
+  public TransferSpec setTransferManifest(TransferManifest transferManifest) {
+    this.transferManifest = transferManifest;
     return this;
   }
 

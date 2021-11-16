@@ -92,7 +92,7 @@ public final class GoogleCloudApigeeV1Credential extends com.google.api.client.j
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Status of the credential.
+   * Status of the credential. Valid values include `approved` or `revoked`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +220,7 @@ public final class GoogleCloudApigeeV1Credential extends com.google.api.client.j
   }
 
   /**
-   * Status of the credential.
+   * Status of the credential. Valid values include `approved` or `revoked`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -228,7 +228,7 @@ public final class GoogleCloudApigeeV1Credential extends com.google.api.client.j
   }
 
   /**
-   * Status of the credential.
+   * Status of the credential. Valid values include `approved` or `revoked`.
    * @param status status or {@code null} for none
    */
   public GoogleCloudApigeeV1Credential setStatus(java.lang.String status) {

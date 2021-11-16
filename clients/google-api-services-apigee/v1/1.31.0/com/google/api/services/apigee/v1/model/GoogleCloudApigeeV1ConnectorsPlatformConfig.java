@@ -37,8 +37,8 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfig extends com.googl
   private java.lang.Boolean enabled;
 
   /**
-   * Output only. Time at which the Connectors Platform add-on expires in in milliseconds since
-   * epoch. If unspecified, the add-on will never expire.
+   * Output only. Time at which the Connectors Platform add-on expires in milliseconds since epoch.
+   * If unspecified, the add-on will never expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -62,8 +62,8 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfig extends com.googl
   }
 
   /**
-   * Output only. Time at which the Connectors Platform add-on expires in in milliseconds since
-   * epoch. If unspecified, the add-on will never expire.
+   * Output only. Time at which the Connectors Platform add-on expires in milliseconds since epoch.
+   * If unspecified, the add-on will never expire.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExpiresAt() {
@@ -71,8 +71,8 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfig extends com.googl
   }
 
   /**
-   * Output only. Time at which the Connectors Platform add-on expires in in milliseconds since
-   * epoch. If unspecified, the add-on will never expire.
+   * Output only. Time at which the Connectors Platform add-on expires in milliseconds since epoch.
+   * If unspecified, the add-on will never expire.
    * @param expiresAt expiresAt or {@code null} for none
    */
   public GoogleCloudApigeeV1ConnectorsPlatformConfig setExpiresAt(java.lang.Long expiresAt) {

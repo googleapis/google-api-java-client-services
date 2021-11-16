@@ -71,6 +71,14 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String eventTime;
 
   /**
+   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
+   * external system finding fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems;
+
+  /**
    * The URI that, if available, points to a web page outside of Security Command Center where
    * additional information about the finding can be found. This field is guaranteed to be either
    * empty or a well formed URL.
@@ -95,6 +103,28 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Indicator indicator;
+
+  /**
+   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mute;
+
+  /**
+   * First known as mute_annotation. Records additional information about the mute operation e.g.
+   * mute config that muted the finding, user who muted the finding, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String muteInitiator;
+
+  /**
+   * Output only. The most recent time this finding was muted or unmuted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String muteUpdateTime;
 
   /**
    * The relative resource name of this finding. See:
@@ -252,6 +282,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
+   * external system finding fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> getExternalSystems() {
+    return externalSystems;
+  }
+
+  /**
+   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
+   * external system finding fields.
+   * @param externalSystems externalSystems or {@code null} for none
+   */
+  public Finding setExternalSystems(java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems) {
+    this.externalSystems = externalSystems;
+    return this;
+  }
+
+  /**
    * The URI that, if available, points to a web page outside of Security Command Center where
    * additional information about the finding can be found. This field is guaranteed to be either
    * empty or a well formed URL.
@@ -309,6 +358,59 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setIndicator(Indicator indicator) {
     this.indicator = indicator;
+    return this;
+  }
+
+  /**
+   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMute() {
+    return mute;
+  }
+
+  /**
+   * Indicates the mute state of a finding (either unspecified, muted, unmuted or undefined).
+   * @param mute mute or {@code null} for none
+   */
+  public Finding setMute(java.lang.String mute) {
+    this.mute = mute;
+    return this;
+  }
+
+  /**
+   * First known as mute_annotation. Records additional information about the mute operation e.g.
+   * mute config that muted the finding, user who muted the finding, etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMuteInitiator() {
+    return muteInitiator;
+  }
+
+  /**
+   * First known as mute_annotation. Records additional information about the mute operation e.g.
+   * mute config that muted the finding, user who muted the finding, etc.
+   * @param muteInitiator muteInitiator or {@code null} for none
+   */
+  public Finding setMuteInitiator(java.lang.String muteInitiator) {
+    this.muteInitiator = muteInitiator;
+    return this;
+  }
+
+  /**
+   * Output only. The most recent time this finding was muted or unmuted.
+   * @return value or {@code null} for none
+   */
+  public String getMuteUpdateTime() {
+    return muteUpdateTime;
+  }
+
+  /**
+   * Output only. The most recent time this finding was muted or unmuted.
+   * @param muteUpdateTime muteUpdateTime or {@code null} for none
+   */
+  public Finding setMuteUpdateTime(String muteUpdateTime) {
+    this.muteUpdateTime = muteUpdateTime;
     return this;
   }
 

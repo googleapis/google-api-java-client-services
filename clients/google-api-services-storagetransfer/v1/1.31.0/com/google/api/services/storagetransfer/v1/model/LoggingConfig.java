@@ -39,6 +39,22 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableOnpremGcsTransferLogs;
 
   /**
+   * States in which `log_actions` are logged. If empty, no logs are generated. This is not yet
+   * supported for transfers with PosixFilesystem data sources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> logActionStates;
+
+  /**
+   * Actions to be logged. If empty, no logs are generated. This is not yet supported for transfers
+   * with PosixFilesystem data sources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> logActions;
+
+  /**
    * Enables the Cloud Storage transfer logs for this transfer. This is only supported for transfer
    * jobs with PosixFilesystem sources. The default is that logs are not generated for this
    * transfer.
@@ -56,6 +72,44 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
    */
   public LoggingConfig setEnableOnpremGcsTransferLogs(java.lang.Boolean enableOnpremGcsTransferLogs) {
     this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
+    return this;
+  }
+
+  /**
+   * States in which `log_actions` are logged. If empty, no logs are generated. This is not yet
+   * supported for transfers with PosixFilesystem data sources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLogActionStates() {
+    return logActionStates;
+  }
+
+  /**
+   * States in which `log_actions` are logged. If empty, no logs are generated. This is not yet
+   * supported for transfers with PosixFilesystem data sources.
+   * @param logActionStates logActionStates or {@code null} for none
+   */
+  public LoggingConfig setLogActionStates(java.util.List<java.lang.String> logActionStates) {
+    this.logActionStates = logActionStates;
+    return this;
+  }
+
+  /**
+   * Actions to be logged. If empty, no logs are generated. This is not yet supported for transfers
+   * with PosixFilesystem data sources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLogActions() {
+    return logActions;
+  }
+
+  /**
+   * Actions to be logged. If empty, no logs are generated. This is not yet supported for transfers
+   * with PosixFilesystem data sources.
+   * @param logActions logActions or {@code null} for none
+   */
+  public LoggingConfig setLogActions(java.util.List<java.lang.String> logActions) {
+    this.logActions = logActions;
     return this;
   }
 

@@ -29,6 +29,9 @@ public class ChromeManagementScopes {
   /** See reports about devices and Chrome browsers managed within your organization. */
   public static final String CHROME_MANAGEMENT_REPORTS_READONLY = "https://www.googleapis.com/auth/chrome.management.reports.readonly";
 
+  /** See basic device and telemetry information collected from Chrome OS devices or users managed within your organization. */
+  public static final String CHROME_MANAGEMENT_TELEMETRY_READONLY = "https://www.googleapis.com/auth/chrome.management.telemetry.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +41,7 @@ public class ChromeManagementScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHROME_MANAGEMENT_APPDETAILS_READONLY);
     set.add(CHROME_MANAGEMENT_REPORTS_READONLY);
+    set.add(CHROME_MANAGEMENT_TELEMETRY_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

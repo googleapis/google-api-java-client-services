@@ -94,6 +94,13 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   private GooglePrivacyDlpV2ReplaceValueConfig replaceConfig;
 
   /**
+   * Replace with a value randomly drawn (with replacement) from a dictionary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ReplaceDictionaryConfig replaceDictionaryConfig;
+
+  /**
    * Replace with infotype
    * The value may be {@code null}.
    */
@@ -257,6 +264,23 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setReplaceConfig(GooglePrivacyDlpV2ReplaceValueConfig replaceConfig) {
     this.replaceConfig = replaceConfig;
+    return this;
+  }
+
+  /**
+   * Replace with a value randomly drawn (with replacement) from a dictionary.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ReplaceDictionaryConfig getReplaceDictionaryConfig() {
+    return replaceDictionaryConfig;
+  }
+
+  /**
+   * Replace with a value randomly drawn (with replacement) from a dictionary.
+   * @param replaceDictionaryConfig replaceDictionaryConfig or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PrimitiveTransformation setReplaceDictionaryConfig(GooglePrivacyDlpV2ReplaceDictionaryConfig replaceDictionaryConfig) {
+    this.replaceDictionaryConfig = replaceDictionaryConfig;
     return this;
   }
 

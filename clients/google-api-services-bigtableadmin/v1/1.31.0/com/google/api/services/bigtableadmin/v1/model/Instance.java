@@ -32,7 +32,9 @@ package com.google.api.services.bigtableadmin.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A server-assigned timestamp representing when this Instance was created.
+   * Output only. A server-assigned timestamp representing when this Instance was created. For
+   * instances created before this field was added (August 2021), this value is `seconds: 0, nanos:
+   * 1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +84,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. A server-assigned timestamp representing when this Instance was created.
+   * Output only. A server-assigned timestamp representing when this Instance was created. For
+   * instances created before this field was added (August 2021), this value is `seconds: 0, nanos:
+   * 1`.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -90,7 +94,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A server-assigned timestamp representing when this Instance was created.
+   * Output only. A server-assigned timestamp representing when this Instance was created. For
+   * instances created before this field was added (August 2021), this value is `seconds: 0, nanos:
+   * 1`.
    * @param createTime createTime or {@code null} for none
    */
   public Instance setCreateTime(String createTime) {

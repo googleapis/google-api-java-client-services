@@ -32,6 +32,13 @@ package com.google.api.services.bigtableadmin.v1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterConfig clusterConfig;
+
+  /**
    * Immutable. The type of storage used by this cluster to serve its parent instance's tables,
    * unless explicitly overridden.
    * The value may be {@code null}.
@@ -77,6 +84,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Configuration for this cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterConfig getClusterConfig() {
+    return clusterConfig;
+  }
+
+  /**
+   * Configuration for this cluster.
+   * @param clusterConfig clusterConfig or {@code null} for none
+   */
+  public Cluster setClusterConfig(ClusterConfig clusterConfig) {
+    this.clusterConfig = clusterConfig;
+    return this;
+  }
 
   /**
    * Immutable. The type of storage used by this cluster to serve its parent instance's tables,

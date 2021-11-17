@@ -30,13 +30,6 @@ package com.google.api.services.compute.model;
 public final class AllocationSpecificSKUReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Indicates how many instances are actually usable currently.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long assuredCount;
-
-  /**
    * Specifies the number of resources that are allocated.
    * The value may be {@code null}.
    */
@@ -56,23 +49,6 @@ public final class AllocationSpecificSKUReservation extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties;
-
-  /**
-   * [Output Only] Indicates how many instances are actually usable currently.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getAssuredCount() {
-    return assuredCount;
-  }
-
-  /**
-   * [Output Only] Indicates how many instances are actually usable currently.
-   * @param assuredCount assuredCount or {@code null} for none
-   */
-  public AllocationSpecificSKUReservation setAssuredCount(java.lang.Long assuredCount) {
-    this.assuredCount = assuredCount;
-    return this;
-  }
 
   /**
    * Specifies the number of resources that are allocated.

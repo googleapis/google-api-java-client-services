@@ -19,9 +19,9 @@ package com.google.api.services.compute.model;
 /**
  * The specification for fault injection introduced into traffic to test the resiliency of clients
  * to backend service failure. As part of fault injection, when clients send requests to a backend
- * service, delays can be introduced by the load balancer on a percentage of requests before sending
- * those request to the backend service. Similarly requests from clients can be aborted by the load
- * balancer for a percentage of requests.
+ * service, delays can be introduced by Loadbalancer on a percentage of requests before sending
+ * those request to the backend service. Similarly requests from clients can be aborted by the
+ * Loadbalancer for a percentage of requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

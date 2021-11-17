@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class TestFailure extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actual output URL evaluated by a load balancer containing the scheme, host, path and query
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
    * parameters.
    * The value may be {@code null}.
    */
@@ -52,8 +52,8 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   private java.lang.String actualService;
 
   /**
-   * The expected output URL evaluated by a load balancer containing the scheme, host, path and
-   * query parameters.
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * The actual output URL evaluated by a load balancer containing the scheme, host, path and query
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
    * parameters.
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The actual output URL evaluated by a load balancer containing the scheme, host, path and query
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
    * parameters.
    * @param actualOutputUrl actualOutputUrl or {@code null} for none
    */
@@ -148,8 +148,8 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The expected output URL evaluated by a load balancer containing the scheme, host, path and
-   * query parameters.
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedOutputUrl() {
@@ -157,8 +157,8 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The expected output URL evaluated by a load balancer containing the scheme, host, path and
-   * query parameters.
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
    * @param expectedOutputUrl expectedOutputUrl or {@code null} for none
    */
   public TestFailure setExpectedOutputUrl(java.lang.String expectedOutputUrl) {

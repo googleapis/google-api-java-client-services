@@ -111,18 +111,6 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend
-   * security policies can be configured to filter incoming HTTP requests targeting backend
-   * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
-   * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
-   * filter requests before the request is served from Google's cache.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
    * @return value or {@code null} for none
    */
   public SecurityPolicyAdaptiveProtectionConfig getAdaptiveProtectionConfig() {
@@ -345,33 +333,6 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend
-   * security policies can be configured to filter incoming HTTP requests targeting backend
-   * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
-   * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
-   * filter requests before the request is served from Google's cache.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend
-   * security policies can be configured to filter incoming HTTP requests targeting backend
-   * services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud
-   * Armor edge security policies can be configured to filter incoming HTTP requests targeting
-   * backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They
-   * filter requests before the request is served from Google's cache.
-   * @param type type or {@code null} for none
-   */
-  public SecurityPolicy setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

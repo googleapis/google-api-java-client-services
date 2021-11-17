@@ -83,13 +83,6 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * KeyRevocationActionType of the instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String keyRevocationActionType;
-
-  /**
    * Labels to apply to instances that are created from this machine image.
    * The value may be {@code null}.
    */
@@ -136,7 +129,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,23 +264,6 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * KeyRevocationActionType of the instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKeyRevocationActionType() {
-    return keyRevocationActionType;
-  }
-
-  /**
-   * KeyRevocationActionType of the instance.
-   * @param keyRevocationActionType keyRevocationActionType or {@code null} for none
-   */
-  public SourceInstanceProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
-    this.keyRevocationActionType = keyRevocationActionType;
-    return this;
-  }
-
-  /**
    * Labels to apply to instances that are created from this machine image.
    * @return value or {@code null} for none
    */
@@ -383,7 +359,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -391,7 +367,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public SourceInstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {

@@ -49,7 +49,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    * examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16')
    * || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
    * '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub ==
-   * 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
+   * '/projects/my-project/global/hub/hub-1'"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    * examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16')
    * || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
    * '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub ==
-   * 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
+   * '/projects/my-project/global/hub/hub-1'"
    * @return value or {@code null} for none
    */
   public java.lang.String getMatch() {
@@ -116,7 +116,7 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    * examples are valid match expressions for public NAT: "inIpRange(destination.ip, '1.1.0.0/16')
    * || inIpRange(destination.ip, '2.2.0.0/16')" "destination.ip == '1.1.0.1' || destination.ip ==
    * '8.8.8.8'" The following example is a valid match expression for private NAT: "nexthop.hub ==
-   * 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
+   * '/projects/my-project/global/hub/hub-1'"
    * @param match match or {@code null} for none
    */
   public RouterNatRule setMatch(java.lang.String match) {

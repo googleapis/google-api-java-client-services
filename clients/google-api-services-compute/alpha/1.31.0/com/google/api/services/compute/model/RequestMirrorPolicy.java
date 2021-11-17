@@ -18,9 +18,8 @@ package com.google.api.services.compute.model;
 
 /**
  * A policy that specifies how requests intended for the route's backends are shadowed to a separate
- * mirrored backend service. The load balancer doesn't wait for responses from the shadow service.
- * Before sending traffic to the shadow service, the host or authority header is suffixed with
- * -shadow.
+ * mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior
+ * to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

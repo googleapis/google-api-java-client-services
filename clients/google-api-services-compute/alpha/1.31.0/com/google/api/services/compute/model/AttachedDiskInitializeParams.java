@@ -33,13 +33,6 @@ package com.google.api.services.compute.model;
 public final class AttachedDiskInitializeParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * The architecture of the attached disk. Valid values are arm64 or x86_64.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String architecture;
-
-  /**
    * An optional description. Provide this property when creating the disk.
    * The value may be {@code null}.
    */
@@ -201,23 +194,6 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private CustomerEncryptionKey sourceSnapshotEncryptionKey;
-
-  /**
-   * The architecture of the attached disk. Valid values are arm64 or x86_64.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getArchitecture() {
-    return architecture;
-  }
-
-  /**
-   * The architecture of the attached disk. Valid values are arm64 or x86_64.
-   * @param architecture architecture or {@code null} for none
-   */
-  public AttachedDiskInitializeParams setArchitecture(java.lang.String architecture) {
-    this.architecture = architecture;
-    return this;
-  }
 
   /**
    * An optional description. Provide this property when creating the disk.

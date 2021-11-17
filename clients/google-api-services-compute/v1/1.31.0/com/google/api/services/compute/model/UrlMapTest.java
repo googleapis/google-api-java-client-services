@@ -37,14 +37,14 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The expected output URL evaluated by the load balancer containing the scheme, host, path and
-   * query parameters. For rules that forward requests to backends, the test passes only when
-   * expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules
-   * with urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
    * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
    * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
    * matches the URL in the load balancer's redirect response. If urlRedirect specifies
-   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS.
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
    * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
    * contain any query parameters. expectedOutputUrl is optional when service is specified.
    * The value may be {@code null}.
@@ -85,8 +85,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Expected BackendService or BackendBucket resource the given URL should be mapped to. The
-   * service field cannot be set if expectedRedirectResponseCode is set.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,14 +110,14 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The expected output URL evaluated by the load balancer containing the scheme, host, path and
-   * query parameters. For rules that forward requests to backends, the test passes only when
-   * expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules
-   * with urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
    * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
    * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
    * matches the URL in the load balancer's redirect response. If urlRedirect specifies
-   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS.
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
    * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
    * contain any query parameters. expectedOutputUrl is optional when service is specified.
    * @return value or {@code null} for none
@@ -127,14 +127,14 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The expected output URL evaluated by the load balancer containing the scheme, host, path and
-   * query parameters. For rules that forward requests to backends, the test passes only when
-   * expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules
-   * with urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
    * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
    * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
    * matches the URL in the load balancer's redirect response. If urlRedirect specifies
-   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS.
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
    * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
    * contain any query parameters. expectedOutputUrl is optional when service is specified.
    * @param expectedOutputUrl expectedOutputUrl or {@code null} for none
@@ -221,8 +221,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expected BackendService or BackendBucket resource the given URL should be mapped to. The
-   * service field cannot be set if expectedRedirectResponseCode is set.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -230,8 +230,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expected BackendService or BackendBucket resource the given URL should be mapped to. The
-   * service field cannot be set if expectedRedirectResponseCode is set.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * @param service service or {@code null} for none
    */
   public UrlMapTest setService(java.lang.String service) {

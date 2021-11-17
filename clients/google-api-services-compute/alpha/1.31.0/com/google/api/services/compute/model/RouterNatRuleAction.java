@@ -38,14 +38,6 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> sourceNatActiveIps;
 
   /**
-   * A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks
-   * must have purpose set to PRIVATE_NAT. This field is used for private NAT.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sourceNatActiveRanges;
-
-  /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule
    * only. This field is used for public NAT.
@@ -53,15 +45,6 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sourceNatDrainIps;
-
-  /**
-   * A list of URLs of subnetworks representing source ranges to be drained. This is only supported
-   * on patch/update, and these subnetworks must have previously been used as active ranges in this
-   * NAT Rule. This field is used for private NAT.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sourceNatDrainRanges;
 
   /**
    * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid
@@ -83,25 +66,6 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
   }
 
   /**
-   * A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks
-   * must have purpose set to PRIVATE_NAT. This field is used for private NAT.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSourceNatActiveRanges() {
-    return sourceNatActiveRanges;
-  }
-
-  /**
-   * A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks
-   * must have purpose set to PRIVATE_NAT. This field is used for private NAT.
-   * @param sourceNatActiveRanges sourceNatActiveRanges or {@code null} for none
-   */
-  public RouterNatRuleAction setSourceNatActiveRanges(java.util.List<java.lang.String> sourceNatActiveRanges) {
-    this.sourceNatActiveRanges = sourceNatActiveRanges;
-    return this;
-  }
-
-  /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule
    * only. This field is used for public NAT.
@@ -119,27 +83,6 @@ public final class RouterNatRuleAction extends com.google.api.client.json.Generi
    */
   public RouterNatRuleAction setSourceNatDrainIps(java.util.List<java.lang.String> sourceNatDrainIps) {
     this.sourceNatDrainIps = sourceNatDrainIps;
-    return this;
-  }
-
-  /**
-   * A list of URLs of subnetworks representing source ranges to be drained. This is only supported
-   * on patch/update, and these subnetworks must have previously been used as active ranges in this
-   * NAT Rule. This field is used for private NAT.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSourceNatDrainRanges() {
-    return sourceNatDrainRanges;
-  }
-
-  /**
-   * A list of URLs of subnetworks representing source ranges to be drained. This is only supported
-   * on patch/update, and these subnetworks must have previously been used as active ranges in this
-   * NAT Rule. This field is used for private NAT.
-   * @param sourceNatDrainRanges sourceNatDrainRanges or {@code null} for none
-   */
-  public RouterNatRuleAction setSourceNatDrainRanges(java.util.List<java.lang.String> sourceNatDrainRanges) {
-    this.sourceNatDrainRanges = sourceNatDrainRanges;
     return this;
   }
 

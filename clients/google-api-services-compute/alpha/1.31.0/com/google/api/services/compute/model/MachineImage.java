@@ -62,13 +62,6 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Properties of source instance
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceProperties instanceProperties;
-
-  /**
    * [Output Only] The resource type, which is always compute#machineImage for machine image.
    * The value may be {@code null}.
    */
@@ -106,13 +99,6 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
-
-  /**
-   * An array of Machine Image specific properties for disks attached to the source instance
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<SavedDisk> savedDisks;
 
   /**
    * [Output Only] The URL for this machine image. The server defines this URL.
@@ -248,23 +234,6 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Properties of source instance
-   * @return value or {@code null} for none
-   */
-  public InstanceProperties getInstanceProperties() {
-    return instanceProperties;
-  }
-
-  /**
-   * [Output Only] Properties of source instance
-   * @param instanceProperties instanceProperties or {@code null} for none
-   */
-  public MachineImage setInstanceProperties(InstanceProperties instanceProperties) {
-    this.instanceProperties = instanceProperties;
-    return this;
-  }
-
-  /**
    * [Output Only] The resource type, which is always compute#machineImage for machine image.
    * @return value or {@code null} for none
    */
@@ -351,23 +320,6 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
    */
   public MachineImage setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
-    return this;
-  }
-
-  /**
-   * An array of Machine Image specific properties for disks attached to the source instance
-   * @return value or {@code null} for none
-   */
-  public java.util.List<SavedDisk> getSavedDisks() {
-    return savedDisks;
-  }
-
-  /**
-   * An array of Machine Image specific properties for disks attached to the source instance
-   * @param savedDisks savedDisks or {@code null} for none
-   */
-  public MachineImage setSavedDisks(java.util.List<SavedDisk> savedDisks) {
-    this.savedDisks = savedDisks;
     return this;
   }
 

@@ -127,12 +127,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String sharedSecret;
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
-   * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+   * The status of the public advertised prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,12 +396,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
-   * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+   * The status of the public advertised prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -414,12 +404,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI
-   * validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse
-   * DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. -
-   * `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. -
-   * `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. -
-   * `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+   * The status of the public advertised prefix.
    * @param status status or {@code null} for none
    */
   public PublicAdvertisedPrefix setStatus(java.lang.String status) {

@@ -41,12 +41,12 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> limits;
 
   /**
-   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
-   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
-   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
-   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
-   * source/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Requests describes the minimum amount of compute resources required. If Requests
+   * is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to
+   * an implementation-defined value. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,12 +78,12 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
-   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
-   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
-   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
-   * source/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Requests describes the minimum amount of compute resources required. If Requests
+   * is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to
+   * an implementation-defined value. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getRequests() {
@@ -91,12 +91,12 @@ public final class ResourceRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1'
-   * and '2'. Requests describes the minimum amount of compute resources required. If Requests is
-   * omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an
-   * implementation-defined value. The values of the map is string form of the 'quantity' k8s type: 
-   * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/re
-   * source/quantity.go
+   * (Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1',
+   * '2', and '4'. Requests describes the minimum amount of compute resources required. If Requests
+   * is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to
+   * an implementation-defined value. The values of the map is string form of the 'quantity' k8s
+   * type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/
+   * api/resource/quantity.go
    * @param requests requests or {@code null} for none
    */
   public ResourceRequirements setRequests(java.util.Map<String, java.lang.String> requests) {

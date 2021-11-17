@@ -175,20 +175,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
-   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
-   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
-   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
-   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
-   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned.
+   * originalPrice * discount * inventory(place_id,price) * inventory(place_id,attributes.key),
+   * where key is any key in the Product.inventories.attributes map. * attributes.key, where key is
+   * any key in the Product.attributes map. * pickupInStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". *
+   * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-
+   * day-delivery". * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "next-day-delivery". * customFulfillment1.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-1". * customFulfillment2.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". *
+   * customFulfillment3.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-3". * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-4". * customFulfillment5.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-5". If this field is set to an
+   * invalid value other than these, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -535,20 +536,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
-   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
-   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
-   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
-   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
-   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned.
+   * originalPrice * discount * inventory(place_id,price) * inventory(place_id,attributes.key),
+   * where key is any key in the Product.inventories.attributes map. * attributes.key, where key is
+   * any key in the Product.attributes map. * pickupInStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". *
+   * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-
+   * day-delivery". * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "next-day-delivery". * customFulfillment1.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-1". * customFulfillment2.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". *
+   * customFulfillment3.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-3". * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-4". * customFulfillment5.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-5". If this field is set to an
+   * invalid value other than these, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVariantRollupKeys() {
@@ -562,20 +564,21 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    * a fulfillment type and a fulfillment ID must be provided in the format of
    * "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123", "pickupInStore" is
    * fulfillment type and "store123" is the store ID. Supported keys are: * colorFamilies * price *
-   * originalPrice * discount * inventory(place_id,price) * attributes.key, where key is any key in
-   * the Product.attributes map. * pickupInStore.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". * sameDayDelivery.id, where
-   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-day-delivery". *
-   * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "next-
-   * day-delivery". * customFulfillment1.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-1". * customFulfillment2.id, where id is any
-   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". * customFulfillment3.id,
-   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-3". *
-   * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
-   * "custom-type-4". * customFulfillment5.id, where id is any FulfillmentInfo.place_ids for
-   * FulfillmentInfo.type "custom-type-5". If this field is set to an invalid value other than
-   * these, an INVALID_ARGUMENT error is returned.
+   * originalPrice * discount * inventory(place_id,price) * inventory(place_id,attributes.key),
+   * where key is any key in the Product.inventories.attributes map. * attributes.key, where key is
+   * any key in the Product.attributes map. * pickupInStore.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "pickup-in-store". * shipToStore.id, where
+   * id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "ship-to-store". *
+   * sameDayDelivery.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "same-
+   * day-delivery". * nextDayDelivery.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "next-day-delivery". * customFulfillment1.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-1". * customFulfillment2.id,
+   * where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-2". *
+   * customFulfillment3.id, where id is any FulfillmentInfo.place_ids for FulfillmentInfo.type
+   * "custom-type-3". * customFulfillment4.id, where id is any FulfillmentInfo.place_ids for
+   * FulfillmentInfo.type "custom-type-4". * customFulfillment5.id, where id is any
+   * FulfillmentInfo.place_ids for FulfillmentInfo.type "custom-type-5". If this field is set to an
+   * invalid value other than these, an INVALID_ARGUMENT error is returned.
    * @param variantRollupKeys variantRollupKeys or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequest setVariantRollupKeys(java.util.List<java.lang.String> variantRollupKeys) {

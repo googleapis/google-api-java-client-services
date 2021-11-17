@@ -31,13 +31,6 @@ package com.google.api.services.compute.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
-   * The architecture of the image. Valid values are ARM64 or X86_64.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String architecture;
-
-  /**
    * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
    * The value may be {@code null}.
    */
@@ -83,7 +76,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. To see a list of available options, see the guestOSfeatures[].type parameter.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,23 +341,6 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> userLicenses;
 
   /**
-   * The architecture of the image. Valid values are ARM64 or X86_64.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getArchitecture() {
-    return architecture;
-  }
-
-  /**
-   * The architecture of the image. Valid values are ARM64 or X86_64.
-   * @param architecture architecture or {@code null} for none
-   */
-  public Image setArchitecture(java.lang.String architecture) {
-    this.architecture = architecture;
-    return this;
-  }
-
-  /**
    * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
    * @return value or {@code null} for none
    */
@@ -472,7 +448,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. To see a list of available options, see the guestOSfeatures[].type parameter.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * @return value or {@code null} for none
    */
   public java.util.List<GuestOsFeature> getGuestOsFeatures() {
@@ -481,7 +457,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
-   * images. To see a list of available options, see the guestOSfeatures[].type parameter.
+   * images. Read Enabling guest operating system features to see a list of available options.
    * @param guestOsFeatures guestOsFeatures or {@code null} for none
    */
   public Image setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {

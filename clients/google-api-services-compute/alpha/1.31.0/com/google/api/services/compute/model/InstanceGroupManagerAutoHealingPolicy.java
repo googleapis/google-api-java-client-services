@@ -30,13 +30,6 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Restricts what triggers autohealing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers autoHealingTriggers;
-
-  /**
    * The URL for the health check that signals autohealing.
    * The value may be {@code null}.
    */
@@ -74,23 +67,6 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateInstances;
-
-  /**
-   * Restricts what triggers autohealing.
-   * @return value or {@code null} for none
-   */
-  public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers getAutoHealingTriggers() {
-    return autoHealingTriggers;
-  }
-
-  /**
-   * Restricts what triggers autohealing.
-   * @param autoHealingTriggers autoHealingTriggers or {@code null} for none
-   */
-  public InstanceGroupManagerAutoHealingPolicy setAutoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers autoHealingTriggers) {
-    this.autoHealingTriggers = autoHealingTriggers;
-    return this;
-  }
 
   /**
    * The URL for the health check that signals autohealing.

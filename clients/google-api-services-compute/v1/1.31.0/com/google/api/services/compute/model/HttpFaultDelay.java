@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Specifies the delay introduced by the load balancer before forwarding the request to the backend
+ * Specifies the delay introduced by Loadbalancer before forwarding the request to the backend
  * service as part of fault injection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -38,8 +38,8 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
   private Duration fixedDelay;
 
   /**
-   * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * The percentage of traffic (connections/operations/requests) on which delay will be introduced
+   * as part of fault injection. The value must be between 0.0 and 100.0 inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * The percentage of traffic (connections/operations/requests) on which delay will be introduced
+   * as part of fault injection. The value must be between 0.0 and 100.0 inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentage() {
@@ -72,8 +72,8 @@ public final class HttpFaultDelay extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The percentage of traffic for connections, operations, or requests for which a delay is
-   * introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+   * The percentage of traffic (connections/operations/requests) on which delay will be introduced
+   * as part of fault injection. The value must be between 0.0 and 100.0 inclusive.
    * @param percentage percentage or {@code null} for none
    */
   public HttpFaultDelay setPercentage(java.lang.Double percentage) {

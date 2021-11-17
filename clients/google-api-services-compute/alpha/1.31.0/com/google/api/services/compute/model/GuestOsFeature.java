@@ -30,20 +30,16 @@ package com.google.api.services.compute.model;
 public final class GuestOsFeature extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of a supported feature. To add multiple values, use commas to separate values. Set to
-   * one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET -
-   * UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more
-   * information, see Enabling guest operating system features.
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
+   * available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The ID of a supported feature. To add multiple values, use commas to separate values. Set to
-   * one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET -
-   * UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more
-   * information, see Enabling guest operating system features.
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
+   * available options.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -51,10 +47,8 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of a supported feature. To add multiple values, use commas to separate values. Set to
-   * one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET -
-   * UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more
-   * information, see Enabling guest operating system features.
+   * The ID of a supported feature. Read Enabling guest operating system features to see a list of
+   * available options.
    * @param type type or {@code null} for none
    */
   public GuestOsFeature setType(java.lang.String type) {

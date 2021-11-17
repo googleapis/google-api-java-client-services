@@ -30,24 +30,25 @@ package com.google.api.services.compute.model;
 public final class UrlRewrite extends com.google.api.client.json.GenericJson {
 
   /**
-   * Before forwarding the request to the selected service, the request's host header is replaced
-   * with contents of hostRewrite. The value must be from 1 to 255 characters.
+   * Prior to forwarding the request to the selected service, the request's host header is replaced
+   * with contents of hostRewrite. The value must be between 1 and 255 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hostRewrite;
 
   /**
-   * Before forwarding the request to the selected backend service, the matching portion of the
-   * request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+   * Prior to forwarding the request to the selected backend service, the matching portion of the
+   * request's path is replaced by pathPrefixRewrite. The value must be between 1 and 1024
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pathPrefixRewrite;
 
   /**
-   * Before forwarding the request to the selected service, the request's host header is replaced
-   * with contents of hostRewrite. The value must be from 1 to 255 characters.
+   * Prior to forwarding the request to the selected service, the request's host header is replaced
+   * with contents of hostRewrite. The value must be between 1 and 255 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostRewrite() {
@@ -55,8 +56,8 @@ public final class UrlRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Before forwarding the request to the selected service, the request's host header is replaced
-   * with contents of hostRewrite. The value must be from 1 to 255 characters.
+   * Prior to forwarding the request to the selected service, the request's host header is replaced
+   * with contents of hostRewrite. The value must be between 1 and 255 characters.
    * @param hostRewrite hostRewrite or {@code null} for none
    */
   public UrlRewrite setHostRewrite(java.lang.String hostRewrite) {
@@ -65,8 +66,9 @@ public final class UrlRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Before forwarding the request to the selected backend service, the matching portion of the
-   * request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+   * Prior to forwarding the request to the selected backend service, the matching portion of the
+   * request's path is replaced by pathPrefixRewrite. The value must be between 1 and 1024
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathPrefixRewrite() {
@@ -74,8 +76,9 @@ public final class UrlRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Before forwarding the request to the selected backend service, the matching portion of the
-   * request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
+   * Prior to forwarding the request to the selected backend service, the matching portion of the
+   * request's path is replaced by pathPrefixRewrite. The value must be between 1 and 1024
+   * characters.
    * @param pathPrefixRewrite pathPrefixRewrite or {@code null} for none
    */
   public UrlRewrite setPathPrefixRewrite(java.lang.String pathPrefixRewrite) {

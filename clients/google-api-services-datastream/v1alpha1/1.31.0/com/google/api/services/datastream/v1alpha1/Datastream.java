@@ -5115,6 +5115,611 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+        /**
+         * An accessor for creating requests from the Objects collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Datastream datastream = new Datastream(...);}
+         *   {@code Datastream.Objects.List request = datastream.objects().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Objects objects() {
+          return new Objects();
+        }
+
+        /**
+         * The "objects" collection of methods.
+         */
+        public class Objects {
+
+          /**
+           * Use this method to get details about a stream object.
+           *
+           * Create a request for the method "objects.get".
+           *
+           * This request holds the parameters needed by the datastream server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the stream object resource to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DatastreamRequest<com.google.api.services.datastream.v1alpha1.model.StreamObject> {
+
+            private static final String REST_PATH = "v1alpha1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+
+            /**
+             * Use this method to get details about a stream object.
+             *
+             * Create a request for the method "objects.get".
+             *
+             * This request holds the parameters needed by the the datastream server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the stream object resource to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Datastream.this, "GET", REST_PATH, null, com.google.api.services.datastream.v1alpha1.model.StreamObject.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the stream object resource to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the stream object resource to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the stream object resource to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Use this method to list the objects of a specific stream.
+           *
+           * Create a request for the method "objects.list".
+           *
+           * This request holds the parameters needed by the datastream server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent stream that owns the collection of objects.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DatastreamRequest<com.google.api.services.datastream.v1alpha1.model.ListStreamObjectsResponse> {
+
+            private static final String REST_PATH = "v1alpha1/{+parent}/objects";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+
+            /**
+             * Use this method to list the objects of a specific stream.
+             *
+             * Create a request for the method "objects.list".
+             *
+             * This request holds the parameters needed by the the datastream server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent stream that owns the collection of objects.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Datastream.this, "GET", REST_PATH, null, com.google.api.services.datastream.v1alpha1.model.ListStreamObjectsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent stream that owns the collection of objects. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent stream that owns the collection of objects.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent stream that owns the collection of objects. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of objects to return. Default is 50. The maximum value is 1000; values above 1000
+           will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Page token received from a previous `ListStreamObjectsRequest` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListStreamObjectsRequest` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token received from a previous `ListStreamObjectsRequest` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListStreamObjectsRequest` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Page token received from a previous `ListStreamObjectsRequest` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListStreamObjectsRequest` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Starts backfill job for the specified stream object.
+           *
+           * Create a request for the method "objects.startBackfillJob".
+           *
+           * This request holds the parameters needed by the datastream server.  After setting any optional
+           * parameters, call the {@link StartBackfillJob#execute()} method to invoke the remote operation.
+           *
+           * @param object__ Required. The name of the stream object resource to start a backfill job for.
+           * @return the request
+           */
+          public StartBackfillJob startBackfillJob(java.lang.String object__) throws java.io.IOException {
+            StartBackfillJob result = new StartBackfillJob(object__);
+            initialize(result);
+            return result;
+          }
+
+          public class StartBackfillJob extends DatastreamRequest<com.google.api.services.datastream.v1alpha1.model.StartBackfillJobResponse> {
+
+            private static final String REST_PATH = "v1alpha1/{+object}:startBackfillJob";
+
+            private final java.util.regex.Pattern OBJECT___PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+
+            /**
+             * Starts backfill job for the specified stream object.
+             *
+             * Create a request for the method "objects.startBackfillJob".
+             *
+             * This request holds the parameters needed by the the datastream server.  After setting any
+             * optional parameters, call the {@link StartBackfillJob#execute()} method to invoke the remote
+             * operation. <p> {@link StartBackfillJob#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param object__ Required. The name of the stream object resource to start a backfill job for.
+             * @since 1.13
+             */
+            protected StartBackfillJob(java.lang.String object__) {
+              super(Datastream.this, "POST", REST_PATH, null, com.google.api.services.datastream.v1alpha1.model.StartBackfillJobResponse.class);
+              this.object__ = com.google.api.client.util.Preconditions.checkNotNull(object__, "Required parameter object__ must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OBJECT___PATTERN.matcher(object__).matches(),
+                    "Parameter object__ must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+            }
+
+            @Override
+            public StartBackfillJob set$Xgafv(java.lang.String $Xgafv) {
+              return (StartBackfillJob) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StartBackfillJob setAccessToken(java.lang.String accessToken) {
+              return (StartBackfillJob) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StartBackfillJob setAlt(java.lang.String alt) {
+              return (StartBackfillJob) super.setAlt(alt);
+            }
+
+            @Override
+            public StartBackfillJob setCallback(java.lang.String callback) {
+              return (StartBackfillJob) super.setCallback(callback);
+            }
+
+            @Override
+            public StartBackfillJob setFields(java.lang.String fields) {
+              return (StartBackfillJob) super.setFields(fields);
+            }
+
+            @Override
+            public StartBackfillJob setKey(java.lang.String key) {
+              return (StartBackfillJob) super.setKey(key);
+            }
+
+            @Override
+            public StartBackfillJob setOauthToken(java.lang.String oauthToken) {
+              return (StartBackfillJob) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StartBackfillJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StartBackfillJob) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StartBackfillJob setQuotaUser(java.lang.String quotaUser) {
+              return (StartBackfillJob) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StartBackfillJob setUploadType(java.lang.String uploadType) {
+              return (StartBackfillJob) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StartBackfillJob setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StartBackfillJob) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the stream object resource to start a backfill job for. */
+            @com.google.api.client.util.Key("object")
+            private java.lang.String object__;
+
+            /** Required. The name of the stream object resource to start a backfill job for.
+             */
+            public java.lang.String getObject() {
+              return object__;
+            }
+
+            /** Required. The name of the stream object resource to start a backfill job for. */
+            public StartBackfillJob setObject(java.lang.String object__) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OBJECT___PATTERN.matcher(object__).matches(),
+                    "Parameter object__ must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+              this.object__ = object__;
+              return this;
+            }
+
+            @Override
+            public StartBackfillJob set(String parameterName, Object value) {
+              return (StartBackfillJob) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Stops the backfill job for the specified stream object.
+           *
+           * Create a request for the method "objects.stopBackfillJob".
+           *
+           * This request holds the parameters needed by the datastream server.  After setting any optional
+           * parameters, call the {@link StopBackfillJob#execute()} method to invoke the remote operation.
+           *
+           * @param object__ Required. The name of the stream object resource to stop the backfill job for.
+           * @return the request
+           */
+          public StopBackfillJob stopBackfillJob(java.lang.String object__) throws java.io.IOException {
+            StopBackfillJob result = new StopBackfillJob(object__);
+            initialize(result);
+            return result;
+          }
+
+          public class StopBackfillJob extends DatastreamRequest<com.google.api.services.datastream.v1alpha1.model.StopBackfillJobResponse> {
+
+            private static final String REST_PATH = "v1alpha1/{+object}:stopBackfillJob";
+
+            private final java.util.regex.Pattern OBJECT___PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+
+            /**
+             * Stops the backfill job for the specified stream object.
+             *
+             * Create a request for the method "objects.stopBackfillJob".
+             *
+             * This request holds the parameters needed by the the datastream server.  After setting any
+             * optional parameters, call the {@link StopBackfillJob#execute()} method to invoke the remote
+             * operation. <p> {@link StopBackfillJob#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param object__ Required. The name of the stream object resource to stop the backfill job for.
+             * @since 1.13
+             */
+            protected StopBackfillJob(java.lang.String object__) {
+              super(Datastream.this, "POST", REST_PATH, null, com.google.api.services.datastream.v1alpha1.model.StopBackfillJobResponse.class);
+              this.object__ = com.google.api.client.util.Preconditions.checkNotNull(object__, "Required parameter object__ must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OBJECT___PATTERN.matcher(object__).matches(),
+                    "Parameter object__ must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+            }
+
+            @Override
+            public StopBackfillJob set$Xgafv(java.lang.String $Xgafv) {
+              return (StopBackfillJob) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StopBackfillJob setAccessToken(java.lang.String accessToken) {
+              return (StopBackfillJob) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StopBackfillJob setAlt(java.lang.String alt) {
+              return (StopBackfillJob) super.setAlt(alt);
+            }
+
+            @Override
+            public StopBackfillJob setCallback(java.lang.String callback) {
+              return (StopBackfillJob) super.setCallback(callback);
+            }
+
+            @Override
+            public StopBackfillJob setFields(java.lang.String fields) {
+              return (StopBackfillJob) super.setFields(fields);
+            }
+
+            @Override
+            public StopBackfillJob setKey(java.lang.String key) {
+              return (StopBackfillJob) super.setKey(key);
+            }
+
+            @Override
+            public StopBackfillJob setOauthToken(java.lang.String oauthToken) {
+              return (StopBackfillJob) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StopBackfillJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StopBackfillJob) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StopBackfillJob setQuotaUser(java.lang.String quotaUser) {
+              return (StopBackfillJob) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StopBackfillJob setUploadType(java.lang.String uploadType) {
+              return (StopBackfillJob) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StopBackfillJob setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StopBackfillJob) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the stream object resource to stop the backfill job for. */
+            @com.google.api.client.util.Key("object")
+            private java.lang.String object__;
+
+            /** Required. The name of the stream object resource to stop the backfill job for.
+             */
+            public java.lang.String getObject() {
+              return object__;
+            }
+
+            /** Required. The name of the stream object resource to stop the backfill job for. */
+            public StopBackfillJob setObject(java.lang.String object__) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OBJECT___PATTERN.matcher(object__).matches(),
+                    "Parameter object__ must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/streams/[^/]+/objects/[^/]+$");
+              }
+              this.object__ = object__;
+              return this;
+            }
+
+            @Override
+            public StopBackfillJob set(String parameterName, Object value) {
+              return (StopBackfillJob) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

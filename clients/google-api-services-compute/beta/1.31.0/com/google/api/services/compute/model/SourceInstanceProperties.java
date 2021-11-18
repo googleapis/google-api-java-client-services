@@ -129,7 +129,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,7 +359,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -367,7 +367,7 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
-   * PostKeyRevocationActionType of the instance.
+   * PostKeyRevocationActionType of the instance. (will be deprecated soon)
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public SourceInstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {

@@ -41,17 +41,6 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> drainNatIps;
 
   /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
-   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
-   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
-   * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
-   * allocated to a VM from this NAT config.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enableDynamicPortAllocation;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,17 +59,6 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RouterNatLogConfig logConfig;
-
-  /**
-   * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is
-   * enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port
-   * Allocation is enabled, and this field is set, it must be set to a power of two greater than
-   * minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and
-   * this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxPortsPerVm;
 
   /**
    * Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of
@@ -194,31 +172,6 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
-   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
-   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
-   * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
-   * allocated to a VM from this NAT config.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnableDynamicPortAllocation() {
-    return enableDynamicPortAllocation;
-  }
-
-  /**
-   * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, -
-   * Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping
-   * cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two
-   * greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be
-   * allocated to a VM from this NAT config.
-   * @param enableDynamicPortAllocation enableDynamicPortAllocation or {@code null} for none
-   */
-  public RouterNat setEnableDynamicPortAllocation(java.lang.Boolean enableDynamicPortAllocation) {
-    this.enableDynamicPortAllocation = enableDynamicPortAllocation;
-    return this;
-  }
-
-  /**
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEndpointIndependentMapping() {
@@ -264,31 +217,6 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setLogConfig(RouterNatLogConfig logConfig) {
     this.logConfig = logConfig;
-    return this;
-  }
-
-  /**
-   * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is
-   * enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port
-   * Allocation is enabled, and this field is set, it must be set to a power of two greater than
-   * minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and
-   * this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxPortsPerVm() {
-    return maxPortsPerVm;
-  }
-
-  /**
-   * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is
-   * enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port
-   * Allocation is enabled, and this field is set, it must be set to a power of two greater than
-   * minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and
-   * this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
-   * @param maxPortsPerVm maxPortsPerVm or {@code null} for none
-   */
-  public RouterNat setMaxPortsPerVm(java.lang.Integer maxPortsPerVm) {
-    this.maxPortsPerVm = maxPortsPerVm;
     return this;
   }
 

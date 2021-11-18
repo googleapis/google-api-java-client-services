@@ -85,9 +85,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
-   * range.
+   * `setPublicPtr` field is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +93,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,9 +232,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
-   * range.
+   * `setPublicPtr` field is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicPtrDomainName() {
@@ -246,9 +241,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
-   * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
-   * range.
+   * `setPublicPtr` field is enabled.
    * @param publicPtrDomainName publicPtrDomainName or {@code null} for none
    */
   public AccessConfig setPublicPtrDomainName(java.lang.String publicPtrDomainName) {
@@ -258,8 +251,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSetPublicPtr() {
@@ -268,8 +260,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
-   * the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR
-   * record will be created if the VM has external IPv6 range associated.
+   * the instance to a DNS domain name.
    * @param setPublicPtr setPublicPtr or {@code null} for none
    */
   public AccessConfig setSetPublicPtr(java.lang.Boolean setPublicPtr) {
